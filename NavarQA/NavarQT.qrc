@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>img/icons/BotonEntendidoRecuadro.png</file>
+        <file alias="start">img/icons/BotonIniciarCaptura.png</file>
+        <file alias="skip">img/icons/BotonOmitir.png</file>
+        <file alias="next">img/icons/BotonSiguientePag6.png</file>
+        <file alias="steps2">img/icons/Calibracion.png</file>
+        <file alias="freq">img/icons/CambioFrecuencia.png</file>
+        <file alias="close">img/icons/cerrar.png</file>
+        <file>img/icons/CerrarRecuadro.png</file>
+        <file alias="steps4">img/icons/Cirugia.png</file>
+        <file>img/icons/configuracion.png</file>
+        <file>img/icons/ContenedorAvanceCargaP1.png</file>
+        <file>img/icons/ContenedorFrecuencia.png</file>
+        <file>img/icons/ContenedorGifPorsiAcaso.png</file>
+        <file alias="steps1">img/icons/estaciondeTrabajo.png</file>
+        <file alias="steps3">img/icons/Instrumental.png</file>
+        <file alias="logo">img/icons/LogoNavarBarraSuperior.png</file>
+        <file alias="logo-splash">img/icons/LogoNavarP1.png</file>
+        <file alias="logo-2">img/icons/LogoNavarRecuadro.png</file>
+        <file>img/icons/minimizar.png</file>
+        <file alias="border">img/icons/RecuadroEspaciodeTrabajoPorsiacaso.png</file>
+        <file alias="divider">img/icons/Separador.png</file>
+        <file alias="bullet">img/icons/vineta.png</file>
+        <file>img/icons/VinetaRecuadro.png</file>
+    </qresource>
+    <qresource prefix="/gifs">
+        <file alias="s1">img/gifs/step_1.gif</file>
+        <file alias="s2">img/gifs/step_2.gif</file>
+        <file alias="s3">img/gifs/step_3.gif</file>
+        <file alias="s4">img/gifs/step_4.gif</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file alias="HelveticaLC">img/fonts/HelveticaLTStd-LightCond.otf</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,7 @@
+Mono path[0] = 'C:/Users/eduar_000/Documents/Visual Studio 2015/Projects/NavarQA/NavarQA/Resources/Unity/Visual64_Data/Managed'
+Mono path[1] = 'C:/Users/eduar_000/Documents/Visual Studio 2015/Projects/NavarQA/NavarQA/Resources/Unity/Visual64_Data/Mono'
+Mono config path = 'C:/Users/eduar_000/Documents/Visual Studio 2015/Projects/NavarQA/NavarQA/Resources/Unity/Visual64_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/eduar_000/Documents/Visual Studio 2015/Projects/NavarQA/NavarQA/Resources/Unity/Visual64_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55345
+Multi-casting "[IP] 10.0.0.100 [Port] 55345 [Flags] 3 [Guid] 1364121414 [EditorId] 2322647888 [Version] 1048832 [Id] WindowsPlayer(MEDIA-LAB) [Debug] 1" to [225.0.0.222:54997]...
+Waiting for connection from host on [10.0.0.100:55345]...
