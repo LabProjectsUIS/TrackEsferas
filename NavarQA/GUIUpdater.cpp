@@ -57,6 +57,7 @@ void GUIUpdater::startCameras() {
 	camera_1->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_1->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_1->SetIntensity(CustomCameraLibrary::intensity_cvalue);
+	camera_1->SetMJPEGQuality(100);
 	camera_1->SetName(CNAME_1);
 	camera_1->Start();
 
@@ -64,6 +65,7 @@ void GUIUpdater::startCameras() {
 	camera_2->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_2->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_2->SetIntensity(CustomCameraLibrary::intensity_cvalue);
+	camera_1->SetMJPEGQuality(100);
 	camera_2->SetName(CNAME_2);
 	camera_2->Start();
 }

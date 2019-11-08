@@ -7,6 +7,20 @@
 
 #define TIBIA 0
 #define FEMUR 1
+#define DBOUT( s )            \
+{                             \
+   std::wostringstream os_;    \
+   os_ << s;                   \
+   OutputDebugStringW( os_.str().c_str() );  \
+}
+
+#define _TRACE_MAXLEN 500
+
+#if _MSC_VER >= 1900
+#define _PRINT_DEBUG_STRING(text) OutputDebugString(text)
+#else // _MSC_VER >= 1900
+#define _PRINT_DEBUG_STRING(text) afxDump << text
+#endif // _MSC_VER >= 1900
 
 /**
 * Constructor por defecto
@@ -31,7 +45,7 @@ NavarQT::NavarQT(QWidget *parent)
 	loadGif(":/gifs/s1");
 	//ui->label_instructions_bottom->setVisible(false);
 	doCalib = true;
-	calibRetries = 0;
+	calibRetries = 3;
 	calibMessage = "<html><head/><body><p>Realice la captura de 13 pares de fotograf\303\255as para continuar con el proceso de calibraci\303\263n.</p>"
 			"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 15px; margin-right: 0px; -qt-list-indent: 0;\">"
 			"<li style=\" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
@@ -226,7 +240,7 @@ void NavarQT::on_pushButton_9_clicked() {
 /**
 * Slot asociado al botón 10 (botón utilizado tanto para omitir el proceso de calibración como para iniciar la captura de la nube de puntos en el registro).
 */
-void NavarQT::on_pushButton_10_clicked() {
+void NavarQT::on_pushButton_10_clicked() { //OMITIR
 	if (step == 2) {
 		doCalib = false;
 		calibRetries = 2;
@@ -550,19 +564,20 @@ void NavarQT::showPopUp() {
 /**
 * Inicia el proceso de calibración del sistema de cámaras.
 */
+
 void NavarQT::startCalibration() {
 	std::string fileName;
+	
 	switch (calibRetries) {
 	case 3:
-		fileName = "calib/stereo/calib_data_4.yml";
+		fileName = "calib/stereo/calib.yml";
 		doCalib = false;
 		break;
 	default:
-		fileName = "calib/stereo/calib_data.yml";
+		fileName = "calib/stereo/otros/calib.yml";
 		break;
 	}	
-
-	if (doCalib) {
+	if (doCalib) { //Conexion con matlab toolkit
 		SHELLEXECUTEINFO ShExecInfo = { 0 };
 		ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
 		ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS;
@@ -576,7 +591,8 @@ void NavarQT::startCalibration() {
 		ShellExecuteEx(&ShExecInfo);
 		WaitForSingleObject(ShExecInfo.hProcess, INFINITE);
 	}
-	if (readParams(fileName)) {
+	if (readParams(fileName)) { //Llama funcion leer parametros del archivo de calibración
+		DBOUT("filename");
 		ui->label_camera_right->setVisible(false);
 		ui->label_camera_left->setVisible(false);
 		ui->comboBox->setVisible(false);
@@ -590,6 +606,7 @@ void NavarQT::startCalibration() {
 		////process_rigids->start("Resources/Unity/VisualDesktop.exe");
 		updater->getRigidsData();
 	}
+	
 	else if(calibRetries < 3){
 		calibMessage = "<html><head/><body><p>Error en la calibraci\303\263n. Se ejecutar\303\241 todo el proceso nuevamente."
 			"<p>Realice la captura de 13 pares de fotograf\303\255as para continuar con el proceso de calibraci\303\263n.</p>"
@@ -604,6 +621,8 @@ void NavarQT::startCalibration() {
 		updater->ShowCameras();
 	}
 	else if (calibRetries == 3) {
+		DBOUT("calibretries es tres");
+		DBOUT("bool read params",readParams(fileName));
 		calibMessage = "<html><body><p>Cargando archivo de calibraci\303\263n ideal</p></body></html>";
 		showPopUp();
 		startCalibration();
@@ -629,13 +648,14 @@ void NavarQT::startServer() {
 */
 bool NavarQT::readParams(std::string fileName) {
 	struct stat buffer;
+	DBOUT("readParams ----------------------> ", stat(fileName.c_str(), &buffer));
 	if (stat(fileName.c_str(), &buffer) == 0) {
 		cv::FileStorage fs(fileName, cv::FileStorage::READ);
 		cv::Mat_<double> err(1, 1);
 		//double err;
 		fs["emax"] >> err;
-		if (err.empty() || *err[0] > 0.50) {
-			calibRetries++;
+		if (err.empty() || *err[0] > 0.790) {
+			calibRetries++; //vuelve a calibrar si el eror es mayor de 0.5
 			return false;
 		}
 		fs["cc_left"] >> cdata::cc_left;
