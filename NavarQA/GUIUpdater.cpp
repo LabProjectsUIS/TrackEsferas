@@ -43,11 +43,9 @@ bool GUIUpdater::activateCameras() {
 	camera_2 = CameraLibrary::CameraManager::X().GetCameraBySerial(SCAMERA_L);
 	if (!camera_1 || !camera_2) {
 		return 1;
-		printf(" no cameras");
 	}
 
 	return 1;
-	printf(" si cameras");
 }
 
 /**
@@ -55,14 +53,14 @@ bool GUIUpdater::activateCameras() {
 *	y demás parámetros iniciales (exposición, intensidad y umbral).
 */
 void GUIUpdater::startCameras() {
-	camera_1->SetVideoType(Core::GrayscaleMode);
+	camera_1->SetVideoType(Core::MJPEGMode);
 	camera_1->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_1->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_1->SetIntensity(CustomCameraLibrary::intensity_cvalue);
 	camera_1->SetName(CNAME_1);
 	camera_1->Start();
 
-	camera_2->SetVideoType(Core::GrayscaleMode);
+	camera_2->SetVideoType(Core::MJPEGMode);
 	camera_2->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_2->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_2->SetIntensity(CustomCameraLibrary::intensity_cvalue);
@@ -200,11 +198,11 @@ void GUIUpdater::setBroca(CustomCameraLibrary::BodyR &rigid, cv::Mat_<double> &d
 */
 void GUIUpdater::ShowCameras() {
 	pics2Take = 10;
-	int cameraWidth_1 = camera_1->Width(); // Obtener la propiedad ancho de la resolucián de la cámara derecha.
-	int cameraHeight_1 = camera_1->Height(); // Obtener la propiedad alto de la resolucián de la cámara derecha.
+	int cameraWidth_1 = camera_1->Width()/2; // Obtener la propiedad ancho de la resolucián de la cámara derecha. (MJPEG /2)
+	int cameraHeight_1 = camera_1->Height()/2; // Obtener la propiedad alto de la resolucián de la cámara derecha.
 
-	int cameraWidth_2 = camera_2->Width();
-	int cameraHeight_2 = camera_2->Height();
+	int cameraWidth_2 = camera_2->Width()/2;
+	int cameraHeight_2 = camera_2->Height()/2;
 
 	cv::Point center((cameraWidth_1 - CustomCameraLibrary::square_size) / 2,
 		(cameraHeight_1 - CustomCameraLibrary::square_size) / 2);
@@ -318,7 +316,7 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			double Eccentr = obj.getEccentr();
 			double Area = obj.getArea();
 			std::ostringstream ostr;
-			cv::Point textOrg(10, 500 + i * 20);
+			cv::Point textOrg(5, 350 + i * 20);
 			ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y << " e:" << Eccentr << " Ar:" << Area;
 			cv::String text = ostr.str();
 			putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
@@ -405,11 +403,11 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 void GUIUpdater::writeMatrices() {
 	cv::Mat_<double> PP_Broca1(2, 2); // Array de puntos del frame con datos de los marcadores de la broca
 	cv::Mat_<double> PP_Broca2(2, 2); // Array de puntos del frame con datos de los marcadores de la broca
-	int cameraWidth_1 = camera_1->Width(); // Obtener la propiedad ancho de la resolucián de la cámara derecha.
-	int cameraHeight_1 = camera_1->Height(); // Obtener la propiedad alto de la resolucián de la cámara derecha.
+	int cameraWidth_1 = camera_1->Width()/2; // Obtener la propiedad ancho de la resolucián de la cámara derecha.
+	int cameraHeight_1 = camera_1->Height()/2; // Obtener la propiedad alto de la resolucián de la cámara derecha.
 
-	int cameraWidth_2 = camera_2->Width();
-	int cameraHeight_2 = camera_2->Height();
+	int cameraWidth_2 = camera_2->Width()/2;
+	int cameraHeight_2 = camera_2->Height()/2;
 
 	int samples = 0;
 	int sample_limit = 2;
@@ -555,11 +553,11 @@ void GUIUpdater::getRigidsData() {
 
 	detectRigids = true;
 	doStartServer = true;
-	int cameraWidth_1 = camera_1->Width(); // Obtener la propiedad ancho de la resolucián de la cámara derecha.
-	int cameraHeight_1 = camera_1->Height(); // Obtener la propiedad alto de la resolucián de la cámara derecha.
+	int cameraWidth_1 = camera_1->Width()/2; // Obtener la propiedad ancho de la resolucián de la cámara derecha.
+	int cameraHeight_1 = camera_1->Height()/2; // Obtener la propiedad alto de la resolucián de la cámara derecha.
 
-	int cameraWidth_2 = camera_2->Width();
-	int cameraHeight_2 = camera_2->Height();
+	int cameraWidth_2 = camera_2->Width()/2;
+	int cameraHeight_2 = camera_2->Height()/2;
 
 	int samples = 0;
 	int sample_limit = 1;
@@ -781,11 +779,11 @@ bool GUIUpdater::getPointerData(const std::string &fileName) {
 	detectPointer = true;
 	cv::Mat_<double> PP_Broca1(2, 2); // Array de puntos del frame con datos de los marcadores de la broca
 	cv::Mat_<double> PP_Broca2(2, 2); // Array de puntos del frame con datos de los marcadores de la broca
-	int cameraWidth_1 = camera_1->Width(); // Obtener la propiedad ancho de la resolución de la cámara derecha.
-	int cameraHeight_1 = camera_1->Height(); // Obtener la propiedad alto de la resolución de la cámara derecha.
+	int cameraWidth_1 = camera_1->Width()*2; // Obtener la propiedad ancho de la resolución de la cámara derecha.
+	int cameraHeight_1 = camera_1->Height()*2; // Obtener la propiedad alto de la resolución de la cámara derecha.
 
-	int cameraWidth_2 = camera_2->Width();
-	int cameraHeight_2 = camera_2->Height();
+	int cameraWidth_2 = camera_2->Width()*2;
+	int cameraHeight_2 = camera_2->Height()*2;
 
 	int samples = 0;
 	int sample_limit = 30;

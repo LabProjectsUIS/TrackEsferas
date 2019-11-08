@@ -187,7 +187,7 @@ void NavarQT::on_pushButton_5_clicked() {
 void NavarQT::on_pushButton_6_clicked() {
 	ui->pushButton_6->setEnabled(false);
 	ui->pushButton_7->setEnabled(true);
-	updater->ShowCameras();
+	loadGif(":/gifs/s4");
 }
 
 /**
@@ -196,7 +196,7 @@ void NavarQT::on_pushButton_6_clicked() {
 void NavarQT::on_pushButton_7_clicked() {
 	ui->pushButton_7->setEnabled(false);
 	ui->pushButton_8->setEnabled(true);
-	updater->ShutDownCameras();
+	updater->ShowCameras();
 }
 
 /**

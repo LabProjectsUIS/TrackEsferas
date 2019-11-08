@@ -151,7 +151,7 @@ if ~exist('MaxIter'),
     MaxIter = 30;
 end;
 
-save_name = 'Calib_Results';
+save_name = 'Calib_Resultss';
 
 if exist([ save_name '.mat'])==2,
     disp('WARNING: File Calib_Results.mat already exists');
