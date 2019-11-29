@@ -315,11 +315,11 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			double y = obj.getY();
 			double Eccentr = obj.getEccentr();
 			double Area = obj.getArea();
-			std::ostringstream ostr;
-			cv::Point textOrg(10, 500 + i * 20);
-			ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y << " e:" << Eccentr << " Ar:" << Area;
-			cv::String text = ostr.str();
-			putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
+			//std::ostringstream ostr;
+			//cv::Point textOrg(10, 500 + i * 20);
+			//ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y << " e:" << Eccentr << " Ar:" << Area;
+			//cv::String text = ostr.str();
+			//putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
 
 			/*if (Area > 15 && Area < 90 && Eccentr > 0.7 && NP_Broca < 2) {
 			PP_Broca(0, NP_Broca) = x;

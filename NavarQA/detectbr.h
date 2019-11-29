@@ -225,11 +225,11 @@ namespace CustomCameraLibrary {
 	*/
 	Point3d pointerPoint(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
 	
-		ofstream archivoP;
+		/*ofstream archivoP;
 		if (!archivoP.is_open()) {
 			archivoP.open("TODAS.txt", std::ios::app);
 
-		}
+		}*/
 		P1 = P1.t();
 		P2 = P2.t();
 		P3 = P3.t();
@@ -253,11 +253,11 @@ namespace CustomCameraLibrary {
 		PE = PM + val - cdata::f_cor.t();
 
 		//cout << "Punto final: " << PE;
-		archivoP << "\t" <<PE<< "\n";
+		//archivoP << "\t" <<PE<< "\n";
 		
 		
 		return Point3d(PE);
-		archivoP.close();
+		//archivoP.close();
 		
 	}
 

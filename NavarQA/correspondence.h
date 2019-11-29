@@ -447,7 +447,7 @@ namespace CustomCameraLibrary {
 
 		if (!A.empty() && areas(A, areas_men)) {
 			//cout << areas_men;
-			if (!detect_broca) {
+			if (!detect_broca) { //sólo si esta detectando broca
 				F0 = findSpheres(P, areas_men(0, 0));
 				for (int i = 1; i < areas_men.rows; i++) {
 					hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
