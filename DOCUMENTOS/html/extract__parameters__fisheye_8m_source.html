@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/extract_parameters_fisheye.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">extract_parameters_fisheye.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="extract__parameters__fisheye_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;%%% Extraction of the <span class="keyword">final</span> intrinsic and extrinsic <a class="code" href="extract__parameters__fisheye_8m.html#a5764554a67d94c602ff97cda338ed5db">paramaters</a>:</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a5764554a67d94c602ff97cda338ed5db">    4</a></span>&#160;<a class="code" href="add__suppress_8m.html#a8a3044b1d1e2a6aa11e157d6cc40bc6f">check_active_images</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordflow">if</span> <a class="code" href="extract__parameters__fisheye_8m.html#a881ddac0f92ab46f2971e32a71992c3a">~exist</a>(<span class="stringliteral">&#39;solution_error&#39;</span>)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;   <a class="code" href="go__calib__optim__iter_8m.html#aea357319d0681a73c43f9b202521ea52">solution_error</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(6*<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a> + 15,1);</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#afb358f48b1646c750fb9da6c6585be2b">    8</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a72d54db2b27ce046aab6e6a414c407e9">   10</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(1:2);%***</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#acfecbf1b9aa5a6e6e9a9b6d2e4dfa937">   11</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#acfecbf1b9aa5a6e6e9a9b6d2e4dfa937">cc</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(3:4);%***</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a63513f99a978643d54866b110812e17a">   12</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#a63513f99a978643d54866b110812e17a">alpha_c</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(5);%***</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#acf16b34b463fad7498d5415e51a44826">   13</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#acf16b34b463fad7498d5415e51a44826">kc</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(6:9);%***</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#aab1d724fa256f601098764dda6e86f9d">   15</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#aab1d724fa256f601098764dda6e86f9d">fc_error</a> = <a class="code" href="go__calib__optim__iter_8m.html#aea357319d0681a73c43f9b202521ea52">solution_error</a>(1:2);</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a7494a839f85e504913610f06e84c525a">   16</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#a7494a839f85e504913610f06e84c525a">cc_error</a> = <a class="code" href="go__calib__optim__iter_8m.html#aea357319d0681a73c43f9b202521ea52">solution_error</a>(3:4);</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a0e2dae28e3d7505808bb2f47824bc2a2">   17</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#a0e2dae28e3d7505808bb2f47824bc2a2">alpha_c_error</a> = <a class="code" href="go__calib__optim__iter_8m.html#aea357319d0681a73c43f9b202521ea52">solution_error</a>(5);</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a7313be71a16c2a7058951ec29e43be7f">   18</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#a7313be71a16c2a7058951ec29e43be7f">kc_error</a> = <a class="code" href="go__calib__optim__iter_8m.html#aea357319d0681a73c43f9b202521ea52">solution_error</a>(6:9);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;% Calibration <a class="code" href="extract__parameters__fisheye_8m.html#af11ed0b23179c5443ade790615f5f490">matrix</a>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#af11ed0b23179c5443ade790615f5f490">   22</a></span>&#160;<a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a> = [<a class="code" href="extract__parameters__fisheye_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>(1) <a class="code" href="extract__parameters__fisheye_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>(1)*<a class="code" href="extract__parameters__fisheye_8m.html#a63513f99a978643d54866b110812e17a">alpha_c</a> <a class="code" href="extract__parameters__fisheye_8m.html#acfecbf1b9aa5a6e6e9a9b6d2e4dfa937">cc</a>(1);0 <a class="code" href="extract__parameters__fisheye_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>(2) <a class="code" href="extract__parameters__fisheye_8m.html#acfecbf1b9aa5a6e6e9a9b6d2e4dfa937">cc</a>(2); 0 0 1];</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#ae18b1980f35114a664a851f82b2f3098">   23</a></span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#ae18b1980f35114a664a851f82b2f3098">inv_KK</a> = inv(<a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a78974b12364a0c431fa4a87b180224ed">   25</a></span>&#160;% Extract the extrinsic <a class="code" href="extract__parameters__fisheye_8m.html#a78974b12364a0c431fa4a87b180224ed">paramters</a>, and recomputer the collineations</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">   27</a></span>&#160;for <a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a> = 1:<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <a class="code" href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a> <a class="code" href="extract__parameters__fisheye_8m.html#abbf8fc0a3b13cdaab3d40bddd83983fb">active_images</a>(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>),   </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a0428f240719e50213a56a96b5c94d0cf">   31</a></span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(15+6*(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 1:15+6*(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 3);%***   </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a4508a179901753e284c1a88754994d88">   32</a></span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(15+6*(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 4:15+6*(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 6);%*** </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a2bb2d9f5936ba74de85f4c9ac1bd8e88">   34</a></span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a2bb2d9f5936ba74de85f4c9ac1bd8e88">omckk_error</a> = <a class="code" href="go__calib__optim__iter_8m.html#aea357319d0681a73c43f9b202521ea52">solution_error</a>(15+6*(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 1:15+6*(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 3); </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a9da77c7d8c50c73a3af0cd401da3539d">   35</a></span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a9da77c7d8c50c73a3af0cd401da3539d">Tckk_error</a> = <a class="code" href="go__calib__optim__iter_8m.html#aea357319d0681a73c43f9b202521ea52">solution_error</a>(15+6*(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 4:15+6*(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 6);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">   37</a></span>&#160;    <a class="code" href="extract__parameters__fisheye_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a> = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="extract__parameters__fisheye_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="extract__parameters__fisheye_8m.html#a232743e3a85f0585fefda3744fc9f3c2">   39</a></span>&#160;    <a class="code" href="extract__parameters__fisheye_8m.html#a232743e3a85f0585fefda3744fc9f3c2">Hkk</a> = <a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a> * [<a class="code" href="extract__parameters__fisheye_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a>(:,1) <a class="code" href="extract__parameters__fisheye_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a>(:,2) <a class="code" href="extract__parameters__fisheye_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a>];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="extract__parameters__fisheye_8m.html#a232743e3a85f0585fefda3744fc9f3c2">Hkk</a> = <a class="code" href="extract__parameters__fisheye_8m.html#a232743e3a85f0585fefda3744fc9f3c2">Hkk</a> / <a class="code" href="extract__parameters__fisheye_8m.html#a232743e3a85f0585fefda3744fc9f3c2">Hkk</a>(3,3);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   <a class="code" href="ginput4_8m.html#a5b6586ddcb1f24968e5ae54ef6fd9849">else</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);   </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,3);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a232743e3a85f0585fefda3744fc9f3c2">Hkk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,3);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a2bb2d9f5936ba74de85f4c9ac1bd8e88">omckk_error</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="extract__parameters__fisheye_8m.html#a9da77c7d8c50c73a3af0cd401da3539d">Tckk_error</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <a class="code" href="extract__parameters__fisheye_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <a class="code" href="extract__parameters__fisheye_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([&#39;omc_&#39; num2str(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) &#39; = <a class="code" href="extract__parameters__fisheye_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a>;&#39;]);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <a class="code" href="extract__parameters__fisheye_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([&#39;Rc_&#39; num2str(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) &#39; = <a class="code" href="extract__parameters__fisheye_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a>;&#39;]);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <a class="code" href="extract__parameters__fisheye_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([&#39;Tc_&#39; num2str(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) &#39; = <a class="code" href="extract__parameters__fisheye_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a>;&#39;]);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <a class="code" href="extract__parameters__fisheye_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([&#39;H_&#39; num2str(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) &#39;= <a class="code" href="extract__parameters__fisheye_8m.html#a232743e3a85f0585fefda3744fc9f3c2">Hkk</a>;&#39;]);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <a class="code" href="extract__parameters__fisheye_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([&#39;omc_error_&#39; num2str(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) &#39; = <a class="code" href="extract__parameters__fisheye_8m.html#a2bb2d9f5936ba74de85f4c9ac1bd8e88">omckk_error</a>;&#39;]);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <a class="code" href="extract__parameters__fisheye_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([&#39;Tc_error_&#39; num2str(<a class="code" href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) &#39; = <a class="code" href="extract__parameters__fisheye_8m.html#a9da77c7d8c50c73a3af0cd401da3539d">Tckk_error</a>;&#39;]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="extract__parameters__fisheye_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acam__proj__calib_8m_html_ace17e3648be72bd3a88de20f27f1f5f0"><div class="ttname"><a href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a></div><div class="ttdeci">if</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00023">cam_proj_calib.m:23</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a72d54db2b27ce046aab6e6a414c407e9"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a></div><div class="ttdeci">fc</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00010">extract_parameters_fisheye.m:10</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a881ddac0f92ab46f2971e32a71992c3a"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a881ddac0f92ab46f2971e32a71992c3a">~exist</a></div><div class="ttdeci">if ~exist('solution_error') solution_error</div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_ae18b1980f35114a664a851f82b2f3098"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#ae18b1980f35114a664a851f82b2f3098">inv_KK</a></div><div class="ttdeci">inv_KK</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00023">extract_parameters_fisheye.m:23</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_aab1d724fa256f601098764dda6e86f9d"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#aab1d724fa256f601098764dda6e86f9d">fc_error</a></div><div class="ttdeci">*** fc_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00015">extract_parameters_fisheye.m:15</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_abbf8fc0a3b13cdaab3d40bddd83983fb"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#abbf8fc0a3b13cdaab3d40bddd83983fb">active_images</a></div><div class="ttdeci">Extract the extrinsic and recomputer the collineations for if active_images(kk)</div></div>
+<div class="ttc" id="acheck__convergence_8m_html_a26dc0036665a7be66f45ffe41465ffe5"><div class="ttname"><a href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a></div><div class="ttdeci">for solution</div><div class="ttdef"><b>Definition:</b> <a href="check__convergence_8m_source.html#l00025">check_convergence.m:25</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a22cfac2df329b4a52028fddc365d6f7f"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a></div><div class="ttdeci">eval(['omc_' num2str(kk) '=omckk;'])</div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00008">extract_parameters_fisheye.m:8</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_a8a3044b1d1e2a6aa11e157d6cc40bc6f"><div class="ttname"><a href="add__suppress_8m.html#a8a3044b1d1e2a6aa11e157d6cc40bc6f">check_active_images</a></div><div class="ttdeci">I did not call check_active_images</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00026">add_suppress.m:26</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a2bb2d9f5936ba74de85f4c9ac1bd8e88"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a2bb2d9f5936ba74de85f4c9ac1bd8e88">omckk_error</a></div><div class="ttdeci">*** omckk_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00034">extract_parameters_fisheye.m:34</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a9da77c7d8c50c73a3af0cd401da3539d"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a9da77c7d8c50c73a3af0cd401da3539d">Tckk_error</a></div><div class="ttdeci">Tckk_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00035">extract_parameters_fisheye.m:35</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a4508a179901753e284c1a88754994d88"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a></div><div class="ttdeci">*** Tckk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00032">extract_parameters_fisheye.m:32</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_acf16b34b463fad7498d5415e51a44826"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#acf16b34b463fad7498d5415e51a44826">kc</a></div><div class="ttdeci">*** kc</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00013">extract_parameters_fisheye.m:13</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_af11ed0b23179c5443ade790615f5f490"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#af11ed0b23179c5443ade790615f5f490">matrix</a></div><div class="ttdeci">Calibration matrix</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00022">extract_parameters_fisheye.m:22</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a3aa6bf135885f06d75e5da2713b5230d"><div class="ttname"><a href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a></div><div class="ttdeci">for Align the structure from the first ii * rodrigues(om_left_list(:, ii))'</div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a0e2dae28e3d7505808bb2f47824bc2a2"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a0e2dae28e3d7505808bb2f47824bc2a2">alpha_c_error</a></div><div class="ttdeci">alpha_c_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00017">extract_parameters_fisheye.m:17</a></div></div>
+<div class="ttc" id="asaving__calib_8m_html_a77607c656f2325b76569b254455bc039"><div class="ttname"><a href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a></div><div class="ttdeci">NaN</div><div class="ttdef"><b>Definition:</b> <a href="saving__calib_8m_source.html#l00109">saving_calib.m:109</a></div></div>
+<div class="ttc" id="aginput4_8m_html_a5b6586ddcb1f24968e5ae54ef6fd9849"><div class="ttname"><a href="ginput4_8m.html#a5b6586ddcb1f24968e5ae54ef6fd9849">else</a></div><div class="ttdeci">end elseif if else[out1, out2]</div><div class="ttdef"><b>Definition:</b> <a href="ginput4_8m_source.html#l00065">ginput4.m:65</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a5c3d7d7c3c32312381aafa360fd6e1b8"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a></div><div class="ttdeci">Rckk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00037">extract_parameters_fisheye.m:37</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a5764554a67d94c602ff97cda338ed5db"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a5764554a67d94c602ff97cda338ed5db">paramaters</a></div><div class="ttdeci">Extraction of the final intrinsic and extrinsic paramaters</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00004">extract_parameters_fisheye.m:4</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a78974b12364a0c431fa4a87b180224ed"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a78974b12364a0c431fa4a87b180224ed">paramters</a></div><div class="ttdeci">Extract the extrinsic paramters</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00025">extract_parameters_fisheye.m:25</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a7313be71a16c2a7058951ec29e43be7f"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a7313be71a16c2a7058951ec29e43be7f">kc_error</a></div><div class="ttdeci">kc_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00018">extract_parameters_fisheye.m:18</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a63513f99a978643d54866b110812e17a"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a63513f99a978643d54866b110812e17a">alpha_c</a></div><div class="ttdeci">*** alpha_c</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00012">extract_parameters_fisheye.m:12</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_a5c344952fc5d4209f5a4cd0922c051d0"><div class="ttname"><a href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a></div><div class="ttdeci">if n_ima</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00007">add_suppress.m:7</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a0428f240719e50213a56a96b5c94d0cf"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a></div><div class="ttdeci">Extract the extrinsic and recomputer the collineations for if omckk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00031">extract_parameters_fisheye.m:31</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a232743e3a85f0585fefda3744fc9f3c2"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a232743e3a85f0585fefda3744fc9f3c2">Hkk</a></div><div class="ttdeci">Hkk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00039">extract_parameters_fisheye.m:39</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_acfecbf1b9aa5a6e6e9a9b6d2e4dfa937"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#acfecbf1b9aa5a6e6e9a9b6d2e4dfa937">cc</a></div><div class="ttdeci">*** cc</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00011">extract_parameters_fisheye.m:11</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a7494a839f85e504913610f06e84c525a"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a7494a839f85e504913610f06e84c525a">cc_error</a></div><div class="ttdeci">cc_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00016">extract_parameters_fisheye.m:16</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_aea357319d0681a73c43f9b202521ea52"><div class="ttname"><a href="go__calib__optim__iter_8m.html#aea357319d0681a73c43f9b202521ea52">solution_error</a></div><div class="ttdeci">solution_error</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00582">go_calib_optim_iter.m:582</a></div></div>
+<div class="ttc" id="aextract__parameters__fisheye_8m_html_a99ee4f1e3e529259596a8093b544d7fd"><div class="ttname"><a href="extract__parameters__fisheye_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a></div><div class="ttdeci">Extract the extrinsic and recomputer the collineations for kk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters__fisheye_8m_source.html#l00027">extract_parameters_fisheye.m:27</a></div></div>
+<div class="ttc" id="aerror__analysis_8m_html_a30ec4b5ab03426226e08bd6309a70bb8"><div class="ttname"><a href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a></div><div class="ttdeci">KK</div><div class="ttdef"><b>Definition:</b> <a href="error__analysis_8m_source.html#l00096">error_analysis.m:96</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

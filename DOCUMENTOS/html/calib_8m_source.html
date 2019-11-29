@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/calib.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">calib.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="calib_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">function</span> <a class="code" href="calib_8m.html#a8fbfa4a3586684f44929c6253999479c">calib</a>(<a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a>),</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% <a class="code" href="calib_8m.html#a8fbfa4a3586684f44929c6253999479c">calib</a>(<a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;%</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;% Runs the Camera Calibration <a class="code" href="stereo__gui_8m.html#a1111f4b47b9749e6ca5e4f9ca98da143">Toolbox</a>.</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;% Set <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a> <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> 1 <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> run the <a class="code" href="click__calib__fisheye__no__read_8m.html#aac26d9ceb1494dd9a043483ad8251bde">memory</a> efficient version.</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;% Any other value <span class="keywordflow">for</span> <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a> will run the normal version (see documentation)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 1,</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="calib_8m.html#a63c5fa32e94690d8f6f12cc3efdfadd2">   10</a></span>&#160;    <a class="code" href="calib_8m.html#a63c5fa32e94690d8f6f12cc3efdfadd2">calib_gui</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="calib_8m.html#a63c5fa32e94690d8f6f12cc3efdfadd2">calib_gui</a>(<a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">   13</a></span>&#160;<a class="code" href="calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="amanual__corner__extraction_8m_html_ad53f1340d882ce6d432b31017783278d"><div class="ttname"><a href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a></div><div class="ttdeci">This code allows complete manual reselection of every corner in the images This tool is specifically useful in the case of highly distorted images Use it when in standard mode In memory efficient mode</div><div class="ttdef"><b>Definition:</b> <a href="manual__corner__extraction_8m_source.html#l00006">manual_corner_extraction.m:6</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="acalib_8m_html_a63c5fa32e94690d8f6f12cc3efdfadd2"><div class="ttname"><a href="calib_8m.html#a63c5fa32e94690d8f6f12cc3efdfadd2">calib_gui</a></div><div class="ttdeci">function calib_gui</div><div class="ttdef"><b>Definition:</b> <a href="calib_8m_source.html#l00010">calib.m:10</a></div></div>
+<div class="ttc" id="aginput2_8m_html_aafbb9d50e573e4009d0650c645566ddd"><div class="ttname"><a href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a></div><div class="ttdeci">end if x if if nargin</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00034">ginput2.m:34</a></div></div>
+<div class="ttc" id="astereo__gui_8m_html_a1111f4b47b9749e6ca5e4f9ca98da143"><div class="ttname"><a href="stereo__gui_8m.html#a1111f4b47b9749e6ca5e4f9ca98da143">Toolbox</a></div><div class="ttdeci">stereo_gui Stereo Camera Calibration Toolbox(two cameras, internal and external calibration)</div><div class="ttdef"><b>Definition:</b> <a href="stereo__gui_8m_source.html#l00002">stereo_gui.m:2</a></div></div>
+<div class="ttc" id="acalib_8m_html_a8fbfa4a3586684f44929c6253999479c"><div class="ttname"><a href="calib_8m.html#a8fbfa4a3586684f44929c6253999479c">calib</a></div><div class="ttdeci">function calib(mode)</div></div>
+<div class="ttc" id="acalib_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="calib_8m_source.html#l00013">calib.m:13</a></div></div>
+<div class="ttc" id="aclick__calib__fisheye__no__read_8m_html_aac26d9ceb1494dd9a043483ad8251bde"><div class="ttname"><a href="click__calib__fisheye__no__read_8m.html#aac26d9ceb1494dd9a043483ad8251bde">memory</a></div><div class="ttdeci">Step used to clean the memory if a previous atttempt has been made to read the entire set of images into memory</div><div class="ttdef"><b>Definition:</b> <a href="click__calib__fisheye__no__read_8m_source.html#l00025">click_calib_fisheye_no_read.m:25</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

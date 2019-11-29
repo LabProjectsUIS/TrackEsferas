@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/align_structures.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">align_structures.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="align__structures_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="align__structures_8m.html#a42f97835bb4a2c586a28ab92a293ddac">    1</a></span>&#160;<span class="keyword">function</span> [om,T,Y] = align_structures(<a class="code" href="stereo__triangulation_8m.html#a2b2abdaf89992bbf470c74ca8de7cd62">X1</a>,<a class="code" href="stereo__triangulation_8m.html#a84d89d0b9be279602a35e0705eab274f">X2</a>),</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">    3</a></span>&#160;% Find <a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a> (<a class="code" href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a>) and <a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a>, such <a class="code" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> <a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a> = <a class="code" href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a>*<a class="code" href="stereo__triangulation_8m.html#a2b2abdaf89992bbf470c74ca8de7cd62">X1</a> + <a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a> <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> as <a class="code" href="check__convergence_8m.html#a12e1f53c847d07ce9e58df470087c0fa">close</a> as</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;% possible <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="stereo__triangulation_8m.html#a84d89d0b9be279602a35e0705eab274f">X2</a>.</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;[<a class="code" href="comp__distortion__oulu_8m.html#a612cf46e573ce15e11ea86f4741c9d49">m</a>,<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>] = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="stereo__triangulation_8m.html#a2b2abdaf89992bbf470c74ca8de7cd62">X1</a>);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;% initialization:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;% initialize <a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a> <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> no motion:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="align__structures_8m.html#a79aa96fc522b1520eea8d9ef00825762">   14</a></span>&#160;<a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(6,1);</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="align__structures_8m.html#ab41b0e12179ea31b35698fa48399e8d8">   15</a></span>&#160;<a class="code" href="align__structures_8m.html#ab41b0e12179ea31b35698fa48399e8d8">change</a> = 1;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordflow">while</span> <a class="code" href="align__structures_8m.html#ab41b0e12179ea31b35698fa48399e8d8">change</a> &gt; 1<a class="code" href="downsample_8m.html#a6e422e8a9c86cd3bf1d025c9e8655c53">e</a>-6,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a> = <a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(1:3);</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">   20</a></span>&#160;    <a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a> = <a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(4:6);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    [Y,dYdom,dYdT] = rigid_motion(<a class="code" href="stereo__triangulation_8m.html#a2b2abdaf89992bbf470c74ca8de7cd62">X1</a>,<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>,<a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="align__structures_8m.html#aeb9806a56e1e80b69cc9a606b36cfe4b">   24</a></span>&#160;    <a class="code" href="align__structures_8m.html#aeb9806a56e1e80b69cc9a606b36cfe4b">J</a> = [dYdom dYdT];</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="align__structures_8m.html#a52482fdd3721e7db69dc740aefee8ad4">   26</a></span>&#160;    <a class="code" href="align__structures_8m.html#a52482fdd3721e7db69dc740aefee8ad4">err</a> = <a class="code" href="stereo__triangulation_8m.html#a84d89d0b9be279602a35e0705eab274f">X2</a>(:) - <a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>(:);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="align__structures_8m.html#af7fea0654793726396e01edff01e1f2e">   28</a></span>&#160;   <a class="code" href="align__structures_8m.html#af7fea0654793726396e01edff01e1f2e">param_up</a> = inv(<a class="code" href="align__structures_8m.html#aeb9806a56e1e80b69cc9a606b36cfe4b">J</a><span class="stringliteral">&#39;*J)*J&#39;</span>*<a class="code" href="align__structures_8m.html#a52482fdd3721e7db69dc740aefee8ad4">err</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">   30</a></span>&#160;    <a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a> = <a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a> + <a class="code" href="align__structures_8m.html#af7fea0654793726396e01edff01e1f2e">param_up</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <a class="code" href="align__structures_8m.html#ab41b0e12179ea31b35698fa48399e8d8">change</a> = <a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="align__structures_8m.html#af7fea0654793726396e01edff01e1f2e">param_up</a>)/<a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="align__structures_8m.html#afb358f48b1646c750fb9da6c6585be2b">   34</a></span>&#160;<a class="code" href="align__structures_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">   36</a></span>&#160;<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a> = <a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(1:3);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a> = <a class="code" href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(4:6);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;[Y,dYdom,dYdT] = rigid_motion(<a class="code" href="stereo__triangulation_8m.html#a2b2abdaf89992bbf470c74ca8de7cd62">X1</a>,<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>,<a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a>);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="aalign__structures_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="align__structures_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00034">align_structures.m:34</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="astereo__triangulation_8m_html_a2b2abdaf89992bbf470c74ca8de7cd62"><div class="ttname"><a href="stereo__triangulation_8m.html#a2b2abdaf89992bbf470c74ca8de7cd62">X1</a></div><div class="ttdeci">X1</div><div class="ttdef"><b>Definition:</b> <a href="stereo__triangulation_8m_source.html#l00064">stereo_triangulation.m:64</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a1e8af1b834749c5cbe9484070c2a9977"><div class="ttname"><a href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00020">align_structures.m:20</a></div></div>
+<div class="ttc" id="areadras_8m_html_a7d252fd4b4ae9c8b8af5e91ef645fc1f"><div class="ttname"><a href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a></div><div class="ttdeci">READRAS Read an image file in sun raster format so that[X, map]</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00006">readras.m:6</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_ab41b0e12179ea31b35698fa48399e8d8"><div class="ttname"><a href="align__structures_8m.html#ab41b0e12179ea31b35698fa48399e8d8">change</a></div><div class="ttdeci">initialization change</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00015">align_structures.m:15</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_af7fea0654793726396e01edff01e1f2e"><div class="ttname"><a href="align__structures_8m.html#af7fea0654793726396e01edff01e1f2e">param_up</a></div><div class="ttdeci">param_up</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00028">align_structures.m:28</a></div></div>
+<div class="ttc" id="acheck__convergence_8m_html_a12e1f53c847d07ce9e58df470087c0fa"><div class="ttname"><a href="check__convergence_8m.html#a12e1f53c847d07ce9e58df470087c0fa">close</a></div><div class="ttdeci">close</div><div class="ttdef"><b>Definition:</b> <a href="check__convergence_8m_source.html#l00044">check_convergence.m:44</a></div></div>
+<div class="ttc" id="adownsample_8m_html_a6e422e8a9c86cd3bf1d025c9e8655c53"><div class="ttname"><a href="downsample_8m.html#a6e422e8a9c86cd3bf1d025c9e8655c53">e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> <a href="downsample_8m_source.html#l00029">downsample.m:29</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_ace3fdf821957e9266501abadd2926b1c"><div class="ttname"><a href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a></div><div class="ttdeci">R</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00170">cam_proj_calib.m:170</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a5bf8e9bd225c9965657036965db3c3fb"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a></div><div class="ttdeci">use the full distortion Take the complete distortion model n</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_aff75dbcbe674794c36a7741a0800e51b"><div class="ttname"><a href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a></div><div class="ttdeci">Find such that Y</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00003">align_structures.m:3</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a4e3462750cc302b9a3697c379ed1d885"><div class="ttname"><a href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a></div><div class="ttdeci">om</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00036">align_structures.m:36</a></div></div>
+<div class="ttc" id="awillson__convert_8m_html_a133c81a8d59c8baec1a46a7d72d0f859"><div class="ttname"><a href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a></div><div class="ttdeci">inv(dxddk' *dxddk) *(dxddk') *err norm)(k_step)/norm(k) if norm(k_step)/norm(k)&lt; 10e-10</div><div class="ttdef"><b>Definition:</b> <a href="willson__convert_8m_source.html#l00086">willson_convert.m:86</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a52482fdd3721e7db69dc740aefee8ad4"><div class="ttname"><a href="align__structures_8m.html#a52482fdd3721e7db69dc740aefee8ad4">err</a></div><div class="ttdeci">err</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00026">align_structures.m:26</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_aeb9806a56e1e80b69cc9a606b36cfe4b"><div class="ttname"><a href="align__structures_8m.html#aeb9806a56e1e80b69cc9a606b36cfe4b">J</a></div><div class="ttdeci">J</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00024">align_structures.m:24</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a51f20d6b1b54a2eee3be0e8adc96a0ae"><div class="ttname"><a href="align__structures_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a></div><div class="ttdeci">param</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00030">align_structures.m:30</a></div></div>
+<div class="ttc" id="astereo__triangulation_8m_html_a84d89d0b9be279602a35e0705eab274f"><div class="ttname"><a href="stereo__triangulation_8m.html#a84d89d0b9be279602a35e0705eab274f">X2</a></div><div class="ttdeci">X2</div><div class="ttdef"><b>Definition:</b> <a href="stereo__triangulation_8m_source.html#l00065">stereo_triangulation.m:65</a></div></div>
+<div class="ttc" id="acomp__distortion__oulu_8m_html_a612cf46e573ce15e11ea86f4741c9d49"><div class="ttname"><a href="comp__distortion__oulu_8m.html#a612cf46e573ce15e11ea86f4741c9d49">m</a></div><div class="ttdeci">comp_distortion_oulu m[x]</div><div class="ttdef"><b>Definition:</b> <a href="comp__distortion__oulu_8m_source.html#l00005">comp_distortion_oulu.m:5</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a00d9614e711bf169f15ae8e3e35d30df"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a></div><div class="ttdeci">If the rig is</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00213">go_calib_optim_iter.m:213</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

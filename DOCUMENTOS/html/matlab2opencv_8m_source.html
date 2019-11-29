@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/matlab2opencv.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">matlab2opencv.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="matlab2opencv_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">function</span> <a class="code" href="matlab2opencv_8m.html#a7ca3b58878335c7cd06dd139cafad97f">matlab2opencv</a>( <a class="code" href="matlab2opencv_8m.html#a54780ac604359cba3bc8430bf0001ca9">variable</a>, fileName, <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a>)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;[rows cols] = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="matlab2opencv_8m.html#a54780ac604359cba3bc8430bf0001ca9">variable</a>);</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;% Beware of Matlab<span class="stringliteral">&#39;s linear indexing</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="matlab2opencv_8m.html#a54780ac604359cba3bc8430bf0001ca9">    6</a></span>&#160;<span class="stringliteral">variable = variable&#39;</span>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;% Write <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a> as <span class="keywordflow">default</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordflow">if</span> ( ~<a class="code" href="analyse__error_8m.html#a24b06316e04bc706a3496f036ae493a1">exist</a>(<span class="stringliteral">&#39;flag&#39;</span>,<span class="stringliteral">&#39;var&#39;</span>) )</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a> = <span class="charliteral">&#39;w&#39;</span>; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordflow">if</span> ( ~<a class="code" href="analyse__error_8m.html#a24b06316e04bc706a3496f036ae493a1">exist</a>(fileName,<span class="stringliteral">&#39;file&#39;</span>) || <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a> == <span class="charliteral">&#39;w&#39;</span> )</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    % New <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a> or write <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a> specified </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a> = fopen( fileName, <span class="charliteral">&#39;w&#39;</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;%%YAML:1.0\n&#39;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    % Append <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">   19</a></span>&#160;    <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a> = fopen( fileName, <span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;% Write <a class="code" href="matlab2opencv_8m.html#a54780ac604359cba3bc8430bf0001ca9">variable</a> header</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;    %s: !!opencv-matrix\n&#39;</span>, inputname(1));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;        rows: %d\n&#39;</span>, <a class="code" href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">rows</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;        cols: %d\n&#39;</span>, <a class="code" href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">cols</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;        dt: d\n&#39;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;        data: [ &#39;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;% Write <a class="code" href="matlab2opencv_8m.html#a54780ac604359cba3bc8430bf0001ca9">variable</a> <a class="code" href="scanner__calibration__script_8m.html#a56a9c09a52f6c7d6f43b9d04fd5504d3">data</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="matlab2opencv_8m.html#a57fb42d44cd3dfd9791590db01db0b47">   30</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="matlab2opencv_8m.html#a57fb42d44cd3dfd9791590db01db0b47">i</a>=1:<a class="code" href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">rows</a>*<a class="code" href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">cols</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;%.6f&#39;</span>, <a class="code" href="matlab2opencv_8m.html#a54780ac604359cba3bc8430bf0001ca9">variable</a>(<a class="code" href="matlab2opencv_8m.html#a57fb42d44cd3dfd9791590db01db0b47">i</a>));</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="matlab2opencv_8m.html#a91cf6fbebedd86150a36e5ac3d5d3bfc">   32</a></span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="matlab2opencv_8m.html#a57fb42d44cd3dfd9791590db01db0b47">i</a> == <a class="code" href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">rows</a>*<a class="code" href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">cols</a>), <span class="keywordflow">break</span>, <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;, &#39;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="matlab2opencv_8m.html#af2cb768df423b71b93356a5eca56dd5f">mod</a>(<a class="code" href="matlab2opencv_8m.html#a57fb42d44cd3dfd9791590db01db0b47">i</a>+1,4) == 0</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;\n            &#39;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a>( <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="stringliteral">&#39;]\n&#39;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="matlab2opencv_8m.html#a116ec12743ee2c1915ca1b3840312aa2">fclose</a>(<a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="amatlab2opencv_8m_html_aa131b3cf808af8745317b7324ca88719"><div class="ttname"><a href="matlab2opencv_8m.html#aa131b3cf808af8745317b7324ca88719">fprintf</a></div><div class="ttdeci">fprintf(file, '%%YAML:1.0\n')</div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_a7ca3b58878335c7cd06dd139cafad97f"><div class="ttname"><a href="matlab2opencv_8m.html#a7ca3b58878335c7cd06dd139cafad97f">matlab2opencv</a></div><div class="ttdeci">function matlab2opencv(variable, fileName, flag)[rows cols]</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="amanual__corner__extraction_8m_html_ad53f1340d882ce6d432b31017783278d"><div class="ttname"><a href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a></div><div class="ttdeci">This code allows complete manual reselection of every corner in the images This tool is specifically useful in the case of highly distorted images Use it when in standard mode In memory efficient mode</div><div class="ttdef"><b>Definition:</b> <a href="manual__corner__extraction_8m_source.html#l00006">manual_corner_extraction.m:6</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_a83f0b0b799ea54be1874e9711580055b"><div class="ttname"><a href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">cols</a></div><div class="ttdeci">if break end if cols</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00031">loadinr.m:31</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_ac6a7a413be81452b9806f7021b893ad4"><div class="ttname"><a href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00005">add_suppress.m:5</a></div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_af2cb768df423b71b93356a5eca56dd5f"><div class="ttname"><a href="matlab2opencv_8m.html#af2cb768df423b71b93356a5eca56dd5f">mod</a></div><div class="ttdeci">if mod(i+1, 4)</div></div>
+<div class="ttc" id="aanalyse__error_8m_html_a24b06316e04bc706a3496f036ae493a1"><div class="ttname"><a href="analyse__error_8m.html#a24b06316e04bc706a3496f036ae493a1">exist</a></div><div class="ttdeci">for if exist(['y_' num2str(kk)])</div></div>
+<div class="ttc" id="aloadinr_8m_html_ac1352e0d866f7eb4ed9f3c24f8aef539"><div class="ttname"><a href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">rows</a></div><div class="ttdeci">end if rows</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00034">loadinr.m:34</a></div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_a54780ac604359cba3bc8430bf0001ca9"><div class="ttname"><a href="matlab2opencv_8m.html#a54780ac604359cba3bc8430bf0001ca9">variable</a></div><div class="ttdeci">Beware of Matlab s linear indexing variable</div><div class="ttdef"><b>Definition:</b> <a href="matlab2opencv_8m_source.html#l00006">matlab2opencv.m:6</a></div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_a57fb42d44cd3dfd9791590db01db0b47"><div class="ttname"><a href="matlab2opencv_8m.html#a57fb42d44cd3dfd9791590db01db0b47">i</a></div><div class="ttdeci">Write variable data for i</div><div class="ttdef"><b>Definition:</b> <a href="matlab2opencv_8m_source.html#l00030">matlab2opencv.m:30</a></div></div>
+<div class="ttc" id="arecomp__corner__calib_8m_html_ad354302590c04bf615eaee9f3294e32f"><div class="ttname"><a href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a></div><div class="ttdeci">flag</div><div class="ttdef"><b>Definition:</b> <a href="recomp__corner__calib_8m_source.html#l00010">recomp_corner_calib.m:10</a></div></div>
+<div class="ttc" id="ascanner__calibration__script_8m_html_a56a9c09a52f6c7d6f43b9d04fd5504d3"><div class="ttname"><a href="scanner__calibration__script_8m.html#a56a9c09a52f6c7d6f43b9d04fd5504d3">data</a></div><div class="ttdeci">Load the projector data</div><div class="ttdef"><b>Definition:</b> <a href="scanner__calibration__script_8m_source.html#l00107">scanner_calibration_script.m:107</a></div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_a116ec12743ee2c1915ca1b3840312aa2"><div class="ttname"><a href="matlab2opencv_8m.html#a116ec12743ee2c1915ca1b3840312aa2">fclose</a></div><div class="ttdeci">fclose(file)</div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_ac0a984a0dc9111131f4ad1fe8088698a"><div class="ttname"><a href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a></div><div class="ttdeci">else Append mode file</div><div class="ttdef"><b>Definition:</b> <a href="matlab2opencv_8m_source.html#l00019">matlab2opencv.m:19</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

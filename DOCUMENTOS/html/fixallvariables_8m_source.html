@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/fixallvariables.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fixallvariables.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fixallvariables_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;% Code <a class="code" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> clears <a class="code" href="_organizar_8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> empty or <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a> <a class="code" href="go__calib__optim__iter_8m.html#a05521d996b2297d6af7adb8a01ccc856">variables</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="fixallvariables_8m.html#a433d664f858acc83956dfb01b32f2610">    3</a></span>&#160;<a class="code" href="fixallvariables_8m.html#a433d664f858acc83956dfb01b32f2610">varlist</a> = whos;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordflow">if</span> <a class="code" href="fixallvariables_8m.html#a3bc32a4d0e910a5bae3453dd5e184a12">~isempty</a>(<a class="code" href="fixallvariables_8m.html#a433d664f858acc83956dfb01b32f2610">varlist</a>),</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="fixallvariables_8m.html#ac03b33ff57d412bfed3708112fb4334b">    7</a></span>&#160;    <a class="code" href="fixallvariables_8m.html#ac03b33ff57d412bfed3708112fb4334b">Nvar</a> = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="fixallvariables_8m.html#a433d664f858acc83956dfb01b32f2610">varlist</a>,1);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="fixallvariables_8m.html#a20aac6653d1508c660768ea4dc7e88c1">    9</a></span>&#160;    <span class="keywordflow">for</span> <a class="code" href="fixallvariables_8m.html#a20aac6653d1508c660768ea4dc7e88c1">c_var</a> = 1:<a class="code" href="fixallvariables_8m.html#ac03b33ff57d412bfed3708112fb4334b">Nvar</a>,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="fixallvariables_8m.html#ac9d6c60710436f45c78669da9b9b2093">   11</a></span>&#160;        <a class="code" href="fixallvariables_8m.html#ac9d6c60710436f45c78669da9b9b2093">var2fix</a> = <a class="code" href="fixallvariables_8m.html#a433d664f858acc83956dfb01b32f2610">varlist</a>(<a class="code" href="fixallvariables_8m.html#a20aac6653d1508c660768ea4dc7e88c1">c_var</a>).name;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="fixallvariables_8m.html#af6fb63c53b3fc53e852ecaa5be3ef46a">   13</a></span>&#160;        <a class="code" href="fixallvariables_8m.html#af6fb63c53b3fc53e852ecaa5be3ef46a">fixvariable</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="fixallvariables_8m.html#afb358f48b1646c750fb9da6c6585be2b">   15</a></span>&#160;    <a class="code" href="fixallvariables_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<a class="code" href="fixallvariables_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="click__calib__fisheye__no__read_8m.html#a089de068562fd81ac06ce9b0b953934b">clear</a> <a class="code" href="fixallvariables_8m.html#a433d664f858acc83956dfb01b32f2610">varlist</a> <a class="code" href="fixallvariables_8m.html#ac9d6c60710436f45c78669da9b9b2093">var2fix</a> <a class="code" href="fixallvariables_8m.html#ac03b33ff57d412bfed3708112fb4334b">Nvar</a> <a class="code" href="fixallvariables_8m.html#a20aac6653d1508c660768ea4dc7e88c1">c_var</a></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="aclick__calib__fisheye__no__read_8m_html_a089de068562fd81ac06ce9b0b953934b"><div class="ttname"><a href="click__calib__fisheye__no__read_8m.html#a089de068562fd81ac06ce9b0b953934b">clear</a></div><div class="ttdeci">Step used to clean the memory if a previous atttempt has been made to read the entire set of images into clear(['I_' num2str(kk)])</div></div>
+<div class="ttc" id="afixallvariables_8m_html_ac9d6c60710436f45c78669da9b9b2093"><div class="ttname"><a href="fixallvariables_8m.html#ac9d6c60710436f45c78669da9b9b2093">var2fix</a></div><div class="ttdeci">for var2fix</div><div class="ttdef"><b>Definition:</b> <a href="fixallvariables_8m_source.html#l00011">fixallvariables.m:11</a></div></div>
+<div class="ttc" id="areadras_8m_html_a7d252fd4b4ae9c8b8af5e91ef645fc1f"><div class="ttname"><a href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a></div><div class="ttdeci">READRAS Read an image file in sun raster format so that[X, map]</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00006">readras.m:6</a></div></div>
+<div class="ttc" id="afixallvariables_8m_html_a20aac6653d1508c660768ea4dc7e88c1"><div class="ttname"><a href="fixallvariables_8m.html#a20aac6653d1508c660768ea4dc7e88c1">c_var</a></div><div class="ttdeci">for c_var</div><div class="ttdef"><b>Definition:</b> <a href="fixallvariables_8m_source.html#l00009">fixallvariables.m:9</a></div></div>
+<div class="ttc" id="afixallvariables_8m_html_af6fb63c53b3fc53e852ecaa5be3ef46a"><div class="ttname"><a href="fixallvariables_8m.html#af6fb63c53b3fc53e852ecaa5be3ef46a">fixvariable</a></div><div class="ttdeci">fixvariable</div><div class="ttdef"><b>Definition:</b> <a href="fixallvariables_8m_source.html#l00013">fixallvariables.m:13</a></div></div>
+<div class="ttc" id="afixallvariables_8m_html_ac03b33ff57d412bfed3708112fb4334b"><div class="ttname"><a href="fixallvariables_8m.html#ac03b33ff57d412bfed3708112fb4334b">Nvar</a></div><div class="ttdeci">if Nvar</div><div class="ttdef"><b>Definition:</b> <a href="fixallvariables_8m_source.html#l00007">fixallvariables.m:7</a></div></div>
+<div class="ttc" id="asaving__calib_8m_html_a77607c656f2325b76569b254455bc039"><div class="ttname"><a href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a></div><div class="ttdeci">NaN</div><div class="ttdef"><b>Definition:</b> <a href="saving__calib_8m_source.html#l00109">saving_calib.m:109</a></div></div>
+<div class="ttc" id="afixallvariables_8m_html_a3bc32a4d0e910a5bae3453dd5e184a12"><div class="ttname"><a href="fixallvariables_8m.html#a3bc32a4d0e910a5bae3453dd5e184a12">~isempty</a></div><div class="ttdeci">if ~isempty(varlist)</div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a05521d996b2297d6af7adb8a01ccc856"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a05521d996b2297d6af7adb8a01ccc856">variables</a></div><div class="ttdeci">Little fix in case of stupid values in the binary variables</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00079">go_calib_optim_iter.m:79</a></div></div>
+<div class="ttc" id="afixallvariables_8m_html_a433d664f858acc83956dfb01b32f2610"><div class="ttname"><a href="fixallvariables_8m.html#a433d664f858acc83956dfb01b32f2610">varlist</a></div><div class="ttdeci">Code that clears all empty or NaN variables varlist</div><div class="ttdef"><b>Definition:</b> <a href="fixallvariables_8m_source.html#l00003">fixallvariables.m:3</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_a00a349297fa58bc80ff5329e25dcfe28"><div class="ttname"><a href="_organizar_8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a></div><div class="ttdeci">clear all</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00001">Organizar.m:1</a></div></div>
+<div class="ttc" id="afixallvariables_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="fixallvariables_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="fixallvariables_8m_source.html#l00015">fixallvariables.m:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/data.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">data.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="data_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _DATACALIB_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _DATACALIB_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;opencv\cv.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacecdata.html">    6</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecdata.html">cdata</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">using namespace </span>cv;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">/* Parámetros extrísecos e intrínsecos de las cámaras</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    *   xL: 2xN matrix of pixel coordinates in the left image</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    *   xR : 2xN matrix of pixel coordinates in the right image</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    *   om, T : rotation vector and translation vector between right and left cameras(output of stereo calibration)</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    *   fc_left, cc_left, ... : intrinsic parameters of the left camera(output of stereo calibration)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    *   fc_right, cc_right, ... : intrinsic parameters of the right camera(output of stereo calibration)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#af4bc16c03cf004b4edb2f4fe49ddd99a">fc_left</a>(2, 1);     </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#ab051c54c495324a241e4a869c734b614">cc_left</a>(2, 1);     </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#ae2a55bb2d6e6619fb90b2c17c59de9e4">kc_left</a>(5, 1);     </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespacecdata.html#aca08d019117a18c395e2b05e6e5656c4">   23</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="namespacecdata.html#aca08d019117a18c395e2b05e6e5656c4">alpha_c_left</a>   = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#ad62903bf45390716716c7e3a1f562b8a">fc_right</a>(2, 1);    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#acb30239e2fa1aaa34dc2eb0c8f3a7f28">cc_right</a>(2, 1);    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#aafba327d5bcc26f15cf6f0fc46948948">kc_right</a>(5, 1);    </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacecdata.html#ac6e3d66ad21a172e541eb5e31617733c">   27</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="namespacecdata.html#ac6e3d66ad21a172e541eb5e31617733c">alpha_c_right</a>  = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#aa66c58e2172448d7558e9ece8fe8f48b">om</a>(3, 1);          </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#a1fc13f41e4f9f2ac8cc602051e67c451">T</a>(3, 1);           </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespacecdata.html#aee3efd056928426652a4f7e767d35305">   37</a></span>&#160;    Mat_&lt;float&gt; <a class="code" href="namespacecdata.html#aee3efd056928426652a4f7e767d35305">distances</a> = (Mat_&lt;float&gt;(5, 6) &lt;&lt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        20.05, 29.26, 49.67, 39.82, 49.55, 51.53,       <span class="comment">// pointer</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        35.22, 59.15, 25.07, 44.73, 51.63, 54.93,       <span class="comment">//FEMUR</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        89.74, 107.01, 80.03, 70.26, 103.56, 59.74,     <span class="comment">//TIBIA</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">//64.75, 118.23, 183.64, 55.66, 126.57, 73.28,  //GAFAS</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        188.62, 126.20, 78.17, 55.66, 126.57, 73.28,    <span class="comment">//GAFAS</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        34.36, 44.17, 25.27, 51.46, 42.12, 34.31);      <span class="comment">// Phantom</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespacecdata.html#a0ad2267b13f6158cd315b42c436256a5">   45</a></span>&#160;    Mat_&lt;float&gt; <a class="code" href="namespacecdata.html#a0ad2267b13f6158cd315b42c436256a5">PARAM</a> = (Mat_&lt;double&gt;(3, 3) &lt;&lt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        -237.4290, 84.1204, 12.7156,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        0.7137, 0.5809, 1.7784,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        2.4929, 1.7679, 7.0501);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespacecdata.html#ab18c981f0063987b6829a6c733821504">   50</a></span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#ab18c981f0063987b6829a6c733821504">f_cor</a> = (Mat_&lt;double&gt;(3, 1) &lt;&lt; 0, 0, 0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                                         <span class="comment">// 4.5238</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespacecdata.html#af7cbf8545ce46275c41f81f49fb6cf34">   53</a></span>&#160;    Mat_&lt;double&gt; <a class="code" href="namespacecdata.html#af7cbf8545ce46275c41f81f49fb6cf34">phantom</a> = (Mat_&lt;float&gt;(47, 3) &lt;&lt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        0.0000, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        0.0000, 14.4400, -1.9025,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        14.4400, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        0.0000, 28.8800, -1.9025,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        28.8800, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        0.0000, 43.3200, -1.9025,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        43.3200, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        0.0000, 57.7600, -1.9025,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        57.7600, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        0.0000, 72.2200, -1.9025,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        72.2000, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        0.0000, 86.6400, -1.9025,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        86.6400, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        0.0000, 101.0800, -1.9025,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        101.0800, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        0.0000, 115.5200, -1.9025,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        115.5200, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        0.0000, 129.9600, -1.9025,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        129.9600, 0.0000, -1.9025,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        32.5000, 32.5000, -1.9025,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        16.2500, 113.7500, -1.9025,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        32.5000, 97.5000, -1.9025,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        48.7400, 81.2500, -1.9025,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        64.9900, 65.0100, -1.9025,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        81.2400, 48.7600, -1.9025,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        97.4900, 32.5100, -1.9025,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        113.7300, 16.2600, -1.9025,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        35.3600, 130.0000, 8.0975,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        59.3400, 115.9100, 8.0975,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        68.5400, 96.8200, 8.0975,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        87.6300, 87.6300, 13.0975,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        118.7379, 56.5111, 13.0975,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        87.6300, 87.6300, 13.0975,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        130.0000, 35.3600, 13.0975,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        66.8213, 130.9413, 35.2185,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        98.8913, 98.8913, 35.2326,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        130.9513, 66.8213, 35.2225,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        89.3913, 117.6713, 41.7945,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        117.6713, 89.3913, 41.7945,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        85.3813, 130.9613, 48.3565,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        108.1813, 108.1813, 48.3706,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        130.9613, 85.3813, 48.3565,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        101.8900, 130.0000, 54.1675,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        130.0000, 101.8900, 54.1675,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        120.1800, 120.1800, 54.1675,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        118.8100, 130.0000, 54.1675,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        130.0000, 118.8100, 54.1675</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif // _DATACALIB_H_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacecdata_html_ac6e3d66ad21a172e541eb5e31617733c"><div class="ttname"><a href="namespacecdata.html#ac6e3d66ad21a172e541eb5e31617733c">cdata::alpha_c_right</a></div><div class="ttdeci">double alpha_c_right</div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00027">data.h:27</a></div></div>
+<div class="ttc" id="anamespacecdata_html_a0ad2267b13f6158cd315b42c436256a5"><div class="ttname"><a href="namespacecdata.html#a0ad2267b13f6158cd315b42c436256a5">cdata::PARAM</a></div><div class="ttdeci">Mat_&lt; float &gt; PARAM</div><div class="ttdoc">PARAM PR.</div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00045">data.h:45</a></div></div>
+<div class="ttc" id="anamespacecdata_html_aafba327d5bcc26f15cf6f0fc46948948"><div class="ttname"><a href="namespacecdata.html#aafba327d5bcc26f15cf6f0fc46948948">cdata::kc_right</a></div><div class="ttdeci">Mat_&lt; double &gt; kc_right(5, 1)</div><div class="ttdoc">Parámetros intrínseco de la cámara derecha.</div></div>
+<div class="ttc" id="anamespacecdata_html_aca08d019117a18c395e2b05e6e5656c4"><div class="ttname"><a href="namespacecdata.html#aca08d019117a18c395e2b05e6e5656c4">cdata::alpha_c_left</a></div><div class="ttdeci">double alpha_c_left</div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00023">data.h:23</a></div></div>
+<div class="ttc" id="anamespacecdata_html_acb30239e2fa1aaa34dc2eb0c8f3a7f28"><div class="ttname"><a href="namespacecdata.html#acb30239e2fa1aaa34dc2eb0c8f3a7f28">cdata::cc_right</a></div><div class="ttdeci">Mat_&lt; double &gt; cc_right(2, 1)</div><div class="ttdoc">Parámetros intrínseco de la cámara derecha.</div></div>
+<div class="ttc" id="anamespacecdata_html_ae2a55bb2d6e6619fb90b2c17c59de9e4"><div class="ttname"><a href="namespacecdata.html#ae2a55bb2d6e6619fb90b2c17c59de9e4">cdata::kc_left</a></div><div class="ttdeci">Mat_&lt; double &gt; kc_left(5, 1)</div><div class="ttdoc">Parámetros intrínseco de la cámara izquierda.</div></div>
+<div class="ttc" id="anamespacecdata_html_ad62903bf45390716716c7e3a1f562b8a"><div class="ttname"><a href="namespacecdata.html#ad62903bf45390716716c7e3a1f562b8a">cdata::fc_right</a></div><div class="ttdeci">Mat_&lt; double &gt; fc_right(2, 1)</div><div class="ttdoc">Parámetros intrínseco de la cámara derecha.</div></div>
+<div class="ttc" id="anamespacecdata_html_ab051c54c495324a241e4a869c734b614"><div class="ttname"><a href="namespacecdata.html#ab051c54c495324a241e4a869c734b614">cdata::cc_left</a></div><div class="ttdeci">Mat_&lt; double &gt; cc_left(2, 1)</div><div class="ttdoc">Parámetros intrínseco de la cámara izquierda.</div></div>
+<div class="ttc" id="anamespacecdata_html_aee3efd056928426652a4f7e767d35305"><div class="ttname"><a href="namespacecdata.html#aee3efd056928426652a4f7e767d35305">cdata::distances</a></div><div class="ttdeci">Mat_&lt; float &gt; distances</div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00037">data.h:37</a></div></div>
+<div class="ttc" id="anamespacecdata_html_af4bc16c03cf004b4edb2f4fe49ddd99a"><div class="ttname"><a href="namespacecdata.html#af4bc16c03cf004b4edb2f4fe49ddd99a">cdata::fc_left</a></div><div class="ttdeci">Mat_&lt; double &gt; fc_left(2, 1)</div><div class="ttdoc">Parámetros intrínseco de la cámara izquierda.</div></div>
+<div class="ttc" id="anamespacecdata_html_af7cbf8545ce46275c41f81f49fb6cf34"><div class="ttname"><a href="namespacecdata.html#af7cbf8545ce46275c41f81f49fb6cf34">cdata::phantom</a></div><div class="ttdeci">Mat_&lt; double &gt; phantom</div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00053">data.h:53</a></div></div>
+<div class="ttc" id="anamespacecdata_html_ab18c981f0063987b6829a6c733821504"><div class="ttname"><a href="namespacecdata.html#ab18c981f0063987b6829a6c733821504">cdata::f_cor</a></div><div class="ttdeci">Mat_&lt; double &gt; f_cor</div><div class="ttdoc">Parámetros extrínseco de las cámaras.</div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00050">data.h:50</a></div></div>
+<div class="ttc" id="anamespacecdata_html"><div class="ttname"><a href="namespacecdata.html">cdata</a></div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00006">data.h:6</a></div></div>
+<div class="ttc" id="anamespacecdata_html_a1fc13f41e4f9f2ac8cc602051e67c451"><div class="ttname"><a href="namespacecdata.html#a1fc13f41e4f9f2ac8cc602051e67c451">cdata::T</a></div><div class="ttdeci">Mat_&lt; double &gt; T(3, 1)</div><div class="ttdoc">Parámetros extrínseco de las cámaras.</div></div>
+<div class="ttc" id="anamespacecdata_html_aa66c58e2172448d7558e9ece8fe8f48b"><div class="ttname"><a href="namespacecdata.html#aa66c58e2172448d7558e9ece8fe8f48b">cdata::om</a></div><div class="ttdeci">Mat_&lt; double &gt; om(3, 1)</div><div class="ttdoc">Parámetros extrínseco de las cámaras.</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,0 +1,1338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Referencia del Archivo C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/compute_homography.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo compute_homography.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="compute__homography_8m_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a99ef8f8e776692f374f4e1d8afeb6f98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> the total number of <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> larger optimize the <a class="el" href="scanner__calibration__script_8m.html#a343ef102df3c79ce3b78111bb59f2e0a">solution</a> by minimizing the reprojection <a class="el" href="stereo__gui_8m.html#abd267a42a98950fcce66d63808372db3">error</a>(in the least <a class="el" href="click__ima__calib3_d_8m.html#a157441835dd2f451ee6aec60b4a9acef">squares</a> <a class="el" href="comp__error__calib__fisheye_8m.html#abb15673642fe34932c402078811ef2ff">sense</a>). % % %Important functions called within <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> <a class="el" href="rigid__motion_8m.html#a3c8c189b0d4d2a89443cae4b60fe8ad6">program</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a99ef8f8e776692f374f4e1d8afeb6f98">size</a> (<a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>, 1)&lt; 3</td></tr>
+<tr class="separator:a99ef8f8e776692f374f4e1d8afeb6f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae865728603594350ea6b219db66bbe42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ae865728603594350ea6b219db66bbe42">ones</a> (1, <a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>)]</td></tr>
+<tr class="separator:ae865728603594350ea6b219db66bbe42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b5f22ba54982150d73d4319114f880"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a79b5f22ba54982150d73d4319114f880">size</a> (<a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a>, 1)&lt; 3</td></tr>
+<tr class="separator:a79b5f22ba54982150d73d4319114f880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5abbd88564e3d6c36bbc07e632cacbc"><td class="memItemLeft" align="right" valign="top">id&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ae5abbd88564e3d6c36bbc07e632cacbc">scyy</a> ()</td></tr>
+<tr class="separator:ae5abbd88564e3d6c36bbc07e632cacbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919d1d88db8534c047bfc1ecc8305db5"><td class="memItemLeft" align="right" valign="top">Compute the <a class="el" href="click__ima__calib3_d_8m.html#a9a8e74db9e8e82afbf923b5927168dd8">homography</a> between <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> and&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a919d1d88db8534c047bfc1ecc8305db5">L</a> (1:2:2 *<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>, 1:3)</td></tr>
+<tr class="separator:a919d1d88db8534c047bfc1ecc8305db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac659642ed3908eb512538980d9f9c511"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ac659642ed3908eb512538980d9f9c511">L</a> (2:2:2 *<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>, 4:6)</td></tr>
+<tr class="separator:ac659642ed3908eb512538980d9f9c511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b4d264d5d5888d5e5073f545122446"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#aa7b4d264d5d5888d5e5073f545122446">L</a> (1:2:2 *<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>, 7:9)</td></tr>
+<tr class="separator:aa7b4d264d5d5888d5e5073f545122446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4128c52b7c867b6a8fe740f97455b6a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a4128c52b7c867b6a8fe740f97455b6a8">L</a> (2:2:2 *<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>, 7:9)</td></tr>
+<tr class="separator:a4128c52b7c867b6a8fe740f97455b6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81a38151163b39207c748b8a8e116a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ad81a38151163b39207c748b8a8e116a8">m2</a> (2,:)./m2(3</td></tr>
+<tr class="separator:ad81a38151163b39207c748b8a8e116a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2990d7c8f4ef0e0ccc1bf9643d5f2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a1f2990d7c8f4ef0e0ccc1bf9643d5f2c">J</a> (1:2:2 *<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>, 1:3)</td></tr>
+<tr class="separator:a1f2990d7c8f4ef0e0ccc1bf9643d5f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81b2a0ca4f40c27f3d584eb11cc1396"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ab81b2a0ca4f40c27f3d584eb11cc1396">J</a> (2:2:2 *<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>, 4:6)</td></tr>
+<tr class="separator:ab81b2a0ca4f40c27f3d584eb11cc1396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70407f43edb260a392dd6f878c214564"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a70407f43edb260a392dd6f878c214564">J</a> (1:2:2 *<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>, 7:8)</td></tr>
+<tr class="separator:a70407f43edb260a392dd6f878c214564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc8e0bb025a222c9efd7c6540674b4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#abfc8e0bb025a222c9efd7c6540674b4a">J</a> (2:2:2 *<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>, 7:8)</td></tr>
+<tr class="separator:abfc8e0bb025a222c9efd7c6540674b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d0c7bdee6004b75802c56c9fdb8219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ad9d0c7bdee6004b75802c56c9fdb8219">norm</a> (<a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a>) %norm(<a class="el" href="compute__homography_8m.html#af563da2b8426c2b78beb54767aedf1f5">hh_innov</a>) <a class="el" href="compute__homography_8m.html#a7095a3e701f475db13eaca64dba5dcc1">hhv</a></td></tr>
+<tr class="separator:ad9d0c7bdee6004b75802c56c9fdb8219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f83917df652286d6361986ce08fc439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a3f83917df652286d6361986ce08fc439">figure</a> (8)</td></tr>
+<tr class="separator:a3f83917df652286d6361986ce08fc439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1518c3a3560bbfdfd89751e2c8b6797"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ab1518c3a3560bbfdfd89751e2c8b6797">plot</a> (<a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a>(1,:), <a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a>(2,:), '<a class="el" href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a>+')</td></tr>
+<tr class="separator:ab1518c3a3560bbfdfd89751e2c8b6797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a8676ea5f8593517602d35c62ec43aafa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a8676ea5f8593517602d35c62ec43aafa">function</a> [<a class="el" href="_un_warp_plane_8m.html#a5febebc43247a6b1ff24766e0822511d">H</a>, <a class="el" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a>, <a class="el" href="compute__homography_8m.html#ac188b84731ebf0dfee2a0a33c6cbcdb8">inv_Hnorm</a>] = <a class="el" href="compute__homography_8m.html#ac2424d6c028ea5ea4de1b56a01d72169">compute_homography</a>(<a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>,<a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a>)</td></tr>
+<tr class="separator:a8676ea5f8593517602d35c62ec43aafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2424d6c028ea5ea4de1b56a01d72169"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ac2424d6c028ea5ea4de1b56a01d72169">compute_homography</a> [<a class="el" href="_un_warp_plane_8m.html#a5febebc43247a6b1ff24766e0822511d">H</a>, <a class="el" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a>, <a class="el" href="compute__homography_8m.html#ac188b84731ebf0dfee2a0a33c6cbcdb8">inv_Hnorm</a>]</td></tr>
+<tr class="separator:ac2424d6c028ea5ea4de1b56a01d72169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f959e84fefd95105b45aa5de288711"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> the total number of <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> larger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#af3f959e84fefd95105b45aa5de288711">than</a></td></tr>
+<tr class="separator:af3f959e84fefd95105b45aa5de288711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3cd915d758008bd19d0f2428fbb354a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> the total number of <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> larger optimize the <a class="el" href="scanner__calibration__script_8m.html#a343ef102df3c79ce3b78111bb59f2e0a">solution</a> by minimizing the reprojection <a class="el" href="stereo__gui_8m.html#abd267a42a98950fcce66d63808372db3">error</a>(in the least <a class="el" href="click__ima__calib3_d_8m.html#a157441835dd2f451ee6aec60b4a9acef">squares</a> <a class="el" href="comp__error__calib__fisheye_8m.html#abb15673642fe34932c402078811ef2ff">sense</a>). % % %Important functions called within <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> <a class="el" href="rigid__motion_8m.html#a3c8c189b0d4d2a89443cae4b60fe8ad6">program</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ab3cd915d758008bd19d0f2428fbb354a">m</a> = [m</td></tr>
+<tr class="separator:ab3cd915d758008bd19d0f2428fbb354a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb358f48b1646c750fb9da6c6585be2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></td></tr>
+<tr class="separator:afb358f48b1646c750fb9da6c6585be2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad05f78187c942f9dd521605fa81f1ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a> = [M</td></tr>
+<tr class="separator:aad05f78187c942f9dd521605fa81f1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68eea743cf30ed8fee471ccf64ea2d12"><td class="memItemLeft" align="right" valign="top">Prenormalization of <a class="el" href="willson__convert_8m.html#aeb407484ccae58e27ee8ade327e0651b">point</a> <a class="el" href="small__test__script_8m.html#a1c869c993fe77a32c1153362c9d2c956">coordinates</a>(very important)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a68eea743cf30ed8fee471ccf64ea2d12">ay</a> = <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>(2,:)</td></tr>
+<tr class="separator:a68eea743cf30ed8fee471ccf64ea2d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5f7ea967e594959dabd885c326e993"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#afc5f7ea967e594959dabd885c326e993">mxx</a> = <a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a>(<a class="el" href="compute__homography_8m.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a>)</td></tr>
+<tr class="separator:afc5f7ea967e594959dabd885c326e993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93893b984ddd6dd27cce0dd59249d13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#aa93893b984ddd6dd27cce0dd59249d13">myy</a> = <a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a>(<a class="el" href="compute__homography_8m.html#a68eea743cf30ed8fee471ccf64ea2d12">ay</a>)</td></tr>
+<tr class="separator:aa93893b984ddd6dd27cce0dd59249d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa675eb2fcec5b95d9d21c670da7f30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a> = ax - <a class="el" href="compute__homography_8m.html#afc5f7ea967e594959dabd885c326e993">mxx</a></td></tr>
+<tr class="separator:a8fa675eb2fcec5b95d9d21c670da7f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054427b2204cca3342450367996acbb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a054427b2204cca3342450367996acbb3">scxx</a> = <a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a>(<a class="el" href="count__squares_8m.html#ae1706a9f90c377dc4cd30360d9a1af0e">abs</a>(<a class="el" href="compute__homography_8m.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a>))</td></tr>
+<tr class="separator:a054427b2204cca3342450367996acbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa196633166b97fdd285f9a927cc066af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#aa196633166b97fdd285f9a927cc066af">scyy</a> = <a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a>(<a class="el" href="count__squares_8m.html#ae1706a9f90c377dc4cd30360d9a1af0e">abs</a>(<a class="el" href="compute__homography_8m.html#a68eea743cf30ed8fee471ccf64ea2d12">ay</a>))</td></tr>
+<tr class="separator:aa196633166b97fdd285f9a927cc066af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec4c7ba56199486e9d6b3c8fea233ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a> = [1/<a class="el" href="compute__homography_8m.html#a054427b2204cca3342450367996acbb3">scxx</a> 0 -<a class="el" href="compute__homography_8m.html#afc5f7ea967e594959dabd885c326e993">mxx</a>/<a class="el" href="compute__homography_8m.html#a054427b2204cca3342450367996acbb3">scxx</a></td></tr>
+<tr class="separator:a5ec4c7ba56199486e9d6b3c8fea233ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac188b84731ebf0dfee2a0a33c6cbcdb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ac188b84731ebf0dfee2a0a33c6cbcdb8">inv_Hnorm</a> = [<a class="el" href="compute__homography_8m.html#a054427b2204cca3342450367996acbb3">scxx</a> 0 <a class="el" href="compute__homography_8m.html#afc5f7ea967e594959dabd885c326e993">mxx</a></td></tr>
+<tr class="separator:ac188b84731ebf0dfee2a0a33c6cbcdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f27aa082c966976d719454c3efe1d2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a3f27aa082c966976d719454c3efe1d2e">mn</a> = <a class="el" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a>*<a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a></td></tr>
+<tr class="separator:a3f27aa082c966976d719454c3efe1d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23cd3f9d6fe3a9da846609c5b11e234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#aa23cd3f9d6fe3a9da846609c5b11e234">Np</a></td></tr>
+<tr class="separator:aa23cd3f9d6fe3a9da846609c5b11e234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fc7f10c2010bca2c0589346cddbba1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a61fc7f10c2010bca2c0589346cddbba1">L</a> = L'*L</td></tr>
+<tr class="separator:a61fc7f10c2010bca2c0589346cddbba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61e7de603852182385da5e907b4b232"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ae61e7de603852182385da5e907b4b232">hh</a> = <a class="el" href="downsample_8m.html#a4677652ee1aa71901a1b9b41f3f27bd5">V</a>(:,9)</td></tr>
+<tr class="separator:ae61e7de603852182385da5e907b4b232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2b56f51d609c9b9d431a57c5c9d7df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#aaf2b56f51d609c9b9d431a57c5c9d7df">Hrem</a> = <a class="el" href="go__calib__optim__iter__weak_8m.html#a0f4d6a153ee1a256a0223b60bd45a272">reshape</a>(<a class="el" href="ext__calib2_8m.html#a9e9ab06afceed41241a6f50f91e1e86f">hh</a>,3,3)'</td></tr>
+<tr class="separator:aaf2b56f51d609c9b9d431a57c5c9d7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74cf1f2e2526fdf59c652525e4b2a4f2"><td class="memItemLeft" align="right" valign="top">Final&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a74cf1f2e2526fdf59c652525e4b2a4f2">homography</a></td></tr>
+<tr class="separator:a74cf1f2e2526fdf59c652525e4b2a4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42c9eadb9f6da518e4bb580fa7f7d31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ab42c9eadb9f6da518e4bb580fa7f7d31">if</a></td></tr>
+<tr class="separator:ab42c9eadb9f6da518e4bb580fa7f7d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683f09a8fde8fd5aca2637267de85ef4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a683f09a8fde8fd5aca2637267de85ef4">m2</a> = <a class="el" href="_un_warp_plane_8m.html#a5febebc43247a6b1ff24766e0822511d">H</a>*<a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a></td></tr>
+<tr class="separator:a683f09a8fde8fd5aca2637267de85ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22006c17a71a5a0b3cf940aaf63fb44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ab22006c17a71a5a0b3cf940aaf63fb44">__pad11__</a></td></tr>
+<tr class="separator:ab22006c17a71a5a0b3cf940aaf63fb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a376232097e0bfeda9f49b76b28257fcf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a376232097e0bfeda9f49b76b28257fcf">merr</a> = <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>(1:2,:) - <a class="el" href="compute__homography_8m.html#ad81a38151163b39207c748b8a8e116a8">m2</a></td></tr>
+<tr class="separator:a376232097e0bfeda9f49b76b28257fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9976f3faad68f981f425583e48b03252"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a9976f3faad68f981f425583e48b03252">keyboard</a></td></tr>
+<tr class="separator:a9976f3faad68f981f425583e48b03252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8fbba90d0ea2f931cf48759fcc3dd4"><td class="memItemLeft" align="right" valign="top">Homography <a class="el" href="compute__homography_8m.html#a64290fa0a6b548b1be749ab2710f0b31">refinement</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> there are more <a class="el" href="compute__homography_8m.html#af3f959e84fefd95105b45aa5de288711">than</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a8c8fbba90d0ea2f931cf48759fcc3dd4">points</a></td></tr>
+<tr class="separator:a8c8fbba90d0ea2f931cf48759fcc3dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64290fa0a6b548b1be749ab2710f0b31"><td class="memItemLeft" align="right" valign="top">Homography refinement <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> there are more <a class="el" href="compute__homography_8m.html#af3f959e84fefd95105b45aa5de288711">than</a> Final&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a64290fa0a6b548b1be749ab2710f0b31">refinement</a></td></tr>
+<tr class="separator:a64290fa0a6b548b1be749ab2710f0b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7095a3e701f475db13eaca64dba5dcc1"><td class="memItemLeft" align="right" valign="top">Homography <a class="el" href="compute__homography_8m.html#a64290fa0a6b548b1be749ab2710f0b31">refinement</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> there are more <a class="el" href="compute__homography_8m.html#af3f959e84fefd95105b45aa5de288711">than</a> Final&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a7095a3e701f475db13eaca64dba5dcc1">hhv</a> = hhv(1:8)</td></tr>
+<tr class="separator:a7095a3e701f475db13eaca64dba5dcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbd5087eb3e54e252b3e7e10f2e9c62"><td class="memItemLeft" align="right" valign="top">for&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#afbbd5087eb3e54e252b3e7e10f2e9c62">iter</a> =1:10</td></tr>
+<tr class="separator:afbbd5087eb3e54e252b3e7e10f2e9c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0486bed431f03b4d28c6d0569692973"><td class="memItemLeft" align="right" valign="top">for&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a> = <a class="el" href="_un_warp_plane_8m.html#a5febebc43247a6b1ff24766e0822511d">H</a> * <a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a></td></tr>
+<tr class="separator:aa0486bed431f03b4d28c6d0569692973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9806a56e1e80b69cc9a606b36cfe4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#aeb9806a56e1e80b69cc9a606b36cfe4b">J</a> = <a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(2*<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>,8)</td></tr>
+<tr class="separator:aeb9806a56e1e80b69cc9a606b36cfe4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc94400359436f34843a23fd3c50d7b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#adc94400359436f34843a23fd3c50d7b0">MMM</a> = (<a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a> ./ (<a class="el" href="visualize__distortions_8m.html#a45582fcee3c7b631afa5f55a959b0c13">ones</a>(3,1)*<a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a>(3,:)))</td></tr>
+<tr class="separator:adc94400359436f34843a23fd3c50d7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3d3652a440471a7c9a57c2537b223a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a> = <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>(1:2,:) - <a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a>(1:2,:)</td></tr>
+<tr class="separator:a4c3d3652a440471a7c9a57c2537b223a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9d78049d0d038055887ce13f96f521"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a2c9d78049d0d038055887ce13f96f521">MMM2</a> = (<a class="el" href="visualize__distortions_8m.html#a45582fcee3c7b631afa5f55a959b0c13">ones</a>(3,1)*<a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a>(1,:)) .* <a class="el" href="compute__homography_8m.html#adc94400359436f34843a23fd3c50d7b0">MMM</a></td></tr>
+<tr class="separator:a2c9d78049d0d038055887ce13f96f521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ddb68377fc789830d0e04beb3d3c64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a94ddb68377fc789830d0e04beb3d3c64">MMM3</a> = (<a class="el" href="visualize__distortions_8m.html#a45582fcee3c7b631afa5f55a959b0c13">ones</a>(3,1)*<a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a>(2,:)) .* <a class="el" href="compute__homography_8m.html#adc94400359436f34843a23fd3c50d7b0">MMM</a></td></tr>
+<tr class="separator:a94ddb68377fc789830d0e04beb3d3c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af563da2b8426c2b78beb54767aedf1f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#af563da2b8426c2b78beb54767aedf1f5">hh_innov</a> = inv(<a class="el" href="compute__homography_8m.html#abfc8e0bb025a222c9efd7c6540674b4a">J</a>'*<a class="el" href="compute__homography_8m.html#abfc8e0bb025a222c9efd7c6540674b4a">J</a>)*<a class="el" href="compute__homography_8m.html#abfc8e0bb025a222c9efd7c6540674b4a">J</a>'*<a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a></td></tr>
+<tr class="separator:af563da2b8426c2b78beb54767aedf1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6405e7da4217bd6510350ecb4d711fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ab6405e7da4217bd6510350ecb4d711fe">hhv_up</a> = <a class="el" href="compute__homography_8m.html#a7095a3e701f475db13eaca64dba5dcc1">hhv</a> - <a class="el" href="compute__homography_8m.html#af563da2b8426c2b78beb54767aedf1f5">hh_innov</a></td></tr>
+<tr class="separator:ab6405e7da4217bd6510350ecb4d711fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f2da61d69568165ae5a49479238c7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#ae5f2da61d69568165ae5a49479238c7b">H_up</a> = <a class="el" href="go__calib__optim__iter__weak_8m.html#a0f4d6a153ee1a256a0223b60bd45a272">reshape</a>([<a class="el" href="compute__homography_8m.html#ab6405e7da4217bd6510350ecb4d711fe">hhv_up</a>;1],3,3)'</td></tr>
+<tr class="separator:ae5f2da61d69568165ae5a49479238c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaafc315b95987fc2b071bcd8f698b81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a> = <a class="el" href="compute__homography_8m.html#ae5f2da61d69568165ae5a49479238c7b">H_up</a></td></tr>
+<tr class="separator:afaafc315b95987fc2b071bcd8f698b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706e2cd18c4c8ee20525ba31bc8765d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a706e2cd18c4c8ee20525ba31bc8765d5">__pad12__</a></td></tr>
+<tr class="separator:a706e2cd18c4c8ee20525ba31bc8765d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9717e7bbecb906637e86cef6da3d83c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compute__homography_8m.html#a9717e7bbecb906637e86cef6da3d83c2">return</a></td></tr>
+<tr class="separator:a9717e7bbecb906637e86cef6da3d83c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a3f83917df652286d6361986ce08fc439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f83917df652286d6361986ce08fc439">&#9670;&nbsp;</a></span>figure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">figure </td>
+          <td>(</td>
+          <td class="paramtype">8&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f2990d7c8f4ef0e0ccc1bf9643d5f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f2990d7c8f4ef0e0ccc1bf9643d5f2c">&#9670;&nbsp;</a></span>J() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">J </td>
+          <td>(</td>
+          <td class="paramtype">1:2:2 *&#160;</td>
+          <td class="paramname"><em>Np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1:3&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70407f43edb260a392dd6f878c214564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70407f43edb260a392dd6f878c214564">&#9670;&nbsp;</a></span>J() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">J </td>
+          <td>(</td>
+          <td class="paramtype">1:2:2 *&#160;</td>
+          <td class="paramname"><em>Np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">7:8&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab81b2a0ca4f40c27f3d584eb11cc1396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81b2a0ca4f40c27f3d584eb11cc1396">&#9670;&nbsp;</a></span>J() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">J </td>
+          <td>(</td>
+          <td class="paramtype">2:2:2 *&#160;</td>
+          <td class="paramname"><em>Np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">4:6&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfc8e0bb025a222c9efd7c6540674b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc8e0bb025a222c9efd7c6540674b4a">&#9670;&nbsp;</a></span>J() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">J </td>
+          <td>(</td>
+          <td class="paramtype">2:2:2 *&#160;</td>
+          <td class="paramname"><em>Np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">7:8&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a919d1d88db8534c047bfc1ecc8305db5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919d1d88db8534c047bfc1ecc8305db5">&#9670;&nbsp;</a></span>L() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Compute the <a class="el" href="click__ima__calib3_d_8m.html#a9a8e74db9e8e82afbf923b5927168dd8">homography</a> between <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> and L </td>
+          <td>(</td>
+          <td class="paramtype">1:2:2 *&#160;</td>
+          <td class="paramname"><em>Np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1:3&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7b4d264d5d5888d5e5073f545122446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7b4d264d5d5888d5e5073f545122446">&#9670;&nbsp;</a></span>L() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">L </td>
+          <td>(</td>
+          <td class="paramtype">1:2:2 *&#160;</td>
+          <td class="paramname"><em>Np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">7:9&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac659642ed3908eb512538980d9f9c511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac659642ed3908eb512538980d9f9c511">&#9670;&nbsp;</a></span>L() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">L </td>
+          <td>(</td>
+          <td class="paramtype">2:2:2 *&#160;</td>
+          <td class="paramname"><em>Np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">4:6&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4128c52b7c867b6a8fe740f97455b6a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4128c52b7c867b6a8fe740f97455b6a8">&#9670;&nbsp;</a></span>L() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">L </td>
+          <td>(</td>
+          <td class="paramtype">2:2:2 *&#160;</td>
+          <td class="paramname"><em>Np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">7:9&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad81a38151163b39207c748b8a8e116a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81a38151163b39207c748b8a8e116a8">&#9670;&nbsp;</a></span>m2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">m2 </td>
+          <td>(</td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">:&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9d0c7bdee6004b75802c56c9fdb8219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d0c7bdee6004b75802c56c9fdb8219">&#9670;&nbsp;</a></span>norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">norm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae865728603594350ea6b219db66bbe42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae865728603594350ea6b219db66bbe42">&#9670;&nbsp;</a></span>ones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ones </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1518c3a3560bbfdfd89751e2c8b6797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1518c3a3560bbfdfd89751e2c8b6797">&#9670;&nbsp;</a></span>plot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">plot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a>(1,:)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a>(2,:)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'<a class="el" href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a>+'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5abbd88564e3d6c36bbc07e632cacbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5abbd88564e3d6c36bbc07e632cacbc">&#9670;&nbsp;</a></span>scyy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">id scyy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99ef8f8e776692f374f4e1d8afeb6f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ef8f8e776692f374f4e1d8afeb6f98">&#9670;&nbsp;</a></span>size() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> the total number of <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> larger optimize the <a class="el" href="scanner__calibration__script_8m.html#a343ef102df3c79ce3b78111bb59f2e0a">solution</a> by minimizing the reprojection <a class="el" href="stereo__gui_8m.html#abd267a42a98950fcce66d63808372db3">error</a> (in the least <a class="el" href="click__ima__calib3_d_8m.html#a157441835dd2f451ee6aec60b4a9acef">squares</a> <a class="el" href="comp__error__calib__fisheye_8m.html#abb15673642fe34932c402078811ef2ff">sense</a>). % % %Important functions called within <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> <a class="el" href="rigid__motion_8m.html#a3c8c189b0d4d2a89443cae4b60fe8ad6">program</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79b5f22ba54982150d73d4319114f880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b5f22ba54982150d73d4319114f880">&#9670;&nbsp;</a></span>size() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a id="ab22006c17a71a5a0b3cf940aaf63fb44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22006c17a71a5a0b3cf940aaf63fb44">&#9670;&nbsp;</a></span>__pad11__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__pad11__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00102">102</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a706e2cd18c4c8ee20525ba31bc8765d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706e2cd18c4c8ee20525ba31bc8765d5">&#9670;&nbsp;</a></span>__pad12__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__pad12__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00161">161</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a8fa675eb2fcec5b95d9d21c670da7f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa675eb2fcec5b95d9d21c670da7f30">&#9670;&nbsp;</a></span>ax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ax = ax - <a class="el" href="compute__homography_8m.html#afc5f7ea967e594959dabd885c326e993">mxx</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00060">60</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a68eea743cf30ed8fee471ccf64ea2d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68eea743cf30ed8fee471ccf64ea2d12">&#9670;&nbsp;</a></span>ay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ay = <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>(2,:)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00056">56</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="ac2424d6c028ea5ea4de1b56a01d72169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2424d6c028ea5ea4de1b56a01d72169">&#9670;&nbsp;</a></span>compute_homography</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">compute_homography[<a class="el" href="_un_warp_plane_8m.html#a5febebc43247a6b1ff24766e0822511d">H</a>, <a class="el" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a>, <a class="el" href="compute__homography_8m.html#ac188b84731ebf0dfee2a0a33c6cbcdb8">inv_Hnorm</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code" href="compute__homography_8m.html#ac2424d6c028ea5ea4de1b56a01d72169">compute_homography</a>(<a class="code" href="compute__homography_8m.html#ab3cd915d758008bd19d0f2428fbb354a">m</a>,<a class="code" href="compute__homography_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>)</div>
+<div class="line">%</div>
+<div class="line">%Computes the planar <a class="code" href="compute__homography_8m.html#a74cf1f2e2526fdf59c652525e4b2a4f2">homography</a> between the <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a> <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> <a class="code" href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a> the plane (<a class="code" href="compute__homography_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>) and the <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a></div>
+<div class="line">%<a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a> <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> (<a class="code" href="compute__homography_8m.html#ab3cd915d758008bd19d0f2428fbb354a">m</a>).</div>
+<div class="line">%</div>
+<div class="line">%<a class="code" href="_compute_stripes_8m.html#ae27da7df4d207577ee411ff134a16eea">INPUT</a>: <a class="code" href="compute__homography_8m.html#ab3cd915d758008bd19d0f2428fbb354a">m</a>: homogeneous <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> in the <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> plane (3xN <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a>)</div>
+<div class="line">%       <a class="code" href="compute__homography_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>: homogeneous <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> in the plane in 3<a class="code" href="_compute3_d_8m.html#a350bfcb1e3cfb28ddff48ce525d4f139">D</a> (3xN <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a>)</div>
+<div class="line">%</div>
+<div class="line">%OUTPUT: <a class="code" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a>: Homography <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a> (3<a class="code" href="click__ima__calib_8m.html#a03ad2628eb1c540113251638112541e3">x3</a> homogeneous <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a>)</div>
+<div class="line">%        <a class="code" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a>: Normalization <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a> <a class="code" href="ginput4_8m.html#a31280f103486341d6cc9935e1ef22e36">used</a> <a class="code" href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a> the <a class="code" href="compute__homography_8m.html#a8c8fbba90d0ea2f931cf48759fcc3dd4">points</a> before <a class="code" href="compute__homography_8m.html#a74cf1f2e2526fdf59c652525e4b2a4f2">homography</a> computation</div>
+<div class="line">%               (useful <span class="keywordflow">for</span> numerical stability <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> <a class="code" href="compute__homography_8m.html#a8c8fbba90d0ea2f931cf48759fcc3dd4">points</a> in pixel <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a>)</div>
+<div class="line">%        <a class="code" href="compute__homography_8m.html#ac188b84731ebf0dfee2a0a33c6cbcdb8">inv_Hnorm</a>: The inverse of <a class="code" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a></div>
+<div class="line">%</div>
+<div class="line">%Definition: <a class="code" href="compute__homography_8m.html#ab3cd915d758008bd19d0f2428fbb354a">m</a> ~ <a class="code" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a>*<a class="code" href="compute__homography_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a> <a class="code" href="project__points_8m.html#a5552711badc1e09aa9eddba4cb539b69">where</a> <span class="stringliteral">&quot;~&quot;</span> means equal <a class="code" href="go__calib__optim__iter_8m.html#a6211fe17b7cc15ccc7b7072fe22e1f4d">up</a> <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> non <a class="code" href="init__intrinsic__param__fisheye_8m.html#a0959be2ec86a98bb7fc5bf9b4d07186e">zero</a> scalar factor.</div>
+<div class="line">%</div>
+<div class="line">%<a class="code" href="init__intrinsic__param_8m.html#a3baf04d2cab8ccf5dfab24270b9b6480">Method</a>: First computes an initial guess <span class="keywordflow">for</span> the <a class="code" href="compute__homography_8m.html#a74cf1f2e2526fdf59c652525e4b2a4f2">homography</a> through quasi-linear method.</div>
+<div class="line">%        Then</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00005">5</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="afb358f48b1646c750fb9da6c6585be2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb358f48b1646c750fb9da6c6585be2b">&#9670;&nbsp;</a></span>end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">end</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00042">42</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a8676ea5f8593517602d35c62ec43aafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8676ea5f8593517602d35c62ec43aafa">&#9670;&nbsp;</a></span>function</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function[<a class="el" href="_un_warp_plane_8m.html#a5febebc43247a6b1ff24766e0822511d">H</a>, <a class="el" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a>, <a class="el" href="compute__homography_8m.html#ac188b84731ebf0dfee2a0a33c6cbcdb8">inv_Hnorm</a>] = <a class="el" href="compute__homography_8m.html#ac2424d6c028ea5ea4de1b56a01d72169">compute_homography</a>(<a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>,<a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00001">1</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="afaafc315b95987fc2b071bcd8f698b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaafc315b95987fc2b071bcd8f698b81">&#9670;&nbsp;</a></span>H</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">H = <a class="el" href="compute__homography_8m.html#ae5f2da61d69568165ae5a49479238c7b">H_up</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00152">152</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="ae5f2da61d69568165ae5a49479238c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f2da61d69568165ae5a49479238c7b">&#9670;&nbsp;</a></span>H_up</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">H_up = <a class="el" href="go__calib__optim__iter__weak_8m.html#a0f4d6a153ee1a256a0223b60bd45a272">reshape</a>([<a class="el" href="compute__homography_8m.html#ab6405e7da4217bd6510350ecb4d711fe">hhv_up</a>;1],3,3)'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00146">146</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="ae61e7de603852182385da5e907b4b232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61e7de603852182385da5e907b4b232">&#9670;&nbsp;</a></span>hh</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hh = <a class="el" href="downsample_8m.html#a4677652ee1aa71901a1b9b41f3f27bd5">V</a>(:,9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00089">89</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="af563da2b8426c2b78beb54767aedf1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af563da2b8426c2b78beb54767aedf1f5">&#9670;&nbsp;</a></span>hh_innov</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hh_innov = inv(<a class="el" href="compute__homography_8m.html#abfc8e0bb025a222c9efd7c6540674b4a">J</a>'*<a class="el" href="compute__homography_8m.html#abfc8e0bb025a222c9efd7c6540674b4a">J</a>)*<a class="el" href="compute__homography_8m.html#abfc8e0bb025a222c9efd7c6540674b4a">J</a>'*<a class="el" href="compute__homography_8m.html#a4c3d3652a440471a7c9a57c2537b223a">m_err</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00142">142</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a7095a3e701f475db13eaca64dba5dcc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7095a3e701f475db13eaca64dba5dcc1">&#9670;&nbsp;</a></span>hhv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Homography <a class="el" href="compute__homography_8m.html#a64290fa0a6b548b1be749ab2710f0b31">refinement</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> there are more <a class="el" href="compute__homography_8m.html#af3f959e84fefd95105b45aa5de288711">than</a> Final hhv = hhv(1:8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00114">114</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="ab6405e7da4217bd6510350ecb4d711fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6405e7da4217bd6510350ecb4d711fe">&#9670;&nbsp;</a></span>hhv_up</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hhv_up = <a class="el" href="compute__homography_8m.html#a7095a3e701f475db13eaca64dba5dcc1">hhv</a> - <a class="el" href="compute__homography_8m.html#af563da2b8426c2b78beb54767aedf1f5">hh_innov</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00144">144</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a5ec4c7ba56199486e9d6b3c8fea233ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec4c7ba56199486e9d6b3c8fea233ab">&#9670;&nbsp;</a></span>Hnorm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hnorm = [1/<a class="el" href="compute__homography_8m.html#a054427b2204cca3342450367996acbb3">scxx</a> 0 -<a class="el" href="compute__homography_8m.html#afc5f7ea967e594959dabd885c326e993">mxx</a>/<a class="el" href="compute__homography_8m.html#a054427b2204cca3342450367996acbb3">scxx</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00067">67</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a74cf1f2e2526fdf59c652525e4b2a4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74cf1f2e2526fdf59c652525e4b2a4f2">&#9670;&nbsp;</a></span>homography</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Final homography</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00098">98</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="aaf2b56f51d609c9b9d431a57c5c9d7df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2b56f51d609c9b9d431a57c5c9d7df">&#9670;&nbsp;</a></span>Hrem</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hrem = <a class="el" href="go__calib__optim__iter__weak_8m.html#a0f4d6a153ee1a256a0223b60bd45a272">reshape</a>(<a class="el" href="ext__calib2_8m.html#a9e9ab06afceed41241a6f50f91e1e86f">hh</a>,3,3)'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00092">92</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="ab42c9eadb9f6da518e4bb580fa7f7d31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42c9eadb9f6da518e4bb580fa7f7d31">&#9670;&nbsp;</a></span>if</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00100">100</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="ac188b84731ebf0dfee2a0a33c6cbcdb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac188b84731ebf0dfee2a0a33c6cbcdb8">&#9670;&nbsp;</a></span>inv_Hnorm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">inv_Hnorm = [<a class="el" href="compute__homography_8m.html#a054427b2204cca3342450367996acbb3">scxx</a> 0 <a class="el" href="compute__homography_8m.html#afc5f7ea967e594959dabd885c326e993">mxx</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00068">68</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="afbbd5087eb3e54e252b3e7e10f2e9c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbd5087eb3e54e252b3e7e10f2e9c62">&#9670;&nbsp;</a></span>iter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> iter =1:10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00116">116</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="aeb9806a56e1e80b69cc9a606b36cfe4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9806a56e1e80b69cc9a606b36cfe4b">&#9670;&nbsp;</a></span>J</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">J = <a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(2*<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>,8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00122">122</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a9976f3faad68f981f425583e48b03252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9976f3faad68f981f425583e48b03252">&#9670;&nbsp;</a></span>keyboard</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">keyboard</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00106">106</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a61fc7f10c2010bca2c0589346cddbba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61fc7f10c2010bca2c0589346cddbba1">&#9670;&nbsp;</a></span>L</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> L = L'*L</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00084">84</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="ab3cd915d758008bd19d0f2428fbb354a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3cd915d758008bd19d0f2428fbb354a">&#9670;&nbsp;</a></span>m</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">m = [m</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00041">41</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="aad05f78187c942f9dd521605fa81f1ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad05f78187c942f9dd521605fa81f1ba">&#9670;&nbsp;</a></span>M</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">M = [M</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00045">45</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a683f09a8fde8fd5aca2637267de85ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683f09a8fde8fd5aca2637267de85ef4">&#9670;&nbsp;</a></span>m2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">m2 = <a class="el" href="_un_warp_plane_8m.html#a5febebc43247a6b1ff24766e0822511d">H</a>*<a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00101">101</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a4c3d3652a440471a7c9a57c2537b223a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3d3652a440471a7c9a57c2537b223a">&#9670;&nbsp;</a></span>m_err</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">m_err = <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>(1:2,:) - <a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a>(1:2,:)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00131">131</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a376232097e0bfeda9f49b76b28257fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a376232097e0bfeda9f49b76b28257fcf">&#9670;&nbsp;</a></span>merr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">merr = <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>(1:2,:) - <a class="el" href="compute__homography_8m.html#ad81a38151163b39207c748b8a8e116a8">m2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00103">103</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="adc94400359436f34843a23fd3c50d7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc94400359436f34843a23fd3c50d7b0">&#9670;&nbsp;</a></span>MMM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MMM = (<a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a> ./ (<a class="el" href="visualize__distortions_8m.html#a45582fcee3c7b631afa5f55a959b0c13">ones</a>(3,1)*<a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a>(3,:)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00124">124</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a2c9d78049d0d038055887ce13f96f521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c9d78049d0d038055887ce13f96f521">&#9670;&nbsp;</a></span>MMM2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MMM2 = (<a class="el" href="visualize__distortions_8m.html#a45582fcee3c7b631afa5f55a959b0c13">ones</a>(3,1)*<a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a>(1,:)) .* <a class="el" href="compute__homography_8m.html#adc94400359436f34843a23fd3c50d7b0">MMM</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00134">134</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a94ddb68377fc789830d0e04beb3d3c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ddb68377fc789830d0e04beb3d3c64">&#9670;&nbsp;</a></span>MMM3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MMM3 = (<a class="el" href="visualize__distortions_8m.html#a45582fcee3c7b631afa5f55a959b0c13">ones</a>(3,1)*<a class="el" href="compute__homography_8m.html#aa0486bed431f03b4d28c6d0569692973">mrep</a>(2,:)) .* <a class="el" href="compute__homography_8m.html#adc94400359436f34843a23fd3c50d7b0">MMM</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00135">135</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a3f27aa082c966976d719454c3efe1d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f27aa082c966976d719454c3efe1d2e">&#9670;&nbsp;</a></span>mn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Compute the <a class="el" href="click__ima__calib3_d_8m.html#a9a8e74db9e8e82afbf923b5927168dd8">homography</a> between <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> and mn = <a class="el" href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a>*<a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00070">70</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="aa0486bed431f03b4d28c6d0569692973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0486bed431f03b4d28c6d0569692973">&#9670;&nbsp;</a></span>mrep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="is3_d_8m.html#a05a671c66aefea124cc08b76ea6d30bb">test</a> of <a class="el" href="skew3_8m.html#ab0e07e8b6d0528a9ffb33aeeb7114b54">Jacobian</a> mrep = <a class="el" href="_un_warp_plane_8m.html#a5febebc43247a6b1ff24766e0822511d">H</a> * <a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00120">120</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="afc5f7ea967e594959dabd885c326e993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5f7ea967e594959dabd885c326e993">&#9670;&nbsp;</a></span>mxx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mxx = <a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a>(<a class="el" href="compute__homography_8m.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00058">58</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="aa93893b984ddd6dd27cce0dd59249d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93893b984ddd6dd27cce0dd59249d13">&#9670;&nbsp;</a></span>myy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="compute__homography_8m.html#ae5abbd88564e3d6c36bbc07e632cacbc">scyy</a> myy = <a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a>(<a class="el" href="compute__homography_8m.html#a68eea743cf30ed8fee471ccf64ea2d12">ay</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00059">59</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="aa23cd3f9d6fe3a9da846609c5b11e234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa23cd3f9d6fe3a9da846609c5b11e234">&#9670;&nbsp;</a></span>Np</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> Np</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00083">83</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a8c8fbba90d0ea2f931cf48759fcc3dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c8fbba90d0ea2f931cf48759fcc3dd4">&#9670;&nbsp;</a></span>points</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Homography <a class="el" href="compute__homography_8m.html#a64290fa0a6b548b1be749ab2710f0b31">refinement</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> there are more <a class="el" href="compute__homography_8m.html#af3f959e84fefd95105b45aa5de288711">than</a> points</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00110">110</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a64290fa0a6b548b1be749ab2710f0b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64290fa0a6b548b1be749ab2710f0b31">&#9670;&nbsp;</a></span>refinement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Homography refinement <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> there are more <a class="el" href="compute__homography_8m.html#af3f959e84fefd95105b45aa5de288711">than</a> Final refinement</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00110">110</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a9717e7bbecb906637e86cef6da3d83c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9717e7bbecb906637e86cef6da3d83c2">&#9670;&nbsp;</a></span>return</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">return</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00165">165</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="a054427b2204cca3342450367996acbb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a054427b2204cca3342450367996acbb3">&#9670;&nbsp;</a></span>scxx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">scxx = <a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a>(<a class="el" href="count__squares_8m.html#ae1706a9f90c377dc4cd30360d9a1af0e">abs</a>(<a class="el" href="compute__homography_8m.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00063">63</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="aa196633166b97fdd285f9a927cc066af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa196633166b97fdd285f9a927cc066af">&#9670;&nbsp;</a></span>scyy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">scyy = <a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a>(<a class="el" href="count__squares_8m.html#ae1706a9f90c377dc4cd30360d9a1af0e">abs</a>(<a class="el" href="compute__homography_8m.html#a68eea743cf30ed8fee471ccf64ea2d12">ay</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00064">64</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+<a id="af3f959e84fefd95105b45aa5de288711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f959e84fefd95105b45aa5de288711">&#9670;&nbsp;</a></span>than</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> the total number of <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> larger than</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="compute__homography_8m_source.html#l00005">5</a> del archivo <a class="el" href="compute__homography_8m_source.html">compute_homography.m</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="aclick__ima__calib_8m_html_a58ab1fd68e97078232808206b850161b"><div class="ttname"><a href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a></div><div class="ttdeci">hold on</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00034">click_ima_calib.m:34</a></div></div>
+<div class="ttc" id="acompute__homography_8m_html_ab3cd915d758008bd19d0f2428fbb354a"><div class="ttname"><a href="compute__homography_8m.html#ab3cd915d758008bd19d0f2428fbb354a">m</a></div><div class="ttdeci">if the total number of points is larger optimize the solution by minimizing the reprojection error(in the least squares sense). % % %Important functions called within that program if m</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00041">compute_homography.m:41</a></div></div>
+<div class="ttc" id="acompute__homography_8m_html_ac2424d6c028ea5ea4de1b56a01d72169"><div class="ttname"><a href="compute__homography_8m.html#ac2424d6c028ea5ea4de1b56a01d72169">compute_homography</a></div><div class="ttdeci">compute_homography[H, Hnorm, inv_Hnorm]</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00005">compute_homography.m:5</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="acompute__homography_8m_html_a8c8fbba90d0ea2f931cf48759fcc3dd4"><div class="ttname"><a href="compute__homography_8m.html#a8c8fbba90d0ea2f931cf48759fcc3dd4">points</a></div><div class="ttdeci">Homography refinement if there are more than points</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00110">compute_homography.m:110</a></div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a60bfb22881d8ade0a15adeaa7a363c23"><div class="ttname"><a href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a></div><div class="ttdeci">matrix that subtract the principal point</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00088">init_intrinsic_param.m:88</a></div></div>
+<div class="ttc" id="acompute__homography_8m_html_afaafc315b95987fc2b071bcd8f698b81"><div class="ttname"><a href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a></div><div class="ttdeci">H</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00152">compute_homography.m:152</a></div></div>
+<div class="ttc" id="acompute__homography_8m_html_ac188b84731ebf0dfee2a0a33c6cbcdb8"><div class="ttname"><a href="compute__homography_8m.html#ac188b84731ebf0dfee2a0a33c6cbcdb8">inv_Hnorm</a></div><div class="ttdeci">inv_Hnorm</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00068">compute_homography.m:68</a></div></div>
+<div class="ttc" id="aginput4_8m_html_a31280f103486341d6cc9935e1ef22e36"><div class="ttname"><a href="ginput4_8m.html#a31280f103486341d6cc9935e1ef22e36">used</a></div><div class="ttdeci">GINPUT Graphical input from which terminates the input before N points are that contains a vector of integers specifying which mouse button was used(1, 2, 3 from left) or ASCII numbers if a key on the keyboard % was used. % % Examples[x, y]</div><div class="ttdef"><b>Definition:</b> <a href="ginput4_8m_source.html#l00028">ginput4.m:28</a></div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_ae27da7df4d207577ee411ff134a16eea"><div class="ttname"><a href="_compute_stripes_8m.html#ae27da7df4d207577ee411ff134a16eea">INPUT</a></div><div class="ttdeci">fname_pat fname_pat temporal processing INPUT</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00003">ComputeStripes.m:3</a></div></div>
+<div class="ttc" id="ainit__intrinsic__param__fisheye_8m_html_a0959be2ec86a98bb7fc5bf9b4d07186e"><div class="ttname"><a href="init__intrinsic__param__fisheye_8m.html#a0959be2ec86a98bb7fc5bf9b4d07186e">zero</a></div><div class="ttdeci">initialize to zero(no distortion) if ~est_aspect_ratio</div></div>
+<div class="ttc" id="acompute__homography_8m_html_aad05f78187c942f9dd521605fa81f1ba"><div class="ttname"><a href="compute__homography_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a></div><div class="ttdeci">if M</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00045">compute_homography.m:45</a></div></div>
+<div class="ttc" id="aextract__parameters_8m_html_aa29c479aca4eef75a9f1c16e1c1ff766"><div class="ttname"><a href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a></div><div class="ttdeci">Calibration matrix</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters_8m_source.html#l00022">extract_parameters.m:22</a></div></div>
+<div class="ttc" id="aanalyse__error_8m_html_aee9a066043e7b7065d7cdda5fbcfba53"><div class="ttname"><a href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a></div><div class="ttdeci">Color code for each image</div><div class="ttdef"><b>Definition:</b> <a href="analyse__error_8m_source.html#l00003">analyse_error.m:3</a></div></div>
+<div class="ttc" id="aproject__points_8m_html_a5552711badc1e09aa9eddba4cb539b69"><div class="ttname"><a href="project__points_8m.html#a5552711badc1e09aa9eddba4cb539b69">where</a></div><div class="ttdeci">yy where</div><div class="ttdef"><b>Definition:</b> <a href="project__points_8m_source.html#l00032">project_points.m:32</a></div></div>
+<div class="ttc" id="a_compute3_d_8m_html_a350bfcb1e3cfb28ddff48ce525d4f139"><div class="ttname"><a href="_compute3_d_8m.html#a350bfcb1e3cfb28ddff48ce525d4f139">D</a></div><div class="ttdeci">D</div><div class="ttdef"><b>Definition:</b> <a href="_compute3_d_8m_source.html#l00064">Compute3D.m:64</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a6211fe17b7cc15ccc7b7072fe22e1f4d"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a6211fe17b7cc15ccc7b7072fe22e1f4d">up</a></div><div class="ttdeci">To speed up</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00327">go_calib_optim_iter.m:327</a></div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_a5c4aa834f79d9bba4ec3f74f17439836"><div class="ttname"><a href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a></div><div class="ttdeci">Express the coordinates of the points in the original image coordinates</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00376">ComputeStripes.m:376</a></div></div>
+<div class="ttc" id="acompute__homography_8m_html_a5ec4c7ba56199486e9d6b3c8fea233ab"><div class="ttname"><a href="compute__homography_8m.html#a5ec4c7ba56199486e9d6b3c8fea233ab">Hnorm</a></div><div class="ttdeci">Hnorm</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00067">compute_homography.m:67</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a03ad2628eb1c540113251638112541e3"><div class="ttname"><a href="click__ima__calib_8m.html#a03ad2628eb1c540113251638112541e3">x3</a></div><div class="ttdeci">x3</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00078">click_ima_calib.m:78</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a00d9614e711bf169f15ae8e3e35d30df"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a></div><div class="ttdeci">If the rig is</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00213">go_calib_optim_iter.m:213</a></div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a3baf04d2cab8ccf5dfab24270b9b6480"><div class="ttname"><a href="init__intrinsic__param_8m.html#a3baf04d2cab8ccf5dfab24270b9b6480">Method</a></div><div class="ttdeci">init_intrinsic_param Initialization of the intrinsic parameters Runs as a script cc and alpha_c Method</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00006">init_intrinsic_param.m:6</a></div></div>
+<div class="ttc" id="acompute__homography_8m_html_a74cf1f2e2526fdf59c652525e4b2a4f2"><div class="ttname"><a href="compute__homography_8m.html#a74cf1f2e2526fdf59c652525e4b2a4f2">homography</a></div><div class="ttdeci">Final homography</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00098">compute_homography.m:98</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/skew3.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">skew3.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="skew3_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="skew3_8m.html#a767c28658ba9ca40dc7b890b9179f5b0">    1</a></span>&#160;<span class="keyword">function</span> [S,dSdT] = skew3(<a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="skew3_8m.html#ad53aeb78abc83a52ab8982f5c82a3d5b">    3</a></span>&#160;<a class="code" href="skew3_8m.html#ad53aeb78abc83a52ab8982f5c82a3d5b">S</a> = [   0  -T(3)  T(2)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      T(3)   0   -T(1)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;     -T(2)  T(1)   0 ];</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="skew3_8m.html#a9717e7bbecb906637e86cef6da3d83c2">    7</a></span>&#160;<a class="code" href="skew3_8m.html#aecd83e427b657911a8795423642a3ac2">dSdT</a> = [0 0 0;0 0 1;0 -1 0 ;0 0 -1;0 0 0;1 0 0 ;0 1 0;-1 0 0; 0 0 0];</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;% Test of <a class="code" href="skew3_8m.html#ab0e07e8b6d0528a9ffb33aeeb7114b54">Jacobian</a>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="skew3_8m.html#ab0e07e8b6d0528a9ffb33aeeb7114b54">   14</a></span>&#160;<a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a> = <a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="skew3_8m.html#a438b04263e75696048312b1b156d1450">   16</a></span>&#160;<a class="code" href="skew3_8m.html#a438b04263e75696048312b1b156d1450">dT</a> = 0.001*<a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="skew3_8m.html#a5a30d530a77bc992810b0c24a3e8f550">   18</a></span>&#160;<a class="code" href="skew3_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a> = <a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a> + <a class="code" href="skew3_8m.html#a438b04263e75696048312b1b156d1450">dT</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;[S1,dSdT] = skew3(<a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;[S2] = skew3(<a class="code" href="skew3_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="skew3_8m.html#a5eefbc8eb67a51cdcef830e3a4d5c72b">   23</a></span>&#160;<a class="code" href="skew3_8m.html#a5eefbc8eb67a51cdcef830e3a4d5c72b">S2app</a> = S1;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="skew3_8m.html#a5eefbc8eb67a51cdcef830e3a4d5c72b">S2app</a>(:) = <a class="code" href="skew3_8m.html#a5eefbc8eb67a51cdcef830e3a4d5c72b">S2app</a>(:) + <a class="code" href="skew3_8m.html#aecd83e427b657911a8795423642a3ac2">dSdT</a>*<a class="code" href="skew3_8m.html#a438b04263e75696048312b1b156d1450">dT</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(S1 - S2) / <a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="skew3_8m.html#a5eefbc8eb67a51cdcef830e3a4d5c72b">S2app</a> - S2)</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aerror__analysis_8m_html_a08aed3fddce569e0f5d61985add95a86"><div class="ttname"><a href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a></div><div class="ttdeci">sy * randn(1, Nkk)]</div></div>
+<div class="ttc" id="askew3_8m_html_a438b04263e75696048312b1b156d1450"><div class="ttname"><a href="skew3_8m.html#a438b04263e75696048312b1b156d1450">dT</a></div><div class="ttdeci">Test of dT</div><div class="ttdef"><b>Definition:</b> <a href="skew3_8m_source.html#l00016">skew3.m:16</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a1e8af1b834749c5cbe9484070c2a9977"><div class="ttname"><a href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00020">align_structures.m:20</a></div></div>
+<div class="ttc" id="askew3_8m_html_aecd83e427b657911a8795423642a3ac2"><div class="ttname"><a href="skew3_8m.html#aecd83e427b657911a8795423642a3ac2">dSdT</a></div><div class="ttdeci">dSdT</div><div class="ttdef"><b>Definition:</b> <a href="skew3_8m_source.html#l00007">skew3.m:7</a></div></div>
+<div class="ttc" id="askew3_8m_html_a5a30d530a77bc992810b0c24a3e8f550"><div class="ttname"><a href="skew3_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a></div><div class="ttdeci">T2</div><div class="ttdef"><b>Definition:</b> <a href="skew3_8m_source.html#l00018">skew3.m:18</a></div></div>
+<div class="ttc" id="awillson__convert_8m_html_a133c81a8d59c8baec1a46a7d72d0f859"><div class="ttname"><a href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a></div><div class="ttdeci">inv(dxddk' *dxddk) *(dxddk') *err norm)(k_step)/norm(k) if norm(k_step)/norm(k)&lt; 10e-10</div><div class="ttdef"><b>Definition:</b> <a href="willson__convert_8m_source.html#l00086">willson_convert.m:86</a></div></div>
+<div class="ttc" id="askew3_8m_html_ab0e07e8b6d0528a9ffb33aeeb7114b54"><div class="ttname"><a href="skew3_8m.html#ab0e07e8b6d0528a9ffb33aeeb7114b54">Jacobian</a></div><div class="ttdeci">Test of Jacobian</div><div class="ttdef"><b>Definition:</b> <a href="skew3_8m_source.html#l00014">skew3.m:14</a></div></div>
+<div class="ttc" id="askew3_8m_html_a5eefbc8eb67a51cdcef830e3a4d5c72b"><div class="ttname"><a href="skew3_8m.html#a5eefbc8eb67a51cdcef830e3a4d5c72b">S2app</a></div><div class="ttdeci">S2app</div><div class="ttdef"><b>Definition:</b> <a href="skew3_8m_source.html#l00023">skew3.m:23</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_aa7255c4bc0e9fa663f62fbafe1026daa"><div class="ttname"><a href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a></div><div class="ttdeci">T1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00045">compose_motion.m:45</a></div></div>
+<div class="ttc" id="askew3_8m_html_ad53aeb78abc83a52ab8982f5c82a3d5b"><div class="ttname"><a href="skew3_8m.html#ad53aeb78abc83a52ab8982f5c82a3d5b">S</a></div><div class="ttdeci">S</div><div class="ttdef"><b>Definition:</b> <a href="skew3_8m_source.html#l00003">skew3.m:3</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

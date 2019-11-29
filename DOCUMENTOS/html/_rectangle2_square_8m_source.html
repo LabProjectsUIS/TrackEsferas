@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/Rectangle2Square.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Rectangle2Square.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_rectangle2_square_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="_rectangle2_square_8m.html#aae59a2ad782e9105cb96ec19dfdf6798">    1</a></span>&#160;<span class="keyword">function</span> [square] = Rectangle2Square(rectangle,<a class="code" href="click__ima__calib3_d_8m.html#a67824ecf84f5816f07b74fa956bdbcd2">L</a>,<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% Generate the <a class="code" href="_rectangle2_square_8m.html#ab8da842131de2f8e0161089de2774858">square</a> from <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> rectangle of known segment lengths</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;% from pt1 <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="_rectangle2_square_8m.html#adc330324dc582a60d788bb1ceb8c9a60">pt2</a> : <a class="code" href="click__ima__calib3_d_8m.html#a67824ecf84f5816f07b74fa956bdbcd2">L</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;% from <a class="code" href="_rectangle2_square_8m.html#adc330324dc582a60d788bb1ceb8c9a60">pt2</a> <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> pt3 : <a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="_rectangle2_square_8m.html#a53db6582b3f30a7d5bc21418b2f55187">    7</a></span>&#160;[u_hori,u_vert] = UnWarpPlane(rectangle);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="_rectangle2_square_8m.html#aaf0e091838429ea259938a976446f417">    9</a></span>&#160;<a class="code" href="_rectangle2_square_8m.html#aaf0e091838429ea259938a976446f417">coeff_x</a> = sqrt(<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>/<a class="code" href="click__ima__calib3_d_8m.html#a67824ecf84f5816f07b74fa956bdbcd2">L</a>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="_rectangle2_square_8m.html#af1beb53cbf16321861f9a8c7dd5206e6">   10</a></span>&#160;<a class="code" href="_rectangle2_square_8m.html#af1beb53cbf16321861f9a8c7dd5206e6">coeff_y</a> = 1/<a class="code" href="_rectangle2_square_8m.html#aaf0e091838429ea259938a976446f417">coeff_x</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="_rectangle2_square_8m.html#ac9567e94c04c0a6b45f86ad912eb211c">   12</a></span>&#160;<a class="code" href="_rectangle2_square_8m.html#ac9567e94c04c0a6b45f86ad912eb211c">x_coord</a> = [ 0 coeff_x  coeff_x 0];</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="_rectangle2_square_8m.html#adec4b270699e4ef43679cf77763c719a">   13</a></span>&#160;<a class="code" href="_rectangle2_square_8m.html#adec4b270699e4ef43679cf77763c719a">y_coord</a> = [ 0 0 coeff_y coeff_y];</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_rectangle2_square_8m.html#ab8da842131de2f8e0161089de2774858">   16</a></span>&#160;<a class="code" href="_rectangle2_square_8m.html#ab8da842131de2f8e0161089de2774858">square</a> = rectangle(:,1) * <a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(1,4) + <a class="code" href="_un_warp_plane_8m.html#aef510dc247276e2e3c40d648bab6aac2">u_hori</a>*<a class="code" href="_rectangle2_square_8m.html#ac9567e94c04c0a6b45f86ad912eb211c">x_coord</a> + <a class="code" href="_rectangle2_square_8m.html#a53db6582b3f30a7d5bc21418b2f55187">u_vert</a>*<a class="code" href="_rectangle2_square_8m.html#adec4b270699e4ef43679cf77763c719a">y_coord</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<a class="code" href="_rectangle2_square_8m.html#ab8da842131de2f8e0161089de2774858">square</a> = <a class="code" href="_rectangle2_square_8m.html#ab8da842131de2f8e0161089de2774858">square</a> ./ (<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1)*<a class="code" href="_rectangle2_square_8m.html#ab8da842131de2f8e0161089de2774858">square</a>(3,:));</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a67824ecf84f5816f07b74fa956bdbcd2"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a67824ecf84f5816f07b74fa956bdbcd2">L</a></div><div class="ttdeci">L</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00128">click_ima_calib3D.m:128</a></div></div>
+<div class="ttc" id="a_rectangle2_square_8m_html_ac9567e94c04c0a6b45f86ad912eb211c"><div class="ttname"><a href="_rectangle2_square_8m.html#ac9567e94c04c0a6b45f86ad912eb211c">x_coord</a></div><div class="ttdeci">x_coord</div><div class="ttdef"><b>Definition:</b> <a href="_rectangle2_square_8m_source.html#l00012">Rectangle2Square.m:12</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="a_rectangle2_square_8m_html_aaf0e091838429ea259938a976446f417"><div class="ttname"><a href="_rectangle2_square_8m.html#aaf0e091838429ea259938a976446f417">coeff_x</a></div><div class="ttdeci">coeff_x</div><div class="ttdef"><b>Definition:</b> <a href="_rectangle2_square_8m_source.html#l00009">Rectangle2Square.m:9</a></div></div>
+<div class="ttc" id="a_rectangle2_square_8m_html_a53db6582b3f30a7d5bc21418b2f55187"><div class="ttname"><a href="_rectangle2_square_8m.html#a53db6582b3f30a7d5bc21418b2f55187">u_vert</a></div><div class="ttdeci">Generate the square from a rectangle of known segment lengths from pt1 to u_vert</div><div class="ttdef"><b>Definition:</b> <a href="_rectangle2_square_8m_source.html#l00007">Rectangle2Square.m:7</a></div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a6d8eb94b97a670d8d4983302bfbdbefd"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a></div><div class="ttdeci">Complete size of the rectangle W</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00127">click_ima_calib3D.m:127</a></div></div>
+<div class="ttc" id="a_rectangle2_square_8m_html_ab8da842131de2f8e0161089de2774858"><div class="ttname"><a href="_rectangle2_square_8m.html#ab8da842131de2f8e0161089de2774858">square</a></div><div class="ttdeci">square</div><div class="ttdef"><b>Definition:</b> <a href="_rectangle2_square_8m_source.html#l00016">Rectangle2Square.m:16</a></div></div>
+<div class="ttc" id="a_un_warp_plane_8m_html_aef510dc247276e2e3c40d648bab6aac2"><div class="ttname"><a href="_un_warp_plane_8m.html#aef510dc247276e2e3c40d648bab6aac2">u_hori</a></div><div class="ttdeci">u_hori</div><div class="ttdef"><b>Definition:</b> <a href="_un_warp_plane_8m_source.html#l00053">UnWarpPlane.m:53</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="a_rectangle2_square_8m_html_af1beb53cbf16321861f9a8c7dd5206e6"><div class="ttname"><a href="_rectangle2_square_8m.html#af1beb53cbf16321861f9a8c7dd5206e6">coeff_y</a></div><div class="ttdeci">coeff_y</div><div class="ttdef"><b>Definition:</b> <a href="_rectangle2_square_8m_source.html#l00010">Rectangle2Square.m:10</a></div></div>
+<div class="ttc" id="a_rectangle2_square_8m_html_adc330324dc582a60d788bb1ceb8c9a60"><div class="ttname"><a href="_rectangle2_square_8m.html#adc330324dc582a60d788bb1ceb8c9a60">pt2</a></div><div class="ttdeci">Generate the square from a rectangle of known segment lengths from pt1 to pt2</div><div class="ttdef"><b>Definition:</b> <a href="_rectangle2_square_8m_source.html#l00007">Rectangle2Square.m:7</a></div></div>
+<div class="ttc" id="a_rectangle2_square_8m_html_adec4b270699e4ef43679cf77763c719a"><div class="ttname"><a href="_rectangle2_square_8m.html#adec4b270699e4ef43679cf77763c719a">y_coord</a></div><div class="ttdeci">y_coord</div><div class="ttdef"><b>Definition:</b> <a href="_rectangle2_square_8m_source.html#l00013">Rectangle2Square.m:13</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

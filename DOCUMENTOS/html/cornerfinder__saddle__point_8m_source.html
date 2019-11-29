@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/cornerfinder_saddle_point.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">cornerfinder_saddle_point.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cornerfinder__saddle__point_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a342971ae976e878b9741be4650e99c6c">    1</a></span>&#160;<span class="keyword">function</span> [xc,good,bad,type] = cornerfinder_saddle_point(<a class="code" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a>,<a class="code" href="ima__read__calib__no__read_8m.html#adb7448e14482771c374c21974efcf4e8">I</a>,<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>,<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>,wx2,wy2);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;%[xc] = cornerfinder_saddle_point(<a class="code" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a>,<a class="code" href="ima__read__calib__no__read_8m.html#adb7448e14482771c374c21974efcf4e8">I</a>,<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>,<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>);</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;%</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;%Finds the sub-pixel <a class="code" href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a> <a class="code" href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a> the <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> <a class="code" href="ima__read__calib__no__read_8m.html#adb7448e14482771c374c21974efcf4e8">I</a> with initial guess <a class="code" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;%<a class="code" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a> and <a class="code" href="cornerfinder__saddle__point_8m.html#a8ecf39fb02bd311cd04c72d89cbfb6d7">xc</a> are 2xN <a class="code" href="rectify__stereo__pair_8m.html#aa1ba205621316543d75b7163474af4d9">matrices</a>. The first component <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> the <a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a> coordinate</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;%(horizontal) and the second component <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> the <a class="code" href="click__ima__calib_8m.html#a2fb1c5cf58867b5bbc9a1b145a86f3a0">y</a> coordinate (vertical)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;% </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;%Based <a class="code" href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a> Harris corner finder method</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;%</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;%Finds <a class="code" href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a> <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> precision below .1 pixel!</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;%Oct. 14<a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a>, 1997 - UPDATED <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="go__calib__optim__iter__weak_8m.html#a52d849bdb41a4ca51168568ec911ce1b">work</a> with vertical and horizontal edges as well!!!</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;%Sept 1998 - UPDATED <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> handle diverged <a class="code" href="cornerfinder__saddle__point_8m.html#ad72dfc94795e93b959508fd8af2bd3d7">points</a>: we keep the original points</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;%good is a binary vector indicating wether a feature point has been properly</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;%found.</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;%</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;%Add a zero zone of size wx2,wy2</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;%July 15th, 1999 - Bug on the mask building... fixed + change to Gaussian mask with higher</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;%resolution and larger number of iterations.</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;% California Institute of Technology</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;% (<a class="code" href="ginput2_8m.html#aa49cfdd4fa4d74d71f78a001a1b635d0">c</a>) Jean-Yves Bouguet -- Oct. 14th, 1997</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;xt = xt&#39;;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">   28</a></span>&#160;<a class="code" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a> = fliplr(<a class="code" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 4,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a> = 5;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 3,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a> = 5;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 6,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   wx2 = -1;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   wy2 = -1;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;%<a class="code" href="_compute_stripes_8m.html#ae37ced135688952706a4686437438cf2">mask</a> = <a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(2*<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+1,2*<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>+1);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="_compute_stripes_8m.html#ae37ced135688952706a4686437438cf2">mask</a> = exp(-((-<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>:<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>)<span class="stringliteral">&#39;/(wintx)).^2) * exp(-((-winty:winty)/(winty)).^2);</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="stringliteral">if (wx2&gt;0) &amp; (wy2&gt;0),</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral">   if ((wintx - wx2)&gt;=2)&amp;((winty - wy2)&gt;=2),</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral">      mask(wintx+1-wx2:wintx+1+wx2,winty+1-wy2:winty+1+wy2)= zeros(2*wx2+1,2*wy2+1);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral">offx = [-wintx:wintx]&#39;</span>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(1,2*<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>+1);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;offy = <a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(2*<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+1,1)*[-winty:winty];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<a class="code" href="_compute_stripes_8m.html#a698a8ac0b1fd75d3c716b842b0206c67">resolution</a> = 0.005;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<a class="code" href="go__calib__optim__iter_8m.html#a13a6ca11cc0f1fa1c0b908ac5ac90720">MaxIter</a> = 10;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;[nx,ny] = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="ima__read__calib__no__read_8m.html#adb7448e14482771c374c21974efcf4e8">I</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="calib__stereo_8m.html#a8cc2e7240164328fdc3f0e5e21032c56">N</a> = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a>,1);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<a class="code" href="cornerfinder__saddle__point_8m.html#a8ecf39fb02bd311cd04c72d89cbfb6d7">xc</a> = <a class="code" href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a>; % first guess... they don<span class="stringliteral">&#39;t move !!!</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="stringliteral">type = zeros(1,N);</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="stringliteral">for i=1:N,</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="stringliteral">   v_extra = resolution + 1;        % just larger than resolution</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="stringliteral">   compt = 0;               % no iteration yet</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="stringliteral">   while (norm(v_extra) &gt; resolution) &amp; (compt&lt;MaxIter),</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="stringliteral">       </span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="stringliteral">       cIx = xc(i,1);           %</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="stringliteral">       cIy = xc(i,2);           % Coords. of the point</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="stringliteral">       crIx = round(cIx);       % on the initial image</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="stringliteral">       crIy = round(cIy);       %      </span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="stringliteral">       itIx = cIx - crIx;       % Coefficients</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="stringliteral">       itIy = cIy - crIy;       % to compute</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="stringliteral">       if itIx &gt; 0,             % the sub pixel</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="stringliteral">           vIx = [itIx 1-itIx 0]&#39;</span>;  % accuracy.</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;       <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;           <a class="code" href="cornerfinder__saddle__point_8m.html#af9023cb1de60b857310aedef005fa797">vIx</a> = [0 1+itIx -itIx]<span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="stringliteral">       end;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="stringliteral">       if itIy &gt; 0,</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="stringliteral">           vIy = [itIy 1-itIy 0];</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="stringliteral">       else</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="stringliteral">           vIy = [0 1+itIy -itIy];</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="stringliteral">       end;</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="stringliteral">       </span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="stringliteral">      % What if the sub image is not in?</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="stringliteral">      if (crIx-wintx-2 &lt; 1), xmin=1; xmax = 2*wintx+5;</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="stringliteral">      elseif (crIx+wintx+2 &gt; nx), xmax = nx; xmin = nx-2*wintx-4;</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="stringliteral">      else</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="stringliteral">          xmin = crIx-wintx-2; xmax = crIx+wintx+2;</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral">      end;</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="stringliteral">      if (crIy-winty-2 &lt; 1), ymin=1; ymax = 2*winty+5;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="stringliteral">      elseif (crIy+winty+2 &gt; ny), ymax = ny; ymin = ny-2*winty-4;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="stringliteral">      else</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="stringliteral">          ymin = crIy-winty-2; ymax = crIy+winty+2;</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="stringliteral">      end;</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="stringliteral">      SI = I(xmin:xmax,ymin:ymax); % The necessary neighborhood</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="stringliteral">      SI = conv2(conv2(SI,vIx,&#39;</span><a class="code" href="rectify__stereo__pair_8m.html#a74de3909f790e0187e6baa753abebdf4">same</a><span class="stringliteral">&#39;),vIy,&#39;</span><a class="code" href="rectify__stereo__pair_8m.html#a74de3909f790e0187e6baa753abebdf4">same</a><span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="stringliteral">      SI = SI(2:2*wintx+4,2:2*winty+4); % The subpixel interpolated neighborhood</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="stringliteral">      px = cIx + offx;</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="stringliteral">      py = cIy + offy;</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="stringliteral">      if 1, %~saddle,</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="stringliteral">          [gy,gx] = gradient(SI);       % The gradient image</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="stringliteral">          gx = gx(2:2*wintx+2,2:2*winty+2); % extraction of the useful parts only</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="stringliteral">          gy = gy(2:2*wintx+2,2:2*winty+2); % of the gradients</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="stringliteral">          gxx = gx .* gx .* mask;</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="stringliteral">          gyy = gy .* gy .* mask;</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="stringliteral">          gxy = gx .* gy .* mask;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="stringliteral">          </span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="stringliteral">          </span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="stringliteral">          bb = [sum(sum(gxx .* px + gxy .* py)); sum(sum(gxy .* px + gyy .* py))];</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="stringliteral">          </span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="stringliteral">          a = sum(sum(gxx));</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="stringliteral">          b = sum(sum(gxy));</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="stringliteral">          c = sum(sum(gyy));</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="stringliteral">          </span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="stringliteral">          dt = a*c - b^2;</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="stringliteral">          </span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="stringliteral">          xc2 = [c*bb(1)-b*bb(2) a*bb(2)-b*bb(1)]/dt;</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="stringliteral">      else</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="stringliteral">          </span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="stringliteral">          SI = SI(2:2*wintx+2,2:2*winty+2);</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="stringliteral">          A =  repmat(mask(:),1,6) .* [px(:).^2 px(:).*py(:) py(:).^2 px(:) py(:) ones((2*wintx+1)*(2*winty+1),1)];</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="stringliteral">          param = inv(A&#39;</span>*<a class="code" href="cornerfinder__saddle__point_8m.html#a3b98e2dffc6cb06a89dcb0d5c60a0206">A</a>)*<a class="code" href="cornerfinder__saddle__point_8m.html#a3b98e2dffc6cb06a89dcb0d5c60a0206">A</a><span class="stringliteral">&#39;*( mask(:).*SI(:));</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="stringliteral">          xc2 = (-inv([2*param(1) param(2) ; param(2) 2*param(3) ]) * param(4:5))&#39;</span>;  </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a30a82f4324aeecaf1bcb5082c06f5949">v_extra</a> = <a class="code" href="cornerfinder__saddle__point_8m.html#a8ecf39fb02bd311cd04c72d89cbfb6d7">xc</a>(<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,:) - <a class="code" href="cornerfinder__saddle__point_8m.html#afff7195fd727c87c72bd430c656316d8">xc2</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a8ecf39fb02bd311cd04c72d89cbfb6d7">xc</a>(<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,:) = <a class="code" href="cornerfinder__saddle__point_8m.html#afff7195fd727c87c72bd430c656316d8">xc2</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <a class="code" href="centercirclefinder_8m.html#a834d18df065d376d123645fee8de8766">compt</a> = <a class="code" href="centercirclefinder_8m.html#a834d18df065d376d123645fee8de8766">compt</a> + 1;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">if</span> 1,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      cIx = <a class="code" href="cornerfinder__saddle__point_8m.html#a8ecf39fb02bd311cd04c72d89cbfb6d7">xc</a>(<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,1);            %</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      cIy = <a class="code" href="cornerfinder__saddle__point_8m.html#a8ecf39fb02bd311cd04c72d89cbfb6d7">xc</a>(<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,2);            % Coords. of the <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      crIx = round(cIx);        % <a class="code" href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a> the initial <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      crIy = round(cIy);        %      </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      itIx = cIx - crIx;        % Coefficients</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a0650a7366cca60864c1b95ec8456223a">itIy</a> = cIy - crIy;        % <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> compute</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a75b99d0a605da4afa0eddc363d406fdb">  166</a></span>&#160;      <span class="keywordflow">if</span> itIx &gt; 0,          % the sub pixel</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#af9023cb1de60b857310aedef005fa797">  167</a></span>&#160;          <a class="code" href="cornerfinder__saddle__point_8m.html#af9023cb1de60b857310aedef005fa797">vIx</a> = [itIx 1-itIx 0]<span class="stringliteral">&#39;;   % accuracy.</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="stringliteral">      else</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="stringliteral">          vIx = [0 1+itIx -itIx]&#39;</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">  170</a></span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a0650a7366cca60864c1b95ec8456223a">  171</a></span>&#160;      <span class="keywordflow">if</span> <a class="code" href="cornerfinder__saddle__point_8m.html#a0650a7366cca60864c1b95ec8456223a">itIy</a> &gt; 0,</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#af78ee5dddd0ca0db7791f30dab64dda4">  172</a></span>&#160;          <a class="code" href="cornerfinder__saddle__point_8m.html#af78ee5dddd0ca0db7791f30dab64dda4">vIy</a> = [itIy 1-itIy 0];</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;          <a class="code" href="cornerfinder__saddle__point_8m.html#af78ee5dddd0ca0db7791f30dab64dda4">vIy</a> = [0 1+itIy -itIy];</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      % What <span class="keywordflow">if</span> the sub <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> not in?</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a5cebf6c66aa9ad1f352db36f41e81036">  180</a></span>&#160;      <span class="keywordflow">if</span> (crIx-<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>-2 &lt; 1), <a class="code" href="cornerfinder__saddle__point_8m.html#a5cebf6c66aa9ad1f352db36f41e81036">xmin</a>=1; <a class="code" href="cornerfinder__saddle__point_8m.html#aaa545f09e6592c936f524ca484584c28">xmax</a> = 2*<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+5;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a86b655300f1b0c5f9e3b454596e0b864">elseif</a> (crIx+<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+2 &gt; <a class="code" href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a>), <a class="code" href="cornerfinder__saddle__point_8m.html#aaa545f09e6592c936f524ca484584c28">xmax</a> = <a class="code" href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a>; <a class="code" href="cornerfinder__saddle__point_8m.html#a5cebf6c66aa9ad1f352db36f41e81036">xmin</a> = <a class="code" href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a>-2*<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>-4;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;          <a class="code" href="cornerfinder__saddle__point_8m.html#a5cebf6c66aa9ad1f352db36f41e81036">xmin</a> = crIx-<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>-2; <a class="code" href="cornerfinder__saddle__point_8m.html#aaa545f09e6592c936f524ca484584c28">xmax</a> = crIx+<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+2;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a2d98da502a985371babc8e0230b0a536">  186</a></span>&#160;      <span class="keywordflow">if</span> (crIy-<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>-2 &lt; 1), <a class="code" href="cornerfinder__saddle__point_8m.html#a2d98da502a985371babc8e0230b0a536">ymin</a>=1; <a class="code" href="cornerfinder__saddle__point_8m.html#aa2b7f6145d75dc845bff0f00c6452e54">ymax</a> = 2*<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>+5;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a86b655300f1b0c5f9e3b454596e0b864">elseif</a> (crIy+<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>+2 &gt; <a class="code" href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a>), <a class="code" href="cornerfinder__saddle__point_8m.html#aa2b7f6145d75dc845bff0f00c6452e54">ymax</a> = <a class="code" href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a>; <a class="code" href="cornerfinder__saddle__point_8m.html#a2d98da502a985371babc8e0230b0a536">ymin</a> = <a class="code" href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a>-2*<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>-4;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;          <a class="code" href="cornerfinder__saddle__point_8m.html#a2d98da502a985371babc8e0230b0a536">ymin</a> = crIy-<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>-2; <a class="code" href="cornerfinder__saddle__point_8m.html#aa2b7f6145d75dc845bff0f00c6452e54">ymax</a> = crIy+<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>+2;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">  193</a></span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a> = <a class="code" href="ima__read__calib__no__read_8m.html#adb7448e14482771c374c21974efcf4e8">I</a>(<a class="code" href="cornerfinder__saddle__point_8m.html#a5cebf6c66aa9ad1f352db36f41e81036">xmin</a>:<a class="code" href="cornerfinder__saddle__point_8m.html#aaa545f09e6592c936f524ca484584c28">xmax</a>,<a class="code" href="cornerfinder__saddle__point_8m.html#a2d98da502a985371babc8e0230b0a536">ymin</a>:<a class="code" href="cornerfinder__saddle__point_8m.html#aa2b7f6145d75dc845bff0f00c6452e54">ymax</a>); % The necessary neighborhood</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a> = conv2(conv2(<a class="code" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a>,<a class="code" href="cornerfinder__saddle__point_8m.html#af9023cb1de60b857310aedef005fa797">vIx</a>,<span class="stringliteral">&#39;same&#39;</span>),<a class="code" href="cornerfinder__saddle__point_8m.html#af78ee5dddd0ca0db7791f30dab64dda4">vIy</a>,<span class="stringliteral">&#39;same&#39;</span>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a> = <a class="code" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a>(2:2*<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+4,2:2*<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>+4); % The subpixel interpolated neighborhood</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a4f50f400529be4f289ee7109bf3d0ccf">  196</a></span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a4f50f400529be4f289ee7109bf3d0ccf">px</a> = cIx + offx;</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a2cdc66c1c33fd831cc3a2f3a7c06ea1a">  197</a></span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a2cdc66c1c33fd831cc3a2f3a7c06ea1a">py</a> = cIy + offy;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a> = <a class="code" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a>(2:2*<a class="code" href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+2,2:2*<a class="code" href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a>+2);</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a3b98e2dffc6cb06a89dcb0d5c60a0206">  200</a></span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a3b98e2dffc6cb06a89dcb0d5c60a0206">A</a> =  repmat(<a class="code" href="_compute_stripes_8m.html#ae37ced135688952706a4686437438cf2">mask</a>(:),1,6) .* [px(:).^2 px(:).*py(:) py(:).^2 px(:) py(:) ones((2*wintx+1)*(2*winty+1),1)];</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">  201</a></span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a> = inv(<a class="code" href="cornerfinder__saddle__point_8m.html#a3b98e2dffc6cb06a89dcb0d5c60a0206">A</a><span class="stringliteral">&#39;*A)*A&#39;</span>*( <a class="code" href="_compute_stripes_8m.html#ae37ced135688952706a4686437438cf2">mask</a>(:).*<a class="code" href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a>(:));</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#afff7195fd727c87c72bd430c656316d8">  202</a></span>&#160;      <a class="code" href="cornerfinder__saddle__point_8m.html#afff7195fd727c87c72bd430c656316d8">xc2</a> = (-inv([2*<a class="code" href="cornerfinder__saddle__point_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(1) <a class="code" href="cornerfinder__saddle__point_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(2) ; <a class="code" href="cornerfinder__saddle__point_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(2) 2*<a class="code" href="cornerfinder__saddle__point_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(3) ]) * <a class="code" href="cornerfinder__saddle__point_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a>(4:5))<span class="stringliteral">&#39;;  </span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a30a82f4324aeecaf1bcb5082c06f5949">  205</a></span>&#160;<span class="stringliteral">      v_extra = xc(i,:) - xc2;</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="stringliteral">      xc(i,:) = xc2;</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="stringliteral">  end;</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="stringliteral">  </span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="stringliteral">  </span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="stringliteral">  </span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="stringliteral">% check for points that diverge:</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a85b6468f464f82df2d69142949d54898">  217</a></span>&#160;<span class="stringliteral">delta_x = xc(:,1) - xt(:,1);</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#ab73d44f0e0438d419515ff3eaad55257">  218</a></span>&#160;<span class="stringliteral">delta_y = xc(:,2) - xt(:,2);</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a9976f3faad68f981f425583e48b03252">  220</a></span>&#160;<span class="stringliteral">%keyboard;</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#ae83cfa749a6be0414f9fc8b0edb52e4e">  223</a></span>&#160;<span class="stringliteral">bad = (abs(delta_x) &gt; wintx) | (abs(delta_y) &gt; winty);</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a16f85293e920fd49eda6bf0df98bfd33">  224</a></span>&#160;<span class="stringliteral">good = ~bad;</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#af225dab14ea0fba9687b9fef7d3d299a">  225</a></span>&#160;<span class="stringliteral">in_bad = find(bad);</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#ad72dfc94795e93b959508fd8af2bd3d7">  227</a></span>&#160;<span class="stringliteral">% For the diverged points, keep the original guesses:</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="stringliteral">xc(in_bad,:) = xt(in_bad,:);</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="cornerfinder__saddle__point_8m.html#a8ecf39fb02bd311cd04c72d89cbfb6d7">  231</a></span>&#160;<span class="stringliteral">xc = fliplr(xc);</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="stringliteral">xc = xc&#39;</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<a class="code" href="cornerfinder__saddle__point_8m.html#ae83cfa749a6be0414f9fc8b0edb52e4e">bad</a> = <a class="code" href="cornerfinder__saddle__point_8m.html#ae83cfa749a6be0414f9fc8b0edb52e4e">bad</a><span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="stringliteral">good = good&#39;</span>;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_aa2b7f6145d75dc845bff0f00c6452e54"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#aa2b7f6145d75dc845bff0f00c6452e54">ymax</a></div><div class="ttdeci">ymax</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00186">cornerfinder_saddle_point.m:186</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a58ab1fd68e97078232808206b850161b"><div class="ttname"><a href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a></div><div class="ttdeci">hold on</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00034">click_ima_calib.m:34</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a5cebf6c66aa9ad1f352db36f41e81036"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a5cebf6c66aa9ad1f352db36f41e81036">xmin</a></div><div class="ttdeci">What if the sub image is not in xmin</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00180">cornerfinder_saddle_point.m:180</a></div></div>
+<div class="ttc" id="asmall__test__script_8m_html_ab7fd51748de2e6629029180d5d37ec10"><div class="ttname"><a href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a></div><div class="ttdeci">[479.5200 236.0800 608.4100 415.3700 461.0000 40.0000 451.4800 308.7000 373.9900 314.8900 299.3200 319.1300 231.5500 321.3700 443.7300 282.9200 378.3600 288.3000 314.6900 292.7400 255.4700 296.2300]' x</div><div class="ttdef"><b>Definition:</b> <a href="small__test__script_8m_source.html#l00018">small_test_script.m:18</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a86b655300f1b0c5f9e3b454596e0b864"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a86b655300f1b0c5f9e3b454596e0b864">elseif</a></div><div class="ttdeci">elseif(crIx+wintx+2 &gt; nx)</div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="aginput2_8m_html_aa49cfdd4fa4d74d71f78a001a1b635d0"><div class="ttname"><a href="ginput2_8m.html#aa49cfdd4fa4d74d71f78a001a1b635d0">c</a></div><div class="ttdeci">c</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00025">ginput2.m:25</a></div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a60bfb22881d8ade0a15adeaa7a363c23"><div class="ttname"><a href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a></div><div class="ttdeci">matrix that subtract the principal point</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00088">init_intrinsic_param.m:88</a></div></div>
+<div class="ttc" id="acentercirclefinder_8m_html_aaae28b7917f6488ebee15109ee4bf584"><div class="ttname"><a href="centercirclefinder_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a></div><div class="ttdeci">wintx</div><div class="ttdef"><b>Definition:</b> <a href="centercirclefinder_8m_source.html#l00005">centercirclefinder.m:5</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a13a6ca11cc0f1fa1c0b908ac5ac90720"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a13a6ca11cc0f1fa1c0b908ac5ac90720">MaxIter</a></div><div class="ttdeci">if MaxIter</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00052">go_calib_optim_iter.m:52</a></div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_af9023cb1de60b857310aedef005fa797"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#af9023cb1de60b857310aedef005fa797">vIx</a></div><div class="ttdeci">if the sub pixel vIx</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00167">cornerfinder_saddle_point.m:167</a></div></div>
+<div class="ttc" id="avisualize__distortions_8m_html_a4c7354b9bcf8e1c1ff1c0d28b0d4276a"><div class="ttname"><a href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a></div><div class="ttdeci">th</div><div class="ttdef"><b>Definition:</b> <a href="visualize__distortions_8m_source.html#l00073">visualize_distortions.m:73</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a84e4236f07668a770c27567f1f9615ff"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a></div><div class="ttdeci">nx</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00091">go_calib_optim_iter.m:91</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a2cdc66c1c33fd831cc3a2f3a7c06ea1a"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a2cdc66c1c33fd831cc3a2f3a7c06ea1a">py</a></div><div class="ttdeci">py</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00197">cornerfinder_saddle_point.m:197</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a3b98e2dffc6cb06a89dcb0d5c60a0206"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a3b98e2dffc6cb06a89dcb0d5c60a0206">A</a></div><div class="ttdeci">A</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00200">cornerfinder_saddle_point.m:200</a></div></div>
+<div class="ttc" id="aginput2_8m_html_aafbb9d50e573e4009d0650c645566ddd"><div class="ttname"><a href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a></div><div class="ttdeci">end if x if if nargin</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00034">ginput2.m:34</a></div></div>
+<div class="ttc" id="aanalyse__error_8m_html_aee9a066043e7b7065d7cdda5fbcfba53"><div class="ttname"><a href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a></div><div class="ttdeci">Color code for each image</div><div class="ttdef"><b>Definition:</b> <a href="analyse__error_8m_source.html#l00003">analyse_error.m:3</a></div></div>
+<div class="ttc" id="aima__read__calib__no__read_8m_html_adb7448e14482771c374c21974efcf4e8"><div class="ttname"><a href="ima__read__calib__no__read_8m.html#adb7448e14482771c374c21974efcf4e8">I</a></div><div class="ttdeci">if ~one_image_read if if I</div><div class="ttdef"><b>Definition:</b> <a href="ima__read__calib__no__read_8m_source.html#l00077">ima_read_calib_no_read.m:77</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a51f20d6b1b54a2eee3be0e8adc96a0ae"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a51f20d6b1b54a2eee3be0e8adc96a0ae">param</a></div><div class="ttdeci">param</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00201">cornerfinder_saddle_point.m:201</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00170">cornerfinder_saddle_point.m:170</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00067">apply_distortion2.m:67</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a9189b8c237d7e133ae5d30ff453ae62c"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a9189b8c237d7e133ae5d30ff453ae62c">SI</a></div><div class="ttdeci">SI</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00193">cornerfinder_saddle_point.m:193</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="ago__calib__optim__iter__weak_8m_html_a52d849bdb41a4ca51168568ec911ce1b"><div class="ttname"><a href="go__calib__optim__iter__weak_8m.html#a52d849bdb41a4ca51168568ec911ce1b">work</a></div><div class="ttdeci">Try to make the inversion work</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter__weak_8m_source.html#l00472">go_calib_optim_iter_weak.m:472</a></div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_ae37ced135688952706a4686437438cf2"><div class="ttname"><a href="_compute_stripes_8m.html#ae37ced135688952706a4686437438cf2">mask</a></div><div class="ttdeci">the first mask(no need to compute anything outside of this mask) Ng1</div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_aa1ba205621316543d75b7163474af4d9"><div class="ttname"><a href="rectify__stereo__pair_8m.html#aa1ba205621316543d75b7163474af4d9">matrices</a></div><div class="ttdeci">The resulting left and right camera matrices</div><div class="ttdef"><b>Definition:</b> <a href="rectify__stereo__pair_8m_source.html#l00108">rectify_stereo_pair.m:108</a></div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_a698a8ac0b1fd75d3c716b842b0206c67"><div class="ttname"><a href="_compute_stripes_8m.html#a698a8ac0b1fd75d3c716b842b0206c67">resolution</a></div><div class="ttdeci">Finish off the spatial processing to higher resolution</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00224">ComputeStripes.m:224</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_ad72dfc94795e93b959508fd8af2bd3d7"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#ad72dfc94795e93b959508fd8af2bd3d7">points</a></div><div class="ttdeci">For the diverged points</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00227">cornerfinder_saddle_point.m:227</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a4f50f400529be4f289ee7109bf3d0ccf"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a4f50f400529be4f289ee7109bf3d0ccf">px</a></div><div class="ttdeci">The subpixel interpolated neighborhood px</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00196">cornerfinder_saddle_point.m:196</a></div></div>
+<div class="ttc" id="acentercirclefinder_8m_html_a834d18df065d376d123645fee8de8766"><div class="ttname"><a href="centercirclefinder_8m.html#a834d18df065d376d123645fee8de8766">compt</a></div><div class="ttdeci">compt</div><div class="ttdef"><b>Definition:</b> <a href="centercirclefinder_8m_source.html#l00147">centercirclefinder.m:147</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_af78ee5dddd0ca0db7791f30dab64dda4"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#af78ee5dddd0ca0db7791f30dab64dda4">vIy</a></div><div class="ttdeci">if vIy</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00172">cornerfinder_saddle_point.m:172</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a2d98da502a985371babc8e0230b0a536"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a2d98da502a985371babc8e0230b0a536">ymin</a></div><div class="ttdeci">ymin</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00186">cornerfinder_saddle_point.m:186</a></div></div>
+<div class="ttc" id="acentercirclefinder_8m_html_a7c431c36e843208390becc7ff37f5c67"><div class="ttname"><a href="centercirclefinder_8m.html#a7c431c36e843208390becc7ff37f5c67">winty</a></div><div class="ttdeci">winty</div><div class="ttdef"><b>Definition:</b> <a href="centercirclefinder_8m_source.html#l00006">centercirclefinder.m:6</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a289ca425eb368f1d582b6be2be0d3dfc"><div class="ttname"><a href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a></div><div class="ttdeci">ny</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00092">cam_proj_calib.m:92</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_ae83cfa749a6be0414f9fc8b0edb52e4e"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#ae83cfa749a6be0414f9fc8b0edb52e4e">bad</a></div><div class="ttdeci">bad</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00223">cornerfinder_saddle_point.m:223</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_a74de3909f790e0187e6baa753abebdf4"><div class="ttname"><a href="rectify__stereo__pair_8m.html#a74de3909f790e0187e6baa753abebdf4">same</a></div><div class="ttdeci">The sizes of the images are the same</div><div class="ttdef"><b>Definition:</b> <a href="rectify__stereo__pair_8m_source.html#l00109">rectify_stereo_pair.m:109</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a2fb1c5cf58867b5bbc9a1b145a86f3a0"><div class="ttname"><a href="click__ima__calib_8m.html#a2fb1c5cf58867b5bbc9a1b145a86f3a0">y</a></div><div class="ttdeci">y</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00033">click_ima_calib.m:33</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_ae99e8f063b011dafba65cd94236b07b9"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#ae99e8f063b011dafba65cd94236b07b9">xt</a></div><div class="ttdeci">xt</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00028">cornerfinder_saddle_point.m:28</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a30a82f4324aeecaf1bcb5082c06f5949"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a30a82f4324aeecaf1bcb5082c06f5949">v_extra</a></div><div class="ttdeci">v_extra</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00205">cornerfinder_saddle_point.m:205</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a8cc2e7240164328fdc3f0e5e21032c56"><div class="ttname"><a href="calib__stereo_8m.html#a8cc2e7240164328fdc3f0e5e21032c56">N</a></div><div class="ttdeci">N</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00101">calib_stereo.m:101</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_aef7934e13ef374e615199c9c1405210c"><div class="ttname"><a href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a></div><div class="ttdeci">Sort the corners</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00062">click_ima_calib.m:62</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a0650a7366cca60864c1b95ec8456223a"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a0650a7366cca60864c1b95ec8456223a">itIy</a></div><div class="ttdeci">if itIy</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00171">cornerfinder_saddle_point.m:171</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a00d9614e711bf169f15ae8e3e35d30df"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a></div><div class="ttdeci">If the rig is</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00213">go_calib_optim_iter.m:213</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_afff7195fd727c87c72bd430c656316d8"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#afff7195fd727c87c72bd430c656316d8">xc2</a></div><div class="ttdeci">xc2</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00202">cornerfinder_saddle_point.m:202</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_a8ecf39fb02bd311cd04c72d89cbfb6d7"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#a8ecf39fb02bd311cd04c72d89cbfb6d7">xc</a></div><div class="ttdeci">For the diverged keep the original xc</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00231">cornerfinder_saddle_point.m:231</a></div></div>
+<div class="ttc" id="acornerfinder__saddle__point_8m_html_aaa545f09e6592c936f524ca484584c28"><div class="ttname"><a href="cornerfinder__saddle__point_8m.html#aaa545f09e6592c936f524ca484584c28">xmax</a></div><div class="ttdeci">xmax</div><div class="ttdef"><b>Definition:</b> <a href="cornerfinder__saddle__point_8m_source.html#l00180">cornerfinder_saddle_point.m:180</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

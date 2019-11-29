@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/projectedGrid.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">projectedGrid.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="projected_grid_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#acfa77b0414006c4e91cac59483268fd0">    1</a></span>&#160;<span class="keyword">function</span> [XX,H] = projectedGrid ( <a class="code" href="_organizar_8m.html#af93dd7f73e57b8b17d34efa33f0f948e">P1</a>, <a class="code" href="_organizar_8m.html#a27f5efe14c52fa358088a3f5d31d5922">P2</a>, <a class="code" href="_organizar_8m.html#a1e290925c3c5aef593439888e5ee9309">P3</a>, P4 , <a class="code" href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a>, <a class="code" href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% <span class="keyword">new</span> formalism <span class="keyword">using</span> <a class="code" href="init__intrinsic__param_8m.html#ad7fba7d56e1f72e31e6746ac84206f2a">homographies</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#af8ee7b8a65bb8b2c7cff2bbc6456894f">    5</a></span>&#160;<a class="code" href="compute__collineation_8m.html#a06181dbc07d3a409d53092c4135fddaa">a00</a> = [P1;1];</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#a88209f02b4e27889e12d5317a1b9a64e">    6</a></span>&#160;<a class="code" href="projected_grid_8m.html#a88209f02b4e27889e12d5317a1b9a64e">a10</a> = [P2;1];</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#a5a63c04ff6c9d5bbbac43631fe08d656">    7</a></span>&#160;<a class="code" href="projected_grid_8m.html#a5a63c04ff6c9d5bbbac43631fe08d656">a11</a> = [P3;1];</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#a49b99ee0e0758c939f35fd74ee069c19">    8</a></span>&#160;<a class="code" href="projected_grid_8m.html#a36f994875efe21b4fc1c6c745c523ecf">a01</a> = [P4;1];</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;% Compute the planart <a class="code" href="projected_grid_8m.html#a49b99ee0e0758c939f35fd74ee069c19">collineation</a>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;[H] = compute_collineation (<a class="code" href="compute__collineation_8m.html#a06181dbc07d3a409d53092c4135fddaa">a00</a>, <a class="code" href="projected_grid_8m.html#a88209f02b4e27889e12d5317a1b9a64e">a10</a>, <a class="code" href="projected_grid_8m.html#a5a63c04ff6c9d5bbbac43631fe08d656">a11</a>, <a class="code" href="projected_grid_8m.html#a36f994875efe21b4fc1c6c745c523ecf">a01</a>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;% Build the grid <span class="keyword">using</span> the planar <a class="code" href="projected_grid_8m.html#a49b99ee0e0758c939f35fd74ee069c19">collineation</a>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#a8d21ee4f326ad04b8473af2e387cea56">   17</a></span>&#160;<a class="code" href="click__ima__calib3_d_8m.html#a8e0f4ed97a8d8095f941936ae405d515">x_l</a> = ((0:(<a class="code" href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a>-1))&#39;*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(1,<a class="code" href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a>))/(<a class="code" href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a>-1);</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#a65c030f30d51cefa610998c5c765cd3b">   18</a></span>&#160;<a class="code" href="projected_grid_8m.html#a65c030f30d51cefa610998c5c765cd3b">y_l</a> = (<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(<a class="code" href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a>,1)*(0:(<a class="code" href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a>-1)))/(<a class="code" href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a>-1);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#a86e67370eee99277122aa8614f0d6a66">   20</a></span>&#160;<a class="code" href="projected_grid_8m.html#a86e67370eee99277122aa8614f0d6a66">pts</a> = [x_l(:) y_l(:) ones(nx*ny,1)]<span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="projected_grid_8m.html#aad347226dcc1d205f58e693925c28783">   22</a></span>&#160;<span class="stringliteral">XX = H*pts;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral">XX = XX(1:2,:) ./ (ones(2,1)*XX(3,:));</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainit__intrinsic__param_8m_html_ad7fba7d56e1f72e31e6746ac84206f2a"><div class="ttname"><a href="init__intrinsic__param_8m.html#ad7fba7d56e1f72e31e6746ac84206f2a">homographies</a></div><div class="ttdeci">Initialize the homographies</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00053">init_intrinsic_param.m:53</a></div></div>
+<div class="ttc" id="aprojected_grid_8m_html_a36f994875efe21b4fc1c6c745c523ecf"><div class="ttname"><a href="projected_grid_8m.html#a36f994875efe21b4fc1c6c745c523ecf">a01</a></div><div class="ttdeci">a01</div><div class="ttdef"><b>Definition:</b> <a href="projected_grid_8m_source.html#l00008">projectedGrid.m:8</a></div></div>
+<div class="ttc" id="acompute__collineation_8m_html_a06181dbc07d3a409d53092c4135fddaa"><div class="ttname"><a href="compute__collineation_8m.html#a06181dbc07d3a409d53092c4135fddaa">a00</a></div><div class="ttdeci">a00/a00(3) a00</div><div class="ttdef"><b>Definition:</b> <a href="compute__collineation_8m_source.html#l00005">compute_collineation.m:5</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_a1e290925c3c5aef593439888e5ee9309"><div class="ttname"><a href="_organizar_8m.html#a1e290925c3c5aef593439888e5ee9309">P3</a></div><div class="ttdeci">P3</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00066">Organizar.m:66</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a84e4236f07668a770c27567f1f9615ff"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a></div><div class="ttdeci">nx</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00091">go_calib_optim_iter.m:91</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_af93dd7f73e57b8b17d34efa33f0f948e"><div class="ttname"><a href="_organizar_8m.html#af93dd7f73e57b8b17d34efa33f0f948e">P1</a></div><div class="ttdeci">P1</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00064">Organizar.m:64</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="aprojected_grid_8m_html_a88209f02b4e27889e12d5317a1b9a64e"><div class="ttname"><a href="projected_grid_8m.html#a88209f02b4e27889e12d5317a1b9a64e">a10</a></div><div class="ttdeci">a10</div><div class="ttdef"><b>Definition:</b> <a href="projected_grid_8m_source.html#l00006">projectedGrid.m:6</a></div></div>
+<div class="ttc" id="aprojected_grid_8m_html_a49b99ee0e0758c939f35fd74ee069c19"><div class="ttname"><a href="projected_grid_8m.html#a49b99ee0e0758c939f35fd74ee069c19">collineation</a></div><div class="ttdeci">Compute the planart collineation</div><div class="ttdef"><b>Definition:</b> <a href="projected_grid_8m_source.html#l00008">projectedGrid.m:8</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_a27f5efe14c52fa358088a3f5d31d5922"><div class="ttname"><a href="_organizar_8m.html#a27f5efe14c52fa358088a3f5d31d5922">P2</a></div><div class="ttdeci">P2</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00065">Organizar.m:65</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a8e0f4ed97a8d8095f941936ae405d515"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a8e0f4ed97a8d8095f941936ae405d515">x_l</a></div><div class="ttdeci">((0:n_sq_x)' *ones(1, n_sq_y+1))/n_sq_x x_l</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00117">click_ima_calib3D.m:117</a></div></div>
+<div class="ttc" id="aprojected_grid_8m_html_a5a63c04ff6c9d5bbbac43631fe08d656"><div class="ttname"><a href="projected_grid_8m.html#a5a63c04ff6c9d5bbbac43631fe08d656">a11</a></div><div class="ttdeci">a11</div><div class="ttdef"><b>Definition:</b> <a href="projected_grid_8m_source.html#l00007">projectedGrid.m:7</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a289ca425eb368f1d582b6be2be0d3dfc"><div class="ttname"><a href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a></div><div class="ttdeci">ny</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00092">cam_proj_calib.m:92</a></div></div>
+<div class="ttc" id="aprojected_grid_8m_html_a86e67370eee99277122aa8614f0d6a66"><div class="ttname"><a href="projected_grid_8m.html#a86e67370eee99277122aa8614f0d6a66">pts</a></div><div class="ttdeci">pts</div><div class="ttdef"><b>Definition:</b> <a href="projected_grid_8m_source.html#l00020">projectedGrid.m:20</a></div></div>
+<div class="ttc" id="aprojected_grid_8m_html_a65c030f30d51cefa610998c5c765cd3b"><div class="ttname"><a href="projected_grid_8m.html#a65c030f30d51cefa610998c5c765cd3b">y_l</a></div><div class="ttdeci">y_l</div><div class="ttdef"><b>Definition:</b> <a href="projected_grid_8m_source.html#l00018">projectedGrid.m:18</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

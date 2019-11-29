@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/check_active_images.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">check_active_images.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="check__active__images_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#a408e5d29df1099eaa0f7463ecbd05f1e">    1</a></span>&#160;<span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#a408e5d29df1099eaa0f7463ecbd05f1e">n_ima</a> ~= 0,</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#aaee896088366cbb257403aca9a44c852">~exist</a>(<span class="stringliteral">&#39;active_images&#39;</span>),</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">    4</a></span>&#160;        <a class="code" href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">active_images</a> = <a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(1,<a class="code" href="check__active__images_8m.html#a408e5d29df1099eaa0f7463ecbd05f1e">n_ima</a>);</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">    5</a></span>&#160;    <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#ac8598dac08dfcb9ad5ba3a3bb6f62b5d">    6</a></span>&#160;    <a class="code" href="check__active__images_8m.html#ac8598dac08dfcb9ad5ba3a3bb6f62b5d">n_act</a> = <a class="code" href="click__ima__calib3_d_8m.html#a7a134e91d2540aeba432404d6104a7ee">length</a>(<a class="code" href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">active_images</a>);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#ac8598dac08dfcb9ad5ba3a3bb6f62b5d">n_act</a> &lt; <a class="code" href="check__active__images_8m.html#a408e5d29df1099eaa0f7463ecbd05f1e">n_ima</a>,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">active_images</a> = [active_images ones(1,n_ima-n_act)];</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#ac8598dac08dfcb9ad5ba3a3bb6f62b5d">n_act</a> &gt; <a class="code" href="check__active__images_8m.html#a408e5d29df1099eaa0f7463ecbd05f1e">n_ima</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <a class="code" href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">active_images</a> = <a class="code" href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">active_images</a>(1:<a class="code" href="check__active__images_8m.html#a408e5d29df1099eaa0f7463ecbd05f1e">n_ima</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#aa0d59e9a11aa79e15026fec05d972fc7">   15</a></span>&#160;    <a class="code" href="check__active__images_8m.html#aa0d59e9a11aa79e15026fec05d972fc7">ind_active</a> = find(<a class="code" href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">active_images</a>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#adc701913c3ffc560a17809c8b18412d5">prod</a>(<span class="keywordtype">double</span>(<a class="code" href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">active_images</a> == 0)),</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="check__active__images_8m.html#a8e889eabca35b7a206ce3b5e5ce8c7c3">disp</a>(<span class="stringliteral">&#39;Error: There is no active image. Run Add/Suppress images to add images&#39;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#a9717e7bbecb906637e86cef6da3d83c2">   19</a></span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#ac72debd017501f83dcbe54f516cf2d52">exist</a>(<span class="stringliteral">&#39;center_optim&#39;</span>),</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#a9445fb2c1c989604dd61f6050a280737">   23</a></span>&#160;        <a class="code" href="check__active__images_8m.html#a9445fb2c1c989604dd61f6050a280737">center_optim</a> = double(<a class="code" href="check__active__images_8m.html#a9445fb2c1c989604dd61f6050a280737">center_optim</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#ac72debd017501f83dcbe54f516cf2d52">exist</a>(<span class="stringliteral">&#39;est_alpha&#39;</span>),</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#adb9b36f06e6de4ef827a4f8db0dd2840">   26</a></span>&#160;        <a class="code" href="go__calib__optim__iter_8m.html#ac144986f6280f2e1aaeb62473f8bb1c8">est_alpha</a> = double(<a class="code" href="go__calib__optim__iter_8m.html#ac144986f6280f2e1aaeb62473f8bb1c8">est_alpha</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#ac72debd017501f83dcbe54f516cf2d52">exist</a>(<span class="stringliteral">&#39;est_dist&#39;</span>),</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#a5c0c2c69c85c9b5c8cd24f0a616613e4">   29</a></span>&#160;        <a class="code" href="check__active__images_8m.html#a5c0c2c69c85c9b5c8cd24f0a616613e4">est_dist</a> = double(<a class="code" href="check__active__images_8m.html#a5c0c2c69c85c9b5c8cd24f0a616613e4">est_dist</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#ac72debd017501f83dcbe54f516cf2d52">exist</a>(<span class="stringliteral">&#39;est_fc&#39;</span>),</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#af23835c63ea443d25964e64dd7cfaed1">   32</a></span>&#160;        <a class="code" href="check__active__images_8m.html#af23835c63ea443d25964e64dd7cfaed1">est_fc</a> = double(<a class="code" href="check__active__images_8m.html#af23835c63ea443d25964e64dd7cfaed1">est_fc</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="check__active__images_8m.html#ac72debd017501f83dcbe54f516cf2d52">exist</a>(<span class="stringliteral">&#39;est_aspect_ratio&#39;</span>),</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="check__active__images_8m.html#aea25d24063c14f2ffaa807f36b6aa040">   35</a></span>&#160;        <a class="code" href="check__active__images_8m.html#aea25d24063c14f2ffaa807f36b6aa040">est_aspect_ratio</a> = double(<a class="code" href="check__active__images_8m.html#aea25d24063c14f2ffaa807f36b6aa040">est_aspect_ratio</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acheck__active__images_8m_html_ac867c670a4506b0be6d3b1bcd049f3f5"><div class="ttname"><a href="check__active__images_8m.html#ac867c670a4506b0be6d3b1bcd049f3f5">active_images</a></div><div class="ttdeci">if if active_images</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00004">check_active_images.m:4</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_adc701913c3ffc560a17809c8b18412d5"><div class="ttname"><a href="check__active__images_8m.html#adc701913c3ffc560a17809c8b18412d5">prod</a></div><div class="ttdeci">if prod(double(active_images==0))</div></div>
+<div class="ttc" id="acheck__active__images_8m_html_a5c0c2c69c85c9b5c8cd24f0a616613e4"><div class="ttname"><a href="check__active__images_8m.html#a5c0c2c69c85c9b5c8cd24f0a616613e4">est_dist</a></div><div class="ttdeci">if est_dist</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00029">check_active_images.m:29</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7a134e91d2540aeba432404d6104a7ee"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7a134e91d2540aeba432404d6104a7ee">length</a></div><div class="ttdeci">if Estimation of focal length</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00146">click_ima_calib3D.m:146</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_af23835c63ea443d25964e64dd7cfaed1"><div class="ttname"><a href="check__active__images_8m.html#af23835c63ea443d25964e64dd7cfaed1">est_fc</a></div><div class="ttdeci">if est_fc</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00032">check_active_images.m:32</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="check__active__images_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00005">check_active_images.m:5</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_aea25d24063c14f2ffaa807f36b6aa040"><div class="ttname"><a href="check__active__images_8m.html#aea25d24063c14f2ffaa807f36b6aa040">est_aspect_ratio</a></div><div class="ttdeci">if est_aspect_ratio</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00035">check_active_images.m:35</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_ac8598dac08dfcb9ad5ba3a3bb6f62b5d"><div class="ttname"><a href="check__active__images_8m.html#ac8598dac08dfcb9ad5ba3a3bb6f62b5d">n_act</a></div><div class="ttdeci">n_act</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00006">check_active_images.m:6</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_ac72debd017501f83dcbe54f516cf2d52"><div class="ttname"><a href="check__active__images_8m.html#ac72debd017501f83dcbe54f516cf2d52">exist</a></div><div class="ttdeci">if exist('center_optim')</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="acheck__active__images_8m_html_aa0d59e9a11aa79e15026fec05d972fc7"><div class="ttname"><a href="check__active__images_8m.html#aa0d59e9a11aa79e15026fec05d972fc7">ind_active</a></div><div class="ttdeci">ind_active</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00015">check_active_images.m:15</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_a9445fb2c1c989604dd61f6050a280737"><div class="ttname"><a href="check__active__images_8m.html#a9445fb2c1c989604dd61f6050a280737">center_optim</a></div><div class="ttdeci">if center_optim</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00023">check_active_images.m:23</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_ac144986f6280f2e1aaeb62473f8bb1c8"><div class="ttname"><a href="go__calib__optim__iter_8m.html#ac144986f6280f2e1aaeb62473f8bb1c8">est_alpha</a></div><div class="ttdeci">0 est_alpha</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00115">go_calib_optim_iter.m:115</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_a408e5d29df1099eaa0f7463ecbd05f1e"><div class="ttname"><a href="check__active__images_8m.html#a408e5d29df1099eaa0f7463ecbd05f1e">n_ima</a></div><div class="ttdeci">if n_ima</div><div class="ttdef"><b>Definition:</b> <a href="check__active__images_8m_source.html#l00001">check_active_images.m:1</a></div></div>
+<div class="ttc" id="acheck__active__images_8m_html_aaee896088366cbb257403aca9a44c852"><div class="ttname"><a href="check__active__images_8m.html#aaee896088366cbb257403aca9a44c852">~exist</a></div><div class="ttdeci">if if ~exist('active_images')</div></div>
+<div class="ttc" id="acheck__active__images_8m_html_a8e889eabca35b7a206ce3b5e5ce8c7c3"><div class="ttname"><a href="check__active__images_8m.html#a8e889eabca35b7a206ce3b5e5ce8c7c3">disp</a></div><div class="ttdeci">if disp('Error:There is no active image. Run Add/Suppress images to add images')</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

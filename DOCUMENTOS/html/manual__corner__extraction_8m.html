@@ -1,0 +1,1237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Referencia del Archivo C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/manual_corner_extraction.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo manual_corner_extraction.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="manual__corner__extraction_8m_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:afda1fec5fc2cdc6712416a9959ab9f4e"><td class="memItemLeft" align="right" valign="top">This code allows <a class="el" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a> manual reselection of every corner in the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> This tool <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> specifically useful in the case of highly distorted <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> Use it when in standard <a class="el" href="manual__corner__extraction__no__read_8m.html#aafff892589a15dcfec2a5196ffee3344">mode</a> <a class="el" href="projector__marker_8m.html#a033c55db5d437a3394627c0ff03db82a">In</a> <a class="el" href="ima__read__calib__no__read_8m.html#aac26d9ceb1494dd9a043483ad8251bde">memory</a> efficient use manual_corner_extraction_no_read <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#afda1fec5fc2cdc6712416a9959ab9f4e">~exist</a> ('<a class="el" href="willson__read_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a>')</td></tr>
+<tr class="separator:afda1fec5fc2cdc6712416a9959ab9f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73242d1516d8f34d4c4e9d9e215b3c45"><td class="memItemLeft" align="right" valign="top">This code allows <a class="el" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a> manual reselection of every corner in the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> This tool <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> specifically useful in the case of highly distorted <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> Use it when in standard <a class="el" href="manual__corner__extraction__no__read_8m.html#aafff892589a15dcfec2a5196ffee3344">mode</a> <a class="el" href="projector__marker_8m.html#a033c55db5d437a3394627c0ff03db82a">In</a> <a class="el" href="ima__read__calib__no__read_8m.html#aac26d9ceb1494dd9a043483ad8251bde">memory</a> efficient use manual_corner_extraction_no_read <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a73242d1516d8f34d4c4e9d9e215b3c45">fprintf</a> (1, 'No <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> <a class="el" href="export__calib__data_8m.html#a7e4b47e9ae2b7dea2b3756ff539f9f55">data</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">available\n</a>')</td></tr>
+<tr class="separator:a73242d1516d8f34d4c4e9d9e215b3c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd19a253f0266513010c8225ac75815b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#afd19a253f0266513010c8225ac75815b">~exist</a> (['I_' num2str(<a class="el" href="ext__calib__stereo_8m.html#aa0d59e9a11aa79e15026fec05d972fc7">ind_active</a>(1))])</td></tr>
+<tr class="separator:afd19a253f0266513010c8225ac75815b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c731c877aff4d64d5a215a68ce2d34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a66c731c877aff4d64d5a215a68ce2d34">disp</a> ('Cannot extract <a class="el" href="cam__proj__calib__optim_8m.html#a112543e603178db74fa2fe5617083709">corners</a> without <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>')</td></tr>
+<tr class="separator:a66c731c877aff4d64d5a215a68ce2d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b85bb3ded17bdce3123b61fbc772323"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a7b85bb3ded17bdce3123b61fbc772323">fprintf</a> (1,'\nManual re-<a class="el" href="error__depth__list_8m.html#ad5c4a59ae665afd234a9b99e05b922f2">extraction</a> of the grid <a class="el" href="cam__proj__calib__optim_8m.html#a112543e603178db74fa2fe5617083709">corners</a> <a class="el" href="visualize__distortions_8m.html#a58ab1fd68e97078232808206b850161b">on</a> the <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">images\n</a>')</td></tr>
+<tr class="separator:a7b85bb3ded17bdce3123b61fbc772323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b4e3f7c768a436fbb847c7eab1cb69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a99b4e3f7c768a436fbb847c7eab1cb69">isempty</a> (<a class="el" href="manual__corner__extraction__no__read_8m.html#a9d54043e0afc32cad8b68ad648f418bb">q_converge</a>)</td></tr>
+<tr class="separator:a99b4e3f7c768a436fbb847c7eab1cb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16602656ca723a546dbf93a82a87a94a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a16602656ca723a546dbf93a82a87a94a">fprintf</a> (1, 'Automatic <a class="el" href="compute__homography_8m.html#a64290fa0a6b548b1be749ab2710f0b31">refinement</a> of the corner location after manual <a class="el" href="ginput4_8m.html#a6478e9255030fd6193c17b1fd5bd2ec8">mouse</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">click\n</a>')</td></tr>
+<tr class="separator:a16602656ca723a546dbf93a82a87a94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b5aa983bfdbd95fdab3cb8e0b5307a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a18b5aa983bfdbd95fdab3cb8e0b5307a">disp</a> ('Window <a class="el" href="undistort__image__no__read_8m.html#acef99621e828a8da6e90436ef5178cea">size</a> for corner finder(<a class="el" href="saving__calib__no__results_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a> and <a class="el" href="saving__calib__no__results_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a>):')</td></tr>
+<tr class="separator:a18b5aa983bfdbd95fdab3cb8e0b5307a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accae145f95701d007eba54d0ebce8bd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#accae145f95701d007eba54d0ebce8bd5">isempty</a> (<a class="el" href="saving__calib__no__results_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>)</td></tr>
+<tr class="separator:accae145f95701d007eba54d0ebce8bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac666fb7cd11037826ce3382e910288f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ac666fb7cd11037826ce3382e910288f1">isempty</a> (<a class="el" href="saving__calib__no__results_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a>)</td></tr>
+<tr class="separator:ac666fb7cd11037826ce3382e910288f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae811540dd986b200fae6e072ebdcd9c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ae811540dd986b200fae6e072ebdcd9c9">fprintf</a> (1, 'Window <a class="el" href="undistort__image__no__read_8m.html#acef99621e828a8da6e90436ef5178cea">size</a>=%<a class="el" href="willson__read_8m.html#aacddc911cdfe5cd5ec97b084754542d4">dx</a>%<a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">d\n</a>', 2 *<a class="el" href="saving__calib__no__results_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+1, 2 *<a class="el" href="saving__calib__no__results_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a>+1)</td></tr>
+<tr class="separator:ae811540dd986b200fae6e072ebdcd9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac734725bb83b6896b5b0fc63cf463b25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ac734725bb83b6896b5b0fc63cf463b25">fprintf</a> (1, 'No attempt <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> refine the corner location after manual <a class="el" href="ginput4_8m.html#a6478e9255030fd6193c17b1fd5bd2ec8">mouse</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">click\n</a>')</td></tr>
+<tr class="separator:ac734725bb83b6896b5b0fc63cf463b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa137b90820d4c6733ca0ea879985137a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#aa137b90820d4c6733ca0ea879985137a">isempty</a> (<a class="el" href="reproject__calib__no__read_8m.html#a84af708a86ec28b08ede3b504f1930be">ima_numbers</a>)</td></tr>
+<tr class="separator:aa137b90820d4c6733ca0ea879985137a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a5ca011dc9a427449013dd2d45cad1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a5a5ca011dc9a427449013dd2d45cad1b">fprintf</a> (1, 'Processing <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> ')</td></tr>
+<tr class="separator:a5a5ca011dc9a427449013dd2d45cad1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18517c7b1adc2d1c4bf6296c9c80863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a> (<a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>)</td></tr>
+<tr class="separator:aa18517c7b1adc2d1c4bf6296c9c80863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8489d374caa5eeedd0e1a877e74d0d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ae8489d374caa5eeedd0e1a877e74d0d6">fprintf</a> (1,'%d...', <a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>)</td></tr>
+<tr class="separator:ae8489d374caa5eeedd0e1a877e74d0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998aa60a8f9a808d2aba62c63c677314"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a998aa60a8f9a808d2aba62c63c677314">eval</a> (['<a class="el" href="mosaic__no__read_8m.html#a2519f364506853a3dad3e65e1df67c13">I</a>=I_' num2str(<a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) ';'])</td></tr>
+<tr class="separator:a998aa60a8f9a808d2aba62c63c677314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84feabc0a5ffe70fd5e05e72a103d54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ac84feabc0a5ffe70fd5e05e72a103d54">figure</a> (2)</td></tr>
+<tr class="separator:ac84feabc0a5ffe70fd5e05e72a103d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8a8411243371a1be29a938cf1c083fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> (<a class="el" href="mosaic__no__read_8m.html#a2519f364506853a3dad3e65e1df67c13">I</a>)</td></tr>
+<tr class="separator:ac8a8411243371a1be29a938cf1c083fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c672a3bcf6f12ef9e6e78cdb48a0ccd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a7c672a3bcf6f12ef9e6e78cdb48a0ccd">colormap</a> (<a class="el" href="willson__read_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>)</td></tr>
+<tr class="separator:a7c672a3bcf6f12ef9e6e78cdb48a0ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a482dee09fbc9420f62767fd4e30146"><td class="memItemLeft" align="right" valign="top">for&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a9a482dee09fbc9420f62767fd4e30146">set</a> (<a class="el" href="manual__corner__extraction__no__read_8m.html#af5a0bd04da61e44c9c636c22c9780234">hcp</a>, 'Xdata', <a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1, <a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>)+1, 'Ydata', <a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2, <a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>)+1)</td></tr>
+<tr class="separator:a9a482dee09fbc9420f62767fd4e30146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4249c30641dbaaaecd2853d7ea785180"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a4249c30641dbaaaecd2853d7ea785180">title</a> (['Click <a class="el" href="visualize__distortions_8m.html#a58ab1fd68e97078232808206b850161b">on</a> corner #' num2str(<a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>) ' <a class="el" href="rodrigues_8m.html#a2a89187d8e8e8fba509ef9ab5f815d88">out</a> of ' num2str(<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>) '(right button:keep <a class="el" href="willson__convert_8m.html#aeb407484ccae58e27ee8ade327e0651b">point</a> unchanged)'])</td></tr>
+<tr class="separator:a4249c30641dbaaaecd2853d7ea785180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4d7c07d78f8cb30824ee12eb83d83d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a1e4d7c07d78f8cb30824ee12eb83d83d">x</a> (1, <a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>)</td></tr>
+<tr class="separator:a1e4d7c07d78f8cb30824ee12eb83d83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33724738a6fd1552aa0b86d240fd6e03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a33724738a6fd1552aa0b86d240fd6e03">x</a> (2, <a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>)</td></tr>
+<tr class="separator:a33724738a6fd1552aa0b86d240fd6e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e420ca2bf6fc93fb88eeb925f0820e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a08e420ca2bf6fc93fb88eeb925f0820e">set</a> (<a class="el" href="manual__corner__extraction__no__read_8m.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a>, 'Xdata', <a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:)+1, 'Ydata', <a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:)+1)</td></tr>
+<tr class="separator:a08e420ca2bf6fc93fb88eeb925f0820e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f70a28c6b0af8bef179b64c337697b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a78f70a28c6b0af8bef179b64c337697b">fprintf</a> (1,'\<a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">ndone\n</a>')</td></tr>
+<tr class="separator:a78f70a28c6b0af8bef179b64c337697b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad53f1340d882ce6d432b31017783278d"><td class="memItemLeft" align="right" valign="top">This code allows <a class="el" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a> manual reselection of every corner in the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> This tool <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> specifically useful in the case of highly distorted <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> Use it when in standard mode <a class="el" href="projector__marker_8m.html#a033c55db5d437a3394627c0ff03db82a">In</a> <a class="el" href="ima__read__calib__no__read_8m.html#aac26d9ceb1494dd9a043483ad8251bde">memory</a> efficient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a></td></tr>
+<tr class="separator:ad53f1340d882ce6d432b31017783278d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9717e7bbecb906637e86cef6da3d83c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a9717e7bbecb906637e86cef6da3d83c2">return</a></td></tr>
+<tr class="separator:a9717e7bbecb906637e86cef6da3d83c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb358f48b1646c750fb9da6c6585be2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a> = cornerfinder(<a class="el" href="manual__corner__extraction__no__read_8m.html#aa70495f5e89e58a7b92e1c0e5cd7de93">xxi</a>,<a class="el" href="mosaic__no__read_8m.html#a2519f364506853a3dad3e65e1df67c13">I</a>,<a class="el" href="saving__calib__no__results_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a>,<a class="el" href="saving__calib__no__results_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>)</td></tr>
+<tr class="separator:afb358f48b1646c750fb9da6c6585be2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d062f92217e4e073995683900fdadcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a0d062f92217e4e073995683900fdadcb">check_active_images</a></td></tr>
+<tr class="separator:a0d062f92217e4e073995683900fdadcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bd2a7187893657a867b1e3b03a6ca7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a> == 0</td></tr>
+<tr class="separator:a4bd2a7187893657a867b1e3b03a6ca7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ead798fc7c5cfc54f1e6eb589f75b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ae9ead798fc7c5cfc54f1e6eb589f75b2">n_ima_save</a> = <a class="el" href="willson__read_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a></td></tr>
+<tr class="separator:ae9ead798fc7c5cfc54f1e6eb589f75b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11edae0c1f71b4c305449c7678cb295"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#aa11edae0c1f71b4c305449c7678cb295">active_images_save</a> = <a class="el" href="saving__stereo__calib_8m.html#a3253feaa5122d1616aeca05e0a6e39d7">active_images</a></td></tr>
+<tr class="separator:aa11edae0c1f71b4c305449c7678cb295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba920bdb4994ed63dafefff1ad1a5534"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#aba920bdb4994ed63dafefff1ad1a5534">ima_read_calib</a></td></tr>
+<tr class="separator:aba920bdb4994ed63dafefff1ad1a5534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b03440a331baeaaf23d56a1e468edc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a92b03440a331baeaaf23d56a1e468edc">active_images</a> = <a class="el" href="reproject__calib__no__read_8m.html#aa11edae0c1f71b4c305449c7678cb295">active_images_save</a></td></tr>
+<tr class="separator:a92b03440a331baeaaf23d56a1e468edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8edc4e1229f597ed2b3da2271758782c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a8edc4e1229f597ed2b3da2271758782c">no_image_file</a></td></tr>
+<tr class="separator:a8edc4e1229f597ed2b3da2271758782c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d54043e0afc32cad8b68ad648f418bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a9d54043e0afc32cad8b68ad648f418bb">q_converge</a> = <a class="el" href="projector__calib_8m.html#af7b674504b39897f15642ec82ff6a7e5">input</a>('Do you want <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> try <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> <a class="el" href="smooth__images_8m.html#a263b33f4dd7ef09d596476b3e6cb0fb9">automatically</a> find the closest corner? - only works with ckecker board <a class="el" href="cam__proj__calib__optim_8m.html#a112543e603178db74fa2fe5617083709">corners</a> ([]=yes, other = no) ','<a class="el" href="loadinr_8m.html#abaa56b4ff1463b5bacfd25ceaaba70e1">s</a>')</td></tr>
+<tr class="separator:a9d54043e0afc32cad8b68ad648f418bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a9e0bc0e0a0eb29f061f9a56176ac0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a06a9e0bc0e0a0eb29f061f9a56176ac0">wintx</a> = <a class="el" href="projector__calib_8m.html#af7b674504b39897f15642ec82ff6a7e5">input</a>('wintx ([] = 5) = ')</td></tr>
+<tr class="separator:a06a9e0bc0e0a0eb29f061f9a56176ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7bcd3a9dc801cf789379ec4d33ebc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a> = <a class="el" href="projector__calib_8m.html#af7b674504b39897f15642ec82ff6a7e5">input</a>('winty ([] = 5) = ')</td></tr>
+<tr class="separator:a4b7bcd3a9dc801cf789379ec4d33ebc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7046945b41bbf329b6fb0e91ae8ab1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a4b7046945b41bbf329b6fb0e91ae8ab1">ima_numbers</a> = <a class="el" href="projector__calib_8m.html#af7b674504b39897f15642ec82ff6a7e5">input</a>('Number(<a class="el" href="loadinr_8m.html#abaa56b4ff1463b5bacfd25ceaaba70e1">s</a>) of <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a>(<a class="el" href="loadinr_8m.html#abaa56b4ff1463b5bacfd25ceaaba70e1">s</a>) <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> process ([] = <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>) = ')</td></tr>
+<tr class="separator:a4b7046945b41bbf329b6fb0e91ae8ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2fde3daae41abcc5826b9723b7fdd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#abf2fde3daae41abcc5826b9723b7fdd9">ima_proc</a> = 1:<a class="el" href="willson__read_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a></td></tr>
+<tr class="separator:abf2fde3daae41abcc5826b9723b7fdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29949bd63fb009eacab5efd11399e40"><td class="memItemLeft" align="right" valign="top">for&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a> = <a class="el" href="reproject__calib__no__read_8m.html#abf2fde3daae41abcc5826b9723b7fdd9">ima_proc</a></td></tr>
+<tr class="separator:af29949bd63fb009eacab5efd11399e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe50207e56666a60c81e2a58f522eea3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a> = <a class="el" href="undistort__image__no__read_8m.html#acef99621e828a8da6e90436ef5178cea">size</a>(<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>,2)</td></tr>
+<tr class="separator:abe50207e56666a60c81e2a58f522eea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ab1fd68e97078232808206b850161b"><td class="memItemLeft" align="right" valign="top">hold&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a58ab1fd68e97078232808206b850161b">on</a></td></tr>
+<tr class="separator:a58ab1fd68e97078232808206b850161b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b5eddfd7c1e9cf8bca05061b8a1d14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a> = <a class="el" href="visualize__distortions_8m.html#a529663cd9ab0a3068b2b1e00d96de094">plot</a>(<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:)+1,<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:)+1,'<a class="el" href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a>+')</td></tr>
+<tr class="separator:a08b5eddfd7c1e9cf8bca05061b8a1d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a0bd04da61e44c9c636c22c9780234"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#af5a0bd04da61e44c9c636c22c9780234">hcp</a> = <a class="el" href="visualize__distortions_8m.html#a529663cd9ab0a3068b2b1e00d96de094">plot</a>(<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,1)+1,<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,1)+1,'co')</td></tr>
+<tr class="separator:af5a0bd04da61e44c9c636c22c9780234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835accca41274fb237599d9b3c117fcf"><td class="memItemLeft" align="right" valign="top">hold&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a835accca41274fb237599d9b3c117fcf">off</a></td></tr>
+<tr class="separator:a835accca41274fb237599d9b3c117fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbb95a6567826f61fac24cca7ef8752"><td class="memItemLeft" align="right" valign="top">for&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a> = 1:<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a></td></tr>
+<tr class="separator:a6dbb95a6567826f61fac24cca7ef8752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade49379975ae144bc258ffe4f0f35a20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ade49379975ae144bc258ffe4f0f35a20">b</a> ==1</td></tr>
+<tr class="separator:ade49379975ae144bc258ffe4f0f35a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70495f5e89e58a7b92e1c0e5cd7de93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#aa70495f5e89e58a7b92e1c0e5cd7de93">xxi</a> = [<a class="el" href="click__ima__calib__no__read_8m.html#ade156e39c8481df78050021b1ffcd425">xi</a></td></tr>
+<tr class="separator:aa70495f5e89e58a7b92e1c0e5cd7de93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0fb82c01c336cc6f4ca51b5f7cace0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manual__corner__extraction_8m.html#ac0fb82c01c336cc6f4ca51b5f7cace0d">yi</a></td></tr>
+<tr class="separator:ac0fb82c01c336cc6f4ca51b5f7cace0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="aa18517c7b1adc2d1c4bf6296c9c80863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa18517c7b1adc2d1c4bf6296c9c80863">&#9670;&nbsp;</a></span>active_images()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> active_images </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c672a3bcf6f12ef9e6e78cdb48a0ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c672a3bcf6f12ef9e6e78cdb48a0ccd">&#9670;&nbsp;</a></span>colormap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">colormap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="willson__read_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66c731c877aff4d64d5a215a68ce2d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c731c877aff4d64d5a215a68ce2d34">&#9670;&nbsp;</a></span>disp() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> disp </td>
+          <td>(</td>
+          <td class="paramtype">'Cannot extract <a class="el" href="cam__proj__calib__optim_8m.html#a112543e603178db74fa2fe5617083709">corners</a> without <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>'&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18b5aa983bfdbd95fdab3cb8e0b5307a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b5aa983bfdbd95fdab3cb8e0b5307a">&#9670;&nbsp;</a></span>disp() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">disp </td>
+          <td>(</td>
+          <td class="paramtype">'Window <a class="el" href="undistort__image__no__read_8m.html#acef99621e828a8da6e90436ef5178cea">size</a> for corner finder(<a class="el" href="saving__calib__no__results_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a> and <a class="el" href="saving__calib__no__results_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a>):'&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a998aa60a8f9a808d2aba62c63c677314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998aa60a8f9a808d2aba62c63c677314">&#9670;&nbsp;</a></span>eval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eval </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac84feabc0a5ffe70fd5e05e72a103d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84feabc0a5ffe70fd5e05e72a103d54">&#9670;&nbsp;</a></span>figure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">figure </td>
+          <td>(</td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16602656ca723a546dbf93a82a87a94a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16602656ca723a546dbf93a82a87a94a">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Automatic <a class="el" href="compute__homography_8m.html#a64290fa0a6b548b1be749ab2710f0b31">refinement</a> of the corner location after manual <a class="el" href="ginput4_8m.html#a6478e9255030fd6193c17b1fd5bd2ec8">mouse</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">click\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac734725bb83b6896b5b0fc63cf463b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac734725bb83b6896b5b0fc63cf463b25">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'No attempt <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> refine the corner location after manual <a class="el" href="ginput4_8m.html#a6478e9255030fd6193c17b1fd5bd2ec8">mouse</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">click\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73242d1516d8f34d4c4e9d9e215b3c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73242d1516d8f34d4c4e9d9e215b3c45">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">This code allows <a class="el" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a> manual reselection of every corner in the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> This tool <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> specifically useful in the case of highly distorted <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> Use it when in standard <a class="el" href="manual__corner__extraction__no__read_8m.html#aafff892589a15dcfec2a5196ffee3344">mode</a> <a class="el" href="projector__marker_8m.html#a033c55db5d437a3394627c0ff03db82a">In</a> <a class="el" href="ima__read__calib__no__read_8m.html#aac26d9ceb1494dd9a043483ad8251bde">memory</a> efficient use manual_corner_extraction_no_read <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'No <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> <a class="el" href="export__calib__data_8m.html#a7e4b47e9ae2b7dea2b3756ff539f9f55">data</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">available\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a5ca011dc9a427449013dd2d45cad1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5ca011dc9a427449013dd2d45cad1b">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Processing <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> '&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae811540dd986b200fae6e072ebdcd9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae811540dd986b200fae6e072ebdcd9c9">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Window&#160;</td>
+          <td class="paramname"><em>size</em> = <code>%<a class="el" href="willson__read_8m.html#aacddc911cdfe5cd5ec97b084754542d4">dx</a>%<a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">d\n</a>'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">2 *<a class="el" href="saving__calib__no__results_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>+&#160;</td>
+          <td class="paramname"><em>1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">2 *<a class="el" href="saving__calib__no__results_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a>+&#160;</td>
+          <td class="paramname"><em>1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8489d374caa5eeedd0e1a877e74d0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8489d374caa5eeedd0e1a877e74d0d6">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'%d...'&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78f70a28c6b0af8bef179b64c337697b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78f70a28c6b0af8bef179b64c337697b">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'\<a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">ndone\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b85bb3ded17bdce3123b61fbc772323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b85bb3ded17bdce3123b61fbc772323">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'\nManual re-<a class="el" href="error__depth__list_8m.html#ad5c4a59ae665afd234a9b99e05b922f2">extraction</a> of the grid <a class="el" href="cam__proj__calib__optim_8m.html#a112543e603178db74fa2fe5617083709">corners</a> <a class="el" href="visualize__distortions_8m.html#a58ab1fd68e97078232808206b850161b">on</a> the <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">images\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8a8411243371a1be29a938cf1c083fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8a8411243371a1be29a938cf1c083fb">&#9670;&nbsp;</a></span>image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mosaic__no__read_8m.html#a2519f364506853a3dad3e65e1df67c13">I</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa137b90820d4c6733ca0ea879985137a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa137b90820d4c6733ca0ea879985137a">&#9670;&nbsp;</a></span>isempty() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> isempty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="reproject__calib__no__read_8m.html#a84af708a86ec28b08ede3b504f1930be">ima_numbers</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99b4e3f7c768a436fbb847c7eab1cb69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b4e3f7c768a436fbb847c7eab1cb69">&#9670;&nbsp;</a></span>isempty() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> isempty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="manual__corner__extraction__no__read_8m.html#a9d54043e0afc32cad8b68ad648f418bb">q_converge</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accae145f95701d007eba54d0ebce8bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accae145f95701d007eba54d0ebce8bd5">&#9670;&nbsp;</a></span>isempty() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> isempty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="saving__calib__no__results_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac666fb7cd11037826ce3382e910288f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac666fb7cd11037826ce3382e910288f1">&#9670;&nbsp;</a></span>isempty() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> isempty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="saving__calib__no__results_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a482dee09fbc9420f62767fd4e30146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a482dee09fbc9420f62767fd4e30146">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">for set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="manual__corner__extraction__no__read_8m.html#af5a0bd04da61e44c9c636c22c9780234">hcp</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Xdata'&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1, <a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>)+&#160;</td>
+          <td class="paramname"><em>1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Ydata'&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2, <a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>)+&#160;</td>
+          <td class="paramname"><em>1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08e420ca2bf6fc93fb88eeb925f0820e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e420ca2bf6fc93fb88eeb925f0820e">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="manual__corner__extraction__no__read_8m.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Xdata'&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:)+&#160;</td>
+          <td class="paramname"><em>1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Ydata'&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:)+&#160;</td>
+          <td class="paramname"><em>1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4249c30641dbaaaecd2853d7ea785180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4249c30641dbaaaecd2853d7ea785180">&#9670;&nbsp;</a></span>title()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">title </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e4d7c07d78f8cb30824ee12eb83d83d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4d7c07d78f8cb30824ee12eb83d83d">&#9670;&nbsp;</a></span>x() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a> </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33724738a6fd1552aa0b86d240fd6e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33724738a6fd1552aa0b86d240fd6e03">&#9670;&nbsp;</a></span>x() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a> </td>
+          <td>(</td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="manual__corner__extraction__no__read_8m.html#a6dbb95a6567826f61fac24cca7ef8752">np</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afda1fec5fc2cdc6712416a9959ab9f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afda1fec5fc2cdc6712416a9959ab9f4e">&#9670;&nbsp;</a></span>~exist() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">This code allows <a class="el" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a> manual reselection of every corner in the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> This tool <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> specifically useful in the case of highly distorted <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> Use it when in standard <a class="el" href="manual__corner__extraction__no__read_8m.html#aafff892589a15dcfec2a5196ffee3344">mode</a> <a class="el" href="projector__marker_8m.html#a033c55db5d437a3394627c0ff03db82a">In</a> <a class="el" href="ima__read__calib__no__read_8m.html#aac26d9ceb1494dd9a043483ad8251bde">memory</a> efficient use manual_corner_extraction_no_read <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> ~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a> </td>
+          <td>(</td>
+          <td class="paramtype">'<a class="el" href="willson__read_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a>'&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd19a253f0266513010c8225ac75815b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd19a253f0266513010c8225ac75815b">&#9670;&nbsp;</a></span>~exist() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> ~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a id="a92b03440a331baeaaf23d56a1e468edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b03440a331baeaaf23d56a1e468edc">&#9670;&nbsp;</a></span>active_images</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">active_images = <a class="el" href="reproject__calib__no__read_8m.html#aa11edae0c1f71b4c305449c7678cb295">active_images_save</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00027">27</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="aa11edae0c1f71b4c305449c7678cb295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11edae0c1f71b4c305449c7678cb295">&#9670;&nbsp;</a></span>active_images_save</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">active_images_save = <a class="el" href="saving__stereo__calib_8m.html#a3253feaa5122d1616aeca05e0a6e39d7">active_images</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00024">24</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="ade49379975ae144bc258ffe4f0f35a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade49379975ae144bc258ffe4f0f35a20">&#9670;&nbsp;</a></span>b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> b ==1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00099">99</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a0d062f92217e4e073995683900fdadcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d062f92217e4e073995683900fdadcb">&#9670;&nbsp;</a></span>check_active_images</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">check_active_images</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00014">14</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="afb358f48b1646c750fb9da6c6585be2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb358f48b1646c750fb9da6c6585be2b">&#9670;&nbsp;</a></span>end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">end = cornerfinder(<a class="el" href="manual__corner__extraction__no__read_8m.html#aa70495f5e89e58a7b92e1c0e5cd7de93">xxi</a>,<a class="el" href="mosaic__no__read_8m.html#a2519f364506853a3dad3e65e1df67c13">I</a>,<a class="el" href="saving__calib__no__results_8m.html#a4b7bcd3a9dc801cf789379ec4d33ebc1">winty</a>,<a class="el" href="saving__calib__no__results_8m.html#aaae28b7917f6488ebee15109ee4bf584">wintx</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00012">12</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="af5a0bd04da61e44c9c636c22c9780234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a0bd04da61e44c9c636c22c9780234">&#9670;&nbsp;</a></span>hcp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hcp = <a class="el" href="visualize__distortions_8m.html#a529663cd9ab0a3068b2b1e00d96de094">plot</a>(<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,1)+1,<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,1)+1,'co')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00087">87</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a08b5eddfd7c1e9cf8bca05061b8a1d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b5eddfd7c1e9cf8bca05061b8a1d14">&#9670;&nbsp;</a></span>hx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hx = <a class="el" href="visualize__distortions_8m.html#a529663cd9ab0a3068b2b1e00d96de094">plot</a>(<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:)+1,<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:)+1,'<a class="el" href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a>+')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00086">86</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a4b7046945b41bbf329b6fb0e91ae8ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7046945b41bbf329b6fb0e91ae8ab1">&#9670;&nbsp;</a></span>ima_numbers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ima_numbers = <a class="el" href="projector__calib_8m.html#af7b674504b39897f15642ec82ff6a7e5">input</a>('Number(<a class="el" href="loadinr_8m.html#abaa56b4ff1463b5bacfd25ceaaba70e1">s</a>) of <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a>(<a class="el" href="loadinr_8m.html#abaa56b4ff1463b5bacfd25ceaaba70e1">s</a>) <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> process ([] = <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>) = ')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00059">59</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="abf2fde3daae41abcc5826b9723b7fdd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2fde3daae41abcc5826b9723b7fdd9">&#9670;&nbsp;</a></span>ima_proc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> ima_proc = 1:<a class="el" href="willson__read_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00062">62</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="aba920bdb4994ed63dafefff1ad1a5534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba920bdb4994ed63dafefff1ad1a5534">&#9670;&nbsp;</a></span>ima_read_calib</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ima_read_calib</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00025">25</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="af29949bd63fb009eacab5efd11399e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29949bd63fb009eacab5efd11399e40">&#9670;&nbsp;</a></span>kk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">for kk = <a class="el" href="reproject__calib__no__read_8m.html#abf2fde3daae41abcc5826b9723b7fdd9">ima_proc</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00069">69</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="ad53f1340d882ce6d432b31017783278d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53f1340d882ce6d432b31017783278d">&#9670;&nbsp;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">This code allows <a class="el" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a> manual reselection of every corner in the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> This tool <a class="el" href="go__calib__optim__iter__weak_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> specifically useful in the case of highly distorted <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> Use it when in standard mode <a class="el" href="projector__marker_8m.html#a033c55db5d437a3394627c0ff03db82a">In</a> <a class="el" href="ima__read__calib__no__read_8m.html#aac26d9ceb1494dd9a043483ad8251bde">memory</a> efficient mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00006">6</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a4bd2a7187893657a867b1e3b03a6ca7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd2a7187893657a867b1e3b03a6ca7f">&#9670;&nbsp;</a></span>n_ima</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">n_ima == 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00016">16</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="ae9ead798fc7c5cfc54f1e6eb589f75b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ead798fc7c5cfc54f1e6eb589f75b2">&#9670;&nbsp;</a></span>n_ima_save</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> n_ima_save = <a class="el" href="willson__read_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00023">23</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a8edc4e1229f597ed2b3da2271758782c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8edc4e1229f597ed2b3da2271758782c">&#9670;&nbsp;</a></span>no_image_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> no_image_file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00029">29</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="abe50207e56666a60c81e2a58f522eea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe50207e56666a60c81e2a58f522eea3">&#9670;&nbsp;</a></span>Np</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Np = <a class="el" href="undistort__image__no__read_8m.html#acef99621e828a8da6e90436ef5178cea">size</a>(<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>,2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00079">79</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a6dbb95a6567826f61fac24cca7ef8752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dbb95a6567826f61fac24cca7ef8752">&#9670;&nbsp;</a></span>np</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">for np = 1:<a class="el" href="manual__corner__extraction__no__read_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00090">90</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a835accca41274fb237599d9b3c117fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835accca41274fb237599d9b3c117fcf">&#9670;&nbsp;</a></span>off</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hold off</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00088">88</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a58ab1fd68e97078232808206b850161b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ab1fd68e97078232808206b850161b">&#9670;&nbsp;</a></span>on</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hold on</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00085">85</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a9d54043e0afc32cad8b68ad648f418bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d54043e0afc32cad8b68ad648f418bb">&#9670;&nbsp;</a></span>q_converge</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> q_converge = <a class="el" href="projector__calib_8m.html#af7b674504b39897f15642ec82ff6a7e5">input</a>('Do you want <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> try <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> <a class="el" href="smooth__images_8m.html#a263b33f4dd7ef09d596476b3e6cb0fb9">automatically</a> find the closest corner? - only works with ckecker board <a class="el" href="cam__proj__calib__optim_8m.html#a112543e603178db74fa2fe5617083709">corners</a> ([]=yes, other = no) ','<a class="el" href="loadinr_8m.html#abaa56b4ff1463b5bacfd25ceaaba70e1">s</a>')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00037">37</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a9717e7bbecb906637e86cef6da3d83c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9717e7bbecb906637e86cef6da3d83c2">&#9670;&nbsp;</a></span>return</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">return</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00011">11</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a06a9e0bc0e0a0eb29f061f9a56176ac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a9e0bc0e0a0eb29f061f9a56176ac0">&#9670;&nbsp;</a></span>wintx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wintx = <a class="el" href="projector__calib_8m.html#af7b674504b39897f15642ec82ff6a7e5">input</a>('wintx ([] = 5) = ')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00043">43</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="a4b7bcd3a9dc801cf789379ec4d33ebc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7bcd3a9dc801cf789379ec4d33ebc1">&#9670;&nbsp;</a></span>winty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">winty = <a class="el" href="projector__calib_8m.html#af7b674504b39897f15642ec82ff6a7e5">input</a>('winty ([] = 5) = ')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00046">46</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="aa70495f5e89e58a7b92e1c0e5cd7de93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70495f5e89e58a7b92e1c0e5cd7de93">&#9670;&nbsp;</a></span>xxi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> xxi = [<a class="el" href="click__ima__calib__no__read_8m.html#ade156e39c8481df78050021b1ffcd425">xi</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00100">100</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+<a id="ac0fb82c01c336cc6f4ca51b5f7cace0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fb82c01c336cc6f4ca51b5f7cace0d">&#9670;&nbsp;</a></span>yi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">yi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="manual__corner__extraction_8m_source.html#l00100">100</a> del archivo <a class="el" href="manual__corner__extraction_8m_source.html">manual_corner_extraction.m</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

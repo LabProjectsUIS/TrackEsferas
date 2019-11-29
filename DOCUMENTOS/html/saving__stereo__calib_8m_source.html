@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/saving_stereo_calib.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">saving_stereo_calib.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="saving__stereo__calib_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<a class="code" href="saving__stereo__calib_8m.html#a6ab9f947c8698477c78b6416ce8aeb08">fprintf</a>(1,<span class="stringliteral">&#39;Saving the stereo calibration results in Calib_Results_stereo.mat...\n&#39;</span>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="saving__stereo__calib_8m.html#a268d2ebd8212f29d540791b1143be926">    3</a></span>&#160;<a class="code" href="saving__stereo__calib_8m.html#a268d2ebd8212f29d540791b1143be926">string_save</a> = <span class="stringliteral">&#39;save Calib_Results_stereo om R T recompute_intrinsic_right recompute_intrinsic_left calib_name_left format_image_left type_numbering_left image_numbers_left N_slots_left calib_name_right format_image_right type_numbering_right image_numbers_right N_slots_right fc_left cc_left kc_left alpha_c_left KK_left fc_right cc_right kc_right alpha_c_right KK_right active_images dX dY nx ny n_ima active_images_right active_images_left inconsistent_images center_optim_left est_alpha_left est_dist_left est_fc_left est_aspect_ratio_left center_optim_right est_alpha_right est_dist_right est_fc_right est_aspect_ratio_right history param param_error sigma_x om_error T_error fc_left_error cc_left_error kc_left_error alpha_c_left_error fc_right_error cc_right_error kc_right_error alpha_c_right_error&#39;</span>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="saving__stereo__calib_8m.html#af29949bd63fb009eacab5efd11399e40">    5</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="saving__stereo__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a> = 1:<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a>,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="saving__stereo__calib_8m.html#a3253feaa5122d1616aeca05e0a6e39d7">active_images</a>(<a class="code" href="saving__stereo__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>),</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <a class="code" href="saving__stereo__calib_8m.html#a268d2ebd8212f29d540791b1143be926">string_save</a> = [string_save &#39; x_right_&#39; num2str(kk) &#39; X_right_&#39; num2str(kk) &#39; x_left_&#39; num2str(kk) &#39; X_left_&#39; num2str(kk)  &#39; omc_left_&#39; num2str(kk) &#39; Tc_left_&#39; num2str(kk) &#39; omc_left_error_&#39; num2str(kk) &#39; Tc_left_error_&#39; num2str(kk)  &#39; n_sq_x_&#39; num2str(kk) &#39; n_sq_y_&#39; num2str(kk)];</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="saving__stereo__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">    8</a></span>&#160;    <a class="code" href="saving__stereo__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<a class="code" href="saving__stereo__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<a class="code" href="saving__stereo__calib_8m.html#a66ef00acf686fb8596728e382977b8e5">eval</a>(<a class="code" href="saving__stereo__calib_8m.html#a268d2ebd8212f29d540791b1143be926">string_save</a>);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="asaving__stereo__calib_8m_html_a6ab9f947c8698477c78b6416ce8aeb08"><div class="ttname"><a href="saving__stereo__calib_8m.html#a6ab9f947c8698477c78b6416ce8aeb08">fprintf</a></div><div class="ttdeci">fprintf(1, 'Saving the stereo calibration results in Calib_Results_stereo.mat...\n')</div></div>
+<div class="ttc" id="asaving__stereo__calib_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="saving__stereo__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="saving__stereo__calib_8m_source.html#l00008">saving_stereo_calib.m:8</a></div></div>
+<div class="ttc" id="asaving__stereo__calib_8m_html_af29949bd63fb009eacab5efd11399e40"><div class="ttname"><a href="saving__stereo__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a></div><div class="ttdeci">for kk</div><div class="ttdef"><b>Definition:</b> <a href="saving__stereo__calib_8m_source.html#l00005">saving_stereo_calib.m:5</a></div></div>
+<div class="ttc" id="asaving__stereo__calib_8m_html_a3253feaa5122d1616aeca05e0a6e39d7"><div class="ttname"><a href="saving__stereo__calib_8m.html#a3253feaa5122d1616aeca05e0a6e39d7">active_images</a></div><div class="ttdeci">for if active_images(kk)</div></div>
+<div class="ttc" id="asaving__stereo__calib_8m_html_a66ef00acf686fb8596728e382977b8e5"><div class="ttname"><a href="saving__stereo__calib_8m.html#a66ef00acf686fb8596728e382977b8e5">eval</a></div><div class="ttdeci">eval(string_save)</div></div>
+<div class="ttc" id="aadd__suppress_8m_html_a5c344952fc5d4209f5a4cd0922c051d0"><div class="ttname"><a href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a></div><div class="ttdeci">if n_ima</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00007">add_suppress.m:7</a></div></div>
+<div class="ttc" id="asaving__stereo__calib_8m_html_a268d2ebd8212f29d540791b1143be926"><div class="ttname"><a href="saving__stereo__calib_8m.html#a268d2ebd8212f29d540791b1143be926">string_save</a></div><div class="ttdeci">string_save</div><div class="ttdef"><b>Definition:</b> <a href="saving__stereo__calib_8m_source.html#l00003">saving_stereo_calib.m:3</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

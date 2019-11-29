@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/show_calib_results.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">show_calib_results.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="show__calib__results_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;% Color code <span class="keywordflow">for each</span> <a class="code" href="show__calib__results_8m.html#a49ec93c1c5490309657345824d7a4c5f">image</a>:</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#a49ec93c1c5490309657345824d7a4c5f">    3</a></span>&#160;<span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#a4a258bcd63954c0b6a7e9c4ea63b055d">~exist</a>(<span class="stringliteral">&#39;n_ima&#39;</span>)|<a class="code" href="show__calib__results_8m.html#a4a258bcd63954c0b6a7e9c4ea63b055d">~exist</a>(<span class="stringliteral">&#39;fc&#39;</span>),</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;No calibration data available.\n&#39;</span>);</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#a9717e7bbecb906637e86cef6da3d83c2">    5</a></span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">    6</a></span>&#160;<a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#a0d062f92217e4e073995683900fdadcb">    8</a></span>&#160;<a class="code" href="show__calib__results_8m.html#a0d062f92217e4e073995683900fdadcb">check_active_images</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#a4a258bcd63954c0b6a7e9c4ea63b055d">~exist</a>(<span class="stringliteral">&#39;alpha_c&#39;</span>),</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#a0c2a0ea732fab83ed5c8837b9e9a4d59">   11</a></span>&#160;    <a class="code" href="show__calib__results_8m.html#a0c2a0ea732fab83ed5c8837b9e9a4d59">alpha_c</a> = 0;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#ac7af07d7213b437c38978956c3447112">   12</a></span>&#160;    <a class="code" href="go__calib__optim__iter_8m.html#ac144986f6280f2e1aaeb62473f8bb1c8">est_alpha</a> = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#ac59c869b17ed65989997c9afefda028d">length</a>(<a class="code" href="show__calib__results_8m.html#a737dee4ef8e09247b0da47219bf453ff">kc</a>) == 4;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#a737dee4ef8e09247b0da47219bf453ff">   16</a></span>&#160;    <a class="code" href="show__calib__results_8m.html#a737dee4ef8e09247b0da47219bf453ff">kc</a> = [kc;0];</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#a4a258bcd63954c0b6a7e9c4ea63b055d">~exist</a>(<span class="stringliteral">&#39;est_dist&#39;</span>),</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#aeb5022556d599a591607bf9592b7d345">   20</a></span>&#160;    <a class="code" href="show__calib__results_8m.html#aeb5022556d599a591607bf9592b7d345">est_dist</a> = (<a class="code" href="show__calib__results_8m.html#a737dee4ef8e09247b0da47219bf453ff">kc</a>~=0);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#ac59c869b17ed65989997c9afefda028d">length</a>(<a class="code" href="show__calib__results_8m.html#aeb5022556d599a591607bf9592b7d345">est_dist</a>) == 4;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="show__calib__results_8m.html#aeb5022556d599a591607bf9592b7d345">est_dist</a> = [est_dist;0];</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#a4a258bcd63954c0b6a7e9c4ea63b055d">~exist</a>(<span class="stringliteral">&#39;err_std&#39;</span>),</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#ab0c0798cc92bdc999b944550c05e591c">   28</a></span>&#160;    <a class="code" href="show__calib__results_8m.html#ab0c0798cc92bdc999b944550c05e591c">comp_error_calib</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#a4a258bcd63954c0b6a7e9c4ea63b055d">~exist</a>(<span class="stringliteral">&#39;fc_error&#39;</span>),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;\n\nCalibration results:\n\n&#39;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Focal Length:          fc = [ %3.5f   %3.5f ]\n&#39;</span>,[<a class="code" href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>]);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Principal point:       cc = [ %3.5f   %3.5f ]\n&#39;</span>,[<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>]);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Skew:             alpha_c = [ %3.5f ]  =&gt; angle of pixel axes = %3.5f degrees\n&#39;</span>,[<a class="code" href="show__calib__results_8m.html#a0c2a0ea732fab83ed5c8837b9e9a4d59">alpha_c</a>],90 - atan(<a class="code" href="show__calib__results_8m.html#a0c2a0ea732fab83ed5c8837b9e9a4d59">alpha_c</a>)*180/pi);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Distortion:            kc = [ %3.5f   %3.5f   %3.5f   %3.5f  %5.5f ]\n&#39;</span>,[<a class="code" href="show__calib__results_8m.html#a737dee4ef8e09247b0da47219bf453ff">kc</a>]);   </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="show__calib__results_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">   39</a></span>&#160;    <span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a> ~= 0,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Pixel error:          err = [ %3.5f   %3.5f ]\n&#39;</span>,<a class="code" href="ext__calib_8m.html#abc9334298fc8a5291ba276968378854d">err_std</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;\n\n\n&#39;</span>);     </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;\n\nCalibration results (with uncertainties):\n\n&#39;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Focal Length:          fc = [ %3.5f   %3.5f ] ± [ %3.5f   %3.5f ]\n&#39;</span>,[<a class="code" href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>;<a class="code" href="extract__parameters_8m.html#aab1d724fa256f601098764dda6e86f9d">fc_error</a>]);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Principal point:       cc = [ %3.5f   %3.5f ] ± [ %3.5f   %3.5f ]\n&#39;</span>,[<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>;<a class="code" href="extract__parameters_8m.html#a7494a839f85e504913610f06e84c525a">cc_error</a>]);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Skew:             alpha_c = [ %3.5f ] ± [ %3.5f  ]   =&gt; angle of pixel axes = %3.5f ± %3.5f degrees\n&#39;</span>,[<a class="code" href="show__calib__results_8m.html#a0c2a0ea732fab83ed5c8837b9e9a4d59">alpha_c</a>;<a class="code" href="extract__parameters_8m.html#a0e2dae28e3d7505808bb2f47824bc2a2">alpha_c_error</a>],90 - atan(<a class="code" href="show__calib__results_8m.html#a0c2a0ea732fab83ed5c8837b9e9a4d59">alpha_c</a>)*180/pi,atan(<a class="code" href="extract__parameters_8m.html#a0e2dae28e3d7505808bb2f47824bc2a2">alpha_c_error</a>)*180/pi);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Distortion:            kc = [ %3.5f   %3.5f   %3.5f   %3.5f  %5.5f ] ± [ %3.5f   %3.5f   %3.5f   %3.5f  %5.5f ]\n&#39;</span>,[<a class="code" href="show__calib__results_8m.html#a737dee4ef8e09247b0da47219bf453ff">kc</a>;<a class="code" href="extract__parameters_8m.html#a7313be71a16c2a7058951ec29e43be7f">kc_error</a>]);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="show__calib__results_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a> ~= 0,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Pixel error:          err = [ %3.5f   %3.5f ]\n&#39;</span>,<a class="code" href="ext__calib_8m.html#abc9334298fc8a5291ba276968378854d">err_std</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="charliteral">&#39;\n&#39;</span>,<a class="code" href="ext__calib_8m.html#abc9334298fc8a5291ba276968378854d">err_std</a>); </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a>(1,<span class="stringliteral">&#39;Note: The numerical errors are approximately three times the standard deviations (for reference).\n\n\n&#39;</span>)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ashow__calib__results_8m_html_a49ec93c1c5490309657345824d7a4c5f"><div class="ttname"><a href="show__calib__results_8m.html#a49ec93c1c5490309657345824d7a4c5f">image</a></div><div class="ttdeci">Color code for each image</div><div class="ttdef"><b>Definition:</b> <a href="show__calib__results_8m_source.html#l00003">show_calib_results.m:3</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_a5c344952fc5d4209f5a4cd0922c051d0"><div class="ttname"><a href="show__calib__results_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a></div><div class="ttdeci">if n_ima</div><div class="ttdef"><b>Definition:</b> <a href="show__calib__results_8m_source.html#l00039">show_calib_results.m:39</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_ab0c0798cc92bdc999b944550c05e591c"><div class="ttname"><a href="show__calib__results_8m.html#ab0c0798cc92bdc999b944550c05e591c">comp_error_calib</a></div><div class="ttdeci">if comp_error_calib</div><div class="ttdef"><b>Definition:</b> <a href="show__calib__results_8m_source.html#l00028">show_calib_results.m:28</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_a737dee4ef8e09247b0da47219bf453ff"><div class="ttname"><a href="show__calib__results_8m.html#a737dee4ef8e09247b0da47219bf453ff">kc</a></div><div class="ttdeci">kc</div><div class="ttdef"><b>Definition:</b> <a href="show__calib__results_8m_source.html#l00016">show_calib_results.m:16</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="show__calib__results_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="show__calib__results_8m_source.html#l00006">show_calib_results.m:6</a></div></div>
+<div class="ttc" id="aextract__parameters_8m_html_a0e2dae28e3d7505808bb2f47824bc2a2"><div class="ttname"><a href="extract__parameters_8m.html#a0e2dae28e3d7505808bb2f47824bc2a2">alpha_c_error</a></div><div class="ttdeci">alpha_c_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters_8m_source.html#l00017">extract_parameters.m:17</a></div></div>
+<div class="ttc" id="aextract__parameters_8m_html_a7494a839f85e504913610f06e84c525a"><div class="ttname"><a href="extract__parameters_8m.html#a7494a839f85e504913610f06e84c525a">cc_error</a></div><div class="ttdeci">cc_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters_8m_source.html#l00016">extract_parameters.m:16</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a41fcba09f2bdcdf315ba4119dc7978dd"><div class="ttname"><a href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a></div><div class="ttdeci">cc</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00053">apply_distortion.m:53</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_ac59c869b17ed65989997c9afefda028d"><div class="ttname"><a href="show__calib__results_8m.html#ac59c869b17ed65989997c9afefda028d">length</a></div><div class="ttdeci">if length(kc)</div></div>
+<div class="ttc" id="aext__calib_8m_html_abc9334298fc8a5291ba276968378854d"><div class="ttname"><a href="ext__calib_8m.html#abc9334298fc8a5291ba276968378854d">err_std</a></div><div class="ttdeci">err_std</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00042">ext_calib.m:42</a></div></div>
+<div class="ttc" id="a_compute3_d_8m_html_a72d54db2b27ce046aab6e6a414c407e9"><div class="ttname"><a href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a></div><div class="ttdeci">Reconstruction of the structure of the striped object fc</div><div class="ttdef"><b>Definition:</b> <a href="_compute3_d_8m_source.html#l00003">Compute3D.m:3</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_aeb5022556d599a591607bf9592b7d345"><div class="ttname"><a href="show__calib__results_8m.html#aeb5022556d599a591607bf9592b7d345">est_dist</a></div><div class="ttdeci">if est_dist</div><div class="ttdef"><b>Definition:</b> <a href="show__calib__results_8m_source.html#l00020">show_calib_results.m:20</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_a0c2a0ea732fab83ed5c8837b9e9a4d59"><div class="ttname"><a href="show__calib__results_8m.html#a0c2a0ea732fab83ed5c8837b9e9a4d59">alpha_c</a></div><div class="ttdeci">if alpha_c</div><div class="ttdef"><b>Definition:</b> <a href="show__calib__results_8m_source.html#l00011">show_calib_results.m:11</a></div></div>
+<div class="ttc" id="aextract__parameters_8m_html_aab1d724fa256f601098764dda6e86f9d"><div class="ttname"><a href="extract__parameters_8m.html#aab1d724fa256f601098764dda6e86f9d">fc_error</a></div><div class="ttdeci">*** fc_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters_8m_source.html#l00015">extract_parameters.m:15</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_a2e73f8f7844da865d15b61d6f558c100"><div class="ttname"><a href="show__calib__results_8m.html#a2e73f8f7844da865d15b61d6f558c100">fprintf</a></div><div class="ttdeci">Color code for each fprintf(1, 'No calibration data available.\n')</div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_ac144986f6280f2e1aaeb62473f8bb1c8"><div class="ttname"><a href="go__calib__optim__iter_8m.html#ac144986f6280f2e1aaeb62473f8bb1c8">est_alpha</a></div><div class="ttdeci">0 est_alpha</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00115">go_calib_optim_iter.m:115</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_a0d062f92217e4e073995683900fdadcb"><div class="ttname"><a href="show__calib__results_8m.html#a0d062f92217e4e073995683900fdadcb">check_active_images</a></div><div class="ttdeci">check_active_images</div><div class="ttdef"><b>Definition:</b> <a href="show__calib__results_8m_source.html#l00008">show_calib_results.m:8</a></div></div>
+<div class="ttc" id="aextract__parameters_8m_html_a7313be71a16c2a7058951ec29e43be7f"><div class="ttname"><a href="extract__parameters_8m.html#a7313be71a16c2a7058951ec29e43be7f">kc_error</a></div><div class="ttdeci">kc_error</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters_8m_source.html#l00018">extract_parameters.m:18</a></div></div>
+<div class="ttc" id="ashow__calib__results_8m_html_a4a258bcd63954c0b6a7e9c4ea63b055d"><div class="ttname"><a href="show__calib__results_8m.html#a4a258bcd63954c0b6a7e9c4ea63b055d">~exist</a></div><div class="ttdeci">if ~exist('alpha_c')</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

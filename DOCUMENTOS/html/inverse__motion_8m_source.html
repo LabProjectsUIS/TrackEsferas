@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/inverse_motion.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">inverse_motion.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="inverse__motion_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a6f1e841a8ed0ecfb922ead77de2f2dc6">    1</a></span>&#160;<span class="keyword">function</span> [om2,T2,dom2dom,dom2dT,dT2dom,dT2dT] = inverse_motion(<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>,<a class="code" href="inverse__motion_8m.html#ad4a6eaba6683f9febdfa2ae4383378eb">T</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% This <span class="keyword">function</span> computes the inverse motion corresponding <a class="code" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> (<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>,<a class="code" href="inverse__motion_8m.html#ad4a6eaba6683f9febdfa2ae4383378eb">T</a>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<a class="code" href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">om2</a> = -<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#ae8958d0eff667b6af42201ffb2409eec">    7</a></span>&#160;<a class="code" href="inverse__motion_8m.html#ae8958d0eff667b6af42201ffb2409eec">dom2dom</a> = -eye(3);</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#aab890c2069000205fd594fc9d1c417b6">    8</a></span>&#160;<a class="code" href="inverse__motion_8m.html#aab890c2069000205fd594fc9d1c417b6">dom2dT</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3,3);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;[R,dRdom] = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#aea875a4e2f8c475e0b1db192356883f2">   12</a></span>&#160;<a class="code" href="inverse__motion_8m.html#aea875a4e2f8c475e0b1db192356883f2">Rinv</a> = <a class="code" href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a><span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a1f7e3f68855c797b4dc542390cbce262">   13</a></span>&#160;<span class="stringliteral">dRinvdR = zeros(9,9);</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">dRinvdR([1 4 7],[1 2 3]) = eye(3);</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">dRinvdR([2 5 8],[4 5 6]) = eye(3);</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">dRinvdR([3 6 9],[7 8 9]) = eye(3);</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#aecd38a2d10bba28695d0ba88a8f1aeb9">   17</a></span>&#160;<span class="stringliteral">dRinvdom = dRinvdR * dRdom;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a07f00b8562506c70b88951d86ea272d8">   19</a></span>&#160;<span class="stringliteral">Tt = Rinv * T;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="stringliteral">[dTtdRinv,dTtdT] = dAB(Rinv,T);</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a5a30d530a77bc992810b0c24a3e8f550">   22</a></span>&#160;<span class="stringliteral">T2 = -Tt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a616f46e05ec3a216a90d41db5f2bb1e7">   24</a></span>&#160;<span class="stringliteral">dT2dom = - dTtdRinv * dRinvdom;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#abefdc4e7ef3d545647a7309464ea5005">   25</a></span>&#160;<span class="stringliteral">dT2dT = - dTtdT;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a9717e7bbecb906637e86cef6da3d83c2">   28</a></span>&#160;<span class="stringliteral">return;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="stringliteral">% Test of the Jacobians:</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#abae42d8e51a0eb43fe8aebb87b4719a0">   32</a></span>&#160;<span class="stringliteral">om = randn(3,1);</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#ad4a6eaba6683f9febdfa2ae4383378eb">   33</a></span>&#160;<span class="stringliteral">T = 10*randn(3,1);</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="stringliteral">[om2,T2,dom2dom,dom2dT,dT2dom,dT2dT] = inverse_motion(om,T);</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a380f9e44ae6cc226340b28e1cf1480c6">   36</a></span>&#160;<span class="stringliteral">dom = randn(3,1) / 100000;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#af3c2f70b3a5027fce7c3161665b6b6af">   37</a></span>&#160;<span class="stringliteral">dT  = randn(3,1) / 100000;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="stringliteral">[om3r,T3r] = inverse_motion(om+dom,T+dT);</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a270da0d4833e47e71e71c1a2ff5d60e2">   41</a></span>&#160;<span class="stringliteral">om3p = om2 + dom2dom*dom +  dom2dT*dT;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="inverse__motion_8m.html#a030865f0ab0b29f6f84fe9dcdd5a2610">   42</a></span>&#160;<span class="stringliteral">T3p  =  T2 + dT2dom*dom  +  dT2dT*dT;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="stringliteral">%norm(om3r - om2) / norm(om3r - om3p)  %-&gt; Leads to infinity, since the opreation is linear!</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral">norm(T3r - T2) / norm(T3r - T3p)</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="ainverse__motion_8m_html_aea875a4e2f8c475e0b1db192356883f2"><div class="ttname"><a href="inverse__motion_8m.html#aea875a4e2f8c475e0b1db192356883f2">Rinv</a></div><div class="ttdeci">Rinv</div><div class="ttdef"><b>Definition:</b> <a href="inverse__motion_8m_source.html#l00012">inverse_motion.m:12</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_aef4e46e0cc51912bd66daea41307b39e"><div class="ttname"><a href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">om2</a></div><div class="ttdeci">Test of the om2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00044">compose_motion.m:44</a></div></div>
+<div class="ttc" id="ainverse__motion_8m_html_adaa3d343ac20bed84559c0771f592ed4"><div class="ttname"><a href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a></div><div class="ttdeci">This function computes the inverse motion corresponding to(om, T) om2</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_ace3fdf821957e9266501abadd2926b1c"><div class="ttname"><a href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a></div><div class="ttdeci">R</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00170">cam_proj_calib.m:170</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a4e3462750cc302b9a3697c379ed1d885"><div class="ttname"><a href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a></div><div class="ttdeci">om</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00036">align_structures.m:36</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a3aa6bf135885f06d75e5da2713b5230d"><div class="ttname"><a href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a></div><div class="ttdeci">for Align the structure from the first ii * rodrigues(om_left_list(:, ii))'</div></div>
+<div class="ttc" id="ainverse__motion_8m_html_aab890c2069000205fd594fc9d1c417b6"><div class="ttname"><a href="inverse__motion_8m.html#aab890c2069000205fd594fc9d1c417b6">dom2dT</a></div><div class="ttdeci">dom2dT</div><div class="ttdef"><b>Definition:</b> <a href="inverse__motion_8m_source.html#l00008">inverse_motion.m:8</a></div></div>
+<div class="ttc" id="ainverse__motion_8m_html_ad4a6eaba6683f9febdfa2ae4383378eb"><div class="ttname"><a href="inverse__motion_8m.html#ad4a6eaba6683f9febdfa2ae4383378eb">T</a></div><div class="ttdeci">Test of the T</div><div class="ttdef"><b>Definition:</b> <a href="inverse__motion_8m_source.html#l00033">inverse_motion.m:33</a></div></div>
+<div class="ttc" id="ainverse__motion_8m_html_ae8958d0eff667b6af42201ffb2409eec"><div class="ttname"><a href="inverse__motion_8m.html#ae8958d0eff667b6af42201ffb2409eec">dom2dom</a></div><div class="ttdeci">dom2dom</div><div class="ttdef"><b>Definition:</b> <a href="inverse__motion_8m_source.html#l00007">inverse_motion.m:7</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

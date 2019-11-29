@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Referencia del Archivo C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/detectbr.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#typedef-members">typedefs</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo detectbr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;tchar.h&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;<a class="el" href="calibration_8h_source.html">calibration.h</a>&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="data_8h_source.html">data.h</a>&quot;</code><br />
+<code>#include &quot;opencv\cv.hpp&quot;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+</div>
+<p><a href="detectbr_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_custom_camera_library_1_1_output.html">CustomCameraLibrary::Output</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta estructura permite almacenar las características de los cuerpos rígidos que vayan siendo detectados en mientras se esta ejecutando la la función <a class="el" href="namespace_custom_camera_library.html#a07cefafc93128cb1ceb02e9519d0b672">CustomCameraLibrary::joskstra()</a>  <a href="struct_custom_camera_library_1_1_output.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_custom_camera_library_1_1_label.html">CustomCameraLibrary::Label</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta estructura permite ir haciendo un seguimiento de cada uno de los nodos encontrados en proceso de indentificación de los cuerpos rígidos y es utilizada en el momento de identificar los objetos rígidos en escena.  <a href="struct_custom_camera_library_1_1_label.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_custom_camera_library"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html">CustomCameraLibrary</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ab841a231efa165dde90f59a9859462a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#ab841a231efa165dde90f59a9859462a4">N_MARKERS</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:ab841a231efa165dde90f59a9859462a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">número de marcadores que la función <a class="el" href="namespace_custom_camera_library.html#a07cefafc93128cb1ceb02e9519d0b672">joskstra()</a> usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.  <a href="detectbr_8h.html#ab841a231efa165dde90f59a9859462a4">Más...</a><br /></td></tr>
+<tr class="separator:ab841a231efa165dde90f59a9859462a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b0f73efdf41b005eded1db47dd46c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#af0b0f73efdf41b005eded1db47dd46c5">L_POINTER</a>&#160;&#160;&#160;219.70329913564</td></tr>
+<tr class="separator:af0b0f73efdf41b005eded1db47dd46c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4670706d39b6482ad9012b5cca4ef87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#ac4670706d39b6482ad9012b5cca4ef87">TETHA</a>&#160;&#160;&#160;-3.8985</td></tr>
+<tr class="separator:ac4670706d39b6482ad9012b5cca4ef87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2281db2f69ced7a9d2b1c694df646ee7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#a2281db2f69ced7a9d2b1c694df646ee7">C_TETHA</a>&#160;&#160;&#160;-0.95278</td></tr>
+<tr class="separator:a2281db2f69ced7a9d2b1c694df646ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943ee8454bf0e3b1357d595fbc853b65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#a943ee8454bf0e3b1357d595fbc853b65">TETHA2</a>&#160;&#160;&#160;-2.5782</td></tr>
+<tr class="memdesc:a943ee8454bf0e3b1357d595fbc853b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">ángulo de la segunda rotación.  <a href="detectbr_8h.html#a943ee8454bf0e3b1357d595fbc853b65">Más...</a><br /></td></tr>
+<tr class="separator:a943ee8454bf0e3b1357d595fbc853b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fe5d066eab394089e8a85cd09bbc55c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#a9fe5d066eab394089e8a85cd09bbc55c">L_POINTER2</a>&#160;&#160;&#160;222.1898</td></tr>
+<tr class="memdesc:a9fe5d066eab394089e8a85cd09bbc55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">longitud del pointer, de la punta hasta la primera esfera.  <a href="detectbr_8h.html#a9fe5d066eab394089e8a85cd09bbc55c">Más...</a><br /></td></tr>
+<tr class="separator:a9fe5d066eab394089e8a85cd09bbc55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3217a6882e313d59373c6ecc0eb656cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#a3217a6882e313d59373c6ecc0eb656cd">FEMUR</a>&#160;&#160;&#160;&quot;FEMUR&quot;</td></tr>
+<tr class="memdesc:a3217a6882e313d59373c6ecc0eb656cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">nombre que representa el femur  <a href="detectbr_8h.html#a3217a6882e313d59373c6ecc0eb656cd">Más...</a><br /></td></tr>
+<tr class="separator:a3217a6882e313d59373c6ecc0eb656cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84def408d1c5413e2c1d7fe9eeb18f09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#a84def408d1c5413e2c1d7fe9eeb18f09">POINTER</a>&#160;&#160;&#160;&quot;POINTER&quot;</td></tr>
+<tr class="memdesc:a84def408d1c5413e2c1d7fe9eeb18f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">nombre que representa el pointer  <a href="detectbr_8h.html#a84def408d1c5413e2c1d7fe9eeb18f09">Más...</a><br /></td></tr>
+<tr class="separator:a84def408d1c5413e2c1d7fe9eeb18f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ddb91dcaf0cb7aa36296e95fa27a3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#a78ddb91dcaf0cb7aa36296e95fa27a3a">TIBIA</a>&#160;&#160;&#160;&quot;TIBIA&quot;</td></tr>
+<tr class="memdesc:a78ddb91dcaf0cb7aa36296e95fa27a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">nombre que representa la tíbia  <a href="detectbr_8h.html#a78ddb91dcaf0cb7aa36296e95fa27a3a">Más...</a><br /></td></tr>
+<tr class="separator:a78ddb91dcaf0cb7aa36296e95fa27a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf66d8324d956ce6e6b38bb15ba01b89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#adf66d8324d956ce6e6b38bb15ba01b89">GAFAS</a>&#160;&#160;&#160;&quot;GAFAS&quot;</td></tr>
+<tr class="memdesc:adf66d8324d956ce6e6b38bb15ba01b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">nombre que representa las gafas  <a href="detectbr_8h.html#adf66d8324d956ce6e6b38bb15ba01b89">Más...</a><br /></td></tr>
+<tr class="separator:adf66d8324d956ce6e6b38bb15ba01b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1bcfa90ba77f8e08c1bcfe75c1e4be6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#ad1bcfa90ba77f8e08c1bcfe75c1e4be6">PHANTON</a>&#160;&#160;&#160;&quot;PHANTON&quot;</td></tr>
+<tr class="memdesc:ad1bcfa90ba77f8e08c1bcfe75c1e4be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">nombre que representa el phanton  <a href="detectbr_8h.html#ad1bcfa90ba77f8e08c1bcfe75c1e4be6">Más...</a><br /></td></tr>
+<tr class="separator:ad1bcfa90ba77f8e08c1bcfe75c1e4be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be87cae12b7f90b0c1d0c799e9903da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="detectbr_8h.html#a1be87cae12b7f90b0c1d0c799e9903da">BROCA</a>&#160;&#160;&#160;&quot;BROCA&quot;</td></tr>
+<tr class="separator:a1be87cae12b7f90b0c1d0c799e9903da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a491fa416cf9b3258bfb14fbab925b06e"><td class="memItemLeft" align="right" valign="top">typedef struct Output&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a491fa416cf9b3258bfb14fbab925b06e">CustomCameraLibrary::BodyR</a></td></tr>
+<tr class="separator:a491fa416cf9b3258bfb14fbab925b06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a6fd1b5d5514aeb736e1aa409b18d6"><td class="memItemLeft" align="right" valign="top">typedef struct Label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a31a6fd1b5d5514aeb736e1aa409b18d6">CustomCameraLibrary::Sphere</a></td></tr>
+<tr class="separator:a31a6fd1b5d5514aeb736e1aa409b18d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a0e5c6c4f04fdac899b7f0690846aabbc"><td class="memItemLeft" align="right" valign="top">Mat_&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a0e5c6c4f04fdac899b7f0690846aabbc">CustomCameraLibrary::rotateVector</a> (Mat_&lt; double &gt; v, Mat_&lt; double &gt; <a class="el" href="project__points2_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>, double angle)</td></tr>
+<tr class="separator:a0e5c6c4f04fdac899b7f0690846aabbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3b0f8be2afbec8d929908066638b7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#aff3b0f8be2afbec8d929908066638b7f">CustomCameraLibrary::updateCordinates</a> (cv::Mat_&lt; double &gt; &amp;origin)</td></tr>
+<tr class="separator:aff3b0f8be2afbec8d929908066638b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2170ba501eebad9df0db56b6cb78677"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#ad2170ba501eebad9df0db56b6cb78677">CustomCameraLibrary::cross_product</a> (cv::Mat_&lt; double &gt; <a class="el" href="rodrigues_8m.html#a3b98e2dffc6cb06a89dcb0d5c60a0206">A</a>, cv::Mat_&lt; double &gt; <a class="el" href="saveppm_8m.html#a9d3d9048db16a7eee539e93e3618cbe7">B</a>)</td></tr>
+<tr class="separator:ad2170ba501eebad9df0db56b6cb78677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf1144326e7d7f4bd4614813d91eb70"><td class="memItemLeft" align="right" valign="top">cv::Mat_&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a6bf1144326e7d7f4bd4614813d91eb70">CustomCameraLibrary::define_local_axis</a> (cv::Mat_&lt; double &gt; <a class="el" href="teste___8m.html#af93dd7f73e57b8b17d34efa33f0f948e">P1</a>, cv::Mat_&lt; double &gt; <a class="el" href="teste___8m.html#a27f5efe14c52fa358088a3f5d31d5922">P2</a>, cv::Mat_&lt; double &gt; <a class="el" href="teste___8m.html#a2f6bc990294a141918211e86cf52f564">P3</a>, cv::Mat_&lt; double &gt; <a class="el" href="teste___8m.html#a9b33a9232288458b5b31f0b6c9ce80ee">PR</a>)</td></tr>
+<tr class="separator:a6bf1144326e7d7f4bd4614813d91eb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a00a449628a95efff7606fc1812c946"><td class="memItemLeft" align="right" valign="top">Point3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a1a00a449628a95efff7606fc1812c946">CustomCameraLibrary::pointerPoint</a> (cv::Mat_&lt; double &gt; &amp;<a class="el" href="teste___8m.html#af93dd7f73e57b8b17d34efa33f0f948e">P1</a>, cv::Mat_&lt; double &gt; &amp;<a class="el" href="teste___8m.html#a27f5efe14c52fa358088a3f5d31d5922">P2</a>, cv::Mat_&lt; double &gt; &amp;<a class="el" href="teste___8m.html#a2f6bc990294a141918211e86cf52f564">P3</a>, cv::Mat_&lt; double &gt; <a class="el" href="rodrigues_8m.html#a2a89187d8e8e8fba509ef9ab5f815d88">out</a>)</td></tr>
+<tr class="separator:a1a00a449628a95efff7606fc1812c946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a236e9dbd2296a548c20eed05fa49f899"><td class="memItemLeft" align="right" valign="top">Point3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a236e9dbd2296a548c20eed05fa49f899">CustomCameraLibrary::pointerPoint2</a> (Mat_&lt; double &gt; &amp;<a class="el" href="teste___8m.html#af93dd7f73e57b8b17d34efa33f0f948e">P1</a>, Mat_&lt; double &gt; &amp;<a class="el" href="teste___8m.html#a27f5efe14c52fa358088a3f5d31d5922">P2</a>, Mat_&lt; double &gt; &amp;<a class="el" href="teste___8m.html#a2f6bc990294a141918211e86cf52f564">P3</a>, Mat_&lt; double &gt; &amp;Out)</td></tr>
+<tr class="separator:a236e9dbd2296a548c20eed05fa49f899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d0984bb0c661e35fcf1ea95d5ccedd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a80d0984bb0c661e35fcf1ea95d5ccedd">CustomCameraLibrary::getEulerAngles</a> (BodyR *&amp;bRigid, int <a class="el" href="stereo__gui_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</td></tr>
+<tr class="separator:a80d0984bb0c661e35fcf1ea95d5ccedd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0209a945cb4fe5e4c1e80a4366e65dcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a0209a945cb4fe5e4c1e80a4366e65dcf">CustomCameraLibrary::getEulerAnglesOld</a> (BodyR *&amp;bRigid, int <a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>)</td></tr>
+<tr class="separator:a0209a945cb4fe5e4c1e80a4366e65dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd88d76c6f4e55b5dceaa8022c86ebc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#aedd88d76c6f4e55b5dceaa8022c86ebc">CustomCameraLibrary::analizer</a> (float <a class="el" href="_test_function_8m.html#a553bf2c8c8c814eeb9723dd81c9a57bf">distance</a>, <a class="el" href="go__calib__optim__iter__weak_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a>&lt; float &gt; &amp;vec)</td></tr>
+<tr class="separator:aedd88d76c6f4e55b5dceaa8022c86ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520cc1f31f0f545e009382ad65e236e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a520cc1f31f0f545e009382ad65e236e7">CustomCameraLibrary::setDelta</a> (float <a class="el" href="calib__pointer2_8m.html#a66db7c5e4e9699c54207ab857ae72cb7">delta</a>)</td></tr>
+<tr class="separator:a520cc1f31f0f545e009382ad65e236e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b54de13f18e3d7f20c5bfbfe92696f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a82b54de13f18e3d7f20c5bfbfe92696f">CustomCameraLibrary::numBRigid</a> (int <a class="el" href="visualize__distortions_8m.html#a6cb040835810ca02500a56f8f9646884">position</a>, cv::Mat_&lt; float &gt; dspSet)</td></tr>
+<tr class="separator:a82b54de13f18e3d7f20c5bfbfe92696f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07cefafc93128cb1ceb02e9519d0b672"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a07cefafc93128cb1ceb02e9519d0b672">CustomCameraLibrary::joskstra</a> (Mat_&lt; float &gt; spSet, Mat_&lt; float &gt; dspSet, BodyR *&amp;bRigid)</td></tr>
+<tr class="separator:a07cefafc93128cb1ceb02e9519d0b672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aed67233f328389a3c30369b23451bf0b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#aed67233f328389a3c30369b23451bf0b">CustomCameraLibrary::pointer</a> = 1</td></tr>
+<tr class="memdesc:aed67233f328389a3c30369b23451bf0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicador que representa el pointer  <a href="namespace_custom_camera_library.html#aed67233f328389a3c30369b23451bf0b">Más...</a><br /></td></tr>
+<tr class="separator:aed67233f328389a3c30369b23451bf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4ad2b496070f2519ae6799d37f2435"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#ada4ad2b496070f2519ae6799d37f2435">CustomCameraLibrary::femur</a> = 2</td></tr>
+<tr class="memdesc:ada4ad2b496070f2519ae6799d37f2435"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicador que representa el femur  <a href="namespace_custom_camera_library.html#ada4ad2b496070f2519ae6799d37f2435">Más...</a><br /></td></tr>
+<tr class="separator:ada4ad2b496070f2519ae6799d37f2435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25472cc1d60a3d4d3ba66dcffd5bd549"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a25472cc1d60a3d4d3ba66dcffd5bd549">CustomCameraLibrary::tibia</a> = 3</td></tr>
+<tr class="memdesc:a25472cc1d60a3d4d3ba66dcffd5bd549"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicador que representa la tibia  <a href="namespace_custom_camera_library.html#a25472cc1d60a3d4d3ba66dcffd5bd549">Más...</a><br /></td></tr>
+<tr class="separator:a25472cc1d60a3d4d3ba66dcffd5bd549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68e2b3459410cf9d14f29501c5d0b87"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#ac68e2b3459410cf9d14f29501c5d0b87">CustomCameraLibrary::gafas</a> = 4</td></tr>
+<tr class="memdesc:ac68e2b3459410cf9d14f29501c5d0b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicador que representa las gafas  <a href="namespace_custom_camera_library.html#ac68e2b3459410cf9d14f29501c5d0b87">Más...</a><br /></td></tr>
+<tr class="separator:ac68e2b3459410cf9d14f29501c5d0b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a319bd0a91f16b41735fc34c11e9fd3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a1a319bd0a91f16b41735fc34c11e9fd3">CustomCameraLibrary::phanton</a> = 5</td></tr>
+<tr class="memdesc:a1a319bd0a91f16b41735fc34c11e9fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicador que representa el phanton  <a href="namespace_custom_camera_library.html#a1a319bd0a91f16b41735fc34c11e9fd3">Más...</a><br /></td></tr>
+<tr class="separator:a1a319bd0a91f16b41735fc34c11e9fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c89920e610f79de42854858b9590af"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#ab6c89920e610f79de42854858b9590af">CustomCameraLibrary::DELTA</a> = 1.5</td></tr>
+<tr class="memdesc:ab6c89920e610f79de42854858b9590af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).  <a href="namespace_custom_camera_library.html#ab6c89920e610f79de42854858b9590af">Más...</a><br /></td></tr>
+<tr class="separator:ab6c89920e610f79de42854858b9590af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ce3dd4358f0757a08b71f4149dc7f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_custom_camera_library.html#a87ce3dd4358f0757a08b71f4149dc7f7">CustomCameraLibrary::detect_pointer</a> = true</td></tr>
+<tr class="memdesc:a87ce3dd4358f0757a08b71f4149dc7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicador para manejar la decisión de detectar o no el pointer.  <a href="namespace_custom_camera_library.html#a87ce3dd4358f0757a08b71f4149dc7f7">Más...</a><br /></td></tr>
+<tr class="separator:a87ce3dd4358f0757a08b71f4149dc7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a1be87cae12b7f90b0c1d0c799e9903da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be87cae12b7f90b0c1d0c799e9903da">&#9670;&nbsp;</a></span>BROCA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BROCA&#160;&#160;&#160;&quot;BROCA&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00033">33</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="a2281db2f69ced7a9d2b1c694df646ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2281db2f69ced7a9d2b1c694df646ee7">&#9670;&nbsp;</a></span>C_TETHA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_TETHA&#160;&#160;&#160;-0.95278</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00024">24</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="a3217a6882e313d59373c6ecc0eb656cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3217a6882e313d59373c6ecc0eb656cd">&#9670;&nbsp;</a></span>FEMUR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FEMUR&#160;&#160;&#160;&quot;FEMUR&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>nombre que representa el femur </p>
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00028">28</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="adf66d8324d956ce6e6b38bb15ba01b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf66d8324d956ce6e6b38bb15ba01b89">&#9670;&nbsp;</a></span>GAFAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GAFAS&#160;&#160;&#160;&quot;GAFAS&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>nombre que representa las gafas </p>
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00031">31</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="af0b0f73efdf41b005eded1db47dd46c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b0f73efdf41b005eded1db47dd46c5">&#9670;&nbsp;</a></span>L_POINTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define L_POINTER&#160;&#160;&#160;219.70329913564</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00022">22</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="a9fe5d066eab394089e8a85cd09bbc55c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fe5d066eab394089e8a85cd09bbc55c">&#9670;&nbsp;</a></span>L_POINTER2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define L_POINTER2&#160;&#160;&#160;222.1898</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>longitud del pointer, de la punta hasta la primera esfera. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00026">26</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="ab841a231efa165dde90f59a9859462a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab841a231efa165dde90f59a9859462a4">&#9670;&nbsp;</a></span>N_MARKERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N_MARKERS&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>número de marcadores que la función <a class="el" href="namespace_custom_camera_library.html#a07cefafc93128cb1ceb02e9519d0b672">joskstra()</a> usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00019">19</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="ad1bcfa90ba77f8e08c1bcfe75c1e4be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1bcfa90ba77f8e08c1bcfe75c1e4be6">&#9670;&nbsp;</a></span>PHANTON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PHANTON&#160;&#160;&#160;&quot;PHANTON&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>nombre que representa el phanton </p>
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00032">32</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="a84def408d1c5413e2c1d7fe9eeb18f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84def408d1c5413e2c1d7fe9eeb18f09">&#9670;&nbsp;</a></span>POINTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTER&#160;&#160;&#160;&quot;POINTER&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>nombre que representa el pointer </p>
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00029">29</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="ac4670706d39b6482ad9012b5cca4ef87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4670706d39b6482ad9012b5cca4ef87">&#9670;&nbsp;</a></span>TETHA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TETHA&#160;&#160;&#160;-3.8985</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00023">23</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="a943ee8454bf0e3b1357d595fbc853b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943ee8454bf0e3b1357d595fbc853b65">&#9670;&nbsp;</a></span>TETHA2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TETHA2&#160;&#160;&#160;-2.5782</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ángulo de la segunda rotación. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00025">25</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+<a id="a78ddb91dcaf0cb7aa36296e95fa27a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ddb91dcaf0cb7aa36296e95fa27a3a">&#9670;&nbsp;</a></span>TIBIA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIBIA&#160;&#160;&#160;&quot;TIBIA&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>nombre que representa la tíbia </p>
+
+<p class="definition">Definición en la línea <a class="el" href="detectbr_8h_source.html#l00030">30</a> del archivo <a class="el" href="detectbr_8h_source.html">detectbr.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

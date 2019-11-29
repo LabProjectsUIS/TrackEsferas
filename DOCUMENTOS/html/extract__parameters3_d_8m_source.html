@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/extract_parameters3D.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">extract_parameters3D.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="extract__parameters3_d_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;%%% Extraction of the <span class="keyword">final</span> intrinsic and extrinsic <a class="code" href="extract__parameters3_d_8m.html#a5764554a67d94c602ff97cda338ed5db">paramaters</a>:</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a5764554a67d94c602ff97cda338ed5db">    5</a></span>&#160;<a class="code" href="extract__parameters3_d_8m.html#a97b90595eac8d87ee5eb4e52aa624f1d">fc</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(1:2);</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a737dee4ef8e09247b0da47219bf453ff">    6</a></span>&#160;<a class="code" href="extract__parameters3_d_8m.html#a737dee4ef8e09247b0da47219bf453ff">kc</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(3:6);</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">    7</a></span>&#160;<a class="code" href="extract__parameters3_d_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(6*<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a> + 4 +3:6*<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a> + 5 +3);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;% Calibration <a class="code" href="extract__parameters3_d_8m.html#af11ed0b23179c5443ade790615f5f490">matrix</a>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#af11ed0b23179c5443ade790615f5f490">   11</a></span>&#160;<a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a> = [fc(1) 0 cc(1);0 fc(2) cc(2); 0 0 1];</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#ae18b1980f35114a664a851f82b2f3098">   12</a></span>&#160;<a class="code" href="extract__parameters3_d_8m.html#ae18b1980f35114a664a851f82b2f3098">inv_KK</a> = inv(<a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a>);   </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a78974b12364a0c431fa4a87b180224ed">   14</a></span>&#160;% Extract the extrinsic <a class="code" href="extract__parameters3_d_8m.html#a78974b12364a0c431fa4a87b180224ed">paramters</a>, and recomputer the collineations</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">   16</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a> = 1:<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a0cad0ba1a84ecf472609123597cf085a">   18</a></span>&#160;   <a class="code" href="extract__parameters3_d_8m.html#a0cad0ba1a84ecf472609123597cf085a">omckk</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(4+6*(<a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>-1) + 3:6*<a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a> + 3);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;   </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a4508a179901753e284c1a88754994d88">   20</a></span>&#160;   <a class="code" href="extract__parameters3_d_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a> = <a class="code" href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a>(6*<a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>+1 + 3:6*<a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>+3 + 3);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">   22</a></span>&#160;   <a class="code" href="extract__parameters3_d_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a> = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="extract__parameters3_d_8m.html#a0cad0ba1a84ecf472609123597cf085a">omckk</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#a6f521df5f388c374b6d741d7f7cc3ff1">   24</a></span>&#160;   <a class="code" href="extract__parameters3_d_8m.html#a6f521df5f388c374b6d741d7f7cc3ff1">Hlkk</a> = <a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a> * [Rckk(:,1) Rckk(:,2) Tckk];</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;   <a class="code" href="extract__parameters3_d_8m.html#a6f521df5f388c374b6d741d7f7cc3ff1">Hlkk</a> = <a class="code" href="extract__parameters3_d_8m.html#a6f521df5f388c374b6d741d7f7cc3ff1">Hlkk</a> / <a class="code" href="extract__parameters3_d_8m.html#a6f521df5f388c374b6d741d7f7cc3ff1">Hlkk</a>(3,3);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   <a class="code" href="extract__parameters3_d_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([<span class="stringliteral">&#39;omc_&#39;</span> num2str(<a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) <span class="stringliteral">&#39; = omckk;&#39;</span>]);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <a class="code" href="extract__parameters3_d_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([<span class="stringliteral">&#39;Rc_&#39;</span> num2str(<a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) <span class="stringliteral">&#39; = Rckk;&#39;</span>]);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="extract__parameters3_d_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([<span class="stringliteral">&#39;Tc_&#39;</span> num2str(<a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) <span class="stringliteral">&#39; = Tckk;&#39;</span>]);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <a class="code" href="extract__parameters3_d_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a>([<span class="stringliteral">&#39;Hl_&#39;</span> num2str(<a class="code" href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a>) <span class="stringliteral">&#39;=Hlkk;&#39;</span>]);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="extract__parameters3_d_8m.html#afb358f48b1646c750fb9da6c6585be2b">   34</a></span>&#160;<a class="code" href="extract__parameters3_d_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aextract__parameters3_d_8m_html_a97b90595eac8d87ee5eb4e52aa624f1d"><div class="ttname"><a href="extract__parameters3_d_8m.html#a97b90595eac8d87ee5eb4e52aa624f1d">fc</a></div><div class="ttdeci">fc(2) cc(2)</div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a41fcba09f2bdcdf315ba4119dc7978dd"><div class="ttname"><a href="extract__parameters3_d_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a></div><div class="ttdeci">cc</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00007">extract_parameters3D.m:7</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a4508a179901753e284c1a88754994d88"><div class="ttname"><a href="extract__parameters3_d_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a></div><div class="ttdeci">Tckk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00020">extract_parameters3D.m:20</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a99ee4f1e3e529259596a8093b544d7fd"><div class="ttname"><a href="extract__parameters3_d_8m.html#a99ee4f1e3e529259596a8093b544d7fd">kk</a></div><div class="ttdeci">Extract the extrinsic and recomputer the collineations for kk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00016">extract_parameters3D.m:16</a></div></div>
+<div class="ttc" id="acheck__convergence_8m_html_a26dc0036665a7be66f45ffe41465ffe5"><div class="ttname"><a href="check__convergence_8m.html#a26dc0036665a7be66f45ffe41465ffe5">solution</a></div><div class="ttdeci">for solution</div><div class="ttdef"><b>Definition:</b> <a href="check__convergence_8m_source.html#l00025">check_convergence.m:25</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a22cfac2df329b4a52028fddc365d6f7f"><div class="ttname"><a href="extract__parameters3_d_8m.html#a22cfac2df329b4a52028fddc365d6f7f">eval</a></div><div class="ttdeci">eval(['omc_' num2str(kk) '=omckk;'])</div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a78974b12364a0c431fa4a87b180224ed"><div class="ttname"><a href="extract__parameters3_d_8m.html#a78974b12364a0c431fa4a87b180224ed">paramters</a></div><div class="ttdeci">Extract the extrinsic paramters</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00014">extract_parameters3D.m:14</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a6f521df5f388c374b6d741d7f7cc3ff1"><div class="ttname"><a href="extract__parameters3_d_8m.html#a6f521df5f388c374b6d741d7f7cc3ff1">Hlkk</a></div><div class="ttdeci">Hlkk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00024">extract_parameters3D.m:24</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_ae18b1980f35114a664a851f82b2f3098"><div class="ttname"><a href="extract__parameters3_d_8m.html#ae18b1980f35114a664a851f82b2f3098">inv_KK</a></div><div class="ttdeci">inv_KK</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00012">extract_parameters3D.m:12</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a737dee4ef8e09247b0da47219bf453ff"><div class="ttname"><a href="extract__parameters3_d_8m.html#a737dee4ef8e09247b0da47219bf453ff">kc</a></div><div class="ttdeci">kc</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00006">extract_parameters3D.m:6</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a3aa6bf135885f06d75e5da2713b5230d"><div class="ttname"><a href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a></div><div class="ttdeci">for Align the structure from the first ii * rodrigues(om_left_list(:, ii))'</div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a5764554a67d94c602ff97cda338ed5db"><div class="ttname"><a href="extract__parameters3_d_8m.html#a5764554a67d94c602ff97cda338ed5db">paramaters</a></div><div class="ttdeci">Extraction of the final intrinsic and extrinsic paramaters</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00005">extract_parameters3D.m:5</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a5c3d7d7c3c32312381aafa360fd6e1b8"><div class="ttname"><a href="extract__parameters3_d_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a></div><div class="ttdeci">Rckk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00022">extract_parameters3D.m:22</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_a0cad0ba1a84ecf472609123597cf085a"><div class="ttname"><a href="extract__parameters3_d_8m.html#a0cad0ba1a84ecf472609123597cf085a">omckk</a></div><div class="ttdeci">Extract the extrinsic and recomputer the collineations for omckk</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00018">extract_parameters3D.m:18</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_a5c344952fc5d4209f5a4cd0922c051d0"><div class="ttname"><a href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a></div><div class="ttdeci">if n_ima</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00007">add_suppress.m:7</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="extract__parameters3_d_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00034">extract_parameters3D.m:34</a></div></div>
+<div class="ttc" id="aextract__parameters3_d_8m_html_af11ed0b23179c5443ade790615f5f490"><div class="ttname"><a href="extract__parameters3_d_8m.html#af11ed0b23179c5443ade790615f5f490">matrix</a></div><div class="ttdeci">Calibration matrix</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters3_d_8m_source.html#l00011">extract_parameters3D.m:11</a></div></div>
+<div class="ttc" id="aerror__analysis_8m_html_a30ec4b5ab03426226e08bd6309a70bb8"><div class="ttname"><a href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a></div><div class="ttdeci">KK</div><div class="ttdef"><b>Definition:</b> <a href="error__analysis_8m_source.html#l00096">error_analysis.m:96</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

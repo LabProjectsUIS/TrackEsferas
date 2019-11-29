@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/rigid_motion.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">rigid_motion.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="rigid__motion_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="rigid__motion_8m.html#ae794dc5090bdbf8459d94f28a49c89a8">    1</a></span>&#160;<span class="keyword">function</span> [Y,dYdom,dYdT] = rigid_motion(<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>,<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>,<a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;%rigid_motion.m</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;%</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">    5</a></span>&#160;%[Y,dYdom,dYdT] = rigid_motion(<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>,<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>,<a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;%</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="rigid__motion_8m.html#a9f31d6ada3fcaf57df1cc205a7dc7b96">    7</a></span>&#160;%Computes the <a class="code" href="namespace_custom_camera_library.html#a749c51cb23f6d5d8d2f43b5e7ba9affd">rigid</a> motion transformation <a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a> = <a class="code" href="rigid__motion_8m.html#a9f31d6ada3fcaf57df1cc205a7dc7b96">R</a>*<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>+<a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a>, <a class="code" href="project__points_8m.html#a5552711badc1e09aa9eddba4cb539b69">where</a> <a class="code" href="rigid__motion_8m.html#a9f31d6ada3fcaf57df1cc205a7dc7b96">R</a> = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>).</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;%</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;%<a class="code" href="_compute_stripes_8m.html#ae27da7df4d207577ee411ff134a16eea">INPUT</a>: X: 3D structure in the world coordinate frame (3xN <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a> for <a class="code" href="calib__stereo_8m.html#a8cc2e7240164328fdc3f0e5e21032c56">N</a> <a class="code" href="centercirclefinder_8m.html#a799a9eb0a2e9c962405cb6dec6d61bea">points</a>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;%       (<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>,<a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a>): Rigid motion parameters between world coordinate frame and camera reference frame</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;%               om: rotation vector (3<a class="code" href="click__ima__calib_8m.html#aa3e5e1187c13261975d66c1290431e52">x1</a> <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a>); <a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a>: translation <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a> (3<a class="code" href="click__ima__calib_8m.html#aa3e5e1187c13261975d66c1290431e52">x1</a> <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a>)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;%</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;%OUTPUT: <a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>: 3<a class="code" href="_compute3_d_8m.html#a350bfcb1e3cfb28ddff48ce525d4f139">D</a> <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> of the <a class="code" href="is3_d_8m.html#adb607fe849a6c9fbaed4a1ef8d68c158">structure</a> <a class="code" href="centercirclefinder_8m.html#a799a9eb0a2e9c962405cb6dec6d61bea">points</a> in the <a class="code" href="ext__calib__stereo_8m.html#a0fd8c3b5a373cf066995d09d25f40589">camera</a> <a class="code" href="ext__calib__stereo_8m.html#ab87f249565eabdb0609876a0a0dac519">reference</a> frame (3xN <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a> <span class="keywordflow">for</span> <a class="code" href="calib__stereo_8m.html#a8cc2e7240164328fdc3f0e5e21032c56">N</a> <a class="code" href="centercirclefinder_8m.html#a799a9eb0a2e9c962405cb6dec6d61bea">points</a>)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;%        dYdom: Derivative of <a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a> with respect <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a> ((3<a class="code" href="calib__stereo_8m.html#a8cc2e7240164328fdc3f0e5e21032c56">N</a>)<a class="code" href="click__ima__calib_8m.html#a03ad2628eb1c540113251638112541e3">x3</a> <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;%        dYdT: Derivative of <a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a> with respect <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a> ((3<a class="code" href="calib__stereo_8m.html#a8cc2e7240164328fdc3f0e5e21032c56">N</a>)<a class="code" href="click__ima__calib_8m.html#a03ad2628eb1c540113251638112541e3">x3</a> <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a>)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;%</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;%Definitions:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;%Let <a class="code" href="_organizar_8m.html#a4baee84af7a92177c9064ddc2fc010ce">P</a> be <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a> in 3<a class="code" href="_compute3_d_8m.html#a350bfcb1e3cfb28ddff48ce525d4f139">D</a> of <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> <a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a> in the <a class="code" href="cam__proj__calib_8m.html#a1abddb9576a47442fd34f9124ce421c8">world</a> <a class="code" href="ext__calib__stereo_8m.html#ab87f249565eabdb0609876a0a0dac519">reference</a> frame (stored in the <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a> <a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;%The coordinate <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a> of <a class="code" href="_organizar_8m.html#a4baee84af7a92177c9064ddc2fc010ce">P</a> in the <a class="code" href="ext__calib__stereo_8m.html#a0fd8c3b5a373cf066995d09d25f40589">camera</a> <a class="code" href="ext__calib__stereo_8m.html#ab87f249565eabdb0609876a0a0dac519">reference</a> frame <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a>: <a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a> = <a class="code" href="rigid__motion_8m.html#a9f31d6ada3fcaf57df1cc205a7dc7b96">R</a>*<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a> + <a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="rigid__motion_8m.html#ad18ddb89133b7720116a8c6f6b506cf9">   20</a></span>&#160;%<a class="code" href="project__points_8m.html#a5552711badc1e09aa9eddba4cb539b69">where</a> <a class="code" href="rigid__motion_8m.html#a9f31d6ada3fcaf57df1cc205a7dc7b96">R</a> <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> the rotation <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a> corresponding <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> the rotation <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a> <a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>: R = rodrigues(<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;%</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;%Important <span class="keyword">function</span> called within <a class="code" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> <a class="code" href="rigid__motion_8m.html#a3c8c189b0d4d2a89443cae4b60fe8ad6">program</a>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;%</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;%<a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>.m: Computes the rotation <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a> corresponding <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> rotation <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="rigid__motion_8m.html#a3c8c189b0d4d2a89443cae4b60fe8ad6">   28</a></span>&#160;<span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 3,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">   29</a></span>&#160;   <a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3,1);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 2,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3,1);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 1,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;         <a class="code" href="go__calib__optim__iter_8m.html#a91b532a96b925f29014331062ff0010a">error</a>(<span class="stringliteral">&#39;Need at least a 3D structure as input (in rigid_motion.m)&#39;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;         <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;[R,dRdom] = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;[m,n] = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a> = <a class="code" href="rigid__motion_8m.html#a9f31d6ada3fcaf57df1cc205a7dc7b96">R</a>*<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a> + repmat(<a class="code" href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a>,[1 <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>]);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordflow">if</span> <a class="code" href="apply__distortion_8m.html#acda6303f8e0e875891d99e821a16e598">nargout</a> &gt; 1,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;dYdR = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3*<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>,9);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;dYdT = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3*<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>,3);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;dYdR(1:3:<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>,1:3:<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>) =  <a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a><span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">dYdR(2:3:end,2:3:end) =  X&#39;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;dYdR(3:3:<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>,3:3:<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>) =  <a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a><span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral">dYdT(1:3:end,1) =  ones(n,1);</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="stringliteral">dYdT(2:3:end,2) =  ones(n,1);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="stringliteral">dYdT(3:3:end,3) =  ones(n,1);</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral">dYdom = dYdR * dRdom;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral"></span> </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="a_organizar_8m_html_a4baee84af7a92177c9064ddc2fc010ce"><div class="ttname"><a href="_organizar_8m.html#a4baee84af7a92177c9064ddc2fc010ce">P</a></div><div class="ttdeci">P</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00005">Organizar.m:5</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="aext__calib__stereo_8m_html_a0fd8c3b5a373cf066995d09d25f40589"><div class="ttname"><a href="ext__calib__stereo_8m.html#a0fd8c3b5a373cf066995d09d25f40589">camera</a></div><div class="ttdeci">Relative position of right camera wrt left camera</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib__stereo_8m_source.html#l00040">ext_calib_stereo.m:40</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_ac51b57a703ba1c5869228690c93e1701"><div class="ttname"><a href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a></div><div class="ttdeci">All the point coordinates(on the image, and in 3D) - for global optimization X</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00218">click_ima_calib3D.m:218</a></div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a60bfb22881d8ade0a15adeaa7a363c23"><div class="ttname"><a href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a></div><div class="ttdeci">matrix that subtract the principal point</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00088">init_intrinsic_param.m:88</a></div></div>
+<div class="ttc" id="areadras_8m_html_a7d252fd4b4ae9c8b8af5e91ef645fc1f"><div class="ttname"><a href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a></div><div class="ttdeci">READRAS Read an image file in sun raster format so that[X, map]</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00006">readras.m:6</a></div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_ac6a7a413be81452b9806f7021b893ad4"><div class="ttname"><a href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00005">add_suppress.m:5</a></div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_ae27da7df4d207577ee411ff134a16eea"><div class="ttname"><a href="_compute_stripes_8m.html#ae27da7df4d207577ee411ff134a16eea">INPUT</a></div><div class="ttdeci">fname_pat fname_pat temporal processing INPUT</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00003">ComputeStripes.m:3</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a944b0ff7b0378fbacbea580c66148200"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a></div><div class="ttdeci">Initialization of the global parameter vector</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00297">go_calib_optim_iter.m:297</a></div></div>
+<div class="ttc" id="aextract__parameters_8m_html_aa29c479aca4eef75a9f1c16e1c1ff766"><div class="ttname"><a href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a></div><div class="ttdeci">Calibration matrix</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters_8m_source.html#l00022">extract_parameters.m:22</a></div></div>
+<div class="ttc" id="aginput2_8m_html_aafbb9d50e573e4009d0650c645566ddd"><div class="ttname"><a href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a></div><div class="ttdeci">end if x if if nargin</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00034">ginput2.m:34</a></div></div>
+<div class="ttc" id="ais3_d_8m_html_adb607fe849a6c9fbaed4a1ef8d68c158"><div class="ttname"><a href="is3_d_8m.html#adb607fe849a6c9fbaed4a1ef8d68c158">structure</a></div><div class="ttdeci">Check for planarity of the structure</div><div class="ttdef"><b>Definition:</b> <a href="is3_d_8m_source.html#l00008">is3D.m:8</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a5bf8e9bd225c9965657036965db3c3fb"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a></div><div class="ttdeci">use the full distortion Take the complete distortion model n</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_aff75dbcbe674794c36a7741a0800e51b"><div class="ttname"><a href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a></div><div class="ttdeci">Find such that Y</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00003">align_structures.m:3</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a4e3462750cc302b9a3697c379ed1d885"><div class="ttname"><a href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a></div><div class="ttdeci">om</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00036">align_structures.m:36</a></div></div>
+<div class="ttc" id="acentercirclefinder_8m_html_a799a9eb0a2e9c962405cb6dec6d61bea"><div class="ttname"><a href="centercirclefinder_8m.html#a799a9eb0a2e9c962405cb6dec6d61bea">points</a></div><div class="ttdeci">For the diverged points</div><div class="ttdef"><b>Definition:</b> <a href="centercirclefinder_8m_source.html#l00165">centercirclefinder.m:165</a></div></div>
+<div class="ttc" id="aproject__points_8m_html_a5552711badc1e09aa9eddba4cb539b69"><div class="ttname"><a href="project__points_8m.html#a5552711badc1e09aa9eddba4cb539b69">where</a></div><div class="ttdeci">yy where</div><div class="ttdef"><b>Definition:</b> <a href="project__points_8m_source.html#l00032">project_points.m:32</a></div></div>
+<div class="ttc" id="arigid__motion_8m_html_a3c8c189b0d4d2a89443cae4b60fe8ad6"><div class="ttname"><a href="rigid__motion_8m.html#a3c8c189b0d4d2a89443cae4b60fe8ad6">program</a></div><div class="ttdeci">Important function called within that program</div><div class="ttdef"><b>Definition:</b> <a href="rigid__motion_8m_source.html#l00028">rigid_motion.m:28</a></div></div>
+<div class="ttc" id="arigid__motion_8m_html_a9f31d6ada3fcaf57df1cc205a7dc7b96"><div class="ttname"><a href="rigid__motion_8m.html#a9f31d6ada3fcaf57df1cc205a7dc7b96">R</a></div><div class="ttdeci">rigid_motion where R</div><div class="ttdef"><b>Definition:</b> <a href="rigid__motion_8m_source.html#l00007">rigid_motion.m:7</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_aa3e5e1187c13261975d66c1290431e52"><div class="ttname"><a href="click__ima__calib_8m.html#aa3e5e1187c13261975d66c1290431e52">x1</a></div><div class="ttdeci">x1</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00078">click_ima_calib.m:78</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a3aa6bf135885f06d75e5da2713b5230d"><div class="ttname"><a href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a></div><div class="ttdeci">for Align the structure from the first ii * rodrigues(om_left_list(:, ii))'</div></div>
+<div class="ttc" id="aapply__distortion_8m_html_acda6303f8e0e875891d99e821a16e598"><div class="ttname"><a href="apply__distortion_8m.html#acda6303f8e0e875891d99e821a16e598">nargout</a></div><div class="ttdeci">if nargout</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00035">apply_distortion.m:35</a></div></div>
+<div class="ttc" id="a_compute3_d_8m_html_a350bfcb1e3cfb28ddff48ce525d4f139"><div class="ttname"><a href="_compute3_d_8m.html#a350bfcb1e3cfb28ddff48ce525d4f139">D</a></div><div class="ttdeci">D</div><div class="ttdef"><b>Definition:</b> <a href="_compute3_d_8m_source.html#l00064">Compute3D.m:64</a></div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_a5c4aa834f79d9bba4ec3f74f17439836"><div class="ttname"><a href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a></div><div class="ttdeci">Express the coordinates of the points in the original image coordinates</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00376">ComputeStripes.m:376</a></div></div>
+<div class="ttc" id="arigid__motion_8m_html_a28a4ec3a65fd1ca8cde9398dc15c5f8a"><div class="ttname"><a href="rigid__motion_8m.html#a28a4ec3a65fd1ca8cde9398dc15c5f8a">T</a></div><div class="ttdeci">Important function called within that T</div><div class="ttdef"><b>Definition:</b> <a href="rigid__motion_8m_source.html#l00029">rigid_motion.m:29</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a1abddb9576a47442fd34f9124ce421c8"><div class="ttname"><a href="cam__proj__calib_8m.html#a1abddb9576a47442fd34f9124ce421c8">world</a></div><div class="ttdeci">Relative prosition of camera wrt world</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00173">cam_proj_calib.m:173</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a8cc2e7240164328fdc3f0e5e21032c56"><div class="ttname"><a href="calib__stereo_8m.html#a8cc2e7240164328fdc3f0e5e21032c56">N</a></div><div class="ttdeci">N</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00101">calib_stereo.m:101</a></div></div>
+<div class="ttc" id="anamespace_custom_camera_library_html_a749c51cb23f6d5d8d2f43b5e7ba9affd"><div class="ttname"><a href="namespace_custom_camera_library.html#a749c51cb23f6d5d8d2f43b5e7ba9affd">CustomCameraLibrary::rigid</a></div><div class="ttdeci">BodyR * rigid</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00081">server.h:81</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a03ad2628eb1c540113251638112541e3"><div class="ttname"><a href="click__ima__calib_8m.html#a03ad2628eb1c540113251638112541e3">x3</a></div><div class="ttdeci">x3</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00078">click_ima_calib.m:78</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a91b532a96b925f29014331062ff0010a"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a91b532a96b925f29014331062ff0010a">error</a></div><div class="ttdeci">Extraction of the paramters for computing the right reprojection error</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00507">go_calib_optim_iter.m:507</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a00d9614e711bf169f15ae8e3e35d30df"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a></div><div class="ttdeci">If the rig is</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00213">go_calib_optim_iter.m:213</a></div></div>
+<div class="ttc" id="aext__calib__stereo_8m_html_ab87f249565eabdb0609876a0a0dac519"><div class="ttname"><a href="ext__calib__stereo_8m.html#ab87f249565eabdb0609876a0a0dac519">reference</a></div><div class="ttdeci">Change of reference</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib__stereo_8m_source.html#l00045">ext_calib_stereo.m:45</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

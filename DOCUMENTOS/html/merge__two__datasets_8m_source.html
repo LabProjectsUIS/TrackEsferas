@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/merge_two_datasets.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">merge_two_datasets.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="merge__two__datasets_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a4f937026306ae9a45dad33d4036d37e6">fprintf</a>(1,<span class="stringliteral">&#39;Script that merges two &quot;Cabib_Results.mat&quot; data sets of the same camera into a single dataset\n&#39;</span>)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<a class="code" href="combine__calib_8m.html#a7138f3d2c26d90e619a4f24f8cfe0c1f">dir</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">    6</a></span>&#160;<a class="code" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a> = 1;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<a class="code" href="loadinr_8m.html#ada129e64aaca5f1d7932a0d7584c4f47">while</a> <a class="code" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#a5bf6ca8f910be0329f260f6afc861889">    8</a></span>&#160;    <a class="code" href="merge__two__datasets_8m.html#a5bf6ca8f910be0329f260f6afc861889">data_set1</a> = <a class="code" href="click__calib_8m.html#a83b0c7762f2f177f55319bbe0e6c9f81">input</a>(&#39;Filename of the first <a class="code" href="scanning__script_8m.html#aef10db55231ee94ba6bbfb76fed5e867">dataset</a> (with <a class="code" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a> path <a class="code" href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a> necessary): &#39;,&#39;<a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>&#39;);    </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a> = ((<a class="code" href="analyse__error_8m.html#a24b06316e04bc706a3496f036ae493a1">exist</a>(<a class="code" href="merge__two__datasets_8m.html#a5bf6ca8f910be0329f260f6afc861889">data_set1</a>)~=2));</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a> <a class="code" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="merge__two__datasets_8m.html#a4f937026306ae9a45dad33d4036d37e6">fprintf</a>(1,&#39;File not found. Try again.\<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>&#39;);</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#afb358f48b1646c750fb9da6c6585be2b">   12</a></span>&#160;    <a class="code" href="merge__two__datasets_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="merge__two__datasets_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a> = 1;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<a class="code" href="loadinr_8m.html#ada129e64aaca5f1d7932a0d7584c4f47">while</a> <a class="code" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#aa65ac7b8dbf57898ddc52bf273fd50e1">   16</a></span>&#160;    <a class="code" href="merge__two__datasets_8m.html#aa65ac7b8dbf57898ddc52bf273fd50e1">data_set2</a> = <a class="code" href="click__calib_8m.html#a83b0c7762f2f177f55319bbe0e6c9f81">input</a>(&#39;Filename of the second <a class="code" href="scanning__script_8m.html#aef10db55231ee94ba6bbfb76fed5e867">dataset</a> (with <a class="code" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a> path <a class="code" href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a> necessary): &#39;,&#39;<a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>&#39;);    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a> = ((<a class="code" href="analyse__error_8m.html#a24b06316e04bc706a3496f036ae493a1">exist</a>(<a class="code" href="merge__two__datasets_8m.html#aa65ac7b8dbf57898ddc52bf273fd50e1">data_set2</a>)~=2));</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a> <a class="code" href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="merge__two__datasets_8m.html#a4f937026306ae9a45dad33d4036d37e6">fprintf</a>(1,&#39;File not found. Try again.\<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>&#39;);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="merge__two__datasets_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="merge__two__datasets_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#a312a5e0eda1bc4ca9273f36978e6dc4f">   24</a></span>&#160;<a class="code" href="merge__two__datasets_8m.html#a100e5f847f9a8c9cccd7719547f41d1d">load</a>(<a class="code" href="merge__two__datasets_8m.html#a5bf6ca8f910be0329f260f6afc861889">data_set1</a>); % part1\<a class="code" href="merge__two__datasets_8m.html#a312a5e0eda1bc4ca9273f36978e6dc4f">Calib_Results</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">   26</a></span>&#160;<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a> = <a class="code" href="merge__two__datasets_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a100e5f847f9a8c9cccd7719547f41d1d">load</a>(<a class="code" href="merge__two__datasets_8m.html#aa65ac7b8dbf57898ddc52bf273fd50e1">data_set2</a>); % part2\<a class="code" href="merge__two__datasets_8m.html#a312a5e0eda1bc4ca9273f36978e6dc4f">Calib_Results</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#a7ddd679179823c0d07cf0b1937528ecc">   30</a></span>&#160;<a class="code" href="merge__two__datasets_8m.html#a7ddd679179823c0d07cf0b1937528ecc">active_images2</a> = <a class="code" href="merge__two__datasets_8m.html#a92b03440a331baeaaf23d56a1e468edc">active_images</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#a97fb9339490d6e51a1148f7a495f5944">   31</a></span>&#160;<a class="code" href="merge__two__datasets_8m.html#a97fb9339490d6e51a1148f7a495f5944">n_ima2</a> = <a class="code" href="merge__two__datasets_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">   34</a></span>&#160;for <a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a> = 1:<a class="code" href="merge__two__datasets_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;X_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = X_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;dX_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = dX_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;dY_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = dY_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;wintx_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = wintx_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;winty_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = winty_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;x_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = x_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;y_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = y_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;n_sq_x_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = n_sq_x_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;n_sq_y_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = n_sq_y_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;omc_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = omc_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a>([&#39;Tc_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>+<a class="code" href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a>) &#39; = Tc_&#39; num2str(<a class="code" href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) &#39;;&#39;]);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="merge__two__datasets_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a100e5f847f9a8c9cccd7719547f41d1d">load</a>(<a class="code" href="merge__two__datasets_8m.html#a5bf6ca8f910be0329f260f6afc861889">data_set1</a>); % part1\<a class="code" href="merge__two__datasets_8m.html#a312a5e0eda1bc4ca9273f36978e6dc4f">Calib_Results</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">   59</a></span>&#160;<a class="code" href="merge__two__datasets_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a> = <a class="code" href="merge__two__datasets_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a> + <a class="code" href="merge__two__datasets_8m.html#a97fb9339490d6e51a1148f7a495f5944">n_ima2</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#a92b03440a331baeaaf23d56a1e468edc">   60</a></span>&#160;<a class="code" href="merge__two__datasets_8m.html#a92b03440a331baeaaf23d56a1e468edc">active_images</a> = [<a class="code" href="merge__two__datasets_8m.html#a92b03440a331baeaaf23d56a1e468edc">active_images</a> <a class="code" href="merge__two__datasets_8m.html#a7ddd679179823c0d07cf0b1937528ecc">active_images2</a>];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="merge__two__datasets_8m.html#ae2ef17d5a155c4c2f5ba0650526b1c7a">   62</a></span>&#160;<a class="code" href="merge__two__datasets_8m.html#ae2ef17d5a155c4c2f5ba0650526b1c7a">no_image</a> = 1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;% Recompute the <a class="code" href="go__calib__optim__iter_8m.html#a91b532a96b925f29014331062ff0010a">error</a> (in the <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a> ex):</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<a class="code" href="cam__proj__calib__optim_8m.html#a9b27800af3e6d47fb0ed949b53dbe9ae">comp_error_calib</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<a class="code" href="merge__two__datasets_8m.html#a4f937026306ae9a45dad33d4036d37e6">fprintf</a>(&#39;The two <a class="code" href="namespacecalibration.html">calibration</a> datasets are <a class="code" href="rectify__stereo__pair_8m.html#a05739f4b7ae42ee41b81d332e7d6ff51">now</a> merged. You are <a class="code" href="rectify__stereo__pair_8m.html#a05739f4b7ae42ee41b81d332e7d6ff51">now</a> ready <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> run <a class="code" href="namespacecalibration.html">calibration</a>. \<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>&#39;);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="amerge__two__datasets_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="merge__two__datasets_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00012">merge_two_datasets.m:12</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a86c6f909356c67f3a64bf3a64955cc50"><div class="ttname"><a href="merge__two__datasets_8m.html#a86c6f909356c67f3a64bf3a64955cc50">cont</a></div><div class="ttdeci">cont</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00006">merge_two_datasets.m:6</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a4f937026306ae9a45dad33d4036d37e6"><div class="ttname"><a href="merge__two__datasets_8m.html#a4f937026306ae9a45dad33d4036d37e6">fprintf</a></div><div class="ttdeci">fprintf(1, 'Script that merges two &quot;Cabib_Results.mat&quot; data sets of the same camera into a single dataset\n') dir</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_ace17e3648be72bd3a88de20f27f1f5f0"><div class="ttname"><a href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a></div><div class="ttdeci">if</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00023">cam_proj_calib.m:23</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a5bf6ca8f910be0329f260f6afc861889"><div class="ttname"><a href="merge__two__datasets_8m.html#a5bf6ca8f910be0329f260f6afc861889">data_set1</a></div><div class="ttdeci">while cont data_set1</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00008">merge_two_datasets.m:8</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_ae2ef17d5a155c4c2f5ba0650526b1c7a"><div class="ttname"><a href="merge__two__datasets_8m.html#ae2ef17d5a155c4c2f5ba0650526b1c7a">no_image</a></div><div class="ttdeci">no_image</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00062">merge_two_datasets.m:62</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_aca921670c13923eac3fe8dff3f71e463"><div class="ttname"><a href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a></div><div class="ttdeci">s</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00069">apply_distortion2.m:69</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a312a5e0eda1bc4ca9273f36978e6dc4f"><div class="ttname"><a href="merge__two__datasets_8m.html#a312a5e0eda1bc4ca9273f36978e6dc4f">Calib_Results</a></div><div class="ttdeci">part1 Calib_Results</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00024">merge_two_datasets.m:24</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_aa65ac7b8dbf57898ddc52bf273fd50e1"><div class="ttname"><a href="merge__two__datasets_8m.html#aa65ac7b8dbf57898ddc52bf273fd50e1">data_set2</a></div><div class="ttdeci">while cont data_set2</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00016">merge_two_datasets.m:16</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a9b27800af3e6d47fb0ed949b53dbe9ae"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a9b27800af3e6d47fb0ed949b53dbe9ae">comp_error_calib</a></div><div class="ttdeci">comp_error_calib</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00090">cam_proj_calib_optim.m:90</a></div></div>
+<div class="ttc" id="acombine__calib_8m_html_a7138f3d2c26d90e619a4f24f8cfe0c1f"><div class="ttname"><a href="combine__calib_8m.html#a7138f3d2c26d90e619a4f24f8cfe0c1f">dir</a></div><div class="ttdeci">Script that combines two calibration sets together dir</div><div class="ttdef"><b>Definition:</b> <a href="combine__calib_8m_source.html#l00004">combine_calib.m:4</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a944b0ff7b0378fbacbea580c66148200"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a></div><div class="ttdeci">Initialization of the global parameter vector</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00297">go_calib_optim_iter.m:297</a></div></div>
+<div class="ttc" id="aanalyse__error_8m_html_a24b06316e04bc706a3496f036ae493a1"><div class="ttname"><a href="analyse__error_8m.html#a24b06316e04bc706a3496f036ae493a1">exist</a></div><div class="ttdeci">for if exist(['y_' num2str(kk)])</div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a100e5f847f9a8c9cccd7719547f41d1d"><div class="ttname"><a href="merge__two__datasets_8m.html#a100e5f847f9a8c9cccd7719547f41d1d">load</a></div><div class="ttdeci">load(data_set1)</div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_af29949bd63fb009eacab5efd11399e40"><div class="ttname"><a href="merge__two__datasets_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a></div><div class="ttdeci">for kk</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00034">merge_two_datasets.m:34</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a5bf8e9bd225c9965657036965db3c3fb"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a></div><div class="ttdeci">use the full distortion Take the complete distortion model n</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_ada129e64aaca5f1d7932a0d7584c4f47"><div class="ttname"><a href="loadinr_8m.html#ada129e64aaca5f1d7932a0d7584c4f47">while</a></div><div class="ttdeci">end not very only looks for the X YDIM keys while</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00023">loadinr.m:23</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a7ddd679179823c0d07cf0b1937528ecc"><div class="ttname"><a href="merge__two__datasets_8m.html#a7ddd679179823c0d07cf0b1937528ecc">active_images2</a></div><div class="ttdeci">active_images2</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00030">merge_two_datasets.m:30</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a97fb9339490d6e51a1148f7a495f5944"><div class="ttname"><a href="merge__two__datasets_8m.html#a97fb9339490d6e51a1148f7a495f5944">n_ima2</a></div><div class="ttdeci">n_ima2</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00031">merge_two_datasets.m:31</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a55e1e40e27e959e181d2eb5498573095"><div class="ttname"><a href="merge__two__datasets_8m.html#a55e1e40e27e959e181d2eb5498573095">eval</a></div><div class="ttdeci">eval(['dX_' num2str(kk+shift) '=dX_' num2str(kk) ';'])</div></div>
+<div class="ttc" id="aclick__calib_8m_html_a83b0c7762f2f177f55319bbe0e6c9f81"><div class="ttname"><a href="click__calib_8m.html#a83b0c7762f2f177f55319bbe0e6c9f81">input</a></div><div class="ttdeci">input('Start image number([]=1=first):')</div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a92b03440a331baeaaf23d56a1e468edc"><div class="ttname"><a href="merge__two__datasets_8m.html#a92b03440a331baeaaf23d56a1e468edc">active_images</a></div><div class="ttdeci">active_images</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00060">merge_two_datasets.m:60</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_a4bd2a7187893657a867b1e3b03a6ca7f"><div class="ttname"><a href="merge__two__datasets_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">n_ima</a></div><div class="ttdeci">n_ima</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00059">merge_two_datasets.m:59</a></div></div>
+<div class="ttc" id="ascanning__script_8m_html_aef10db55231ee94ba6bbfb76fed5e867"><div class="ttname"><a href="scanning__script_8m.html#aef10db55231ee94ba6bbfb76fed5e867">dataset</a></div><div class="ttdeci">Choose a dataset(scan #20 for example) ind_view</div></div>
+<div class="ttc" id="anamespacecalibration_html"><div class="ttname"><a href="namespacecalibration.html">calibration</a></div><div class="ttdef"><b>Definition:</b> <a href="calibration_8h_source.html#l00009">calibration.h:9</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a91b532a96b925f29014331062ff0010a"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a91b532a96b925f29014331062ff0010a">error</a></div><div class="ttdeci">Extraction of the paramters for computing the right reprojection error</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00507">go_calib_optim_iter.m:507</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_a5f867e6d2f1b81be0cb765b13a6ec4af"><div class="ttname"><a href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a></div><div class="ttdeci">end not very complete</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00023">loadinr.m:23</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_a05739f4b7ae42ee41b81d332e7d6ff51"><div class="ttname"><a href="rectify__stereo__pair_8m.html#a05739f4b7ae42ee41b81d332e7d6ff51">now</a></div><div class="ttdeci">Loop around all the frames now</div><div class="ttdef"><b>Definition:</b> <a href="rectify__stereo__pair_8m_source.html#l00155">rectify_stereo_pair.m:155</a></div></div>
+<div class="ttc" id="amerge__two__datasets_8m_html_ab3c44a76dd678c93affe68a1f8a980ab"><div class="ttname"><a href="merge__two__datasets_8m.html#ab3c44a76dd678c93affe68a1f8a980ab">shift</a></div><div class="ttdeci">shift</div><div class="ttdef"><b>Definition:</b> <a href="merge__two__datasets_8m_source.html#l00026">merge_two_datasets.m:26</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/writeras.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">writeras.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="writeras_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">function</span> <a class="code" href="writeras_8m.html#adac122f5d317aaffa79216b3539bf167">writeras</a>(filename, <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a>, <a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;%<a class="code" href="writeras_8m.html#aa232b881bfa5cbe7656cac5b7992e63d">WRITERAS</a> Write an <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a> in sun raster <a class="code" href="check__directory_8m.html#a68712d1f70845df2d3fee19d8e07102a">format</a>.</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;%     <a class="code" href="writeras_8m.html#aa232b881bfa5cbe7656cac5b7992e63d">WRITERAS</a>(<span class="stringliteral">&#39;imagefile.ras&#39;</span>, image_matrix, <a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>) writes <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;%     <span class="stringliteral">&quot;sun.raster&quot;</span> <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>.</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;%     Written by Thomas K. Leung 3/30/93.</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;%     @ California Institute of <a class="code" href="_distor2_calib_8m.html#ae357344f0e5ab555d514e06ef20ad763">Technology</a>.</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;% PC and UNIX version of <a class="code" href="writeras_8m.html#adac122f5d317aaffa79216b3539bf167">writeras</a> - Jean-Yves Bouguet - Dec. 1998</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<a class="code" href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a> = max(find(filename == &#39;.&#39;));</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="writeras_8m.html#af57fdbdb7d09e0557b2c4533b3353975">   13</a></span>&#160;<a class="code" href="writeras_8m.html#af57fdbdb7d09e0557b2c4533b3353975">suffix</a> = filename(<a class="code" href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a>+1:<a class="code" href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a>+3);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 3,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   <a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a> = [];</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordflow">if</span>(<a class="code" href="loadinr_8m.html#a0a470d95b56f950cab76813217f19ddd">strcmp</a>(<a class="code" href="writeras_8m.html#af57fdbdb7d09e0557b2c4533b3353975">suffix</a>, <span class="stringliteral">&#39;ras&#39;</span>))</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    %Write header</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a> = fopen(filename, <span class="stringliteral">&#39;wb&#39;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a> &lt; 0) <a class="code" href="go__calib__optim__iter_8m.html#a91b532a96b925f29014331062ff0010a">error</a>([<span class="stringliteral">&#39;Cannot open &#39;</span> filename <span class="charliteral">&#39;.&#39;</span>]), <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    [height, width] = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> = <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> - 1;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    mapsize = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>, 1)*<a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>,2);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    %<a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>, ...</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    %       [1504078485, <a class="code" href="readras_8m.html#a5558ace5433f9aabbf0a0ec059900d94">width</a>, <a class="code" href="readras_8m.html#a509290c21d570ff479c1b9d9b1fe8810">height</a>, 8, <a class="code" href="readras_8m.html#a509290c21d570ff479c1b9d9b1fe8810">height</a>*<a class="code" href="readras_8m.html#a5558ace5433f9aabbf0a0ec059900d94">width</a>, 1, 1, mapsize], ...</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   %       <span class="stringliteral">&#39;long&#39;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   zero_str = <span class="stringliteral">&#39;00000000&#39;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   % MAGIC NUMBER:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,89,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,166,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,106,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,149,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   width_str = dec2hex(<a class="code" href="readras_8m.html#a5558ace5433f9aabbf0a0ec059900d94">width</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    width_str = [zero_str(1:8-length(width_str)) width_str];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keywordflow">for</span> <a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a> = 1:2:7,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,hex2dec(width_str(<a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a>:<a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a>+1)),<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   height_str = dec2hex(<a class="code" href="readras_8m.html#a509290c21d570ff479c1b9d9b1fe8810">height</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    height_str = [zero_str(1:8-length(height_str)) height_str];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordflow">for</span> <a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a> = 1:2:7,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,hex2dec(height_str(<a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a>:<a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a>+1)),<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,8,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   ll = <a class="code" href="readras_8m.html#a509290c21d570ff479c1b9d9b1fe8810">height</a>*<a class="code" href="readras_8m.html#a5558ace5433f9aabbf0a0ec059900d94">width</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   ll_str = dec2hex(ll);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   ll_str = [zero_str(1:8-length(ll_str)) ll_str];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <span class="keywordflow">for</span> <a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a> = 1:2:7,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,hex2dec(ll_str(<a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a>:<a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a>+1)),<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,1,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,0,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,~~mapsize,<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   mapsize_str = dec2hex(mapsize);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   mapsize_str = [zero_str(1:8-length(mapsize_str)) mapsize_str];</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   %<a class="code" href="centercirclefinder_8m.html#a9976f3faad68f981f425583e48b03252">keyboard</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <span class="keywordflow">for</span> <a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a> = 1:2:7,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>,hex2dec(mapsize_str(<a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a>:<a class="code" href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a>+1)),<span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;   </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> mapsize ~= 0</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a> = <a class="code" href="_organizar_8m.html#a4735a0c4d1b11f62ea44115d54a93087">min</a>(255, <a class="code" href="_distor2_calib_8m.html#ac285722dd13662586f5478312fe11f56">fix</a>(255*<a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>, <a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>, <span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span> rem(<a class="code" href="readras_8m.html#a5558ace5433f9aabbf0a0ec059900d94">width</a>,2) == 1</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> = [image&#39;; zeros(1, height)]<span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="stringliteral">        top = 255 * ones(size(image));</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral">        fwrite(fp, min(top,image)&#39;</span>, <span class="stringliteral">&#39;uchar&#39;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        top = 255 * <a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(<a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a>));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a>(<a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>, <a class="code" href="_organizar_8m.html#a4735a0c4d1b11f62ea44115d54a93087">min</a>(top,<a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a>)<span class="stringliteral">&#39;, &#39;</span>uchar<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="stringliteral">    end</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral">    fclose(fp);</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="stringliteral">else</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="stringliteral">    error(&#39;</span>Image <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a> <a class="code" href="check__directory_8m.html#abd6929795691c402603cd051d7729150">name</a> must <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a> in either <span class="stringliteral">&#39;&#39;</span>ras<span class="stringliteral">&#39;&#39;</span> or <span class="stringliteral">&#39;&#39;</span>rast<span class="stringliteral">&#39;&#39;</span>.<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="stringliteral">end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_distor2_calib_8m_html_ac285722dd13662586f5478312fe11f56"><div class="ttname"><a href="_distor2_calib_8m.html#ac285722dd13662586f5478312fe11f56">fix</a></div><div class="ttdeci">Computes the calibration parameters knowing the distortion factor k_dist grid_pts_centered are the grid point coordinates after substraction of the optical center can give an optional guess for the focal length there is no need to and one can fix</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00012">Distor2Calib.m:12</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="awriteras_8m_html_af57fdbdb7d09e0557b2c4533b3353975"><div class="ttname"><a href="writeras_8m.html#af57fdbdb7d09e0557b2c4533b3353975">suffix</a></div><div class="ttdeci">suffix</div><div class="ttdef"><b>Definition:</b> <a href="writeras_8m_source.html#l00013">writeras.m:13</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_a8d68283eda3e03d906ed4986ea445325"><div class="ttname"><a href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a></div><div class="ttdeci">if dot(uu, t)&lt; 0</div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_a4735a0c4d1b11f62ea44115d54a93087"><div class="ttname"><a href="_organizar_8m.html#a4735a0c4d1b11f62ea44115d54a93087">min</a></div><div class="ttdeci">min</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00026">Organizar.m:26</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_ac6a7a413be81452b9806f7021b893ad4"><div class="ttname"><a href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00005">add_suppress.m:5</a></div></div>
+<div class="ttc" id="awriteras_8m_html_adac122f5d317aaffa79216b3539bf167"><div class="ttname"><a href="writeras_8m.html#adac122f5d317aaffa79216b3539bf167">writeras</a></div><div class="ttdeci">function writeras(filename, image, map)</div></div>
+<div class="ttc" id="acheck__directory_8m_html_a68712d1f70845df2d3fee19d8e07102a"><div class="ttname"><a href="check__directory_8m.html#a68712d1f70845df2d3fee19d8e07102a">format</a></div><div class="ttdeci">try the upper case format</div><div class="ttdef"><b>Definition:</b> <a href="check__directory_8m_source.html#l00056">check_directory.m:56</a></div></div>
+<div class="ttc" id="aclick__calib_8m_html_a9ec9dda576db2a36c42c1c3af155d07c"><div class="ttname"><a href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a></div><div class="ttdeci">map</div><div class="ttdef"><b>Definition:</b> <a href="click__calib_8m_source.html#l00036">click_calib.m:36</a></div></div>
+<div class="ttc" id="aginput2_8m_html_aafbb9d50e573e4009d0650c645566ddd"><div class="ttname"><a href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a></div><div class="ttdeci">end if x if if nargin</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00034">ginput2.m:34</a></div></div>
+<div class="ttc" id="aanalyse__error_8m_html_aee9a066043e7b7065d7cdda5fbcfba53"><div class="ttname"><a href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a></div><div class="ttdeci">Color code for each image</div><div class="ttdef"><b>Definition:</b> <a href="analyse__error_8m_source.html#l00003">analyse_error.m:3</a></div></div>
+<div class="ttc" id="areadras_8m_html_a509290c21d570ff479c1b9d9b1fe8810"><div class="ttname"><a href="readras_8m.html#a509290c21d570ff479c1b9d9b1fe8810">height</a></div><div class="ttdeci">height</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00036">readras.m:36</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_a0a470d95b56f950cab76813217f19ddd"><div class="ttname"><a href="loadinr_8m.html#a0a470d95b56f950cab76813217f19ddd">strcmp</a></div><div class="ttdeci">if strcmp(s(1:12), '#INRIMAGE-4#')</div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_ae357344f0e5ab555d514e06ef20ad763"><div class="ttname"><a href="_distor2_calib_8m.html#ae357344f0e5ab555d514e06ef20ad763">Technology</a></div><div class="ttdeci">California Institute of Technology(c) Jean-Yves Bouguet - October 7th</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="acheck__directory_8m_html_abd6929795691c402603cd051d7729150"><div class="ttname"><a href="check__directory_8m.html#abd6929795691c402603cd051d7729150">name</a></div><div class="ttdeci">for name</div><div class="ttdef"><b>Definition:</b> <a href="check__directory_8m_source.html#l00111">check_directory.m:111</a></div></div>
+<div class="ttc" id="areadras_8m_html_a5558ace5433f9aabbf0a0ec059900d94"><div class="ttname"><a href="readras_8m.html#a5558ace5433f9aabbf0a0ec059900d94">width</a></div><div class="ttdeci">width</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00034">readras.m:34</a></div></div>
+<div class="ttc" id="asaveinr_8m_html_a066a6292cc63705ca7f6716a4f20926f"><div class="ttname"><a href="saveinr_8m.html#a066a6292cc63705ca7f6716a4f20926f">fwrite</a></div><div class="ttdeci">fwrite(fid, hdr256, 'uchar')</div></div>
+<div class="ttc" id="aadd__suppress_8m_html_af16cff3d6d24a105ac7688cac755f0b3"><div class="ttname"><a href="add__suppress_8m.html#af16cff3d6d24a105ac7688cac755f0b3">ii</a></div><div class="ttdeci">if if for ii</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00038">add_suppress.m:38</a></div></div>
+<div class="ttc" id="awriteras_8m_html_aa232b881bfa5cbe7656cac5b7992e63d"><div class="ttname"><a href="writeras_8m.html#aa232b881bfa5cbe7656cac5b7992e63d">WRITERAS</a></div><div class="ttdeci">WRITERAS Write an image file in sun raster format WRITERAS('imagefile.ras', image_matrix, map) writes a % &quot;sun.raster&quot; image file. % Written by Thomas K. Leung 3/30/93. % @ California Institute of Technology. % PC and UNIX version of writeras - Jean-Yves Bouguet - Dec. 1998 dot</div></div>
+<div class="ttc" id="acentercirclefinder_8m_html_a9976f3faad68f981f425583e48b03252"><div class="ttname"><a href="centercirclefinder_8m.html#a9976f3faad68f981f425583e48b03252">keyboard</a></div><div class="ttdeci">keyboard</div><div class="ttdef"><b>Definition:</b> <a href="centercirclefinder_8m_source.html#l00139">centercirclefinder.m:139</a></div></div>
+<div class="ttc" id="acam__proj__extract__param_8m_html_ac021deca5ed9851af58ef6998d995aeb"><div class="ttname"><a href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a></div><div class="ttdeci">fp</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__extract__param_8m_source.html#l00046">cam_proj_extract_param.m:46</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a91b532a96b925f29014331062ff0010a"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a91b532a96b925f29014331062ff0010a">error</a></div><div class="ttdeci">Extraction of the paramters for computing the right reprojection error</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00507">go_calib_optim_iter.m:507</a></div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_ac0a984a0dc9111131f4ad1fe8088698a"><div class="ttname"><a href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a></div><div class="ttdeci">else Append mode file</div><div class="ttdef"><b>Definition:</b> <a href="matlab2opencv_8m_source.html#l00019">matlab2opencv.m:19</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/apply_distortion.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">apply_distortion.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="apply__distortion_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a72b6d371bb0e1b4ab02584044e87cf28">    1</a></span>&#160;<span class="keyword">function</span> [xd,dxddk] = apply_distortion(<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>,<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;% Complete the <a class="code" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a> <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a> <span class="keywordflow">if</span> you are <span class="keyword">using</span> the simple <a class="code" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a> <a class="code" href="cam__proj__calib__optim_8m.html#a911e4f1620fa3907031829d8d91b48df">model</a>:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;length_k = <a class="code" href="click__ima__calib3_d_8m.html#a7a134e91d2540aeba432404d6104a7ee">length</a>(<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordflow">if</span> length_k &lt;5 ,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a> = [k ; zeros(5-length_k,1)];</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;[m,n] = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;% Add <a class="code" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<a class="code" href="downsample_8m.html#ae84984b103dbbea104e6b4a314a3d65e">r2</a> = <a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:).^2 + <a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:).^2;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<a class="code" href="apply__distortion2_8m.html#af7abae0a18c54f8b3ca80e0759e893f5">r4</a> = <a class="code" href="downsample_8m.html#ae84984b103dbbea104e6b4a314a3d65e">r2</a>.^2;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="apply__distortion2_8m.html#a6253185320d63763a06f49a9330d50e0">r6</a> = <a class="code" href="downsample_8m.html#ae84984b103dbbea104e6b4a314a3d65e">r2</a>.^3;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;% Radial <a class="code" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="project__points__fisheye_8m.html#aa2cdb96e6daaf27dbd97e53ca51df2fc">cdist</a> = 1 + <a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(1) * <a class="code" href="downsample_8m.html#ae84984b103dbbea104e6b4a314a3d65e">r2</a> + <a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(2) * <a class="code" href="apply__distortion2_8m.html#af7abae0a18c54f8b3ca80e0759e893f5">r4</a> + <a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(5) * <a class="code" href="apply__distortion2_8m.html#a6253185320d63763a06f49a9330d50e0">r6</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a426dc7045c41e32f7848f89ed72be8b4">   26</a></span>&#160;<span class="keywordflow">if</span> <a class="code" href="apply__distortion_8m.html#acda6303f8e0e875891d99e821a16e598">nargout</a> &gt; 1,</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a0daf11681dae78cb9c44c93169115c12">   27</a></span>&#160;    <a class="code" href="apply__distortion_8m.html#a0daf11681dae78cb9c44c93169115c12">dcdistdk</a> = [ r2&#39; r4&#39; zeros(n,2) r6&#39;];</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">   28</a></span>&#160;<a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#acb7eb27b3b51bad0c1ad73154292be54">   31</a></span>&#160;<a class="code" href="apply__distortion_8m.html#acb7eb27b3b51bad0c1ad73154292be54">xd1</a> = <a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a> .* (<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(2,1)*<a class="code" href="project__points__fisheye_8m.html#aa2cdb96e6daaf27dbd97e53ca51df2fc">cdist</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a7eb610a82f30382183a093498dbc682f">   33</a></span>&#160;<a class="code" href="apply__distortion_8m.html#a7eb610a82f30382183a093498dbc682f">coeff</a> = (<a class="code" href="go__calib__optim__iter_8m.html#a0f4d6a153ee1a256a0223b60bd45a272">reshape</a>([<a class="code" href="project__points__fisheye_8m.html#aa2cdb96e6daaf27dbd97e53ca51df2fc">cdist</a>;<a class="code" href="project__points__fisheye_8m.html#aa2cdb96e6daaf27dbd97e53ca51df2fc">cdist</a>],2*<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>,1)*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(1,3));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#acda6303f8e0e875891d99e821a16e598">   35</a></span>&#160;<span class="keywordflow">if</span> <a class="code" href="apply__distortion_8m.html#acda6303f8e0e875891d99e821a16e598">nargout</a> &gt; 1,</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#aa679b1b769d25405c4adb4612360ae49">   36</a></span>&#160;    <a class="code" href="apply__distortion_8m.html#aa679b1b769d25405c4adb4612360ae49">dxd1dk</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(2*<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>,5);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="apply__distortion_8m.html#aa679b1b769d25405c4adb4612360ae49">dxd1dk</a>(1:2:<a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>,:) = (<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:)<span class="stringliteral">&#39;*ones(1,5)) .* dcdistdk;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral">    dxd1dk(2:2:end,:) = (x(2,:)&#39;</span>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(1,5)) .* <a class="code" href="apply__distortion_8m.html#a0daf11681dae78cb9c44c93169115c12">dcdistdk</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;% tangential <a class="code" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">   44</a></span>&#160;<a class="code" href="init__intrinsic__param_8m.html#a8dbb40f7f7bb5a67b98c95563ac0f086">a1</a> = 2.*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:).*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:);</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a2f61d5e0e97d1e5917839088cb83bb97">   45</a></span>&#160;<a class="code" href="apply__distortion_8m.html#a2f61d5e0e97d1e5917839088cb83bb97">a2</a> = <a class="code" href="downsample_8m.html#ae84984b103dbbea104e6b4a314a3d65e">r2</a> + 2*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:).^2;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a509a674bd7926c5406b815a055d17834">   46</a></span>&#160;<a class="code" href="apply__distortion_8m.html#a509a674bd7926c5406b815a055d17834">a3</a> = <a class="code" href="downsample_8m.html#ae84984b103dbbea104e6b4a314a3d65e">r2</a> + 2*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:).^2;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#af9bf3838192b963bbc36e77f87442af1">   48</a></span>&#160;<a class="code" href="apply__distortion_8m.html#af9bf3838192b963bbc36e77f87442af1">delta_x</a> = [k(3)*a1 + k(4)*a2 ;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   k(3) * a3 + k(4)*a1];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a74b87337454200d4d33f80c4663dc5e5">   51</a></span>&#160;<a class="code" href="apply__distortion_8m.html#a74b87337454200d4d33f80c4663dc5e5">aa</a> = (2*<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(3)*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:)+6*<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(4)*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:))&#39;*ones(1,3);</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a65ba841e01d6db7733e90a5b7f9e6f80">   52</a></span>&#160;<a class="code" href="apply__distortion_8m.html#a65ba841e01d6db7733e90a5b7f9e6f80">bb</a> = (2*<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(3)*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:)+2*<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(4)*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:))&#39;*ones(1,3);</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">   53</a></span>&#160;<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> = (6*<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(3)*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(2,:)+2*<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>(4)*<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>(1,:))&#39;*ones(1,3);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordflow">if</span> <a class="code" href="apply__distortion_8m.html#acda6303f8e0e875891d99e821a16e598">nargout</a> &gt; 1,</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a5f6d31910da0aff40bbe5bd83542a7d2">   56</a></span>&#160;    <a class="code" href="apply__distortion_8m.html#a5f6d31910da0aff40bbe5bd83542a7d2">ddelta_xdk</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(2*<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>,5);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="apply__distortion_8m.html#a5f6d31910da0aff40bbe5bd83542a7d2">ddelta_xdk</a>(1:2:<a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>,3) = <a class="code" href="init__intrinsic__param_8m.html#a8dbb40f7f7bb5a67b98c95563ac0f086">a1</a><span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="stringliteral">    ddelta_xdk(1:2:end,4) = a2&#39;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="apply__distortion_8m.html#a5f6d31910da0aff40bbe5bd83542a7d2">ddelta_xdk</a>(2:2:<a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>,3) = <a class="code" href="apply__distortion_8m.html#a509a674bd7926c5406b815a055d17834">a3</a><span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral">    ddelta_xdk(2:2:end,4) = a1&#39;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">   63</a></span>&#160;<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a> = <a class="code" href="apply__distortion_8m.html#acb7eb27b3b51bad0c1ad73154292be54">xd1</a> + <a class="code" href="apply__distortion_8m.html#af9bf3838192b963bbc36e77f87442af1">delta_x</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordflow">if</span> <a class="code" href="apply__distortion_8m.html#acda6303f8e0e875891d99e821a16e598">nargout</a> &gt; 1,</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="apply__distortion_8m.html#a2bd5c17f8726d3d966e10e907bddf53e">   66</a></span>&#160;    <a class="code" href="apply__distortion_8m.html#a2bd5c17f8726d3d966e10e907bddf53e">dxddk</a> = <a class="code" href="apply__distortion_8m.html#aa679b1b769d25405c4adb4612360ae49">dxd1dk</a> + <a class="code" href="apply__distortion_8m.html#a5f6d31910da0aff40bbe5bd83542a7d2">ddelta_xdk</a> ;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> length_k &lt; 5,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="apply__distortion_8m.html#a2bd5c17f8726d3d966e10e907bddf53e">dxddk</a> = <a class="code" href="apply__distortion_8m.html#a2bd5c17f8726d3d966e10e907bddf53e">dxddk</a>(:,1:length_k);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<a class="code" href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;% Test of the <a class="code" href="apply__distortion2_8m.html#abae42d8e51a0eb43fe8aebb87b4719a0">Jacobians</a>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a> = 10;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;lk = 1;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a> = 10*<a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(2,<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a> = 0.5*<a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(lk,1);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;[xd,dxddk] = apply_distortion(<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>,<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;% Test <a class="code" href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a> <a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>: OK!!</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;dk = 0.001 * <a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a>)*<a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(lk,1);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<a class="code" href="comp__distortion2_8m.html#a37b008517d941961d26e245afe06d235">k2</a> = <a class="code" href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a> + dk;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;[x2] = apply_distortion(<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>,<a class="code" href="comp__distortion2_8m.html#a37b008517d941961d26e245afe06d235">k2</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<a class="code" href="apply__distortion2_8m.html#a3df1716baaeed30ab9560fbe8db9e0d9">x_pred</a> = <a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a> + <a class="code" href="go__calib__optim__iter_8m.html#a0f4d6a153ee1a256a0223b60bd45a272">reshape</a>(<a class="code" href="apply__distortion_8m.html#a2bd5c17f8726d3d966e10e907bddf53e">dxddk</a> * dk,2,<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="apply__distortion2_8m.html#a41ceb989059f7f0fd28f90cc8e5f4082">x2</a>-<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>)/<a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="apply__distortion2_8m.html#a41ceb989059f7f0fd28f90cc8e5f4082">x2</a> - <a class="code" href="apply__distortion2_8m.html#a3df1716baaeed30ab9560fbe8db9e0d9">x_pred</a>)</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclick__ima__calib_8m_html_a58ab1fd68e97078232808206b850161b"><div class="ttname"><a href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a></div><div class="ttdeci">hold on</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00034">click_ima_calib.m:34</a></div></div>
+<div class="ttc" id="aerror__analysis_8m_html_a08aed3fddce569e0f5d61985add95a86"><div class="ttname"><a href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a></div><div class="ttdeci">sy * randn(1, Nkk)]</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="acomp__distortion2_8m_html_a37b008517d941961d26e245afe06d235"><div class="ttname"><a href="comp__distortion2_8m.html#a37b008517d941961d26e245afe06d235">k2</a></div><div class="ttdeci">0,[two, N]=size(x_dist) k2</div><div class="ttdef"><b>Definition:</b> <a href="comp__distortion2_8m_source.html#l00031">comp_distortion2.m:31</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a74b87337454200d4d33f80c4663dc5e5"><div class="ttname"><a href="apply__distortion_8m.html#a74b87337454200d4d33f80c4663dc5e5">aa</a></div><div class="ttdeci">aa</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00051">apply_distortion.m:51</a></div></div>
+<div class="ttc" id="aproject__points__fisheye_8m_html_aa2cdb96e6daaf27dbd97e53ca51df2fc"><div class="ttname"><a href="project__points__fisheye_8m.html#aa2cdb96e6daaf27dbd97e53ca51df2fc">cdist</a></div><div class="ttdeci">cdist</div><div class="ttdef"><b>Definition:</b> <a href="project__points__fisheye_8m_source.html#l00157">project_points_fisheye.m:157</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a0903a189cbe112bce4b75bbc7c50357c"><div class="ttname"><a href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a></div><div class="ttdeci">xd</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00063">apply_distortion.m:63</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="asmall__test__script_8m_html_ab7fd51748de2e6629029180d5d37ec10"><div class="ttname"><a href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a></div><div class="ttdeci">[479.5200 236.0800 608.4100 415.3700 461.0000 40.0000 451.4800 308.7000 373.9900 314.8900 299.3200 319.1300 231.5500 321.3700 443.7300 282.9200 378.3600 288.3000 314.6900 292.7400 255.4700 296.2300]' x</div><div class="ttdef"><b>Definition:</b> <a href="small__test__script_8m_source.html#l00018">small_test_script.m:18</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_af9bf3838192b963bbc36e77f87442af1"><div class="ttname"><a href="apply__distortion_8m.html#af9bf3838192b963bbc36e77f87442af1">delta_x</a></div><div class="ttdeci">delta_x</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00048">apply_distortion.m:48</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a7eb610a82f30382183a093498dbc682f"><div class="ttname"><a href="apply__distortion_8m.html#a7eb610a82f30382183a093498dbc682f">coeff</a></div><div class="ttdeci">coeff</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00033">apply_distortion.m:33</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_a41ceb989059f7f0fd28f90cc8e5f4082"><div class="ttname"><a href="apply__distortion2_8m.html#a41ceb989059f7f0fd28f90cc8e5f4082">x2</a></div><div class="ttdeci">norm(x2-xd)/norm(x2 - x_pred) % Test on x x2</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00100">apply_distortion2.m:100</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a0daf11681dae78cb9c44c93169115c12"><div class="ttname"><a href="apply__distortion_8m.html#a0daf11681dae78cb9c44c93169115c12">dcdistdk</a></div><div class="ttdeci">if dcdistdk</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00027">apply_distortion.m:27</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a2f61d5e0e97d1e5917839088cb83bb97"><div class="ttname"><a href="apply__distortion_8m.html#a2f61d5e0e97d1e5917839088cb83bb97">a2</a></div><div class="ttdeci">tangential a2</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00045">apply_distortion.m:45</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a489630d61c55f2188f687d347393e5d0"><div class="ttname"><a href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a></div><div class="ttdeci">tangential distortion</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00044">apply_distortion.m:44</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_abae42d8e51a0eb43fe8aebb87b4719a0"><div class="ttname"><a href="apply__distortion2_8m.html#abae42d8e51a0eb43fe8aebb87b4719a0">Jacobians</a></div><div class="ttdeci">Test of the Jacobians</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00078">apply_distortion2.m:78</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7a134e91d2540aeba432404d6104a7ee"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7a134e91d2540aeba432404d6104a7ee">length</a></div><div class="ttdeci">if Estimation of focal length</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00146">click_ima_calib3D.m:146</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a41fcba09f2bdcdf315ba4119dc7978dd"><div class="ttname"><a href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a></div><div class="ttdeci">cc</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00053">apply_distortion.m:53</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a944b0ff7b0378fbacbea580c66148200"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a></div><div class="ttdeci">Initialization of the global parameter vector</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00297">go_calib_optim_iter.m:297</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="apply__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00028">apply_distortion.m:28</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a65ba841e01d6db7733e90a5b7f9e6f80"><div class="ttname"><a href="apply__distortion_8m.html#a65ba841e01d6db7733e90a5b7f9e6f80">bb</a></div><div class="ttdeci">bb</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00052">apply_distortion.m:52</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a5f6d31910da0aff40bbe5bd83542a7d2"><div class="ttname"><a href="apply__distortion_8m.html#a5f6d31910da0aff40bbe5bd83542a7d2">ddelta_xdk</a></div><div class="ttdeci">if ddelta_xdk</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00056">apply_distortion.m:56</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a5bf8e9bd225c9965657036965db3c3fb"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a></div><div class="ttdeci">use the full distortion Take the complete distortion model n</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a0f4d6a153ee1a256a0223b60bd45a272"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a0f4d6a153ee1a256a0223b60bd45a272">reshape</a></div><div class="ttdeci">reshape(ones(6, 1) *active_images, 6 *n_ima, 1)]</div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a509a674bd7926c5406b815a055d17834"><div class="ttname"><a href="apply__distortion_8m.html#a509a674bd7926c5406b815a055d17834">a3</a></div><div class="ttdeci">a3</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00046">apply_distortion.m:46</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_aa679b1b769d25405c4adb4612360ae49"><div class="ttname"><a href="apply__distortion_8m.html#aa679b1b769d25405c4adb4612360ae49">dxd1dk</a></div><div class="ttdeci">if dxd1dk</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00036">apply_distortion.m:36</a></div></div>
+<div class="ttc" id="awillson__convert_8m_html_a133c81a8d59c8baec1a46a7d72d0f859"><div class="ttname"><a href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a></div><div class="ttdeci">inv(dxddk' *dxddk) *(dxddk') *err norm)(k_step)/norm(k) if norm(k_step)/norm(k)&lt; 10e-10</div><div class="ttdef"><b>Definition:</b> <a href="willson__convert_8m_source.html#l00086">willson_convert.m:86</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a911e4f1620fa3907031829d8d91b48df"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a911e4f1620fa3907031829d8d91b48df">model</a></div><div class="ttdeci">use the full distortion model</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a8dbb40f7f7bb5a67b98c95563ac0f086"><div class="ttname"><a href="init__intrinsic__param_8m.html#a8dbb40f7f7bb5a67b98c95563ac0f086">a1</a></div><div class="ttdeci">a1</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00110">init_intrinsic_param.m:110</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_acda6303f8e0e875891d99e821a16e598"><div class="ttname"><a href="apply__distortion_8m.html#acda6303f8e0e875891d99e821a16e598">nargout</a></div><div class="ttdeci">if nargout</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00035">apply_distortion.m:35</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_acb7eb27b3b51bad0c1ad73154292be54"><div class="ttname"><a href="apply__distortion_8m.html#acb7eb27b3b51bad0c1ad73154292be54">xd1</a></div><div class="ttdeci">xd1</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00031">apply_distortion.m:31</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_a3df1716baaeed30ab9560fbe8db9e0d9"><div class="ttname"><a href="apply__distortion2_8m.html#a3df1716baaeed30ab9560fbe8db9e0d9">x_pred</a></div><div class="ttdeci">x_pred</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00093">apply_distortion2.m:93</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_af7abae0a18c54f8b3ca80e0759e893f5"><div class="ttname"><a href="apply__distortion2_8m.html#af7abae0a18c54f8b3ca80e0759e893f5">r4</a></div><div class="ttdeci">Add r4</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00010">apply_distortion2.m:10</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a5c659f4dca46df7f520c7220c4ebde8b"><div class="ttname"><a href="apply__distortion_8m.html#a5c659f4dca46df7f520c7220c4ebde8b">k</a></div><div class="ttdeci">k(3) *a3+k(4) *a1]</div></div>
+<div class="ttc" id="adownsample_8m_html_ae84984b103dbbea104e6b4a314a3d65e"><div class="ttname"><a href="downsample_8m.html#ae84984b103dbbea104e6b4a314a3d65e">r2</a></div><div class="ttdeci">col r2</div><div class="ttdef"><b>Definition:</b> <a href="downsample_8m_source.html#l00026">downsample.m:26</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_a6253185320d63763a06f49a9330d50e0"><div class="ttname"><a href="apply__distortion2_8m.html#a6253185320d63763a06f49a9330d50e0">r6</a></div><div class="ttdeci">r6</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00012">apply_distortion2.m:12</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a2bd5c17f8726d3d966e10e907bddf53e"><div class="ttname"><a href="apply__distortion_8m.html#a2bd5c17f8726d3d966e10e907bddf53e">dxddk</a></div><div class="ttdeci">if dxddk</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00066">apply_distortion.m:66</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

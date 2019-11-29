@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/clearwin.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">clearwin.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="clearwin_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;% Function <a class="code" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> clears <a class="code" href="_organizar_8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the wintx_i and winty_i</div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="clearwin_8m.html#a68ed8cdd8e22dc147d13590fc969bdc1">    2</a></span>&#160;% <a class="code" href="projector__marker_8m.html#a033c55db5d437a3394627c0ff03db82a">In</a> normal operation of the <a class="code" href="clearwin_8m.html#a68ed8cdd8e22dc147d13590fc969bdc1">toolbox</a>, <span class="keyword">this</span> <span class="keyword">function</span> should not be</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% useful.</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;% only in cases <a class="code" href="project__points_8m.html#a5552711badc1e09aa9eddba4cb539b69">where</a> you want <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> re-extract <a class="code" href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a> using the Extract grid <a class="code" href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a> another time... not common. You might as well use the Recomp. <a class="code" href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a>.</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<a class="code" href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a> <a class="code" href="analyse__error_8m.html#a24b06316e04bc706a3496f036ae493a1">exist</a>(&#39;<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a>&#39;,&#39;<a class="code" href="rodrigues_8m.html#a335628f2e9085305224b4f9cc6e95ed5">var</a>&#39;)~=1</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="clearwin_8m.html#adbb98be196b1d1c2886ddbe3eb852dea">return</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="clearwin_8m.html#afb358f48b1646c750fb9da6c6585be2b">    8</a></span>&#160;<a class="code" href="clearwin_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="clearwin_8m.html#af29949bd63fb009eacab5efd11399e40">   10</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="clearwin_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a> = 1:<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   <a class="code" href="clearwin_8m.html#ab57a1a46b5a7c732bd5e591017eb677b">eval</a>([<span class="stringliteral">&#39;clear wintx_&#39;</span> num2str(<a class="code" href="clearwin_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="stringliteral">&#39; winty_&#39;</span> num2str(<a class="code" href="clearwin_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>)]);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="clearwin_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclearwin_8m_html_adbb98be196b1d1c2886ddbe3eb852dea"><div class="ttname"><a href="clearwin_8m.html#adbb98be196b1d1c2886ddbe3eb852dea">return</a></div><div class="ttdeci">'n_ima', 'var' return()</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_ace17e3648be72bd3a88de20f27f1f5f0"><div class="ttname"><a href="cam__proj__calib_8m.html#ace17e3648be72bd3a88de20f27f1f5f0">if</a></div><div class="ttdeci">if</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00023">cam_proj_calib.m:23</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="areadras_8m_html_a7d252fd4b4ae9c8b8af5e91ef645fc1f"><div class="ttname"><a href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a></div><div class="ttdeci">READRAS Read an image file in sun raster format so that[X, map]</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00006">readras.m:6</a></div></div>
+<div class="ttc" id="arodrigues_8m_html_a335628f2e9085305224b4f9cc6e95ed5"><div class="ttname"><a href="rodrigues_8m.html#a335628f2e9085305224b4f9cc6e95ed5">var</a></div><div class="ttdeci">var</div><div class="ttdef"><b>Definition:</b> <a href="rodrigues_8m_source.html#l00139">rodrigues.m:139</a></div></div>
+<div class="ttc" id="aclearwin_8m_html_a68ed8cdd8e22dc147d13590fc969bdc1"><div class="ttname"><a href="clearwin_8m.html#a68ed8cdd8e22dc147d13590fc969bdc1">toolbox</a></div><div class="ttdeci">Function that clears all the wintx_i and winty_i In normal operation of the toolbox</div><div class="ttdef"><b>Definition:</b> <a href="clearwin_8m_source.html#l00002">clearwin.m:2</a></div></div>
+<div class="ttc" id="aanalyse__error_8m_html_a24b06316e04bc706a3496f036ae493a1"><div class="ttname"><a href="analyse__error_8m.html#a24b06316e04bc706a3496f036ae493a1">exist</a></div><div class="ttdeci">for if exist(['y_' num2str(kk)])</div></div>
+<div class="ttc" id="aclearwin_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="clearwin_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="clearwin_8m_source.html#l00008">clearwin.m:8</a></div></div>
+<div class="ttc" id="aclearwin_8m_html_ab57a1a46b5a7c732bd5e591017eb677b"><div class="ttname"><a href="clearwin_8m.html#ab57a1a46b5a7c732bd5e591017eb677b">eval</a></div><div class="ttdeci">for eval(['clear wintx_' num2str(kk) ' winty_' num2str(kk)])</div></div>
+<div class="ttc" id="aproject__points_8m_html_a5552711badc1e09aa9eddba4cb539b69"><div class="ttname"><a href="project__points_8m.html#a5552711badc1e09aa9eddba4cb539b69">where</a></div><div class="ttdeci">yy where</div><div class="ttdef"><b>Definition:</b> <a href="project__points_8m_source.html#l00032">project_points.m:32</a></div></div>
+<div class="ttc" id="aclearwin_8m_html_af29949bd63fb009eacab5efd11399e40"><div class="ttname"><a href="clearwin_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a></div><div class="ttdeci">for kk</div><div class="ttdef"><b>Definition:</b> <a href="clearwin_8m_source.html#l00010">clearwin.m:10</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_a5c344952fc5d4209f5a4cd0922c051d0"><div class="ttname"><a href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a></div><div class="ttdeci">if n_ima</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00007">add_suppress.m:7</a></div></div>
+<div class="ttc" id="aprojector__marker_8m_html_a033c55db5d437a3394627c0ff03db82a"><div class="ttname"><a href="projector__marker_8m.html#a033c55db5d437a3394627c0ff03db82a">In</a></div><div class="ttdeci">In</div><div class="ttdef"><b>Definition:</b> <a href="projector__marker_8m_source.html#l00025">projector_marker.m:25</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_aef7934e13ef374e615199c9c1405210c"><div class="ttname"><a href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a></div><div class="ttdeci">Sort the corners</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00062">click_ima_calib.m:62</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_a00a349297fa58bc80ff5329e25dcfe28"><div class="ttname"><a href="_organizar_8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a></div><div class="ttdeci">clear all</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00001">Organizar.m:1</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

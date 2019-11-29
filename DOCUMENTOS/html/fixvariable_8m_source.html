@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/fixvariable.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fixvariable.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fixvariable_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="fixvariable_8m.html#a43f3a5639a8a1c03e7efc18705f65fd9">    1</a></span>&#160;% Code <a class="code" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> clears an empty <a class="code" href="fixvariable_8m.html#a43f3a5639a8a1c03e7efc18705f65fd9">variable</a>, or <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a> vsriable.</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;% Does not <a class="code" href="click__calib__fisheye__no__read_8m.html#a089de068562fd81ac06ce9b0b953934b">clear</a> <a class="code" href="fixvariable_8m.html#a529202b30e6f6ea32403774a04f18a6c">structures</a>, or cells.</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;if <a class="code" href="fixvariable_8m.html#a05aa4deda2336b01a568ed8cbd1cc682">exist</a>(<span class="stringliteral">&#39;var2fix&#39;</span>)==1,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">if</span>   <a class="code" href="fixvariable_8m.html#af72b67f30565de5e797f240c51388444">eval</a>([<span class="stringliteral">&#39;exist(&#39;</span><span class="stringliteral">&#39;&#39;</span> <a class="code" href="click__calib_8m.html#ac4cc3c83c296f6e6990c8c6193a40b78">var2fix</a> <span class="charliteral">&#39;&#39;&#39;</span>) == 1<span class="stringliteral">&#39;]),</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">        if eval([&#39;</span><a class="code" href="add__suppress_8m.html#abd7b8b53438d5caf4b9acf4199c96103">isempty</a>(<span class="stringliteral">&#39; var2fix &#39;</span>)<span class="stringliteral">&#39;]),</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">            eval([&#39;</span><a class="code" href="click__calib__fisheye__no__read_8m.html#a089de068562fd81ac06ce9b0b953934b">clear</a> <span class="stringliteral">&#39; var2fix ]);</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">        else</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral">            if eval([&#39;</span>~isstruct(<span class="stringliteral">&#39; var2fix &#39;</span>)<span class="stringliteral">&#39;]),</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">                if eval([&#39;</span>~iscell(<span class="stringliteral">&#39; var2fix &#39;</span>)<span class="stringliteral">&#39;]),</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">                    if eval([&#39;</span><a class="code" href="check__extracted__images_8m.html#abf688f29fbb5cf3b5caeabbcb04d2215">isnan</a>(<span class="stringliteral">&#39; var2fix &#39;</span>(1))<span class="stringliteral">&#39;]),</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">                        eval([&#39;</span><a class="code" href="click__calib__fisheye__no__read_8m.html#a089de068562fd81ac06ce9b0b953934b">clear</a> <span class="stringliteral">&#39; var2fix ]);</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral">                    end; </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">                end;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">            end;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">        end;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">    end;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">end;</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aadd__suppress_8m_html_abd7b8b53438d5caf4b9acf4199c96103"><div class="ttname"><a href="add__suppress_8m.html#abd7b8b53438d5caf4b9acf4199c96103">isempty</a></div><div class="ttdeci">if isempty(choice)</div></div>
+<div class="ttc" id="aclick__calib__fisheye__no__read_8m_html_a089de068562fd81ac06ce9b0b953934b"><div class="ttname"><a href="click__calib__fisheye__no__read_8m.html#a089de068562fd81ac06ce9b0b953934b">clear</a></div><div class="ttdeci">Step used to clean the memory if a previous atttempt has been made to read the entire set of images into clear(['I_' num2str(kk)])</div></div>
+<div class="ttc" id="afixvariable_8m_html_af72b67f30565de5e797f240c51388444"><div class="ttname"><a href="fixvariable_8m.html#af72b67f30565de5e797f240c51388444">eval</a></div><div class="ttdeci">Code that clears an empty or a NaN vsriable Does not clear or cells if if eval(['exist(''' var2fix ''')==1'])</div></div>
+<div class="ttc" id="areadras_8m_html_a7d252fd4b4ae9c8b8af5e91ef645fc1f"><div class="ttname"><a href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a></div><div class="ttdeci">READRAS Read an image file in sun raster format so that[X, map]</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00006">readras.m:6</a></div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="afixvariable_8m_html_a43f3a5639a8a1c03e7efc18705f65fd9"><div class="ttname"><a href="fixvariable_8m.html#a43f3a5639a8a1c03e7efc18705f65fd9">variable</a></div><div class="ttdeci">Code that clears an empty variable</div><div class="ttdef"><b>Definition:</b> <a href="fixvariable_8m_source.html#l00001">fixvariable.m:1</a></div></div>
+<div class="ttc" id="acheck__extracted__images_8m_html_abf688f29fbb5cf3b5caeabbcb04d2215"><div class="ttname"><a href="check__extracted__images_8m.html#abf688f29fbb5cf3b5caeabbcb04d2215">isnan</a></div><div class="ttdeci">if isnan(xkk(1))</div></div>
+<div class="ttc" id="asaving__calib_8m_html_a77607c656f2325b76569b254455bc039"><div class="ttname"><a href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a></div><div class="ttdeci">NaN</div><div class="ttdef"><b>Definition:</b> <a href="saving__calib_8m_source.html#l00109">saving_calib.m:109</a></div></div>
+<div class="ttc" id="afixvariable_8m_html_a05aa4deda2336b01a568ed8cbd1cc682"><div class="ttname"><a href="fixvariable_8m.html#a05aa4deda2336b01a568ed8cbd1cc682">exist</a></div><div class="ttdeci">Code that clears an empty or a NaN vsriable Does not clear or cells if exist('var2fix')</div></div>
+<div class="ttc" id="afixvariable_8m_html_a529202b30e6f6ea32403774a04f18a6c"><div class="ttname"><a href="fixvariable_8m.html#a529202b30e6f6ea32403774a04f18a6c">structures</a></div><div class="ttdeci">Code that clears an empty or a NaN vsriable Does not clear structures</div><div class="ttdef"><b>Definition:</b> <a href="fixvariable_8m_source.html#l00001">fixvariable.m:1</a></div></div>
+<div class="ttc" id="aclick__calib_8m_html_ac4cc3c83c296f6e6990c8c6193a40b78"><div class="ttname"><a href="click__calib_8m.html#ac4cc3c83c296f6e6990c8c6193a40b78">var2fix</a></div><div class="ttdeci">var2fix</div><div class="ttdef"><b>Definition:</b> <a href="click__calib_8m_source.html#l00005">click_calib.m:5</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

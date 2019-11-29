@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/comp_ext_calib.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">comp_ext_calib.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="comp__ext__calib_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;%%% Computes the extrinsic <a class="code" href="cam__proj__calib_8m.html#aafd6b8a4b32e9e967ee9372af2b8b5e2">parameters</a> <span class="keywordflow">for</span> <a class="code" href="_organizar_8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the active <a class="code" href="namespacecalibration.html">calibration</a> <a class="code" href="cam__proj__calib_8m.html#a5751dd79fe12fec35f5667295dbce97d">images</a> </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="comp__ext__calib_8m.html#a0d062f92217e4e073995683900fdadcb">    3</a></span>&#160;<a class="code" href="comp__ext__calib_8m.html#a0d062f92217e4e073995683900fdadcb">check_active_images</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="comp__ext__calib_8m.html#a8fa10812f5d76346b84586af7533a326">    5</a></span>&#160;<a class="code" href="comp__ext__calib_8m.html#a8fa10812f5d76346b84586af7533a326">N_points_views</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(1,<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a>);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">    7</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a> = 1:<a class="code" href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a>,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="comp__ext__calib_8m.html#acb592f9dbf9e0c1c3baf44abdd1658ee">exist</a>([<span class="stringliteral">&#39;x_&#39;</span> num2str(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>)]),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#ac102825c4a56ce06d0df59ece7ead8db">eval</a>([<span class="stringliteral">&#39;x_kk = x_&#39;</span> num2str(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="charliteral">&#39;;&#39;</span>]);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#ac102825c4a56ce06d0df59ece7ead8db">eval</a>([<span class="stringliteral">&#39;X_kk = X_&#39;</span> num2str(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="charliteral">&#39;;&#39;</span>]);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="comp__ext__calib_8m.html#ab2e2b7c58c27cac44995f7d791518ace">isnan</a>(<a class="code" href="export__calib__data_8m.html#a5ea0ad593821902850aafb73aa158f49">x_kk</a>(1,1))),</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">if</span> <a class="code" href="comp__ext__calib_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a>(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>),</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <a class="code" href="comp__ext__calib_8m.html#a938fec2fd6424edc2a4f5bfa6392e11e">fprintf</a>(1,<span class="stringliteral">&#39;Warning: Cannot calibrate with image %d. Need to extract grid corners first.\n&#39;</span>,<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>)</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="comp__ext__calib_8m.html#a6ae8de2944c8ebcc485ffe8b4f0ff568">   17</a></span>&#160;                <a class="code" href="comp__ext__calib_8m.html#a938fec2fd6424edc2a4f5bfa6392e11e">fprintf</a>(1,&#39;         Set <a class="code" href="comp__ext__calib_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a>(%<a class="code" href="click__stereo_8m.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>)=1; and run Extract grid <a class="code" href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a>.\<a class="code" href="comp__ext__calib_8m.html#a6ae8de2944c8ebcc485ffe8b4f0ff568">n</a>&#39;,<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#a47aaedc05d1a5c6b3d579ab03191b443">if</a> <a class="code" href="comp__ext__calib_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a>(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>),</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#a8fa10812f5d76346b84586af7533a326">N_points_views</a>(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="export__calib__data_8m.html#a5ea0ad593821902850aafb73aa158f49">x_kk</a>,2);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            [<a class="code" href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a>,<a class="code" href="comp__ext__calib_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a>] = compute_extrinsic_init(<a class="code" href="export__calib__data_8m.html#a5ea0ad593821902850aafb73aa158f49">x_kk</a>,X_kk,<a class="code" href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>,<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>,<a class="code" href="calib__gui__normal_8m.html#abad12e09f1c957bb512efc7dd862cd16">kc</a>,<a class="code" href="cam__proj__calib_8m.html#a3154fb25e7e4f9c0e48d2bfd282c38ea">alpha_c</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="comp__ext__calib_8m.html#ae7e5373abef0edd1dfd49de541b6f42d">   23</a></span>&#160;            [<a class="code" href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a>,<a class="code" href="comp__ext__calib_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a>,<a class="code" href="cam__proj__extract__param_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a>,JJ_kk] = compute_extrinsic_refine(<a class="code" href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a>,<a class="code" href="comp__ext__calib_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a>,<a class="code" href="export__calib__data_8m.html#a5ea0ad593821902850aafb73aa158f49">x_kk</a>,X_kk,<a class="code" href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>,<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>,<a class="code" href="calib__gui__normal_8m.html#abad12e09f1c957bb512efc7dd862cd16">kc</a>,<a class="code" href="cam__proj__calib_8m.html#a3154fb25e7e4f9c0e48d2bfd282c38ea">alpha_c</a>,20,<a class="code" href="compute__extrinsic_8m.html#a58f2f7f60e46ffbbf0832fd7a5a719b2">thresh_cond</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#a47aaedc05d1a5c6b3d579ab03191b443">if</a> <a class="code" href="comp__ext__calib_8m.html#ae7e5373abef0edd1dfd49de541b6f42d">check_cond</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <a class="code" href="comp__ext__calib_8m.html#a47aaedc05d1a5c6b3d579ab03191b443">if</a> (cond(JJ_kk)&gt; <a class="code" href="compute__extrinsic_8m.html#a58f2f7f60e46ffbbf0832fd7a5a719b2">thresh_cond</a>),</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                    <a class="code" href="comp__ext__calib_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a>(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">   27</a></span>&#160;                    <a class="code" href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="comp__ext__calib_8m.html#a4508a179901753e284c1a88754994d88">   28</a></span>&#160;                    <a class="code" href="comp__ext__calib_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    <a class="code" href="comp__ext__calib_8m.html#a938fec2fd6424edc2a4f5bfa6392e11e">fprintf</a>(1,&#39;\nWarning: View <span class="preprocessor">#%d ill-conditioned. This image is now set inactive.\n&#39;,kk)</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    <a class="code" href="go__calib__optim_8m.html#af5313f00cb95e69c1a3698d43b22a132">desactivated_images</a> = [desactivated_images kk];</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">if</span> <a class="code" href="comp__ext__calib_8m.html#ab2e2b7c58c27cac44995f7d791518ace">isnan</a>(<a class="code" href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a>(1,1)),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                %<a class="code" href="comp__ext__calib_8m.html#a938fec2fd6424edc2a4f5bfa6392e11e">fprintf</a>(1,<span class="stringliteral">&#39;\nWarning: Desactivating image %d. Re-activate it later by typing:\nactive_images(%d)=1;\nand re-run optimization\n&#39;</span>,[<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a> <a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>])</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <a class="code" href="comp__ext__calib_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a>(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a> = <a class="code" href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a>*<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(3,1);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="comp__ext__calib_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a>(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#a938fec2fd6424edc2a4f5bfa6392e11e">fprintf</a>(1,<span class="stringliteral">&#39;Warning: Cannot calibrate with image %d. Need to extract grid corners first.\n&#39;</span>,<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="comp__ext__calib_8m.html#a938fec2fd6424edc2a4f5bfa6392e11e">fprintf</a>(1,<span class="stringliteral">&#39;         Set active_images(%d)=1; and run Extract grid corners.\n&#39;</span>,<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="comp__ext__calib_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a>(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="comp__ext__calib_8m.html#ac102825c4a56ce06d0df59ece7ead8db">eval</a>([<span class="stringliteral">&#39;omc_&#39;</span> num2str(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="stringliteral">&#39; = omckk;&#39;</span>]);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="comp__ext__calib_8m.html#ac102825c4a56ce06d0df59ece7ead8db">eval</a>([<span class="stringliteral">&#39;Tc_&#39;</span> num2str(<a class="code" href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="stringliteral">&#39; = Tckk;&#39;</span>]);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="code" href="comp__ext__calib_8m.html#a0d062f92217e4e073995683900fdadcb">check_active_images</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_a938fec2fd6424edc2a4f5bfa6392e11e"><div class="ttname"><a href="comp__ext__calib_8m.html#a938fec2fd6424edc2a4f5bfa6392e11e">fprintf</a></div><div class="ttdeci">if fprintf(1, 'Warning:Cannot calibrate with image %d. Need to extract grid corners first.\n', kk) fprintf(1</div></div>
+<div class="ttc" id="aclick__stereo_8m_html_a1aabac6d068eef6a7bad3fdf50a05cc8"><div class="ttname"><a href="click__stereo_8m.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a></div><div class="ttdeci">d</div><div class="ttdef"><b>Definition:</b> <a href="click__stereo_8m_source.html#l00037">click_stereo.m:37</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_ab2e2b7c58c27cac44995f7d791518ace"><div class="ttname"><a href="comp__ext__calib_8m.html#ab2e2b7c58c27cac44995f7d791518ace">isnan</a></div><div class="ttdeci">if isnan(omckk(1, 1))</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a5751dd79fe12fec35f5667295dbce97d"><div class="ttname"><a href="cam__proj__calib_8m.html#a5751dd79fe12fec35f5667295dbce97d">images</a></div><div class="ttdeci">Reprojection on the original images</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00130">cam_proj_calib.m:130</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_a4508a179901753e284c1a88754994d88"><div class="ttname"><a href="comp__ext__calib_8m.html#a4508a179901753e284c1a88754994d88">Tckk</a></div><div class="ttdeci">Tckk</div><div class="ttdef"><b>Definition:</b> <a href="comp__ext__calib_8m_source.html#l00028">comp_ext_calib.m:28</a></div></div>
+<div class="ttc" id="acam__proj__extract__param_8m_html_a5c3d7d7c3c32312381aafa360fd6e1b8"><div class="ttname"><a href="cam__proj__extract__param_8m.html#a5c3d7d7c3c32312381aafa360fd6e1b8">Rckk</a></div><div class="ttdeci">Rckk</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__extract__param_8m_source.html#l00020">cam_proj_extract_param.m:20</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_aa18517c7b1adc2d1c4bf6296c9c80863"><div class="ttname"><a href="comp__ext__calib_8m.html#aa18517c7b1adc2d1c4bf6296c9c80863">active_images</a></div><div class="ttdeci">if active_images(kk)</div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a41fcba09f2bdcdf315ba4119dc7978dd"><div class="ttname"><a href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a></div><div class="ttdeci">cc</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00053">apply_distortion.m:53</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_a8fa10812f5d76346b84586af7533a326"><div class="ttname"><a href="comp__ext__calib_8m.html#a8fa10812f5d76346b84586af7533a326">N_points_views</a></div><div class="ttdeci">N_points_views</div><div class="ttdef"><b>Definition:</b> <a href="comp__ext__calib_8m_source.html#l00005">comp_ext_calib.m:5</a></div></div>
+<div class="ttc" id="a_compute3_d_8m_html_a72d54db2b27ce046aab6e6a414c407e9"><div class="ttname"><a href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a></div><div class="ttdeci">Reconstruction of the structure of the striped object fc</div><div class="ttdef"><b>Definition:</b> <a href="_compute3_d_8m_source.html#l00003">Compute3D.m:3</a></div></div>
+<div class="ttc" id="ago__calib__optim_8m_html_af5313f00cb95e69c1a3698d43b22a132"><div class="ttname"><a href="go__calib__optim_8m.html#af5313f00cb95e69c1a3698d43b22a132">desactivated_images</a></div><div class="ttdeci">desactivated_images</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim_8m_source.html#l00042">go_calib_optim.m:42</a></div></div>
+<div class="ttc" id="acompute__extrinsic_8m_html_a58f2f7f60e46ffbbf0832fd7a5a719b2"><div class="ttname"><a href="compute__extrinsic_8m.html#a58f2f7f60e46ffbbf0832fd7a5a719b2">thresh_cond</a></div><div class="ttdeci">Method then computes the pose Important functions called within that thresh_cond</div><div class="ttdef"><b>Definition:</b> <a href="compute__extrinsic_8m_source.html#l00039">compute_extrinsic.m:39</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a3154fb25e7e4f9c0e48d2bfd282c38ea"><div class="ttname"><a href="cam__proj__calib_8m.html#a3154fb25e7e4f9c0e48d2bfd282c38ea">alpha_c</a></div><div class="ttdeci">alpha_c</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00162">cam_proj_calib.m:162</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_ac102825c4a56ce06d0df59ece7ead8db"><div class="ttname"><a href="comp__ext__calib_8m.html#ac102825c4a56ce06d0df59ece7ead8db">eval</a></div><div class="ttdeci">for if eval(['x_kk=x_' num2str(kk) ';'])</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_ae7e5373abef0edd1dfd49de541b6f42d"><div class="ttname"><a href="comp__ext__calib_8m.html#ae7e5373abef0edd1dfd49de541b6f42d">check_cond</a></div><div class="ttdeci">if check_cond</div><div class="ttdef"><b>Definition:</b> <a href="comp__ext__calib_8m_source.html#l00023">comp_ext_calib.m:23</a></div></div>
+<div class="ttc" id="asaving__calib_8m_html_a77607c656f2325b76569b254455bc039"><div class="ttname"><a href="saving__calib_8m.html#a77607c656f2325b76569b254455bc039">NaN</a></div><div class="ttdeci">NaN</div><div class="ttdef"><b>Definition:</b> <a href="saving__calib_8m_source.html#l00109">saving_calib.m:109</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_a0d062f92217e4e073995683900fdadcb"><div class="ttname"><a href="comp__ext__calib_8m.html#a0d062f92217e4e073995683900fdadcb">check_active_images</a></div><div class="ttdeci">Computes the extrinsic parameters for all the active calibration images check_active_images</div><div class="ttdef"><b>Definition:</b> <a href="comp__ext__calib_8m_source.html#l00003">comp_ext_calib.m:3</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_a6ae8de2944c8ebcc485ffe8b4f0ff568"><div class="ttname"><a href="comp__ext__calib_8m.html#a6ae8de2944c8ebcc485ffe8b4f0ff568">n</a></div><div class="ttdeci">and run Extract grid corners n</div><div class="ttdef"><b>Definition:</b> <a href="comp__ext__calib_8m_source.html#l00017">comp_ext_calib.m:17</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_a47aaedc05d1a5c6b3d579ab03191b443"><div class="ttname"><a href="comp__ext__calib_8m.html#a47aaedc05d1a5c6b3d579ab03191b443">if</a></div><div class="ttdeci">if(isnan(x_kk(1, 1)))</div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="comp__ext__calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">and run Extract grid corners kk end</div><div class="ttdef"><b>Definition:</b> <a href="comp__ext__calib_8m_source.html#l00017">comp_ext_calib.m:17</a></div></div>
+<div class="ttc" id="anamespacecalibration_html"><div class="ttname"><a href="namespacecalibration.html">calibration</a></div><div class="ttdef"><b>Definition:</b> <a href="calibration_8h_source.html#l00009">calibration.h:9</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_a5c344952fc5d4209f5a4cd0922c051d0"><div class="ttname"><a href="add__suppress_8m.html#a5c344952fc5d4209f5a4cd0922c051d0">n_ima</a></div><div class="ttdeci">if n_ima</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00007">add_suppress.m:7</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_acb592f9dbf9e0c1c3baf44abdd1658ee"><div class="ttname"><a href="comp__ext__calib_8m.html#acb592f9dbf9e0c1c3baf44abdd1658ee">exist</a></div><div class="ttdeci">for if exist(['x_' num2str(kk)])</div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_aef7934e13ef374e615199c9c1405210c"><div class="ttname"><a href="click__ima__calib_8m.html#aef7934e13ef374e615199c9c1405210c">corners</a></div><div class="ttdeci">Sort the corners</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00062">click_ima_calib.m:62</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_a00a349297fa58bc80ff5329e25dcfe28"><div class="ttname"><a href="_organizar_8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a></div><div class="ttdeci">clear all</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00001">Organizar.m:1</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_aafd6b8a4b32e9e967ee9372af2b8b5e2"><div class="ttname"><a href="cam__proj__calib_8m.html#aafd6b8a4b32e9e967ee9372af2b8b5e2">parameters</a></div><div class="ttdeci">Save camera parameters</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00045">cam_proj_calib.m:45</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_af29949bd63fb009eacab5efd11399e40"><div class="ttname"><a href="comp__ext__calib_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a></div><div class="ttdeci">for kk</div><div class="ttdef"><b>Definition:</b> <a href="comp__ext__calib_8m_source.html#l00007">comp_ext_calib.m:7</a></div></div>
+<div class="ttc" id="acomp__ext__calib_8m_html_a0428f240719e50213a56a96b5c94d0cf"><div class="ttname"><a href="comp__ext__calib_8m.html#a0428f240719e50213a56a96b5c94d0cf">omckk</a></div><div class="ttdeci">omckk</div><div class="ttdef"><b>Definition:</b> <a href="comp__ext__calib_8m_source.html#l00027">comp_ext_calib.m:27</a></div></div>
+<div class="ttc" id="aexport__calib__data_8m_html_a5ea0ad593821902850aafb73aa158f49"><div class="ttname"><a href="export__calib__data_8m.html#a5ea0ad593821902850aafb73aa158f49">x_kk</a></div><div class="ttdeci">x_kk</div><div class="ttdef"><b>Definition:</b> <a href="export__calib__data_8m_source.html#l00055">export_calib_data.m:55</a></div></div>
+<div class="ttc" id="acalib__gui__normal_8m_html_abad12e09f1c957bb512efc7dd862cd16"><div class="ttname"><a href="calib__gui__normal_8m.html#abad12e09f1c957bb512efc7dd862cd16">kc</a></div><div class="ttdeci">clear fc cc kc KK kc</div><div class="ttdef"><b>Definition:</b> <a href="calib__gui__normal_8m_source.html#l00016">calib_gui_normal.m:16</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/icp.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">icp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="icp_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// icp.cpp : Defines the entry point for the console application.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*-------------------------------------------------------</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">Interfaz 2016, all rights reserved.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">This code defines a set of functions to align rigid objects.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">Both objects, from now on referred as source and target,</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">are Point Clouds.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">Registration is performed in two steps. First, the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">source is brought near the target in a process involving</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">voxelization and a feature-based RANSAC; prior to</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">features estimation, normals are to be computed. Second,</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">an ICP algorithm is applied to source in order to match</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">it to target.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">Point clouds can be read from text files using read_file.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">Author: Jesús Muñoz</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">Version: 0.1</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">---------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;pcl/point_types.h&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;pcl/point_cloud.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;pcl/common/time.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;pcl/console/print.h&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;pcl/features/normal_3d.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;pcl/features/fpfh.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;pcl/filters/filter.h&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;pcl/filters/radius_outlier_removal.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;pcl/filters/voxel_grid.h&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;pcl/registration/icp_nl.h&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;pcl/registration/sample_consensus_prerejective.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;pcl/visualization/cloud_viewer.h&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;opencv\cv.hpp&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// Types</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="icp_8h.html#addedd5f094ff6a9309d30e396aa0514b">   43</a></span>&#160;<span class="keyword">typedef</span> pcl::PointNormal <a class="code" href="icp_8h.html#addedd5f094ff6a9309d30e396aa0514b">PointNT</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">   44</a></span>&#160;<span class="keyword">typedef</span> pcl::PointCloud&lt;PointNT&gt; <a class="code" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="icp_8h.html#a0247fab5667a82dc7d876c2944fb1a82">   45</a></span>&#160;<span class="keyword">typedef</span> pcl::FPFHSignature33 <a class="code" href="icp_8h.html#a0247fab5667a82dc7d876c2944fb1a82">FeatureT</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="icp_8h.html#a81ea2857fb11a1371f8f85910c0c6567">   46</a></span>&#160;<span class="keyword">typedef</span> pcl::FPFHEstimation&lt;PointNT, PointNT, FeatureT&gt; <a class="code" href="icp_8h.html#a81ea2857fb11a1371f8f85910c0c6567">FeatureEstimationT</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="icp_8h.html#a1d57b3efb32bcb80b7d9eee199ec129c">   47</a></span>&#160;<span class="keyword">typedef</span> pcl::PointCloud&lt;FeatureT&gt; <a class="code" href="icp_8h.html#a1d57b3efb32bcb80b7d9eee199ec129c">FeatureCloudT</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="icp_8h.html#a8a252ebeb0a59670d57f27a59e90b63f">   48</a></span>&#160;<span class="keyword">typedef</span> pcl::RadiusOutlierRemoval&lt;PointNT&gt; <a class="code" href="icp_8h.html#a8a252ebeb0a59670d57f27a59e90b63f">RadiusOutlierRemovalT</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="icp_8h.html#abc1c9327acafcd9444aa5f5dc2e48c7f">   49</a></span>&#160;<span class="keyword">typedef</span> pcl::VoxelGrid&lt;PointNT&gt; <a class="code" href="icp_8h.html#abc1c9327acafcd9444aa5f5dc2e48c7f">VoxelGridT</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="icp_8h.html#af9f7d40f18e05df27c0cbfcf91815414">   50</a></span>&#160;<span class="keyword">typedef</span> pcl::NormalEstimation&lt;PointNT, PointNT&gt; <a class="code" href="icp_8h.html#af9f7d40f18e05df27c0cbfcf91815414">NormalEstimationT</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="icp_8h.html#af6e3801e4a90f10b0de111ee1fcb574c">   51</a></span>&#160;<span class="keyword">typedef</span> pcl::search::KdTree&lt;PointNT&gt; <a class="code" href="icp_8h.html#af6e3801e4a90f10b0de111ee1fcb574c">KdTreeT</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="icp_8h.html#a49128cba5f2855fec1a9d8f054a3a896">   52</a></span>&#160;<span class="keyword">typedef</span> pcl::SampleConsensusPrerejective&lt;PointNT, PointNT, FeatureT&gt; <a class="code" href="icp_8h.html#a49128cba5f2855fec1a9d8f054a3a896">SampleConsensusPrerejectiveT</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="icp_8h.html#acfddc67dd108d18922a84f03726f2029">   60</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="icp_8h.html#acfddc67dd108d18922a84f03726f2029">read_file</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>, <span class="keywordtype">int</span> numel, PointCloudT::Ptr cloud) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    cloud-&gt;width = numel;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    cloud-&gt;height = 1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    cloud-&gt;is_dense = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    cloud-&gt;points.resize(cloud-&gt;width * cloud-&gt;height);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::ifstream readFile(<a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// Load data</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; cloud-&gt;points.size(); ++<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        std::string <a class="code" href="compute__epipole_8m.html#a4ec713dc32daee0242ffd0a7acd31750">line</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        std::string <a class="code" href="rodrigues_8m.html#a6b3bf27f91a2ffbaa842ee4653a0009a">var1</a>, <a class="code" href="rodrigues_8m.html#a38c0194fc852208e7bef90026ae005ee">var2</a>, var3;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        getline(readFile, <a class="code" href="compute__epipole_8m.html#a4ec713dc32daee0242ffd0a7acd31750">line</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::istringstream <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>(<a class="code" href="compute__epipole_8m.html#a4ec713dc32daee0242ffd0a7acd31750">line</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a> &gt;&gt; <a class="code" href="rodrigues_8m.html#a6b3bf27f91a2ffbaa842ee4653a0009a">var1</a> &gt;&gt; <a class="code" href="rodrigues_8m.html#a38c0194fc852208e7bef90026ae005ee">var2</a> &gt;&gt; var3;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cloud-&gt;points[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].x = stof(<a class="code" href="rodrigues_8m.html#a6b3bf27f91a2ffbaa842ee4653a0009a">var1</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        cloud-&gt;points[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].y = stof(<a class="code" href="rodrigues_8m.html#a38c0194fc852208e7bef90026ae005ee">var2</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        cloud-&gt;points[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].z = stof(var3);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="icp_8h.html#add5a1848feb6a9aa24d9cb29fb3d1bdc">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="icp_8h.html#add5a1848feb6a9aa24d9cb29fb3d1bdc">bring_cloud_near</a>(PointCloudT::Ptr <span class="keywordtype">object</span>, PointCloudT::Ptr scene, Eigen::Matrix4f&amp; transformation, <span class="keywordtype">int</span> <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    FeatureCloudT::Ptr object_features(<span class="keyword">new</span> <a class="code" href="icp_8h.html#a1d57b3efb32bcb80b7d9eee199ec129c">FeatureCloudT</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    FeatureCloudT::Ptr scene_features(<span class="keyword">new</span> <a class="code" href="icp_8h.html#a1d57b3efb32bcb80b7d9eee199ec129c">FeatureCloudT</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    PointCloudT::Ptr object_aligned(<span class="keyword">new</span> <a class="code" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="icp_8h.html#a8a252ebeb0a59670d57f27a59e90b63f">RadiusOutlierRemovalT</a> outlierRemoval;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="icp_8h.html#af9f7d40f18e05df27c0cbfcf91815414">NormalEstimationT</a> nest;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="icp_8h.html#abc1c9327acafcd9444aa5f5dc2e48c7f">VoxelGridT</a> grid;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    KdTreeT::Ptr kdtree(<span class="keyword">new</span> pcl::search::KdTree&lt;PointNT&gt;);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> leaf = 10;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">double</span> radius = 10;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a>) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">// Remove outliers</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        outlierRemoval.setInputCloud(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">// Every point must have 10 neigbors within 10mm, or it will be removed.</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        outlierRemoval.setRadiusSearch(10);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        outlierRemoval.setMinNeighborsInRadius(10);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        outlierRemoval.filter(*<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        radius = 5;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        nest.setSearchMethod(kdtree);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="comment">// Downsample</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        grid.setLeafSize(leaf, leaf, leaf);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        grid.setInputCloud(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        grid.filter(*<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        grid.setInputCloud(scene);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        grid.filter(*scene);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        radius = 0.1;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// Estimate normals for scene</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    nest.setRadiusSearch(radius);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    nest.setInputCloud(scene);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    nest.compute(*scene);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">// Estimate features</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="icp_8h.html#a81ea2857fb11a1371f8f85910c0c6567">FeatureEstimationT</a> fest;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    fest.setRadiusSearch(50);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    fest.setInputCloud(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    fest.setInputNormals(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    fest.compute(*object_features);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    fest.setInputCloud(scene);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    fest.setInputNormals(scene);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    fest.compute(*scene_features);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">// Perform alignment</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="icp_8h.html#a49128cba5f2855fec1a9d8f054a3a896">SampleConsensusPrerejectiveT</a> align;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    align.setInputSource(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    align.setSourceFeatures(object_features);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    align.setInputTarget(scene);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    align.setTargetFeatures(scene_features);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    align.setMaximumIterations(50000); <span class="comment">// Number of RANSAC iterations</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    align.setNumberOfSamples(10); <span class="comment">// Number of points to sample for generating/prerejecting a pose</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    align.setCorrespondenceRandomness(10); <span class="comment">// Number of nearest features to use</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    align.setSimilarityThreshold(0.0001<a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a>); <span class="comment">// Polygonal edge length similarity threshold</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    align.setMaxCorrespondenceDistance(1.01<a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a> * leaf); <span class="comment">// Inlier threshold</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    align.setInlierFraction(0.95<a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a>); <span class="comment">// Required inlier fraction for accepting a pose hypothesis</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        pcl::ScopeTime <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>(<span class="stringliteral">&quot;Alignment&quot;</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        align.align(*object_aligned);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">if</span> (align.hasConverged())</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        pcl::transformPointCloud(*<span class="keywordtype">object</span>, *<span class="keywordtype">object</span>, align.getFinalTransformation());</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        transformation = align.getFinalTransformation().inverse();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        pcl::console::print_error(<span class="stringliteral">&quot;Alignment failed!\n&quot;</span>);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="icp_8h.html#a42ce499a27faae2aa4130d236a19733a">  176</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="icp_8h.html#a42ce499a27faae2aa4130d236a19733a">do_icp</a>(PointCloudT::Ptr <span class="keywordtype">object</span>, PointCloudT::Ptr scene, Eigen::Matrix4f&amp; transformation) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    pcl::IterativeClosestPointNonLinear&lt;PointNT, PointNT&gt; <a class="code" href="icp__teste_8h.html#ab6aeecab1541ddc92127168cfd92db1e">icp</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="icp__teste_8h.html#ab6aeecab1541ddc92127168cfd92db1e">icp</a>.setInputCloud(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="icp__teste_8h.html#ab6aeecab1541ddc92127168cfd92db1e">icp</a>.setInputTarget(scene);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="icp__teste_8h.html#ab6aeecab1541ddc92127168cfd92db1e">icp</a>.align(*<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    transformation = <a class="code" href="icp__teste_8h.html#ab6aeecab1541ddc92127168cfd92db1e">icp</a>.getFinalTransformation().inverse();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="icp_8h.html#aec59e8c716772606624c6820dff4dee2">  191</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="icp_8h.html#aec59e8c716772606624c6820dff4dee2">run_icp</a>(<span class="keyword">const</span> std::string&amp; source_file, <span class="keyword">const</span> std::string&amp; target_file, <span class="keywordtype">int</span> numel_source, <span class="keywordtype">int</span> numel_target, cv::Mat_&lt;double&gt;&amp; cloud_centroid)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">// Point clouds</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    PointCloudT::Ptr temp(<span class="keyword">new</span> <a class="code" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    PointCloudT::Ptr temp2(<span class="keyword">new</span> <a class="code" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a>);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    PointCloudT::Ptr object(<span class="keyword">new</span> <a class="code" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    PointCloudT::Ptr scene(<span class="keyword">new</span> <a class="code" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    PointCloudT::Ptr source(<span class="keyword">new</span> <a class="code" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    PointCloudT::Ptr target(<span class="keyword">new</span> <a class="code" href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    Eigen::Matrix4f transformation_n;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    Eigen::Matrix4f transformation_icp;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="icp_8h.html#acfddc67dd108d18922a84f03726f2029">read_file</a>(source_file, numel_source, source);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="icp_8h.html#acfddc67dd108d18922a84f03726f2029">read_file</a>(target_file, numel_target, target);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    pcl::copyPointCloud(*source, *<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    pcl::copyPointCloud(*target, *scene);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">switch</span> (numel_target) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">case</span> 32986:</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a> = 2;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">case</span> 23974:</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a> = 2;<span class="comment">//</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a> = 1;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="icp_8h.html#add5a1848feb6a9aa24d9cb29fb3d1bdc">bring_cloud_near</a>(<span class="keywordtype">object</span>, scene, transformation_n, <a class="code" href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="icp_8h.html#a42ce499a27faae2aa4130d236a19733a">do_icp</a>(<span class="keywordtype">object</span>, scene, transformation_icp);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    pcl::transformPointCloud(*target, *target, transformation_icp);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    pcl::transformPointCloud(*target, *target, transformation_n);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    Eigen::Matrix4f transformation = transformation_n * transformation_icp;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    boost::shared_ptr&lt; pcl::visualization::PCLVisualizer &gt; viewer(<span class="keyword">new</span> pcl::visualization::PCLVisualizer(<span class="stringliteral">&quot;3D Viewer&quot;</span>));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    viewer-&gt;setBackgroundColor(0, 0, 0);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">// white</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    pcl::visualization::PointCloudColorHandlerCustom&lt;PointNT&gt; target_color(target, 255, 255, 255);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    viewer-&gt;addPointCloud&lt;<a class="code" href="icp_8h.html#addedd5f094ff6a9309d30e396aa0514b">PointNT</a>&gt;(target, target_color, <span class="stringliteral">&quot;target&quot;</span>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    viewer-&gt;setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 10, <span class="stringliteral">&quot;target&quot;</span>);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// red</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    pcl::visualization::PointCloudColorHandlerCustom&lt;PointNT&gt; source_color(source, 255, 0, 0);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    viewer-&gt;addPointCloud&lt;<a class="code" href="icp_8h.html#addedd5f094ff6a9309d30e396aa0514b">PointNT</a>&gt;(source, source_color, <span class="stringliteral">&quot;source&quot;</span>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    viewer-&gt;setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 10, <span class="stringliteral">&quot;source&quot;</span>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    viewer-&gt;resetCamera();</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="comment">//while (!viewer-&gt;wasStopped())</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">//{</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">//  viewer-&gt;spinOnce();</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">//  boost::this_thread::sleep(boost::posix_time::microseconds(100000));</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">//}</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">//return (0);</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    cloud_centroid = (cv::Mat_&lt;double&gt;(3, 1) &lt;&lt; transformation(0, 3), transformation(1, 3), transformation(2, 3));</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">//return viewer;</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aicp_8h_html_af9f7d40f18e05df27c0cbfcf91815414"><div class="ttname"><a href="icp_8h.html#af9f7d40f18e05df27c0cbfcf91815414">NormalEstimationT</a></div><div class="ttdeci">pcl::NormalEstimation&lt; PointNT, PointNT &gt; NormalEstimationT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00050">icp.h:50</a></div></div>
+<div class="ttc" id="aicp_8h_html_ad93204a7f4525b1c5996b7fcd1288882"><div class="ttname"><a href="icp_8h.html#ad93204a7f4525b1c5996b7fcd1288882">PointCloudT</a></div><div class="ttdeci">pcl::PointCloud&lt; PointNT &gt; PointCloudT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00044">icp.h:44</a></div></div>
+<div class="ttc" id="aicp_8h_html_a0247fab5667a82dc7d876c2944fb1a82"><div class="ttname"><a href="icp_8h.html#a0247fab5667a82dc7d876c2944fb1a82">FeatureT</a></div><div class="ttdeci">pcl::FPFHSignature33 FeatureT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00045">icp.h:45</a></div></div>
+<div class="ttc" id="arodrigues_8m_html_a38c0194fc852208e7bef90026ae005ee"><div class="ttname"><a href="rodrigues_8m.html#a38c0194fc852208e7bef90026ae005ee">var2</a></div><div class="ttdeci">var2</div><div class="ttdef"><b>Definition:</b> <a href="rodrigues_8m_source.html#l00142">rodrigues.m:142</a></div></div>
+<div class="ttc" id="aicp_8h_html_add5a1848feb6a9aa24d9cb29fb3d1bdc"><div class="ttname"><a href="icp_8h.html#add5a1848feb6a9aa24d9cb29fb3d1bdc">bring_cloud_near</a></div><div class="ttdeci">void bring_cloud_near(PointCloudT::Ptr object, PointCloudT::Ptr scene, Eigen::Matrix4f &amp;transformation, int flag)</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00089">icp.h:89</a></div></div>
+<div class="ttc" id="aicp_8h_html_a81ea2857fb11a1371f8f85910c0c6567"><div class="ttname"><a href="icp_8h.html#a81ea2857fb11a1371f8f85910c0c6567">FeatureEstimationT</a></div><div class="ttdeci">pcl::FPFHEstimation&lt; PointNT, PointNT, FeatureT &gt; FeatureEstimationT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00046">icp.h:46</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter__weak_8m_html_a18cfc20aaeac2254c25e7b9a97a5f199"><div class="ttname"><a href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a></div><div class="ttdeci">f</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter__weak_8m_source.html#l00356">go_calib_optim_iter_weak.m:356</a></div></div>
+<div class="ttc" id="aicp_8h_html_a1d57b3efb32bcb80b7d9eee199ec129c"><div class="ttname"><a href="icp_8h.html#a1d57b3efb32bcb80b7d9eee199ec129c">FeatureCloudT</a></div><div class="ttdeci">pcl::PointCloud&lt; FeatureT &gt; FeatureCloudT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00047">icp.h:47</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00067">apply_distortion2.m:67</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a4ec713dc32daee0242ffd0a7acd31750"><div class="ttname"><a href="compute__epipole_8m.html#a4ec713dc32daee0242ffd0a7acd31750">line</a></div><div class="ttdeci">if Horizontal line</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00023">compute_epipole.m:23</a></div></div>
+<div class="ttc" id="aicp_8h_html_addedd5f094ff6a9309d30e396aa0514b"><div class="ttname"><a href="icp_8h.html#addedd5f094ff6a9309d30e396aa0514b">PointNT</a></div><div class="ttdeci">pcl::PointNormal PointNT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00043">icp.h:43</a></div></div>
+<div class="ttc" id="aicp_8h_html_af6e3801e4a90f10b0de111ee1fcb574c"><div class="ttname"><a href="icp_8h.html#af6e3801e4a90f10b0de111ee1fcb574c">KdTreeT</a></div><div class="ttdeci">pcl::search::KdTree&lt; PointNT &gt; KdTreeT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00051">icp.h:51</a></div></div>
+<div class="ttc" id="arodrigues_8m_html_a6b3bf27f91a2ffbaa842ee4653a0009a"><div class="ttname"><a href="rodrigues_8m.html#a6b3bf27f91a2ffbaa842ee4653a0009a">var1</a></div><div class="ttdeci">var1</div><div class="ttdef"><b>Definition:</b> <a href="rodrigues_8m_source.html#l00125">rodrigues.m:125</a></div></div>
+<div class="ttc" id="aicp_8h_html_a42ce499a27faae2aa4130d236a19733a"><div class="ttname"><a href="icp_8h.html#a42ce499a27faae2aa4130d236a19733a">do_icp</a></div><div class="ttdeci">void do_icp(PointCloudT::Ptr object, PointCloudT::Ptr scene, Eigen::Matrix4f &amp;transformation)</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00176">icp.h:176</a></div></div>
+<div class="ttc" id="aicp_8h_html_aec59e8c716772606624c6820dff4dee2"><div class="ttname"><a href="icp_8h.html#aec59e8c716772606624c6820dff4dee2">run_icp</a></div><div class="ttdeci">void run_icp(const std::string &amp;source_file, const std::string &amp;target_file, int numel_source, int numel_target, cv::Mat_&lt; double &gt; &amp;cloud_centroid)</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00191">icp.h:191</a></div></div>
+<div class="ttc" id="aicp__teste_8h_html_ab6aeecab1541ddc92127168cfd92db1e"><div class="ttname"><a href="icp__teste_8h.html#ab6aeecab1541ddc92127168cfd92db1e">icp</a></div><div class="ttdeci">void icp(cv::Mat_&lt; double &gt; &amp;q, cv::Mat_&lt; double &gt; &amp;p, int numel)</div><div class="ttdef"><b>Definition:</b> <a href="icp__teste_8h_source.html#l00029">icp_teste.h:29</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_aaccc9105df5383111407fd5b41255e23"><div class="ttname"><a href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a></div><div class="ttdeci">t</div><div class="ttdef"><b>Definition:</b> <a href="rectify__stereo__pair_8m_source.html#l00029">rectify_stereo_pair.m:29</a></div></div>
+<div class="ttc" id="arecomp__corner__calib_8m_html_ad354302590c04bf615eaee9f3294e32f"><div class="ttname"><a href="recomp__corner__calib_8m.html#ad354302590c04bf615eaee9f3294e32f">flag</a></div><div class="ttdeci">flag</div><div class="ttdef"><b>Definition:</b> <a href="recomp__corner__calib_8m_source.html#l00010">recomp_corner_calib.m:10</a></div></div>
+<div class="ttc" id="adownsample_8m_html_a8f60c8102d29fcd525162d02eed4566b"><div class="ttname"><a href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a></div><div class="ttdeci">ss</div><div class="ttdef"><b>Definition:</b> <a href="downsample_8m_source.html#l00036">downsample.m:36</a></div></div>
+<div class="ttc" id="aicp_8h_html_abc1c9327acafcd9444aa5f5dc2e48c7f"><div class="ttname"><a href="icp_8h.html#abc1c9327acafcd9444aa5f5dc2e48c7f">VoxelGridT</a></div><div class="ttdeci">pcl::VoxelGrid&lt; PointNT &gt; VoxelGridT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00049">icp.h:49</a></div></div>
+<div class="ttc" id="aicp_8h_html_a49128cba5f2855fec1a9d8f054a3a896"><div class="ttname"><a href="icp_8h.html#a49128cba5f2855fec1a9d8f054a3a896">SampleConsensusPrerejectiveT</a></div><div class="ttdeci">pcl::SampleConsensusPrerejective&lt; PointNT, PointNT, FeatureT &gt; SampleConsensusPrerejectiveT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00052">icp.h:52</a></div></div>
+<div class="ttc" id="aicp_8h_html_a8a252ebeb0a59670d57f27a59e90b63f"><div class="ttname"><a href="icp_8h.html#a8a252ebeb0a59670d57f27a59e90b63f">RadiusOutlierRemovalT</a></div><div class="ttdeci">pcl::RadiusOutlierRemoval&lt; PointNT &gt; RadiusOutlierRemovalT</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00048">icp.h:48</a></div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_ac0a984a0dc9111131f4ad1fe8088698a"><div class="ttname"><a href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a></div><div class="ttdeci">else Append mode file</div><div class="ttdef"><b>Definition:</b> <a href="matlab2opencv_8m_source.html#l00019">matlab2opencv.m:19</a></div></div>
+<div class="ttc" id="aicp_8h_html_acfddc67dd108d18922a84f03726f2029"><div class="ttname"><a href="icp_8h.html#acfddc67dd108d18922a84f03726f2029">read_file</a></div><div class="ttdeci">void read_file(const std::string &amp;file, int numel, PointCloudT::Ptr cloud)</div><div class="ttdef"><b>Definition:</b> <a href="icp_8h_source.html#l00060">icp.h:60</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

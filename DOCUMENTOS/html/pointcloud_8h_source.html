@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/pointcloud.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pointcloud.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pointcloud_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _POINTCLOUD_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _POINTCLOUD_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;opencv\cv.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;mmsystem.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma warning( disable : 4996 )</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_custom_camera_library.html">CustomCameraLibrary</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">using namespace </span><a class="code" href="error__analysis_8m.html#aeaba2e0ae10f2bcb87c1e9a04ceb54c2">std</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">using namespace </span>cv;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="pointcloud_8h.html#a8187a9af791c0a44ba67edd9cf266961">   17</a></span>&#160;<span class="preprocessor">    #define MANUAL 0            </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="pointcloud_8h.html#a0cc6f7717df9fbdc0f33efb88720a639">   18</a></span>&#160;<span class="preprocessor">    #define  AUTO  1            </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">            </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html">   25</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_custom_camera_library_1_1_cloud.html">Cloud</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//      static const int  MANUAL = 0;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//      static const int  AUTO = 1;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#a7ad1af30f701dd0a82f20ecee98c3e25">   34</a></span>&#160;        <a class="code" href="class_custom_camera_library_1_1_cloud.html#a7ad1af30f701dd0a82f20ecee98c3e25">~Cloud</a>(<span class="keywordtype">void</span>) {}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#a920a635f7d3dbf35d11d04a275027081">   42</a></span>&#160;        <a class="code" href="class_custom_camera_library_1_1_cloud.html#a920a635f7d3dbf35d11d04a275027081">Cloud</a>(<span class="keywordtype">string</span> <a class="code" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a>, <span class="keywordtype">int</span> <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a>) { </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            setType(<a class="code" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a>); </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            setMode(<a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            this_time = clock();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            last_time = this_time;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            status = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a> += <span class="stringliteral">&quot;.txt&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> * nameFile = <a class="code" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a>.c_str();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a> = fopen(nameFile, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">//writeHeader(fp);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#a42e1fd715a105ec1c3c2be46e4e91bb7">   58</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_custom_camera_library_1_1_cloud.html#a42e1fd715a105ec1c3c2be46e4e91bb7">getStatus</a>() { <span class="keywordflow">return</span> status; }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">bool</span> erasePoint(Point3d <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">bool</span> savePoint(Point3d <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a>, <span class="keywordtype">int</span> <a class="code" href="ginput2_8m.html#a2d9f7e20b86e4762cf9b01f10eeec45a">key</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">bool</span> savePoints(vector&lt;Point3d&gt; src);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">bool</span> eraseLast();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">bool</span> findPoint(Point3d <a class="code" href="centercirclefinder_8m.html#a799a9eb0a2e9c962405cb6dec6d61bea">points</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#afd1c9df50984cc2cc84a45049443d7c9">  104</a></span>&#160;        vector&lt;Point3d&gt; <a class="code" href="class_custom_camera_library_1_1_cloud.html#afd1c9df50984cc2cc84a45049443d7c9">getCloud</a>() { <span class="keywordflow">return</span> cloud; }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#ad2df0710c82fabf6e6821411a82334ba">  111</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_custom_camera_library_1_1_cloud.html#ad2df0710c82fabf6e6821411a82334ba">getType</a>() { <span class="keywordflow">return</span> <a class="code" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a>; }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#a252e76c6498af691571771f4ee7a09a3">  117</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_custom_camera_library_1_1_cloud.html#a252e76c6498af691571771f4ee7a09a3">setStatus</a>(<span class="keywordtype">bool</span> value) { status = value; }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#a227b53ed0c999d2268c44479490f3acc">  124</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_custom_camera_library_1_1_cloud.html#a227b53ed0c999d2268c44479490f3acc">setFrecuency</a>(<span class="keywordtype">double</span> value) { </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">if</span> (value &gt; 0)  NUM_SECONDS = value;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#a2238f0056b3d8bd519e600b29bde7bf5">  132</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_custom_camera_library_1_1_cloud.html#a2238f0056b3d8bd519e600b29bde7bf5">setMode</a>(<span class="keywordtype">int</span> <a class="code" href="namespace_custom_camera_library.html#a43deee0e4586de39b7f6423426ff3f2c">m</a>) { <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a> = <a class="code" href="namespace_custom_camera_library.html#a43deee0e4586de39b7f6423426ff3f2c">m</a>; }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_cloud.html#abbb4e3cea8f700c1064bd2325ca706a3">  138</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_custom_camera_library_1_1_cloud.html#abbb4e3cea8f700c1064bd2325ca706a3">getMode</a>() { <span class="keywordflow">return</span> <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a>; }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">void</span> setType(<span class="keywordtype">string</span> <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>) { <a class="code" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a> = <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>; }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordtype">void</span> writeFile(FILE* <a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>, Point3d <a class="code" href="namespace_custom_camera_library.html#ac8002f921b6351e8e5fc7e3bae8653fc">data</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> writeFooter(FILE* <a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">void</span> writeHeader(FILE* <a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        vector&lt;Point3d&gt; cloud;                                                              </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a>;                                                                        </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a>;                                                                           </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">bool</span> status = <span class="keyword">true</span>;                                                             </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        clock_t this_time;                                                                  </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        clock_t last_time;                                                                  </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordtype">double</span> time_counter = 0;                                                            </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">double</span> NUM_SECONDS = 0.1;                                                           </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        FILE* <a class="code" href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a>;                                                                           </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    };</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_custom_camera_library.html">CCL</a> = <a class="code" href="namespace_custom_camera_library.html">CustomCameraLibrary</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">#endif //_POINTCLOUD_H_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="areadras_8m_html_a7aead736a07eaf25623ad7bfa1f0ee2d"><div class="ttname"><a href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a></div><div class="ttdeci">type</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00042">readras.m:42</a></div></div>
+<div class="ttc" id="anamespace_custom_camera_library_html_a43deee0e4586de39b7f6423426ff3f2c"><div class="ttname"><a href="namespace_custom_camera_library.html#a43deee0e4586de39b7f6423426ff3f2c">CustomCameraLibrary::m</a></div><div class="ttdeci">double ** m</div><div class="ttdef"><b>Definition:</b> <a href="drill_8h_source.html#l00053">drill.h:53</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_abbb4e3cea8f700c1064bd2325ca706a3"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#abbb4e3cea8f700c1064bd2325ca706a3">CustomCameraLibrary::Cloud::getMode</a></div><div class="ttdeci">int getMode()</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00138">pointcloud.h:138</a></div></div>
+<div class="ttc" id="amanual__corner__extraction_8m_html_ad53f1340d882ce6d432b31017783278d"><div class="ttname"><a href="manual__corner__extraction_8m.html#ad53f1340d882ce6d432b31017783278d">mode</a></div><div class="ttdeci">This code allows complete manual reselection of every corner in the images This tool is specifically useful in the case of highly distorted images Use it when in standard mode In memory efficient mode</div><div class="ttdef"><b>Definition:</b> <a href="manual__corner__extraction_8m_source.html#l00006">manual_corner_extraction.m:6</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_ad2df0710c82fabf6e6821411a82334ba"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#ad2df0710c82fabf6e6821411a82334ba">CustomCameraLibrary::Cloud::getType</a></div><div class="ttdeci">string getType()</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00111">pointcloud.h:111</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_a42e1fd715a105ec1c3c2be46e4e91bb7"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#a42e1fd715a105ec1c3c2be46e4e91bb7">CustomCameraLibrary::Cloud::getStatus</a></div><div class="ttdeci">bool getStatus()</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00058">pointcloud.h:58</a></div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a60bfb22881d8ade0a15adeaa7a363c23"><div class="ttname"><a href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a></div><div class="ttdeci">matrix that subtract the principal point</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00088">init_intrinsic_param.m:88</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html">CustomCameraLibrary::Cloud</a></div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00025">pointcloud.h:25</a></div></div>
+<div class="ttc" id="aginput2_8m_html_a2d9f7e20b86e4762cf9b01f10eeec45a"><div class="ttname"><a href="ginput2_8m.html#a2d9f7e20b86e4762cf9b01f10eeec45a">key</a></div><div class="ttdeci">end end function key</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00163">ginput2.m:163</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_a227b53ed0c999d2268c44479490f3acc"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#a227b53ed0c999d2268c44479490f3acc">CustomCameraLibrary::Cloud::setFrecuency</a></div><div class="ttdeci">void setFrecuency(double value)</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00124">pointcloud.h:124</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_a7ad1af30f701dd0a82f20ecee98c3e25"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#a7ad1af30f701dd0a82f20ecee98c3e25">CustomCameraLibrary::Cloud::~Cloud</a></div><div class="ttdeci">~Cloud(void)</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00034">pointcloud.h:34</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_a252e76c6498af691571771f4ee7a09a3"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#a252e76c6498af691571771f4ee7a09a3">CustomCameraLibrary::Cloud::setStatus</a></div><div class="ttdeci">void setStatus(bool value)</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00117">pointcloud.h:117</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_a920a635f7d3dbf35d11d04a275027081"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#a920a635f7d3dbf35d11d04a275027081">CustomCameraLibrary::Cloud::Cloud</a></div><div class="ttdeci">Cloud(string type, int mode)</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00042">pointcloud.h:42</a></div></div>
+<div class="ttc" id="acentercirclefinder_8m_html_a799a9eb0a2e9c962405cb6dec6d61bea"><div class="ttname"><a href="centercirclefinder_8m.html#a799a9eb0a2e9c962405cb6dec6d61bea">points</a></div><div class="ttdeci">For the diverged points</div><div class="ttdef"><b>Definition:</b> <a href="centercirclefinder_8m_source.html#l00165">centercirclefinder.m:165</a></div></div>
+<div class="ttc" id="anamespace_custom_camera_library_html_ac8002f921b6351e8e5fc7e3bae8653fc"><div class="ttname"><a href="namespace_custom_camera_library.html#ac8002f921b6351e8e5fc7e3bae8653fc">CustomCameraLibrary::data</a></div><div class="ttdeci">PyArrayObject * data</div><div class="ttdef"><b>Definition:</b> <a href="drill_8h_source.html#l00063">drill.h:63</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_afd1c9df50984cc2cc84a45049443d7c9"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#afd1c9df50984cc2cc84a45049443d7c9">CustomCameraLibrary::Cloud::getCloud</a></div><div class="ttdeci">vector&lt; Point3d &gt; getCloud()</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00104">pointcloud.h:104</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_aaccc9105df5383111407fd5b41255e23"><div class="ttname"><a href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a></div><div class="ttdeci">t</div><div class="ttdef"><b>Definition:</b> <a href="rectify__stereo__pair_8m_source.html#l00029">rectify_stereo_pair.m:29</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_cloud_html_a2238f0056b3d8bd519e600b29bde7bf5"><div class="ttname"><a href="class_custom_camera_library_1_1_cloud.html#a2238f0056b3d8bd519e600b29bde7bf5">CustomCameraLibrary::Cloud::setMode</a></div><div class="ttdeci">void setMode(int m)</div><div class="ttdef"><b>Definition:</b> <a href="pointcloud_8h_source.html#l00132">pointcloud.h:132</a></div></div>
+<div class="ttc" id="aerror__analysis_8m_html_aeaba2e0ae10f2bcb87c1e9a04ceb54c2"><div class="ttname"><a href="error__analysis_8m.html#aeaba2e0ae10f2bcb87c1e9a04ceb54c2">std</a></div><div class="ttdeci">std(fc_list') std(cc_list') std(kc_list') for kk</div></div>
+<div class="ttc" id="acam__proj__extract__param_8m_html_ac021deca5ed9851af58ef6998d995aeb"><div class="ttname"><a href="cam__proj__extract__param_8m.html#ac021deca5ed9851af58ef6998d995aeb">fp</a></div><div class="ttdeci">fp</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__extract__param_8m_source.html#l00046">cam_proj_extract_param.m:46</a></div></div>
+<div class="ttc" id="anamespace_custom_camera_library_html"><div class="ttname"><a href="namespace_custom_camera_library.html">CustomCameraLibrary</a></div><div class="ttdef"><b>Definition:</b> <a href="correspondence_8h_source.html#l00014">correspondence.h:14</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

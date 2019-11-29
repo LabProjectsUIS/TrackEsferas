@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/compose_motion.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">compose_motion.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="compose__motion_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#aa2ce9eca767b2df0425c94d9ebe18530">    1</a></span>&#160;<span class="keyword">function</span> [om3,T3,dom3dom1,dom3dT1,dom3dom2,dom3dT2,dT3dom1,dT3dT1,dT3dom2,dT3dT2] = compose_motion(<a class="code" href="rodrigues_8m.html#ab1e211a2ccf98ca7f9cd960ad411a1d9">om1</a>,<a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a>,<a class="code" href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">om2</a>,<a class="code" href="compose__motion_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% Rotations:</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a5c30d24fc7fb13af59e6527a93057a74">    5</a></span>&#160;[R1,dR1dom1] = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="rodrigues_8m.html#ab1e211a2ccf98ca7f9cd960ad411a1d9">om1</a>);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;[R2,dR2dom2] = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">om2</a>);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a1822f3ea905724b212b227913ab56e75">    8</a></span>&#160;<a class="code" href="compose__motion_8m.html#a1822f3ea905724b212b227913ab56e75">R3</a> = <a class="code" href="comp__distortion2_8m.html#ab477549012f7889a894f39499202efdf">R2</a> * R1;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;[dR3dR2,dR3dR1] = dAB(<a class="code" href="comp__distortion2_8m.html#ab477549012f7889a894f39499202efdf">R2</a>,R1);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;[om3,dom3dR3] = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="compose__motion_8m.html#a1822f3ea905724b212b227913ab56e75">R3</a>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#ad75fbe8465cef2733bf32c6698af8144">   14</a></span>&#160;<a class="code" href="compose__motion_8m.html#ad75fbe8465cef2733bf32c6698af8144">dom3dom1</a> = dom3dR3 * dR3dR1 * <a class="code" href="compose__motion_8m.html#a5c30d24fc7fb13af59e6527a93057a74">dR1dom1</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a0fd411c0aa9d9af20d93316d14419af3">   15</a></span>&#160;<a class="code" href="compose__motion_8m.html#a0fd411c0aa9d9af20d93316d14419af3">dom3dom2</a> = dom3dR3 * dR3dR2 * dR2dom2;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a929ec0370207f43cfc3f50420b100b8f">   17</a></span>&#160;<a class="code" href="compose__motion_8m.html#a929ec0370207f43cfc3f50420b100b8f">dom3dT1</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3,3);</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a602c5dc9e93d58b2c1c98b56ee2e8c39">   18</a></span>&#160;<a class="code" href="compose__motion_8m.html#a602c5dc9e93d58b2c1c98b56ee2e8c39">dom3dT2</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3,3);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;% Translations:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#ae508df4b30d1c7e682134abfab3fdc0f">   23</a></span>&#160;T3t = <a class="code" href="comp__distortion2_8m.html#ab477549012f7889a894f39499202efdf">R2</a> * <a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;[dT3tdR2,dT3tdT1] = dAB(<a class="code" href="comp__distortion2_8m.html#ab477549012f7889a894f39499202efdf">R2</a>,<a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#adf03ba91f1ff5b97de47079a5dc768e0">   27</a></span>&#160;<a class="code" href="compose__motion_8m.html#adf03ba91f1ff5b97de47079a5dc768e0">dT3tdom2</a> = dT3tdR2 * dR2dom2;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a46f7973da1d3aac82976aecba9301120">   30</a></span>&#160;<a class="code" href="compose__motion_8m.html#a46f7973da1d3aac82976aecba9301120">T3</a> = T3t + <a class="code" href="compose__motion_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#aee44b9f985c6e2bb268b8d1271161978">   32</a></span>&#160;<a class="code" href="compose__motion_8m.html#aee44b9f985c6e2bb268b8d1271161978">dT3dT1</a> = dT3tdT1;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a79a1315f3a7bd75103df05b886a42ad9">   33</a></span>&#160;<a class="code" href="compose__motion_8m.html#a79a1315f3a7bd75103df05b886a42ad9">dT3dT2</a> = eye(3);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a266a13adf99ffc17dc89ddcf45da37cb">   35</a></span>&#160;<a class="code" href="compose__motion_8m.html#a266a13adf99ffc17dc89ddcf45da37cb">dT3dom2</a> = <a class="code" href="compose__motion_8m.html#adf03ba91f1ff5b97de47079a5dc768e0">dT3tdom2</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a1d46ea7bcd0ac7497b99766fa484772d">   36</a></span>&#160;<a class="code" href="compose__motion_8m.html#a1d46ea7bcd0ac7497b99766fa484772d">dT3dom1</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3,3);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a9717e7bbecb906637e86cef6da3d83c2">   39</a></span>&#160;<span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;% Test of the <a class="code" href="compose__motion_8m.html#abae42d8e51a0eb43fe8aebb87b4719a0">Jacobians</a>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#abae42d8e51a0eb43fe8aebb87b4719a0">   43</a></span>&#160;<a class="code" href="rodrigues_8m.html#ab1e211a2ccf98ca7f9cd960ad411a1d9">om1</a> = <a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1);</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">   44</a></span>&#160;<a class="code" href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">om2</a> = <a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1);</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">   45</a></span>&#160;<a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a> = 10*<a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1);</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a5a30d530a77bc992810b0c24a3e8f550">   46</a></span>&#160;<a class="code" href="compose__motion_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a> = 10*<a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;[om3,T3,dom3dom1,dom3dT1,dom3dom2,dom3dT2,dT3dom1,dT3dT1,dT3dom2,dT3dT2] = compose_motion(<a class="code" href="rodrigues_8m.html#ab1e211a2ccf98ca7f9cd960ad411a1d9">om1</a>,<a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a>,<a class="code" href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">om2</a>,<a class="code" href="compose__motion_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a22a174ffa6396234255513dc7e0183cf">   51</a></span>&#160;<a class="code" href="compose__motion_8m.html#a22a174ffa6396234255513dc7e0183cf">dom1</a> = <a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1) / 1000;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a8ee5e850745909fc4e7e77e364dd507e">   52</a></span>&#160;<a class="code" href="compose__motion_8m.html#a8ee5e850745909fc4e7e77e364dd507e">dom2</a> = <a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1) / 1000;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a1341745852d9b8d122bb52e651dd2657">   53</a></span>&#160;<a class="code" href="compose__motion_8m.html#a1341745852d9b8d122bb52e651dd2657">dT1</a>  = <a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1) / 10000;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a6fd4cff1947d98761c9756ab10625b0f">   54</a></span>&#160;<a class="code" href="compose__motion_8m.html#a6fd4cff1947d98761c9756ab10625b0f">dT2</a>  = <a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(3,1) / 10000;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;[om3r,T3r] = compose_motion(<a class="code" href="rodrigues_8m.html#ab1e211a2ccf98ca7f9cd960ad411a1d9">om1</a>+<a class="code" href="compose__motion_8m.html#a22a174ffa6396234255513dc7e0183cf">dom1</a>,<a class="code" href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a>+<a class="code" href="compose__motion_8m.html#a1341745852d9b8d122bb52e651dd2657">dT1</a>,<a class="code" href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">om2</a>+<a class="code" href="compose__motion_8m.html#a8ee5e850745909fc4e7e77e364dd507e">dom2</a>,<a class="code" href="compose__motion_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a>+<a class="code" href="compose__motion_8m.html#a6fd4cff1947d98761c9756ab10625b0f">dT2</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a270da0d4833e47e71e71c1a2ff5d60e2">   58</a></span>&#160;<a class="code" href="compose__motion_8m.html#a270da0d4833e47e71e71c1a2ff5d60e2">om3p</a> = om3 + <a class="code" href="compose__motion_8m.html#ad75fbe8465cef2733bf32c6698af8144">dom3dom1</a>*<a class="code" href="compose__motion_8m.html#a22a174ffa6396234255513dc7e0183cf">dom1</a> +  <a class="code" href="compose__motion_8m.html#a929ec0370207f43cfc3f50420b100b8f">dom3dT1</a>*<a class="code" href="compose__motion_8m.html#a1341745852d9b8d122bb52e651dd2657">dT1</a> + <a class="code" href="compose__motion_8m.html#a0fd411c0aa9d9af20d93316d14419af3">dom3dom2</a>*<a class="code" href="compose__motion_8m.html#a8ee5e850745909fc4e7e77e364dd507e">dom2</a> +  <a class="code" href="compose__motion_8m.html#a602c5dc9e93d58b2c1c98b56ee2e8c39">dom3dT2</a>*<a class="code" href="compose__motion_8m.html#a6fd4cff1947d98761c9756ab10625b0f">dT2</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="compose__motion_8m.html#a030865f0ab0b29f6f84fe9dcdd5a2610">   59</a></span>&#160;<a class="code" href="compose__motion_8m.html#a030865f0ab0b29f6f84fe9dcdd5a2610">T3p</a>  =  <a class="code" href="compose__motion_8m.html#a46f7973da1d3aac82976aecba9301120">T3</a> + <a class="code" href="compose__motion_8m.html#a1d46ea7bcd0ac7497b99766fa484772d">dT3dom1</a>*<a class="code" href="compose__motion_8m.html#a22a174ffa6396234255513dc7e0183cf">dom1</a>  +  <a class="code" href="compose__motion_8m.html#aee44b9f985c6e2bb268b8d1271161978">dT3dT1</a>*<a class="code" href="compose__motion_8m.html#a1341745852d9b8d122bb52e651dd2657">dT1</a>  + <a class="code" href="compose__motion_8m.html#a266a13adf99ffc17dc89ddcf45da37cb">dT3dom2</a>*<a class="code" href="compose__motion_8m.html#a8ee5e850745909fc4e7e77e364dd507e">dom2</a>  +  <a class="code" href="compose__motion_8m.html#a79a1315f3a7bd75103df05b886a42ad9">dT3dT2</a>*<a class="code" href="compose__motion_8m.html#a6fd4cff1947d98761c9756ab10625b0f">dT2</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(om3r - om3) / <a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(om3r - <a class="code" href="compose__motion_8m.html#a270da0d4833e47e71e71c1a2ff5d60e2">om3p</a>)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(T3r - <a class="code" href="compose__motion_8m.html#a46f7973da1d3aac82976aecba9301120">T3</a>) / <a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(T3r - <a class="code" href="compose__motion_8m.html#a030865f0ab0b29f6f84fe9dcdd5a2610">T3p</a>)</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acompose__motion_8m_html_a1d46ea7bcd0ac7497b99766fa484772d"><div class="ttname"><a href="compose__motion_8m.html#a1d46ea7bcd0ac7497b99766fa484772d">dT3dom1</a></div><div class="ttdeci">dT3dom1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00036">compose_motion.m:36</a></div></div>
+<div class="ttc" id="aerror__analysis_8m_html_a08aed3fddce569e0f5d61985add95a86"><div class="ttname"><a href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a></div><div class="ttdeci">sy * randn(1, Nkk)]</div></div>
+<div class="ttc" id="acompose__motion_8m_html_a1341745852d9b8d122bb52e651dd2657"><div class="ttname"><a href="compose__motion_8m.html#a1341745852d9b8d122bb52e651dd2657">dT1</a></div><div class="ttdeci">dT1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00053">compose_motion.m:53</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a79a1315f3a7bd75103df05b886a42ad9"><div class="ttname"><a href="compose__motion_8m.html#a79a1315f3a7bd75103df05b886a42ad9">dT3dT2</a></div><div class="ttdeci">dT3dT2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00033">compose_motion.m:33</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="acompose__motion_8m_html_a6fd4cff1947d98761c9756ab10625b0f"><div class="ttname"><a href="compose__motion_8m.html#a6fd4cff1947d98761c9756ab10625b0f">dT2</a></div><div class="ttdeci">dT2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00054">compose_motion.m:54</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_aef4e46e0cc51912bd66daea41307b39e"><div class="ttname"><a href="compose__motion_8m.html#aef4e46e0cc51912bd66daea41307b39e">om2</a></div><div class="ttdeci">Test of the om2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00044">compose_motion.m:44</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a0fd411c0aa9d9af20d93316d14419af3"><div class="ttname"><a href="compose__motion_8m.html#a0fd411c0aa9d9af20d93316d14419af3">dom3dom2</a></div><div class="ttdeci">dom3dom2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00015">compose_motion.m:15</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_adf03ba91f1ff5b97de47079a5dc768e0"><div class="ttname"><a href="compose__motion_8m.html#adf03ba91f1ff5b97de47079a5dc768e0">dT3tdom2</a></div><div class="ttdeci">dT3tdom2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00027">compose_motion.m:27</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a270da0d4833e47e71e71c1a2ff5d60e2"><div class="ttname"><a href="compose__motion_8m.html#a270da0d4833e47e71e71c1a2ff5d60e2">om3p</a></div><div class="ttdeci">om3p</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00058">compose_motion.m:58</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_aee44b9f985c6e2bb268b8d1271161978"><div class="ttname"><a href="compose__motion_8m.html#aee44b9f985c6e2bb268b8d1271161978">dT3dT1</a></div><div class="ttdeci">dT3dT1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00032">compose_motion.m:32</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a929ec0370207f43cfc3f50420b100b8f"><div class="ttname"><a href="compose__motion_8m.html#a929ec0370207f43cfc3f50420b100b8f">dom3dT1</a></div><div class="ttdeci">dom3dT1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00017">compose_motion.m:17</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a8ee5e850745909fc4e7e77e364dd507e"><div class="ttname"><a href="compose__motion_8m.html#a8ee5e850745909fc4e7e77e364dd507e">dom2</a></div><div class="ttdeci">dom2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00052">compose_motion.m:52</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a5c30d24fc7fb13af59e6527a93057a74"><div class="ttname"><a href="compose__motion_8m.html#a5c30d24fc7fb13af59e6527a93057a74">dR1dom1</a></div><div class="ttdeci">Rotations dR1dom1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00005">compose_motion.m:5</a></div></div>
+<div class="ttc" id="awillson__convert_8m_html_a133c81a8d59c8baec1a46a7d72d0f859"><div class="ttname"><a href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a></div><div class="ttdeci">inv(dxddk' *dxddk) *(dxddk') *err norm)(k_step)/norm(k) if norm(k_step)/norm(k)&lt; 10e-10</div><div class="ttdef"><b>Definition:</b> <a href="willson__convert_8m_source.html#l00086">willson_convert.m:86</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a030865f0ab0b29f6f84fe9dcdd5a2610"><div class="ttname"><a href="compose__motion_8m.html#a030865f0ab0b29f6f84fe9dcdd5a2610">T3p</a></div><div class="ttdeci">T3p</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00059">compose_motion.m:59</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a1822f3ea905724b212b227913ab56e75"><div class="ttname"><a href="compose__motion_8m.html#a1822f3ea905724b212b227913ab56e75">R3</a></div><div class="ttdeci">R3</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00008">compose_motion.m:8</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a602c5dc9e93d58b2c1c98b56ee2e8c39"><div class="ttname"><a href="compose__motion_8m.html#a602c5dc9e93d58b2c1c98b56ee2e8c39">dom3dT2</a></div><div class="ttdeci">dom3dT2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00018">compose_motion.m:18</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a3aa6bf135885f06d75e5da2713b5230d"><div class="ttname"><a href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a></div><div class="ttdeci">for Align the structure from the first ii * rodrigues(om_left_list(:, ii))'</div></div>
+<div class="ttc" id="acomp__distortion2_8m_html_ab477549012f7889a894f39499202efdf"><div class="ttname"><a href="comp__distortion2_8m.html#ab477549012f7889a894f39499202efdf">R2</a></div><div class="ttdeci">R2</div><div class="ttdef"><b>Definition:</b> <a href="comp__distortion2_8m_source.html#l00043">comp_distortion2.m:43</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a22a174ffa6396234255513dc7e0183cf"><div class="ttname"><a href="compose__motion_8m.html#a22a174ffa6396234255513dc7e0183cf">dom1</a></div><div class="ttdeci">dom1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00051">compose_motion.m:51</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a5a30d530a77bc992810b0c24a3e8f550"><div class="ttname"><a href="compose__motion_8m.html#a5a30d530a77bc992810b0c24a3e8f550">T2</a></div><div class="ttdeci">T2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00046">compose_motion.m:46</a></div></div>
+<div class="ttc" id="arodrigues_8m_html_ab1e211a2ccf98ca7f9cd960ad411a1d9"><div class="ttname"><a href="rodrigues_8m.html#ab1e211a2ccf98ca7f9cd960ad411a1d9">om1</a></div><div class="ttdeci">om1</div><div class="ttdef"><b>Definition:</b> <a href="rodrigues_8m_source.html#l00133">rodrigues.m:133</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a46f7973da1d3aac82976aecba9301120"><div class="ttname"><a href="compose__motion_8m.html#a46f7973da1d3aac82976aecba9301120">T3</a></div><div class="ttdeci">T3</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00030">compose_motion.m:30</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_a266a13adf99ffc17dc89ddcf45da37cb"><div class="ttname"><a href="compose__motion_8m.html#a266a13adf99ffc17dc89ddcf45da37cb">dT3dom2</a></div><div class="ttdeci">dT3dom2</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00035">compose_motion.m:35</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_aa7255c4bc0e9fa663f62fbafe1026daa"><div class="ttname"><a href="compose__motion_8m.html#aa7255c4bc0e9fa663f62fbafe1026daa">T1</a></div><div class="ttdeci">T1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00045">compose_motion.m:45</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_abae42d8e51a0eb43fe8aebb87b4719a0"><div class="ttname"><a href="compose__motion_8m.html#abae42d8e51a0eb43fe8aebb87b4719a0">Jacobians</a></div><div class="ttdeci">Test of the Jacobians</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00043">compose_motion.m:43</a></div></div>
+<div class="ttc" id="acompose__motion_8m_html_ad75fbe8465cef2733bf32c6698af8144"><div class="ttname"><a href="compose__motion_8m.html#ad75fbe8465cef2733bf32c6698af8144">dom3dom1</a></div><div class="ttdeci">dom3dom1</div><div class="ttdef"><b>Definition:</b> <a href="compose__motion_8m_source.html#l00014">compose_motion.m:14</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

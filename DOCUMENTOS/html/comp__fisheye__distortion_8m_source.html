@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/comp_fisheye_distortion.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">comp_fisheye_distortion.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="comp__fisheye__distortion_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#aeed293c815572bf9274c9c7ab3ed66d4">    1</a></span>&#160;<span class="keyword">function</span> [x] = comp_fisheye_distortion(<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>,<a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;%comp_fisheye_distortion.m</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;%</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;%[x] =  comp_fisheye_distortion(<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>,<a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;%</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;%Compensates <span class="keywordflow">for</span> fisheye distortions</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;%</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;%<a class="code" href="_compute_stripes_8m.html#ae27da7df4d207577ee411ff134a16eea">INPUT</a>: <a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>: distorted (normalized) <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a> <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> in the <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> plane (2xN <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;%       <a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>: Fisheye <a class="code" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a> coefficients (5<a class="code" href="click__ima__calib_8m.html#aa3e5e1187c13261975d66c1290431e52">x1</a> <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a>)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;%</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;%OUTPUT: <a class="code" href="comp__fisheye__distortion_8m.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>: undistorted (normalized) <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a> <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> in the <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> plane (2xN <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a>)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;%</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;%<a class="code" href="init__intrinsic__param_8m.html#a3baf04d2cab8ccf5dfab24270b9b6480">Method</a>: Iterative method <span class="keywordflow">for</span> compensation.</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;%</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;%NOTE: This compensation has <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> be done after the subtraction</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;%      of the principal <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a>, and division by the focal <a class="code" href="click__ima__calib3_d_8m.html#a7a134e91d2540aeba432404d6104a7ee">length</a>.</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#acb0612ab402753c490168149ad9350f9">   19</a></span>&#160;theta_d = sqrt(<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>(1,:).^2 + <a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>(2,:).^2);</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">   20</a></span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">theta</a> = <a class="code" href="comp__fisheye__distortion_8m.html#acb0612ab402753c490168149ad9350f9">theta_d</a>;  % initial guess</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#aad5cdef9a0561172223c104ebf86b1b1">   21</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="comp__fisheye__distortion_8m.html#aad5cdef9a0561172223c104ebf86b1b1">kk</a>=1:20,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">theta</a> = <a class="code" href="comp__fisheye__distortion_8m.html#acb0612ab402753c490168149ad9350f9">theta_d</a> ./ (1 + <a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>(1)*<a class="code" href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">theta</a>.^2 + <a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>(2)*<a class="code" href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">theta</a>.^4 + <a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>(3)*<a class="code" href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">theta</a>.^6 + <a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>(4)*<a class="code" href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">theta</a>.^8);</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">   23</a></span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#a83e4e30239128472979d5017bf6a950d">   24</a></span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#a83e4e30239128472979d5017bf6a950d">scaling</a> = tan(<a class="code" href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">theta</a>) ./ <a class="code" href="comp__fisheye__distortion_8m.html#acb0612ab402753c490168149ad9350f9">theta_d</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#a9336ebf25087d91c818ee6e9ec29f8c1">   26</a></span>&#160;<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a> = <a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a> .* (<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(2,1)*<a class="code" href="comp__fisheye__distortion_8m.html#a83e4e30239128472979d5017bf6a950d">scaling</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#a9717e7bbecb906637e86cef6da3d83c2">   28</a></span>&#160;<span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;% Test</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#a53701fc5e18f238fb54e7ac1e28b71a9">   32</a></span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#a53701fc5e18f238fb54e7ac1e28b71a9">n</a> = 4;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#adad3a37aa9d50688b5157698acfd7aee">   33</a></span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#adad3a37aa9d50688b5157698acfd7aee">xxx</a> = rand(2,<a class="code" href="comp__fisheye__distortion_8m.html#a53701fc5e18f238fb54e7ac1e28b71a9">n</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#adad3a37aa9d50688b5157698acfd7aee">xxx</a> = [[1.0840    0.3152    0.2666    0.9347 ];[ 0.7353    0.6101   -0.6415   -0.8006]];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">   37</a></span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a> = 0.00 * <a class="code" href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a>(4,1);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;[xd] = comp_fisheye_distortion(<a class="code" href="comp__fisheye__distortion_8m.html#adad3a37aa9d50688b5157698acfd7aee">xxx</a>,<a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="comp__fisheye__distortion_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">   40</a></span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">x2</a> = apply_fisheye_distortion(<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>,<a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="comp__fisheye__distortion_8m.html#a5fcd985bb7d5592455ff422a774232a1">norm</a>(<a class="code" href="comp__fisheye__distortion_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">x2</a>-<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>)/<a class="code" href="comp__fisheye__distortion_8m.html#a5fcd985bb7d5592455ff422a774232a1">norm</a>(<a class="code" href="comp__fisheye__distortion_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">x2</a>-<a class="code" href="comp__fisheye__distortion_8m.html#adad3a37aa9d50688b5157698acfd7aee">xxx</a>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;%[xd] = apply_fisheye_distortion(<a class="code" href="comp__fisheye__distortion_8m.html#adad3a37aa9d50688b5157698acfd7aee">xxx</a>,<a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;%<a class="code" href="comp__fisheye__distortion_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">x2</a> = comp_fisheye_distortion(<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>,<a class="code" href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;%<a class="code" href="comp__fisheye__distortion_8m.html#a5fcd985bb7d5592455ff422a774232a1">norm</a>(<a class="code" href="comp__fisheye__distortion_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">x2</a>-<a class="code" href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>)/<a class="code" href="comp__fisheye__distortion_8m.html#a5fcd985bb7d5592455ff422a774232a1">norm</a>(<a class="code" href="comp__fisheye__distortion_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">x2</a>-<a class="code" href="comp__fisheye__distortion_8m.html#adad3a37aa9d50688b5157698acfd7aee">xxx</a>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aerror__analysis_8m_html_a08aed3fddce569e0f5d61985add95a86"><div class="ttname"><a href="error__analysis_8m.html#a08aed3fddce569e0f5d61985add95a86">randn</a></div><div class="ttdeci">sy * randn(1, Nkk)]</div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_adad3a37aa9d50688b5157698acfd7aee"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#adad3a37aa9d50688b5157698acfd7aee">xxx</a></div><div class="ttdeci">xxx</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00033">comp_fisheye_distortion.m:33</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a0903a189cbe112bce4b75bbc7c50357c"><div class="ttname"><a href="apply__distortion_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a></div><div class="ttdeci">xd</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00063">apply_distortion.m:63</a></div></div>
+<div class="ttc" id="asmall__test__script_8m_html_ab7fd51748de2e6629029180d5d37ec10"><div class="ttname"><a href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a></div><div class="ttdeci">[479.5200 236.0800 608.4100 415.3700 461.0000 40.0000 451.4800 308.7000 373.9900 314.8900 299.3200 319.1300 231.5500 321.3700 443.7300 282.9200 378.3600 288.3000 314.6900 292.7400 255.4700 296.2300]' x</div><div class="ttdef"><b>Definition:</b> <a href="small__test__script_8m_source.html#l00018">small_test_script.m:18</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_aab2463cd078f7c5368f6eb80f5a549b8"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">x2</a></div><div class="ttdeci">x2</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00040">comp_fisheye_distortion.m:40</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a60bfb22881d8ade0a15adeaa7a363c23"><div class="ttname"><a href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a></div><div class="ttdeci">matrix that subtract the principal point</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00088">init_intrinsic_param.m:88</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a489630d61c55f2188f687d347393e5d0"><div class="ttname"><a href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a></div><div class="ttdeci">tangential distortion</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00044">apply_distortion.m:44</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7a134e91d2540aeba432404d6104a7ee"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7a134e91d2540aeba432404d6104a7ee">length</a></div><div class="ttdeci">if Estimation of focal length</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00146">click_ima_calib3D.m:146</a></div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_ae27da7df4d207577ee411ff134a16eea"><div class="ttname"><a href="_compute_stripes_8m.html#ae27da7df4d207577ee411ff134a16eea">INPUT</a></div><div class="ttdeci">fname_pat fname_pat temporal processing INPUT</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00003">ComputeStripes.m:3</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a944b0ff7b0378fbacbea580c66148200"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a></div><div class="ttdeci">Initialization of the global parameter vector</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00297">go_calib_optim_iter.m:297</a></div></div>
+<div class="ttc" id="aextract__parameters_8m_html_aa29c479aca4eef75a9f1c16e1c1ff766"><div class="ttname"><a href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a></div><div class="ttdeci">Calibration matrix</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters_8m_source.html#l00022">extract_parameters.m:22</a></div></div>
+<div class="ttc" id="aanalyse__error_8m_html_aee9a066043e7b7065d7cdda5fbcfba53"><div class="ttname"><a href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a></div><div class="ttdeci">Color code for each image</div><div class="ttdef"><b>Definition:</b> <a href="analyse__error_8m_source.html#l00003">analyse_error.m:3</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_a83e4e30239128472979d5017bf6a950d"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#a83e4e30239128472979d5017bf6a950d">scaling</a></div><div class="ttdeci">scaling</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00024">comp_fisheye_distortion.m:24</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00026">comp_fisheye_distortion.m:26</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_aad5cdef9a0561172223c104ebf86b1b1"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#aad5cdef9a0561172223c104ebf86b1b1">kk</a></div><div class="ttdeci">initial guess for kk</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00021">comp_fisheye_distortion.m:21</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00023">comp_fisheye_distortion.m:23</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_aa3e5e1187c13261975d66c1290431e52"><div class="ttname"><a href="click__ima__calib_8m.html#aa3e5e1187c13261975d66c1290431e52">x1</a></div><div class="ttdeci">x1</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00078">click_ima_calib.m:78</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_a5fcd985bb7d5592455ff422a774232a1"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#a5fcd985bb7d5592455ff422a774232a1">norm</a></div><div class="ttdeci">norm(x2-xd)/norm(x2-xxx) %[xd]</div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_a5c4aa834f79d9bba4ec3f74f17439836"><div class="ttname"><a href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a></div><div class="ttdeci">Express the coordinates of the points in the original image coordinates</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00376">ComputeStripes.m:376</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_a4239e318cc3ffbed6b985fb5870418d0"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#a4239e318cc3ffbed6b985fb5870418d0">theta</a></div><div class="ttdeci">theta</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00020">comp_fisheye_distortion.m:20</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_a53701fc5e18f238fb54e7ac1e28b71a9"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#a53701fc5e18f238fb54e7ac1e28b71a9">n</a></div><div class="ttdeci">Test n</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00032">comp_fisheye_distortion.m:32</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_adc468c70fb574ebd07287b38d0d0676d"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a></div><div class="ttdeci">k</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00037">comp_fisheye_distortion.m:37</a></div></div>
+<div class="ttc" id="acomp__fisheye__distortion_8m_html_acb0612ab402753c490168149ad9350f9"><div class="ttname"><a href="comp__fisheye__distortion_8m.html#acb0612ab402753c490168149ad9350f9">theta_d</a></div><div class="ttdeci">and division by the focal length theta_d</div><div class="ttdef"><b>Definition:</b> <a href="comp__fisheye__distortion_8m_source.html#l00019">comp_fisheye_distortion.m:19</a></div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a3baf04d2cab8ccf5dfab24270b9b6480"><div class="ttname"><a href="init__intrinsic__param_8m.html#a3baf04d2cab8ccf5dfab24270b9b6480">Method</a></div><div class="ttdeci">init_intrinsic_param Initialization of the intrinsic parameters Runs as a script cc and alpha_c Method</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00006">init_intrinsic_param.m:6</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

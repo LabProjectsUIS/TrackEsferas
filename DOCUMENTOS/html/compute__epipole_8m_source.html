@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/compute_epipole.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">compute_epipole.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="compute__epipole_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#abfb9c867b407075607c43e919da3d905">    1</a></span>&#160;<span class="keyword">function</span> [epipole] = compute_epipole(xLp,<a class="code" href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a>,<a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a>,<a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>,<a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>,<a class="code" href="calib__stereo_8m.html#a0d5107d37527749c989d0353b98560c9">kc_right</a>,<a class="code" href="calib__stereo_8m.html#a8dc5da0de837b1dcea479bf91e6b25ea">alpha_c_right</a>,<a class="code" href="calib__stereo_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>,<a class="code" href="calib__stereo_8m.html#ac0e4625891e3e419c27ca0084f5e5172">cc_left</a>,<a class="code" href="calib__stereo_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a>,<a class="code" href="calib__stereo_8m.html#ab143cf29d29212ee3462bdcca119b7a4">alpha_c_left</a>,<a class="code" href="compute__epipole_8m.html#a729f3f67bd0c9f9d66e0d947abaf898a">D</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordflow">if</span> <a class="code" href="compute__epipole_8m.html#a4b2d388b61c044278c93737807108556">~exist</a>(<span class="charliteral">&#39;D&#39;</span>),</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a729f3f67bd0c9f9d66e0d947abaf898a">    4</a></span>&#160;    <a class="code" href="compute__epipole_8m.html#a729f3f67bd0c9f9d66e0d947abaf898a">D</a> = 400;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#afb358f48b1646c750fb9da6c6585be2b">    5</a></span>&#160;<a class="code" href="compute__epipole_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a4500a162f923630dd09c58b47b274d51">    7</a></span>&#160;<a class="code" href="compute__epipole_8m.html#a4500a162f923630dd09c58b47b274d51">uo</a> = [ normalize_pixel(xLp,fc_left,cc_left,kc_left,alpha_c_left); 1 ];</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a78f5de753249930d9fffdbedec63ea7a">    9</a></span>&#160;<a class="code" href="compute__epipole_8m.html#a78f5de753249930d9fffdbedec63ea7a">S</a> = [   0  -T(3)  T(2)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    T(3)   0   -T(1)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    -T(2)  T(1)   0 ];</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#ab23e4ffad0a85eb50a2546f27dbaab58">   13</a></span>&#160;<a class="code" href="compute__epipole_8m.html#ab23e4ffad0a85eb50a2546f27dbaab58">l_epipole</a> = (<a class="code" href="compute__epipole_8m.html#a78f5de753249930d9fffdbedec63ea7a">S</a>*<a class="code" href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a>)*<a class="code" href="compute__epipole_8m.html#a4500a162f923630dd09c58b47b274d51">uo</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a7ad3aec1cdbdc9b09573f8fc032f6e80">   15</a></span>&#160;<a class="code" href="compute__epipole_8m.html#a7ad3aec1cdbdc9b09573f8fc032f6e80">KK_right</a> = [fc_right(1) alpha_c_right * fc_right(1) cc_right(1) ; 0 fc_right(2) cc_right(2) ; 0 0 1];</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">   17</a></span>&#160;<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a> = 800;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordflow">if</span> <a class="code" href="compute__epipole_8m.html#a7921e9a29bba7c7e0aac4b899d3c0c42">norm</a>(<a class="code" href="compute__epipole_8m.html#ab23e4ffad0a85eb50a2546f27dbaab58">l_epipole</a>(2)) &gt; <a class="code" href="compute__epipole_8m.html#a7921e9a29bba7c7e0aac4b899d3c0c42">norm</a>(<a class="code" href="compute__epipole_8m.html#ab23e4ffad0a85eb50a2546f27dbaab58">l_epipole</a>(1)),</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    % Horizontal <a class="code" href="compute__epipole_8m.html#a4ec713dc32daee0242ffd0a7acd31750">line</a>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a4ec713dc32daee0242ffd0a7acd31750">   23</a></span>&#160;    <a class="code" href="compute__epipole_8m.html#ac64b09ace7fc4099ae29ba540a5b970f">limit_x_pos</a> = ((xLp(1) + <a class="code" href="compute__epipole_8m.html#a729f3f67bd0c9f9d66e0d947abaf898a">D</a>/2) - <a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>(1)) / <a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(1);</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a3616e826fc73f828f5dbe0ca17b661af">   24</a></span>&#160;    <a class="code" href="compute__epipole_8m.html#a3616e826fc73f828f5dbe0ca17b661af">limit_x_neg</a> = ((xLp(1) - <a class="code" href="compute__epipole_8m.html#a729f3f67bd0c9f9d66e0d947abaf898a">D</a>/2) - <a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>(1)) / <a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(1);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#ac64b09ace7fc4099ae29ba540a5b970f">   27</a></span>&#160;    %<a class="code" href="compute__epipole_8m.html#ac64b09ace7fc4099ae29ba540a5b970f">limit_x_pos</a> = ((<a class="code" href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a>-1) - <a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>(1)) / <a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(1);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    %<a class="code" href="compute__epipole_8m.html#a3616e826fc73f828f5dbe0ca17b661af">limit_x_neg</a> = (0 - <a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>(1)) / <a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(1);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a032ea392580771661c2e87ddf37551aa">   30</a></span>&#160;    <a class="code" href="compute__epipole_8m.html#a032ea392580771661c2e87ddf37551aa">x_list</a> = (<a class="code" href="compute__epipole_8m.html#ac64b09ace7fc4099ae29ba540a5b970f">limit_x_pos</a> - <a class="code" href="compute__epipole_8m.html#a3616e826fc73f828f5dbe0ca17b661af">limit_x_neg</a>) * ((0:(<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>-1)) / (<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>-1)) + limit_x_neg;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#ac0ca150b0e000602a104bc1ca56005e3">   33</a></span>&#160;    <a class="code" href="compute__epipole_8m.html#ac0ca150b0e000602a104bc1ca56005e3">pt</a> = <a class="code" href="click__ima__calib_8m.html#a5f53bf184bdb2135aeb19935a6111eae">cross</a>(repmat(<a class="code" href="compute__epipole_8m.html#ab23e4ffad0a85eb50a2546f27dbaab58">l_epipole</a>,1,<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>),[<a class="code" href="compute__epipole_8m.html#a2150ce6a8deec3fa4f5acabac8e95b4e">ones</a>(1,<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>);<a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(1,<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>);-<a class="code" href="compute__epipole_8m.html#a032ea392580771661c2e87ddf37551aa">x_list</a>]);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#adc6ce18588ba1ad93d3c09cda5181068">   38</a></span>&#160;    <a class="code" href="compute__epipole_8m.html#adc6ce18588ba1ad93d3c09cda5181068">limit_y_pos</a> = ((xLp(2) + <a class="code" href="compute__epipole_8m.html#a729f3f67bd0c9f9d66e0d947abaf898a">D</a>/2) - <a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>(2)) / <a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(2);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a55507944b9ccd647965c8e5eb07992a3">   39</a></span>&#160;    <a class="code" href="compute__epipole_8m.html#a55507944b9ccd647965c8e5eb07992a3">limit_y_neg</a> = ((xLp(2) - <a class="code" href="compute__epipole_8m.html#a729f3f67bd0c9f9d66e0d947abaf898a">D</a>/2) - <a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>(2)) / <a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(2);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    %<a class="code" href="compute__epipole_8m.html#adc6ce18588ba1ad93d3c09cda5181068">limit_y_pos</a> = ((<a class="code" href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a>-1) - <a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>(2)) / <a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(2);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    %<a class="code" href="compute__epipole_8m.html#a55507944b9ccd647965c8e5eb07992a3">limit_y_neg</a> = (0 - <a class="code" href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a>(2)) / <a class="code" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(2);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#aefb0d1e9d7fcd9b95ed08b2a57e5725e">   44</a></span>&#160;    <a class="code" href="compute__epipole_8m.html#aefb0d1e9d7fcd9b95ed08b2a57e5725e">y_list</a> = (<a class="code" href="compute__epipole_8m.html#adc6ce18588ba1ad93d3c09cda5181068">limit_y_pos</a> - <a class="code" href="compute__epipole_8m.html#a55507944b9ccd647965c8e5eb07992a3">limit_y_neg</a>) * ((0:(<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>-1)) / (<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>-1)) + limit_y_neg;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="compute__epipole_8m.html#ac0ca150b0e000602a104bc1ca56005e3">pt</a> = <a class="code" href="click__ima__calib_8m.html#a5f53bf184bdb2135aeb19935a6111eae">cross</a>(repmat(<a class="code" href="compute__epipole_8m.html#ab23e4ffad0a85eb50a2546f27dbaab58">l_epipole</a>,1,<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>),[<a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(1,<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>);<a class="code" href="compute__epipole_8m.html#a2150ce6a8deec3fa4f5acabac8e95b4e">ones</a>(1,<a class="code" href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a>);-<a class="code" href="compute__epipole_8m.html#aefb0d1e9d7fcd9b95ed08b2a57e5725e">y_list</a>]);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="compute__epipole_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a80ad40e6270e9de09a3b433c64722d87">   53</a></span>&#160;<a class="code" href="compute__epipole_8m.html#ac0ca150b0e000602a104bc1ca56005e3">pt</a> = [pt(1,:) ./ pt(3,:) ; pt(2,:)./pt(3,:)];</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#a61f429dbd8a90da03fa08b9b82c88dbe">   54</a></span>&#160;<a class="code" href="compute__epipole_8m.html#a61f429dbd8a90da03fa08b9b82c88dbe">ptd</a> = apply_distortion(<a class="code" href="compute__epipole_8m.html#ac0ca150b0e000602a104bc1ca56005e3">pt</a>,<a class="code" href="calib__stereo_8m.html#a0d5107d37527749c989d0353b98560c9">kc_right</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="compute__epipole_8m.html#ae40fdb93b2d27ff7e9ec140d6ece09e1">   55</a></span>&#160;<a class="code" href="compute__epipole_8m.html#ae40fdb93b2d27ff7e9ec140d6ece09e1">epipole</a> = <a class="code" href="compute__epipole_8m.html#a7ad3aec1cdbdc9b09573f8fc032f6e80">KK_right</a> * [ ptd ; ones(1,N_line)];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="compute__epipole_8m.html#ae40fdb93b2d27ff7e9ec140d6ece09e1">epipole</a> = <a class="code" href="compute__epipole_8m.html#ae40fdb93b2d27ff7e9ec140d6ece09e1">epipole</a>(1:2,:);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acalib__stereo_8m_html_a8dc5da0de837b1dcea479bf91e6b25ea"><div class="ttname"><a href="calib__stereo_8m.html#a8dc5da0de837b1dcea479bf91e6b25ea">alpha_c_right</a></div><div class="ttdeci">alpha_c_right</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00125">calib_stereo.m:125</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a7921e9a29bba7c7e0aac4b899d3c0c42"><div class="ttname"><a href="compute__epipole_8m.html#a7921e9a29bba7c7e0aac4b899d3c0c42">norm</a></div><div class="ttdeci">if norm(l_epipole(2)) &gt; norm(l_epipole(1))</div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a0d5107d37527749c989d0353b98560c9"><div class="ttname"><a href="calib__stereo_8m.html#a0d5107d37527749c989d0353b98560c9">kc_right</a></div><div class="ttdeci">kc_right</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00124">calib_stereo.m:124</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a55507944b9ccd647965c8e5eb07992a3"><div class="ttname"><a href="compute__epipole_8m.html#a55507944b9ccd647965c8e5eb07992a3">limit_y_neg</a></div><div class="ttdeci">limit_y_neg</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00039">compute_epipole.m:39</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a4500a162f923630dd09c58b47b274d51"><div class="ttname"><a href="compute__epipole_8m.html#a4500a162f923630dd09c58b47b274d51">uo</a></div><div class="ttdeci">uo</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00007">compute_epipole.m:7</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_aecdaf7e4eed129b6416ee1ba30deaf29"><div class="ttname"><a href="calib__stereo_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a></div><div class="ttdeci">fc_left</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00065">calib_stereo.m:65</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_ac5860ec282f163e4e55042c2ecd38b79"><div class="ttname"><a href="compute__epipole_8m.html#ac5860ec282f163e4e55042c2ecd38b79">N_line</a></div><div class="ttdeci">N_line</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00017">compute_epipole.m:17</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a1e8af1b834749c5cbe9484070c2a9977"><div class="ttname"><a href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00020">align_structures.m:20</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a4b2d388b61c044278c93737807108556"><div class="ttname"><a href="compute__epipole_8m.html#a4b2d388b61c044278c93737807108556">~exist</a></div><div class="ttdeci">if ~exist('D')</div></div>
+<div class="ttc" id="acompute__epipole_8m_html_ac0ca150b0e000602a104bc1ca56005e3"><div class="ttname"><a href="compute__epipole_8m.html#ac0ca150b0e000602a104bc1ca56005e3">pt</a></div><div class="ttdeci">pt</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00033">compute_epipole.m:33</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a023f13b1a419850c715e8fd7d4ac2344"><div class="ttname"><a href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a></div><div class="ttdeci">fc_right(2) cc_right(2)</div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a8efcadbdd71b96951e0c99643c8b732b"><div class="ttname"><a href="calib__stereo_8m.html#a8efcadbdd71b96951e0c99643c8b732b">cc_right</a></div><div class="ttdeci">cc_right</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00123">calib_stereo.m:123</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_ac0e4625891e3e419c27ca0084f5e5172"><div class="ttname"><a href="calib__stereo_8m.html#ac0e4625891e3e419c27ca0084f5e5172">cc_left</a></div><div class="ttdeci">cc_left</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00066">calib_stereo.m:66</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a7ad3aec1cdbdc9b09573f8fc032f6e80"><div class="ttname"><a href="compute__epipole_8m.html#a7ad3aec1cdbdc9b09573f8fc032f6e80">KK_right</a></div><div class="ttdeci">KK_right</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00015">compute_epipole.m:15</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a972a362cbc69f656885b661b71720409"><div class="ttname"><a href="calib__stereo_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a></div><div class="ttdeci">kc_left</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00067">calib_stereo.m:67</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a032ea392580771661c2e87ddf37551aa"><div class="ttname"><a href="compute__epipole_8m.html#a032ea392580771661c2e87ddf37551aa">x_list</a></div><div class="ttdeci">x_list</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00030">compute_epipole.m:30</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a84e4236f07668a770c27567f1f9615ff"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a84e4236f07668a770c27567f1f9615ff">nx</a></div><div class="ttdeci">nx</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00091">go_calib_optim_iter.m:91</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_ace3fdf821957e9266501abadd2926b1c"><div class="ttname"><a href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a></div><div class="ttdeci">R</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00170">cam_proj_calib.m:170</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a729f3f67bd0c9f9d66e0d947abaf898a"><div class="ttname"><a href="compute__epipole_8m.html#a729f3f67bd0c9f9d66e0d947abaf898a">D</a></div><div class="ttdeci">if D</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00004">compute_epipole.m:4</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="compute__epipole_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00005">compute_epipole.m:5</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_ab143cf29d29212ee3462bdcca119b7a4"><div class="ttname"><a href="calib__stereo_8m.html#ab143cf29d29212ee3462bdcca119b7a4">alpha_c_left</a></div><div class="ttdeci">alpha_c_left</div><div class="ttdef"><b>Definition:</b> <a href="calib__stereo_8m_source.html#l00068">calib_stereo.m:68</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a4ec713dc32daee0242ffd0a7acd31750"><div class="ttname"><a href="compute__epipole_8m.html#a4ec713dc32daee0242ffd0a7acd31750">line</a></div><div class="ttdeci">if Horizontal line</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00023">compute_epipole.m:23</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_ac64b09ace7fc4099ae29ba540a5b970f"><div class="ttname"><a href="compute__epipole_8m.html#ac64b09ace7fc4099ae29ba540a5b970f">limit_x_pos</a></div><div class="ttdeci">limit_x_pos</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00027">compute_epipole.m:27</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_ab23e4ffad0a85eb50a2546f27dbaab58"><div class="ttname"><a href="compute__epipole_8m.html#ab23e4ffad0a85eb50a2546f27dbaab58">l_epipole</a></div><div class="ttdeci">l_epipole</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00013">compute_epipole.m:13</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a61f429dbd8a90da03fa08b9b82c88dbe"><div class="ttname"><a href="compute__epipole_8m.html#a61f429dbd8a90da03fa08b9b82c88dbe">ptd</a></div><div class="ttdeci">ptd</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00054">compute_epipole.m:54</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a78f5de753249930d9fffdbedec63ea7a"><div class="ttname"><a href="compute__epipole_8m.html#a78f5de753249930d9fffdbedec63ea7a">S</a></div><div class="ttdeci">S</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00009">compute_epipole.m:9</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a289ca425eb368f1d582b6be2be0d3dfc"><div class="ttname"><a href="cam__proj__calib_8m.html#a289ca425eb368f1d582b6be2be0d3dfc">ny</a></div><div class="ttdeci">ny</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00092">cam_proj_calib.m:92</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a2150ce6a8deec3fa4f5acabac8e95b4e"><div class="ttname"><a href="compute__epipole_8m.html#a2150ce6a8deec3fa4f5acabac8e95b4e">ones</a></div><div class="ttdeci">ones(1, N_line)]</div></div>
+<div class="ttc" id="acompute__epipole_8m_html_a3616e826fc73f828f5dbe0ca17b661af"><div class="ttname"><a href="compute__epipole_8m.html#a3616e826fc73f828f5dbe0ca17b661af">limit_x_neg</a></div><div class="ttdeci">limit_x_neg</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00024">compute_epipole.m:24</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_adc6ce18588ba1ad93d3c09cda5181068"><div class="ttname"><a href="compute__epipole_8m.html#adc6ce18588ba1ad93d3c09cda5181068">limit_y_pos</a></div><div class="ttdeci">else limit_y_pos</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00038">compute_epipole.m:38</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a5f53bf184bdb2135aeb19935a6111eae"><div class="ttname"><a href="click__ima__calib_8m.html#a5f53bf184bdb2135aeb19935a6111eae">cross</a></div><div class="ttdeci">cross([x2;y2;1],[x4;y4;1]))</div></div>
+<div class="ttc" id="acompute__epipole_8m_html_ae40fdb93b2d27ff7e9ec140d6ece09e1"><div class="ttname"><a href="compute__epipole_8m.html#ae40fdb93b2d27ff7e9ec140d6ece09e1">epipole</a></div><div class="ttdeci">epipole</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00055">compute_epipole.m:55</a></div></div>
+<div class="ttc" id="acompute__epipole_8m_html_aefb0d1e9d7fcd9b95ed08b2a57e5725e"><div class="ttname"><a href="compute__epipole_8m.html#aefb0d1e9d7fcd9b95ed08b2a57e5725e">y_list</a></div><div class="ttdeci">y_list</div><div class="ttdef"><b>Definition:</b> <a href="compute__epipole_8m_source.html#l00044">compute_epipole.m:44</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

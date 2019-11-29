@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/error_depth.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">error_depth.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="error__depth_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="error__depth_8m.html#aab338ec617b352329ca2cf73382a5f72">    1</a></span>&#160;<span class="keyword">function</span> <a class="code" href="error__depth_8m.html#aab338ec617b352329ca2cf73382a5f72">err_shape</a> = error_depth(param_dist,<a class="code" href="error__depth__list_8m.html#a8d11fd759451593f9f4450151af51f68">xcn</a>,<a class="code" href="error__depth__list_8m.html#af889627b8225d05eb70f690e4fda5f9f">xpn</a>,<a class="code" href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a>,<a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a>,<a class="code" href="error__depth__list_8m.html#aa7efdd8d3d5657f267e76d1b6f67382e">X_shape</a>,<a class="code" href="click__ima__calib_8m.html#aa1a517e3e42b3d109bc480c74e3a655c">ind</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="error__depth_8m.html#aa5cc0e42af3b0aac8e76f279c9a56943">    5</a></span>&#160;<a class="code" href="error__depth_8m.html#aa5cc0e42af3b0aac8e76f279c9a56943">X_new</a> = depth_compute(<a class="code" href="error__depth__list_8m.html#a8d11fd759451593f9f4450151af51f68">xcn</a>,<a class="code" href="error__depth__list_8m.html#af889627b8225d05eb70f690e4fda5f9f">xpn</a>,[param_dist],<a class="code" href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a>,<a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a>);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="error__depth_8m.html#a58aeea82c37560a8dd659d66894bd8b7">    8</a></span>&#160;<a class="code" href="error__depth_8m.html#a58aeea82c37560a8dd659d66894bd8b7">N_pt_calib</a> = <a class="code" href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a>(<a class="code" href="error__depth__list_8m.html#a8d11fd759451593f9f4450151af51f68">xcn</a>,2);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;% UnNormalized shape <a class="code" href="error__depth_8m.html#ad5c4a59ae665afd234a9b99e05b922f2">extraction</a>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="error__depth_8m.html#ad5c4a59ae665afd234a9b99e05b922f2">   12</a></span>&#160;<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a> = <a class="code" href="error__depth_8m.html#aa5cc0e42af3b0aac8e76f279c9a56943">X_new</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">   13</a></span>&#160;<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a> = <a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a> - (<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a>(:,1)*ones(1,<a class="code" href="error__depth_8m.html#a58aeea82c37560a8dd659d66894bd8b7">N_pt_calib</a>));</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;% <a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a> the second <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a> <a class="code" href="error__depth_8m.html#a55c22a6a304cef3bba5ac7dc105146d0">at</a> [1;0;0]:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="error__depth_8m.html#a55c22a6a304cef3bba5ac7dc105146d0">   17</a></span>&#160;<a class="code" href="error__depth_8m.html#a480cdbc819e81d5b1353169bc8113b1f">omu</a> = -<a class="code" href="click__ima__calib_8m.html#a5f53bf184bdb2135aeb19935a6111eae">cross</a>([1;0;0],<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a>(:,2));</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="error__depth_8m.html#a480cdbc819e81d5b1353169bc8113b1f">   18</a></span>&#160;<a class="code" href="error__depth_8m.html#a480cdbc819e81d5b1353169bc8113b1f">omu</a> = acos((<a class="code" href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a>([1;0;0],<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a>(:,2)))/<a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a>(:,2)))*(<a class="code" href="error__depth_8m.html#a480cdbc819e81d5b1353169bc8113b1f">omu</a> / <a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="error__depth_8m.html#a480cdbc819e81d5b1353169bc8113b1f">omu</a>));</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="error__depth_8m.html#a9aa598539f1f30ef597cf6b32f3dbc58">   19</a></span>&#160;<a class="code" href="error__depth_8m.html#a9aa598539f1f30ef597cf6b32f3dbc58">Ru</a> = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="error__depth_8m.html#a480cdbc819e81d5b1353169bc8113b1f">omu</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a> = <a class="code" href="error__depth_8m.html#a9aa598539f1f30ef597cf6b32f3dbc58">Ru</a>* <a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="error__depth_8m.html#ab92c6eb5f67a943120f4921c081ca476">   23</a></span>&#160;<a class="code" href="error__depth_8m.html#ab92c6eb5f67a943120f4921c081ca476">omu2</a> = -<a class="code" href="click__ima__calib_8m.html#a5f53bf184bdb2135aeb19935a6111eae">cross</a>([0;1;0],[0;X_shape2(2:3,ind)]);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="error__depth_8m.html#ab92c6eb5f67a943120f4921c081ca476">omu2</a> = acos((<a class="code" href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a>([0;1;0],[0;X_shape2(2:3,ind)]))/<a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>([0;<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a>(2:3,<a class="code" href="click__ima__calib_8m.html#aa1a517e3e42b3d109bc480c74e3a655c">ind</a>)]))*(<a class="code" href="error__depth_8m.html#ab92c6eb5f67a943120f4921c081ca476">omu2</a> / <a class="code" href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a>(<a class="code" href="error__depth_8m.html#ab92c6eb5f67a943120f4921c081ca476">omu2</a>));</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="error__depth_8m.html#ab22ec550c42c38c503c34eddea88ccc0">   25</a></span>&#160;<a class="code" href="error__depth_8m.html#ab22ec550c42c38c503c34eddea88ccc0">Ru2</a> = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="error__depth_8m.html#ab92c6eb5f67a943120f4921c081ca476">omu2</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a> = <a class="code" href="error__depth_8m.html#ab22ec550c42c38c503c34eddea88ccc0">Ru2</a>* <a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;% Error:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="error__depth_8m.html#acf0e0d2acae210cfd582982a32b3a61d">   32</a></span>&#160;<a class="code" href="error__depth_8m.html#aab338ec617b352329ca2cf73382a5f72">err_shape</a> = <a class="code" href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a>(:,2:<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>) - <a class="code" href="error__depth__list_8m.html#aa7efdd8d3d5657f267e76d1b6f67382e">X_shape</a>(:,2:end);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="error__depth_8m.html#aab338ec617b352329ca2cf73382a5f72">err_shape</a> = <a class="code" href="error__depth_8m.html#aab338ec617b352329ca2cf73382a5f72">err_shape</a>(:);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="error__depth_8m.html#adf4fe3feace71070ae669cbe1d79901e">   38</a></span>&#160;%<a class="code" href="error__depth_8m.html#adf4fe3feace71070ae669cbe1d79901e">err_depth</a> = Z_new - Z_ref;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acam__proj__calib_8m_html_a09a62a6cfacc026c1623a4f2e138ad88"><div class="ttname"><a href="cam__proj__calib_8m.html#a09a62a6cfacc026c1623a4f2e138ad88">size</a></div><div class="ttdeci">Image size</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00091">cam_proj_calib.m:91</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_ab92c6eb5f67a943120f4921c081ca476"><div class="ttname"><a href="error__depth_8m.html#ab92c6eb5f67a943120f4921c081ca476">omu2</a></div><div class="ttdeci">omu2</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00023">error_depth.m:23</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_adf4fe3feace71070ae669cbe1d79901e"><div class="ttname"><a href="error__depth_8m.html#adf4fe3feace71070ae669cbe1d79901e">err_depth</a></div><div class="ttdeci">err_depth</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00038">error_depth.m:38</a></div></div>
+<div class="ttc" id="aerror__depth__list_8m_html_a8d11fd759451593f9f4450151af51f68"><div class="ttname"><a href="error__depth__list_8m.html#a8d11fd759451593f9f4450151af51f68">xcn</a></div><div class="ttdeci">for xcn</div><div class="ttdef"><b>Definition:</b> <a href="error__depth__list_8m_source.html#l00012">error_depth_list.m:12</a></div></div>
+<div class="ttc" id="aerror__depth__list_8m_html_af889627b8225d05eb70f690e4fda5f9f"><div class="ttname"><a href="error__depth__list_8m.html#af889627b8225d05eb70f690e4fda5f9f">xpn</a></div><div class="ttdeci">xpn</div><div class="ttdef"><b>Definition:</b> <a href="error__depth__list_8m_source.html#l00013">error_depth_list.m:13</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a1e8af1b834749c5cbe9484070c2a9977"><div class="ttname"><a href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00020">align_structures.m:20</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_a8d68283eda3e03d906ed4986ea445325"><div class="ttname"><a href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a></div><div class="ttdeci">if dot(uu, t)&lt; 0</div></div>
+<div class="ttc" id="aadd__suppress_8m_html_ac6a7a413be81452b9806f7021b893ad4"><div class="ttname"><a href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00005">add_suppress.m:5</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a944b0ff7b0378fbacbea580c66148200"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a></div><div class="ttdeci">Initialization of the global parameter vector</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00297">go_calib_optim_iter.m:297</a></div></div>
+<div class="ttc" id="aclick__calib_8m_html_a9ec9dda576db2a36c42c1c3af155d07c"><div class="ttname"><a href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a></div><div class="ttdeci">map</div><div class="ttdef"><b>Definition:</b> <a href="click__calib_8m_source.html#l00036">click_calib.m:36</a></div></div>
+<div class="ttc" id="aerror__depth__list_8m_html_aa7efdd8d3d5657f267e76d1b6f67382e"><div class="ttname"><a href="error__depth__list_8m.html#aa7efdd8d3d5657f267e76d1b6f67382e">X_shape</a></div><div class="ttdeci">X_shape</div><div class="ttdef"><b>Definition:</b> <a href="error__depth__list_8m_source.html#l00018">error_depth_list.m:18</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_a9aa598539f1f30ef597cf6b32f3dbc58"><div class="ttname"><a href="error__depth_8m.html#a9aa598539f1f30ef597cf6b32f3dbc58">Ru</a></div><div class="ttdeci">Ru</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00019">error_depth.m:19</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_ace3fdf821957e9266501abadd2926b1c"><div class="ttname"><a href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a></div><div class="ttdeci">R</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00170">cam_proj_calib.m:170</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_a3d3a07e68ac6e201f55acee4088dc39f"><div class="ttname"><a href="error__depth_8m.html#a3d3a07e68ac6e201f55acee4088dc39f">X_shape2</a></div><div class="ttdeci">X_shape2</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00013">error_depth.m:13</a></div></div>
+<div class="ttc" id="awillson__convert_8m_html_a133c81a8d59c8baec1a46a7d72d0f859"><div class="ttname"><a href="willson__convert_8m.html#a133c81a8d59c8baec1a46a7d72d0f859">norm</a></div><div class="ttdeci">inv(dxddk' *dxddk) *(dxddk') *err norm)(k_step)/norm(k) if norm(k_step)/norm(k)&lt; 10e-10</div><div class="ttdef"><b>Definition:</b> <a href="willson__convert_8m_source.html#l00086">willson_convert.m:86</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_ad5c4a59ae665afd234a9b99e05b922f2"><div class="ttname"><a href="error__depth_8m.html#ad5c4a59ae665afd234a9b99e05b922f2">extraction</a></div><div class="ttdeci">UnNormalized shape extraction</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00012">error_depth.m:12</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_a480cdbc819e81d5b1353169bc8113b1f"><div class="ttname"><a href="error__depth_8m.html#a480cdbc819e81d5b1353169bc8113b1f">omu</a></div><div class="ttdeci">omu</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00018">error_depth.m:18</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a3aa6bf135885f06d75e5da2713b5230d"><div class="ttname"><a href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a></div><div class="ttdeci">for Align the structure from the first ii * rodrigues(om_left_list(:, ii))'</div></div>
+<div class="ttc" id="aerror__depth_8m_html_aa5cc0e42af3b0aac8e76f279c9a56943"><div class="ttname"><a href="error__depth_8m.html#aa5cc0e42af3b0aac8e76f279c9a56943">X_new</a></div><div class="ttdeci">X_new</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00005">error_depth.m:5</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_a58aeea82c37560a8dd659d66894bd8b7"><div class="ttname"><a href="error__depth_8m.html#a58aeea82c37560a8dd659d66894bd8b7">N_pt_calib</a></div><div class="ttdeci">N_pt_calib</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00008">error_depth.m:8</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_aa1a517e3e42b3d109bc480c74e3a655c"><div class="ttname"><a href="click__ima__calib_8m.html#aa1a517e3e42b3d109bc480c74e3a655c">ind</a></div><div class="ttdeci">ind</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00072">click_ima_calib.m:72</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_a55c22a6a304cef3bba5ac7dc105146d0"><div class="ttname"><a href="error__depth_8m.html#a55c22a6a304cef3bba5ac7dc105146d0">at</a></div><div class="ttdeci">map the second vector at[1;0;0]</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00017">error_depth.m:17</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a5f53bf184bdb2135aeb19935a6111eae"><div class="ttname"><a href="click__ima__calib_8m.html#a5f53bf184bdb2135aeb19935a6111eae">cross</a></div><div class="ttdeci">cross([x2;y2;1],[x4;y4;1]))</div></div>
+<div class="ttc" id="aerror__depth_8m_html_aab338ec617b352329ca2cf73382a5f72"><div class="ttname"><a href="error__depth_8m.html#aab338ec617b352329ca2cf73382a5f72">err_shape</a></div><div class="ttdeci">function err_shape</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00001">error_depth.m:1</a></div></div>
+<div class="ttc" id="aerror__depth_8m_html_ab22ec550c42c38c503c34eddea88ccc0"><div class="ttname"><a href="error__depth_8m.html#ab22ec550c42c38c503c34eddea88ccc0">Ru2</a></div><div class="ttdeci">Ru2</div><div class="ttdef"><b>Definition:</b> <a href="error__depth_8m_source.html#l00025">error_depth.m:25</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

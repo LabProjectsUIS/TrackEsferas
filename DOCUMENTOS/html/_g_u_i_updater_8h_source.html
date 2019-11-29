@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/GUIUpdater.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GUIUpdater.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_g_u_i_updater_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="_g_u_i_updater_8h.html#a9f918755b601cf4bffca775992e6fb90">    3</a></span>&#160;<span class="preprocessor">#define NOMINMAX</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="marker_8h.html">marker.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;cameralibrary.h&quot;</span> </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="detectbr_8h.html">detectbr.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;opencv\cv.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;qimage.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;qcoreapplication.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_g_u_i_updater.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_g_u_i_updater.html">GUIUpdater</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_g_u_i_updater.html#aead8933227b7b7cc78e23b98d6c80ab1">GUIUpdater</a>(QObject *parent = 0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_g_u_i_updater.html#aabcc67dca68b515f3a86caab5f347b8e">~GUIUpdater</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_updater.html#af392547bf970784b35f47118512edb0e">activateCameras</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#a965d3cc548ceb3bfad4dd3be8ddd4e54">startCameras</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#ae51c4254189ed802733dcf6922851426">ShutDownCameras</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#acf45c3f51346a40e94988d2544650d3b">ShowCameras</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_updater.html#abfd0c6a214ab802eaa64e689010cdfeb">getPointerData</a>(<span class="keyword">const</span> std::string &amp;fileName);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#a677be84d397c616cb70d011b127406a5">getRigidsData</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_updater.html#abed450cacbd127705c14f797a5c1470d">calibPointer</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#a978e2b67abc8c081b61a7b0956bcabe4">setShowZone</a>(<span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#aa0677943be1e52a2852295384034fcd9">setTakeSnapshot</a>(<span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#a0646d9ce35c4fdcfc3ffa99c2b795bbe">setPics2Take</a>(<span class="keywordtype">int</span> numPics);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#ae5ce3b5dc00512e178cd7d7b16596463">setDetectRigids</a>(<span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#aa938ec821b9be8d1cd953fb0f9cbde5f">setDetectPointer</a>(<span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#af5e61de316d9cb02a61944319e25f6d1">setDelta</a>(<span class="keywordtype">float</span> delta);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#a8d47fbed8c4e041cbc91c2e868000e4e">writeMatrices</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#ae716caa2ecd78c5fa939f9cb34a0bc48">setCentroid</a>(cv::Mat_&lt;double&gt; centroid, std::string&amp; bone);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;signals:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#afacf05ece0988f07662eaab5591fd8b7">updateLeftCamera</a>(<span class="keyword">const</span> QImage &amp;);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#a1590223624b4a314a9fe56db73d984ab">updateRightCamera</a>(<span class="keyword">const</span> QImage &amp;);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#ad8113ad71fe2b1cd68b11bf69fc04f95">doFlash</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#a1ab6dfde2b8ea0700d212def0670ab9b">startCalibration</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#acc51b4ad134d5972231c4815d6148b83">startServer</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#af4c1cc78e23aa37ff6766be12f45b75f">pointerDetected</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g_u_i_updater.html#a25d97041202cd55c22064b99bddefc5f">pointerNotDetected</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    CameraLibrary::Camera *camera_1;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    CameraLibrary::Camera *camera_2;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> showZone;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> saveImage(std::string &amp;fileName, cv::Mat <a class="code" href="pgmread_8m.html#a86d0d51ceb4bc3bd26707520f257a5a4">img</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> takeSnapshot;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> doStartServer;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> detectRigids;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> detectPointer;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> tibiaFlag;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> femurFlag;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="click__ima__calib_8m.html#a66db7c5e4e9699c54207ab857ae72cb7">delta</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> pics2Take;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    cv::Mat_&lt;double&gt; tibiaCentroid;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    cv::Mat_&lt;double&gt; femurCentroid;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> getAngles(cv::Mat_&lt;double&gt;&amp; <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a>, cv::Mat_&lt;double&gt;&amp; angles);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> GetObjects(<a class="code" href="class_custom_camera_library_1_1c_frame.html">CustomCameraLibrary::cFrame</a> cframe, cv::Mat matFrame, cv::Mat_&lt;double&gt; &amp;<a class="code" href="_organizar_8m.html#a4baee84af7a92177c9064ddc2fc010ce">P</a>, cv::Mat_&lt;double&gt; &amp;<a class="code" href="affine_8m.html#a81bc2cb5ad09c87d9071b4bb769329dc">A</a>, cv::Mat_&lt;double&gt; &amp;PP_Broca);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> filter(cv::Mat_&lt;double&gt; datax, cv::Mat_&lt;double&gt; datay, cv::Mat_&lt;double&gt; <a class="code" href="rodrigues_8m.html#a2a89187d8e8e8fba509ef9ab5f815d88">out</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setBroca(<a class="code" href="struct_custom_camera_library_1_1_output.html">CustomCameraLibrary::BodyR</a> &amp;<a class="code" href="namespace_custom_camera_library.html#a749c51cb23f6d5d8d2f43b5e7ba9affd">rigid</a>, cv::Mat_&lt;double&gt; &amp;<a class="code" href="scanner__calibration__script_8m.html#a56a9c09a52f6c7d6f43b9d04fd5504d3">data</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_g_u_i_updater_html_aa0677943be1e52a2852295384034fcd9"><div class="ttname"><a href="class_g_u_i_updater.html#aa0677943be1e52a2852295384034fcd9">GUIUpdater::setTakeSnapshot</a></div><div class="ttdeci">void setTakeSnapshot(bool status)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00111">GUIUpdater.cpp:111</a></div></div>
+<div class="ttc" id="aaffine_8m_html_a81bc2cb5ad09c87d9071b4bb769329dc"><div class="ttname"><a href="affine_8m.html#a81bc2cb5ad09c87d9071b4bb769329dc">A</a></div><div class="ttdeci">function A</div><div class="ttdef"><b>Definition:</b> <a href="affine_8m_source.html#l00001">affine.m:1</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_a4baee84af7a92177c9064ddc2fc010ce"><div class="ttname"><a href="_organizar_8m.html#a4baee84af7a92177c9064ddc2fc010ce">P</a></div><div class="ttdeci">P</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00005">Organizar.m:5</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_abfd0c6a214ab802eaa64e689010cdfeb"><div class="ttname"><a href="class_g_u_i_updater.html#abfd0c6a214ab802eaa64e689010cdfeb">GUIUpdater::getPointerData</a></div><div class="ttdeci">bool getPointerData(const std::string &amp;fileName)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00799">GUIUpdater.cpp:799</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_acc51b4ad134d5972231c4815d6148b83"><div class="ttname"><a href="class_g_u_i_updater.html#acc51b4ad134d5972231c4815d6148b83">GUIUpdater::startServer</a></div><div class="ttdeci">void startServer()</div><div class="ttdef"><b>Definition:</b> <a href="_debug_2moc___g_u_i_updater_8cpp_source.html#l00219">moc_GUIUpdater.cpp:219</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_a965d3cc548ceb3bfad4dd3be8ddd4e54"><div class="ttname"><a href="class_g_u_i_updater.html#a965d3cc548ceb3bfad4dd3be8ddd4e54">GUIUpdater::startCameras</a></div><div class="ttdeci">void startCameras()</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00055">GUIUpdater.cpp:55</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_af5e61de316d9cb02a61944319e25f6d1"><div class="ttname"><a href="class_g_u_i_updater.html#af5e61de316d9cb02a61944319e25f6d1">GUIUpdater::setDelta</a></div><div class="ttdeci">void setDelta(float delta)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00103">GUIUpdater.cpp:103</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html"><div class="ttname"><a href="class_g_u_i_updater.html">GUIUpdater</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8h_source.html#l00016">GUIUpdater.h:16</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_a978e2b67abc8c081b61a7b0956bcabe4"><div class="ttname"><a href="class_g_u_i_updater.html#a978e2b67abc8c081b61a7b0956bcabe4">GUIUpdater::setShowZone</a></div><div class="ttdeci">void setShowZone(bool status)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00095">GUIUpdater.cpp:95</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_ae51c4254189ed802733dcf6922851426"><div class="ttname"><a href="class_g_u_i_updater.html#ae51c4254189ed802733dcf6922851426">GUIUpdater::ShutDownCameras</a></div><div class="ttdeci">void ShutDownCameras()</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00074">GUIUpdater.cpp:74</a></div></div>
+<div class="ttc" id="arodrigues_8m_html_a2a89187d8e8e8fba509ef9ab5f815d88"><div class="ttname"><a href="rodrigues_8m.html#a2a89187d8e8e8fba509ef9ab5f815d88">out</a></div><div class="ttdeci">out</div><div class="ttdef"><b>Definition:</b> <a href="rodrigues_8m_source.html#l00103">rodrigues.m:103</a></div></div>
+<div class="ttc" id="amarker_8h_html"><div class="ttname"><a href="marker_8h.html">marker.h</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_a8d47fbed8c4e041cbc91c2e868000e4e"><div class="ttname"><a href="class_g_u_i_updater.html#a8d47fbed8c4e041cbc91c2e868000e4e">GUIUpdater::writeMatrices</a></div><div class="ttdeci">void writeMatrices()</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00403">GUIUpdater.cpp:403</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a944b0ff7b0378fbacbea580c66148200"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a></div><div class="ttdeci">Initialization of the global parameter vector</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00297">go_calib_optim_iter.m:297</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a66db7c5e4e9699c54207ab857ae72cb7"><div class="ttname"><a href="click__ima__calib_8m.html#a66db7c5e4e9699c54207ab857ae72cb7">delta</a></div><div class="ttdeci">delta</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00107">click_ima_calib.m:107</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_aabcc67dca68b515f3a86caab5f347b8e"><div class="ttname"><a href="class_g_u_i_updater.html#aabcc67dca68b515f3a86caab5f347b8e">GUIUpdater::~GUIUpdater</a></div><div class="ttdeci">~GUIUpdater()</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00031">GUIUpdater.cpp:31</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_ad8113ad71fe2b1cd68b11bf69fc04f95"><div class="ttname"><a href="class_g_u_i_updater.html#ad8113ad71fe2b1cd68b11bf69fc04f95">GUIUpdater::doFlash</a></div><div class="ttdeci">void doFlash()</div><div class="ttdef"><b>Definition:</b> <a href="_debug_2moc___g_u_i_updater_8cpp_source.html#l00207">moc_GUIUpdater.cpp:207</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_afacf05ece0988f07662eaab5591fd8b7"><div class="ttname"><a href="class_g_u_i_updater.html#afacf05ece0988f07662eaab5591fd8b7">GUIUpdater::updateLeftCamera</a></div><div class="ttdeci">void updateLeftCamera(const QImage &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="_debug_2moc___g_u_i_updater_8cpp_source.html#l00193">moc_GUIUpdater.cpp:193</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_a0646d9ce35c4fdcfc3ffa99c2b795bbe"><div class="ttname"><a href="class_g_u_i_updater.html#a0646d9ce35c4fdcfc3ffa99c2b795bbe">GUIUpdater::setPics2Take</a></div><div class="ttdeci">void setPics2Take(int numPics)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00119">GUIUpdater.cpp:119</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_ae5ce3b5dc00512e178cd7d7b16596463"><div class="ttname"><a href="class_g_u_i_updater.html#ae5ce3b5dc00512e178cd7d7b16596463">GUIUpdater::setDetectRigids</a></div><div class="ttdeci">void setDetectRigids(bool status)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00127">GUIUpdater.cpp:127</a></div></div>
+<div class="ttc" id="astruct_custom_camera_library_1_1_output_html"><div class="ttname"><a href="struct_custom_camera_library_1_1_output.html">CustomCameraLibrary::Output</a></div><div class="ttdoc">Esta estructura permite almacenar las características de los cuerpos rígidos que vayan siendo detecta...</div><div class="ttdef"><b>Definition:</b> <a href="detectbr_8h_source.html#l00077">detectbr.h:77</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_aead8933227b7b7cc78e23b98d6c80ab1"><div class="ttname"><a href="class_g_u_i_updater.html#aead8933227b7b7cc78e23b98d6c80ab1">GUIUpdater::GUIUpdater</a></div><div class="ttdeci">GUIUpdater(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00018">GUIUpdater.cpp:18</a></div></div>
+<div class="ttc" id="apgmread_8m_html_a86d0d51ceb4bc3bd26707520f257a5a4"><div class="ttname"><a href="pgmread_8m.html#a86d0d51ceb4bc3bd26707520f257a5a4">img</a></div><div class="ttdeci">function img</div><div class="ttdef"><b>Definition:</b> <a href="pgmread_8m_source.html#l00001">pgmread.m:1</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_af4c1cc78e23aa37ff6766be12f45b75f"><div class="ttname"><a href="class_g_u_i_updater.html#af4c1cc78e23aa37ff6766be12f45b75f">GUIUpdater::pointerDetected</a></div><div class="ttdeci">void pointerDetected()</div><div class="ttdef"><b>Definition:</b> <a href="_debug_2moc___g_u_i_updater_8cpp_source.html#l00225">moc_GUIUpdater.cpp:225</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_a1ab6dfde2b8ea0700d212def0670ab9b"><div class="ttname"><a href="class_g_u_i_updater.html#a1ab6dfde2b8ea0700d212def0670ab9b">GUIUpdater::startCalibration</a></div><div class="ttdeci">void startCalibration()</div><div class="ttdef"><b>Definition:</b> <a href="_debug_2moc___g_u_i_updater_8cpp_source.html#l00213">moc_GUIUpdater.cpp:213</a></div></div>
+<div class="ttc" id="ascanner__calibration__script_8m_html_a56a9c09a52f6c7d6f43b9d04fd5504d3"><div class="ttname"><a href="scanner__calibration__script_8m.html#a56a9c09a52f6c7d6f43b9d04fd5504d3">data</a></div><div class="ttdeci">Load the projector data</div><div class="ttdef"><b>Definition:</b> <a href="scanner__calibration__script_8m_source.html#l00107">scanner_calibration_script.m:107</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_abed450cacbd127705c14f797a5c1470d"><div class="ttname"><a href="class_g_u_i_updater.html#abed450cacbd127705c14f797a5c1470d">GUIUpdater::calibPointer</a></div><div class="ttdeci">bool calibPointer()</div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_a677be84d397c616cb70d011b127406a5"><div class="ttname"><a href="class_g_u_i_updater.html#a677be84d397c616cb70d011b127406a5">GUIUpdater::getRigidsData</a></div><div class="ttdeci">void getRigidsData()</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00548">GUIUpdater.cpp:548</a></div></div>
+<div class="ttc" id="adetectbr_8h_html"><div class="ttname"><a href="detectbr_8h.html">detectbr.h</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_a25d97041202cd55c22064b99bddefc5f"><div class="ttname"><a href="class_g_u_i_updater.html#a25d97041202cd55c22064b99bddefc5f">GUIUpdater::pointerNotDetected</a></div><div class="ttdeci">void pointerNotDetected()</div><div class="ttdef"><b>Definition:</b> <a href="_debug_2moc___g_u_i_updater_8cpp_source.html#l00231">moc_GUIUpdater.cpp:231</a></div></div>
+<div class="ttc" id="anamespace_custom_camera_library_html_a749c51cb23f6d5d8d2f43b5e7ba9affd"><div class="ttname"><a href="namespace_custom_camera_library.html#a749c51cb23f6d5d8d2f43b5e7ba9affd">CustomCameraLibrary::rigid</a></div><div class="ttdeci">BodyR * rigid</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00081">server.h:81</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1c_frame_html"><div class="ttname"><a href="class_custom_camera_library_1_1c_frame.html">CustomCameraLibrary::cFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00133">marker.h:133</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_aa938ec821b9be8d1cd953fb0f9cbde5f"><div class="ttname"><a href="class_g_u_i_updater.html#aa938ec821b9be8d1cd953fb0f9cbde5f">GUIUpdater::setDetectPointer</a></div><div class="ttdeci">void setDetectPointer(bool status)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00135">GUIUpdater.cpp:135</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_ae716caa2ecd78c5fa939f9cb34a0bc48"><div class="ttname"><a href="class_g_u_i_updater.html#ae716caa2ecd78c5fa939f9cb34a0bc48">GUIUpdater::setCentroid</a></div><div class="ttdeci">void setCentroid(cv::Mat_&lt; double &gt; centroid, std::string &amp;bone)</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00156">GUIUpdater.cpp:156</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_a1590223624b4a314a9fe56db73d984ab"><div class="ttname"><a href="class_g_u_i_updater.html#a1590223624b4a314a9fe56db73d984ab">GUIUpdater::updateRightCamera</a></div><div class="ttdeci">void updateRightCamera(const QImage &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="_debug_2moc___g_u_i_updater_8cpp_source.html#l00200">moc_GUIUpdater.cpp:200</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_acf45c3f51346a40e94988d2544650d3b"><div class="ttname"><a href="class_g_u_i_updater.html#acf45c3f51346a40e94988d2544650d3b">GUIUpdater::ShowCameras</a></div><div class="ttdeci">void ShowCameras()</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00199">GUIUpdater.cpp:199</a></div></div>
+<div class="ttc" id="aclass_g_u_i_updater_html_af392547bf970784b35f47118512edb0e"><div class="ttname"><a href="class_g_u_i_updater.html#af392547bf970784b35f47118512edb0e">GUIUpdater::activateCameras</a></div><div class="ttdeci">bool activateCameras()</div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_updater_8cpp_source.html#l00039">GUIUpdater.cpp:39</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

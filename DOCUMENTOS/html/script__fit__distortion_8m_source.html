@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/script_fit_distortion.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">script_fit_distortion.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="script__fit__distortion_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#a12c71abcd16969f1ed5ceb4e1e6b160c">    2</a></span>&#160;      <a class="code" href="script__fit__distortion_8m.html#a12c71abcd16969f1ed5ceb4e1e6b160c">satis_distort</a> = 0;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      <a class="code" href="script__fit__distortion_8m.html#a9a388259866a093a4ccb6e7ecea987dc">disp</a>([<span class="stringliteral">&#39;Estimated focal: &#39;</span> num2str(<a class="code" href="click__ima__calib3_d_8m.html#a623b96a623f0f45f72406eee45505c10">f_g</a>) <span class="stringliteral">&#39; pixels&#39;</span>]);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#a52cce8bb267217d7f4823cd6d5270e64">    6</a></span>&#160;      <span class="keywordflow">while</span> <a class="code" href="script__fit__distortion_8m.html#a52cce8bb267217d7f4823cd6d5270e64">~satis_distort</a>,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#ac84e1cf68d1b4e6fb931609c4e59970b">    8</a></span>&#160;     <a class="code" href="script__fit__distortion_8m.html#ac84e1cf68d1b4e6fb931609c4e59970b">k_g</a> = <a class="code" href="click__calib_8m.html#a83b0c7762f2f177f55319bbe0e6c9f81">input</a>(<span class="stringliteral">&#39;Guess for distortion factor kc ([]=0): &#39;</span>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;     </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">   10</a></span>&#160;     <span class="keywordflow">if</span> <a class="code" href="script__fit__distortion_8m.html#a7f6e36813c76f7cdef5bf0365d9aa763">isempty</a>(<a class="code" href="script__fit__distortion_8m.html#ac84e1cf68d1b4e6fb931609c4e59970b">k_g</a>), <a class="code" href="script__fit__distortion_8m.html#ac84e1cf68d1b4e6fb931609c4e59970b">k_g</a> = 0; <a class="code" href="script__fit__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#a5b62523d31ca147a6bd288223a29a552">   12</a></span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a5b62523d31ca147a6bd288223a29a552">xy_corners_undist</a> = comp_distortion2([<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a><span class="stringliteral">&#39; - c_g(1);y&#39;</span>-c_g(2)]/<a class="code" href="click__ima__calib3_d_8m.html#a623b96a623f0f45f72406eee45505c10">f_g</a>,<a class="code" href="script__fit__distortion_8m.html#ac84e1cf68d1b4e6fb931609c4e59970b">k_g</a>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;     </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#ab96b03c3d38dac7ad0a0a0df2ddd8c7d">   14</a></span>&#160;     <a class="code" href="script__fit__distortion_8m.html#ab96b03c3d38dac7ad0a0a0df2ddd8c7d">xu</a> = <a class="code" href="script__fit__distortion_8m.html#a5b62523d31ca147a6bd288223a29a552">xy_corners_undist</a>(1,:)<span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#af34d07b202eaeadf913468e95d7fcb86">   15</a></span>&#160;<span class="stringliteral">     yu = xy_corners_undist(2,:)&#39;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;     </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;     [XXu] = projectedGrid ( [<a class="code" href="script__fit__distortion_8m.html#ab96b03c3d38dac7ad0a0a0df2ddd8c7d">xu</a>(1);<a class="code" href="script__fit__distortion_8m.html#af34d07b202eaeadf913468e95d7fcb86">yu</a>(1)], [xu(2);yu(2)],[xu(3);yu(3)], [xu(4);yu(4)],<a class="code" href="click__ima__calib3_d_8m.html#a5815805cd457543ec0eb9d4dc9d1c2b5">n_sq_x</a>+1,<a class="code" href="click__ima__calib3_d_8m.html#a0e5cdcdb7e033939685d5858efc63af4">n_sq_y</a>+1); % The full grid</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;     </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">   19</a></span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">XX</a> = (<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(2,1)*(1 + <a class="code" href="script__fit__distortion_8m.html#ac84e1cf68d1b4e6fb931609c4e59970b">k_g</a> * <a class="code" href="go__calib__optim__iter_8m.html#a84fc371dc8106a6d6ade7b5e736f09b7">sum</a>(XXu.^2))) .* XXu;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">XX</a>(1,:) = <a class="code" href="click__ima__calib3_d_8m.html#a623b96a623f0f45f72406eee45505c10">f_g</a>*<a class="code" href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">XX</a>(1,:)+c_g(1);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">XX</a>(2,:) = <a class="code" href="click__ima__calib3_d_8m.html#a623b96a623f0f45f72406eee45505c10">f_g</a>*<a class="code" href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">XX</a>(2,:)+c_g(2);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;     </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#ac84feabc0a5ffe70fd5e05e72a103d54">figure</a>(2);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a>(<a class="code" href="ima__read__calib__no__read_8m.html#adb7448e14482771c374c21974efcf4e8">I</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a7c672a3bcf6f12ef9e6e78cdb48a0ccd">colormap</a>(<a class="code" href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#a58ab1fd68e97078232808206b850161b">   26</a></span>&#160;     zoom <a class="code" href="script__fit__distortion_8m.html#a58ab1fd68e97078232808206b850161b">on</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;     hold <a class="code" href="script__fit__distortion_8m.html#a58ab1fd68e97078232808206b850161b">on</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;     %<a class="code" href="script__fit__distortion_8m.html#a3cdbc75f24d53ceeeafa8380acbb3914">plot</a>(<a class="code" href="click__ima__calib3_d_8m.html#a623b96a623f0f45f72406eee45505c10">f_g</a>*XXu(1,:)+c_g(1),<a class="code" href="click__ima__calib3_d_8m.html#a623b96a623f0f45f72406eee45505c10">f_g</a>*XXu(2,:)+c_g(2),<span class="stringliteral">&#39;ro&#39;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a3cdbc75f24d53ceeeafa8380acbb3914">plot</a>(<a class="code" href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">XX</a>(1,:),<a class="code" href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">XX</a>(2,:),<span class="stringliteral">&#39;r+&#39;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a36d8655fff000b1abc397240b5ca5341">title</a>(<span class="stringliteral">&#39;The red crosses should be on the grid corners...&#39;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="script__fit__distortion_8m.html#a835accca41274fb237599d9b3c117fcf">   31</a></span>&#160;     hold <a class="code" href="script__fit__distortion_8m.html#a835accca41274fb237599d9b3c117fcf">off</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;     </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a12c71abcd16969f1ed5ceb4e1e6b160c">satis_distort</a> = <a class="code" href="click__calib_8m.html#a83b0c7762f2f177f55319bbe0e6c9f81">input</a>(<span class="stringliteral">&#39;Satisfied with distortion? ([]=no, other=yes) &#39;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;     <a class="code" href="script__fit__distortion_8m.html#a12c71abcd16969f1ed5ceb4e1e6b160c">satis_distort</a> = <a class="code" href="add__suppress_8m.html#a0e055959c15ec2ceb9c6f3b4e5195b85">~isempty</a>(<a class="code" href="script__fit__distortion_8m.html#a12c71abcd16969f1ed5ceb4e1e6b160c">satis_distort</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;     </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <a class="code" href="script__fit__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ascript__fit__distortion_8m_html_af34d07b202eaeadf913468e95d7fcb86"><div class="ttname"><a href="script__fit__distortion_8m.html#af34d07b202eaeadf913468e95d7fcb86">yu</a></div><div class="ttdeci">yu</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00015">script_fit_distortion.m:15</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a84fc371dc8106a6d6ade7b5e736f09b7"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a84fc371dc8106a6d6ade7b5e736f09b7">sum</a></div><div class="ttdeci">if sum(prob_kc)</div></div>
+<div class="ttc" id="aadd__suppress_8m_html_a0e055959c15ec2ceb9c6f3b4e5195b85"><div class="ttname"><a href="add__suppress_8m.html#a0e055959c15ec2ceb9c6f3b4e5195b85">~isempty</a></div><div class="ttdeci">if ~isempty(ind_active)</div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a52cce8bb267217d7f4823cd6d5270e64"><div class="ttname"><a href="script__fit__distortion_8m.html#a52cce8bb267217d7f4823cd6d5270e64">~satis_distort</a></div><div class="ttdeci">while ~satis_distort</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00006">script_fit_distortion.m:6</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a5b62523d31ca147a6bd288223a29a552"><div class="ttname"><a href="script__fit__distortion_8m.html#a5b62523d31ca147a6bd288223a29a552">xy_corners_undist</a></div><div class="ttdeci">xy_corners_undist</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00012">script_fit_distortion.m:12</a></div></div>
+<div class="ttc" id="asmall__test__script_8m_html_ab7fd51748de2e6629029180d5d37ec10"><div class="ttname"><a href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a></div><div class="ttdeci">[479.5200 236.0800 608.4100 415.3700 461.0000 40.0000 451.4800 308.7000 373.9900 314.8900 299.3200 319.1300 231.5500 321.3700 443.7300 282.9200 378.3600 288.3000 314.6900 292.7400 255.4700 296.2300]' x</div><div class="ttdef"><b>Definition:</b> <a href="small__test__script_8m_source.html#l00018">small_test_script.m:18</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a5815805cd457543ec0eb9d4dc9d1c2b5"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a5815805cd457543ec0eb9d4dc9d1c2b5">n_sq_x</a></div><div class="ttdeci">n_sq_x</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00073">click_ima_calib3D.m:73</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a58ab1fd68e97078232808206b850161b"><div class="ttname"><a href="script__fit__distortion_8m.html#a58ab1fd68e97078232808206b850161b">on</a></div><div class="ttdeci">zoom on</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00026">script_fit_distortion.m:26</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a12c71abcd16969f1ed5ceb4e1e6b160c"><div class="ttname"><a href="script__fit__distortion_8m.html#a12c71abcd16969f1ed5ceb4e1e6b160c">satis_distort</a></div><div class="ttdeci">satis_distort</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00002">script_fit_distortion.m:2</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a623b96a623f0f45f72406eee45505c10"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a623b96a623f0f45f72406eee45505c10">f_g</a></div><div class="ttdeci">f_g</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00149">click_ima_calib3D.m:149</a></div></div>
+<div class="ttc" id="aclick__calib_8m_html_a9ec9dda576db2a36c42c1c3af155d07c"><div class="ttname"><a href="click__calib_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">map</a></div><div class="ttdeci">map</div><div class="ttdef"><b>Definition:</b> <a href="click__calib_8m_source.html#l00036">click_calib.m:36</a></div></div>
+<div class="ttc" id="aima__read__calib__no__read_8m_html_adb7448e14482771c374c21974efcf4e8"><div class="ttname"><a href="ima__read__calib__no__read_8m.html#adb7448e14482771c374c21974efcf4e8">I</a></div><div class="ttdeci">if ~one_image_read if if I</div><div class="ttdef"><b>Definition:</b> <a href="ima__read__calib__no__read_8m_source.html#l00077">ima_read_calib_no_read.m:77</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a36d8655fff000b1abc397240b5ca5341"><div class="ttname"><a href="script__fit__distortion_8m.html#a36d8655fff000b1abc397240b5ca5341">title</a></div><div class="ttdeci">title('The red crosses should be on the grid corners...')</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="script__fit__distortion_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00010">script_fit_distortion.m:10</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_ac84feabc0a5ffe70fd5e05e72a103d54"><div class="ttname"><a href="script__fit__distortion_8m.html#ac84feabc0a5ffe70fd5e05e72a103d54">figure</a></div><div class="ttdeci">figure(2)</div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_ac84e1cf68d1b4e6fb931609c4e59970b"><div class="ttname"><a href="script__fit__distortion_8m.html#ac84e1cf68d1b4e6fb931609c4e59970b">k_g</a></div><div class="ttdeci">while k_g</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00008">script_fit_distortion.m:8</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a7523bc3690988af977cbd63496b5c586"><div class="ttname"><a href="script__fit__distortion_8m.html#a7523bc3690988af977cbd63496b5c586">XX</a></div><div class="ttdeci">The full grid XX</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00019">script_fit_distortion.m:19</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a7f6e36813c76f7cdef5bf0365d9aa763"><div class="ttname"><a href="script__fit__distortion_8m.html#a7f6e36813c76f7cdef5bf0365d9aa763">isempty</a></div><div class="ttdeci">if isempty(k_g)</div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_ac8a8411243371a1be29a938cf1c083fb"><div class="ttname"><a href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a></div><div class="ttdeci">image(I)</div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a7c672a3bcf6f12ef9e6e78cdb48a0ccd"><div class="ttname"><a href="script__fit__distortion_8m.html#a7c672a3bcf6f12ef9e6e78cdb48a0ccd">colormap</a></div><div class="ttdeci">colormap(map)</div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a835accca41274fb237599d9b3c117fcf"><div class="ttname"><a href="script__fit__distortion_8m.html#a835accca41274fb237599d9b3c117fcf">off</a></div><div class="ttdeci">hold off</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00031">script_fit_distortion.m:31</a></div></div>
+<div class="ttc" id="aclick__calib_8m_html_a83b0c7762f2f177f55319bbe0e6c9f81"><div class="ttname"><a href="click__calib_8m.html#a83b0c7762f2f177f55319bbe0e6c9f81">input</a></div><div class="ttdeci">input('Start image number([]=1=first):')</div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a0e5cdcdb7e033939685d5858efc63af4"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a0e5cdcdb7e033939685d5858efc63af4">n_sq_y</a></div><div class="ttdeci">n_sq_y</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00075">click_ima_calib3D.m:75</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_ab96b03c3d38dac7ad0a0a0df2ddd8c7d"><div class="ttname"><a href="script__fit__distortion_8m.html#ab96b03c3d38dac7ad0a0a0df2ddd8c7d">xu</a></div><div class="ttdeci">xu</div><div class="ttdef"><b>Definition:</b> <a href="script__fit__distortion_8m_source.html#l00014">script_fit_distortion.m:14</a></div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a3cdbc75f24d53ceeeafa8380acbb3914"><div class="ttname"><a href="script__fit__distortion_8m.html#a3cdbc75f24d53ceeeafa8380acbb3914">plot</a></div><div class="ttdeci">plot(f_g *XXu(1,:)+c_g(1), f_g *XXu(2,:)+c_g(2), 'ro')</div></div>
+<div class="ttc" id="ascript__fit__distortion_8m_html_a9a388259866a093a4ccb6e7ecea987dc"><div class="ttname"><a href="script__fit__distortion_8m.html#a9a388259866a093a4ccb6e7ecea987dc">disp</a></div><div class="ttdeci">disp(['Estimated focal:' num2str(f_g) ' pixels'])</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

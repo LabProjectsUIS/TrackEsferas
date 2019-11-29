@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/loadinr.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">loadinr.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="loadinr_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;%LOADINR    Load an INRIMAGE <a class="code" href="check__directory_8m.html#a68712d1f70845df2d3fee19d8e07102a">format</a> <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;%</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;%   LOADINR(filename, <a class="code" href="loadinr_8m.html#a36aff75e89a0f2a99eca767b6ece034d">im</a>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;%</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;%   Load an INRIA <a class="code" href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a> <a class="code" href="check__directory_8m.html#a68712d1f70845df2d3fee19d8e07102a">format</a> <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a> and <span class="keywordflow">return</span> it as <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> <a class="code" href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;%</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;% SEE <a class="code" href="loadppm_8m.html#af297ca8eb8596a90606dec6e46674ecb">ALSO</a>: saveinr</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;%</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;%   <a class="code" href="loadpgm_8m.html#a5332e8d6c78fdb4624c84a9a2f3fd75b">Copyright</a> (<a class="code" href="ginput2_8m.html#aa49cfdd4fa4d74d71f78a001a1b635d0">c</a>) Peter Corke, 1999  Machine Vision <a class="code" href="stereo__gui_8m.html#a1111f4b47b9749e6ca5e4f9ca98da143">Toolbox</a> <span class="keywordflow">for</span> Matlab</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;% Peter Corke 1996</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">function</span> <a class="code" href="loadinr_8m.html#a36aff75e89a0f2a99eca767b6ece034d">im</a> = loadinr(fname, <a class="code" href="loadinr_8m.html#a36aff75e89a0f2a99eca767b6ece034d">im</a>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="loadpgm_8m.html#ae9011d40c6f13e68e6f07156e0da7c5d">fid</a> = fopen(fname, <span class="charliteral">&#39;r&#39;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">   18</a></span>&#160;    <a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a> = <a class="code" href="pgmread_8m.html#a011c2b2e652021daa3872e94b459d277">fgets</a>(<a class="code" href="loadpgm_8m.html#ae9011d40c6f13e68e6f07156e0da7c5d">fid</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="loadinr_8m.html#a0a470d95b56f950cab76813217f19ddd">strcmp</a>(<a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>(1:12), <span class="stringliteral">&#39;#INRIMAGE-4#&#39;</span>) == 0,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="loadinr_8m.html#ae7ff144e6bb2d983b6b9c6103447a389">error</a>(<span class="stringliteral">&#39;not INRIMAGE format&#39;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="loadinr_8m.html#ada129e64aaca5f1d7932a0d7584c4f47">   23</a></span>&#160;    % not very <a class="code" href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a>, only looks <span class="keywordflow">for</span> the <a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>/YDIM keys</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">while</span> 1,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a> = <a class="code" href="pgmread_8m.html#a011c2b2e652021daa3872e94b459d277">fgets</a>(<a class="code" href="loadpgm_8m.html#ae9011d40c6f13e68e6f07156e0da7c5d">fid</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="loadinr_8m.html#aeab71244afb687f16d8c4f5ee9d6ef0e">   26</a></span>&#160;        <a class="code" href="loadinr_8m.html#aeab71244afb687f16d8c4f5ee9d6ef0e">n</a> = <a class="code" href="click__ima__calib3_d_8m.html#a7a134e91d2540aeba432404d6104a7ee">length</a>(<a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>) - 1;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>(1) == <span class="charliteral">&#39;#&#39;</span>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">break</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="loadinr_8m.html#a0a470d95b56f950cab76813217f19ddd">strcmp</a>(<a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>(1:5), <span class="stringliteral">&#39;XDIM=&#39;</span>),</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">   31</a></span>&#160;            <a class="code" href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">cols</a> = str2num(<a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>(6:<a class="code" href="loadinr_8m.html#aeab71244afb687f16d8c4f5ee9d6ef0e">n</a>));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="loadinr_8m.html#a0a470d95b56f950cab76813217f19ddd">strcmp</a>(<a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>(1:5), <span class="stringliteral">&#39;YDIM=&#39;</span>),</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">   34</a></span>&#160;            <a class="code" href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">rows</a> = str2num(<a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>(6:<a class="code" href="loadinr_8m.html#aeab71244afb687f16d8c4f5ee9d6ef0e">n</a>));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="loadinr_8m.html#a0a470d95b56f950cab76813217f19ddd">strcmp</a>(<a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>(1:4), <span class="stringliteral">&#39;CPU=&#39;</span>),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> <a class="code" href="loadinr_8m.html#a0a470d95b56f950cab76813217f19ddd">strcmp</a>(<a class="code" href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>(5:<a class="code" href="loadinr_8m.html#aeab71244afb687f16d8c4f5ee9d6ef0e">n</a>), <span class="stringliteral">&#39;sun&#39;</span>) == 0,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="loadinr_8m.html#ae7ff144e6bb2d983b6b9c6103447a389">error</a>(<span class="stringliteral">&#39;not sun data ordering&#39;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="loadinr_8m.html#a9c4fadc251864204ae1b65882fcfca56">disp</a>([<span class="stringliteral">&#39;INRIMAGE format file &#39;</span> num2str(<a class="code" href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">rows</a>) <span class="stringliteral">&#39; x &#39;</span> num2str(<a class="code" href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">cols</a>)])</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    % <a class="code" href="rectify__stereo__pair_8m.html#a05739f4b7ae42ee41b81d332e7d6ff51">now</a> the binary <a class="code" href="scanner__calibration__script_8m.html#a56a9c09a52f6c7d6f43b9d04fd5504d3">data</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="loadinr_8m.html#acc7c6af16a4101474eb6a46371df3472">   46</a></span>&#160;    <a class="code" href="readras_8m.html#ad3a9cd9f8ed672885882de567d026441">fseek</a>(<a class="code" href="loadpgm_8m.html#ae9011d40c6f13e68e6f07156e0da7c5d">fid</a>, 256, <span class="stringliteral">&#39;bof&#39;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    [im count] = fread(<a class="code" href="loadpgm_8m.html#ae9011d40c6f13e68e6f07156e0da7c5d">fid</a>, [<a class="code" href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">cols</a> <a class="code" href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">rows</a>], <span class="stringliteral">&#39;float32&#39;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="loadinr_8m.html#a36aff75e89a0f2a99eca767b6ece034d">   48</a></span>&#160;    <a class="code" href="loadinr_8m.html#a36aff75e89a0f2a99eca767b6ece034d">im</a> = <a class="code" href="loadinr_8m.html#a36aff75e89a0f2a99eca767b6ece034d">im</a><span class="stringliteral">&#39;;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="loadinr_8m.html#a7cac2bcaa1b2d570b851720e5a3b86a4">   49</a></span>&#160;<span class="stringliteral">    if count ~= (rows*cols),</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral">        error(&#39;</span><a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a> too <span class="keywordtype">short</span><span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral">    end</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral">    fclose(fid);</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aloadppm_8m_html_af297ca8eb8596a90606dec6e46674ecb"><div class="ttname"><a href="loadppm_8m.html#af297ca8eb8596a90606dec6e46674ecb">ALSO</a></div><div class="ttdeci">LOADPPM Load a PPM image and open a ppm and pnm extension will be tried SEE ALSO</div><div class="ttdef"><b>Definition:</b> <a href="loadppm_8m_source.html#l00003">loadppm.m:3</a></div></div>
+<div class="ttc" id="aloadpgm_8m_html_a5332e8d6c78fdb4624c84a9a2f3fd75b"><div class="ttname"><a href="loadpgm_8m.html#a5332e8d6c78fdb4624c84a9a2f3fd75b">Copyright</a></div><div class="ttdeci">LOADPGM Load a PGM image and open a pgm will be appended Copyright(c) Peter Corke</div></div>
+<div class="ttc" id="aloadinr_8m_html_a36aff75e89a0f2a99eca767b6ece034d"><div class="ttname"><a href="loadinr_8m.html#a36aff75e89a0f2a99eca767b6ece034d">im</a></div><div class="ttdeci">im</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00048">loadinr.m:48</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_ac51b57a703ba1c5869228690c93e1701"><div class="ttname"><a href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a></div><div class="ttdeci">All the point coordinates(on the image, and in 3D) - for global optimization X</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00218">click_ima_calib3D.m:218</a></div></div>
+<div class="ttc" id="aginput2_8m_html_aa49cfdd4fa4d74d71f78a001a1b635d0"><div class="ttname"><a href="ginput2_8m.html#aa49cfdd4fa4d74d71f78a001a1b635d0">c</a></div><div class="ttdeci">c</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00025">ginput2.m:25</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_a83f0b0b799ea54be1874e9711580055b"><div class="ttname"><a href="loadinr_8m.html#a83f0b0b799ea54be1874e9711580055b">cols</a></div><div class="ttdeci">if break end if cols</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00031">loadinr.m:31</a></div></div>
+<div class="ttc" id="apgmread_8m_html_a011c2b2e652021daa3872e94b459d277"><div class="ttname"><a href="pgmread_8m.html#a011c2b2e652021daa3872e94b459d277">fgets</a></div><div class="ttdeci">end end fgets(fid)</div></div>
+<div class="ttc" id="aloadinr_8m_html_a9c4fadc251864204ae1b65882fcfca56"><div class="ttname"><a href="loadinr_8m.html#a9c4fadc251864204ae1b65882fcfca56">disp</a></div><div class="ttdeci">end end end disp(['INRIMAGE format file ' num2str(rows) ' x ' num2str(cols)]) % now the binary data fseek(fid</div></div>
+<div class="ttc" id="aloadpgm_8m_html_ae9011d40c6f13e68e6f07156e0da7c5d"><div class="ttname"><a href="loadpgm_8m.html#ae9011d40c6f13e68e6f07156e0da7c5d">fid</a></div><div class="ttdeci">fid</div><div class="ttdef"><b>Definition:</b> <a href="loadpgm_8m_source.html#l00021">loadpgm.m:21</a></div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7a134e91d2540aeba432404d6104a7ee"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7a134e91d2540aeba432404d6104a7ee">length</a></div><div class="ttdeci">if Estimation of focal length</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00146">click_ima_calib3D.m:146</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_ac6a7a413be81452b9806f7021b893ad4"><div class="ttname"><a href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00005">add_suppress.m:5</a></div></div>
+<div class="ttc" id="acheck__directory_8m_html_a68712d1f70845df2d3fee19d8e07102a"><div class="ttname"><a href="check__directory_8m.html#a68712d1f70845df2d3fee19d8e07102a">format</a></div><div class="ttdeci">try the upper case format</div><div class="ttdef"><b>Definition:</b> <a href="check__directory_8m_source.html#l00056">check_directory.m:56</a></div></div>
+<div class="ttc" id="aextract__parameters_8m_html_aa29c479aca4eef75a9f1c16e1c1ff766"><div class="ttname"><a href="extract__parameters_8m.html#aa29c479aca4eef75a9f1c16e1c1ff766">matrix</a></div><div class="ttdeci">Calibration matrix</div><div class="ttdef"><b>Definition:</b> <a href="extract__parameters_8m_source.html#l00022">extract_parameters.m:22</a></div></div>
+<div class="ttc" id="aanalyse__error_8m_html_aee9a066043e7b7065d7cdda5fbcfba53"><div class="ttname"><a href="analyse__error_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a></div><div class="ttdeci">Color code for each image</div><div class="ttdef"><b>Definition:</b> <a href="analyse__error_8m_source.html#l00003">analyse_error.m:3</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_a0a470d95b56f950cab76813217f19ddd"><div class="ttname"><a href="loadinr_8m.html#a0a470d95b56f950cab76813217f19ddd">strcmp</a></div><div class="ttdeci">if strcmp(s(1:12), '#INRIMAGE-4#')</div></div>
+<div class="ttc" id="aloadinr_8m_html_aca921670c13923eac3fe8dff3f71e463"><div class="ttname"><a href="loadinr_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a></div><div class="ttdeci">LOADINR Load an INRIMAGE format file LOADINR(filename, im) % % Load an INRIA image format file and return it as a matrix % % SEE ALSO s</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00018">loadinr.m:18</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_ac1352e0d866f7eb4ed9f3c24f8aef539"><div class="ttname"><a href="loadinr_8m.html#ac1352e0d866f7eb4ed9f3c24f8aef539">rows</a></div><div class="ttdeci">end if rows</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00034">loadinr.m:34</a></div></div>
+<div class="ttc" id="astereo__gui_8m_html_a1111f4b47b9749e6ca5e4f9ca98da143"><div class="ttname"><a href="stereo__gui_8m.html#a1111f4b47b9749e6ca5e4f9ca98da143">Toolbox</a></div><div class="ttdeci">stereo_gui Stereo Camera Calibration Toolbox(two cameras, internal and external calibration)</div><div class="ttdef"><b>Definition:</b> <a href="stereo__gui_8m_source.html#l00002">stereo_gui.m:2</a></div></div>
+<div class="ttc" id="ascanner__calibration__script_8m_html_a56a9c09a52f6c7d6f43b9d04fd5504d3"><div class="ttname"><a href="scanner__calibration__script_8m.html#a56a9c09a52f6c7d6f43b9d04fd5504d3">data</a></div><div class="ttdeci">Load the projector data</div><div class="ttdef"><b>Definition:</b> <a href="scanner__calibration__script_8m_source.html#l00107">scanner_calibration_script.m:107</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_aeab71244afb687f16d8c4f5ee9d6ef0e"><div class="ttname"><a href="loadinr_8m.html#aeab71244afb687f16d8c4f5ee9d6ef0e">n</a></div><div class="ttdeci">n</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00026">loadinr.m:26</a></div></div>
+<div class="ttc" id="areadras_8m_html_ad3a9cd9f8ed672885882de567d026441"><div class="ttname"><a href="readras_8m.html#ad3a9cd9f8ed672885882de567d026441">fseek</a></div><div class="ttdeci">fp, 4, -1 fseek()</div></div>
+<div class="ttc" id="aloadinr_8m_html_a5f867e6d2f1b81be0cb765b13a6ec4af"><div class="ttname"><a href="loadinr_8m.html#a5f867e6d2f1b81be0cb765b13a6ec4af">complete</a></div><div class="ttdeci">end not very complete</div><div class="ttdef"><b>Definition:</b> <a href="loadinr_8m_source.html#l00023">loadinr.m:23</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_a05739f4b7ae42ee41b81d332e7d6ff51"><div class="ttname"><a href="rectify__stereo__pair_8m.html#a05739f4b7ae42ee41b81d332e7d6ff51">now</a></div><div class="ttdeci">Loop around all the frames now</div><div class="ttdef"><b>Definition:</b> <a href="rectify__stereo__pair_8m_source.html#l00155">rectify_stereo_pair.m:155</a></div></div>
+<div class="ttc" id="aloadinr_8m_html_ae7ff144e6bb2d983b6b9c6103447a389"><div class="ttname"><a href="loadinr_8m.html#ae7ff144e6bb2d983b6b9c6103447a389">error</a></div><div class="ttdeci">if error('not INRIMAGE format')</div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_ac0a984a0dc9111131f4ad1fe8088698a"><div class="ttname"><a href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a></div><div class="ttdeci">else Append mode file</div><div class="ttdef"><b>Definition:</b> <a href="matlab2opencv_8m_source.html#l00019">matlab2opencv.m:19</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

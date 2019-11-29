@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/Distor2Calib.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Distor2Calib.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_distor2_calib_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a937d8a4bb89c2cd2e3248dbde00e6c3c">    1</a></span>&#160;<span class="keyword">function</span> [fc_2,Rc_2,Tc_2,H_2,distance,V_vert,V_hori,x_all_c,V_hori_pix,V_vert_pix,V_diag1_pix,V_diag2_pix]=Distor2Calib(k_dist,<a class="code" href="_distor2_calib_8m.html#a7544aa73280c654abef8404a0de3f8ab">grid_pts_centered</a>,<a class="code" href="click__ima__calib3_d_8m.html#a5815805cd457543ec0eb9d4dc9d1c2b5">n_sq_x</a>,<a class="code" href="click__ima__calib3_d_8m.html#a0e5cdcdb7e033939685d5858efc63af4">n_sq_y</a>,<a class="code" href="click__ima__calib3_d_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a>,<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>,<a class="code" href="click__ima__calib3_d_8m.html#a67824ecf84f5816f07b74fa956bdbcd2">L</a>,Xgrid_2,<a class="code" href="_distor2_calib_8m.html#a940698addfed0fb478c809a11b939f78">f_ini</a>,<a class="code" href="_distor2_calib_8m.html#a0765fe92a1c030c14c5725f070b8929e">N_iter</a>,<a class="code" href="_distor2_calib_8m.html#a614dcfc685715c03449d66ce48a0ffc9">two_focal</a>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% Computes the <a class="code" href="namespacecalibration.html">calibration</a> <a class="code" href="cam__proj__calib_8m.html#aafd6b8a4b32e9e967ee9372af2b8b5e2">parameters</a> knowing the</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;% <a class="code" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a> factor k_dist</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;% <a class="code" href="_distor2_calib_8m.html#a7544aa73280c654abef8404a0de3f8ab">grid_pts_centered</a> are the grid <a class="code" href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a> <a class="code" href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a> after substraction of</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;% the optical <a class="code" href="click__ima__calib_8m.html#a60f19ad54362e45aedbd36b9a34e52f3">center</a>.</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;% can give an optional guess <span class="keywordflow">for</span> the focal <a class="code" href="_distor2_calib_8m.html#ae048e23744a94d86386ff0a4e45ba295">length</a> <a class="code" href="_distor2_calib_8m.html#a940698addfed0fb478c809a11b939f78">f_ini</a> (can <span class="keyword">set</span> <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> [])</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;% can provide the number of iterations <span class="keywordflow">for</span> the Iterative Vanishing Point Algorithm</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a8d11f3adfc9684b10fcf25a7929eb9a4">   12</a></span>&#160;% <span class="keywordflow">if</span> the focal <a class="code" href="_distor2_calib_8m.html#ae048e23744a94d86386ff0a4e45ba295">length</a> <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> known perfectly, <a class="code" href="_distor2_calib_8m.html#ae04b2d6e3b6416f0290a3e7f8b3c1266">then</a>, there <a class="code" href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a> no need <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> <a class="code" href="_distor2_calib_8m.html#a2eafbc7dfb3a57b6456d4778a49d0ab2">iterate</a>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;% and <a class="code" href="_distor2_calib_8m.html#a8d11f3adfc9684b10fcf25a7929eb9a4">therefore</a>, one can <a class="code" href="_distor2_calib_8m.html#ac285722dd13662586f5478312fe11f56">fix</a>: <a class="code" href="_distor2_calib_8m.html#a0765fe92a1c030c14c5725f070b8929e">N_iter</a> = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;% California Institute of <a class="code" href="_distor2_calib_8m.html#ae357344f0e5ab555d514e06ef20ad763">Technology</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;% (<a class="code" href="ginput2_8m.html#aa49cfdd4fa4d74d71f78a001a1b635d0">c</a>) Jean-Yves Bouguet - October 7<a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a>, 1997</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#aadd8191b87d49360ba18344520f747b4">   20</a></span>&#160;%<a class="code" href="_distor2_calib_8m.html#aadd8191b87d49360ba18344520f747b4">keyboard</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordflow">if</span> <a class="code" href="_distor2_calib_8m.html#af556806122e87ed45b9f800a0d91134f">exist</a>(<span class="stringliteral">&#39;two_focal&#39;</span>),</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   <span class="keywordflow">if</span> <a class="code" href="_distor2_calib_8m.html#a1a0aa19fd145633d00eb9d52f89e87e6">isempty</a>(<a class="code" href="_distor2_calib_8m.html#a614dcfc685715c03449d66ce48a0ffc9">two_focal</a>),</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a614dcfc685715c03449d66ce48a0ffc9">   24</a></span>&#160;      <a class="code" href="_distor2_calib_8m.html#a614dcfc685715c03449d66ce48a0ffc9">two_focal</a>=0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">   25</a></span>&#160;   <a class="code" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   <a class="code" href="_distor2_calib_8m.html#a614dcfc685715c03449d66ce48a0ffc9">two_focal</a> = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordflow">if</span> <a class="code" href="_distor2_calib_8m.html#af556806122e87ed45b9f800a0d91134f">exist</a>(<span class="stringliteral">&#39;N_iter&#39;</span>),</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <span class="keywordflow">if</span> <a class="code" href="_distor2_calib_8m.html#a262617915a78f4e9431aa4847a73a2d3">~isempty</a>(<a class="code" href="_distor2_calib_8m.html#a0765fe92a1c030c14c5725f070b8929e">N_iter</a>),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <a class="code" href="_distor2_calib_8m.html#a4ea11ccca9ed67db8191547097ae6c2f">disp</a>(<span class="stringliteral">&#39;Use number of iterations provided&#39;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a0765fe92a1c030c14c5725f070b8929e">   35</a></span>&#160;      <a class="code" href="_distor2_calib_8m.html#a0765fe92a1c030c14c5725f070b8929e">N_iter</a> = 10;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <a class="code" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <a class="code" href="_distor2_calib_8m.html#a0765fe92a1c030c14c5725f070b8929e">N_iter</a> = 10;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordflow">if</span> <a class="code" href="_distor2_calib_8m.html#af556806122e87ed45b9f800a0d91134f">exist</a>(<span class="stringliteral">&#39;f_ini&#39;</span>),</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   <span class="keywordflow">if</span> <a class="code" href="_distor2_calib_8m.html#a262617915a78f4e9431aa4847a73a2d3">~isempty</a>(<a class="code" href="_distor2_calib_8m.html#a940698addfed0fb478c809a11b939f78">f_ini</a>),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="_distor2_calib_8m.html#a4ea11ccca9ed67db8191547097ae6c2f">disp</a>(<span class="stringliteral">&#39;Use focal provided&#39;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a940698addfed0fb478c809a11b939f78">   44</a></span>&#160;      <span class="keywordflow">if</span> <a class="code" href="_distor2_calib_8m.html#ae048e23744a94d86386ff0a4e45ba295">length</a>(<a class="code" href="_distor2_calib_8m.html#a940698addfed0fb478c809a11b939f78">f_ini</a>)&lt;2, <a class="code" href="_distor2_calib_8m.html#a940698addfed0fb478c809a11b939f78">f_ini</a>=[f_ini;f_ini]; <a class="code" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#abdf89c2ad6b5d95cc2aa9bc1348662db">   45</a></span>&#160;      <a class="code" href="_distor2_calib_8m.html#abdf89c2ad6b5d95cc2aa9bc1348662db">fc_2</a> = <a class="code" href="_distor2_calib_8m.html#a940698addfed0fb478c809a11b939f78">f_ini</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#aa0dc7dd8d4153de8d277adc05cf9ff77">   46</a></span>&#160;      <a class="code" href="_distor2_calib_8m.html#aa0dc7dd8d4153de8d277adc05cf9ff77">x_all_c</a> = [grid_pts_centered(1,:)/fc_2(1);grid_pts_centered(2,:)/fc_2(2)];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <a class="code" href="_distor2_calib_8m.html#aa0dc7dd8d4153de8d277adc05cf9ff77">x_all_c</a> = comp_distortion(<a class="code" href="_distor2_calib_8m.html#aa0dc7dd8d4153de8d277adc05cf9ff77">x_all_c</a>,k_dist); % we can <span class="keyword">this</span> time!!!</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;     <a class="code" href="_distor2_calib_8m.html#abdf89c2ad6b5d95cc2aa9bc1348662db">fc_2</a> = [1;1];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;     <a class="code" href="_distor2_calib_8m.html#aa0dc7dd8d4153de8d277adc05cf9ff77">x_all_c</a> = <a class="code" href="_distor2_calib_8m.html#a7544aa73280c654abef8404a0de3f8ab">grid_pts_centered</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   <a class="code" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <a class="code" href="_distor2_calib_8m.html#abdf89c2ad6b5d95cc2aa9bc1348662db">fc_2</a> = [1;1];</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <a class="code" href="_distor2_calib_8m.html#aa0dc7dd8d4153de8d277adc05cf9ff77">x_all_c</a> = <a class="code" href="_distor2_calib_8m.html#a7544aa73280c654abef8404a0de3f8ab">grid_pts_centered</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a921b80a0245a4f241fc0dda5e364b471">   58</a></span>&#160;<a class="code" href="_distor2_calib_8m.html#a921b80a0245a4f241fc0dda5e364b471">dX</a> = <a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>/<a class="code" href="click__ima__calib3_d_8m.html#a5815805cd457543ec0eb9d4dc9d1c2b5">n_sq_x</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a90011e7d69aec5376e286b72ae9e0730">   59</a></span>&#160;<a class="code" href="_distor2_calib_8m.html#a90011e7d69aec5376e286b72ae9e0730">dY</a> = <a class="code" href="click__ima__calib3_d_8m.html#a67824ecf84f5816f07b74fa956bdbcd2">L</a>/<a class="code" href="click__ima__calib3_d_8m.html#a0e5cdcdb7e033939685d5858efc63af4">n_sq_y</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a729602dbc4286b4000c8448be11d5ca5">   62</a></span>&#160;<a class="code" href="_distor2_calib_8m.html#a729602dbc4286b4000c8448be11d5ca5">N_x</a> = <a class="code" href="click__ima__calib3_d_8m.html#a5815805cd457543ec0eb9d4dc9d1c2b5">n_sq_x</a>+1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a37947f0cf345e92de4f25c9fecc122bf">   63</a></span>&#160;<a class="code" href="_distor2_calib_8m.html#a37947f0cf345e92de4f25c9fecc122bf">N_y</a> = <a class="code" href="click__ima__calib3_d_8m.html#a0e5cdcdb7e033939685d5858efc63af4">n_sq_y</a>+1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a2dfe811117b7e86ad0446268b90fe3b5">   66</a></span>&#160;<a class="code" href="_distor2_calib_8m.html#a2dfe811117b7e86ad0446268b90fe3b5">x_grid</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(<a class="code" href="_distor2_calib_8m.html#a729602dbc4286b4000c8448be11d5ca5">N_x</a>,<a class="code" href="_distor2_calib_8m.html#a37947f0cf345e92de4f25c9fecc122bf">N_y</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a1cd95c07ee910dc34871ec9095a07726">   67</a></span>&#160;<a class="code" href="_distor2_calib_8m.html#a1cd95c07ee910dc34871ec9095a07726">y_grid</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(<a class="code" href="_distor2_calib_8m.html#a729602dbc4286b4000c8448be11d5ca5">N_x</a>,<a class="code" href="_distor2_calib_8m.html#a37947f0cf345e92de4f25c9fecc122bf">N_y</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;%%% Computation of the four vanishing <a class="code" href="_distor2_calib_8m.html#a970215b3fe2610ac24286289484f3730">points</a> in pixels</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <a class="code" href="_distor2_calib_8m.html#a2dfe811117b7e86ad0446268b90fe3b5">x_grid</a>(:) = <a class="code" href="_distor2_calib_8m.html#a7544aa73280c654abef8404a0de3f8ab">grid_pts_centered</a>(1,:);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   <a class="code" href="_distor2_calib_8m.html#a1cd95c07ee910dc34871ec9095a07726">y_grid</a>(:) = <a class="code" href="_distor2_calib_8m.html#a7544aa73280c654abef8404a0de3f8ab">grid_pts_centered</a>(2,:);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;         </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">   79</a></span>&#160;   <span class="keywordflow">for</span> <a class="code" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>=1:<a class="code" href="click__ima__calib3_d_8m.html#a5815805cd457543ec0eb9d4dc9d1c2b5">n_sq_x</a>+1,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      [<a class="code" href="go__calib__optim__iter__weak_8m.html#a81cf6107131a3583e2b0b762cb9c2862">U</a>,<a class="code" href="_distor2_calib_8m.html#ae78885ddbd17542d920018fa2ef0f241">S</a>,<a class="code" href="_distor2_calib_8m.html#ad3ffda33a54939b0e86deec6b9e48033">V</a>] = svd([<a class="code" href="_distor2_calib_8m.html#a2dfe811117b7e86ad0446268b90fe3b5">x_grid</a>(<a class="code" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>,:);<a class="code" href="_distor2_calib_8m.html#a1cd95c07ee910dc34871ec9095a07726">y_grid</a>(<a class="code" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>,:);<a class="code" href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a>(1,<a class="code" href="click__ima__calib3_d_8m.html#a0e5cdcdb7e033939685d5858efc63af4">n_sq_y</a>+1)]);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <a class="code" href="_distor2_calib_8m.html#abd8a1fe752c52501d6895563260bd1a1">vert</a>(:,<a class="code" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>) = <a class="code" href="go__calib__optim__iter__weak_8m.html#a81cf6107131a3583e2b0b762cb9c2862">U</a>(:,3);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   <a class="code" href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   <span class="keywordflow">for</span> <a class="code" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>=1:<a class="code" href="click__ima__calib3_d_8m.html#a0e5cdcdb7e033939685d5858efc63af4">n_sq_y</a>+1,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      [<a class="code" href="go__calib__optim__iter__weak_8m.html#a81cf6107131a3583e2b0b762cb9c2862">U</a>,<a class="code" href="_distor2_calib_8m.html#ae78885ddbd17542d920018fa2ef0f241">S</a>,<a class="code" href="_distor2_calib_8m.html#ad3ffda33a54939b0e86deec6b9e48033">V</a>] = svd([<a class="code" href="_distor2_calib_8m.html#a2dfe811117b7e86ad0446268b90fe3b5">x_grid</a>(:,k)&#39;;<a class="code" href="_distor2_calib_8m.html#a1cd95c07ee910dc34871ec9095a07726">y_grid</a>(:,<a class="code" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>)<span class="stringliteral">&#39;;ones(1,n_sq_x+1)]);</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="stringliteral">      hori(:,k) = U(:,3);</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="stringliteral">   % 2 principle Vanishing points:</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#ad3ffda33a54939b0e86deec6b9e48033">   90</a></span>&#160;<span class="stringliteral">   [U,S,V] = svd(vert);</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a3a9bb81064f63b5fae937ff5389ea7be">   91</a></span>&#160;<span class="stringliteral">   V_vert = U(:,3);</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="stringliteral">   [U,S,V] = svd(hori);</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a7b8cac28f2f3f200e4c49cef76c847ce">   93</a></span>&#160;<span class="stringliteral">   V_hori = U(:,3);</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral">   % Square warping:</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#af094d050aa31e1bf4667b9039a1afd87">  100</a></span>&#160;<span class="stringliteral">   vert_first = vert(:,1) - dot(V_vert,vert(:,1))/dot(V_vert,V_vert) * V_vert;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a66db418e19359ad6cb8da841880e1d5f">  101</a></span>&#160;<span class="stringliteral">   vert_last = vert(:,n_sq_x+1) - dot(V_vert,vert(:,n_sq_x+1))/dot(V_vert,V_vert) * V_vert;</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a9d8574b84bc5625dc82daa22a0114838">  103</a></span>&#160;<span class="stringliteral">   hori_first = hori(:,1) - dot(V_hori,hori(:,1))/dot(V_hori,V_hori) * V_hori;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#aae530153f38527a9a2bd0b4883a4d9be">  104</a></span>&#160;<span class="stringliteral">   hori_last = hori(:,n_sq_y+1) - dot(V_hori,hori(:,n_sq_y+1))/dot(V_hori,V_hori) * V_hori;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#ac39b33361203e68d7820336db48d45e6">  107</a></span>&#160;<span class="stringliteral">   x1 = cross(hori_first,vert_first);</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#aab2463cd078f7c5368f6eb80f5a549b8">  108</a></span>&#160;<span class="stringliteral">   x2 = cross(hori_first,vert_last);</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a03ad2628eb1c540113251638112541e3">  109</a></span>&#160;<span class="stringliteral">   x3 = cross(hori_last,vert_last);</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a6bda50c9c4fcd62d903ac36326be97fa">  110</a></span>&#160;<span class="stringliteral">   x4 = cross(hori_last,vert_first);</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="stringliteral">   x1 = x1/x1(3);</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="stringliteral">   x2 = x2/x2(3);</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="stringliteral">   x3 = x3/x3(3);</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="stringliteral">   x4 = x4/x4(3);</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="stringliteral">   [square] = Rectangle2Square([x1 x2 x3 x4],W,L);</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a7f911dc1dbbc41c6cae56357e8fb2230">  121</a></span>&#160;<span class="stringliteral">   y1 = square(:,1);</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a41b94b12b7cb45b3ddee299d4e7b79e8">  122</a></span>&#160;<span class="stringliteral">   y2 = square(:,2);</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#ade1417f93b8addbf3d5a62e132e169fd">  123</a></span>&#160;<span class="stringliteral">   y3 = square(:,3);</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a43b90609f1cd51c8825b2e75476cf54b">  124</a></span>&#160;<span class="stringliteral">   y4 = square(:,4);</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#ab6553dbc99719803cd55247cf5df96d4">  126</a></span>&#160;<span class="stringliteral">   H2 = cross(V_vert,V_hori);</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a959473c8c411c6c7c60f34d00bc27b19">  128</a></span>&#160;<span class="stringliteral">   V_diag1 = cross(cross(y1,y3),H2);</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a3ecb4727cc5fe8c8f403cccc4eea9ea6">  129</a></span>&#160;<span class="stringliteral">   V_diag2 = cross(cross(y2,y4),H2);</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="stringliteral">   V_diag1 = V_diag1 / norm(V_diag1);</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="stringliteral">   V_diag2 = V_diag2 / norm(V_diag2);</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a96cb4edb880064757c2f04a6581b913b">  134</a></span>&#160;<span class="stringliteral">   V_hori_pix = V_hori;</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a6cea23bab5bae7791342d702be77b5db">  135</a></span>&#160;<span class="stringliteral">   V_vert_pix = V_vert;</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a5d174095fed381c04676eed51845fab5">  136</a></span>&#160;<span class="stringliteral">   V_diag1_pix = V_diag1;</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="_distor2_calib_8m.html#a296d40df631ecc000b553164f11e2329">  137</a></span>&#160;<span class="stringliteral">   V_diag2_pix = V_diag2;</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="stringliteral">% end of computation of the vanishing points in pixels.</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="stringliteral">if two_focal, % only if we attempt to estimate two focals...</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="stringliteral">   % Use diagonal lines also to add two extra vanishing points (?)</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="stringliteral">   N_min = min(N_x,N_y);</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="stringliteral">   if N_min &lt; 2,</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="stringliteral">      use_diag = 0;</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="stringliteral">      two_focal = 0;</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="stringliteral">      disp(&#39;</span>Cannot <a class="code" href="init__intrinsic__param_8m.html#a173dff6aa2fcd5f9bf369deccf1f0b9d">estimate</a> two focals (no existing diagonals)<span class="stringliteral">&#39;);   </span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="stringliteral">   else</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="stringliteral">      use_diag = 1;</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="stringliteral">      Delta_N = abs(N_x-N_y);</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="stringliteral">      N_extra = round((N_min - Delta_N - 1)/2);</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="stringliteral">      diag_list = -N_extra:Delta_N+N_extra;</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="stringliteral">      N_diag = length(diag_list);</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="stringliteral">      diag_1 = zeros(3,N_diag);</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="stringliteral">      diag_2 = zeros(3,N_diag);</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="stringliteral">else   </span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="stringliteral">   % Give up the use of the diagonals (so far)</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="stringliteral">   % it seems that the error is increased</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="stringliteral">   use_diag = 0;</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="stringliteral">% The vertical lines: vert, Horizontal lines: hori</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="stringliteral">vert = zeros(3,n_sq_x+1);</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="stringliteral">hori = zeros(3,n_sq_y+1);</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="stringliteral"> </span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="stringliteral">for counter_k = 1:N_iter,   % the Iterative Vanishing Points Algorithm to</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="stringliteral">                                % estimate the focal length accurately</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="stringliteral">   x_grid(:) = x_all_c(1,:);</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="stringliteral">   y_grid(:) = x_all_c(2,:);</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="stringliteral">         </span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="stringliteral">   for k=1:n_sq_x+1,</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="stringliteral">      [U,S,V] = svd([x_grid(k,:);y_grid(k,:);ones(1,n_sq_y+1)]);</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="stringliteral">      vert(:,k) = U(:,3);</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="stringliteral">   for k=1:n_sq_y+1,</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="stringliteral">      [U,S,V] = svd([x_grid(:,k)&#39;</span>;<a class="code" href="_distor2_calib_8m.html#a1cd95c07ee910dc34871ec9095a07726">y_grid</a>(:,<a class="code" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>)<span class="stringliteral">&#39;;ones(1,n_sq_x+1)]);</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="stringliteral">      hori(:,k) = U(:,3);</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="stringliteral">   % 2 principle Vanishing points:</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="stringliteral">   [U,S,V] = svd(vert);</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="stringliteral">   V_vert = U(:,3);</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="stringliteral">   [U,S,V] = svd(hori);</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="stringliteral">   V_hori = U(:,3);</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="stringliteral">   % Square warping:</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="stringliteral">   vert_first = vert(:,1) - dot(V_vert,vert(:,1))/dot(V_vert,V_vert) * V_vert;</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="stringliteral">   vert_last = vert(:,n_sq_x+1) - dot(V_vert,vert(:,n_sq_x+1))/dot(V_vert,V_vert) * V_vert;</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="stringliteral">   hori_first = hori(:,1) - dot(V_hori,hori(:,1))/dot(V_hori,V_hori) * V_hori;</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="stringliteral">   hori_last = hori(:,n_sq_y+1) - dot(V_hori,hori(:,n_sq_y+1))/dot(V_hori,V_hori) * V_hori;</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="stringliteral">   x1 = cross(hori_first,vert_first);</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="stringliteral">   x2 = cross(hori_first,vert_last);</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="stringliteral">   x3 = cross(hori_last,vert_last);</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="stringliteral">   x4 = cross(hori_last,vert_first);</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="stringliteral">   x1 = x1/x1(3);</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="stringliteral">   x2 = x2/x2(3);</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="stringliteral">   x3 = x3/x3(3);</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="stringliteral">   x4 = x4/x4(3);</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="stringliteral">   [square] = Rectangle2Square([x1 x2 x3 x4],W,L);</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="stringliteral">   y1 = square(:,1);</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="stringliteral">   y2 = square(:,2);</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="stringliteral">   y3 = square(:,3);</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="stringliteral">   y4 = square(:,4);</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="stringliteral">   H2 = cross(V_vert,V_hori);</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="stringliteral">   V_diag1 = cross(cross(y1,y3),H2);</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="stringliteral">   V_diag2 = cross(cross(y2,y4),H2);</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="stringliteral">   V_diag1 = V_diag1 / norm(V_diag1);</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="stringliteral">   V_diag2 = V_diag2 / norm(V_diag2);</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="stringliteral">   % Estimation of the focal length, and normalization:</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="stringliteral">   % Compute the ellipsis of (1/f^2) positions:</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="stringliteral">   % a * (1/fx)^2 + b * (1/fx)^2 = -c</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="stringliteral">   a1 = V_hori(1);</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="stringliteral">   b1 = V_hori(2);</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="stringliteral">   c1 = V_hori(3);</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="stringliteral">   a2 = V_vert(1);</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="stringliteral">   b2 = V_vert(2);</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="stringliteral">   c2 = V_vert(3);</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="stringliteral">   a3 = V_diag1(1);</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="stringliteral">   b3 = V_diag1(2);</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="stringliteral">   c3 = V_diag1(3);</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="stringliteral">   a4 = V_diag2(1);</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="stringliteral">   b4 = V_diag2(2);</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="stringliteral">   c4 = V_diag2(3);</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="stringliteral">   if two_focal,</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="stringliteral">      A = [a1*a2 b1*b2;a3*a4 b3*b4];</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="stringliteral">      b = -[c1*c2;c3*c4];</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="stringliteral">      f = sqrt(abs(1./(inv(A)*b)));</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="stringliteral">   else</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="stringliteral">      f = sqrt(abs(-(c1*c2*(a1*a2 + b1*b2) + c3*c4*(a3*a4 + b3*b4))/(c1^2*c2^2 + c3^2*c4^2)));</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="stringliteral">      f = [f;f];</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="stringliteral">   % REMARK:</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="stringliteral">   % if both a and b are small, the calibration is impossible.</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="stringliteral">   % if one of them is small, only the other focal length is observable</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="stringliteral">   % if none is small, both focals are observable</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="stringliteral">   fc_2 = fc_2 .* f;</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="stringliteral">      </span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="stringliteral">   % DEBUG PART: fix focal to 500...</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="stringliteral">   %fc_2= [500;500]; disp(&#39;</span>Line 293 <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> be earased in Distor2Calib.m<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="stringliteral">   % end of focal compensation</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="stringliteral">   % normalize by the current focal:</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="stringliteral">   x_all = [grid_pts_centered(1,:)/fc_2(1);grid_pts_centered(2,:)/fc_2(2)];</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="stringliteral">   % Compensate by the distortion factor:</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="stringliteral">   x_all_c = comp_distortion(x_all,k_dist);</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="stringliteral">% At that point, we hope that the distortion is gone...</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="stringliteral">x_grid(:) = x_all_c(1,:);</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="stringliteral">y_grid(:) = x_all_c(2,:);</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="stringliteral">for k=1:n_sq_x+1,</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="stringliteral">   [U,S,V] = svd([x_grid(k,:);y_grid(k,:);ones(1,n_sq_y+1)]);</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="stringliteral">   vert(:,k) = U(:,3);</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="stringliteral">for k=1:n_sq_y+1,</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="stringliteral">   [U,S,V] = svd([x_grid(:,k)&#39;</span>;<a class="code" href="_distor2_calib_8m.html#a1cd95c07ee910dc34871ec9095a07726">y_grid</a>(:,<a class="code" href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>)<span class="stringliteral">&#39;;ones(1,n_sq_x+1)]);</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="stringliteral">   hori(:,k) = U(:,3);</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="stringliteral">% Vanishing points:</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="stringliteral">[U,S,V] = svd(vert);</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="stringliteral">V_vert = U(:,3);</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="stringliteral">[U,S,V] = svd(hori);</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="stringliteral">V_hori = U(:,3);</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="stringliteral">% Horizon:</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="stringliteral">H_2 = cross(V_vert,V_hori);</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="stringliteral">%   H_2 = cross(V_vert,V_hori);</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="stringliteral">% pick a plane in front of the camera (positive depth)</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="stringliteral">if H_2(3) &lt; 0, H_2 = -H_2; end;</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="stringliteral">% Rotation matrix:</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="stringliteral">if V_hori(1) &lt; 0, V_hori = -V_hori; end;</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="stringliteral">V_hori = V_hori/norm(V_hori);</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="stringliteral">H_2 = H_2/norm(H_2);</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="stringliteral">V_hori = V_hori - dot(V_hori,H_2)*H_2;</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="stringliteral">Rc_2 = [V_hori cross(H_2,V_hori) H_2];</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="stringliteral">Rc_2 = Rc_2 / det(Rc_2);</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="stringliteral">%omc_2 = rodrigues(Rc_2);</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="stringliteral">%Rc_2 = rodrigues(omc_2);</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="stringliteral">% Find the distance of the plane for translation vector:</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="stringliteral">xc_2 = [x_all_c;ones(1,Np)];</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="stringliteral">Zc_2 = 1./sum(xc_2 .* (Rc_2(:,3)*ones(1,Np)));</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="stringliteral">Xo_2 = [sum(xc_2 .* (Rc_2(:,1)*ones(1,Np))).*Zc_2 ; sum(xc_2 .* (Rc_2(:,2)*ones(1,Np))).*Zc_2];</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="stringliteral">XXo_2 = Xo_2 - mean(Xo_2&#39;</span>)<span class="stringliteral">&#39;*ones(1,Np);</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="stringliteral">distance_x = norm(Xgrid_2(1,:))/norm(XXo_2(1,:));</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="stringliteral">distance_y = norm(Xgrid_2(2,:))/norm(XXo_2(2,:));</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="stringliteral">distance = sum(sum(XXo_2(1:2,:).*Xgrid_2(1:2,:)))/sum(sum(XXo_2(1:2,:).^2));</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="stringliteral">alpha = abs(distance_x - distance_y)/distance;</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="stringliteral">if (alpha&gt;0.1)&amp;~two_focal,</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="stringliteral">   disp(&#39;</span>Should use two focals in <a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a> and <a class="code" href="click__ima__calib_8m.html#a2fb1c5cf58867b5bbc9a1b145a86f3a0">y</a>...<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="stringliteral">% Deduce the translation vector:</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="stringliteral">Tc_2 = distance * H_2;</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="stringliteral">return;</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="stringliteral">   V_hori_pix/V_hori_pix(3)</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="stringliteral">   V_vert_pix/V_vert_pix(3)</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="stringliteral">   V_diag1_pix/V_diag1_pix(3)</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="stringliteral">   V_diag2_pix/V_diag2_pix(3)</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a67824ecf84f5816f07b74fa956bdbcd2"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a67824ecf84f5816f07b74fa956bdbcd2">L</a></div><div class="ttdeci">L</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00128">click_ima_calib3D.m:128</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter__weak_8m_html_a81cf6107131a3583e2b0b762cb9c2862"><div class="ttname"><a href="go__calib__optim__iter__weak_8m.html#a81cf6107131a3583e2b0b762cb9c2862">U</a></div><div class="ttdeci">U</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter__weak_8m_source.html#l00484">go_calib_optim_iter_weak.m:484</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_ac285722dd13662586f5478312fe11f56"><div class="ttname"><a href="_distor2_calib_8m.html#ac285722dd13662586f5478312fe11f56">fix</a></div><div class="ttdeci">Computes the calibration parameters knowing the distortion factor k_dist grid_pts_centered are the grid point coordinates after substraction of the optical center can give an optional guess for the focal length there is no need to and one can fix</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00012">Distor2Calib.m:12</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a2dfe811117b7e86ad0446268b90fe3b5"><div class="ttname"><a href="_distor2_calib_8m.html#a2dfe811117b7e86ad0446268b90fe3b5">x_grid</a></div><div class="ttdeci">x_grid</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00066">Distor2Calib.m:66</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a8d11f3adfc9684b10fcf25a7929eb9a4"><div class="ttname"><a href="_distor2_calib_8m.html#a8d11f3adfc9684b10fcf25a7929eb9a4">therefore</a></div><div class="ttdeci">Computes the calibration parameters knowing the distortion factor k_dist grid_pts_centered are the grid point coordinates after substraction of the optical center can give an optional guess for the focal length there is no need to and therefore</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00012">Distor2Calib.m:12</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_abe50207e56666a60c81e2a58f522eea3"><div class="ttname"><a href="click__ima__calib3_d_8m.html#abe50207e56666a60c81e2a58f522eea3">Np</a></div><div class="ttdeci">Np</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00157">click_ima_calib3D.m:157</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="asmall__test__script_8m_html_ab7fd51748de2e6629029180d5d37ec10"><div class="ttname"><a href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a></div><div class="ttdeci">[479.5200 236.0800 608.4100 415.3700 461.0000 40.0000 451.4800 308.7000 373.9900 314.8900 299.3200 319.1300 231.5500 321.3700 443.7300 282.9200 378.3600 288.3000 314.6900 292.7400 255.4700 296.2300]' x</div><div class="ttdef"><b>Definition:</b> <a href="small__test__script_8m_source.html#l00018">small_test_script.m:18</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a921b80a0245a4f241fc0dda5e364b471"><div class="ttname"><a href="_distor2_calib_8m.html#a921b80a0245a4f241fc0dda5e364b471">dX</a></div><div class="ttdeci">dX</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00058">Distor2Calib.m:58</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a90011e7d69aec5376e286b72ae9e0730"><div class="ttname"><a href="_distor2_calib_8m.html#a90011e7d69aec5376e286b72ae9e0730">dY</a></div><div class="ttdeci">dY</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00059">Distor2Calib.m:59</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a4ea11ccca9ed67db8191547097ae6c2f"><div class="ttname"><a href="_distor2_calib_8m.html#a4ea11ccca9ed67db8191547097ae6c2f">disp</a></div><div class="ttdeci">if if disp('Use number of iterations provided')</div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a5815805cd457543ec0eb9d4dc9d1c2b5"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a5815805cd457543ec0eb9d4dc9d1c2b5">n_sq_x</a></div><div class="ttdeci">n_sq_x</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00073">click_ima_calib3D.m:73</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a7544aa73280c654abef8404a0de3f8ab"><div class="ttname"><a href="_distor2_calib_8m.html#a7544aa73280c654abef8404a0de3f8ab">grid_pts_centered</a></div><div class="ttdeci">grid_pts_centered(2,:)/fc_2(2)]</div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a1c73327b2882639bc9f5e416bb3cc7ac"><div class="ttname"><a href="_distor2_calib_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a></div><div class="ttdeci">for k</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00079">Distor2Calib.m:79</a></div></div>
+<div class="ttc" id="aginput2_8m_html_aa49cfdd4fa4d74d71f78a001a1b635d0"><div class="ttname"><a href="ginput2_8m.html#aa49cfdd4fa4d74d71f78a001a1b635d0">c</a></div><div class="ttdeci">c</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00025">ginput2.m:25</a></div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a60bfb22881d8ade0a15adeaa7a363c23"><div class="ttname"><a href="init__intrinsic__param_8m.html#a60bfb22881d8ade0a15adeaa7a363c23">point</a></div><div class="ttdeci">matrix that subtract the principal point</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00088">init_intrinsic_param.m:88</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a489630d61c55f2188f687d347393e5d0"><div class="ttname"><a href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a></div><div class="ttdeci">tangential distortion</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00044">apply_distortion.m:44</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a970215b3fe2610ac24286289484f3730"><div class="ttname"><a href="_distor2_calib_8m.html#a970215b3fe2610ac24286289484f3730">points</a></div><div class="ttdeci">principle Vanishing points</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00090">Distor2Calib.m:90</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a1a0aa19fd145633d00eb9d52f89e87e6"><div class="ttname"><a href="_distor2_calib_8m.html#a1a0aa19fd145633d00eb9d52f89e87e6">isempty</a></div><div class="ttdeci">if if isempty(two_focal)</div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a6d8eb94b97a670d8d4983302bfbdbefd"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a></div><div class="ttdeci">Complete size of the rectangle W</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00127">click_ima_calib3D.m:127</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a0765fe92a1c030c14c5725f070b8929e"><div class="ttname"><a href="_distor2_calib_8m.html#a0765fe92a1c030c14c5725f070b8929e">N_iter</a></div><div class="ttdeci">else N_iter</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00035">Distor2Calib.m:35</a></div></div>
+<div class="ttc" id="avisualize__distortions_8m_html_a4c7354b9bcf8e1c1ff1c0d28b0d4276a"><div class="ttname"><a href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a></div><div class="ttdeci">th</div><div class="ttdef"><b>Definition:</b> <a href="visualize__distortions_8m_source.html#l00073">visualize_distortions.m:73</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a37947f0cf345e92de4f25c9fecc122bf"><div class="ttname"><a href="_distor2_calib_8m.html#a37947f0cf345e92de4f25c9fecc122bf">N_y</a></div><div class="ttdeci">N_y</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00063">Distor2Calib.m:63</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_ae357344f0e5ab555d514e06ef20ad763"><div class="ttname"><a href="_distor2_calib_8m.html#ae357344f0e5ab555d514e06ef20ad763">Technology</a></div><div class="ttdeci">California Institute of Technology(c) Jean-Yves Bouguet - October 7th</div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_abd8a1fe752c52501d6895563260bd1a1"><div class="ttname"><a href="_distor2_calib_8m.html#abd8a1fe752c52501d6895563260bd1a1">vert</a></div><div class="ttdeci">for vert(:, k)</div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_ad3ffda33a54939b0e86deec6b9e48033"><div class="ttname"><a href="_distor2_calib_8m.html#ad3ffda33a54939b0e86deec6b9e48033">V</a></div><div class="ttdeci">principle Vanishing V</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00090">Distor2Calib.m:90</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_ae78885ddbd17542d920018fa2ef0f241"><div class="ttname"><a href="_distor2_calib_8m.html#ae78885ddbd17542d920018fa2ef0f241">S</a></div><div class="ttdeci">principle Vanishing S</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00090">Distor2Calib.m:90</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a7b8f1c70b2c01535e5f0f79f486b081f"><div class="ttname"><a href="cam__proj__calib_8m.html#a7b8f1c70b2c01535e5f0f79f486b081f">ones</a></div><div class="ttdeci">ones(5, 1)</div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_ae04b2d6e3b6416f0290a3e7f8b3c1266"><div class="ttname"><a href="_distor2_calib_8m.html#ae04b2d6e3b6416f0290a3e7f8b3c1266">then</a></div><div class="ttdeci">Computes the calibration parameters knowing the distortion factor k_dist grid_pts_centered are the grid point coordinates after substraction of the optical center can give an optional guess for the focal length then</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00012">Distor2Calib.m:12</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a262617915a78f4e9431aa4847a73a2d3"><div class="ttname"><a href="_distor2_calib_8m.html#a262617915a78f4e9431aa4847a73a2d3">~isempty</a></div><div class="ttdeci">if if ~isempty(N_iter)</div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_ae048e23744a94d86386ff0a4e45ba295"><div class="ttname"><a href="_distor2_calib_8m.html#ae048e23744a94d86386ff0a4e45ba295">length</a></div><div class="ttdeci">if length(f_ini)&lt; 2</div></div>
+<div class="ttc" id="ainit__intrinsic__param_8m_html_a173dff6aa2fcd5f9bf369deccf1f0b9d"><div class="ttname"><a href="init__intrinsic__param_8m.html#a173dff6aa2fcd5f9bf369deccf1f0b9d">estimate</a></div><div class="ttdeci">if two_focals_init Use a two focals estimate</div><div class="ttdef"><b>Definition:</b> <a href="init__intrinsic__param_8m_source.html#l00154">init_intrinsic_param.m:154</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_af556806122e87ed45b9f800a0d91134f"><div class="ttname"><a href="_distor2_calib_8m.html#af556806122e87ed45b9f800a0d91134f">exist</a></div><div class="ttdeci">if exist('two_focal')</div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_a5c4aa834f79d9bba4ec3f74f17439836"><div class="ttname"><a href="_compute_stripes_8m.html#a5c4aa834f79d9bba4ec3f74f17439836">coordinates</a></div><div class="ttdeci">Express the coordinates of the points in the original image coordinates</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00376">ComputeStripes.m:376</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_aa0dc7dd8d4153de8d277adc05cf9ff77"><div class="ttname"><a href="_distor2_calib_8m.html#aa0dc7dd8d4153de8d277adc05cf9ff77">x_all_c</a></div><div class="ttdeci">x_all_c</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00046">Distor2Calib.m:46</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a614dcfc685715c03449d66ce48a0ffc9"><div class="ttname"><a href="_distor2_calib_8m.html#a614dcfc685715c03449d66ce48a0ffc9">two_focal</a></div><div class="ttdeci">if if two_focal</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00024">Distor2Calib.m:24</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a0e5cdcdb7e033939685d5858efc63af4"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a0e5cdcdb7e033939685d5858efc63af4">n_sq_y</a></div><div class="ttdeci">n_sq_y</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00075">click_ima_calib3D.m:75</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_aadd8191b87d49360ba18344520f747b4"><div class="ttname"><a href="_distor2_calib_8m.html#aadd8191b87d49360ba18344520f747b4">keyboard</a></div><div class="ttdeci">California Institute of keyboard</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00020">Distor2Calib.m:20</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a60f19ad54362e45aedbd36b9a34e52f3"><div class="ttname"><a href="click__ima__calib_8m.html#a60f19ad54362e45aedbd36b9a34e52f3">center</a></div><div class="ttdeci">Find center</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00083">click_ima_calib.m:83</a></div></div>
+<div class="ttc" id="anamespacecalibration_html"><div class="ttname"><a href="namespacecalibration.html">calibration</a></div><div class="ttdef"><b>Definition:</b> <a href="calibration_8h_source.html#l00009">calibration.h:9</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a729602dbc4286b4000c8448be11d5ca5"><div class="ttname"><a href="_distor2_calib_8m.html#a729602dbc4286b4000c8448be11d5ca5">N_x</a></div><div class="ttdeci">N_x</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00062">Distor2Calib.m:62</a></div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a2fb1c5cf58867b5bbc9a1b145a86f3a0"><div class="ttname"><a href="click__ima__calib_8m.html#a2fb1c5cf58867b5bbc9a1b145a86f3a0">y</a></div><div class="ttdeci">y</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00033">click_ima_calib.m:33</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="_distor2_calib_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00025">Distor2Calib.m:25</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_abdf89c2ad6b5d95cc2aa9bc1348662db"><div class="ttname"><a href="_distor2_calib_8m.html#abdf89c2ad6b5d95cc2aa9bc1348662db">fc_2</a></div><div class="ttdeci">fc_2</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00045">Distor2Calib.m:45</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a2eafbc7dfb3a57b6456d4778a49d0ab2"><div class="ttname"><a href="_distor2_calib_8m.html#a2eafbc7dfb3a57b6456d4778a49d0ab2">iterate</a></div><div class="ttdeci">Computes the calibration parameters knowing the distortion factor k_dist grid_pts_centered are the grid point coordinates after substraction of the optical center can give an optional guess for the focal length there is no need to iterate</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00012">Distor2Calib.m:12</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a00d9614e711bf169f15ae8e3e35d30df"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a00d9614e711bf169f15ae8e3e35d30df">is</a></div><div class="ttdeci">If the rig is</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00213">go_calib_optim_iter.m:213</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_aafd6b8a4b32e9e967ee9372af2b8b5e2"><div class="ttname"><a href="cam__proj__calib_8m.html#aafd6b8a4b32e9e967ee9372af2b8b5e2">parameters</a></div><div class="ttdeci">Save camera parameters</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00045">cam_proj_calib.m:45</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a1cd95c07ee910dc34871ec9095a07726"><div class="ttname"><a href="_distor2_calib_8m.html#a1cd95c07ee910dc34871ec9095a07726">y_grid</a></div><div class="ttdeci">y_grid</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00067">Distor2Calib.m:67</a></div></div>
+<div class="ttc" id="a_distor2_calib_8m_html_a940698addfed0fb478c809a11b939f78"><div class="ttname"><a href="_distor2_calib_8m.html#a940698addfed0fb478c809a11b939f78">f_ini</a></div><div class="ttdeci">if f_ini</div><div class="ttdef"><b>Definition:</b> <a href="_distor2_calib_8m_source.html#l00044">Distor2Calib.m:44</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

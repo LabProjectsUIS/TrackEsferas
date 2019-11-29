@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/willson_read.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">willson_read.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="willson__read_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="willson__read_8m.html#ae8ec5529b09a5d9be50e61f96cc5e1f4">    1</a></span>&#160;% Read in Reg <a class="code" href="willson__convert_8m.html#adce983d382eeada5c63ec943823b9755">Willson</a><span class="stringliteral">&#39;s data file, and convert it into my data format:</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">if exist(&#39;</span><a class="code" href="willson__read_8m.html#ae61f7f5ad7d59d9f1ba88fc778621f2d">calib_file</a><span class="stringliteral">&#39;),</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">   if exist(calib_file)~=2,</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a67d028b5fe2d981e2a0ce5265b40ce8c">    5</a></span>&#160;<span class="stringliteral">      ask = 1;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">   else</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">      ask = 0;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="willson__read_8m.html#afb358f48b1646c750fb9da6c6585be2b">    8</a></span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral">else</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">   ask = 1;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">while ask,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="willson__read_8m.html#ae61f7f5ad7d59d9f1ba88fc778621f2d">   16</a></span>&#160;<span class="stringliteral">   calib_file = input(&#39;</span>Reg <a class="code" href="willson__convert_8m.html#adce983d382eeada5c63ec943823b9755">Willson</a> <a class="code" href="namespacecalibration.html">calibration</a> <a class="code" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="code" href="check__directory_8m.html#abd6929795691c402603cd051d7729150">name</a> <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> convert: <span class="charliteral">&#39;,&#39;</span><a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a><span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">   if ~isempty(calib_file),</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="stringliteral">       if exist(calib_file)~=2,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="stringliteral">       ask = 1;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="stringliteral">    else</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="stringliteral">        ask = 0;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="stringliteral">    end;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral">    else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="stringliteral">    ask = 1;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="stringliteral">   if ask,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="stringliteral">      fprintf(1,&#39;</span>File not found. Try again.\n<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="stringliteral">   end;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="stringliteral">if exist(calib_file),</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="stringliteral">   fprintf(1,[&#39;</span>Loading <a class="code" href="willson__convert_8m.html#adce983d382eeada5c63ec943823b9755">Willson</a> <a class="code" href="namespacecalibration.html">calibration</a> <a class="code" href="cam__proj__calib_8m.html#aafd6b8a4b32e9e967ee9372af2b8b5e2">parameters</a> from <a class="code" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <span class="stringliteral">&#39; calib_file &#39;</span>...\n<span class="stringliteral">&#39;]);</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral">    load(calib_file);</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a71e43c2badc5407cc7869b90fd60d92e">   40</a></span>&#160;<span class="stringliteral">    inddot = find(calib_file == &#39;</span>.<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="stringliteral">   if isempty(inddot),</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="willson__read_8m.html#ac51db1ef22e9234bb06f5dbb5b4948bc">   43</a></span>&#160;<span class="stringliteral">      varname = calib_file;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="stringliteral">   else</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral">      varname = calib_file(1:inddot(1)-1);      </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="stringliteral">    end;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="stringliteral">    eval([&#39;</span>calib_params = <span class="stringliteral">&#39; varname &#39;</span>;<span class="stringliteral">&#39;])</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral">    Ncx = calib_params(1);</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a28b126a9bcfcc1cd38d64e9e42d4aebd">   51</a></span>&#160;<span class="stringliteral">   Nfx = calib_params(2);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="willson__read_8m.html#aacddc911cdfe5cd5ec97b084754542d4">   52</a></span>&#160;<span class="stringliteral">   dx = calib_params(3);</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a22b1a06ae09d552a5ca668a07885ebf1">   53</a></span>&#160;<span class="stringliteral">   dy = calib_params(4);</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="willson__read_8m.html#ae04cf25bb76d26e4fe8241ecc73d9612">   54</a></span>&#160;<span class="stringliteral">   dpx = calib_params(5);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a1c6d34fa78cd57d53dbf38017a464280">   55</a></span>&#160;<span class="stringliteral">   dpy = calib_params(6);</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a8c77e6de3994a87a8afe0879a81b027a">   56</a></span>&#160;<span class="stringliteral">   Cx = calib_params(7);</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="willson__read_8m.html#adc2c7119329f823e18a07042b23c056a">   57</a></span>&#160;<span class="stringliteral">   Cy = calib_params(8);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a7afc17458780fd4f38cf4b53da58342e">   58</a></span>&#160;<span class="stringliteral">   sx = calib_params(9);</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a633de4b0c14ca52ea2432a3c8a5c4c31">   59</a></span>&#160;<span class="stringliteral">   f = calib_params(10);</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a09e00830e480084ea7da43dd408189b3">   60</a></span>&#160;<span class="stringliteral">   kappa1 = calib_params(11);</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="willson__read_8m.html#ad46cee68b40dae85d1f70d6bb4da94a3">   61</a></span>&#160;<span class="stringliteral">   Tx = calib_params(12);</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a1c6ec63ec0fbcf88d984e3bb222d2360">   62</a></span>&#160;<span class="stringliteral">   Ty = calib_params(13);</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a48023596f2be6c3cc50f07e4fbb849b4">   63</a></span>&#160;<span class="stringliteral">   Tz = calib_params(14);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a4c54c680edb6b794d3bd3015a3ae83b1">   64</a></span>&#160;<span class="stringliteral">   Rx = calib_params(15);</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a88c32bd7de17dde57a9a412b9a000e11">   65</a></span>&#160;<span class="stringliteral">   Ry = calib_params(16);</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a8cea55429a80b9d176724f712c4cc935">   66</a></span>&#160;<span class="stringliteral">   Rz = calib_params(17);</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="willson__read_8m.html#aa850ae5126b39a75859039aa84c3a577">   67</a></span>&#160;<span class="stringliteral">   p1 = calib_params(18);</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a9099c7c12dde5f81f4d3ce261da3637c">   68</a></span>&#160;<span class="stringliteral">   p2 = calib_params(19);</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="stringliteral">   fprintf(1,&#39;</span>Converting the <a class="code" href="namespacecalibration.html">calibration</a> <a class="code" href="cam__proj__calib_8m.html#aafd6b8a4b32e9e967ee9372af2b8b5e2">parameters</a>... (may take <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a> <span class="keywordflow">while</span> due <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> the convertion of the <a class="code" href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a> <a class="code" href="cam__proj__calib__optim_8m.html#a911e4f1620fa3907031829d8d91b48df">model</a>)...\<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a><span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="stringliteral">   % Conversion:</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="willson__read_8m.html#afb61a8772f82ae71819a307d2f98796a">   73</a></span>&#160;<span class="stringliteral">   [fc,cc,kc,alpha_c,Rc_1,Tc_1,omc_1,nx,ny,x_dist,xd] = willson_convert(Ncx,Nfx,dx,dy,dpx,dpy,Cx,Cy,sx,f,kappa1,Tx,Ty,Tz,Rx,Ry,Rz,p1,p2);</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">   75</a></span>&#160;<span class="stringliteral">   KK = [fc(1) alpha_c*fc(1) cc(1);0 fc(2) cc(2) ; 0 0 1];</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a4bd2a7187893657a867b1e3b03a6ca7f">   77</a></span>&#160;<span class="stringliteral">   n_ima = 1;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a1db58ffdf10033879a2793e9908971a5">   79</a></span>&#160;<span class="stringliteral">   X_1 = [NaN;NaN;NaN];</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a35555c30538b98b701fb2c84ac2064a1">   80</a></span>&#160;<span class="stringliteral">   x_1 = [NaN;NaN];</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="willson__read_8m.html#a9ec9dda576db2a36c42c1c3af155d07c">   82</a></span>&#160;<span class="stringliteral">   map = gray(256);</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="stringliteral">   fprintf(1,&#39;</span>done\<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a><span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="stringliteral">   fprintf(1,&#39;</span>You are <a class="code" href="rectify__stereo__pair_8m.html#a05739f4b7ae42ee41b81d332e7d6ff51">now</a> ready <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> save the <a class="code" href="namespacecalibration.html">calibration</a> <a class="code" href="cam__proj__calib_8m.html#aafd6b8a4b32e9e967ee9372af2b8b5e2">parameters</a> by clicking <a class="code" href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a> Save.\n<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="stringliteral">else</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="stringliteral">   disp([&#39;</span>WARNING: Calibration <a class="code" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <span class="stringliteral">&#39; calib_file &#39;</span> not found<span class="stringliteral">&#39;]);</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="stringliteral">   </span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="stringliteral">end;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="stringliteral"></span> </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclick__ima__calib_8m_html_a58ab1fd68e97078232808206b850161b"><div class="ttname"><a href="click__ima__calib_8m.html#a58ab1fd68e97078232808206b850161b">on</a></div><div class="ttdeci">hold on</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib_8m_source.html#l00034">click_ima_calib.m:34</a></div></div>
+<div class="ttc" id="awillson__convert_8m_html_adce983d382eeada5c63ec943823b9755"><div class="ttname"><a href="willson__convert_8m.html#adce983d382eeada5c63ec943823b9755">Willson</a></div><div class="ttdeci">Apply UNDISTORTION according to Willson</div><div class="ttdef"><b>Definition:</b> <a href="willson__convert_8m_source.html#l00045">willson_convert.m:45</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_aca921670c13923eac3fe8dff3f71e463"><div class="ttname"><a href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a></div><div class="ttdeci">s</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00069">apply_distortion2.m:69</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a489630d61c55f2188f687d347393e5d0"><div class="ttname"><a href="apply__distortion_8m.html#a489630d61c55f2188f687d347393e5d0">distortion</a></div><div class="ttdeci">tangential distortion</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00044">apply_distortion.m:44</a></div></div>
+<div class="ttc" id="awillson__read_8m_html_aa47425cb8bedf81d652dd3b12254cf44"><div class="ttname"><a href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a></div><div class="ttdeci">Read in Reg Willson s data file</div><div class="ttdef"><b>Definition:</b> <a href="willson__read_8m_source.html#l00001">willson_read.m:1</a></div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a5bf8e9bd225c9965657036965db3c3fb"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a></div><div class="ttdeci">use the full distortion Take the complete distortion model n</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a911e4f1620fa3907031829d8d91b48df"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a911e4f1620fa3907031829d8d91b48df">model</a></div><div class="ttdeci">use the full distortion model</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="acheck__directory_8m_html_abd6929795691c402603cd051d7729150"><div class="ttname"><a href="check__directory_8m.html#abd6929795691c402603cd051d7729150">name</a></div><div class="ttdeci">for name</div><div class="ttdef"><b>Definition:</b> <a href="check__directory_8m_source.html#l00111">check_directory.m:111</a></div></div>
+<div class="ttc" id="awillson__read_8m_html_ae61f7f5ad7d59d9f1ba88fc778621f2d"><div class="ttname"><a href="willson__read_8m.html#ae61f7f5ad7d59d9f1ba88fc778621f2d">calib_file</a></div><div class="ttdeci">while calib_file</div><div class="ttdef"><b>Definition:</b> <a href="willson__read_8m_source.html#l00016">willson_read.m:16</a></div></div>
+<div class="ttc" id="anamespacecalibration_html"><div class="ttname"><a href="namespacecalibration.html">calibration</a></div><div class="ttdef"><b>Definition:</b> <a href="calibration_8h_source.html#l00009">calibration.h:9</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_aafd6b8a4b32e9e967ee9372af2b8b5e2"><div class="ttname"><a href="cam__proj__calib_8m.html#aafd6b8a4b32e9e967ee9372af2b8b5e2">parameters</a></div><div class="ttdeci">Save camera parameters</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00045">cam_proj_calib.m:45</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_a05739f4b7ae42ee41b81d332e7d6ff51"><div class="ttname"><a href="rectify__stereo__pair_8m.html#a05739f4b7ae42ee41b81d332e7d6ff51">now</a></div><div class="ttdeci">Loop around all the frames now</div><div class="ttdef"><b>Definition:</b> <a href="rectify__stereo__pair_8m_source.html#l00155">rectify_stereo_pair.m:155</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

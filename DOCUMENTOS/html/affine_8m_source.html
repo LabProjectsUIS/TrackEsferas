@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/affine.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">affine.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="affine_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="affine_8m.html#a81bc2cb5ad09c87d9071b4bb769329dc">    1</a></span>&#160;<span class="keyword">function</span> <a class="code" href="affine_8m.html#a81bc2cb5ad09c87d9071b4bb769329dc">A</a> = affine(<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>,<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>,<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>,<a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a>,<a class="code" href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>,<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>,<a class="code" href="cam__proj__calib_8m.html#a3154fb25e7e4f9c0e48d2bfd282c38ea">alpha_c</a>)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 7,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;   <a class="code" href="cam__proj__calib_8m.html#a3154fb25e7e4f9c0e48d2bfd282c38ea">alpha_c</a> = 0;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;   <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 6,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      <a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> = [0;0];</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 5,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;         <a class="code" href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a> = [1;1];</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;         <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 4,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <a class="code" href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3,1);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 3,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;               <a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a> = <a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(3,1);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;               <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 2,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                  <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a> = [0;0;-1];</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                  <span class="keywordflow">if</span> <a class="code" href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a> &lt; 1,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                     <a class="code" href="go__calib__optim__iter_8m.html#a91b532a96b925f29014331062ff0010a">error</a>(<span class="stringliteral">&#39;Error: affine needs some arguments: A = affine(X,n,om,T,fc,cc,alpha_c);&#39;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                  <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;               <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;         <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   <a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a> = [fc(1) alpha_c*fc(1) cc(1); 0 fc(2) cc(2);0 0 1];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a> = <a class="code" href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a>(<a class="code" href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="rodrigues_8m.html#af6396b826521dad19a1761d9e32d5f82">omega</a> = <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a> / <a class="code" href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a>(<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>,<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a> = <a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>/<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>(3);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a> = <a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a> * [R + T*omega&#39;] * inv(<a class="code" href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="affine_8m.html#a81bc2cb5ad09c87d9071b4bb769329dc">A</a> = (<a class="code" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a>(3,3)*<a class="code" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a>(1:2,1:2) - <a class="code" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a>(1:2,3)*H(3,1:2) + (<a class="code" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a>(3,2)*H(1:2,1) - H(3,1)*H(1:2,2))*[x(2) -x(1)])/(<a class="code" href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a>(3,:)*x)^2;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aaffine_8m_html_a81bc2cb5ad09c87d9071b4bb769329dc"><div class="ttname"><a href="affine_8m.html#a81bc2cb5ad09c87d9071b4bb769329dc">A</a></div><div class="ttdeci">function A</div><div class="ttdef"><b>Definition:</b> <a href="affine_8m_source.html#l00001">affine.m:1</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="asmall__test__script_8m_html_ab7fd51748de2e6629029180d5d37ec10"><div class="ttname"><a href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a></div><div class="ttdeci">[479.5200 236.0800 608.4100 415.3700 461.0000 40.0000 451.4800 308.7000 373.9900 314.8900 299.3200 319.1300 231.5500 321.3700 443.7300 282.9200 378.3600 288.3000 314.6900 292.7400 255.4700 296.2300]' x</div><div class="ttdef"><b>Definition:</b> <a href="small__test__script_8m_source.html#l00018">small_test_script.m:18</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_ac51b57a703ba1c5869228690c93e1701"><div class="ttname"><a href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a></div><div class="ttdeci">All the point coordinates(on the image, and in 3D) - for global optimization X</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00218">click_ima_calib3D.m:218</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a1e8af1b834749c5cbe9484070c2a9977"><div class="ttname"><a href="align__structures_8m.html#a1e8af1b834749c5cbe9484070c2a9977">T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00020">align_structures.m:20</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_a8d68283eda3e03d906ed4986ea445325"><div class="ttname"><a href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a></div><div class="ttdeci">if dot(uu, t)&lt; 0</div></div>
+<div class="ttc" id="acompute__homography_8m_html_afaafc315b95987fc2b071bcd8f698b81"><div class="ttname"><a href="compute__homography_8m.html#afaafc315b95987fc2b071bcd8f698b81">H</a></div><div class="ttdeci">H</div><div class="ttdef"><b>Definition:</b> <a href="compute__homography_8m_source.html#l00152">compute_homography.m:152</a></div></div>
+<div class="ttc" id="arodrigues_8m_html_af6396b826521dad19a1761d9e32d5f82"><div class="ttname"><a href="rodrigues_8m.html#af6396b826521dad19a1761d9e32d5f82">omega</a></div><div class="ttdeci">omega</div><div class="ttdef"><b>Definition:</b> <a href="rodrigues_8m_source.html#l00059">rodrigues.m:59</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_ac6a7a413be81452b9806f7021b893ad4"><div class="ttname"><a href="add__suppress_8m.html#ac6a7a413be81452b9806f7021b893ad4">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00005">add_suppress.m:5</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a41fcba09f2bdcdf315ba4119dc7978dd"><div class="ttname"><a href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a></div><div class="ttdeci">cc</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00053">apply_distortion.m:53</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_ace3fdf821957e9266501abadd2926b1c"><div class="ttname"><a href="cam__proj__calib_8m.html#ace3fdf821957e9266501abadd2926b1c">R</a></div><div class="ttdeci">R</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00170">cam_proj_calib.m:170</a></div></div>
+<div class="ttc" id="aginput2_8m_html_aafbb9d50e573e4009d0650c645566ddd"><div class="ttname"><a href="ginput2_8m.html#aafbb9d50e573e4009d0650c645566ddd">nargin</a></div><div class="ttdeci">end if x if if nargin</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00034">ginput2.m:34</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a5bf8e9bd225c9965657036965db3c3fb"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a></div><div class="ttdeci">use the full distortion Take the complete distortion model n</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="a_compute3_d_8m_html_a72d54db2b27ce046aab6e6a414c407e9"><div class="ttname"><a href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a></div><div class="ttdeci">Reconstruction of the structure of the striped object fc</div><div class="ttdef"><b>Definition:</b> <a href="_compute3_d_8m_source.html#l00003">Compute3D.m:3</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a3154fb25e7e4f9c0e48d2bfd282c38ea"><div class="ttname"><a href="cam__proj__calib_8m.html#a3154fb25e7e4f9c0e48d2bfd282c38ea">alpha_c</a></div><div class="ttdeci">alpha_c</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00162">cam_proj_calib.m:162</a></div></div>
+<div class="ttc" id="aalign__structures_8m_html_a4e3462750cc302b9a3697c379ed1d885"><div class="ttname"><a href="align__structures_8m.html#a4e3462750cc302b9a3697c379ed1d885">om</a></div><div class="ttdeci">om</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00036">align_structures.m:36</a></div></div>
+<div class="ttc" id="acalib__stereo_8m_html_a3aa6bf135885f06d75e5da2713b5230d"><div class="ttname"><a href="calib__stereo_8m.html#a3aa6bf135885f06d75e5da2713b5230d">rodrigues</a></div><div class="ttdeci">for Align the structure from the first ii * rodrigues(om_left_list(:, ii))'</div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a91b532a96b925f29014331062ff0010a"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a91b532a96b925f29014331062ff0010a">error</a></div><div class="ttdeci">Extraction of the paramters for computing the right reprojection error</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00507">go_calib_optim_iter.m:507</a></div></div>
+<div class="ttc" id="aerror__analysis_8m_html_a30ec4b5ab03426226e08bd6309a70bb8"><div class="ttname"><a href="error__analysis_8m.html#a30ec4b5ab03426226e08bd6309a70bb8">KK</a></div><div class="ttdeci">KK</div><div class="ttdef"><b>Definition:</b> <a href="error__analysis_8m_source.html#l00096">error_analysis.m:96</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

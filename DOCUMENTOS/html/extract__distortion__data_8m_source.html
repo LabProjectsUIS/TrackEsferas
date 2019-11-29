@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/extract_distortion_data.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">extract_distortion_data.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="extract__distortion__data_8m.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;%%% Small script <a class="code" href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a> <a class="code" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> etst </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#a312a5e0eda1bc4ca9273f36978e6dc4f">    3</a></span>&#160;%<a class="code" href="combine__calib_8m.html#a44c4c50adb470474c1faaac3f3eb1a02">load</a> <a class="code" href="extract__distortion__data_8m.html#a312a5e0eda1bc4ca9273f36978e6dc4f">Calib_Results</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;% Collect <a class="code" href="_organizar_8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the <a class="code" href="extract__distortion__data_8m.html#a4b6eb893289773511b71f439222d71fa">points</a> distorted (<a class="code" href="extract__distortion__data_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>) and undistorted (<a class="code" href="extract__distortion__data_8m.html#ac42ffbc0f64a514fedad554ff2f8eb1e">xn</a>) from the</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;% <a class="code" href="cam__proj__calib_8m.html#a5751dd79fe12fec35f5667295dbce97d">images</a>:</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<a class="code" href="extract__distortion__data_8m.html#ac42ffbc0f64a514fedad554ff2f8eb1e">xn</a> = [];</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#a0903a189cbe112bce4b75bbc7c50357c">    9</a></span>&#160;<a class="code" href="extract__distortion__data_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a> = [];</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#af29949bd63fb009eacab5efd11399e40">   10</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="extract__distortion__data_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a> = <a class="code" href="add__suppress_8m.html#aa0d59e9a11aa79e15026fec05d972fc7">ind_active</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="extract__distortion__data_8m.html#ade63f856084a1db1c7bda53705332ba8">eval</a>([<span class="stringliteral">&#39;x_kk = x_&#39;</span> num2str(<a class="code" href="extract__distortion__data_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="charliteral">&#39;;&#39;</span>]);</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#a44d2e0e6ac8a47c80dcfe5fd72d2b73d">   12</a></span>&#160;    <a class="code" href="extract__distortion__data_8m.html#a44d2e0e6ac8a47c80dcfe5fd72d2b73d">xd_kk</a> = <a class="code" href="stereo__triangulation_8m.html#a197b3ef9be3bd169722361957fe74aaa">normalize_pixel</a>(<a class="code" href="export__calib__data_8m.html#a5ea0ad593821902850aafb73aa158f49">x_kk</a>,<a class="code" href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a>,<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>,<a class="code" href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a>(5,1),<a class="code" href="cam__proj__calib_8m.html#a3154fb25e7e4f9c0e48d2bfd282c38ea">alpha_c</a>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="extract__distortion__data_8m.html#ade63f856084a1db1c7bda53705332ba8">eval</a>([<span class="stringliteral">&#39;X_kk = X_&#39;</span> num2str(<a class="code" href="extract__distortion__data_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="charliteral">&#39;;&#39;</span>]);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="extract__distortion__data_8m.html#ade63f856084a1db1c7bda53705332ba8">eval</a>([<span class="stringliteral">&#39;omckk = omc_&#39;</span> num2str(<a class="code" href="extract__distortion__data_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="charliteral">&#39;;&#39;</span>]);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="extract__distortion__data_8m.html#ade63f856084a1db1c7bda53705332ba8">eval</a>([<span class="stringliteral">&#39;Tckk = Tc_&#39;</span> num2str(<a class="code" href="extract__distortion__data_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>) <span class="charliteral">&#39;;&#39;</span>]);</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#af3bc06edeb49128a523816981e1e5399">   16</a></span>&#160;    <a class="code" href="extract__distortion__data_8m.html#af3bc06edeb49128a523816981e1e5399">xn_kk</a> = project_points2(X_kk,<a class="code" href="cam__proj__extract__param_8m.html#a2de5fcb88516c541766dcbebbda30ea5">omckk</a>,<a class="code" href="cam__proj__extract__param_8m.html#aa9a39fd22b34b64426edf9d8f95b2d8a">Tckk</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="extract__distortion__data_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a> = [xd xd_kk];</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#ac42ffbc0f64a514fedad554ff2f8eb1e">   18</a></span>&#160;    <a class="code" href="extract__distortion__data_8m.html#ac42ffbc0f64a514fedad554ff2f8eb1e">xn</a> = [xn xn_kk];</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#afb358f48b1646c750fb9da6c6585be2b">   19</a></span>&#160;<a class="code" href="extract__distortion__data_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;% Data <a class="code" href="extract__distortion__data_8m.html#a4b6eb893289773511b71f439222d71fa">points</a>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#a4b6eb893289773511b71f439222d71fa">   23</a></span>&#160;<a class="code" href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a> = sqrt(<a class="code" href="go__calib__optim__iter_8m.html#a84fc371dc8106a6d6ade7b5e736f09b7">sum</a>(<a class="code" href="extract__distortion__data_8m.html#ac42ffbc0f64a514fedad554ff2f8eb1e">xn</a>.^2)); % The undistorted radii</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#a7128ce14336d909d280814ede1a53dbd">   24</a></span>&#160;<a class="code" href="extract__distortion__data_8m.html#a7128ce14336d909d280814ede1a53dbd">rp</a> = sqrt(<a class="code" href="go__calib__optim__iter_8m.html#a84fc371dc8106a6d6ade7b5e736f09b7">sum</a>(<a class="code" href="extract__distortion__data_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a>.^2)); % The distorted radii</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;%--- Try different analytical models <a class="code" href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a> fit r_prime = <a class="code" href="_compute3_d_8m.html#a350bfcb1e3cfb28ddff48ce525d4f139">D</a>(<a class="code" href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a>)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;ri = 0.005:.005:max(<a class="code" href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;% Calibration <a class="code" href="clearwin_8m.html#a68ed8cdd8e22dc147d13590fc969bdc1">toolbox</a> <a class="code" href="extract__distortion__data_8m.html#a1e38a11155a20de2dd24dcb177fcdaee">model</a>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#a1e38a11155a20de2dd24dcb177fcdaee">   31</a></span>&#160;rt = ri .* (1 + <a class="code" href="calib__gui__normal_8m.html#abad12e09f1c957bb512efc7dd862cd16">kc</a>(1)*ri.^2 + <a class="code" href="calib__gui__normal_8m.html#abad12e09f1c957bb512efc7dd862cd16">kc</a>(2)*ri.^4 + <a class="code" href="calib__gui__normal_8m.html#abad12e09f1c957bb512efc7dd862cd16">kc</a>(5)*ri.^6);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#a9717e7bbecb906637e86cef6da3d83c2">   35</a></span>&#160;<span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="extract__distortion__data_8m.html#a2e286be031d0547482321f48ebc74ed0">figure</a>(10);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#aec70d633e7619583eb3a08a7afd638b4">   39</a></span>&#160;<a class="code" href="extract__distortion__data_8m.html#aec70d633e7619583eb3a08a7afd638b4">clf</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#a536cb1a22c2d6437a5761941a97cde15">   40</a></span>&#160;<a class="code" href="extract__distortion__data_8m.html#a8ea5b47bab50be05608c883cc49a3f75">h1</a> = <a class="code" href="click__ima__calib_8m.html#a6563a3860443b283b266ea7a1fe1f0fa">plot</a>(<a class="code" href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a>,<a class="code" href="extract__distortion__data_8m.html#a7128ce14336d909d280814ede1a53dbd">rp</a>,<span class="stringliteral">&#39;r.&#39;</span>,<span class="stringliteral">&#39;markersize&#39;</span>,.1); hold <a class="code" href="extract__distortion__data_8m.html#a536cb1a22c2d6437a5761941a97cde15">on</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="extract__distortion__data_8m.html#ac9e7e0722796a9a2748cfe71e5c1eacb">   41</a></span>&#160;<a class="code" href="extract__distortion__data_8m.html#ac9e7e0722796a9a2748cfe71e5c1eacb">h2</a> = <a class="code" href="click__ima__calib_8m.html#a6563a3860443b283b266ea7a1fe1f0fa">plot</a>(ri,rt,<span class="stringliteral">&#39;r-&#39;</span>,<span class="stringliteral">&#39;linewidth&#39;</span>,.1);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="extract__distortion__data_8m.html#a283f0e0fb7475db33e63fa362dd46229">title</a>(<span class="stringliteral">&#39;Radial distortion function (with unit focal) - r prime = D(r)&#39;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="extract__distortion__data_8m.html#a1c17cc89eb47c42bca72cc748fc15a3d">xlabel</a>(<span class="charliteral">&#39;r&#39;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="extract__distortion__data_8m.html#ae1206f41b934dfb7f3f4e19a3b212e26">ylabel</a>(<span class="stringliteral">&#39;r prime&#39;</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;zoom <a class="code" href="extract__distortion__data_8m.html#a536cb1a22c2d6437a5761941a97cde15">on</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a84fc371dc8106a6d6ade7b5e736f09b7"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a84fc371dc8106a6d6ade7b5e736f09b7">sum</a></div><div class="ttdeci">if sum(prob_kc)</div></div>
+<div class="ttc" id="acombine__calib_8m_html_a44c4c50adb470474c1faaac3f3eb1a02"><div class="ttname"><a href="combine__calib_8m.html#a44c4c50adb470474c1faaac3f3eb1a02">load</a></div><div class="ttdeci">load(name1)</div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a312a5e0eda1bc4ca9273f36978e6dc4f"><div class="ttname"><a href="extract__distortion__data_8m.html#a312a5e0eda1bc4ca9273f36978e6dc4f">Calib_Results</a></div><div class="ttdeci">Small script file that etst load Calib_Results</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00003">extract_distortion_data.m:3</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a41e19d5a971866c55637ab61e656d48d"><div class="ttname"><a href="count__squares_8m.html#a41e19d5a971866c55637ab61e656d48d">zeros</a></div><div class="ttdeci">zeros(1, Np)</div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a7f570a4b57ed34463ad8cc2c68d36f23"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a7f570a4b57ed34463ad8cc2c68d36f23">to</a></div><div class="ttdeci">subtract to bring the origin to(0, 0) instead of(1</div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a8ea5b47bab50be05608c883cc49a3f75"><div class="ttname"><a href="extract__distortion__data_8m.html#a8ea5b47bab50be05608c883cc49a3f75">h1</a></div><div class="ttdeci">h1</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00040">extract_distortion_data.m:40</a></div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a5751dd79fe12fec35f5667295dbce97d"><div class="ttname"><a href="cam__proj__calib_8m.html#a5751dd79fe12fec35f5667295dbce97d">images</a></div><div class="ttdeci">Reprojection on the original images</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00130">cam_proj_calib.m:130</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a44d2e0e6ac8a47c80dcfe5fd72d2b73d"><div class="ttname"><a href="extract__distortion__data_8m.html#a44d2e0e6ac8a47c80dcfe5fd72d2b73d">xd_kk</a></div><div class="ttdeci">xd_kk</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00012">extract_distortion_data.m:12</a></div></div>
+<div class="ttc" id="areadras_8m_html_a7d252fd4b4ae9c8b8af5e91ef645fc1f"><div class="ttname"><a href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a></div><div class="ttdeci">READRAS Read an image file in sun raster format so that[X, map]</div><div class="ttdef"><b>Definition:</b> <a href="readras_8m_source.html#l00006">readras.m:6</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a4b6eb893289773511b71f439222d71fa"><div class="ttname"><a href="extract__distortion__data_8m.html#a4b6eb893289773511b71f439222d71fa">points</a></div><div class="ttdeci">Data points</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00023">extract_distortion_data.m:23</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_ade63f856084a1db1c7bda53705332ba8"><div class="ttname"><a href="extract__distortion__data_8m.html#ade63f856084a1db1c7bda53705332ba8">eval</a></div><div class="ttdeci">for eval(['x_kk=x_' num2str(kk) ';'])</div></div>
+<div class="ttc" id="aclearwin_8m_html_a68ed8cdd8e22dc147d13590fc969bdc1"><div class="ttname"><a href="clearwin_8m.html#a68ed8cdd8e22dc147d13590fc969bdc1">toolbox</a></div><div class="ttdeci">Function that clears all the wintx_i and winty_i In normal operation of the toolbox</div><div class="ttdef"><b>Definition:</b> <a href="clearwin_8m_source.html#l00002">clearwin.m:2</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_ac9e7e0722796a9a2748cfe71e5c1eacb"><div class="ttname"><a href="extract__distortion__data_8m.html#ac9e7e0722796a9a2748cfe71e5c1eacb">h2</a></div><div class="ttdeci">h2</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00041">extract_distortion_data.m:41</a></div></div>
+<div class="ttc" id="acam__proj__extract__param_8m_html_aa9a39fd22b34b64426edf9d8f95b2d8a"><div class="ttname"><a href="cam__proj__extract__param_8m.html#aa9a39fd22b34b64426edf9d8f95b2d8a">Tckk</a></div><div class="ttdeci">Tckk</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__extract__param_8m_source.html#l00013">cam_proj_extract_param.m:13</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a0903a189cbe112bce4b75bbc7c50357c"><div class="ttname"><a href="extract__distortion__data_8m.html#a0903a189cbe112bce4b75bbc7c50357c">xd</a></div><div class="ttdeci">Collect all the points distorted(xd) and undistorted(xn) from the % images xd</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00009">extract_distortion_data.m:9</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a41fcba09f2bdcdf315ba4119dc7978dd"><div class="ttname"><a href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a></div><div class="ttdeci">cc</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00053">apply_distortion.m:53</a></div></div>
+<div class="ttc" id="acam__proj__extract__param_8m_html_a2de5fcb88516c541766dcbebbda30ea5"><div class="ttname"><a href="cam__proj__extract__param_8m.html#a2de5fcb88516c541766dcbebbda30ea5">omckk</a></div><div class="ttdeci">for omckk</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__extract__param_8m_source.html#l00012">cam_proj_extract_param.m:12</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a1c17cc89eb47c42bca72cc748fc15a3d"><div class="ttname"><a href="extract__distortion__data_8m.html#a1c17cc89eb47c42bca72cc748fc15a3d">xlabel</a></div><div class="ttdeci">xlabel('r')</div></div>
+<div class="ttc" id="aclick__ima__calib_8m_html_a6563a3860443b283b266ea7a1fe1f0fa"><div class="ttname"><a href="click__ima__calib_8m.html#a6563a3860443b283b266ea7a1fe1f0fa">plot</a></div><div class="ttdeci">plot(xi, yi,'+', 'color',[1.000 0.314 0.510], 'linewidth', 2)</div></div>
+<div class="ttc" id="a_compute3_d_8m_html_a72d54db2b27ce046aab6e6a414c407e9"><div class="ttname"><a href="_compute3_d_8m.html#a72d54db2b27ce046aab6e6a414c407e9">fc</a></div><div class="ttdeci">Reconstruction of the structure of the striped object fc</div><div class="ttdef"><b>Definition:</b> <a href="_compute3_d_8m_source.html#l00003">Compute3D.m:3</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a283f0e0fb7475db33e63fa362dd46229"><div class="ttname"><a href="extract__distortion__data_8m.html#a283f0e0fb7475db33e63fa362dd46229">title</a></div><div class="ttdeci">title('Radial distortion function(with unit focal) - r prime=D(r)')</div></div>
+<div class="ttc" id="astereo__triangulation_8m_html_a197b3ef9be3bd169722361957fe74aaa"><div class="ttname"><a href="stereo__triangulation_8m.html#a197b3ef9be3bd169722361957fe74aaa">normalize_pixel</a></div><div class="ttdeci">xL, fc_left, cc_left, kc_left, alpha_c_left normalize_pixel()</div></div>
+<div class="ttc" id="acam__proj__calib_8m_html_a3154fb25e7e4f9c0e48d2bfd282c38ea"><div class="ttname"><a href="cam__proj__calib_8m.html#a3154fb25e7e4f9c0e48d2bfd282c38ea">alpha_c</a></div><div class="ttdeci">alpha_c</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib_8m_source.html#l00162">cam_proj_calib.m:162</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_af3bc06edeb49128a523816981e1e5399"><div class="ttname"><a href="extract__distortion__data_8m.html#af3bc06edeb49128a523816981e1e5399">xn_kk</a></div><div class="ttdeci">xn_kk</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00016">extract_distortion_data.m:16</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_af29949bd63fb009eacab5efd11399e40"><div class="ttname"><a href="extract__distortion__data_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a></div><div class="ttdeci">for kk</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00010">extract_distortion_data.m:10</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a7128ce14336d909d280814ede1a53dbd"><div class="ttname"><a href="extract__distortion__data_8m.html#a7128ce14336d909d280814ede1a53dbd">rp</a></div><div class="ttdeci">The undistorted radii rp</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00024">extract_distortion_data.m:24</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_ae1206f41b934dfb7f3f4e19a3b212e26"><div class="ttname"><a href="extract__distortion__data_8m.html#ae1206f41b934dfb7f3f4e19a3b212e26">ylabel</a></div><div class="ttdeci">ylabel('r prime')</div></div>
+<div class="ttc" id="ais3_d_8m_html_a514f1b439f404f86f77090fa9edc96ce"><div class="ttname"><a href="is3_d_8m.html#a514f1b439f404f86f77090fa9edc96ce">r</a></div><div class="ttdeci">r</div><div class="ttdef"><b>Definition:</b> <a href="is3_d_8m_source.html#l00016">is3D.m:16</a></div></div>
+<div class="ttc" id="a_compute3_d_8m_html_a350bfcb1e3cfb28ddff48ce525d4f139"><div class="ttname"><a href="_compute3_d_8m.html#a350bfcb1e3cfb28ddff48ce525d4f139">D</a></div><div class="ttdeci">D</div><div class="ttdef"><b>Definition:</b> <a href="_compute3_d_8m_source.html#l00064">Compute3D.m:64</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a2e286be031d0547482321f48ebc74ed0"><div class="ttname"><a href="extract__distortion__data_8m.html#a2e286be031d0547482321f48ebc74ed0">figure</a></div><div class="ttdeci">figure(10)</div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a1e38a11155a20de2dd24dcb177fcdaee"><div class="ttname"><a href="extract__distortion__data_8m.html#a1e38a11155a20de2dd24dcb177fcdaee">model</a></div><div class="ttdeci">Calibration toolbox model</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00031">extract_distortion_data.m:31</a></div></div>
+<div class="ttc" id="aadd__suppress_8m_html_aa0d59e9a11aa79e15026fec05d972fc7"><div class="ttname"><a href="add__suppress_8m.html#aa0d59e9a11aa79e15026fec05d972fc7">ind_active</a></div><div class="ttdeci">ind_active</div><div class="ttdef"><b>Definition:</b> <a href="add__suppress_8m_source.html#l00024">add_suppress.m:24</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_ac42ffbc0f64a514fedad554ff2f8eb1e"><div class="ttname"><a href="extract__distortion__data_8m.html#ac42ffbc0f64a514fedad554ff2f8eb1e">xn</a></div><div class="ttdeci">xn</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00018">extract_distortion_data.m:18</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_aec70d633e7619583eb3a08a7afd638b4"><div class="ttname"><a href="extract__distortion__data_8m.html#aec70d633e7619583eb3a08a7afd638b4">clf</a></div><div class="ttdeci">clf</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00039">extract_distortion_data.m:39</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="extract__distortion__data_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00019">extract_distortion_data.m:19</a></div></div>
+<div class="ttc" id="a_organizar_8m_html_a00a349297fa58bc80ff5329e25dcfe28"><div class="ttname"><a href="_organizar_8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a></div><div class="ttdeci">clear all</div><div class="ttdef"><b>Definition:</b> <a href="_organizar_8m_source.html#l00001">Organizar.m:1</a></div></div>
+<div class="ttc" id="aextract__distortion__data_8m_html_a536cb1a22c2d6437a5761941a97cde15"><div class="ttname"><a href="extract__distortion__data_8m.html#a536cb1a22c2d6437a5761941a97cde15">on</a></div><div class="ttdeci">hold on</div><div class="ttdef"><b>Definition:</b> <a href="extract__distortion__data_8m_source.html#l00040">extract_distortion_data.m:40</a></div></div>
+<div class="ttc" id="amatlab2opencv_8m_html_ac0a984a0dc9111131f4ad1fe8088698a"><div class="ttname"><a href="matlab2opencv_8m.html#ac0a984a0dc9111131f4ad1fe8088698a">file</a></div><div class="ttdeci">else Append mode file</div><div class="ttdef"><b>Definition:</b> <a href="matlab2opencv_8m_source.html#l00019">matlab2opencv.m:19</a></div></div>
+<div class="ttc" id="aexport__calib__data_8m_html_a5ea0ad593821902850aafb73aa158f49"><div class="ttname"><a href="export__calib__data_8m.html#a5ea0ad593821902850aafb73aa158f49">x_kk</a></div><div class="ttdeci">x_kk</div><div class="ttdef"><b>Definition:</b> <a href="export__calib__data_8m_source.html#l00055">export_calib_data.m:55</a></div></div>
+<div class="ttc" id="acalib__gui__normal_8m_html_abad12e09f1c957bb512efc7dd862cd16"><div class="ttname"><a href="calib__gui__normal_8m.html#abad12e09f1c957bb512efc7dd862cd16">kc</a></div><div class="ttdeci">clear fc cc kc KK kc</div><div class="ttdef"><b>Definition:</b> <a href="calib__gui__normal_8m_source.html#l00016">calib_gui_normal.m:16</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Fichero Fuente C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/marker.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">marker.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="marker_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="marker_8h.html">marker.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_custom_camera_library.html">CCL</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="marker_8cpp.html#a8a50b2cd532c0c4f222c1df6df253ef2">    7</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="marker_8cpp.html#a8a50b2cd532c0c4f222c1df6df253ef2">MAX_NUM_OBJECTS</a> = 50;         </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="marker_8cpp.html#afa37064ddc74dd317a926ffc4237a044">    8</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="marker_8cpp.html#afa37064ddc74dd317a926ffc4237a044">MIN_OBJECT_AREA</a> = 15;         </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_marker.html#ad4e167fa334fbde49f073e4362c4d3db">   10</a></span>&#160;<a class="code" href="class_custom_camera_library_1_1_marker.html#ad4e167fa334fbde49f073e4362c4d3db">Marker::Marker</a>() {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//set values for default constructor</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_custom_camera_library_1_1_marker.html#accb27bc1a4d0edc55571b6f29af41f4c">setType</a>(<span class="stringliteral">&quot;Marker&quot;</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_custom_camera_library_1_1_marker.html#a7433a7e4ab0bef65ad5987a81d984307">setColor</a>(Scalar(255, 255, 255));</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_custom_camera_library_1_1_marker.html#abe60ca277c2adf23fdf7b9809099e775">setEccentr</a>(<span class="keywordtype">double</span>(0));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1_marker.html#ac34f00758cfb07bcf550209083633eb6">   17</a></span>&#160;<a class="code" href="class_custom_camera_library_1_1_marker.html#ac34f00758cfb07bcf550209083633eb6">Marker::~Marker</a>(<span class="keywordtype">void</span>) {}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1c_frame.html#a20d6ba818242bb92ec7a74203bac5e49">   19</a></span>&#160;<a class="code" href="class_custom_camera_library_1_1c_frame.html#a20d6ba818242bb92ec7a74203bac5e49">cFrame::cFrame</a>() {}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1c_frame.html#acf0aa8c19e423193909409d9fdbf01ee">   21</a></span>&#160;<a class="code" href="class_custom_camera_library_1_1c_frame.html#acf0aa8c19e423193909409d9fdbf01ee">cFrame::~cFrame</a>() {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">string</span> cFrame::intToString(<span class="keywordtype">float</span> number) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::stringstream <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a> &lt;&lt; number;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>.str();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span>  cFrame::drawObject(vector&lt;Marker&gt; theMarkers, Mat &amp;frame, <a class="code" href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a>&lt; vector&lt;Point&gt; &gt; contours, vector&lt;Vec4i&gt; hierarchy) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="namespace_custom_camera_library.html#abbfe5d4dfda37a253682293774986fa1">i</a> = 0; <a class="code" href="namespace_custom_camera_library.html#abbfe5d4dfda37a253682293774986fa1">i</a>&lt;theMarkers.size(); <a class="code" href="namespace_custom_camera_library.html#abbfe5d4dfda37a253682293774986fa1">i</a>++) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">//descomentar si se quiere dibujar los contornos</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//      drawContours(frame, contours, i, Scalar(0, 0, 255), 1, 8, hierarchy);</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        circle(frame, Point(theMarkers.at(<a class="code" href="namespace_custom_camera_library.html#abbfe5d4dfda37a253682293774986fa1">i</a>).getX(), theMarkers.at(<a class="code" href="namespace_custom_camera_library.html#abbfe5d4dfda37a253682293774986fa1">i</a>).getY()), 2, Scalar(0, 0, 255));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">//descomentar si se quiere dibujar las coordenadas de los marcadores en la escena.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">//          putText(frame, intToString(theMarkers.at(i).getX()) + &quot; , &quot; + intToString(theMarkers.at(i).getY()), Point(theMarkers.at(i).getX(), theMarkers.at(i).getY() + 20), 1, 1, theMarkers.at(i).getColor());</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//          putText(frame, theMarkers.at(i).getType(), Point(theMarkers.at(i).getX(), theMarkers.at(i).getY() - 20), 1, 1, theMarkers.at(i).getColor());</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">//      cout &lt;&lt; &quot;Marcador &quot; &lt;&lt; i + 1 &lt;&lt; &quot;: X: &quot; &lt;&lt; theMarkers.at(i).getArea() &lt;&lt; &quot;  Y: &quot; &lt;&lt; theMarkers.at(i).getArea() &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_custom_camera_library_1_1c_frame.html#aef8507b26e8431f53c66f921ccbde37c">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_custom_camera_library_1_1c_frame.html#aef8507b26e8431f53c66f921ccbde37c">cFrame::trackFilteredMarker</a>(<a class="code" href="class_custom_camera_library_1_1_marker.html">Marker</a> theMarker, Mat &amp;<a class="code" href="go__calib__stereo_8m.html#a2fd1de041ee0d03cd6ee76181c84237a">threshold</a>, <a class="code" href="class_custom_camera_library_1_1c_frame.html">cFrame</a> &amp;cframe, Mat &amp;frame) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    cframe.<a class="code" href="class_custom_camera_library_1_1c_frame.html#a62085a52666a4b2af26043107850343d">markers</a>.clear();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    Mat temp;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="go__calib__stereo_8m.html#a2fd1de041ee0d03cd6ee76181c84237a">threshold</a>.copyTo(temp);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//these two vectors needed for output of findContours</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    vector&lt; vector&lt;Point&gt; &gt; contours;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    vector&lt;Vec4i&gt; hierarchy;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//find contours of filtered image using openCV findContours function</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    findContours(<a class="code" href="go__calib__stereo_8m.html#a2fd1de041ee0d03cd6ee76181c84237a">threshold</a>, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//use moments method to find our filtered marker</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">double</span> refArea = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> markerFound = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (hierarchy.size() &gt; 0) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">int</span> numMarkers = hierarchy.size();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">//if number of markers greater than MAX_NUM_OBJECTS we have a noisy filter</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (numMarkers &lt; <a class="code" href="marker_8cpp.html#a8a50b2cd532c0c4f222c1df6df253ef2">MAX_NUM_OBJECTS</a>) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> index = 0; index &gt;= 0; index = hierarchy[index][0]) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                Moments moment = moments((cv::Mat)contours[index]);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordtype">double</span> area = moment.m00;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordtype">double</span> mu20 = moment.mu20 / area;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordtype">double</span> mu02 = moment.mu02 / area;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordtype">double</span> mu11 = moment.mu11 / area;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordtype">double</span> lambda1 = ((mu20 + mu02) / 2) + sqrt(4 * mu11*mu11 + (mu20 - mu02)*(mu20 - mu02)) / 2;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordtype">double</span> lambda2 = ((mu20 + mu02) / 2) - sqrt(4 * mu11*mu11 + (mu20 - mu02)*(mu20 - mu02)) / 2;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordtype">double</span> Eccentr = sqrt(1 - (lambda2 / lambda1));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">if</span> (area &gt; <a class="code" href="marker_8cpp.html#afa37064ddc74dd317a926ffc4237a044">MIN_OBJECT_AREA</a>) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <a class="code" href="class_custom_camera_library_1_1_marker.html">Marker</a> <a class="code" href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">marker</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <a class="code" href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">marker</a>.setX(moment.m10 / area);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <a class="code" href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">marker</a>.setY(moment.m01 / area);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    <a class="code" href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">marker</a>.<a class="code" href="class_custom_camera_library_1_1_marker.html#accb27bc1a4d0edc55571b6f29af41f4c">setType</a>(theMarker.<a class="code" href="class_custom_camera_library_1_1_marker.html#a66beaaf58401fcbc9f69530aa23fe87f">getType</a>());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <a class="code" href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">marker</a>.<a class="code" href="class_custom_camera_library_1_1_marker.html#a7433a7e4ab0bef65ad5987a81d984307">setColor</a>(theMarker.<a class="code" href="class_custom_camera_library_1_1_marker.html#a4a9365c66d784ec641f36038ce0c1aa4">getColor</a>());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <a class="code" href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">marker</a>.<a class="code" href="class_custom_camera_library_1_1_marker.html#a39e4057984377e2dd2fa772dc2816b48">setArea</a>(area);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <a class="code" href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">marker</a>.<a class="code" href="class_custom_camera_library_1_1_marker.html#abe60ca277c2adf23fdf7b9809099e775">setEccentr</a>(Eccentr);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    cframe.<a class="code" href="class_custom_camera_library_1_1c_frame.html#a62085a52666a4b2af26043107850343d">markers</a>.push_back(<a class="code" href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">marker</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    markerFound = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="comment">//else markerFound = false;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span> (markerFound == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="comment">//draw marker location on screen</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="comment">//drawObject(cframe.markers, frame, contours, hierarchy);</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">else</span> putText(<a class="code" href="go__calib__stereo_8m.html#a2fd1de041ee0d03cd6ee76181c84237a">threshold</a>, <span class="stringliteral">&quot;Mucho ruido en escena...&quot;</span>, Point(0, 50), 1, 2, Scalar(0, 0, 255), 2);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;No se detectan marcadores en la escena...&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="amarker_8cpp_html_afa37064ddc74dd317a926ffc4237a044"><div class="ttname"><a href="marker_8cpp.html#afa37064ddc74dd317a926ffc4237a044">MIN_OBJECT_AREA</a></div><div class="ttdeci">const int MIN_OBJECT_AREA</div><div class="ttdoc">Valor mínimo del área de un objeto para que sea considerado como un marcador.</div><div class="ttdef"><b>Definition:</b> <a href="marker_8cpp_source.html#l00008">marker.cpp:8</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html_a39e4057984377e2dd2fa772dc2816b48"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html#a39e4057984377e2dd2fa772dc2816b48">CustomCameraLibrary::Marker::setArea</a></div><div class="ttdeci">void setArea(float a)</div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00088">marker.h:88</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html_a66beaaf58401fcbc9f69530aa23fe87f"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html#a66beaaf58401fcbc9f69530aa23fe87f">CustomCameraLibrary::Marker::getType</a></div><div class="ttdeci">string getType()</div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00064">marker.h:64</a></div></div>
+<div class="ttc" id="anamespace_custom_camera_library_html_abbfe5d4dfda37a253682293774986fa1"><div class="ttname"><a href="namespace_custom_camera_library.html#abbfe5d4dfda37a253682293774986fa1">CustomCameraLibrary::i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00075">server.h:75</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1c_frame_html_acf0aa8c19e423193909409d9fdbf01ee"><div class="ttname"><a href="class_custom_camera_library_1_1c_frame.html#acf0aa8c19e423193909409d9fdbf01ee">CustomCameraLibrary::cFrame::~cFrame</a></div><div class="ttdeci">~cFrame()</div><div class="ttdef"><b>Definition:</b> <a href="marker_8cpp_source.html#l00021">marker.cpp:21</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html_accb27bc1a4d0edc55571b6f29af41f4c"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html#accb27bc1a4d0edc55571b6f29af41f4c">CustomCameraLibrary::Marker::setType</a></div><div class="ttdeci">void setType(string t)</div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00070">marker.h:70</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html_abe60ca277c2adf23fdf7b9809099e775"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html#abe60ca277c2adf23fdf7b9809099e775">CustomCameraLibrary::Marker::setEccentr</a></div><div class="ttdeci">void setEccentr(float a)</div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00099">marker.h:99</a></div></div>
+<div class="ttc" id="amarker_8h_html"><div class="ttname"><a href="marker_8h.html">marker.h</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html_ad4e167fa334fbde49f073e4362c4d3db"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html#ad4e167fa334fbde49f073e4362c4d3db">CustomCameraLibrary::Marker::Marker</a></div><div class="ttdeci">Marker()</div><div class="ttdef"><b>Definition:</b> <a href="marker_8cpp_source.html#l00010">marker.cpp:10</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter_8m_html_a944b0ff7b0378fbacbea580c66148200"><div class="ttname"><a href="go__calib__optim__iter_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a></div><div class="ttdeci">Initialization of the global parameter vector</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter_8m_source.html#l00297">go_calib_optim_iter.m:297</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1c_frame_html_a62085a52666a4b2af26043107850343d"><div class="ttname"><a href="class_custom_camera_library_1_1c_frame.html#a62085a52666a4b2af26043107850343d">CustomCameraLibrary::cFrame::markers</a></div><div class="ttdeci">vector&lt; Marker &gt; markers</div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00174">marker.h:174</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html_ac34f00758cfb07bcf550209083633eb6"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html#ac34f00758cfb07bcf550209083633eb6">CustomCameraLibrary::Marker::~Marker</a></div><div class="ttdeci">~Marker(void)</div><div class="ttdef"><b>Definition:</b> <a href="marker_8cpp_source.html#l00017">marker.cpp:17</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1c_frame_html_a20d6ba818242bb92ec7a74203bac5e49"><div class="ttname"><a href="class_custom_camera_library_1_1c_frame.html#a20d6ba818242bb92ec7a74203bac5e49">CustomCameraLibrary::cFrame::cFrame</a></div><div class="ttdeci">cFrame()</div><div class="ttdef"><b>Definition:</b> <a href="marker_8cpp_source.html#l00019">marker.cpp:19</a></div></div>
+<div class="ttc" id="amarker_8cpp_html_a8a50b2cd532c0c4f222c1df6df253ef2"><div class="ttname"><a href="marker_8cpp.html#a8a50b2cd532c0c4f222c1df6df253ef2">MAX_NUM_OBJECTS</a></div><div class="ttdeci">const int MAX_NUM_OBJECTS</div><div class="ttdoc">Número máximo de objetos permitidos en la escena.</div><div class="ttdef"><b>Definition:</b> <a href="marker_8cpp_source.html#l00007">marker.cpp:7</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html_a7433a7e4ab0bef65ad5987a81d984307"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html#a7433a7e4ab0bef65ad5987a81d984307">CustomCameraLibrary::Marker::setColor</a></div><div class="ttdeci">void setColor(Scalar c)</div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00082">marker.h:82</a></div></div>
+<div class="ttc" id="adownsample_8m_html_a8f60c8102d29fcd525162d02eed4566b"><div class="ttname"><a href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a></div><div class="ttdeci">ss</div><div class="ttdef"><b>Definition:</b> <a href="downsample_8m_source.html#l00036">downsample.m:36</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1c_frame_html_aef8507b26e8431f53c66f921ccbde37c"><div class="ttname"><a href="class_custom_camera_library_1_1c_frame.html#aef8507b26e8431f53c66f921ccbde37c">CustomCameraLibrary::cFrame::trackFilteredMarker</a></div><div class="ttdeci">void trackFilteredMarker(Marker theMarker, Mat &amp;cameraFeed, cFrame &amp;cframe, Mat &amp;frame)</div><div class="ttdef"><b>Definition:</b> <a href="marker_8cpp_source.html#l00044">marker.cpp:44</a></div></div>
+<div class="ttc" id="ago__calib__stereo_8m_html_a2fd1de041ee0d03cd6ee76181c84237a"><div class="ttname"><a href="go__calib__stereo_8m.html#a2fd1de041ee0d03cd6ee76181c84237a">threshold</a></div><div class="ttdeci">else threshold</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__stereo_8m_source.html#l00049">go_calib_stereo.m:49</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html_a4a9365c66d784ec641f36038ce0c1aa4"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html#a4a9365c66d784ec641f36038ce0c1aa4">CustomCameraLibrary::Marker::getColor</a></div><div class="ttdeci">Scalar getColor()</div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00076">marker.h:76</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1c_frame_html"><div class="ttname"><a href="class_custom_camera_library_1_1c_frame.html">CustomCameraLibrary::cFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00133">marker.h:133</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1c_frame_html_af62553afad60e0e686a6316821bf7164"><div class="ttname"><a href="class_custom_camera_library_1_1c_frame.html#af62553afad60e0e686a6316821bf7164">CustomCameraLibrary::cFrame::marker</a></div><div class="ttdeci">Marker marker(int i)</div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00158">marker.h:158</a></div></div>
+<div class="ttc" id="anamespace_custom_camera_library_html"><div class="ttname"><a href="namespace_custom_camera_library.html">CustomCameraLibrary</a></div><div class="ttdef"><b>Definition:</b> <a href="correspondence_8h_source.html#l00014">correspondence.h:14</a></div></div>
+<div class="ttc" id="aclass_custom_camera_library_1_1_marker_html"><div class="ttname"><a href="class_custom_camera_library_1_1_marker.html">CustomCameraLibrary::Marker</a></div><div class="ttdef"><b>Definition:</b> <a href="marker_8h_source.html#l00015">marker.h:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

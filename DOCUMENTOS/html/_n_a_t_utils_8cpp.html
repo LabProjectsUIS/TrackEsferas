@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Referencia del Archivo C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/NATUtils.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo NATUtils.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;winsock2.h&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;Ws2tcpip.h&gt;</code><br />
+<code>#include &lt;tchar.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_n_a_t_utils_8h_source.html">NATUtils.h</a>&quot;</code><br />
+<code>#include &lt;float.h&gt;</code><br />
+<code>#include &lt;iphlpapi.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+</div>
+<p><a href="_n_a_t_utils_8cpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a8b0d099b80f0aa5bd8194f892227ad75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#a8b0d099b80f0aa5bd8194f892227ad75">MALLOC</a>(<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>)&#160;&#160;&#160;HeapAlloc(GetProcessHeap(), 0, (<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>))</td></tr>
+<tr class="separator:a8b0d099b80f0aa5bd8194f892227ad75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25875003b43b81a4302256caa4a13599"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#a25875003b43b81a4302256caa4a13599">FREE</a>(<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>)&#160;&#160;&#160;HeapFree(GetProcessHeap(), 0, (<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>))</td></tr>
+<tr class="separator:a25875003b43b81a4302256caa4a13599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fb6f1b31b554063d0425a8227383c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#a23fb6f1b31b554063d0425a8227383c6">WORKING_BUFFER_SIZE</a>&#160;&#160;&#160;15000</td></tr>
+<tr class="separator:a23fb6f1b31b554063d0425a8227383c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd63d23830ad86d01b6fff2e6c615f7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#afd63d23830ad86d01b6fff2e6c615f7e">MAX_TRIES</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:afd63d23830ad86d01b6fff2e6c615f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a88a3948a50da248e784b69c6721c0be2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#a88a3948a50da248e784b69c6721c0be2">Eul_</a> (float ai, float aj, float ah, int order)</td></tr>
+<tr class="separator:a88a3948a50da248e784b69c6721c0be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3447403e13f8ff499cf18b18748855d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#aa3447403e13f8ff499cf18b18748855d">Eul_ToQuat</a> (<a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a> ea)</td></tr>
+<tr class="separator:aa3447403e13f8ff499cf18b18748855d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a538b02ec5133fec8f916d711a60b68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#a5a538b02ec5133fec8f916d711a60b68">Eul_ToHMatrix</a> (<a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a> ea, <a class="el" href="_n_a_t_utils_8h.html#a41b36dd8e8660c9616d9e19e9b828b38">HMatrix</a> <a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a>)</td></tr>
+<tr class="separator:a5a538b02ec5133fec8f916d711a60b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377a11a20ff480206077422a98664dfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#a377a11a20ff480206077422a98664dfb">Eul_FromHMatrix</a> (<a class="el" href="_n_a_t_utils_8h.html#a41b36dd8e8660c9616d9e19e9b828b38">HMatrix</a> <a class="el" href="check__convergence_8m.html#aa0a6938a8a6003ae15cc212a938c947c">M</a>, int order)</td></tr>
+<tr class="separator:a377a11a20ff480206077422a98664dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2043274ebc2f950cba37c6f6ec219ca7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_a_t_utils_8cpp.html#a2043274ebc2f950cba37c6f6ec219ca7">Eul_FromQuat</a> (<a class="el" href="struct_quat.html">Quat</a> <a class="el" href="recomp__corner__calib__saddle__points_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>, int order)</td></tr>
+<tr class="separator:a2043274ebc2f950cba37c6f6ec219ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a25875003b43b81a4302256caa4a13599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25875003b43b81a4302256caa4a13599">&#9670;&nbsp;</a></span>FREE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FREE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a></td><td>)</td>
+          <td>&#160;&#160;&#160;HeapFree(GetProcessHeap(), 0, (<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00017">17</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8b0d099b80f0aa5bd8194f892227ad75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0d099b80f0aa5bd8194f892227ad75">&#9670;&nbsp;</a></span>MALLOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MALLOC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a></td><td>)</td>
+          <td>&#160;&#160;&#160;HeapAlloc(GetProcessHeap(), 0, (<a class="el" href="small__test__script_8m.html#ab7fd51748de2e6629029180d5d37ec10">x</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00016">16</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afd63d23830ad86d01b6fff2e6c615f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd63d23830ad86d01b6fff2e6c615f7e">&#9670;&nbsp;</a></span>MAX_TRIES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_TRIES&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00019">19</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a23fb6f1b31b554063d0425a8227383c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fb6f1b31b554063d0425a8227383c6">&#9670;&nbsp;</a></span>WORKING_BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WORKING_BUFFER_SIZE&#160;&#160;&#160;15000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00018">18</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a88a3948a50da248e784b69c6721c0be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88a3948a50da248e784b69c6721c0be2">&#9670;&nbsp;</a></span>Eul_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a> Eul_ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ai</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ah</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>order</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00168">168</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;{</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="struct_quat.html">EulerAngles</a> ea;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = ai; ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = aj; ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = ah;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    ea.<a class="code" href="struct_quat.html#ad3aeee2134443ec0897793834209b0c0">w</a> = order;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> (ea);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a377a11a20ff480206077422a98664dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377a11a20ff480206077422a98664dfb">&#9670;&nbsp;</a></span>Eul_FromHMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a> Eul_FromHMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_n_a_t_utils_8h.html#a41b36dd8e8660c9616d9e19e9b828b38">HMatrix</a>&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>order</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00235">235</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="struct_quat.html">EulerAngles</a> ea;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>, <a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>, <a class="code" href="click__ima__calib3_d_8m.html#a5e36941b3d856737e81516acd45edc50">h</a>, <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>, <a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>, <a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="_n_a_t_utils_8h.html#a9e1db89e4e803214b25b2214fe51fc77">EulGetOrd</a>(order, <a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>, <a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>, <a class="code" href="click__ima__calib3_d_8m.html#a5e36941b3d856737e81516acd45edc50">h</a>, <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>, <a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>, <a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a> == <a class="code" href="_n_a_t_utils_8h.html#a0d565a50edea1a226cb76dfe2305b6b7">EulRepYes</a>) {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="error__analysis_8m.html#a22828bc75d634212ef406fa49c02e2ca">sy</a> = sqrt(<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] * <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] + <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] * <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>]);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="error__analysis_8m.html#a22828bc75d634212ef406fa49c02e2ca">sy</a> &gt; 16 * FLT_EPSILON) {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = atan2((<span class="keywordtype">double</span>)<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>], (<span class="keywordtype">double</span>)<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>]);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = atan2(<a class="code" href="error__analysis_8m.html#a22828bc75d634212ef406fa49c02e2ca">sy</a>, (<span class="keywordtype">double</span>)<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = atan2(<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>], -<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = atan2(-<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>], <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>]);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = atan2(<a class="code" href="error__analysis_8m.html#a22828bc75d634212ef406fa49c02e2ca">sy</a>, (<span class="keywordtype">double</span>)<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = 0;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordtype">double</span> cy = sqrt(<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] * <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] * <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">if</span> (cy &gt; 16 * FLT_EPSILON) {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = atan2(<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>], <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>]);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = atan2((<span class="keywordtype">double</span>)-<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>], cy);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = atan2(<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>], <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = atan2(-<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>], <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>]);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = atan2((<span class="keywordtype">double</span>)-<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>], cy);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = 0;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a> == <a class="code" href="_n_a_t_utils_8h.html#ad8ab8e9cdc2d2a743059ed394487e35a">EulParOdd</a>) { ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = -ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a>; ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = -ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a>; ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = -ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a>; }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a> == <a class="code" href="_n_a_t_utils_8h.html#ad17334be40cb9c32e1f85517fb000968">EulFrmR</a>) { <span class="keywordtype">float</span> <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a>; ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a>; ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>; }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    ea.<a class="code" href="struct_quat.html#ad3aeee2134443ec0897793834209b0c0">w</a> = order;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">return</span> (ea);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2043274ebc2f950cba37c6f6ec219ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2043274ebc2f950cba37c6f6ec219ca7">&#9670;&nbsp;</a></span>Eul_FromQuat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a> Eul_FromQuat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_quat.html">Quat</a>&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>order</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00273">273</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="_n_a_t_utils_8h.html#a41b36dd8e8660c9616d9e19e9b828b38">HMatrix</a> <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">double</span> Nq = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.x*<a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.x + <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.y*<a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.y + <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.z*<a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.z + <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.w*<a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.w;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a> = (Nq &gt; 0.0) ? (2.0 / Nq) : 0.0;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="count__squares_8m.html#a8ab9a005cc169b082affb2f94fdce5fd">xs</a> = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.x*<a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>, <a class="code" href="_compute_stripes_8m.html#a285dad54ef357091de4e1179dcc6e870">ys</a> = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.y*<a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>, zs = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.z*<a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">double</span> wx = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.w*<a class="code" href="count__squares_8m.html#a8ab9a005cc169b082affb2f94fdce5fd">xs</a>, wy = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.w*<a class="code" href="_compute_stripes_8m.html#a285dad54ef357091de4e1179dcc6e870">ys</a>, wz = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.w*zs;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="smooth__images_8m.html#a173bd6079a077110ccd6ec8bb8bed9c2">xx</a> = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.x*<a class="code" href="count__squares_8m.html#a8ab9a005cc169b082affb2f94fdce5fd">xs</a>, <a class="code" href="export__calib__data_8m.html#a3f6f55ba521257932bb08684e0181fa1">xy</a> = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.x*<a class="code" href="_compute_stripes_8m.html#a285dad54ef357091de4e1179dcc6e870">ys</a>, xz = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.x*zs;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="project__points_8m.html#a71ca9079d08bfa85e1e803427d25205a">yy</a> = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.y*<a class="code" href="_compute_stripes_8m.html#a285dad54ef357091de4e1179dcc6e870">ys</a>, yz = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.y*zs, zz = <a class="code" href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a>.z*zs;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>][<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>] = 1.0 - (<a class="code" href="project__points_8m.html#a71ca9079d08bfa85e1e803427d25205a">yy</a> + zz); <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>][<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>] = <a class="code" href="export__calib__data_8m.html#a3f6f55ba521257932bb08684e0181fa1">xy</a> - wz; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>][<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>] = xz + wy;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>][<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>] = <a class="code" href="export__calib__data_8m.html#a3f6f55ba521257932bb08684e0181fa1">xy</a> + wz; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>][<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>] = 1.0 - (<a class="code" href="smooth__images_8m.html#a173bd6079a077110ccd6ec8bb8bed9c2">xx</a> + zz); <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>][<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>] = yz - wx;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>][<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>] = xz - wy; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>][<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>] = yz + wx; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>][<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>] = 1.0 - (<a class="code" href="smooth__images_8m.html#a173bd6079a077110ccd6ec8bb8bed9c2">xx</a> + <a class="code" href="project__points_8m.html#a71ca9079d08bfa85e1e803427d25205a">yy</a>);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>][<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>][<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>][<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>][<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>][<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>][<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>] = 0.0; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>][<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>] = 1.0;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="_n_a_t_utils_8cpp.html#a377a11a20ff480206077422a98664dfb">Eul_FromHMatrix</a>(<a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>, order));</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5a538b02ec5133fec8f916d711a60b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a538b02ec5133fec8f916d711a60b68">&#9670;&nbsp;</a></span>Eul_ToHMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Eul_ToHMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a>&#160;</td>
+          <td class="paramname"><em>ea</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_n_a_t_utils_8h.html#a41b36dd8e8660c9616d9e19e9b828b38">HMatrix</a>&#160;</td>
+          <td class="paramname"><em>M</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00210">210</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">double</span> ti, tj, <a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a>, ci, cj, <a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a>, si, sj, sh, <a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>, cs, sc, <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>, <a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>, <a class="code" href="click__ima__calib3_d_8m.html#a5e36941b3d856737e81516acd45edc50">h</a>, <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>, <a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>, <a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="_n_a_t_utils_8h.html#a9e1db89e4e803214b25b2214fe51fc77">EulGetOrd</a>(ea.<a class="code" href="struct_quat.html#ad3aeee2134443ec0897793834209b0c0">w</a>, <a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>, <a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>, <a class="code" href="click__ima__calib3_d_8m.html#a5e36941b3d856737e81516acd45edc50">h</a>, <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>, <a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>, <a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a> == <a class="code" href="_n_a_t_utils_8h.html#ad17334be40cb9c32e1f85517fb000968">EulFrmR</a>) { <span class="keywordtype">float</span> <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a>; ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a>; ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>; }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a> == <a class="code" href="_n_a_t_utils_8h.html#ad8ab8e9cdc2d2a743059ed394487e35a">EulParOdd</a>) { ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = -ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a>; ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = -ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a>; ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = -ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a>; }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    ti = ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a>;    tj = ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a>;    <a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a> = ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    ci = cos(ti); cj = cos(tj); <a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a> = cos(<a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a>);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    si = <a class="code" href="rodrigues_8m.html#a48a3b6df5e9a6fc2376402da3f3d5a83">sin</a>(ti); sj = <a class="code" href="rodrigues_8m.html#a48a3b6df5e9a6fc2376402da3f3d5a83">sin</a>(tj); sh = <a class="code" href="rodrigues_8m.html#a48a3b6df5e9a6fc2376402da3f3d5a83">sin</a>(<a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> = ci*<a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a>; cs = ci*sh; sc = si*<a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a>; <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a> = si*sh;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a> == <a class="code" href="_n_a_t_utils_8h.html#a0d565a50edea1a226cb76dfe2305b6b7">EulRepYes</a>) {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = cj;     <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = sj*si;    <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] = sj*ci;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = sj*sh;  <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = -cj*<a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a> + <a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] = -cj*cs - sc;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = -sj*<a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a>; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = cj*sc + cs; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] = cj*<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> - <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = cj*<a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a>; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = sj*sc - cs; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] = sj*<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> + <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = cj*sh; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = sj*<a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a> + <a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] = sj*cs - sc;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = -sj;   <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = cj*si;    <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>][<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] = cj*ci;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>][<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>][<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>][<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>][<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>][<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>] = <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>][<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>] = 0.0; <a class="code" href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a>[<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>][<a class="code" href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a>] = 1.0;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa3447403e13f8ff499cf18b18748855d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3447403e13f8ff499cf18b18748855d">&#9670;&nbsp;</a></span>Eul_ToQuat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_quat.html">Quat</a> Eul_ToQuat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_n_a_t_utils_8h.html#ab0bffd2b16506f27797d8c9fe8963a37">EulerAngles</a>&#160;</td>
+          <td class="paramname"><em>ea</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_n_a_t_utils_8cpp_source.html#l00177">177</a> del archivo <a class="el" href="_n_a_t_utils_8cpp_source.html">NATUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="struct_quat.html">Quat</a> qu;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[3], ti, tj, <a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a>, ci, cj, <a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a>, si, sj, sh, <a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>, cs, sc, <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>, <a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>, <a class="code" href="click__ima__calib3_d_8m.html#a5e36941b3d856737e81516acd45edc50">h</a>, <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>, <a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>, <a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="_n_a_t_utils_8h.html#a9e1db89e4e803214b25b2214fe51fc77">EulGetOrd</a>(ea.<a class="code" href="struct_quat.html#ad3aeee2134443ec0897793834209b0c0">w</a>, <a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>, <a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>, <a class="code" href="click__ima__calib3_d_8m.html#a5e36941b3d856737e81516acd45edc50">h</a>, <a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a>, <a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a>, <a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a> == <a class="code" href="_n_a_t_utils_8h.html#ad17334be40cb9c32e1f85517fb000968">EulFrmR</a>) { </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordtype">float</span> <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a>; ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a>; ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = <a class="code" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a> == <a class="code" href="_n_a_t_utils_8h.html#ad8ab8e9cdc2d2a743059ed394487e35a">EulParOdd</a>) </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = -ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    ti = ea.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a>*0.5; tj = ea.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a>*0.5; <a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a> = ea.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a>*0.5;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    ci = cos(ti);  cj = cos(tj);  <a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a> = cos(<a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    si = <a class="code" href="rodrigues_8m.html#a48a3b6df5e9a6fc2376402da3f3d5a83">sin</a>(ti);  sj = <a class="code" href="rodrigues_8m.html#a48a3b6df5e9a6fc2376402da3f3d5a83">sin</a>(tj);  sh = <a class="code" href="rodrigues_8m.html#a48a3b6df5e9a6fc2376402da3f3d5a83">sin</a>(<a class="code" href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> = ci*<a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a>; cs = ci*sh; sc = si*<a class="code" href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a>; <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a> = si*sh;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a> == <a class="code" href="_n_a_t_utils_8h.html#a0d565a50edea1a226cb76dfe2305b6b7">EulRepYes</a>) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = cj*(cs + sc);    <span class="comment">/* Could speed up with */</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = sj*(<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> + <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>);    <span class="comment">/* trig identities. */</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] = sj*(cs - sc);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        qu.<a class="code" href="struct_quat.html#ad3aeee2134443ec0897793834209b0c0">w</a> = cj*(<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> - <a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = cj*sc - sj*cs;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = cj*<a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a> + sj*<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a>] = cj*cs - sj*sc;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        qu.<a class="code" href="struct_quat.html#ad3aeee2134443ec0897793834209b0c0">w</a> = cj*<a class="code" href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a> + sj*<a class="code" href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a> == <a class="code" href="_n_a_t_utils_8h.html#ad8ab8e9cdc2d2a743059ed394487e35a">EulParOdd</a>) <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>] = -<a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a>];</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    qu.<a class="code" href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">x</a> = <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a>]; qu.<a class="code" href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">y</a> = <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a>]; qu.<a class="code" href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">z</a> = <a class="code" href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a>[<a class="code" href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a>];</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> (qu);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="aproject__points_8m_html_a71ca9079d08bfa85e1e803427d25205a"><div class="ttname"><a href="project__points_8m.html#a71ca9079d08bfa85e1e803427d25205a">yy</a></div><div class="ttdeci">yy</div><div class="ttdef"><b>Definition:</b> <a href="project__points_8m_source.html#l00033">project_points.m:33</a></div></div>
+<div class="ttc" id="a_n_a_t_utils_8h_html_a9e1db89e4e803214b25b2214fe51fc77"><div class="ttname"><a href="_n_a_t_utils_8h.html#a9e1db89e4e803214b25b2214fe51fc77">EulGetOrd</a></div><div class="ttdeci">#define EulGetOrd(ord, i, j, k, h, n, s, f)</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00057">NATUtils.h:57</a></div></div>
+<div class="ttc" id="aexport__calib__data_8m_html_a3f6f55ba521257932bb08684e0181fa1"><div class="ttname"><a href="export__calib__data_8m.html#a3f6f55ba521257932bb08684e0181fa1">xy</a></div><div class="ttdeci">xy</div><div class="ttdef"><b>Definition:</b> <a href="export__calib__data_8m_source.html#l00090">export_calib_data.m:90</a></div></div>
+<div class="ttc" id="adownsample_8m_html_a099b3b060154898840f0ebdfb46ec78f"><div class="ttname"><a href="downsample_8m.html#a099b3b060154898840f0ebdfb46ec78f">q</a></div><div class="ttdeci">row q</div><div class="ttdef"><b>Definition:</b> <a href="downsample_8m_source.html#l00011">downsample.m:11</a></div></div>
+<div class="ttc" id="a_n_a_t_utils_8h_html_a41b36dd8e8660c9616d9e19e9b828b38"><div class="ttname"><a href="_n_a_t_utils_8h.html#a41b36dd8e8660c9616d9e19e9b828b38">HMatrix</a></div><div class="ttdeci">float HMatrix[4][4]</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00026">NATUtils.h:26</a></div></div>
+<div class="ttc" id="acheck__convergence_8m_html_aad05f78187c942f9dd521605fa81f1ba"><div class="ttname"><a href="check__convergence_8m.html#aad05f78187c942f9dd521605fa81f1ba">M</a></div><div class="ttdeci">M</div><div class="ttdef"><b>Definition:</b> <a href="check__convergence_8m_source.html#l00021">check_convergence.m:21</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_ac51b57a703ba1c5869228690c93e1701"><div class="ttname"><a href="click__ima__calib3_d_8m.html#ac51b57a703ba1c5869228690c93e1701">X</a></div><div class="ttdeci">All the point coordinates(on the image, and in 3D) - for global optimization X</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00218">click_ima_calib3D.m:218</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_aca921670c13923eac3fe8dff3f71e463"><div class="ttname"><a href="apply__distortion2_8m.html#aca921670c13923eac3fe8dff3f71e463">s</a></div><div class="ttdeci">s</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00069">apply_distortion2.m:69</a></div></div>
+<div class="ttc" id="a_n_a_t_utils_8h_html_ad8ab8e9cdc2d2a743059ed394487e35a"><div class="ttname"><a href="_n_a_t_utils_8h.html#ad8ab8e9cdc2d2a743059ed394487e35a">EulParOdd</a></div><div class="ttdeci">#define EulParOdd</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00048">NATUtils.h:48</a></div></div>
+<div class="ttc" id="a_compute3_d_8m_html_adc18d83abfd9f87d396e8fd6b6ac0fe1"><div class="ttname"><a href="_compute3_d_8m.html#adc18d83abfd9f87d396e8fd6b6ac0fe1">Z</a></div><div class="ttdeci">Z</div><div class="ttdef"><b>Definition:</b> <a href="_compute3_d_8m_source.html#l00067">Compute3D.m:67</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a5e36941b3d856737e81516acd45edc50"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a5e36941b3d856737e81516acd45edc50">h</a></div><div class="ttdeci">h</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00194">click_ima_calib3D.m:194</a></div></div>
+<div class="ttc" id="aext__calib_8m_html_a4124bc0a9335c27f086f24ba207a4912"><div class="ttname"><a href="ext__calib_8m.html#a4124bc0a9335c27f086f24ba207a4912">a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> <a href="ext__calib_8m_source.html#l00079">ext_calib.m:79</a></div></div>
+<div class="ttc" id="astruct_quat_html_a611fbb79f7b802da4f1c65a31c2c5fea"><div class="ttname"><a href="struct_quat.html#a611fbb79f7b802da4f1c65a31c2c5fea">Quat::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00006">NATUtils.h:6</a></div></div>
+<div class="ttc" id="aapply__distortion_8m_html_a41fcba09f2bdcdf315ba4119dc7978dd"><div class="ttname"><a href="apply__distortion_8m.html#a41fcba09f2bdcdf315ba4119dc7978dd">cc</a></div><div class="ttdeci">cc</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion_8m_source.html#l00053">apply_distortion.m:53</a></div></div>
+<div class="ttc" id="acount__squares_8m_html_a8ab9a005cc169b082affb2f94fdce5fd"><div class="ttname"><a href="count__squares_8m.html#a8ab9a005cc169b082affb2f94fdce5fd">xs</a></div><div class="ttdeci">if if x2 xs</div><div class="ttdef"><b>Definition:</b> <a href="count__squares_8m_source.html#l00025">count_squares.m:25</a></div></div>
+<div class="ttc" id="ago__calib__optim__iter__weak_8m_html_a18cfc20aaeac2254c25e7b9a97a5f199"><div class="ttname"><a href="go__calib__optim__iter__weak_8m.html#a18cfc20aaeac2254c25e7b9a97a5f199">f</a></div><div class="ttdeci">f</div><div class="ttdef"><b>Definition:</b> <a href="go__calib__optim__iter__weak_8m_source.html#l00356">go_calib_optim_iter_weak.m:356</a></div></div>
+<div class="ttc" id="aclick__ima__calib3_d_8m_html_a6d8eb94b97a670d8d4983302bfbdbefd"><div class="ttname"><a href="click__ima__calib3_d_8m.html#a6d8eb94b97a670d8d4983302bfbdbefd">W</a></div><div class="ttdeci">Complete size of the rectangle W</div><div class="ttdef"><b>Definition:</b> <a href="click__ima__calib3_d_8m_source.html#l00127">click_ima_calib3D.m:127</a></div></div>
+<div class="ttc" id="avisualize__distortions_8m_html_a4c7354b9bcf8e1c1ff1c0d28b0d4276a"><div class="ttname"><a href="visualize__distortions_8m.html#a4c7354b9bcf8e1c1ff1c0d28b0d4276a">th</a></div><div class="ttdeci">th</div><div class="ttdef"><b>Definition:</b> <a href="visualize__distortions_8m_source.html#l00073">visualize_distortions.m:73</a></div></div>
+<div class="ttc" id="astruct_quat_html_ad3aeee2134443ec0897793834209b0c0"><div class="ttname"><a href="struct_quat.html#ad3aeee2134443ec0897793834209b0c0">Quat::w</a></div><div class="ttdeci">float w</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00006">NATUtils.h:6</a></div></div>
+<div class="ttc" id="aginput2_8m_html_aedd4d774f2bb2d9043e3aaa8d2534515"><div class="ttname"><a href="ginput2_8m.html#aedd4d774f2bb2d9043e3aaa8d2534515">ch</a></div><div class="ttdeci">else ch</div><div class="ttdef"><b>Definition:</b> <a href="ginput2_8m_source.html#l00178">ginput2.m:178</a></div></div>
+<div class="ttc" id="acam__proj__calib__optim_8m_html_a5bf8e9bd225c9965657036965db3c3fb"><div class="ttname"><a href="cam__proj__calib__optim_8m.html#a5bf8e9bd225c9965657036965db3c3fb">n</a></div><div class="ttdeci">use the full distortion Take the complete distortion model n</div><div class="ttdef"><b>Definition:</b> <a href="cam__proj__calib__optim_8m_source.html#l00035">cam_proj_calib_optim.m:35</a></div></div>
+<div class="ttc" id="arodrigues_8m_html_a48a3b6df5e9a6fc2376402da3f3d5a83"><div class="ttname"><a href="rodrigues_8m.html#a48a3b6df5e9a6fc2376402da3f3d5a83">sin</a></div><div class="ttdeci">if sin(theta) &gt;</div></div>
+<div class="ttc" id="aalign__structures_8m_html_aff75dbcbe674794c36a7741a0800e51b"><div class="ttname"><a href="align__structures_8m.html#aff75dbcbe674794c36a7741a0800e51b">Y</a></div><div class="ttdeci">Find such that Y</div><div class="ttdef"><b>Definition:</b> <a href="align__structures_8m_source.html#l00003">align_structures.m:3</a></div></div>
+<div class="ttc" id="a_compute_stripes_8m_html_a285dad54ef357091de4e1179dcc6e870"><div class="ttname"><a href="_compute_stripes_8m.html#a285dad54ef357091de4e1179dcc6e870">ys</a></div><div class="ttdeci">ys</div><div class="ttdef"><b>Definition:</b> <a href="_compute_stripes_8m_source.html#l00077">ComputeStripes.m:77</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="apply__distortion2_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00067">apply_distortion2.m:67</a></div></div>
+<div class="ttc" id="aerror__analysis_8m_html_a22828bc75d634212ef406fa49c02e2ca"><div class="ttname"><a href="error__analysis_8m.html#a22828bc75d634212ef406fa49c02e2ca">sy</a></div><div class="ttdeci">sy</div><div class="ttdef"><b>Definition:</b> <a href="error__analysis_8m_source.html#l00034">error_analysis.m:34</a></div></div>
+<div class="ttc" id="asmooth__images_8m_html_a173bd6079a077110ccd6ec8bb8bed9c2"><div class="ttname"><a href="smooth__images_8m.html#a173bd6079a077110ccd6ec8bb8bed9c2">xx</a></div><div class="ttdeci">Compute the sigI xx</div><div class="ttdef"><b>Definition:</b> <a href="smooth__images_8m_source.html#l00036">smooth_images.m:36</a></div></div>
+<div class="ttc" id="astruct_quat_html"><div class="ttname"><a href="struct_quat.html">Quat</a></div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00006">NATUtils.h:6</a></div></div>
+<div class="ttc" id="a_n_a_t_utils_8h_html_a0d565a50edea1a226cb76dfe2305b6b7"><div class="ttname"><a href="_n_a_t_utils_8h.html#a0d565a50edea1a226cb76dfe2305b6b7">EulRepYes</a></div><div class="ttdeci">#define EulRepYes</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00045">NATUtils.h:45</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_aed5077f9061202364a037430da73bb80"><div class="ttname"><a href="apply__distortion2_8m.html#aed5077f9061202364a037430da73bb80">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00068">apply_distortion2.m:68</a></div></div>
+<div class="ttc" id="arectify__stereo__pair_8m_html_aaccc9105df5383111407fd5b41255e23"><div class="ttname"><a href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a></div><div class="ttdeci">t</div><div class="ttdef"><b>Definition:</b> <a href="rectify__stereo__pair_8m_source.html#l00029">rectify_stereo_pair.m:29</a></div></div>
+<div class="ttc" id="astruct_quat_html_ac6045ee4149a978a4ce429c132e46fa2"><div class="ttname"><a href="struct_quat.html#ac6045ee4149a978a4ce429c132e46fa2">Quat::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00006">NATUtils.h:6</a></div></div>
+<div class="ttc" id="adownsample_8m_html_a8f60c8102d29fcd525162d02eed4566b"><div class="ttname"><a href="downsample_8m.html#a8f60c8102d29fcd525162d02eed4566b">ss</a></div><div class="ttdeci">ss</div><div class="ttdef"><b>Definition:</b> <a href="downsample_8m_source.html#l00036">downsample.m:36</a></div></div>
+<div class="ttc" id="aapply__distortion2_8m_html_a1c73327b2882639bc9f5e416bb3cc7ac"><div class="ttname"><a href="apply__distortion2_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac">k</a></div><div class="ttdeci">k</div><div class="ttdef"><b>Definition:</b> <a href="apply__distortion2_8m_source.html#l00081">apply_distortion2.m:81</a></div></div>
+<div class="ttc" id="a_n_a_t_utils_8cpp_html_a377a11a20ff480206077422a98664dfb"><div class="ttname"><a href="_n_a_t_utils_8cpp.html#a377a11a20ff480206077422a98664dfb">Eul_FromHMatrix</a></div><div class="ttdeci">EulerAngles Eul_FromHMatrix(HMatrix M, int order)</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8cpp_source.html#l00235">NATUtils.cpp:235</a></div></div>
+<div class="ttc" id="astruct_quat_html_a15db053bd6750a53e33bf30a0250c288"><div class="ttname"><a href="struct_quat.html#a15db053bd6750a53e33bf30a0250c288">Quat::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00006">NATUtils.h:6</a></div></div>
+<div class="ttc" id="a_n_a_t_utils_8h_html_ad17334be40cb9c32e1f85517fb000968"><div class="ttname"><a href="_n_a_t_utils_8h.html#ad17334be40cb9c32e1f85517fb000968">EulFrmR</a></div><div class="ttdeci">#define EulFrmR</div><div class="ttdef"><b>Definition:</b> <a href="_n_a_t_utils_8h_source.html#l00042">NATUtils.h:42</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

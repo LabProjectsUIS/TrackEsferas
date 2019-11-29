@@ -1,0 +1,1939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Navar QA: Referencia del Archivo C:/Users/eduar_000/Desktop/Backup NAVARQ - copia (3)/visual proyectos/NavarQA/NavarQA/calib/rectify_stereo_pair.m</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Navar QA
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Documentación Navar QA Sistema de rastreo de esferas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_f8235dda026db03eb1018078b1a33323.html">eduar_000</a></li><li class="navelem"><a class="el" href="dir_f021b2a5ef02ac3a1be9e7380969355e.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_0bee8b0a544c29d9849f4811e22d684d.html">Backup NAVARQ - copia (3)</a></li><li class="navelem"><a class="el" href="dir_132de8bbe78b936fd4d0a2cf4b1acc34.html">visual proyectos</a></li><li class="navelem"><a class="el" href="dir_dc64917d59bae56804512fb37d4acd91.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_0b13b66c4e86d619d31644904adce503.html">NavarQA</a></li><li class="navelem"><a class="el" href="dir_43d54e5e26af6acc160f605767294706.html">calib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo rectify_stereo_pair.m</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="rectify__stereo__pair_8m_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aa7422a371d08730f22a16b24b3030726"><td class="memItemLeft" align="right" valign="top">rectify_stereo_pair <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> Script <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> rectifies <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> of stereo <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> after stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> This script loads the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="rectify__stereo__pair_8m.html#aacad0b61bbe4a5df0b52de81b1fda534">Calib_Results_stereo</a> generated by calib_stereo <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> <a class="el" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a> help calib_stereo for more information <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aa7422a371d08730f22a16b24b3030726">~exist</a> ('<a class="el" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="stereo__triangulation_8m.html#a3c6f929f4342539243f55bc45a6065d4">cc_right</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="rectify__stereo__pair_8m.html#a38c4a14fb20e4d14f25a99846af884b6">kc_right</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="load__stereo__calib__files_8m.html#a8dc5da0de837b1dcea479bf91e6b25ea">alpha_c_right</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="stereo__triangulation_8m.html#a3faa4c3fbc27b573c46e71cdd3940f3e">cc_left</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="load__stereo__calib__files_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="load__stereo__calib__files_8m.html#ab143cf29d29212ee3462bdcca119b7a4">alpha_c_left</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="align__structures_8m.html#a68877ee1e94ba9fdb81310f7120fd505">om</a>')|~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="_test_function_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a>') <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> <a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a>('<a class="el" href="scanner__calibration__script_8m.html#a34062ad532d204c69c819ca7c9fe20a2">Calib_Results_stereo.mat</a>')~</td></tr>
+<tr class="separator:aa7422a371d08730f22a16b24b3030726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab02be6ae0d9311ac5444119821709ae"><td class="memItemLeft" align="right" valign="top">rectify_stereo_pair <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> Script <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> rectifies <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> of stereo <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> after stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> This script loads the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="rectify__stereo__pair_8m.html#aacad0b61bbe4a5df0b52de81b1fda534">Calib_Results_stereo</a> generated by calib_stereo <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> <a class="el" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a> help calib_stereo for more information <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aab02be6ae0d9311ac5444119821709ae">fprintf</a> (1, 'No stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">data.\n</a>')</td></tr>
+<tr class="separator:aab02be6ae0d9311ac5444119821709ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46736184885b536c55f4d42d9675e931"><td class="memItemLeft" align="right" valign="top"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a46736184885b536c55f4d42d9675e931">fprintf</a> (1,'\nLoading the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">Calib_Results_stereo.mat.\n</a>')</td></tr>
+<tr class="separator:a46736184885b536c55f4d42d9675e931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab6fd1c697fc2a2a5299c9aba543690"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#afab6fd1c697fc2a2a5299c9aba543690">fprintf</a> (1,'\nCalculating the rotation <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> be applied <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> the right and left <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> in order <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> bring the epipolar lines aligned with the horizontal scan lines, and in <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">correspondence...\n\n</a>')</td></tr>
+<tr class="separator:afab6fd1c697fc2a2a5299c9aba543690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d68283eda3e03d906ed4986ea445325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a8d68283eda3e03d906ed4986ea445325">dot</a> (<a class="el" href="rectify__stereo__pair_8m.html#a2f38ca3bab3012e1ec08e41c9d24bd2a">uu</a>, <a class="el" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>)&lt; 0</td></tr>
+<tr class="separator:a8d68283eda3e03d906ed4986ea445325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c4a14fb20e4d14f25a99846af884b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a38c4a14fb20e4d14f25a99846af884b6">kc_right</a> (1)&lt; 0</td></tr>
+<tr class="separator:a38c4a14fb20e4d14f25a99846af884b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17ade08eaca7585ddb5eaf6d08c5018"><td class="memItemLeft" align="right" valign="top">project_points2([<a class="el" href="stereo__triangulation_8m.html#a197b3ef9be3bd169722361957fe74aaa">normalize_pixel</a>([0 <a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>-1 <a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>-1 0;0 0 <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>-1 <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>-1], <a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>, <a class="el" href="stereo__triangulation_8m.html#a3faa4c3fbc27b573c46e71cdd3940f3e">cc_left</a>, <a class="el" href="load__stereo__calib__files_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a>, <a class="el" href="load__stereo__calib__files_8m.html#ab143cf29d29212ee3462bdcca119b7a4">alpha_c_left</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ae17ade08eaca7585ddb5eaf6d08c5018">mean</a> ()</td></tr>
+<tr class="separator:ae17ade08eaca7585ddb5eaf6d08c5018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae045a1c32e2c991489793027c640a228"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ae045a1c32e2c991489793027c640a228">rodrigues</a> (<a class="el" href="rectify__stereo__pair_8m.html#a34bbbc82fe4b25fd9fa30d14562b22ae">R_L</a>)</td></tr>
+<tr class="separator:ae045a1c32e2c991489793027c640a228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f602f43c0a528eca4146eb1ad866c79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a2f602f43c0a528eca4146eb1ad866c79">zeros</a> (3, 1)</td></tr>
+<tr class="separator:a2f602f43c0a528eca4146eb1ad866c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195e772535aeb28a4db8281e155ab210"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a195e772535aeb28a4db8281e155ab210">zeros</a> (5, 1)</td></tr>
+<tr class="separator:a195e772535aeb28a4db8281e155ab210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d6e2cb9a890ce05682547d57d06251e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a1d6e2cb9a890ce05682547d57d06251e">rodrigues</a> (R_R)</td></tr>
+<tr class="separator:a1d6e2cb9a890ce05682547d57d06251e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f4924b07989214e6ee7a7dd262c1d8"><td class="memItemLeft" align="right" valign="top">2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a99f4924b07989214e6ee7a7dd262c1d8">cc_right_new</a> ()</td></tr>
+<tr class="separator:a99f4924b07989214e6ee7a7dd262c1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf297d5c2e709ebb52b771a2a39f9f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a6cf297d5c2e709ebb52b771a2a39f9f5">cc_left_new</a> (2)]</td></tr>
+<tr class="separator:a6cf297d5c2e709ebb52b771a2a39f9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd601c3d7a2ebe2013d91cbf1ed41dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a1cd601c3d7a2ebe2013d91cbf1ed41dc">cc_right_new</a> (2)]</td></tr>
+<tr class="separator:a1cd601c3d7a2ebe2013d91cbf1ed41dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1bf7179dede6161ec394e387c974cb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ab1bf7179dede6161ec394e387c974cb0">fc_left_new</a> (2) <a class="el" href="rectify__stereo__pair_8m.html#a6cf297d5c2e709ebb52b771a2a39f9f5">cc_left_new</a>(2)</td></tr>
+<tr class="separator:ab1bf7179dede6161ec394e387c974cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcebb5f239c17eecda6b57c07b27e328"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#abcebb5f239c17eecda6b57c07b27e328">fc_right_new</a> (2) <a class="el" href="rectify__stereo__pair_8m.html#a1cd601c3d7a2ebe2013d91cbf1ed41dc">cc_right_new</a>(2)</td></tr>
+<tr class="separator:abcebb5f239c17eecda6b57c07b27e328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c9637257cbd4c2556bf5519b1fd815"><td class="memItemLeft" align="right" valign="top">may take <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> <a class="el" href="ima__read__calib__no__read_8m.html#afbc447f3197e9cdcaceaceab8ed359e2">while</a> depending <a class="el" href="visualize__distortions_8m.html#a58ab1fd68e97078232808206b850161b">on</a> the <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> <a class="el" href="_compute_stripes_8m.html#a698a8ac0b1fd75d3c716b842b0206c67">resolution</a>, but needs <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> be done only once - even for color <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">n</a> ()</td></tr>
+<tr class="separator:af7c9637257cbd4c2556bf5519b1fd815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0e221097e1dd0ec3daac1d31acdffe"><td class="memItemLeft" align="right" valign="top">id&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#acd0e221097e1dd0ec3daac1d31acdffe">rectification:</a> (<a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(<a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>, <a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>), <a class="el" href="rectify__stereo__pair_8m.html#a34bbbc82fe4b25fd9fa30d14562b22ae">R_L</a>, <a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>, <a class="el" href="stereo__triangulation_8m.html#a3faa4c3fbc27b573c46e71cdd3940f3e">cc_left</a>, <a class="el" href="load__stereo__calib__files_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a>, <a class="el" href="load__stereo__calib__files_8m.html#ab143cf29d29212ee3462bdcca119b7a4">alpha_c_left</a>, KK_left_new rect_index)</td></tr>
+<tr class="separator:acd0e221097e1dd0ec3daac1d31acdffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a3799a8f261ec1936e9af5268abc00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a46a3799a8f261ec1936e9af5268abc00">I2</a> (ind_new_left)</td></tr>
+<tr class="separator:a46a3799a8f261ec1936e9af5268abc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f33ce374e25e70c4c7eebb366722a52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a8f33ce374e25e70c4c7eebb366722a52">imwrite</a> (uint8(<a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a>), gray(256), 'left_rect.jpg', 'jpg')</td></tr>
+<tr class="separator:a8f33ce374e25e70c4c7eebb366722a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff904207063847ed6e3e700caf9734b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a> (ind_new_right)</td></tr>
+<tr class="separator:a9ff904207063847ed6e3e700caf9734b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d20114bb2347dc59a46f9d0238434bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a8d20114bb2347dc59a46f9d0238434bf">imwrite</a> (uint8(<a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a>), gray(256), 'right_rect.jpg', 'jpg')</td></tr>
+<tr class="separator:a8d20114bb2347dc59a46f9d0238434bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b648f2ed2ce4f071d797b41d0db645a"><td class="memItemLeft" align="right" valign="top">Loop around <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the frames&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a4b648f2ed2ce4f071d797b41d0db645a">fprintf</a> (1, 'Rectifying <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>(this should be fast)...\<a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">n\n</a>')</td></tr>
+<tr class="separator:a4b648f2ed2ce4f071d797b41d0db645a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70b6d2d6bf40f40687f5d6b9acabb5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ab70b6d2d6bf40f40687f5d6b9acabb5d">fprintf</a> (1, 'Image <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">warping...\n</a>')</td></tr>
+<tr class="separator:ab70b6d2d6bf40f40687f5d6b9acabb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad865e4764bc862781710df1bf5c018"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#acad865e4764bc862781710df1bf5c018">write_image</a> (<a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a>, <a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>,[<a class="el" href="rectify__stereo__pair_8m.html#a740739af19b2d9bb40ed8c050c9253e0">calib_name_left</a> '_rectified'], <a class="el" href="rectify__stereo__pair_8m.html#af240fed958f514d5ab6d0a4af765047e">format_image_left</a>, <a class="el" href="rectify__stereo__pair_8m.html#a14aff9d663cb395a920f86a08f895056">type_numbering_left</a>, <a class="el" href="rectify__stereo__pair_8m.html#a80d586531260f3a98db7905c3d6f002e">image_numbers_left</a>, <a class="el" href="rectify__stereo__pair_8m.html#a92eac82abc2042db5ff717634809d551">N_slots_left</a>)</td></tr>
+<tr class="separator:acad865e4764bc862781710df1bf5c018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b73fe9c8c69a608735845c241cc4938"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a5b73fe9c8c69a608735845c241cc4938">fprintf</a> (1,'\<a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">n</a>')</td></tr>
+<tr class="separator:a5b73fe9c8c69a608735845c241cc4938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd5b1a6a45989bdf6d397ea9a118890"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a3fd5b1a6a45989bdf6d397ea9a118890">write_image</a> (<a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a>, <a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>,[<a class="el" href="rectify__stereo__pair_8m.html#acf90558bc0d8f7ed187bf1cd282a6b68">calib_name_right</a> '_rectified'], <a class="el" href="rectify__stereo__pair_8m.html#a6ea62e6fc1a570e4262def1f6ee67bc3">format_image_right</a>, <a class="el" href="rectify__stereo__pair_8m.html#a1546deab9f0d005e1d873a420a03037c">type_numbering_right</a>, <a class="el" href="rectify__stereo__pair_8m.html#aaa15a12923fc6c58ce6a69159fa975a9">image_numbers_right</a>, <a class="el" href="rectify__stereo__pair_8m.html#a19194271984d43128648c2a5e45aa05c">N_slots_right</a>)</td></tr>
+<tr class="separator:a3fd5b1a6a45989bdf6d397ea9a118890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae5703bbf1a2126c20433cb77c0dc8c77"><td class="memItemLeft" align="right" valign="top">rectify_stereo_pair <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> Script <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> rectifies <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> of stereo <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> after stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> This script loads the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="rectify__stereo__pair_8m.html#aacad0b61bbe4a5df0b52de81b1fda534">Calib_Results_stereo</a> generated by calib_stereo <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ae5703bbf1a2126c20433cb77c0dc8c77">Therefore</a></td></tr>
+<tr class="separator:ae5703bbf1a2126c20433cb77c0dc8c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9717e7bbecb906637e86cef6da3d83c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a9717e7bbecb906637e86cef6da3d83c2">return</a></td></tr>
+<tr class="separator:a9717e7bbecb906637e86cef6da3d83c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacad0b61bbe4a5df0b52de81b1fda534"><td class="memItemLeft" align="right" valign="top"><a class="el" href="willson__read_8m.html#a80ad2f89cb9a9f459b31b81cc163c169">load</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aacad0b61bbe4a5df0b52de81b1fda534">Calib_Results_stereo</a></td></tr>
+<tr class="separator:aacad0b61bbe4a5df0b52de81b1fda534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb358f48b1646c750fb9da6c6585be2b"><td class="memItemLeft" align="right" valign="top">Load the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></td></tr>
+<tr class="separator:afb358f48b1646c750fb9da6c6585be2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb95449a94688af33f6e9bb090cf2936"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#acb95449a94688af33f6e9bb090cf2936">R</a> = <a class="el" href="rectify__stereo__pair_8m.html#a1d6e2cb9a890ce05682547d57d06251e">rodrigues</a>(<a class="el" href="align__structures_8m.html#a68877ee1e94ba9fdb81310f7120fd505">om</a>)</td></tr>
+<tr class="separator:acb95449a94688af33f6e9bb090cf2936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445cccbc3fddec305fb7b250d389e997"><td class="memItemLeft" align="right" valign="top">Bring the <a class="el" href="rectify__stereo__pair_8m.html#ab827ef2ab0cb359ea07fd83077337858">cameras</a> in the <a class="el" href="rectify__stereo__pair_8m.html#a74de3909f790e0187e6baa753abebdf4">same</a> orientation by rotating them&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a445cccbc3fddec305fb7b250d389e997">minimally</a></td></tr>
+<tr class="separator:a445cccbc3fddec305fb7b250d389e997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a4430d20cce9a579040ceb5df5d3a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a19a4430d20cce9a579040ceb5df5d3a0">r_l</a> = r_r'</td></tr>
+<tr class="separator:a19a4430d20cce9a579040ceb5df5d3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaccc9105df5383111407fd5b41255e23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = r_r * <a class="el" href="_test_function_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a></td></tr>
+<tr class="separator:aaccc9105df5383111407fd5b41255e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f38ca3bab3012e1ec08e41c9d24bd2a"><td class="memItemLeft" align="right" valign="top">Rotate both <a class="el" href="rectify__stereo__pair_8m.html#ab827ef2ab0cb359ea07fd83077337858">cameras</a> so as <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> bring the translation <a class="el" href="go__calib__optim__iter__weak_8m.html#a944b0ff7b0378fbacbea580c66148200">vector</a> in alignment with the(1;0;0) <a class="el" href="visualize__distortions_8m.html#a9b3385b871daad352da9d05a18ebfcce">axis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a2f38ca3bab3012e1ec08e41c9d24bd2a">uu</a> = [1</td></tr>
+<tr class="separator:a2f38ca3bab3012e1ec08e41c9d24bd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a4de2e511629fb1eac8b119e5c1793f"><td class="memItemLeft" align="right" valign="top">Horizontal epipolar lines <a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a0a4de2e511629fb1eac8b119e5c1793f">type_stereo</a> = 1</td></tr>
+<tr class="separator:a0a4de2e511629fb1eac8b119e5c1793f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34a8899ef6468b74f8a1048419ccc8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ae34a8899ef6468b74f8a1048419ccc8b">ww</a> = <a class="el" href="compute__collineation_8m.html#a62c535505844afc502e64f5b0662f6d7">cross</a>(<a class="el" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>,<a class="el" href="rectify__stereo__pair_8m.html#a2f38ca3bab3012e1ec08e41c9d24bd2a">uu</a>)</td></tr>
+<tr class="separator:ae34a8899ef6468b74f8a1048419ccc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab477549012f7889a894f39499202efdf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ab477549012f7889a894f39499202efdf">R2</a> = <a class="el" href="rectify__stereo__pair_8m.html#a1d6e2cb9a890ce05682547d57d06251e">rodrigues</a>(<a class="el" href="downsample_8m.html#afcc0819cb6bb11d5fab837b49b6eb1f2">ww</a>)</td></tr>
+<tr class="separator:ab477549012f7889a894f39499202efdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cbde3a7aa19933fc29fba2f67706cee"><td class="memItemLeft" align="right" valign="top">Global rotations <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> be applied <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> both&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a1cbde3a7aa19933fc29fba2f67706cee">views</a></td></tr>
+<tr class="separator:a1cbde3a7aa19933fc29fba2f67706cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34bbbc82fe4b25fd9fa30d14562b22ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a34bbbc82fe4b25fd9fa30d14562b22ae">R_L</a> = <a class="el" href="rodrigues_8m.html#ab477549012f7889a894f39499202efdf">R2</a> * <a class="el" href="rectify__stereo__pair_8m.html#a19a4430d20cce9a579040ceb5df5d3a0">r_l</a></td></tr>
+<tr class="separator:a34bbbc82fe4b25fd9fa30d14562b22ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b705b94750f9a3159016740a2a0684"><td class="memItemLeft" align="right" valign="top">The resulting rigid motion between the two <a class="el" href="rectify__stereo__pair_8m.html#ab827ef2ab0cb359ea07fd83077337858">cameras</a> after <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> rotations(substitutes of <a class="el" href="align__structures_8m.html#a68877ee1e94ba9fdb81310f7120fd505">om</a>, <a class="el" href="stereo__triangulation_8m.html#af3f113e231947097d453c4b2f177d8fa">R</a> and <a class="el" href="_test_function_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aa3b705b94750f9a3159016740a2a0684">om_new</a> = <a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(3,1)</td></tr>
+<tr class="separator:aa3b705b94750f9a3159016740a2a0684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575144712d91ccd28fdeadee85e60b01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a575144712d91ccd28fdeadee85e60b01">T_new</a> = R_R*<a class="el" href="_test_function_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a></td></tr>
+<tr class="separator:a575144712d91ccd28fdeadee85e60b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab827ef2ab0cb359ea07fd83077337858"><td class="memItemLeft" align="right" valign="top">Computation of the *new *intrinsic <a class="el" href="go__calib__optim__iter__weak_8m.html#aa5e85c366e9bb5363777ee17108f4d12">parameters</a> for both left and right&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ab827ef2ab0cb359ea07fd83077337858">cameras</a></td></tr>
+<tr class="separator:ab827ef2ab0cb359ea07fd83077337858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5751dd79fe12fec35f5667295dbce97d"><td class="memItemLeft" align="right" valign="top">Computation of the *new *intrinsic <a class="el" href="go__calib__optim__iter__weak_8m.html#aa5e85c366e9bb5363777ee17108f4d12">parameters</a> for both left and right we are trying <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> find <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> focal <a class="el" href="show__calib__results__fisheye_8m.html#aee7ec6c433a7d399d936b77c8e91922d">length</a> <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> retains as much information contained in the original distorted&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a5751dd79fe12fec35f5667295dbce97d">images</a></td></tr>
+<tr class="separator:a5751dd79fe12fec35f5667295dbce97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f8cb0658c902c33e28efde1aa10ea2"><td class="memItemLeft" align="right" valign="top">Computation of the *new *intrinsic <a class="el" href="go__calib__optim__iter__weak_8m.html#aa5e85c366e9bb5363777ee17108f4d12">parameters</a> for both left and right we are trying <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> find <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> focal <a class="el" href="show__calib__results__fisheye_8m.html#aee7ec6c433a7d399d936b77c8e91922d">length</a> <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> retains as much information contained in the original distorted&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a94f8cb0658c902c33e28efde1aa10ea2">fc_y_left_new</a> = <a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>(2) * (1 + <a class="el" href="load__stereo__calib__files_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a>(1)*(<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>^2 + <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>^2)/(4*<a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>(2)^2))</td></tr>
+<tr class="separator:a94f8cb0658c902c33e28efde1aa10ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed03af722873d4099079d7245cf6396d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aed03af722873d4099079d7245cf6396d">fc_y_right_new</a> = <a class="el" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(2) * (1 + <a class="el" href="rectify__stereo__pair_8m.html#a38c4a14fb20e4d14f25a99846af884b6">kc_right</a>(1)*(<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>^2 + <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>^2)/(4*<a class="el" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(2)^2))</td></tr>
+<tr class="separator:aed03af722873d4099079d7245cf6396d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b21356b71bc668ae80c7fb4e4793170"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a7b21356b71bc668ae80c7fb4e4793170">fc_y_new</a> = <a class="el" href="check__directory_8m.html#a47aa0cb204be6d49163a6376ca51f91a">min</a>(<a class="el" href="rectify__stereo__pair_8m.html#a94f8cb0658c902c33e28efde1aa10ea2">fc_y_left_new</a>,<a class="el" href="rectify__stereo__pair_8m.html#aed03af722873d4099079d7245cf6396d">fc_y_right_new</a>)</td></tr>
+<tr class="separator:a7b21356b71bc668ae80c7fb4e4793170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8585c63bbabc76eb0954bd94bfadbaf3"><td class="memItemLeft" align="right" valign="top">For&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a8585c63bbabc76eb0954bd94bfadbaf3">simplicity</a></td></tr>
+<tr class="separator:a8585c63bbabc76eb0954bd94bfadbaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc5802c3f48d149fc66746d0828c3c6"><td class="memItemLeft" align="right" valign="top">For let <a class="el" href="loadinr_8m.html#abaa56b4ff1463b5bacfd25ceaaba70e1">s</a> pick the <a class="el" href="rectify__stereo__pair_8m.html#a74de3909f790e0187e6baa753abebdf4">same</a> value for the horizontal focal <a class="el" href="show__calib__results__fisheye_8m.html#aee7ec6c433a7d399d936b77c8e91922d">length</a> as the vertical focal <a class="el" href="show__calib__results__fisheye_8m.html#aee7ec6c433a7d399d936b77c8e91922d">length</a>(resulting into <a class="el" href="_rectangle2_square_8m.html#ab8da842131de2f8e0161089de2774858">square</a> pixels)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#adfc5802c3f48d149fc66746d0828c3c6">fc_right_new</a> = round([<a class="el" href="rectify__stereo__pair_8m.html#a7b21356b71bc668ae80c7fb4e4793170">fc_y_new</a>;<a class="el" href="rectify__stereo__pair_8m.html#a7b21356b71bc668ae80c7fb4e4793170">fc_y_new</a>])</td></tr>
+<tr class="separator:adfc5802c3f48d149fc66746d0828c3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b49f8817456317d53591c2f5e1c4427"><td class="memItemLeft" align="right" valign="top">Select the new principal <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> maximize the visible area in the rectified <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a0b49f8817456317d53591c2f5e1c4427">cc_left_new</a> = [(<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>-1)/2</td></tr>
+<tr class="separator:a0b49f8817456317d53591c2f5e1c4427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9e37ea12d1efbbb172260b1948b8b17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ae9e37ea12d1efbbb172260b1948b8b17">fc_left_new</a></td></tr>
+<tr class="separator:ae9e37ea12d1efbbb172260b1948b8b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e17b40a7b28be52cb4dea5969570e64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a8e17b40a7b28be52cb4dea5969570e64">cc_right_new</a> = [(<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>-1)/2</td></tr>
+<tr class="separator:a8e17b40a7b28be52cb4dea5969570e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19728298a0547e988c43f62cdbe2354"><td class="memItemLeft" align="right" valign="top">For&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#af19728298a0547e988c43f62cdbe2354">simplivity</a></td></tr>
+<tr class="separator:af19728298a0547e988c43f62cdbe2354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41eab7ffdcd25bd550f842eb6c95bf62"><td class="memItemLeft" align="right" valign="top">For <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> the principal <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> for both <a class="el" href="rectify__stereo__pair_8m.html#ab827ef2ab0cb359ea07fd83077337858">cameras</a> <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> be the average of the two principal <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a41eab7ffdcd25bd550f842eb6c95bf62">~type_stereo</a></td></tr>
+<tr class="separator:a41eab7ffdcd25bd550f842eb6c95bf62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab302f9e986a346d4ea6015b911bca048"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ab302f9e986a346d4ea6015b911bca048">cc_y_new</a></td></tr>
+<tr class="separator:ab302f9e986a346d4ea6015b911bca048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460ae1ba9e602177c6e55cf9cd4b013b"><td class="memItemLeft" align="right" valign="top">Of&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a460ae1ba9e602177c6e55cf9cd4b013b">course</a></td></tr>
+<tr class="separator:a460ae1ba9e602177c6e55cf9cd4b013b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9159355223b55a6537a0aef778a86bb"><td class="memItemLeft" align="right" valign="top">Of we do not want any skew or <a class="el" href="project__points__weak_8m.html#a0cb9bee4ae828e4cdb5283743b645a51">distortion</a> after&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ab9159355223b55a6537a0aef778a86bb">rectification</a></td></tr>
+<tr class="separator:ab9159355223b55a6537a0aef778a86bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6161a368c9a8e8c6dbf6a90a22a92195"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a6161a368c9a8e8c6dbf6a90a22a92195">alpha_c_right_new</a> = 0</td></tr>
+<tr class="separator:a6161a368c9a8e8c6dbf6a90a22a92195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e50e2b008e8e3a723653d7245bb821"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a88e50e2b008e8e3a723653d7245bb821">kc_left_new</a> = <a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(5,1)</td></tr>
+<tr class="separator:a88e50e2b008e8e3a723653d7245bb821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9ad32474f113fd2015d16e7f9511db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a2e9ad32474f113fd2015d16e7f9511db">kc_right_new</a> = <a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(5,1)</td></tr>
+<tr class="separator:a2e9ad32474f113fd2015d16e7f9511db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1ba205621316543d75b7163474af4d9"><td class="memItemLeft" align="right" valign="top">The resulting left and right <a class="el" href="fov_8m.html#a2a0b598a5d1ce9bce325e3cdf45f3a7d">camera</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aa1ba205621316543d75b7163474af4d9">matrices</a></td></tr>
+<tr class="separator:aa1ba205621316543d75b7163474af4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae173cab47f352e9b5796ffc7308dcffb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ae173cab47f352e9b5796ffc7308dcffb">KK_right_new</a> = [<a class="el" href="rectify__stereo__pair_8m.html#abcebb5f239c17eecda6b57c07b27e328">fc_right_new</a>(1) <a class="el" href="rectify__stereo__pair_8m.html#abcebb5f239c17eecda6b57c07b27e328">fc_right_new</a>(1)*<a class="el" href="load__stereo__calib__files_8m.html#a8dc5da0de837b1dcea479bf91e6b25ea">alpha_c_right</a> <a class="el" href="rectify__stereo__pair_8m.html#a1cd601c3d7a2ebe2013d91cbf1ed41dc">cc_right_new</a>(1)</td></tr>
+<tr class="separator:ae173cab47f352e9b5796ffc7308dcffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74de3909f790e0187e6baa753abebdf4"><td class="memItemLeft" align="right" valign="top">The <a class="el" href="click__calib__no__read_8m.html#ade9f2b55543541fa886e33a3d666f8a5">sizes</a> of the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> are the&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a74de3909f790e0187e6baa753abebdf4">same</a></td></tr>
+<tr class="separator:a74de3909f790e0187e6baa753abebdf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a6d5c9ba3e308915a7ac16473da76f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a09a6d5c9ba3e308915a7ac16473da76f">ny_right_new</a> = <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a></td></tr>
+<tr class="separator:a09a6d5c9ba3e308915a7ac16473da76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13cc617a67a6c9065187ac5e6c4194c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#ab13cc617a67a6c9065187ac5e6c4194c">nx_left_new</a> = <a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a></td></tr>
+<tr class="separator:ab13cc617a67a6c9065187ac5e6c4194c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199ef309f2e83a7fc22ed21fd43a3874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a199ef309f2e83a7fc22ed21fd43a3874">ny_left_new</a> = <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a></td></tr>
+<tr class="separator:a199ef309f2e83a7fc22ed21fd43a3874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff99d62ab79f89020e9a73739650347"><td class="memItemLeft" align="right" valign="top">Save the resulting extrinsic and intrinsic <a class="el" href="extract__parameters__fisheye_8m.html#a78974b12364a0c431fa4a87b180224ed">paramters</a> into <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a9ff99d62ab79f89020e9a73739650347">file</a></td></tr>
+<tr class="separator:a9ff99d62ab79f89020e9a73739650347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3923e7b81f7a539ad8525a4956bdde74"><td class="memItemLeft" align="right" valign="top">Save the resulting extrinsic and intrinsic <a class="el" href="extract__parameters__fisheye_8m.html#a78974b12364a0c431fa4a87b180224ed">paramters</a> into <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> Saving the *NEW *<a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> of intrinsic and extrinsic <a class="el" href="go__calib__optim__iter__weak_8m.html#aa5e85c366e9bb5363777ee17108f4d12">parameters</a> corresponding <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> *AFTER *<a class="el" href="rectify__stereo__pair_8m.html#ab9159355223b55a6537a0aef778a86bb">rectification</a> under Calib_Results_stereo_rectified <a class="el" href="scanner__calibration__script_8m.html#a34062ad532d204c69c819ca7c9fe20a2">mat</a> n&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a3923e7b81f7a539ad8525a4956bdde74">n</a></td></tr>
+<tr class="separator:a3923e7b81f7a539ad8525a4956bdde74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8546cf1762f2c059bd58f1a177cd01b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="scanner__calibration__script_8m.html#a617d17276396a39b1f20468a5a81f959">clear</a> Irec_junk_left&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a8546cf1762f2c059bd58f1a177cd01b8">if</a> = rect_index(<a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(<a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>,<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>),R_R,<a class="el" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>,<a class="el" href="stereo__triangulation_8m.html#a3c6f929f4342539243f55bc45a6065d4">cc_right</a>,<a class="el" href="rectify__stereo__pair_8m.html#a38c4a14fb20e4d14f25a99846af884b6">kc_right</a>,<a class="el" href="load__stereo__calib__files_8m.html#a8dc5da0de837b1dcea479bf91e6b25ea">alpha_c_right</a>,<a class="el" href="rectify__stereo__pair_8m.html#ae173cab47f352e9b5796ffc7308dcffb">KK_right_new</a>)</td></tr>
+<tr class="separator:a8546cf1762f2c059bd58f1a177cd01b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f1365f60b7107d1a6f61c09b4bbe74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a03f1365f60b7107d1a6f61c09b4bbe74">I2</a> = 255*<a class="el" href="visualize__distortions_8m.html#a45582fcee3c7b631afa5f55a959b0c13">ones</a>(<a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>,<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>)</td></tr>
+<tr class="separator:a03f1365f60b7107d1a6f61c09b4bbe74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9a066043e7b7065d7cdda5fbcfba53"><td class="memItemLeft" align="right" valign="top">right&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aee9a066043e7b7065d7cdda5fbcfba53">image</a></td></tr>
+<tr class="separator:aee9a066043e7b7065d7cdda5fbcfba53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05739f4b7ae42ee41b81d332e7d6ff51"><td class="memItemLeft" align="right" valign="top">Loop around <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the frames&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a05739f4b7ae42ee41b81d332e7d6ff51">now</a></td></tr>
+<tr class="separator:a05739f4b7ae42ee41b81d332e7d6ff51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dad6e3e2258f9b1cdf0ac80c6d6e42b"><td class="memItemLeft" align="right" valign="top">Rectify <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the and blending coefficients before actual <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> <a class="el" href="_distor2_calib_8m.html#af094d050aa31e1bf4667b9039a1afd87">warping</a> for&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a7dad6e3e2258f9b1cdf0ac80c6d6e42b">kk</a> = find(<a class="el" href="saving__stereo__calib_8m.html#a3253feaa5122d1616aeca05e0a6e39d7">active_images</a>)</td></tr>
+<tr class="separator:a7dad6e3e2258f9b1cdf0ac80c6d6e42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740739af19b2d9bb40ed8c050c9253e0"><td class="memItemLeft" align="right" valign="top">Left&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a740739af19b2d9bb40ed8c050c9253e0">calib_name_left</a></td></tr>
+<tr class="separator:a740739af19b2d9bb40ed8c050c9253e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af240fed958f514d5ab6d0a4af765047e"><td class="memItemLeft" align="right" valign="top">Left&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#af240fed958f514d5ab6d0a4af765047e">format_image_left</a></td></tr>
+<tr class="separator:af240fed958f514d5ab6d0a4af765047e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14aff9d663cb395a920f86a08f895056"><td class="memItemLeft" align="right" valign="top">Left&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a14aff9d663cb395a920f86a08f895056">type_numbering_left</a></td></tr>
+<tr class="separator:a14aff9d663cb395a920f86a08f895056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d586531260f3a98db7905c3d6f002e"><td class="memItemLeft" align="right" valign="top">Left&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a80d586531260f3a98db7905c3d6f002e">image_numbers_left</a></td></tr>
+<tr class="separator:a80d586531260f3a98db7905c3d6f002e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92eac82abc2042db5ff717634809d551"><td class="memItemLeft" align="right" valign="top">Left&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a92eac82abc2042db5ff717634809d551">N_slots_left</a></td></tr>
+<tr class="separator:a92eac82abc2042db5ff717634809d551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf90558bc0d8f7ed187bf1cd282a6b68"><td class="memItemLeft" align="right" valign="top">Right&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#acf90558bc0d8f7ed187bf1cd282a6b68">calib_name_right</a></td></tr>
+<tr class="separator:acf90558bc0d8f7ed187bf1cd282a6b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea62e6fc1a570e4262def1f6ee67bc3"><td class="memItemLeft" align="right" valign="top">Right&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a6ea62e6fc1a570e4262def1f6ee67bc3">format_image_right</a></td></tr>
+<tr class="separator:a6ea62e6fc1a570e4262def1f6ee67bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1546deab9f0d005e1d873a420a03037c"><td class="memItemLeft" align="right" valign="top">Right&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a1546deab9f0d005e1d873a420a03037c">type_numbering_right</a></td></tr>
+<tr class="separator:a1546deab9f0d005e1d873a420a03037c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa15a12923fc6c58ce6a69159fa975a9"><td class="memItemLeft" align="right" valign="top">Right&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#aaa15a12923fc6c58ce6a69159fa975a9">image_numbers_right</a></td></tr>
+<tr class="separator:aaa15a12923fc6c58ce6a69159fa975a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19194271984d43128648c2a5e45aa05c"><td class="memItemLeft" align="right" valign="top">Right&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rectify__stereo__pair_8m.html#a19194271984d43128648c2a5e45aa05c">N_slots_right</a></td></tr>
+<tr class="separator:a19194271984d43128648c2a5e45aa05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a6cf297d5c2e709ebb52b771a2a39f9f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf297d5c2e709ebb52b771a2a39f9f5">&#9670;&nbsp;</a></span>cc_left_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cc_left_new </td>
+          <td>(</td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99f4924b07989214e6ee7a7dd262c1d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f4924b07989214e6ee7a7dd262c1d8">&#9670;&nbsp;</a></span>cc_right_new() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">2 cc_right_new </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cd601c3d7a2ebe2013d91cbf1ed41dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd601c3d7a2ebe2013d91cbf1ed41dc">&#9670;&nbsp;</a></span>cc_right_new() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cc_right_new </td>
+          <td>(</td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d68283eda3e03d906ed4986ea445325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d68283eda3e03d906ed4986ea445325">&#9670;&nbsp;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> dot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a2f38ca3bab3012e1ec08e41c9d24bd2a">uu</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1bf7179dede6161ec394e387c974cb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1bf7179dede6161ec394e387c974cb0">&#9670;&nbsp;</a></span>fc_left_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fc_left_new </td>
+          <td>(</td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcebb5f239c17eecda6b57c07b27e328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcebb5f239c17eecda6b57c07b27e328">&#9670;&nbsp;</a></span>fc_right_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fc_right_new </td>
+          <td>(</td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab70b6d2d6bf40f40687f5d6b9acabb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70b6d2d6bf40f40687f5d6b9acabb5d">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Image <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">warping...\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab02be6ae0d9311ac5444119821709ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab02be6ae0d9311ac5444119821709ae">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rectify_stereo_pair <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> Script <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> rectifies <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> of stereo <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> after stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> This script loads the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="rectify__stereo__pair_8m.html#aacad0b61bbe4a5df0b52de81b1fda534">Calib_Results_stereo</a> generated by calib_stereo <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> <a class="el" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a> help calib_stereo for more information <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'No stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">data.\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b648f2ed2ce4f071d797b41d0db645a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b648f2ed2ce4f071d797b41d0db645a">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Loop around <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the frames fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'Rectifying <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>(this should be fast)...\<a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">n\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b73fe9c8c69a608735845c241cc4938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b73fe9c8c69a608735845c241cc4938">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'\<a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afab6fd1c697fc2a2a5299c9aba543690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab6fd1c697fc2a2a5299c9aba543690">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'\nCalculating the rotation <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> be applied <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> the right and left <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> in order <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> bring the epipolar lines aligned with the horizontal scan&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">and in <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">correspondence...\n\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46736184885b536c55f4d42d9675e931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46736184885b536c55f4d42d9675e931">&#9670;&nbsp;</a></span>fprintf() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> fprintf </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'\nLoading the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="rectify__stereo__pair_8m.html#af7c9637257cbd4c2556bf5519b1fd815">Calib_Results_stereo.mat.\n</a>'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46a3799a8f261ec1936e9af5268abc00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a3799a8f261ec1936e9af5268abc00">&#9670;&nbsp;</a></span>I2() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2 </td>
+          <td>(</td>
+          <td class="paramtype">ind_new_left&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ff904207063847ed6e3e700caf9734b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff904207063847ed6e3e700caf9734b">&#9670;&nbsp;</a></span>I2() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2 </td>
+          <td>(</td>
+          <td class="paramtype">ind_new_right&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f33ce374e25e70c4c7eebb366722a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f33ce374e25e70c4c7eebb366722a52">&#9670;&nbsp;</a></span>imwrite() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imwrite </td>
+          <td>(</td>
+          <td class="paramtype">uint8(<a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gray(256)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'left_rect.jpg'&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'jpg'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d20114bb2347dc59a46f9d0238434bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d20114bb2347dc59a46f9d0238434bf">&#9670;&nbsp;</a></span>imwrite() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imwrite </td>
+          <td>(</td>
+          <td class="paramtype">uint8(<a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gray(256)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'right_rect.jpg'&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'jpg'&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38c4a14fb20e4d14f25a99846af884b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c4a14fb20e4d14f25a99846af884b6">&#9670;&nbsp;</a></span>kc_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> kc_right </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae17ade08eaca7585ddb5eaf6d08c5018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17ade08eaca7585ddb5eaf6d08c5018">&#9670;&nbsp;</a></span>mean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">project_points2([<a class="el" href="stereo__triangulation_8m.html#a197b3ef9be3bd169722361957fe74aaa">normalize_pixel</a>([0 <a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>-1 <a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>-1 0; 0 0 <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>-1 <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>-1],<a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>,<a class="el" href="stereo__triangulation_8m.html#a3faa4c3fbc27b573c46e71cdd3940f3e">cc_left</a>,<a class="el" href="load__stereo__calib__files_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a>,<a class="el" href="load__stereo__calib__files_8m.html#ab143cf29d29212ee3462bdcca119b7a4">alpha_c_left</a> mean </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7c9637257cbd4c2556bf5519b1fd815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c9637257cbd4c2556bf5519b1fd815">&#9670;&nbsp;</a></span>n()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">may take <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> <a class="el" href="ima__read__calib__no__read_8m.html#afbc447f3197e9cdcaceaceab8ed359e2">while</a> depending <a class="el" href="visualize__distortions_8m.html#a58ab1fd68e97078232808206b850161b">on</a> the <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> <a class="el" href="_compute_stripes_8m.html#a698a8ac0b1fd75d3c716b842b0206c67">resolution</a>, but needs <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> be done only once - even for color <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> n </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd0e221097e1dd0ec3daac1d31acdffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0e221097e1dd0ec3daac1d31acdffe">&#9670;&nbsp;</a></span>rectification:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">id rectification: </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(<a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>, <a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a34bbbc82fe4b25fd9fa30d14562b22ae">R_L</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stereo__triangulation_8m.html#a3faa4c3fbc27b573c46e71cdd3940f3e">cc_left</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="load__stereo__calib__files_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="load__stereo__calib__files_8m.html#ab143cf29d29212ee3462bdcca119b7a4">alpha_c_left</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KK_left_new&#160;</td>
+          <td class="paramname"><em>rect_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae045a1c32e2c991489793027c640a228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae045a1c32e2c991489793027c640a228">&#9670;&nbsp;</a></span>rodrigues() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rodrigues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a34bbbc82fe4b25fd9fa30d14562b22ae">R_L</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d6e2cb9a890ce05682547d57d06251e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d6e2cb9a890ce05682547d57d06251e">&#9670;&nbsp;</a></span>rodrigues() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rodrigues </td>
+          <td>(</td>
+          <td class="paramtype">R_R&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acad865e4764bc862781710df1bf5c018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad865e4764bc862781710df1bf5c018">&#9670;&nbsp;</a></span>write_image() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">write_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#af240fed958f514d5ab6d0a4af765047e">format_image_left</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a14aff9d663cb395a920f86a08f895056">type_numbering_left</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a80d586531260f3a98db7905c3d6f002e">image_numbers_left</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a92eac82abc2042db5ff717634809d551">N_slots_left</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fd5b1a6a45989bdf6d397ea9a118890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd5b1a6a45989bdf6d397ea9a118890">&#9670;&nbsp;</a></span>write_image() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">write_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a9ff904207063847ed6e3e700caf9734b">I2</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="willson__convert_8m.html#af29949bd63fb009eacab5efd11399e40">kk</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a6ea62e6fc1a570e4262def1f6ee67bc3">format_image_right</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a1546deab9f0d005e1d873a420a03037c">type_numbering_right</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#aaa15a12923fc6c58ce6a69159fa975a9">image_numbers_right</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rectify__stereo__pair_8m.html#a19194271984d43128648c2a5e45aa05c">N_slots_right</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f602f43c0a528eca4146eb1ad866c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f602f43c0a528eca4146eb1ad866c79">&#9670;&nbsp;</a></span>zeros() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">zeros </td>
+          <td>(</td>
+          <td class="paramtype">3&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a195e772535aeb28a4db8281e155ab210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195e772535aeb28a4db8281e155ab210">&#9670;&nbsp;</a></span>zeros() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">zeros </td>
+          <td>(</td>
+          <td class="paramtype">5&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7422a371d08730f22a16b24b3030726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7422a371d08730f22a16b24b3030726">&#9670;&nbsp;</a></span>~exist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rectify_stereo_pair <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> Script <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> rectifies <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> of stereo <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> after stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> This script loads the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="rectify__stereo__pair_8m.html#aacad0b61bbe4a5df0b52de81b1fda534">Calib_Results_stereo</a> generated by calib_stereo <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> <a class="el" href="readras_8m.html#a7aead736a07eaf25623ad7bfa1f0ee2d">type</a> help calib_stereo for more information <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> ~<a class="el" href="willson__read_8m.html#a8755a93b86de80d2107d7d9184d348e9">exist</a> </td>
+          <td>(</td>
+          <td class="paramtype">'<a class="el" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>'&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a id="a6161a368c9a8e8c6dbf6a90a22a92195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6161a368c9a8e8c6dbf6a90a22a92195">&#9670;&nbsp;</a></span>alpha_c_right_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">alpha_c_right_new = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00102">102</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a740739af19b2d9bb40ed8c050c9253e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740739af19b2d9bb40ed8c050c9253e0">&#9670;&nbsp;</a></span>calib_name_left</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Left calib_name_left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00165">165</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="acf90558bc0d8f7ed187bf1cd282a6b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf90558bc0d8f7ed187bf1cd282a6b68">&#9670;&nbsp;</a></span>calib_name_right</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Right calib_name_right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00178">178</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="aacad0b61bbe4a5df0b52de81b1fda534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacad0b61bbe4a5df0b52de81b1fda534">&#9670;&nbsp;</a></span>Calib_Results_stereo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="willson__read_8m.html#a80ad2f89cb9a9f459b31b81cc163c169">load</a> Calib_Results_stereo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00015">15</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ab827ef2ab0cb359ea07fd83077337858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab827ef2ab0cb359ea07fd83077337858">&#9670;&nbsp;</a></span>cameras</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Computation of the* new* intrinsic <a class="el" href="go__calib__optim__iter__weak_8m.html#aa5e85c366e9bb5363777ee17108f4d12">parameters</a> for both left and right cameras</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00062">62</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a0b49f8817456317d53591c2f5e1c4427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b49f8817456317d53591c2f5e1c4427">&#9670;&nbsp;</a></span>cc_left_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cc_left_new = [(<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>-1)/2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00082">82</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a8e17b40a7b28be52cb4dea5969570e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e17b40a7b28be52cb4dea5969570e64">&#9670;&nbsp;</a></span>cc_right_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cc_right_new = [(<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>-1)/2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00083">83</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ab302f9e986a346d4ea6015b911bca048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab302f9e986a346d4ea6015b911bca048">&#9670;&nbsp;</a></span>cc_y_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cc_y_new</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00090">90</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a460ae1ba9e602177c6e55cf9cd4b013b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460ae1ba9e602177c6e55cf9cd4b013b">&#9670;&nbsp;</a></span>course</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Of course</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00100">100</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="afb358f48b1646c750fb9da6c6585be2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb358f48b1646c750fb9da6c6585be2b">&#9670;&nbsp;</a></span>end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">end</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00016">16</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ae9e37ea12d1efbbb172260b1948b8b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e37ea12d1efbbb172260b1948b8b17">&#9670;&nbsp;</a></span>fc_left_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fc_left_new</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00082">82</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="adfc5802c3f48d149fc66746d0828c3c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc5802c3f48d149fc66746d0828c3c6">&#9670;&nbsp;</a></span>fc_right_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fc_right_new = round([<a class="el" href="rectify__stereo__pair_8m.html#a7b21356b71bc668ae80c7fb4e4793170">fc_y_new</a>;<a class="el" href="rectify__stereo__pair_8m.html#a7b21356b71bc668ae80c7fb4e4793170">fc_y_new</a>])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00078">78</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a94f8cb0658c902c33e28efde1aa10ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94f8cb0658c902c33e28efde1aa10ea2">&#9670;&nbsp;</a></span>fc_y_left_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> fc_y_left_new = <a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>(2) * (1 + <a class="el" href="load__stereo__calib__files_8m.html#a972a362cbc69f656885b661b71720409">kc_left</a>(1)*(<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>^2 + <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>^2)/(4*<a class="el" href="load__stereo__calib__files_8m.html#aecdaf7e4eed129b6416ee1ba30deaf29">fc_left</a>(2)^2))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00064">64</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a7b21356b71bc668ae80c7fb4e4793170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b21356b71bc668ae80c7fb4e4793170">&#9670;&nbsp;</a></span>fc_y_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fc_y_new = <a class="el" href="check__directory_8m.html#a47aa0cb204be6d49163a6376ca51f91a">min</a>(<a class="el" href="rectify__stereo__pair_8m.html#a94f8cb0658c902c33e28efde1aa10ea2">fc_y_left_new</a>,<a class="el" href="rectify__stereo__pair_8m.html#aed03af722873d4099079d7245cf6396d">fc_y_right_new</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00073">73</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="aed03af722873d4099079d7245cf6396d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed03af722873d4099079d7245cf6396d">&#9670;&nbsp;</a></span>fc_y_right_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> fc_y_right_new = <a class="el" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(2) * (1 + <a class="el" href="rectify__stereo__pair_8m.html#a38c4a14fb20e4d14f25a99846af884b6">kc_right</a>(1)*(<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>^2 + <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>^2)/(4*<a class="el" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>(2)^2))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00069">69</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a9ff99d62ab79f89020e9a73739650347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff99d62ab79f89020e9a73739650347">&#9670;&nbsp;</a></span>file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Save the resulting extrinsic and intrinsic <a class="el" href="extract__parameters__fisheye_8m.html#a78974b12364a0c431fa4a87b180224ed">paramters</a> into <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00118">118</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="af240fed958f514d5ab6d0a4af765047e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af240fed958f514d5ab6d0a4af765047e">&#9670;&nbsp;</a></span>format_image_left</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Left format_image_left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00165">165</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a6ea62e6fc1a570e4262def1f6ee67bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea62e6fc1a570e4262def1f6ee67bc3">&#9670;&nbsp;</a></span>format_image_right</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Right format_image_right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00178">178</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a03f1365f60b7107d1a6f61c09b4bbe74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f1365f60b7107d1a6f61c09b4bbe74">&#9670;&nbsp;</a></span>I2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2 = 255*<a class="el" href="visualize__distortions_8m.html#a45582fcee3c7b631afa5f55a959b0c13">ones</a>(<a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>,<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00138">138</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a8546cf1762f2c059bd58f1a177cd01b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8546cf1762f2c059bd58f1a177cd01b8">&#9670;&nbsp;</a></span>if</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="scanner__calibration__script_8m.html#a617d17276396a39b1f20468a5a81f959">clear</a> Irec_junk_left if = rect_index(<a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(<a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a>,<a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a>),R_R,<a class="el" href="compute__epipole_8m.html#a023f13b1a419850c715e8fd7d4ac2344">fc_right</a>,<a class="el" href="stereo__triangulation_8m.html#a3c6f929f4342539243f55bc45a6065d4">cc_right</a>,<a class="el" href="rectify__stereo__pair_8m.html#a38c4a14fb20e4d14f25a99846af884b6">kc_right</a>,<a class="el" href="load__stereo__calib__files_8m.html#a8dc5da0de837b1dcea479bf91e6b25ea">alpha_c_right</a>,<a class="el" href="rectify__stereo__pair_8m.html#ae173cab47f352e9b5796ffc7308dcffb">KK_right_new</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00129">129</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="aee9a066043e7b7065d7cdda5fbcfba53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9a066043e7b7065d7cdda5fbcfba53">&#9670;&nbsp;</a></span>image</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Right image</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00143">143</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a80d586531260f3a98db7905c3d6f002e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d586531260f3a98db7905c3d6f002e">&#9670;&nbsp;</a></span>image_numbers_left</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Left image_numbers_left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00165">165</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="aaa15a12923fc6c58ce6a69159fa975a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa15a12923fc6c58ce6a69159fa975a9">&#9670;&nbsp;</a></span>image_numbers_right</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Right image_numbers_right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00178">178</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a5751dd79fe12fec35f5667295dbce97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5751dd79fe12fec35f5667295dbce97d">&#9670;&nbsp;</a></span>images</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rectify <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the images</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00062">62</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a88e50e2b008e8e3a723653d7245bb821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e50e2b008e8e3a723653d7245bb821">&#9670;&nbsp;</a></span>kc_left_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kc_left_new = <a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(5,1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00103">103</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a2e9ad32474f113fd2015d16e7f9511db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9ad32474f113fd2015d16e7f9511db">&#9670;&nbsp;</a></span>kc_right_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kc_right_new = <a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(5,1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00104">104</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a7dad6e3e2258f9b1cdf0ac80c6d6e42b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dad6e3e2258f9b1cdf0ac80c6d6e42b">&#9670;&nbsp;</a></span>kk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rectify <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the and blending coefficients before actual <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> <a class="el" href="_distor2_calib_8m.html#af094d050aa31e1bf4667b9039a1afd87">warping</a> for kk = find(<a class="el" href="saving__stereo__calib_8m.html#a3253feaa5122d1616aeca05e0a6e39d7">active_images</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00161">161</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ae173cab47f352e9b5796ffc7308dcffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae173cab47f352e9b5796ffc7308dcffb">&#9670;&nbsp;</a></span>KK_right_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KK_right_new = [<a class="el" href="rectify__stereo__pair_8m.html#abcebb5f239c17eecda6b57c07b27e328">fc_right_new</a>(1) <a class="el" href="rectify__stereo__pair_8m.html#abcebb5f239c17eecda6b57c07b27e328">fc_right_new</a>(1)*<a class="el" href="load__stereo__calib__files_8m.html#a8dc5da0de837b1dcea479bf91e6b25ea">alpha_c_right</a> <a class="el" href="rectify__stereo__pair_8m.html#a1cd601c3d7a2ebe2013d91cbf1ed41dc">cc_right_new</a>(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00109">109</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="aa1ba205621316543d75b7163474af4d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1ba205621316543d75b7163474af4d9">&#9670;&nbsp;</a></span>matrices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">The resulting left and right <a class="el" href="fov_8m.html#a2a0b598a5d1ce9bce325e3cdf45f3a7d">camera</a> matrices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00108">108</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a445cccbc3fddec305fb7b250d389e997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445cccbc3fddec305fb7b250d389e997">&#9670;&nbsp;</a></span>minimally</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bring the <a class="el" href="rectify__stereo__pair_8m.html#ab827ef2ab0cb359ea07fd83077337858">cameras</a> in the <a class="el" href="rectify__stereo__pair_8m.html#a74de3909f790e0187e6baa753abebdf4">same</a> orientation by rotating them minimally</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00027">27</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a3923e7b81f7a539ad8525a4956bdde74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3923e7b81f7a539ad8525a4956bdde74">&#9670;&nbsp;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Save the resulting extrinsic and intrinsic <a class="el" href="extract__parameters__fisheye_8m.html#a78974b12364a0c431fa4a87b180224ed">paramters</a> into <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> Saving the* NEW* <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> of intrinsic and extrinsic <a class="el" href="go__calib__optim__iter__weak_8m.html#aa5e85c366e9bb5363777ee17108f4d12">parameters</a> corresponding <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a>* AFTER* <a class="el" href="rectify__stereo__pair_8m.html#ab9159355223b55a6537a0aef778a86bb">rectification</a> under Calib_Results_stereo_rectified <a class="el" href="scanner__calibration__script_8m.html#a34062ad532d204c69c819ca7c9fe20a2">mat</a> n n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00118">118</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a92eac82abc2042db5ff717634809d551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92eac82abc2042db5ff717634809d551">&#9670;&nbsp;</a></span>N_slots_left</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Left N_slots_left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00165">165</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a19194271984d43128648c2a5e45aa05c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19194271984d43128648c2a5e45aa05c">&#9670;&nbsp;</a></span>N_slots_right</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Right N_slots_right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00178">178</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a05739f4b7ae42ee41b81d332e7d6ff51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05739f4b7ae42ee41b81d332e7d6ff51">&#9670;&nbsp;</a></span>now</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Loop around <a class="el" href="teste___8m.html#a00a349297fa58bc80ff5329e25dcfe28">all</a> the frames now</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00155">155</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ab13cc617a67a6c9065187ac5e6c4194c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13cc617a67a6c9065187ac5e6c4194c">&#9670;&nbsp;</a></span>nx_left_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nx_left_new = <a class="el" href="willson__read_8m.html#a2f6e152702d97ea3f1b96a6e2e2b9687">nx</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00114">114</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a199ef309f2e83a7fc22ed21fd43a3874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a199ef309f2e83a7fc22ed21fd43a3874">&#9670;&nbsp;</a></span>ny_left_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ny_left_new = <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00115">115</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a09a6d5c9ba3e308915a7ac16473da76f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a6d5c9ba3e308915a7ac16473da76f">&#9670;&nbsp;</a></span>ny_right_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ny_right_new = <a class="el" href="willson__read_8m.html#a2f43d084523823503800b3a4a5d309ca">ny</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00113">113</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="aa3b705b94750f9a3159016740a2a0684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b705b94750f9a3159016740a2a0684">&#9670;&nbsp;</a></span>om_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">The resulting rigid motion between the two <a class="el" href="rectify__stereo__pair_8m.html#ab827ef2ab0cb359ea07fd83077337858">cameras</a> after <a class="el" href="script__fit__distortion_8m.html#ac8a8411243371a1be29a938cf1c083fb">image</a> rotations (substitutes of <a class="el" href="align__structures_8m.html#a68877ee1e94ba9fdb81310f7120fd505">om</a>, <a class="el" href="stereo__triangulation_8m.html#af3f113e231947097d453c4b2f177d8fa">R</a> and <a class="el" href="_test_function_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a>) om_new = <a class="el" href="scanner__calibration__script_8m.html#a495838e20f780998846263933acb0819">zeros</a>(3,1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00055">55</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="acb95449a94688af33f6e9bb090cf2936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb95449a94688af33f6e9bb090cf2936">&#9670;&nbsp;</a></span>R</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">R = <a class="el" href="rectify__stereo__pair_8m.html#a1d6e2cb9a890ce05682547d57d06251e">rodrigues</a>(<a class="el" href="align__structures_8m.html#a68877ee1e94ba9fdb81310f7120fd505">om</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00024">24</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ab477549012f7889a894f39499202efdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab477549012f7889a894f39499202efdf">&#9670;&nbsp;</a></span>R2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">R2 = <a class="el" href="rectify__stereo__pair_8m.html#a1d6e2cb9a890ce05682547d57d06251e">rodrigues</a>(<a class="el" href="downsample_8m.html#afcc0819cb6bb11d5fab837b49b6eb1f2">ww</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00045">45</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a19a4430d20cce9a579040ceb5df5d3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a4430d20cce9a579040ceb5df5d3a0">&#9670;&nbsp;</a></span>r_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">r_l = r_r'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00028">28</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a34bbbc82fe4b25fd9fa30d14562b22ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34bbbc82fe4b25fd9fa30d14562b22ae">&#9670;&nbsp;</a></span>R_L</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">R_L = <a class="el" href="rodrigues_8m.html#ab477549012f7889a894f39499202efdf">R2</a> * <a class="el" href="rectify__stereo__pair_8m.html#a19a4430d20cce9a579040ceb5df5d3a0">r_l</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00050">50</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ab9159355223b55a6537a0aef778a86bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9159355223b55a6537a0aef778a86bb">&#9670;&nbsp;</a></span>rectification</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Of we do not want any skew or <a class="el" href="project__points__weak_8m.html#a0cb9bee4ae828e4cdb5283743b645a51">distortion</a> after rectification</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00100">100</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a9717e7bbecb906637e86cef6da3d83c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9717e7bbecb906637e86cef6da3d83c2">&#9670;&nbsp;</a></span>return</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">return</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00012">12</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a74de3909f790e0187e6baa753abebdf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74de3909f790e0187e6baa753abebdf4">&#9670;&nbsp;</a></span>same</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">The <a class="el" href="click__calib__no__read_8m.html#ade9f2b55543541fa886e33a3d666f8a5">sizes</a> of the <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> are the same</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00109">109</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a8585c63bbabc76eb0954bd94bfadbaf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8585c63bbabc76eb0954bd94bfadbaf3">&#9670;&nbsp;</a></span>simplicity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">For simplicity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00076">76</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="af19728298a0547e988c43f62cdbe2354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19728298a0547e988c43f62cdbe2354">&#9670;&nbsp;</a></span>simplivity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">For simplivity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00083">83</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="aaccc9105df5383111407fd5b41255e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaccc9105df5383111407fd5b41255e23">&#9670;&nbsp;</a></span>t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t = r_r * <a class="el" href="_test_function_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00029">29</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a575144712d91ccd28fdeadee85e60b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575144712d91ccd28fdeadee85e60b01">&#9670;&nbsp;</a></span>T_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T_new = R_R*<a class="el" href="_test_function_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00056">56</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ae5703bbf1a2126c20433cb77c0dc8c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5703bbf1a2126c20433cb77c0dc8c77">&#9670;&nbsp;</a></span>Therefore</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rectify_stereo_pair <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> Script <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="readras_8m.html#a7d252fd4b4ae9c8b8af5e91ef645fc1f">that</a> rectifies <a class="el" href="project__points__weak_8m.html#aed4504f87c8bc9931dde0c986b52a334">a</a> <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> of stereo <a class="el" href="scanner__calibration__script_8m.html#a2e1bfb2a467a60776b845acf9ddd055f">images</a> after stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> This script loads the stereo <a class="el" href="_compute3_d_8m.html#a5586216fdd4d32645efb11797b093a95">calibration</a> <a class="el" href="willson__read_8m.html#aa47425cb8bedf81d652dd3b12254cf44">file</a> <a class="el" href="rectify__stereo__pair_8m.html#aacad0b61bbe4a5df0b52de81b1fda534">Calib_Results_stereo</a> generated by calib_stereo <a class="el" href="rigid__motion_8m.html#a73886111e13471186a6a00fb9e77d202">m</a> Therefore</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00005">5</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a14aff9d663cb395a920f86a08f895056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14aff9d663cb395a920f86a08f895056">&#9670;&nbsp;</a></span>type_numbering_left</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Left type_numbering_left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00165">165</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a1546deab9f0d005e1d873a420a03037c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1546deab9f0d005e1d873a420a03037c">&#9670;&nbsp;</a></span>type_numbering_right</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Right type_numbering_right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00178">178</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a0a4de2e511629fb1eac8b119e5c1793f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a4de2e511629fb1eac8b119e5c1793f">&#9670;&nbsp;</a></span>type_stereo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Horizontal epipolar lines <a class="el" href="go__calib__stereo_8m.html#a78a072094b6e0d352ef9b3c4bdf3799b">else</a> type_stereo = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00036">36</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a2f38ca3bab3012e1ec08e41c9d24bd2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f38ca3bab3012e1ec08e41c9d24bd2a">&#9670;&nbsp;</a></span>uu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> uu = [1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00034">34</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a1cbde3a7aa19933fc29fba2f67706cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cbde3a7aa19933fc29fba2f67706cee">&#9670;&nbsp;</a></span>views</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Global rotations <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> be applied <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> both views</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00049">49</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="ae34a8899ef6468b74f8a1048419ccc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34a8899ef6468b74f8a1048419ccc8b">&#9670;&nbsp;</a></span>ww</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ww = <a class="el" href="compute__collineation_8m.html#a62c535505844afc502e64f5b0662f6d7">cross</a>(<a class="el" href="rectify__stereo__pair_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>,<a class="el" href="rectify__stereo__pair_8m.html#a2f38ca3bab3012e1ec08e41c9d24bd2a">uu</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00042">42</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+<a id="a41eab7ffdcd25bd550f842eb6c95bf62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41eab7ffdcd25bd550f842eb6c95bf62">&#9670;&nbsp;</a></span>~type_stereo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">For <a class="el" href="visualize__distortions_8m.html#a97bdadeafefe463985fa122fc2db7bf4">set</a> the principal <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> for both <a class="el" href="rectify__stereo__pair_8m.html#ab827ef2ab0cb359ea07fd83077337858">cameras</a> <a class="el" href="inverse__motion_8m.html#adaa3d343ac20bed84559c0771f592ed4">to</a> be the average of the two principal <a class="el" href="_distor2_calib_8m.html#ad356fab1d96159f7b2452bde706a9719">points</a> <a class="el" href="stereo_2otros_2matlab2opencv_8m.html#a395c74f44b735213449a80587b6388e9">if</a> ~<a class="el" href="rectify__stereo__pair_8m.html#a0a4de2e511629fb1eac8b119e5c1793f">type_stereo</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="rectify__stereo__pair_8m_source.html#l00083">83</a> del archivo <a class="el" href="rectify__stereo__pair_8m_source.html">rectify_stereo_pair.m</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>
