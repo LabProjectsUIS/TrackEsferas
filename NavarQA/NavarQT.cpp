@@ -7,13 +7,6 @@
 
 #define TIBIA 0
 #define FEMUR 1
-#define DBOUT( s )            \
-{                             \
-   std::wostringstream os_;    \
-   os_ << s;                   \
-   OutputDebugStringW( os_.str().c_str() );  \
-}
-
 #define _TRACE_MAXLEN 500
 
 #if _MSC_VER >= 1900
@@ -121,6 +114,7 @@ void NavarQT::on_pushButton_2_clicked() {
 * Slot asociado al botón 3 (botón multiusos para el desplazamiento entre pantallas).
 */
 void NavarQT::on_pushButton_3_clicked() {
+	//step = 6;
 	switch (step)
 	{
 	case 2:
@@ -131,7 +125,8 @@ void NavarQT::on_pushButton_3_clicked() {
 		pauseNB(500);
 		break;
 	case 3:
-		step = 4;
+		//step = 4;
+		step = 6;
 		process_rigids->kill();
 		if (process_client) {
 			process_client->kill();
@@ -145,7 +140,7 @@ void NavarQT::on_pushButton_3_clicked() {
 		ui->label_6->setFixedHeight(10);
 		ui->label_6->setVisible(true);
 		ui->pushButton_3->setEnabled(false);
-		//if (updater->getPointerData(current_bone)) {
+		if (updater->getPointerData(current_bone)) {
 			run_icp(current_bone + ".txt", current_bone + ".xyz", exp_size, teo_size, cloud_centroid);
 			updater->setCentroid(cloud_centroid, current_bone);
 			ui->body->setCurrentIndex(0);
@@ -157,7 +152,7 @@ void NavarQT::on_pushButton_3_clicked() {
 			switchBone();
 			ui->pushButton_3->setEnabled(true);
 			step++;
-		//}
+		}
 		break;
 	case 5:
 		ui->pushButton_10->setVisible(false);
@@ -170,6 +165,7 @@ void NavarQT::on_pushButton_3_clicked() {
 		updater->writeMatrices();
 		process_rigids->start("Resources/Unity/VisualDesktop.exe");
 		updater->getRigidsData();
+		
 		break;
 	default:
 		break;
@@ -259,6 +255,7 @@ void NavarQT::on_pushButton_10_clicked() { //OMITIR
 * Slot asociado al botón Close, se encarga del cierre de la aplicación.
 */
 void NavarQT::on_pushButton_close_clicked() {
+	
 	this->close();
 }
 
@@ -420,7 +417,7 @@ void NavarQT::on_pushButton_step_3_clicked() {
 	calibRetries = 2;
 	updater->setDetectRigids(true);
 	startCalibration();
-	//process_rigids->start("Resources/Unity/esferasTrack.exe");
+	process_rigids->start("Resources/Unity/esferasTrack.exe");
 	updater->getRigidsData();
 }
 
@@ -570,11 +567,11 @@ void NavarQT::startCalibration() {
 	
 	switch (calibRetries) {
 	case 3:
-		fileName = "calib/stereo/calib.yml";
+		fileName = "calib/stereo/otros/Calib22N.yml";
 		doCalib = false;
 		break;
 	default:
-		fileName = "calib/stereo/otros/calib.yml";
+		fileName = "calib/stereo/otros/Calib22N.yml";
 		break;
 	}	
 	if (doCalib) { //Conexion con matlab toolkit
@@ -592,7 +589,7 @@ void NavarQT::startCalibration() {
 		WaitForSingleObject(ShExecInfo.hProcess, INFINITE);
 	}
 	if (readParams(fileName)) { //Llama funcion leer parametros del archivo de calibración
-		DBOUT("filename");
+		//DBOUT("filename");
 		ui->label_camera_right->setVisible(false);
 		ui->label_camera_left->setVisible(false);
 		ui->comboBox->setVisible(false);
@@ -602,7 +599,7 @@ void NavarQT::startCalibration() {
 		ui->pushButton_3->setEnabled(true);
 		step = 3;
 		ui->body->setCurrentIndex(0);
-		process_rigids->start("Resources/Unity/esferasTrack.exe");
+		process_rigids->start("Resources/Unity/esferasTrack2.exe");
 		////process_rigids->start("Resources/Unity/VisualDesktop.exe");
 		updater->getRigidsData();
 	}
@@ -621,8 +618,8 @@ void NavarQT::startCalibration() {
 		updater->ShowCameras();
 	}
 	else if (calibRetries == 3) {
-		DBOUT("calibretries es tres");
-		DBOUT("bool read params",readParams(fileName));
+		//DBOUT("calibretries es tres");
+		//DBOUT("bool read params",readParams(fileName));
 		calibMessage = "<html><body><p>Cargando archivo de calibraci\303\263n ideal</p></body></html>";
 		showPopUp();
 		startCalibration();
@@ -648,16 +645,20 @@ void NavarQT::startServer() {
 */
 bool NavarQT::readParams(std::string fileName) {
 	struct stat buffer;
-	DBOUT("readParams ----------------------> ", stat(fileName.c_str(), &buffer));
 	if (stat(fileName.c_str(), &buffer) == 0) {
 		cv::FileStorage fs(fileName, cv::FileStorage::READ);
 		cv::Mat_<double> err(1, 1);
 		//double err;
 		fs["emax"] >> err;
-		if (err.empty() || *err[0] > 0.790) {
-			calibRetries++; //vuelve a calibrar si el eror es mayor de 0.5
+		if (err.empty() || *err[0] > 0.5) {
+			calibRetries++; //vuelve a calibrar si el eror es mayor de 0.5, se pone 0,7 porq no se ha podido mejorar la calibración
+			
 			return false;
 		}
+		/*ofstream archivo;
+		if (!archivo.is_open()) {
+			archivo.open("parametros.txt", std::ios::app);
+		}*/
 		fs["cc_left"] >> cdata::cc_left;
 		fs["fc_left"] >> cdata::fc_left;
 		fs["kc_left"] >> cdata::kc_left;
@@ -670,6 +671,15 @@ bool NavarQT::readParams(std::string fileName) {
 		fs["om"] >> cdata::om;
 		fs["T"] >> cdata::T;
 		//std::remove(fileName.c_str());
+		int n = 23;
+		/*if (cdata::cc_left.empty() || *cdata::cc_left[0] == 0) {
+			DBOUT(" ESTA VACIO Y CC_LEFT ES--- ", *cdata::cc_left[0],"\n",n)
+		}
+		else
+		{
+			DBOUT("no esta vacio y cc left es----", *cdata::cc_left[0], "\n", n)
+				archivo << "\t" << *cdata::cc_left[0];
+		}*/
 		return true;
 	}
 	return false;

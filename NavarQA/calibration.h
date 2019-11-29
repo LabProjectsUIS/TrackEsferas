@@ -59,6 +59,7 @@ namespace calibration {
 			fprintf(p3, "%f\t%f\t%f\t", OR.col(0)(0, 0), OR.col(0)(1, 0), OR.col(0)(2, 0));
 			fprintf(p3, "\n");
 		}
+		closeFile();
 	}
 
 	void saveImageData(cv::Mat_<double> OR) {

@@ -1,6 +1,12 @@
 #ifndef _DETECTBR_H_
 #define _DETECTBR_H_
 
+#include <stdio.h>
+#include <tchar.h>
+#include <windows.h>
+#include<stdlib.h>
+#include<fstream>
+#include <calibration.h>
 #include <iostream> 
 #include "data.h"
 #include "opencv\cv.hpp"
@@ -9,22 +15,22 @@
 namespace CustomCameraLibrary {
 	using namespace cv;
 	using namespace std;
-	
-	#define N_MARKERS 3				///< número de marcadores que la función joskstra() usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.
 
-//		cout << A << endl;
-	#define L_POINTER   219.70329913564//219.3295732//221.88//218.91
-	#define TETHA -3.8985//-3.503764268//3.0544//3.17
-	#define C_TETHA -0.95278		// corrercción del 1er giro
-	#define TETHA2  -2.5782			///< ángulo de la segunda rotación
-	#define L_POINTER2 219.1898		///< longitud del pointer, de la punta hasta la primera esfera.
+#define N_MARKERS 3				///< número de marcadores que la función joskstra() usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.
 
-	#define FEMUR "FEMUR"			///< nombre que representa el femur
-	#define POINTER "POINTER"		///< nombre que representa el pointer
-	#define TIBIA "TIBIA"			///< nombre que representa la tíbia
-	#define GAFAS "GAFAS"			///< nombre que representa las gafas
-    #define PHANTON "PHANTON"		///< nombre que representa el phanton
-    #define BROCA "BROCA"
+	//		cout << A << endl;
+#define L_POINTER   219.70329913564//219.3295732//221.88//218.91
+#define TETHA -3.8985//-3.503764268//3.0544//3.17
+#define C_TETHA -0.95278		// corrercción del 1er giro
+#define TETHA2  -2.5782			///< ángulo de la segunda rotación
+#define L_POINTER2 222.1898		///< longitud del pointer, de la punta hasta la primera esfera.
+
+#define FEMUR "FEMUR"			///< nombre que representa el femur
+#define POINTER "POINTER"		///< nombre que representa el pointer
+#define TIBIA "TIBIA"			///< nombre que representa la tíbia
+#define GAFAS "GAFAS"			///< nombre que representa las gafas
+#define PHANTON "PHANTON"		///< nombre que representa el phanton
+#define BROCA "BROCA"
 
 	const int pointer = 1;	///< indicador que representa el pointer
 	const int femur = 2;	///< indicador que representa el femur
@@ -35,39 +41,39 @@ namespace CustomCameraLibrary {
 	float DELTA = 1.5;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
-//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
+									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
 
-	/** @struct Output
-	*  @brief Esta estructura permite almacenar las características de los cuerpos rígidos que vayan siendo detectados en mientras se esta ejecutando la 
-	*  la función CustomCameraLibrary::joskstra()
-	*  @var Output::bdr
-	*  Contiene el número que identifica un cuerpo rígido, los números que identifican a un cuerpo rígido son: 
-	- Pointer = 1
-	- Femur = 2
-	- Tíbia = 3
-	- Gafas = 4
+									/** @struct Output
+									*  @brief Esta estructura permite almacenar las características de los cuerpos rígidos que vayan siendo detectados en mientras se esta ejecutando la
+									*  la función CustomCameraLibrary::joskstra()
+									*  @var Output::bdr
+									*  Contiene el número que identifica un cuerpo rígido, los números que identifican a un cuerpo rígido son:
+									- Pointer = 1
+									- Femur = 2
+									- Tíbia = 3
+									- Gafas = 4
 
-	* Este orden es obtenido de la matriz de distancias de cuerpos rígidos.
-	@see CustomCameraLibrary::distances
-	*  @var Output::name
-	*  Nombre del objeto rígido (FEMUR, POINTER, TIBIA, GAFAS).
-	*  @var Output::bdrigid 
-	*  Matriz que contiene las coordenadas \a x, \a y, \a z de un cuerpo rígido detectado.
-	*  @var Output::centroid 
-	*  Matriz 3x1 que contiene la coordenada del centro del circulo que forma los marcadores que componen el cuerpo rígido. 
-	*  @var Output::nmarkers 
-	*  Número de marcadores que forman el cuerpo rígido.
-	*  @var Output::yaw	
-	*  Ángulo de euler en grados.
-	*  @var Output::pitch
-	*  Ángulo de euler en grados.
-	*  @var Output::roll
-	*  Ángulo de euler en grados.
-	*  @var Output::point 
-	*  Si el objeto rígido detectado es el pointer entonces esta propiedad tendrá el valor del punto que toca la punta, de lo contrario será nulo el valor.
-	*  @var Output::Quat 
-	*  Cuaternios que representan la orientación del objeto rígido.
-	*/
+									* Este orden es obtenido de la matriz de distancias de cuerpos rígidos.
+									@see CustomCameraLibrary::distances
+									*  @var Output::name
+									*  Nombre del objeto rígido (FEMUR, POINTER, TIBIA, GAFAS).
+									*  @var Output::bdrigid
+									*  Matriz que contiene las coordenadas \a x, \a y, \a z de un cuerpo rígido detectado.
+									*  @var Output::centroid
+									*  Matriz 3x1 que contiene la coordenada del centro del circulo que forma los marcadores que componen el cuerpo rígido.
+									*  @var Output::nmarkers
+									*  Número de marcadores que forman el cuerpo rígido.
+									*  @var Output::yaw
+									*  Ángulo de euler en grados.
+									*  @var Output::pitch
+									*  Ángulo de euler en grados.
+									*  @var Output::roll
+									*  Ángulo de euler en grados.
+									*  @var Output::point
+									*  Si el objeto rígido detectado es el pointer entonces esta propiedad tendrá el valor del punto que toca la punta, de lo contrario será nulo el valor.
+									*  @var Output::Quat
+									*  Cuaternios que representan la orientación del objeto rígido.
+									*/
 	struct Output {
 		int bdr;
 		string name;
@@ -95,18 +101,18 @@ namespace CustomCameraLibrary {
 	*  Indica si la esfera ha sido marcada o no.
 	*  @var Label::objR
 	*  Contiene el identificador del objeto rígido al que pertenece. Según la matriz de distancias de entrada; el C.R. 1  corresponde a la 1ra fila de la matriz de distancias teóricas y así susecivamente.
-	
+
 	*  Ejemplo de una matriz de distancias:
 
-	        Mat_<float> distances = (Mat_<float>(4, 6) <<
+	Mat_<float> distances = (Mat_<float>(4, 6) <<
 
-	            20.05, 29.26, 49.67, 39.82, 49.55, 51.53,		// POINTER
+	20.05, 29.26, 49.67, 39.82, 49.55, 51.53,		// POINTER
 
-	            35.22, 59.15, 25.07, 44.73, 51.63, 54.93,		//FEMUR
+	35.22, 59.15, 25.07, 44.73, 51.63, 54.93,		//FEMUR
 
-	            89.74, 107.01, 80.03, 70.26, 103.56, 59.74,	//TIBIA
+	89.74, 107.01, 80.03, 70.26, 103.56, 59.74,	//TIBIA
 
-	            64.75, 118.23, 183.64, 55.66, 126.57, 73.28);	//GAFAS
+	64.75, 118.23, 183.64, 55.66, 126.57, 73.28);	//GAFAS
 
 	* cada fila esta formada por las distancias que hay entre cada esfera que forma un cuerpo rígido. Si el objeto rígido no es identificado entonces tendrá valor de -1.
 	* @see CustomCameraLibrary::distances
@@ -132,7 +138,7 @@ namespace CustomCameraLibrary {
 		Mat_<double> v_rot;
 		k = k / norm(k);
 		double rad = angle*CV_PI / 180;
-		v_rot = v*cos(rad) + (k.cross(v))*sin(rad)	+ k*(k.dot(v))*(1 - cos(rad));
+		v_rot = v*cos(rad) + (k.cross(v))*sin(rad) + k*(k.dot(v))*(1 - cos(rad));
 		return v_rot;
 	}
 
@@ -218,6 +224,12 @@ namespace CustomCameraLibrary {
 	*	@return coordenadas en 3D del punto que toca la punta del pointer.
 	*/
 	Point3d pointerPoint(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
+	
+		ofstream archivoP;
+		if (!archivoP.is_open()) {
+			archivoP.open("TODAS.txt", std::ios::app);
+
+		}
 		P1 = P1.t();
 		P2 = P2.t();
 		P3 = P3.t();
@@ -240,14 +252,18 @@ namespace CustomCameraLibrary {
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
 
-		cout << "Punto final: " << PE;
-
+		//cout << "Punto final: " << PE;
+		archivoP << "\t" <<PE<< "\n";
+		
+		
 		return Point3d(PE);
+		archivoP.close();
+		
 	}
 
 	/**
 	*	Obtiene el punto que toca la punta del pointer.
-	*	Se genera un eje de cordenadas sobre las esferas que forman el pointer y luego se rota el vector que indica la dirección del pointer sobre un eje de rotación que 
+	*	Se genera un eje de cordenadas sobre las esferas que forman el pointer y luego se rota el vector que indica la dirección del pointer sobre un eje de rotación que
 	*	viene siendo uno de los ejes del sistema de coordenada sobre el pointer.
 	*	@param P1 coordenada de una esfera utilizada para formar el eje de coordenada sobre el pointer.
 	*	@param P2 coordenada de una esfera utilizada para formar el eje de coordenada sobre el pointer.
@@ -256,36 +272,39 @@ namespace CustomCameraLibrary {
 	*	@return coordenadas en 3D del punto que toca la punta del pointer.
 	*/
 	Point3d pointerPoint2(Mat_<double> &P1, Mat_<double> &P2, Mat_<double> &P3, Mat_<double> &Out) {
-//		Mat_<double> vP = (P1 - P3).cross(P2 - P3);								// vector perpendicular al circulo que esta sobre la 1ra esfera
+		//		Mat_<double> vP = (P1 - P3).cross(P2 - P3);								// vector perpendicular al circulo que esta sobre la 1ra esfera
+		
 		Mat_<double> vP2 = (P3 - P1).cross(P2 - P1);
-		cout << Out;
-//			vP = vP / norm(vP);
-//		Mat_<double> ejeR = (vP).cross(P1 - P3);								// eje de rotación 
+		//cout << Out;
+		//			vP = vP / norm(vP);
+		//		Mat_<double> ejeR = (vP).cross(P1 - P3);								// eje de rotación 
 		Mat_<double> ejeR2 = (vP2).cross(P3 - P1);
-//				cout << P2 << endl;
+		//				cout << P2 << endl;
 		// vector de longitud d en la dirección del pointer, Out es el vector unitario en esa dirección.
 		Mat_<double> d = Out*L_POINTER2;										// encontrar un vector de longitud L_POINTER en esa dirección
 		Mat_<double> p = P1 + d;												// el punto p estará ahora L_POINTER veces alejado de P2
-		cout << "PP= " << p.t() << ";" << endl << endl;
+		//cout << "PP= " << p.t() << ";" << endl << endl;
 		Mat_<double> v_rot = rotateVector((P1 - p), ejeR2, (-2.9869));			// rotar el vector (P1 - p)2.5782
 		Mat_<double> punto1 = P1 - v_rot;										// punto rotado la 1ra vez
-		cout << endl << endl << "PR=" << punto1 << ";" << endl << endl;
+		//cout << endl << endl << "PR=" << punto1 << ";" << endl << endl;
 
 		Mat_<double> v_rot2 = rotateVector((P1 - punto1), vP2, -0.2588875);		// rotar el vector (P4 - p)
 		Mat_<double> punto2 = P1 - v_rot2;										// punto rotado la 2da vez
-		cout << "PF=" << punto2 << ";" << endl << endl;
-//		Mat_<double> ppp = ((Mat_<double>(3, 1)) << -143.5078742478917, 550.9969928063921, 1430.933711072703);
-//		cout << punto2 - ppp << endl;
-
+		//cout << "PF=" << punto2 << ";" << endl << endl;
+		//		Mat_<double> ppp = ((Mat_<double>(3, 1)) << -143.5078742478917, 550.9969928063921, 1430.933711072703);
+		//		cout << punto2 - ppp << endl;
+		//archivoP << "filas:  " << punto2.rows<<"  columnas"<<punto1.cols;
+		
 		return Point3d(punto2);
+		
 	}
 
 	void getEulerAngles(BodyR *&bRigid, int i) {
-		
+
 		Mat_<double> OR = bRigid[i].bdrigid;
 		double alpha, beta, gamma, qx, qy, qz, qw;
 
-
+		
 		if (OR.cols > 3) {
 			float sy;                        //https://blender.stackexchange.com/questions/30808/how-do-i-construct-a-transformation-matrix-from-3-vertices
 			Mat_<double> v, v1, v2, x, X, Y, Z, a, b, c, b2, a2, p1, p2, p3, Pc, Out;
@@ -300,8 +319,8 @@ namespace CustomCameraLibrary {
 			bRigid[i].centroid = Pc;															// Guardar el centroide del O.R.
 
 
-			// ################################## ESTO LO PUSO DUVAN
-			
+																								// ################################## ESTO LO PUSO DUVAN
+
 			alpha = p2(0, 0);
 			beta = p2(1, 0);
 			gamma = p2(2, 0);
@@ -314,74 +333,74 @@ namespace CustomCameraLibrary {
 
 
 			a = p2 - p1;
-		b = p3 - p1;
-		Z = a.cross(b);
-		normalize(Z, Z);
+			b = p3 - p1;
+			Z = a.cross(b);
+			normalize(Z, Z);
 
-		Y = Z.cross(a);
-		normalize(Y, Y);
-		normalize(a, a);
+			Y = Z.cross(a);
+			normalize(Y, Y);
+			normalize(a, a);
 
-		X = a.t();
-		Y = Y.t();
-		Z = Z.t();
+			X = a.t();
+			Y = Y.t();
+			Z = Z.t();
 
-		float tr = X(0, 0) + Y(0, 1) + Z(0, 2);                     //http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToQuaternion/
+			float tr = X(0, 0) + Y(0, 1) + Z(0, 2);                     //http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToQuaternion/
 
-		if (tr > 0)
-		{
-			float S = sqrt((float)tr + (float) 1.0) * 2; // S=4*qw 
-			qw = 0.25 * S;
-			qx = (Z(0, 1) - Y(0,2)) / S;
-			qy = (X(0, 2) - Z(0, 0)) / S;
-			qz = (Y(0, 0) - X(0, 1)) / S;
+			if (tr > 0)
+			{
+				float S = sqrt((float)tr + (float) 1.0) * 2; // S=4*qw 
+				qw = 0.25 * S;
+				qx = (Z(0, 1) - Y(0, 2)) / S;
+				qy = (X(0, 2) - Z(0, 0)) / S;
+				qz = (Y(0, 0) - X(0, 1)) / S;
+			}
+			else if ((X(0, 0) > Y(0, 1)) & (X(0, 0) > Z(0, 2)))
+			{
+				float S = sqrt((float)(1.0 + X(0, 0) - Y(0, 1) - Z(0, 2))) * 2; // S=4*qx 
+				qw = (Z(0, 1) - Y(0, 2)) / S;
+				qx = 0.25 * S;
+				qy = (X(0, 1) + Y(0, 0)) / S;
+				qz = (X(0, 2) + Z(0, 0)) / S;
+			}
+			else if (Y(0, 1) > Z(0, 2))
+			{
+				float S = sqrt((float)(1.0 + Y(0, 1) - X(0, 0) - Z(0, 2))) * 2; // S=4*qy
+				qw = (X(0, 2) - Z(0, 0)) / S;
+				qx = (X(0, 1) + Y(0, 0)) / S;
+				qy = 0.25 * S;
+				qz = (Y(0, 2) + Z(0, 1)) / S;
+			}
+			else
+			{
+				float S = sqrt((float)(1.0 + Z(0, 2) - X(0, 0) - Y(0, 1))) * 2; // S=4*qz
+				qw = (Y(0, 0) - X(0, 1)) / S;
+				qx = (X(0, 2) + Z(0, 0)) / S;
+				qy = (Y(0, 2) + Z(0, 1)) / S;
+				qz = 0.25 * S;
+			}
+			bRigid[i].yaw = 0;
+			bRigid[i].pitch = 0;
+			bRigid[i].roll = 0;
+			Mat_<float> Q = (Mat_<float>(1, 4) << qx, qy, qz, qw);
+			Q.copyTo(bRigid[i].Quat);
+
+			if ((bRigid[i].name == POINTER) && (norm(p1 - p3) > 45) && detect_pointer) {					// para siempre mantener la dirección del vector que apunta al pointer
+				//cout << "OR=" << OR << ";" << endl;
+				Out = (p1 - p3) / norm(p1 - p3);
+				Point3d punto = pointerPoint(p1, p2, p3, Out); //hay dos funciones pointerpoint
+				//OutputDebugString(L"Es un pointer....");
+				bRigid[i].point = Point3d(punto);
+
+			}
 		}
-		else if ((X(0, 0) > Y(0, 1)) & (X(0, 0) > Z(0, 2)))
-		{
-			float S = sqrt((float)(1.0 + X(0, 0) - Y(0, 1) - Z(0, 2))) * 2; // S=4*qx 
-			qw = (Z(0, 1) - Y(0, 2)) / S;
-			qx = 0.25 * S;
-			qy = (X(0, 1) + Y(0, 0)) / S;
-			qz = (X(0, 2) + Z(0, 0)) / S;
-		}
-		else if (Y(0, 1) > Z(0, 2))
-		{
-			float S = sqrt((float)(1.0 + Y(0, 1) - X(0, 0) - Z(0, 2))) * 2; // S=4*qy
-			qw = (X(0, 2) - Z(0, 0)) / S;
-			qx = (X(0, 1) + Y(0, 0)) / S;
-			qy = 0.25 * S;
-			qz = (Y(0, 2) + Z(0, 1)) / S;
-		}
-		else
-		{
-			float S = sqrt((float)(1.0 + Z(0, 2) - X(0, 0) - Y(0, 1))) * 2; // S=4*qz
-			qw = (Y(0, 0) - X(0, 1)) / S;
-			qx = (X(0, 2) + Z(0, 0)) / S;
-			qy = (Y(0, 2) + Z(0, 1)) / S;
-			qz = 0.25 * S;
-		}
-		bRigid[i].yaw = 0;
-		bRigid[i].pitch = 0;
-		bRigid[i].roll = 0;
-		Mat_<float> Q = (Mat_<float>(1, 4) << qx, qy, qz, qw);
-		Q.copyTo(bRigid[i].Quat);
 
-		if ((bRigid[i].name == POINTER) && (norm(p1 - p3) > 45) && detect_pointer) {					// para siempre mantener la dirección del vector que apunta al pointer
-			cout << "OR=" << OR << ";" << endl;
-			Out = (p1 - p3) / norm(p1 - p3);
-			Point3d punto = pointerPoint(p1, p2, p3, Out);
-
-			bRigid[i].point = Point3d(punto);
-
-		}
 	}
-
-}
 
 	/**
 	*	Obtiene los ángulos de euler para cada cuerpo rígido detectado.
 	*	La mayor parte de la teoría de este proceso se encuentra explicada aquí [The Mathematics of the 3D Rotation Matrix](https://www.fastgraph.com/makegames/3drotation/ "The Mathematics of the 3D Rotation Matrix")
-	*	El método funciona solo cuando se detectan los 4 marcadores que conforman el cuerpo rígido. 
+	*	El método funciona solo cuando se detectan los 4 marcadores que conforman el cuerpo rígido.
 	*	@param bRigid referencia al conjunto de cuerpos rígidos detectados, de aquí se extrae el cuerpo rígido y las coordenadas en 3D de las esferas que lo forman.
 	*	@param x posición en el array de objetos rígidos del objeto rígido que se le desean obtener los ángulos de euler.
 	*/
@@ -406,26 +425,26 @@ namespace CustomCameraLibrary {
 			Pc = alpha*P1 + betha*P2 + gamma*P3;												// Punto del centro del circulo
 			bRigid[x].centroid = Pc;															// Guardar el centroide del O.R.
 
-			cout << norm(P1 - P3)  << endl;
+			cout << norm(P1 - P3) << endl;
 
 			//cin.get();
 			// CAMBIAR out POR EL VECTOR FORMADO ENTRE LA ESFERA 1 y 3
 			Out = (P1 - P3) / norm(P1 - P3);//(Pc - P1).cross(Pc - P2);							// Vista o view
 											//	Out = out / norm(out);							// Vector unitario de la Vista: 3ra fila de la matriz de rotación
 			Upw = (Mat_<double>(3, 1) << 0, 1, 0);
-//			cout << Out << endl;
+			//			cout << Out << endl;
 			Mat_<double> up = Upw - (Upw.dot(Out)*Out);
 			Up = up / norm(up);																	// Up: 2da fila de la matriz de rotación
 
 			Right = Up.cross(Out);																// Right: 1ra fila de la matriz de rotación
 
-//	cout << norm(up) << endl << endl;
+																								//	cout << norm(up) << endl << endl;
 
 			MR.push_back(Right.t());
 			MR.push_back(Up.t());
 			MR.push_back(Out.t());
-//			MR = MR.t();																		// DESCOMENTAR CUANDO LAS ROTACIONES SON ZXZ
-//			cout << MR << endl;
+			//			MR = MR.t();																		// DESCOMENTAR CUANDO LAS ROTACIONES SON ZXZ
+			//			cout << MR << endl;
 			//	cout << "CENTRO CIRCULO" << endl << Pc << endl << endl;
 			//			cout << "Mat. ROTACION" << endl << MR << endl << endl;
 			//	bRigid[x].yaw   = atan2(MR(1, 0), MR(0, 0)) * 180 / PI;											// yaw
@@ -477,9 +496,9 @@ namespace CustomCameraLibrary {
 			//		cout << denom << endl;
 			//	cout << "min val : " << minLoc << endl;
 			//	cout << "max val: " << maxLoc << endl;
-//			cout <<MR << endl << Q << endl;
+			//			cout <<MR << endl << Q << endl;
 			Q = Q / norm(Q);
-//			cout << Q << endl;
+			//			cout << Q << endl;
 			Q.copyTo(bRigid[x].Quat);
 			// psi rotación al rededor del eje X; ángulo con respecto al eje Y-Y y Y-Z | theta rotación al rededor del eje Y; ángulo con respecto al eje X-X y X-Z | phi rotación al rededor del eje Z; giro
 			// orden de rotación XYZ
@@ -487,20 +506,20 @@ namespace CustomCameraLibrary {
 			float theta = asin(2 * (Q(0, 0)*Q(0, 2) + Q(0, 1)*Q(0, 3)));
 			float phi = atan2(2 * (Q(0, 2)*Q(0, 3) - Q(0, 0)*Q(0, 1)), (pow(Q(0, 3), 2) + pow(Q(0, 0), 2) - pow(Q(0, 1), 2) - pow(Q(0, 2), 2)));
 			//orden de rotación ZXZ
-/*			double psi = atan2((Q(0, 0)*Q(0, 2) + Q(0, 1)*Q(0, 3)), (Q(0, 0)*Q(0, 3) - Q(0, 1)*Q(0, 2)));
+			/*			double psi = atan2((Q(0, 0)*Q(0, 2) + Q(0, 1)*Q(0, 3)), (Q(0, 0)*Q(0, 3) - Q(0, 1)*Q(0, 2)));
 			double theta = acos(pow(Q(0, 3), 2) - pow(Q(0, 0), 2) - pow(Q(0, 1), 2) + pow(Q(0, 2), 2));
 			double phi = atan2((Q(0, 0)*Q(0, 2) - Q(0, 1)*Q(0, 3)), (Q(0, 0)*Q(0, 3) + Q(0, 1)*Q(0, 2)));
-*/
+			*/
 			Mat_<double> EA = (Mat_<double>(1, 3) << psi, theta, phi) * 180 / CV_PI;							// Ángulos de Euler en grados
-			
-// mantener los EA entre 0 y 180
-/*			for (int i = 0; i < EA.cols; i++) {
-				EA(0, i) = EA(0, i) - floor(EA(0, i) / 360) * 360;
-				if (EA(0, i) > 180)
-					EA(0, i) = EA(0, i) - 360;																	// modificando los ángulos de Euler para que estén entre -180 y 180
-			}*/
 
-			//Asignar los ángulos de euler al Cuerpo rígido
+																												// mantener los EA entre 0 y 180
+																												/*			for (int i = 0; i < EA.cols; i++) {
+																												EA(0, i) = EA(0, i) - floor(EA(0, i) / 360) * 360;
+																												if (EA(0, i) > 180)
+																												EA(0, i) = EA(0, i) - 360;																	// modificando los ángulos de Euler para que estén entre -180 y 180
+																												}*/
+
+																												//Asignar los ángulos de euler al Cuerpo rígido
 			bRigid[x].yaw = EA(0, 0);
 			bRigid[x].pitch = EA(0, 1);
 			bRigid[x].roll = EA(0, 2);
@@ -523,13 +542,13 @@ namespace CustomCameraLibrary {
 			*/
 			if ((bRigid[x].name == POINTER) && (norm(P1 - P3) > 51) && detect_pointer) {					// para siempre mantener la dirección del vector que apunta al pointer
 				cout << "OR=" << OR << ";" << endl;
-
+				
 				Point3d punto = pointerPoint(P1, P2, P3, Out);
 
 				bRigid[x].point = Point3d(punto);
 
 			}
-//			cout << norm(p.t()-Pc.t()) << endl;
+			//			cout << norm(p.t()-Pc.t()) << endl;
 			//cout << Pc << endl;
 		}
 	}
@@ -592,9 +611,9 @@ namespace CustomCameraLibrary {
 	/**
 	*	De el conjunto de esferas en la escena, encuentra los objetos rígidos.
 	*	A cada marcador o esfera se le asocia una etiqueta que se compone principalmente de valores:
-		- peso: inidica la distancia de un nodo o esfera a la esfera seleccionada.
-		- marca: indica si el nodo ya ha sido analizado.
-		- antecesor: inidca el nodo que le sigue como parte del mismo objeto rígido.
+	- peso: inidica la distancia de un nodo o esfera a la esfera seleccionada.
+	- marca: indica si el nodo ya ha sido analizado.
+	- antecesor: inidca el nodo que le sigue como parte del mismo objeto rígido.
 	*
 	*	el nodo inicial tiene un peso de 0 y no tiene antecesor, se empieza analizando el primer nodo con todos los demás hasta encontrar los nodos del primer
 	*	cuerpo rígido, los nodos ya selecionados como parte del primer cuerpo rígido se descartan para las siguiente búsqueda y así sucesivamente.
@@ -609,7 +628,7 @@ namespace CustomCameraLibrary {
 	*/
 	int joskstra(Mat_<float> spSet, Mat_<float> dspSet, BodyR *&bRigid) {
 		Sphere *Spheres;
-		
+
 		int i, i0, j, countBR;
 		float peso;
 		vector<float> vec;													// vector que llevará el conjunto de distancias teóricas de los cuerpos rígidos.
@@ -682,7 +701,7 @@ namespace CustomCameraLibrary {
 			//***************************DUVAN PUSO ESTO, ESTA MAL!!!!!, DEBE SER +1
 			//***********************
 			if (temp.rows + 1 > N_MARKERS) {
-			//if (temp.rows + 2 > N_MARKERS) {										// identificar O.R. con un número de marcadores definidos
+				//if (temp.rows + 2 > N_MARKERS) {										// identificar O.R. con un número de marcadores definidos
 				Spheres[i0].marca = 1;
 				Spheres[i0].prev = i0;
 				Spheres[i0].objR = Spheres[j].objR;
@@ -697,32 +716,34 @@ namespace CustomCameraLibrary {
 					ref = Spheres[1].objR;
 				}
 				switch (ref) {
-//				switch (Spheres[j].objR) {
-					case pointer:
-						bRigid[countBR].name = POINTER;
-						break;
-					case femur:
-						bRigid[countBR].name = FEMUR;
-						break;
-					case tibia:
-						bRigid[countBR].name = TIBIA;
-						break; 
-					case gafas:
-							bRigid[countBR].name = GAFAS;
-							break;
-					default:
-						break;
+					//				switch (Spheres[j].objR) {
+				case pointer:
+					bRigid[countBR].name = POINTER;
+					OutputDebugString(L"pointer");
+					break;
+				case femur:
+					bRigid[countBR].name = FEMUR;
+					break;
+				case tibia:
+					bRigid[countBR].name = TIBIA;
+					break;
+				case gafas:
+					bRigid[countBR].name = GAFAS;
+					break;
+				default:
+					break;
 				}
 				bRigid[countBR].bdrigid = temp.t();								// añadir las coordenadas de las esferas del objeto rígido.
 				bRigid[countBR].nmarkers = temp.rows;							// número de marcadores en el O.R.
-				//Mat temp2;
-				//reduce(temp, temp2, 0, CV_REDUCE_SUM);						// sumar las filas de las coordenadas de las esferas de los objeto rígido
-				//bRigid[countBR].centroid = temp2 / temp.rows;					// calcular el centroide del objeto rígido.
-//			    cout << "*********" << endl << bRigid[countBR].bdrigid << endl << endl;
+																				//Mat temp2;
+																				//reduce(temp, temp2, 0, CV_REDUCE_SUM);						// sumar las filas de las coordenadas de las esferas de los objeto rígido
+																				//bRigid[countBR].centroid = temp2 / temp.rows;					// calcular el centroide del objeto rígido.
+																				//			    cout << "*********" << endl << bRigid[countBR].bdrigid << endl << endl;
 				getEulerAngles(bRigid, countBR);								// Detectar los ángulos de Euler.
 				countBR++;
 			}
 			else {																// objeto rígido no identificado.
+				OutputDebugString(L"NO SE QUE ES");
 				Spheres[i0].marca = 1;
 				Spheres[i0].prev = i0;
 				Spheres[i0].objR = -1;
@@ -732,18 +753,18 @@ namespace CustomCameraLibrary {
 		return countBR;
 	}
 
-/*	Mat_<int> findPointerDirection(Mat_<double> OR) {
-		for (int i = 0; i < OR.cols; i++) {
-			for (int j = 1; j < OR.cols; j++) {
-				if (j > i) {
-					double n = norm(OR.col(i) - OR.col(j));
-					if (n > 51 && n < 53) {
-						return (Mat_<double>(1,2) << i, j);
-					}
-				}
-				
-			}
-		}
+	/*	Mat_<int> findPointerDirection(Mat_<double> OR) {
+	for (int i = 0; i < OR.cols; i++) {
+	for (int j = 1; j < OR.cols; j++) {
+	if (j > i) {
+	double n = norm(OR.col(i) - OR.col(j));
+	if (n > 51 && n < 53) {
+	return (Mat_<double>(1,2) << i, j);
+	}
+	}
+
+	}
+	}
 	}
 	*/
 	/*bool findValue(const cv::Mat &mat, double value) {

@@ -1,17 +1,17 @@
-//==================================================================
+ï»¿//==================================================================
 // include guard
 #ifndef _SERVER_H_
 #define _SERVER_H_
 
 //==================================================================
-// Inclusión de dependencias
+// Inclusiï¿½n de dependencias
 #include <stdio.h>
 #include <tchar.h>
 #include <windows.h>
 #include <math.h>
 #include "NatNetTypes.h"
 #include "NatNetServer.h"
-#include <mmsystem.h> // quizás no sirva para nada aquí
+#include <mmsystem.h> // quizï¿½s no sirva para nada aquï¿½
 #include "NATUtils.h"
 
 #define POINTERR 1
@@ -49,7 +49,7 @@ namespace CustomCameraLibrary {
 	DWORD WINAPI PlayingThread_Func(void *dummy);
 
 	NatNetServer* theServer;    				///< Instancia del servidor 
-	sDataDescriptions descriptions; 			///< Descripción de los datos que se van a enviar (Descripción de los cuerpos rígidos y sus características).
+	sDataDescriptions descriptions; 			///< Descripciï¿½n de los datos que se van a enviar (Descripciï¿½n de los cuerpos rï¿½gidos y sus caracterï¿½sticas).
 	long g_lCurrentFrame = 0;					///< Contador de Frames que va enviando el servidor al cliente.
 	bool g_bPlaying = false;					///< Indicador que muestra si el servidor esta enviando datos al cliente.
 	DWORD PlayingThread_ID = NULL;				///< Id del hilo que ejecuta el servidor.
@@ -57,8 +57,8 @@ namespace CustomCameraLibrary {
 	int counter = 0;							///< Sin uso importante. Puede ser borrado.	
 												//	int counter2 = 0;						
 												//	float fCounter = 0.0f;
-	unsigned int DataPort = 1511;				///< Puerto utilizado para el envío de datos.
-	unsigned int CommandPort = 1510;			///< Puerto utilizado para la recepción de comandos desde el cliente.
+	unsigned int DataPort = 1511;				///< Puerto utilizado para el envï¿½o de datos.
+	unsigned int CommandPort = 1510;			///< Puerto utilizado para la recepciï¿½n de comandos desde el cliente.
 	unsigned long lAddresses[10];
 
 	//==================================================================
@@ -70,23 +70,23 @@ namespace CustomCameraLibrary {
 
 	stringstream s;						///< Utilizado para ir concatenando texto y mostrarlo cuando se inicia el servidor.
 	cv::Mat pic = cv::Mat::zeros(800, 600, CV_8UC3); ///< imagen que se muestra de color negro en la ventana que sale al iniciar el servidor.
-	int y0 = 50;						///< Posición inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor.
+	int y0 = 50;						///< Posiciï¿½n inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor.
 	int dy = 20;						///< incremento inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor.
 	int i = 0;
 
 	/**
-	* puntero al almacen de cuerpos rígidos, de aquí se pueden acceder después de ser detectados.
+	* puntero al almacen de cuerpos rï¿½gidos, de aquï¿½ se pueden acceder despuï¿½s de ser detectados.
 	* @see CustomCameraLibrary::joskstra()
 	*/
 	BodyR *rigid;
 
 	//Mat_<double> oldBr;
-	HANDLE sSemaphore;		///< Semáforo que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se envían los datos al cliente.
-	HANDLE brSemaphore;		///< Semáforo que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se envían los datos al cliente.
+	HANDLE sSemaphore;		///< Semï¿½foro que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se envï¿½an los datos al cliente.
+	HANDLE brSemaphore;		///< Semï¿½foro que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se envï¿½an los datos al cliente.
 	DWORD sResult;
 
 	/**
-	* cantidad de cuerpos rígidos detectados.
+	* cantidad de cuerpos rï¿½gidos detectados.
 	* @see CustomCameraLibrary::joskstra()
 	*/
 	int nbr;
@@ -135,10 +135,10 @@ namespace CustomCameraLibrary {
 		// sprintf(szIPAddress, "%d.%d.%d.%d", MyAddress[0].S_un.S_un_b.s_b1, MyAddress[0].S_un.S_un_b.s_b2, MyAddress[0].S_un.S_un_b.s_b3, MyAddress[0].S_un.S_un_b.s_b4);
 
 		//**************************************
-		// IP DONDE CORRERÁ EL SERVIDOR
+		// IP DONDE CORRERï¿½ EL SERVIDOR
 		//**************************************
 		//sprintf(szIPAddress, "%d.%d.%d.%d", 127, 0, 0, 1);
-		sprintf(szIPAddress, "%d.%d.%d.%d", 10, 0, 0, 100);
+		sprintf(szIPAddress, "%d.%d.%d.%d", 192, 168, 0, 101);
 
 		// Initialize NatNet server with first detected ip address - use NatNet default port assignments
 		int retCode = theServer->Initialize(szIPAddress);
@@ -184,9 +184,9 @@ namespace CustomCameraLibrary {
 
 	/**
 	*	Manejador de peticiones, recive peticiones de el cliente.
-	*	El servidor debería armar y retornar un paquete "respuesta a la petición" en el mismo hilo
+	*	El servidor deberï¿½a armar y retornar un paquete "respuesta a la peticiï¿½n" en el mismo hilo
 	*   @param pPacketIn  paquete de datos de el cliente.
-	*   @param pPacketOut paquete vacío, para ser llenado antes de ser retornado al cliente como la "respuesta a la petición".
+	*   @param pPacketOut paquete vacï¿½o, para ser llenado antes de ser retornado al cliente como la "respuesta a la peticiï¿½n".
 	*/
 	int __cdecl RequestHandler(sPacket* pPacketIn, sPacket* pPacketOut, void* pUserData) {
 		int iHandled = 1;	// handled
@@ -246,16 +246,21 @@ namespace CustomCameraLibrary {
 	}
 
 	/**
-	* Contruye un DataSet que contiene la descripción de los objetos rígidos en escena.
-	* Utiliza la descripción de los cuerpos rígidos detectados para ir armando el DataSet.
+	* Contruye un DataSet que contiene la descripciï¿½n de los objetos rï¿½gidos en escena.
+	* Utiliza la descripciï¿½n de los cuerpos rï¿½gidos detectados para ir armando el DataSet.
 	* @see CustomCameraLibrary::joskstra()
 	* @param pDescription DataSet.
 	*/
 	void BuildDescription(sDataDescriptions* pDescription) {
 		pDescription->nDataDescriptions = 0;
 		int index = 0;
-		//		sResult = WaitForSingleObject(brSemaphore, INFINITE);
-		//		if (sResult == WAIT_OBJECT_0) {
+		ofstream archivoD;
+		if (!archivoD.is_open()) {
+			archivoD.open("test.txt", std::ios::app);
+
+		}
+				sResult = WaitForSingleObject(brSemaphore, INFINITE);
+				if (sResult == WAIT_OBJECT_0) {
 		for (int i = 0; i < nbr; i++) {
 			sRigidBodyDescription* pRigidBodyDescription = new sRigidBodyDescription();
 			sprintf(pRigidBodyDescription->szName, rigid[i].name.c_str());
@@ -265,16 +270,19 @@ namespace CustomCameraLibrary {
 			pRigidBodyDescription->offsety = 0.0f;
 			pRigidBodyDescription->offsetz = 0.0f;
 			if (strcmp(pRigidBodyDescription->szName, "POINTER") == 0)
-			pRigidBodyDescription->ID = POINTERR;
+			{
+				OutputDebugString(L"SI ES UN POINTER");
+				pRigidBodyDescription->ID = POINTERR;
+			}
 			else if (strcmp(pRigidBodyDescription->szName, "FEMUR") == 0)
-			pRigidBodyDescription->ID = FEMURR;
+				pRigidBodyDescription->ID = FEMURR;
 			else if (strcmp(pRigidBodyDescription->szName, "TIBIA") == 0)
-			pRigidBodyDescription->ID = TIBIAA;
+				pRigidBodyDescription->ID = TIBIAA;
 			else if (strcmp(pRigidBodyDescription->szName, "GAFAS") == 0)
-			pRigidBodyDescription->ID = GAFASS;
+				pRigidBodyDescription->ID = GAFASS;
 			else if (strcmp(pRigidBodyDescription->szName, "BROCA") == 0)
 				pRigidBodyDescription->ID = BROCAA;
-			
+			archivoD << pRigidBodyDescription->ID;
 			pDescription->arrDataDescriptions[index].type = Descriptor_RigidBody;
 			pDescription->arrDataDescriptions[index].Data.RigidBodyDescription = pRigidBodyDescription;
 			pDescription->nDataDescriptions++;
@@ -295,11 +303,13 @@ namespace CustomCameraLibrary {
 			pDescription->arrDataDescriptions[index].Data.MarkerSetDescription = pMarkerSetDescription;
 			pDescription->nDataDescriptions++;
 			index++;
+			archivoD << "";
+			archivoD.close();
 		}
 		// Release the semaphore when task is finished
-		//			if (!ReleaseSemaphore(sSemaphore, 1, NULL))
-		//				printf("ReleaseSemaphore error: %d\n", GetLastError());
-		//		} 
+					if (!ReleaseSemaphore(sSemaphore, 1, NULL))
+						printf("ReleaseSemaphore error: %d\n", GetLastError());
+				} 
 
 #if STREAM_MARKERS
 		// Marker Set Description
@@ -368,8 +378,8 @@ namespace CustomCameraLibrary {
 	}
 
 	/**
-	* Envía el DataSet a el cliente.
-	* @param pDescription DataSet con la descripción de los datos.
+	* Envï¿½a el DataSet a el cliente.
+	* @param pDescription DataSet con la descripciï¿½n de los datos.
 	* @see BuildDescription()
 	*/
 	void SendDescription(sDataDescriptions* pDescription) {
@@ -400,8 +410,8 @@ namespace CustomCameraLibrary {
 
 	// Build frame of MocapData
 	/**
-	* Construye el frame de datos que serán enviados al cliente. Identifica el objeto rígido que se va a enviar y saca sus propiedades tales como
-	* coordenadas 3D de sus esferas, centro del circulo que forman las esferas del cuerpo rígido, nombre del cuerpo rígido y orientación.
+	* Construye el frame de datos que serï¿½n enviados al cliente. Identifica el objeto rï¿½gido que se va a enviar y saca sus propiedades tales como
+	* coordenadas 3D de sus esferas, centro del circulo que forman las esferas del cuerpo rï¿½gido, nombre del cuerpo rï¿½gido y orientaciï¿½n.
 	* @param FrameNumber contador de frames enviados que indica el frame actual.
 	*
 	*/
@@ -432,7 +442,7 @@ namespace CustomCameraLibrary {
 					pOutFrame->MocapData[index].nMarkers = pMS->nMarkers;
 					pOutFrame->MocapData[index].Markers = new MarkerData[4];
 
-					bdr = getBdrigid(pMS->szName, nbr);		// obtener los marcadores del cuerpo rígido en cuestión
+					bdr = getBdrigid(pMS->szName, nbr);		// obtener los marcadores del cuerpo rï¿½gido en cuestiï¿½n
 					if (!empty(bdr.bdrigid)) {
 						for (int iMarker = 0; iMarker < pOutFrame->MocapData[index].nMarkers; iMarker++) {
 							double x = (bdr.bdrigid(0, iMarker)) / 1000;
@@ -452,7 +462,7 @@ namespace CustomCameraLibrary {
 				// RigidBody data
 				if (pModels->arrDataDescriptions[i].type == Descriptor_RigidBody) {
 					sRigidBodyDescription* pMS = pModels->arrDataDescriptions[i].Data.RigidBodyDescription;
-					bdr = getBdrigid(pMS->szName, nbr);		// obtener los marcadores del cuerpo rígido en cuestión
+					bdr = getBdrigid(pMS->szName, nbr);		// obtener los marcadores del cuerpo rï¿½gido en cuestiï¿½n
 					if (!empty(bdr.centroid)) {
 						int index = pOutFrame->nRigidBodies;
 						sRigidBodyData* pRB = &pOutFrame->RigidBodies[index];
@@ -462,7 +472,7 @@ namespace CustomCameraLibrary {
 						//					cout << bdr.centroid << endl;
 						//						if (empty(bdr.centroid))
 						//							system("pause");
-						
+
 						pRB->x = bdr.centroid(0, 0) / 1000;
 						pRB->y = bdr.centroid(1, 0) / 1000;
 						pRB->z = bdr.centroid(2, 0) / 1000;
@@ -484,18 +494,18 @@ namespace CustomCameraLibrary {
 						//pRB->qy = bdr.Quat(0, 1);// q.y;
 						//pRB->qz = bdr.Quat(0, 2);// q.z;
 						//pRB->qw = bdr.Quat(0, 3);// q.w;
-												 /*					double m[9];
-												 double d[4] = { bdr.Quat(0, 0), bdr.Quat(0, 1), bdr.Quat(0, 2), bdr.Quat(0, 3) };
-												 NATUtils::QaternionToRotationMatrix(d, m);
-												 for (int i = 0; i < 9; i++) {
-												 cout << m[i] << endl;
-												 }*/
+						/*					double m[9];
+						double d[4] = { bdr.Quat(0, 0), bdr.Quat(0, 1), bdr.Quat(0, 2), bdr.Quat(0, 3) };
+						NATUtils::QaternionToRotationMatrix(d, m);
+						for (int i = 0; i < 9; i++) {
+						cout << m[i] << endl;
+						}*/
 
 						/*if (pRB->ID == POINTERR) {
-							pRB->qx = bdr.point.x/1000;
-							pRB->qy = bdr.point.y/1000;
-							pRB->qz = bdr.point.z/1000;
-							pRB->qw = bdr.Quat(0, 3);
+						pRB->qx = bdr.point.x/1000;
+						pRB->qy = bdr.point.y/1000;
+						pRB->qz = bdr.point.z/1000;
+						pRB->qw = bdr.Quat(0, 3);
 						}*/
 						pRB->nMarkers = bdr.bdrigid.cols;
 						pRB->Markers = new MarkerData[pRB->nMarkers];
@@ -523,7 +533,7 @@ namespace CustomCameraLibrary {
 	}
 
 	/**
-	* Empaqueta y envía un solo frama con datos a el cliente
+	* Empaqueta y envï¿½a un solo frama con datos a el cliente
 	* @param pFrame paquete de datos a enviar.
 	*/
 	void SendFrame(sFrameOfMocapData* pFrame) {
@@ -551,7 +561,7 @@ namespace CustomCameraLibrary {
 
 	// PlayingThread_Func streams data at ~60hz 
 	/**
-	* Función que se ejecuta en un hilo distinto al principal.
+	* Funciï¿½n que se ejecuta en un hilo distinto al principal.
 	*/
 	DWORD WINAPI PlayingThread_Func(void * empty) {
 		while (1) {
@@ -575,7 +585,7 @@ namespace CustomCameraLibrary {
 	}
 
 	/**
-	* Inicia el envío de datos hacia el cliente. Crea un segundo hilo y los semáforos correspondientes para garantizar la sincronización.
+	* Inicia el envï¿½o de datos hacia el cliente. Crea un segundo hilo y los semï¿½foros correspondientes para garantizar la sincronizaciï¿½n.
 	*/
 	int StartPlayingThread() {
 		SECURITY_ATTRIBUTES security_attribs;
@@ -591,7 +601,7 @@ namespace CustomCameraLibrary {
 		else
 			g_bPlaying = true;
 
-		// crear semáforos
+		// crear semï¿½foros
 		sSemaphore = CreateSemaphore(NULL, 1, 1, L"cServer");
 		if (sSemaphore == NULL) {
 			printf("CreateSemaphore error: %d\n", GetLastError());
@@ -607,7 +617,7 @@ namespace CustomCameraLibrary {
 	}
 
 	/**
-	* Detiene el envío de datos hacia el cliente.Cierra el segundo hilo por donde se envían los datos y los semáforos que garantizan la sincronización.
+	* Detiene el envï¿½o de datos hacia el cliente.Cierra el segundo hilo por donde se envï¿½an los datos y los semï¿½foros que garantizan la sincronizaciï¿½n.
 	*/
 	int StopPlayingThread() {
 		if (PlayingThread_Handle != NULL) {
@@ -624,7 +634,7 @@ namespace CustomCameraLibrary {
 	}
 
 	/**
-	* Reinicia el servidor, volviendose a conectar a la misma dirección ip.
+	* Reinicia el servidor, volviendose a conectar a la misma direcciï¿½n ip.
 	*/
 	void resetServer() {
 		int iSuccess = 0;
@@ -657,7 +667,7 @@ namespace CustomCameraLibrary {
 	}
 
 	/**
-	* Inicia el servidor y muetsra una ventana con información de la conexión.
+	* Inicia el servidor y muetsra una ventana con informaciï¿½n de la conexiï¿½n.
 	*/
 	int StartServer() {
 		int iConnectionType = ConnectionType_Unicast;
@@ -703,10 +713,10 @@ namespace CustomCameraLibrary {
 	}
 
 	/**
-	* Encuentra un cuerpo rígido por su nombre, para luego seleccionar sus marcadores.
-	* @param name apuntador al nombre del cuerpo rígido que se le quieren obtener los marcadores que lo conforman.
-	* @param nrig número de cuerpos rígidos detectados.
-	* @return un cuerpo rígido con todos sus atributos o características.
+	* Encuentra un cuerpo rï¿½gido por su nombre, para luego seleccionar sus marcadores.
+	* @param name apuntador al nombre del cuerpo rï¿½gido que se le quieren obtener los marcadores que lo conforman.
+	* @param nrig nï¿½mero de cuerpos rï¿½gidos detectados.
+	* @return un cuerpo rï¿½gido con todos sus atributos o caracterï¿½sticas.
 	*/
 	BodyR getBdrigid(char *name, int nrig) {
 		string str(name);

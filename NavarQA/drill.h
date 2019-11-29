@@ -88,9 +88,11 @@ namespace CustomCameraLibrary {
 
 		myModuleString = PyString_FromString((char*)"bilineal");
 		myModule = PyImport_Import(myModuleString);
+		//DBOUT(myModuleString)
 		//		Py_DECREF(myModuleString);
 		if (myModule)
 		{
+		
 			mdict = PyModule_GetDict(myModule);
 			pythonFunc = PyDict_GetItemString(mdict, "orientacion_P3D");
 		}

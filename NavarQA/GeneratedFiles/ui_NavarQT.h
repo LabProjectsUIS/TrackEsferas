@@ -34,6 +34,8 @@ class Ui_NavarQTClass
 {
 public:
     QGridLayout *gridLayout;
+    QSpacerItem *verticalSpacer_4;
+    QSpacerItem *verticalSpacer_5;
     QWidget *steps;
     QVBoxLayout *verticalLayout;
     QWidget *steps_top;
@@ -140,8 +142,6 @@ public:
     QPushButton *pushButton_tibia;
     QPushButton *pushButton_femur;
     QPushButton *pushButton_9;
-    QSpacerItem *verticalSpacer_4;
-    QSpacerItem *verticalSpacer_5;
     QButtonGroup *buttonGroup;
     QButtonGroup *buttonGroup_instructions;
 
@@ -188,6 +188,14 @@ public:
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
+        verticalSpacer_4 = new QSpacerItem(20, 21, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout->addItem(verticalSpacer_4, 1, 0, 1, 1);
+
+        verticalSpacer_5 = new QSpacerItem(20, 98, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout->addItem(verticalSpacer_5, 3, 0, 1, 1);
+
         steps = new QWidget(NavarQTClass);
         steps->setObjectName(QStringLiteral("steps"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -474,6 +482,7 @@ public:
 
         label_6 = new QLabel(controls);
         label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setEnabled(true);
         QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Minimum);
         sizePolicy5.setHorizontalStretch(0);
         sizePolicy5.setVerticalStretch(0);
@@ -951,15 +960,7 @@ public:
 
         body->addWidget(choice_page);
 
-        gridLayout->addWidget(body, 4, 0, 1, 1);
-
-        verticalSpacer_4 = new QSpacerItem(20, 21, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer_4, 1, 0, 1, 1);
-
-        verticalSpacer_5 = new QSpacerItem(20, 98, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer_5, 3, 0, 1, 1);
+        gridLayout->addWidget(body, 5, 0, 1, 1);
 
         QWidget::setTabOrder(lineEdit_user, lineEdit_password);
         QWidget::setTabOrder(lineEdit_password, pushButton_1);

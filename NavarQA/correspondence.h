@@ -1,11 +1,13 @@
 #ifndef _CORRESPONDENCE_H_
 #define _CORRESPONDENCE_H_
-#include <iostream>
+#include<iostream>
+#include<stdlib.h>
+#include<fstream>
+#include <stdio.h>
 #include "opencv\cv.hpp"
 
 #define AREA 100								///< área mínima de las esferas de referencia de la broca
 #define AREA_ESFERA_PEQ 50						///< área mínima de las esferas peque;a de referencia de los CR
-
 
 #define MAX_ESFERA 20						///< cantidad máxima de esferas en la escena
 #define DIST_MAX 100						///< distancia máxima a la que puede estar una esfera grande de una pequeña (de referencia)
@@ -439,7 +441,56 @@ namespace CustomCameraLibrary {
 		return state;
 	}
 	
+	cv::Mat_<double> CorrespondenceDetection(cv::Mat_<double> &P, cv::Mat_<double> &A, cv::Mat_<double> &F,cv::Mat_<double> &F_Broca) {
+		Mat_<double> F0;
+		cv::Mat_<int> areas_men;		//	posición de las áreas menores
 
+		if (!A.empty() && areas(A, areas_men)) {
+			//cout << areas_men;
+			if (!detect_broca) {
+				F0 = findSpheres(P, areas_men(0, 0));
+				for (int i = 1; i < areas_men.rows; i++) {
+					hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
+				}
+			}
+			else {
+				punto_broca = cv::Mat_<double>(0, 0);
+				for (int i = 0; i < areas_men.rows; i++) {
+					int k = findDrill(P, areas_men(i, 0));
+					if (k >= 0) {
+						//P.col(k).copyTo(punto_broca);
+						punto_broca.push_back(P.col(k));
+						//cout << "Broca en: " << endl << punto_broca << endl;
+						/*	Mat_<int> e;
+						if (k < P.cols - 1 && k > 0) {
+						hconcat(P.colRange(0, k).rowRange(0, P.rows), P.colRange(k + 1, P.cols).rowRange(0, P.rows), e);
+						break;
+						}
+						else if (k == 0) {
+						e = P.colRange(1, P.cols).rowRange(0, P.rows);
+						break;
+						}
+						else if (k == P.cols - 1) {
+						e = P.colRange(0, P.cols - 1).rowRange(0, P.rows);
+						break;
+						}*/
+					}
+					else {
+						if (empty(F0))
+							F0 = findSpheres(P, areas_men(0, 0));
+						else
+							hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
+					}
+				}
+			}
+		}
+		else if (P.cols == 1) {
+			return P;
+		}
+		return F0;
+		F0.copyTo(F);
+	}
+}
 
 	/**
 	*	Detecta la correspondencia de las esferas de la cámara izq con la derecha.
@@ -447,7 +498,8 @@ namespace CustomCameraLibrary {
 	*	@param A es el conjunto de áreas.
 	*	@return un conjunto de esferas ordenadas según la correspondencia.
 	**/
-	void CorrespondenceDetection(Mat_<double> &P, Mat_<double> &A, Mat_<double> &F, Mat_<double> &F_Broca) {
+	/*void CorrespondenceDetection(Mat_<double> P, Mat_<double> A, Mat_<double> F, Mat_<double> F_Broca) {
+		DBOUT("NBR")
 		//Mat_<double> F;
 //		vector< Mat_<double> > conjunto;															// conjunto de esferas de objetos rígidos
 		// la 1ra posicion corresponde a la esfera pequeña de la tibia, la 2da a la esfera pequeña del pointer y la tercera a la esfera pequeña del femur
@@ -476,7 +528,7 @@ namespace CustomCameraLibrary {
 //		}
 //		areas_men.push_back(minLoc.y);
 		//cout << A << endl;
-		if (A.rows < 5) {
+		/*if (A.rows < 5) {
 			return;
 		}
 		if (!A.empty() && areas(A, areas_men)) {
@@ -549,7 +601,7 @@ namespace CustomCameraLibrary {
 							e = P.colRange(0, P.cols - 1).rowRange(0, P.rows);
 							break;
 						}*/
-					}
+					/*}
 					else {
 						if (empty(F))
 							F = findSpheres(P, areas_men(0, 0));
@@ -560,6 +612,6 @@ namespace CustomCameraLibrary {
 			}
 		}
 	}
-}
+}*/
 namespace CCL = CustomCameraLibrary;
 #endif //_CORRESPONDENCE_H_
