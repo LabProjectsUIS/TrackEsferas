@@ -9,9 +9,14 @@
 #include "globals.h"
 #include "server.h"
 #include <math.h>
+#include <iostream>
+#include <stdio.h>
+#include <tchar.h>
+#include <windows.h>
+#include <math.h>
+#include <sstream>
 
-#include <sstream> 
-
+using namespace std;
 /**
 * Constructor por defecto
 */
@@ -293,20 +298,24 @@ void GUIUpdater::ShowCameras() {
 void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame, cv::Mat_<double> &P, cv::Mat_<double> &A, cv::Mat_<double> &PP_Broca) {
 	int objets = cframe.markerCount();
 	int c = 0;
-	//int modif = 0;
+	int modif = 0;
 	//if (objets % 5 == 2) {
 	//	modif = 2;
 	//}
 	//Mat_<double> PP(2, objets-modif); // Array de puntos del frame
-	//int NP_Broca = 0;
+	int NP_Broca = 0;
 
 	cv::Mat_<double> PP(2, objets); // Array de puntos del frame
 									//int NP_Broca = 0;
+	ofstream archivoL;
+	if (!archivoL.is_open()) {
+		//archivoL.open("Matriz.txt", std::ios::app);
 
+	}
 	if (objets > 0) {
 		//Mat_<double> AA(objets-modif, 1);
 		cv::Mat_<double> AA(objets, 1);
-
+		
 		for (int i = 0; i < objets; i++) {
 			CustomCameraLibrary::Marker obj = cframe.marker(i);
 
@@ -315,30 +324,34 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			double y = obj.getY();
 			double Eccentr = obj.getEccentr();
 			double Area = obj.getArea();
-			//std::ostringstream ostr;
-			//cv::Point textOrg(10, 500 + i * 20);
-			//ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y << " e:" << Eccentr << " Ar:" << Area;
-			//cv::String text = ostr.str();
-			//putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
-
-			/*if (Area > 15 && Area < 90 && Eccentr > 0.7 && NP_Broca < 2) {
-			PP_Broca(0, NP_Broca) = x;
-			PP_Broca(1, NP_Broca) = y;
-			NP_Broca = NP_Broca + 1;
-			}
-			else if(i < objets - modif){
-			PP(0, c) = x;
-			PP(1, c) = y;
-			AA(c, 0) = obj.getArea();
-			c++;
-			}
+			std::ostringstream ostr;
+			cv::Point textOrg(10, 500 + i * 20);
+			ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y << " e:" << Eccentr << " Ar:" << Area;
+			cv::String text = ostr.str();
+			putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
+			
+			//Tratamiento broca
+			if (Area > 15 && Area < 90 && Eccentr > 0.7 && NP_Broca < 2) 
+				{
+				PP_Broca(0, NP_Broca) = x;
+				PP_Broca(1, NP_Broca) = y;
+				NP_Broca = NP_Broca + 1;
+				}
+			else if(i < objets - modif)
+			{
+				PP(0, c) = x;
+				PP(1, c) = y;
+				AA(c, 0) = obj.getArea();
+				c++;
+				}
 			else
-			break;*/
-
-			PP(0, c) = x;
+			break;
+			
+			/*PP(0, c) = x;
 			PP(1, c) = y;
 			AA(c, 0) = obj.getArea();
-			c++;
+			
+			c++;*/
 
 			/*					for (int j = 0; j < PP.rows; j++) {
 			switch (j)
@@ -358,6 +371,16 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 
 			//				}
 		}
+		archivoL << "filas:"<<PP.rows<<" ,columnas: "<<PP.cols<<"\n";
+		for (int i = 0; i < PP.rows ; i++)
+		{
+			for (int j = 0; j < PP.cols ; j++)
+			{
+				//archivoL << PP[i][j] << "\t";
+			}
+			//archivoL << "\n";
+		}
+		archivoL.close();
 		/*if (NP_Broca == 2) {
 		Point P1,P2,Pa,Pb;
 		Mat_<double> temp;
@@ -620,7 +643,7 @@ void GUIUpdater::getRigidsData() {
 
 			//CustomCameraLibrary::CorrespondenceDetection(PP1, A1, P1, PP_Broca1);
 			//P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1, P1, PP_Broca1);
-			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1, P1, PP_Broca1);
+			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1, PP_Broca1);
 			imshow("Camara Derecha", matFrame_1);
 			frame_1->Release();
 		}
@@ -639,7 +662,7 @@ void GUIUpdater::getRigidsData() {
 			
 			//P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
 			//CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
-			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
+			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2, PP_Broca2);
 			imshow("Camara Izquierda", matFrame_2);
 			frame_2->Release();
 		}
@@ -688,6 +711,8 @@ void GUIUpdater::getRigidsData() {
 					if (wResult == WAIT_OBJECT_0) {
 						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
 						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
+
+						//Triangulando broca
 						if (PP_Broca1(1, 0) != 9999 && PP_Broca2(1, 0) != 9999) {
 							Beep(480, 50);
 
@@ -697,10 +722,9 @@ void GUIUpdater::getRigidsData() {
 							if (CustomCameraLibrary::nbr > 0)
 							{
 								for (int f = 0; f < CustomCameraLibrary::nbr; f++) {
-									if (CustomCameraLibrary::rigid[f].name == POINTER) {
-										OutputDebugString(L"es un pointer2..");
+									if (CustomCameraLibrary::rigid[f].name == POINTER) 
+									{
 										emit pointerDetected();
-									
 									}
 									if (f == CustomCameraLibrary::nbr)
 										emit pointerNotDetected();
@@ -709,8 +733,6 @@ void GUIUpdater::getRigidsData() {
 							else
 								emit pointerNotDetected();
 							XBroca = XLBroca.t();
-
-
 							XBroca = CustomCameraLibrary::initDrill(matFrame_1, matFrame_2, PP_Broca1, PP_Broca2);
 
 							/*XBrocaNew(0, 0) = 0;
@@ -856,7 +878,7 @@ bool GUIUpdater::getPointerData(const std::string &fileName) {
 			cframe_1.trackFilteredMarker(marker, threshold_1, cframe_1, matFrame_1);
 			GetObjects(cframe_1, matFrame_1, PP1, A1, PP_Broca1);
 
-			CustomCameraLibrary::CorrespondenceDetection(PP1, A1, P1, PP_Broca1);
+			CustomCameraLibrary::CorrespondenceDetection(PP1, A1, PP_Broca1);
 			frame_1->Release();
 		}
 		if (frame_2) {
@@ -872,7 +894,7 @@ bool GUIUpdater::getPointerData(const std::string &fileName) {
 			cframe_2.trackFilteredMarker(marker, threshold_2, cframe_2, matFrame_2);
 			GetObjects(cframe_2, matFrame_2, PP2, A2, PP_Broca2);
 
-			CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
+			CustomCameraLibrary::CorrespondenceDetection(PP2, A2,PP_Broca2);
 			frame_2->Release();
 		}
 		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols)) {

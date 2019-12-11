@@ -636,7 +636,7 @@ void NavarQT::startCalibration() {
 */
 void NavarQT::startServer() {
 	process_client = new QProcess(this);
-	//process_client->start("Resources/Unity/sample_server/UnitySample.exe");
+	process_client->start("Resources/Unity/sample_server/UnitySample.exe");
 }
 
 /**

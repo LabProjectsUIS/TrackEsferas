@@ -91,7 +91,7 @@ namespace CustomCameraLibrary {
 	*/
 	int nbr;
 
-	int CreateServer(int iConnectionType) {
+int CreateServer(int iConnectionType) {
 		// release previous server
 		if (theServer) {
 			theServer->Uninitialize();
@@ -271,7 +271,6 @@ namespace CustomCameraLibrary {
 			pRigidBodyDescription->offsetz = 0.0f;
 			if (strcmp(pRigidBodyDescription->szName, "POINTER") == 0)
 			{
-				OutputDebugString(L"SI ES UN POINTER");
 				pRigidBodyDescription->ID = POINTERR;
 			}
 			else if (strcmp(pRigidBodyDescription->szName, "FEMUR") == 0)
@@ -282,10 +281,14 @@ namespace CustomCameraLibrary {
 				pRigidBodyDescription->ID = GAFASS;
 			else if (strcmp(pRigidBodyDescription->szName, "BROCA") == 0)
 				pRigidBodyDescription->ID = BROCAA;
-			archivoD << pRigidBodyDescription->ID;
+			archivoD << pRigidBodyDescription->ID<<"\n"; //testeando que elemento encontro
+
 			pDescription->arrDataDescriptions[index].type = Descriptor_RigidBody;
+		
 			pDescription->arrDataDescriptions[index].Data.RigidBodyDescription = pRigidBodyDescription;
 			pDescription->nDataDescriptions++;
+			archivoD << "dataset" << pDescription->arrDataDescriptions[index].type << "\n";
+			archivoD << "dataset" << pDescription->arrDataDescriptions[index].Data.RigidBodyDescription << "\n";
 			index++;
 			// Marker Set Description
 			sMarkerSetDescription* pMarkerSetDescription = new sMarkerSetDescription();
@@ -303,7 +306,6 @@ namespace CustomCameraLibrary {
 			pDescription->arrDataDescriptions[index].Data.MarkerSetDescription = pMarkerSetDescription;
 			pDescription->nDataDescriptions++;
 			index++;
-			archivoD << "";
 			archivoD.close();
 		}
 		// Release the semaphore when task is finished
@@ -417,6 +419,7 @@ namespace CustomCameraLibrary {
 	*/
 	void BuildFrame(long FrameNumber, sDataDescriptions* pModels, sFrameOfMocapData* pOutFrame) {
 		if (!pModels) {
+			OutputDebugString(L"NO HAY MODELS");
 			printf("No models defined - nothing to send.\n");
 			return;
 		}
@@ -433,6 +436,9 @@ namespace CustomCameraLibrary {
 		sResult = WaitForSingleObject(brSemaphore, INFINITE);
 		if (sResult == WAIT_OBJECT_0) {
 			for (int i = 0; i < pModels->nDataDescriptions; i++) {
+				OutputDebugString(L"Si hay");
+
+
 				// MarkerSet data
 				if (pModels->arrDataDescriptions[i].type == Descriptor_MarkerSet) {
 					// add marker data
@@ -444,6 +450,7 @@ namespace CustomCameraLibrary {
 
 					bdr = getBdrigid(pMS->szName, nbr);		// obtener los marcadores del cuerpo r�gido en cuesti�n
 					if (!empty(bdr.bdrigid)) {
+						OutputDebugString(L"Si hay 222");
 						for (int iMarker = 0; iMarker < pOutFrame->MocapData[index].nMarkers; iMarker++) {
 							double x = (bdr.bdrigid(0, iMarker)) / 1000;
 							double y = (bdr.bdrigid(1, iMarker)) / 1000;
@@ -594,12 +601,16 @@ namespace CustomCameraLibrary {
 		security_attribs.bInheritHandle = TRUE;
 		// crear hilo
 		PlayingThread_Handle = CreateThread(&security_attribs, 0, PlayingThread_Func, NULL, 0, &PlayingThread_ID);
+		
 		if (PlayingThread_Handle == NULL) {
 			printf("Error creating play thread.");
 			return -1;
 		}
 		else
-			g_bPlaying = true;
+		{
+			g_bPlaying = true; //Bool que indica si está enviando datos al cliente
+			OutputDebugString(L"Si envia");
+		}
 
 		// crear sem�foros
 		sSemaphore = CreateSemaphore(NULL, 1, 1, L"cServer");
@@ -693,7 +704,7 @@ namespace CustomCameraLibrary {
 		WriteW("u    unicast");
 
 
-		//	putText(pic, s.str(), cv::Point(50, 50), CV_FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255), 1, 8, false);
+		putText(pic, s.str(), cv::Point(50, 50), CV_FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255), 1, 8, false);
 		imshow("Server", pic);
 		return 0;
 	}

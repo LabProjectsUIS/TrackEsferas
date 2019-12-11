@@ -441,21 +441,27 @@ namespace CustomCameraLibrary {
 		return state;
 	}
 	
-	cv::Mat_<double> CorrespondenceDetection(cv::Mat_<double> &P, cv::Mat_<double> &A, cv::Mat_<double> &F,cv::Mat_<double> &F_Broca) {
-		Mat_<double> F0;
+	cv::Mat_<double> CorrespondenceDetection(cv::Mat_<double> P, cv::Mat_<double> A, cv::Mat_<double> F_Broca) {
+		cv::Mat_<double> F0;
 		cv::Mat_<int> areas_men;		//	posición de las áreas menores
-
+		//buscar la segunda area menor tal vez asi
 		if (!A.empty() && areas(A, areas_men)) {
 			//cout << areas_men;
-			if (!detect_broca) { //sólo si esta detectando broca
+			
+			if (!detect_broca) { //sólo si no esta detectando broca
 				F0 = findSpheres(P, areas_men(0, 0));
-				for (int i = 1; i < areas_men.rows; i++) {
-					hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
+				if (F0.rows == 2 && F0.cols == 4) { /*OutputDebugString(L"OUT");**/
+					for (int i = 1; i < areas_men.rows; i++)
+					{
+						hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
+					}
 				}
 			}
 			else {
 				punto_broca = cv::Mat_<double>(0, 0);
-				for (int i = 0; i < areas_men.rows; i++) {
+				for (int i = 0; i < areas_men.rows; i++) 
+				
+				{
 					int k = findDrill(P, areas_men(i, 0));
 					if (k >= 0) {
 						//P.col(k).copyTo(punto_broca);
@@ -488,7 +494,6 @@ namespace CustomCameraLibrary {
 			return P;
 		}
 		return F0;
-		F0.copyTo(F);
 	}
 }
 

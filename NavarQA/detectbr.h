@@ -225,11 +225,11 @@ namespace CustomCameraLibrary {
 	*/
 	Point3d pointerPoint(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
 	
-		/*ofstream archivoP;
+		ofstream archivoP;
 		if (!archivoP.is_open()) {
-			archivoP.open("TODAS.txt", std::ios::app);
+			archivoP.open("ParalelosP1.txt", std::ios::app);
 
-		}*/
+		}
 		P1 = P1.t();
 		P2 = P2.t();
 		P3 = P3.t();
@@ -253,7 +253,7 @@ namespace CustomCameraLibrary {
 		PE = PM + val - cdata::f_cor.t();
 
 		//cout << "Punto final: " << PE;
-		//archivoP << "\t" <<PE<< "\n";
+		archivoP << "\t" <<PE<< "\n";
 		
 		
 		return Point3d(PE);
@@ -271,7 +271,8 @@ namespace CustomCameraLibrary {
 	*	@param Out vector que indica la vista del pointer; hacia donde apunta.
 	*	@return coordenadas en 3D del punto que toca la punta del pointer.
 	*/
-	Point3d pointerPoint2(Mat_<double> &P1, Mat_<double> &P2, Mat_<double> &P3, Mat_<double> &Out) {
+	Point3d pointerPoint2(Mat_<double> &P1, Mat_<double> &P2, Mat_<double> &P3, Mat_<double> &Out) 
+	{
 		//		Mat_<double> vP = (P1 - P3).cross(P2 - P3);								// vector perpendicular al circulo que esta sobre la 1ra esfera
 		
 		Mat_<double> vP2 = (P3 - P1).cross(P2 - P1);
@@ -719,7 +720,6 @@ namespace CustomCameraLibrary {
 					//				switch (Spheres[j].objR) {
 				case pointer:
 					bRigid[countBR].name = POINTER;
-					OutputDebugString(L"pointer");
 					break;
 				case femur:
 					bRigid[countBR].name = FEMUR;
