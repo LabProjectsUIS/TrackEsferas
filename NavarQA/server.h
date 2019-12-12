@@ -137,8 +137,8 @@ int CreateServer(int iConnectionType) {
 		//**************************************
 		// IP DONDE CORRER� EL SERVIDOR
 		//**************************************
-		//sprintf(szIPAddress, "%d.%d.%d.%d", 127, 0, 0, 1);
-		sprintf(szIPAddress, "%d.%d.%d.%d", 192, 168, 0, 101);
+		sprintf(szIPAddress, "%d.%d.%d.%d", 127, 0, 0, 1);
+		//sprintf(szIPAddress, "%d.%d.%d.%d", 192, 168, 0, 101);
 
 		// Initialize NatNet server with first detected ip address - use NatNet default port assignments
 		int retCode = theServer->Initialize(szIPAddress);
@@ -274,9 +274,15 @@ int CreateServer(int iConnectionType) {
 				pRigidBodyDescription->ID = POINTERR;
 			}
 			else if (strcmp(pRigidBodyDescription->szName, "FEMUR") == 0)
+			{
 				pRigidBodyDescription->ID = FEMURR;
+				OutputDebugString(L"ES FEMUR");
+			}
 			else if (strcmp(pRigidBodyDescription->szName, "TIBIA") == 0)
+			{
 				pRigidBodyDescription->ID = TIBIAA;
+				OutputDebugString(L"ES TIBIA");
+			}
 			else if (strcmp(pRigidBodyDescription->szName, "GAFAS") == 0)
 				pRigidBodyDescription->ID = GAFASS;
 			else if (strcmp(pRigidBodyDescription->szName, "BROCA") == 0)
@@ -436,7 +442,7 @@ int CreateServer(int iConnectionType) {
 		sResult = WaitForSingleObject(brSemaphore, INFINITE);
 		if (sResult == WAIT_OBJECT_0) {
 			for (int i = 0; i < pModels->nDataDescriptions; i++) {
-				OutputDebugString(L"Si hay");
+				//OutputDebugString(L"Si hay");
 
 
 				// MarkerSet data
@@ -450,7 +456,7 @@ int CreateServer(int iConnectionType) {
 
 					bdr = getBdrigid(pMS->szName, nbr);		// obtener los marcadores del cuerpo r�gido en cuesti�n
 					if (!empty(bdr.bdrigid)) {
-						OutputDebugString(L"Si hay 222");
+						//OutputDebugString(L"Si hay 222");
 						for (int iMarker = 0; iMarker < pOutFrame->MocapData[index].nMarkers; iMarker++) {
 							double x = (bdr.bdrigid(0, iMarker)) / 1000;
 							double y = (bdr.bdrigid(1, iMarker)) / 1000;

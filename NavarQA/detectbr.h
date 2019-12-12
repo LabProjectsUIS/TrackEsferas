@@ -627,8 +627,14 @@ namespace CustomCameraLibrary {
 	*	@see CustomCameraLibrary::Output
 	*	@return el número de cuerpos rígidos detectados.
 	*/
+	ofstream archivoDI;
+	
 	int joskstra(Mat_<float> spSet, Mat_<float> dspSet, BodyR *&bRigid) {
 		Sphere *Spheres;
+		if (!archivoDI.is_open())
+		{
+			archivoDI.open("distanciaMINMAX.txt", std::ios::app);
+		}
 
 		int i, i0, j, countBR;
 		float peso;
@@ -639,6 +645,9 @@ namespace CustomCameraLibrary {
 		Mat d = dspSet.reshape(1, 1);										// convertir a una matriz 1xn.
 		double min, max;
 		minMaxLoc(d, &min, &max);											// calcular la distancia mínima y máxima entre marcadores
+		archivoDI << "distancia minima" << min<<"distancia max"<<max;
+		
+
 		d.row(0).copyTo(vec);												// copiar el contenido de la matrix 1xn a un vector.
 
 		if ((Spheres = new Sphere[N]) == NULL) return 1;					// Crea dinámicamente el arreglo de etiquetas de esferas. 
@@ -749,7 +758,7 @@ namespace CustomCameraLibrary {
 				Spheres[i0].objR = -1;
 			}
 		}
-
+		archivoDI.close();
 		return countBR;
 	}
 

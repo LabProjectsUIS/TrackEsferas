@@ -331,7 +331,7 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
 			
 			//Tratamiento broca
-			if (Area > 15 && Area < 90 && Eccentr > 0.7 && NP_Broca < 2) 
+			if (Area > 90 && Area < 110) 
 				{
 				PP_Broca(0, NP_Broca) = x;
 				PP_Broca(1, NP_Broca) = y;
