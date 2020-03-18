@@ -272,6 +272,7 @@ int CreateServer(int iConnectionType) {
 			if (strcmp(pRigidBodyDescription->szName, "POINTER") == 0)
 			{
 				pRigidBodyDescription->ID = POINTERR;
+				OutputDebugString(L"POINTER");
 			}
 			else if (strcmp(pRigidBodyDescription->szName, "FEMUR") == 0)
 			{
@@ -286,15 +287,18 @@ int CreateServer(int iConnectionType) {
 			else if (strcmp(pRigidBodyDescription->szName, "GAFAS") == 0)
 				pRigidBodyDescription->ID = GAFASS;
 			else if (strcmp(pRigidBodyDescription->szName, "BROCA") == 0)
+			{
 				pRigidBodyDescription->ID = BROCAA;
-			archivoD << pRigidBodyDescription->ID<<"\n"; //testeando que elemento encontro
+				OutputDebugString(L"ES BROCA");
+			}
+			//archivoD << pRigidBodyDescription->ID<<"\n"; //testeando que elemento encontro
 
 			pDescription->arrDataDescriptions[index].type = Descriptor_RigidBody;
 		
 			pDescription->arrDataDescriptions[index].Data.RigidBodyDescription = pRigidBodyDescription;
 			pDescription->nDataDescriptions++;
-			archivoD << "dataset" << pDescription->arrDataDescriptions[index].type << "\n";
-			archivoD << "dataset" << pDescription->arrDataDescriptions[index].Data.RigidBodyDescription << "\n";
+			//archivoD << "dataset" << pDescription->arrDataDescriptions[index].type << "\n";
+			//archivoD << "dataset" << pDescription->arrDataDescriptions[index].Data.RigidBodyDescription << "\n";
 			index++;
 			// Marker Set Description
 			sMarkerSetDescription* pMarkerSetDescription = new sMarkerSetDescription();

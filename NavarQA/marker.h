@@ -42,7 +42,6 @@ namespace CustomCameraLibrary {
 		*/
 		double Marker::getX() { return xPos; }
 
-		double Marker::getZ() { return zPos; }
 
 		/**
 		* Establece la posición \a X de un marcador detectado en la escena.
@@ -56,7 +55,6 @@ namespace CustomCameraLibrary {
 		*/
 		void Marker::setY(float y) { yPos = y; }
 
-		void Marker::setZ(float z) { zPos = z; }
 		/**
 		* Obtiene el "tipo" que se le haya colocado a los marcadores (El "tipo" es asignado desde el constructor).
 		* @return un string que almacena el nombre de los marcadores.
@@ -107,7 +105,6 @@ namespace CustomCameraLibrary {
 		*/
 		double yPos;
 
-		double zPos;
 		/**
 		* Área del marcador.
 		*/

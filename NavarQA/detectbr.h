@@ -1,6 +1,7 @@
 #ifndef _DETECTBR_H_
 #define _DETECTBR_H_
 
+#include <iomanip>
 #include <stdio.h>
 #include <tchar.h>
 #include <windows.h>
@@ -17,7 +18,7 @@ namespace CustomCameraLibrary {
 	using namespace std;
 
 #define N_MARKERS 3				///< número de marcadores que la función joskstra() usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.
-
+#define N_MARKERSB 1
 	//		cout << A << endl;
 #define L_POINTER   219.70329913564//219.3295732//221.88//218.91
 #define TETHA -3.8985//-3.503764268//3.0544//3.17
@@ -37,6 +38,7 @@ namespace CustomCameraLibrary {
 	const int tibia = 3;	///< indicador que representa la tibia
 	const int gafas = 4;	///< indicador que representa las gafas
 	const int phanton = 5;	///< indicador que representa el phanton
+	const int broca = 6;///< indicador que representa la broca
 
 	float DELTA = 1.5;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 
@@ -227,7 +229,7 @@ namespace CustomCameraLibrary {
 	
 		ofstream archivoP;
 		if (!archivoP.is_open()) {
-			archivoP.open("ParalelosP1.txt", std::ios::app);
+			archivoP.open("Punto2.txt", std::ios::app);
 
 		}
 		P1 = P1.t();
@@ -252,13 +254,29 @@ namespace CustomCameraLibrary {
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
 
+		if (!PE.empty())
+		{
+			
+			archivoP << PE[0][0] << "\t";
+			archivoP << PE[0][1] << "\t";
+			archivoP << PE[0][2] << "\t";
+			archivoP << "\n";
+			//archivoP << PE << "\n";
+		}
+		
 		//cout << "Punto final: " << PE;
-		archivoP << "\t" <<PE<< "\n";
+		/*for (int i = 0; i < PE.rows; i++)
+		{
+			for (int j = 0; i < PE.cols; j++) {
+				archivoP<< PE[i][j] << "\t";
+			}
+			archivoP << "\n";
+		}
+	*/
 		
 		
 		return Point3d(PE);
-		//archivoP.close();
-		
+		archivoP.close();
 	}
 
 	/**
@@ -612,7 +630,7 @@ namespace CustomCameraLibrary {
 	/**
 	*	De el conjunto de esferas en la escena, encuentra los objetos rígidos.
 	*	A cada marcador o esfera se le asocia una etiqueta que se compone principalmente de valores:
-	- peso: inidica la distancia de un nodo o esfera a la esfera seleccionada.
+	- peso: indica la distancia de un nodo o esfera a la esfera seleccionada.
 	- marca: indica si el nodo ya ha sido analizado.
 	- antecesor: inidca el nodo que le sigue como parte del mismo objeto rígido.
 	*
@@ -633,8 +651,151 @@ namespace CustomCameraLibrary {
 		Sphere *Spheres;
 		if (!archivoDI.is_open())
 		{
-			archivoDI.open("distanciaMINMAX.txt", std::ios::app);
+			archivoDI.open("ubicacion3D.txt", std::ios::app);
 		}
+
+		int i, i0, j, countBR,w,h;
+		float peso;
+		vector<float> vec;													// vector que llevará el conjunto de distancias teóricas de los cuerpos rígidos.
+		int nBRigid = dspSet.rows;											// número de cuerpos rígidos que se deberían detectar.
+		int  N = spSet.rows;
+		/*if (!spSet.empty() && spSet.rows==4 && spSet.cols==3) {
+			for (w = 0; w < spSet.rows; w++)
+			{
+				for (int h = 0; h < spSet.cols; h++)
+				{
+					archivoDI << spSet[w][h] << "\t";
+				}
+				archivoDI << "\t";
+			}
+			//archivoDI << "\n";
+		}
+		archivoDI.close();*/
+		int  N2 = dspSet.rows;
+		Mat d = dspSet.reshape(1, 1);										// convertir a una matriz 1xn.
+		double min, max;
+		minMaxLoc(d, &min, &max);											// calcular la distancia mínima y máxima entre marcadores
+		d.row(0).copyTo(vec);												// copiar el contenido de la matrix 1xn a un vector.
+		
+		if ((Spheres = new Sphere[N]) == NULL) return 1;					// Crea dinámicamente el arreglo de etiquetas de esferas. 
+																			// inicializar las etiquetas de nodo 
+		for (i = 0; i < N; i++) {
+			Spheres[i].nro = i;
+			if (i != 0) {
+				Spheres[i].prev = -1;										// aún no se ha definido predecesor. 
+				Spheres[i].peso = -1;										// infinito .
+				Spheres[i].marca = 0;
+				Spheres[i].objR = -1;
+			}
+			else {
+				Spheres[i].prev = -1;										// aún no se ha definido predecesor. 
+				Spheres[i].peso = 0;										// distancia del nodo inicial o de referencia a sí mismo es cero.
+				Spheres[i].marca = 0;
+				Spheres[i].objR = -1;										// -1, no se ha identificado el objeto rígido al que pertenece.
+			}
+		}
+
+		countBR = 0;
+		while (1) {
+			peso = -1;
+			i0 = -1;
+			Mat temp;
+
+			for (i = 0; i < N; i++) {										// busca entre todos los nodos no marcados el más próximo, descartando los de peso infinito (-1).
+				if (Spheres[i].marca == 0 && Spheres[i].peso == 0)			// si el nodo no esta marcado y su peso es mayor o igual a cero.
+					if (peso == -1) {
+						peso = Spheres[i].peso;								// se hace peso igual al peso del nodo para saltar el if.
+						i0 = i;												// referenciamos el nodo a analizar.
+					}
+			}
+
+			if (i0 == -1) { break; }										// termina si no encuentra.
+
+			int pos;
+			for (i = 0; i < N; i++) {
+				if (Spheres[i].marca == 0 && i0 != i) {						// si el nodo no esta marcado y el nodo no es él mismo.
+					pos = -1;
+					float n = norm(spSet.row(i0) - spSet.row(i));			// calcular la distancia entre los dos nodos.
+
+					if (n <= max + DELTA && n >= min - DELTA) {
+						pos = analizer(n, vec);
+					}
+
+					if (pos >= 0) {
+						Spheres[i].marca = 1;
+						Spheres[i].prev = i0;
+						Spheres[i].peso = n;
+						Spheres[i].objR = numBRigid(pos, dspSet);
+						temp.push_back(spSet.row(i));						// se va creando la matriz temporal con los datos del cuerpo rígido que va detectando.
+																			//						cout << "***" << pos << endl;
+						j = i;
+					}
+					else Spheres[i].peso = 0;
+
+				}
+			}
+
+			//***************************DUVAN PUSO ESTO, ESTA MAL!!!!!, DEBE SER +1
+			//***********************
+			if (temp.rows + 1 > N_MARKERSB) {
+				//if (temp.rows + 2 > N_MARKERS) {										// identificar O.R. con un número de marcadores definidos
+				Spheres[i0].marca = 1;
+				Spheres[i0].prev = i0;
+				Spheres[i0].objR = Spheres[j].objR;
+				temp.push_back(spSet.row(i0));								// termina de completar la matriz temporal.
+																			//vec_br.push_back(temp);									// almacenar la matriz temporal dentro del arreglo.
+				bRigid[countBR].bdr = Spheres[j].objR;						// marcar el objeto rígido.
+				int ref = 99;
+				if ((Spheres[0].objR == Spheres[1].objR) || (Spheres[0].objR == Spheres[2].objR)) {
+					ref = Spheres[0].objR;
+				}
+				else if (Spheres[1].objR == Spheres[2].objR) {
+					ref = Spheres[1].objR;
+				}
+				switch (ref) {
+					//				switch (Spheres[j].objR) {
+				case pointer:
+					bRigid[countBR].name = POINTER;
+					OutputDebugString(L"POINTER");
+					break;
+				case femur:
+					bRigid[countBR].name = FEMUR;
+					break;
+				case tibia:
+					bRigid[countBR].name = TIBIA;
+					break;
+				case gafas:
+					bRigid[countBR].name = GAFAS;
+					break;
+				case phanton:
+					bRigid[countBR].name = PHANTON;
+					OutputDebugString(L"broca");
+					break;
+				default:
+					break;
+				}
+				bRigid[countBR].bdrigid = temp.t();								// añadir las coordenadas de las esferas del objeto rígido.
+				bRigid[countBR].nmarkers = temp.rows;							// número de marcadores en el O.R.
+																				//Mat temp2;
+																				//reduce(temp, temp2, 0, CV_REDUCE_SUM);						// sumar las filas de las coordenadas de las esferas de los objeto rígido
+																				//bRigid[countBR].centroid = temp2 / temp.rows;					// calcular el centroide del objeto rígido.
+																				//			    cout << "*********" << endl << bRigid[countBR].bdrigid << endl << endl;
+				getEulerAngles(bRigid, countBR);								// Detectar los ángulos de Euler.
+				countBR++;
+			}
+			else {																// objeto rígido no identificado.
+				//OutputDebugString(L"NO SE QUE ES");
+				Spheres[i0].marca = 1;
+				Spheres[i0].prev = i0;
+				Spheres[i0].objR = -1;
+			}
+		}
+		archivoDI.close();
+		return countBR;
+	}
+
+	int joskstraB(Mat_<float> spSet, Mat_<float> dspSet, BodyR *&bRigid) {
+		Sphere *Spheres;
 
 		int i, i0, j, countBR;
 		float peso;
@@ -645,8 +806,6 @@ namespace CustomCameraLibrary {
 		Mat d = dspSet.reshape(1, 1);										// convertir a una matriz 1xn.
 		double min, max;
 		minMaxLoc(d, &min, &max);											// calcular la distancia mínima y máxima entre marcadores
-		archivoDI << "distancia minima" << min<<"distancia max"<<max;
-		
 
 		d.row(0).copyTo(vec);												// copiar el contenido de la matrix 1xn a un vector.
 
@@ -710,7 +869,7 @@ namespace CustomCameraLibrary {
 
 			//***************************DUVAN PUSO ESTO, ESTA MAL!!!!!, DEBE SER +1
 			//***********************
-			if (temp.rows + 1 > N_MARKERS) {
+			if (temp.rows + 1 > N_MARKERSB) {
 				//if (temp.rows + 2 > N_MARKERS) {										// identificar O.R. con un número de marcadores definidos
 				Spheres[i0].marca = 1;
 				Spheres[i0].prev = i0;
@@ -729,16 +888,11 @@ namespace CustomCameraLibrary {
 					//				switch (Spheres[j].objR) {
 				case pointer:
 					bRigid[countBR].name = POINTER;
+					OutputDebugString(L"POINTER");
 					break;
-				case femur:
-					bRigid[countBR].name = FEMUR;
-					break;
-				case tibia:
-					bRigid[countBR].name = TIBIA;
-					break;
-				case gafas:
-					bRigid[countBR].name = GAFAS;
-					break;
+				case broca:
+					bRigid[countBR].name = BROCA;
+					OutputDebugString(L"BROCA");
 				default:
 					break;
 				}
@@ -758,10 +912,8 @@ namespace CustomCameraLibrary {
 				Spheres[i0].objR = -1;
 			}
 		}
-		archivoDI.close();
 		return countBR;
 	}
-
 	/*	Mat_<int> findPointerDirection(Mat_<double> OR) {
 	for (int i = 0; i < OR.cols; i++) {
 	for (int j = 1; j < OR.cols; j++) {

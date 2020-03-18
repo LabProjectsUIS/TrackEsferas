@@ -132,7 +132,7 @@ void NavarQT::on_pushButton_3_clicked() {
 			process_client->kill();
 		}
 		updater->setDetectRigids(false);
-		ui->body->setCurrentIndex(1);
+		ui->body->setCurrentIndex(2);
 		break;
 	case 4:
 	case 6:
@@ -567,11 +567,11 @@ void NavarQT::startCalibration() {
 	
 	switch (calibRetries) {
 	case 3:
-		fileName = "calib/stereo/otros/Calib22N.yml";
+		fileName = "calib/stereo/otros/Calib_17M.yml";
 		doCalib = false;
 		break;
 	default:
-		fileName = "calib/stereo/otros/Calib22N.yml";
+		fileName = "calib/stereo/otros/Calib_17M.yml";
 		break;
 	}	
 	if (doCalib) { //Conexion con matlab toolkit
@@ -650,7 +650,7 @@ bool NavarQT::readParams(std::string fileName) {
 		cv::Mat_<double> err(1, 1);
 		//double err;
 		fs["emax"] >> err;
-		if (err.empty() || *err[0] > 0.5) {
+		if (err.empty() || *err[0] > 0.9) {
 			calibRetries++; //vuelve a calibrar si el eror es mayor de 0.5, se pone 0,7 porq no se ha podido mejorar la calibración
 			
 			return false;

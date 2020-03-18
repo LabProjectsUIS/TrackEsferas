@@ -80,6 +80,7 @@ namespace CustomCameraLibrary {
 		cameraHeight = height;
 
 		Py_Initialize();
+		Sleep(410);
 		import_array1(-1);
 
 		/* Try to import tracker function from python */

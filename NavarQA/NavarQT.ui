@@ -1684,8 +1684,8 @@ padding: 6 px;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>120</width>
-            <height>113</height>
+            <width>138</width>
+            <height>128</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -2008,11 +2008,11 @@ padding: 6 px;
  </tabstops>
  <resources>
   <include location="NavarQT.qrc"/>
-  <include location="../../../../../.designer/backup/NavarQT.qrc"/>
+  <include location="NavarQT.qrc"/>
  </resources>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
   <buttongroup name="buttonGroup_instructions"/>
+  <buttongroup name="buttonGroup"/>
  </buttongroups>
 </ui>

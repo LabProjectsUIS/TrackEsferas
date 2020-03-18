@@ -142,8 +142,8 @@ public:
     QPushButton *pushButton_tibia;
     QPushButton *pushButton_femur;
     QPushButton *pushButton_9;
-    QButtonGroup *buttonGroup;
     QButtonGroup *buttonGroup_instructions;
+    QButtonGroup *buttonGroup;
 
     void setupUi(QWidget *NavarQTClass)
     {
@@ -806,7 +806,7 @@ public:
         scrollArea_cases->setAlignment(Qt::AlignJustify|Qt::AlignTop);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 120, 113));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 138, 128));
         gridLayout_7 = new QGridLayout(scrollAreaWidgetContents);
         gridLayout_7->setSpacing(0);
         gridLayout_7->setContentsMargins(11, 11, 11, 11);

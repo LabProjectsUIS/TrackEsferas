@@ -202,7 +202,7 @@ void GUIUpdater::setBroca(CustomCameraLibrary::BodyR &rigid, cv::Mat_<double> &d
 * Envía los frames de cada una de las cámaras a la GUI mediante señales y controla la lógica de captura de imágenes.
 */
 void GUIUpdater::ShowCameras() {
-	pics2Take = 10;
+	pics2Take = 20;
 	int cameraWidth_1 = camera_1->Width(); // Obtener la propiedad ancho de la resolucián de la cámara derecha.
 	int cameraHeight_1 = camera_1->Height(); // Obtener la propiedad alto de la resolucián de la cámara derecha.
 
@@ -297,6 +297,7 @@ void GUIUpdater::ShowCameras() {
 */
 void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame, cv::Mat_<double> &P, cv::Mat_<double> &A, cv::Mat_<double> &PP_Broca) {
 	int objets = cframe.markerCount();
+	int obj = 0;
 	int c = 0;
 	int modif = 0;
 	//if (objets % 5 == 2) {
@@ -304,15 +305,38 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 	//}
 	//Mat_<double> PP(2, objets-modif); // Array de puntos del frame
 	int NP_Broca = 0;
+	//evaluar cuanto objetos son mayores de area que el area mas pequeña
+	
 
 	cv::Mat_<double> PP(2, objets); // Array de puntos del frame
-									//int NP_Broca = 0;
+	
 	ofstream archivoL;
 	if (!archivoL.is_open()) {
-		//archivoL.open("Matriz.txt", std::ios::app);
+		archivoL.open("Matriz.txt", std::ios::app);
 
 	}
 	if (objets > 0) {
+		
+		switch (objets)
+		{
+		case 3: 
+			modif = 0; break;
+		case 5:
+			modif = 0; break;
+		case 8:
+			modif = 1; break;
+		case 10:
+			modif = 0; break;
+		case 13:
+			modif = 2; break;
+		case 15:
+			modif = 0; break;
+		case 18:
+			modif = 2; break;
+		default:
+			break;
+		}
+		cv::Mat_<double> PP_B(2, objets - modif); //array de la broca
 		//Mat_<double> AA(objets-modif, 1);
 		cv::Mat_<double> AA(objets, 1);
 		
@@ -329,9 +353,13 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y << " e:" << Eccentr << " Ar:" << Area;
 			cv::String text = ostr.str();
 			putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
-			
+
+			if (Area < 55) 
+			{
+				modif = modif + 1;
+			}
 			//Tratamiento broca
-			if (Area > 90 && Area < 110) 
+			/*if (Area > 90 && Area < 110)
 				{
 				PP_Broca(0, NP_Broca) = x;
 				PP_Broca(1, NP_Broca) = y;
@@ -346,13 +374,21 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 				}
 			else
 			break;
-			
-			/*PP(0, c) = x;
-			PP(1, c) = y;
-			AA(c, 0) = obj.getArea();
-			
-			c++;*/
+			*/
+			//se excluye la broca a un rango mas alto de areas para excluir la esfera mas pequeña de todas las herramientas
+			double ar = Area;
+			if (Area > 55) //el siguiente al elemento más pequeño, la esfera mas pequeña del pointer la mayor area detectada es 52
+			{
+				PP_B(0, NP_Broca) = x;
+				PP_B(1, NP_Broca) = y;
+				NP_Broca = NP_Broca + 1;
+			}
+				PP(0, c) = x;
+				PP(1, c) = y;
+				AA(c, 0) = obj.getArea();
+				c++;		
 
+			
 			/*					for (int j = 0; j < PP.rows; j++) {
 			switch (j)
 			{
@@ -371,7 +407,27 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 
 			//				}
 		}
-		archivoL << "filas:"<<PP.rows<<" ,columnas: "<<PP.cols<<"\n";
+		/*
+		for (int i = 0; i < PP_B.rows-1; i++)
+		{
+			for (int j = 0; j < PP_B.cols -1; j++)
+			{
+				archivoL << "Broca:" << PP_B[i][j] << "\t";
+			}
+			archivoL << "\n";
+		}*/
+
+		for (int i = 0; i < PP_B.rows; i++)
+		{
+			for (int j = 0; j < PP_B.cols; j++)
+			{
+				//archivoL << PP_B[i][j] << "\t";
+			}
+			//archivoL << "\n";
+		}
+
+		archivoL.close();
+		/*archivoL << "filas:"<<PP.rows<<" ,columnas: "<<PP.cols<<"\n";
 		for (int i = 0; i < PP.rows ; i++)
 		{
 			for (int j = 0; j < PP.cols ; j++)
@@ -380,7 +436,7 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			}
 			//archivoL << "\n";
 		}
-		archivoL.close();
+		archivoL.close();*/
 		/*if (NP_Broca == 2) {
 		Point P1,P2,Pa,Pb;
 		Mat_<double> temp;
@@ -415,6 +471,7 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 		//line(matFrame, Pa, Pb, Scalar(255, 255, 255), 1, 8, 0);
 
 		//}
+		PP_B.copyTo(PP_Broca);
 		PP.copyTo(P);
 		AA.copyTo(A);
 	}
@@ -457,7 +514,7 @@ void GUIUpdater::writeMatrices() {
 		cv::Point(erosion_size, erosion_size));
 	cv::Mat_<double> P1_x_acum, P2_x_acum, P1_y_acum, P2_y_acum;
 
-	CustomCameraLibrary::initPython(1024, 1280);
+	//CustomCameraLibrary::initPython(1024, 1280);
 
 	cv::Mat_<double> temporal, angles;
 	FILE *fp = fopen("Resources/Casos/1/matriz.csv", "w");
@@ -583,7 +640,9 @@ void GUIUpdater::getRigidsData() {
 	int cameraHeight_2 = camera_2->Height();
 
 	int samples = 0;
+	int samplesbr = 0;
 	int sample_limit = 1;
+	int sample_limitBr = 1;
 
 	int erosion_type = cv::MORPH_CROSS;
 	int erosion_size = 2;
@@ -598,7 +657,7 @@ void GUIUpdater::getRigidsData() {
 	cv::Mat matFrame_2(cv::Size(cameraWidth_2, cameraHeight_2), CV_8UC1);
 	const int BACKBUFFER_BITSPERPIXEL = 8;
 
-	CustomCameraLibrary::initPython(1024, 1280);
+	//CustomCameraLibrary::initPython(1024, 1280);
 
 	cv::Mat erosion_1, erosion_2;
 
@@ -608,6 +667,7 @@ void GUIUpdater::getRigidsData() {
 		cv::Size(2 * erosion_size + 1, 2 * erosion_size + 1),
 		cv::Point(erosion_size, erosion_size));
 	cv::Mat_<double> P1_x_acum, P2_x_acum, P1_y_acum, P2_y_acum;
+	cv::Mat_<double> P1Br_x_acum, P2Br_x_acum, P1Br_y_acum, P2Br_y_acum;
 	//CustomCameraLibrary::Cloud Pointer(fileName, AUTO);
 
 	//ADICIONADO PARA VERIFICAR DATOS ENVIADOS
@@ -666,10 +726,67 @@ void GUIUpdater::getRigidsData() {
 			imshow("Camara Izquierda", matFrame_2);
 			frame_2->Release();
 		}
-		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols)) {
+		if ((!PP_Broca1.empty() && !PP_Broca2.empty()) && (PP_Broca1.cols == PP_Broca2.cols)) {
+			bool flag = true;
+			if (samplesbr < sample_limitBr)
+			{
+				if (PP_Broca1.cols == P1Br_x_acum.cols) {
+					P1Br_x_acum.push_back(PP_Broca1.row(0));
+					P1Br_y_acum.push_back(PP_Broca1.row(1));
+					P2Br_x_acum.push_back(PP_Broca2.row(0));
+					P2Br_y_acum.push_back(PP_Broca2.row(1));
+					samplesbr++;
+				}
+				else {
+					samplesbr = 1;
+					P1Br_x_acum = PP_Broca1.row(0);
+					P1Br_y_acum = PP_Broca1.row(1);
+					P2Br_x_acum = PP_Broca2.row(0);
+					P2Br_y_acum = PP_Broca2.row(1);
+				}
+			}
+			else {
+				samplesbr = 0;
+				if (PP_Broca1.cols == P1Br_x_acum.cols) {
+					filter(P1Br_x_acum, P1Br_y_acum, PP_Broca1);
+					filter(P2Br_x_acum, P2Br_y_acum, PP_Broca2);
+					P1Br_x_acum.release(); P2Br_x_acum.release(); P1Br_y_acum.release(); P2Br_y_acum.release();
+				}
+				Beep(480, 50);
+
+				CustomCameraLibrary::stereo_triangulation(PP_Broca2, PP_Broca1, cdata::om, cdata::T, cdata::fc_left,
+					cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
+					cdata::kc_right, 0, XLBroca, XRBroca);
+
+
+				//COMPARAR DISTANCIAS
+				int s = 0;
+				
+
+				if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
+					CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::BrocaDis.rows + 1];
+					CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XLBroca.t(), cdata::distances, CustomCameraLibrary::rigid);
+
+					//OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
+					CustomCameraLibrary::StartServer();
+					doStartServer = false;
+					CustomCameraLibrary::StreamFrame();
+					emit startServer();
+				}
+
+				wResult = WaitForSingleObject(CustomCameraLibrary::sSemaphore, INFINITE);	// espera por la indicación del semáforo para seguir el hilo de ejecución//
+				if (wResult == WAIT_OBJECT_0) {
+					CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::BrocaDis.rows + 1];
+					CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XLBroca.t(), cdata::distances, CustomCameraLibrary::rigid);
+				}
+
+		}
+		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols)) 
+		{
 			Beep(350, 50);
 
-			if (samples < sample_limit) {
+			if (samples < sample_limit) 
+			{
 				if (P1.cols == P1_x_acum.cols) {
 					P1_x_acum.push_back(P1.row(0));
 					P1_y_acum.push_back(P1.row(1));
@@ -692,13 +809,13 @@ void GUIUpdater::getRigidsData() {
 					filter(P2_x_acum, P2_y_acum, P2);
 					P1_x_acum.release(); P2_x_acum.release(); P1_y_acum.release(); P2_y_acum.release();
 
-					CustomCameraLibrary::stereo_triangulation(P2, P1, cdata::om, cdata::T, cdata::fc_left,
+						CustomCameraLibrary::stereo_triangulation(P2, P1, cdata::om, cdata::T, cdata::fc_left,
 						cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
 						cdata::kc_right, 0, XL, XR);
 
 					if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
 						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
-						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
+						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(),cdata::distances, CustomCameraLibrary::rigid);
 						
 						//OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
 						CustomCameraLibrary::StartServer();
@@ -712,13 +829,12 @@ void GUIUpdater::getRigidsData() {
 						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
 						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
 
-						//Triangulando broca
-						if (PP_Broca1(1, 0) != 9999 && PP_Broca2(1, 0) != 9999) {
-							Beep(480, 50);
+						//TRIANGULANDO BROCA
 
-							CustomCameraLibrary::stereo_triangulation(PP_Broca2, PP_Broca1, cdata::om, cdata::T, cdata::fc_left,
-								cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
-								cdata::kc_right, 0, XLBroca, XRBroca);
+						//if (PP_Broca1(1, 0) != 9999 && PP_Broca2(1, 0) != 9999) {
+						
+							//JOSKSTRA PARA BROCA
+							int N = 1;
 							if (CustomCameraLibrary::nbr > 0)
 							{
 								for (int f = 0; f < CustomCameraLibrary::nbr; f++) {
@@ -732,8 +848,8 @@ void GUIUpdater::getRigidsData() {
 							}
 							else
 								emit pointerNotDetected();
-							XBroca = XLBroca.t();
-							XBroca = CustomCameraLibrary::initDrill(matFrame_1, matFrame_2, PP_Broca1, PP_Broca2);
+							//XBroca = XLBroca.t();
+							//XBroca = CustomCameraLibrary::initDrill(matFrame_1, matFrame_2, PP_Broca1, PP_Broca2);
 
 							/*XBrocaNew(0, 0) = 0;
 							XBrocaNew(0, 1) = 0;
@@ -742,16 +858,16 @@ void GUIUpdater::getRigidsData() {
 							XBrocaNew(1, 1) = 3;
 							XBrocaNew(1, 2) = 2;*/
 
-							XBrocaNew(0, 0) = XLBroca(0, 0);
+							/*XBrocaNew(0, 0) = XLBroca(0, 0);
 							XBrocaNew(0, 1) = XLBroca(1, 0);
 							XBrocaNew(0, 2) = XLBroca(2, 0);
 							XBrocaNew(1, 0) = XLBroca(0, 1);
 							XBrocaNew(1, 1) = XLBroca(1, 1);
 							XBrocaNew(1, 2) = XLBroca(2, 1);
 							XBrocaNew(0, 3) = 0;
-							XBrocaNew(1, 3) = 0;
+							XBrocaNew(1, 3) = 0;*/
 
-							setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBrocaNew);
+							//setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBrocaNew);
 							//setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBroca);
 
 							CustomCameraLibrary::nbr++;
@@ -849,7 +965,7 @@ bool GUIUpdater::getPointerData(const std::string &fileName) {
 
 	CustomCameraLibrary::Cloud Pointer(fileName, AUTO);
 
-	CustomCameraLibrary::initPython(1024, 1280);
+	//CustomCameraLibrary::initPython(1024, 1280);
 
 	cv::Mat element = cv::getStructuringElement(erosion_type,
 		cv::Size(2 * erosion_size + 1, 2 * erosion_size + 1),

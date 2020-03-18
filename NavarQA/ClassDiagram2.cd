@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CustomCameraLibrary::Marker">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAAAAQAAAAAAAAAAGAQAAARgBAIAAAAAAgWAIABE=</HashCode>
+      <FileName>marker.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomCameraLibrary::cFrame">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAIAAAAAAACAAICAABACQA=</HashCode>
+      <FileName>marker.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomCameraLibrary::Cloud">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQCBBAAAAAAACSAADIAEAAQARABDOAAABGAAAAAAEg=</HashCode>
+      <FileName>pointcloud.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NATUtils">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAABAAQAAAA=</HashCode>
+      <FileName>NATUtils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pointerCalib">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAIAAgAAAAAAAAAAAAAAAAAAAAEAAAgAA=</HashCode>
+      <FileName>pointerCalib.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NavarQT">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQACgEARBIBEJEQIACAKBAgECgsAEAAIAoAAgAAAAE=</HashCode>
+      <FileName>NavarQT.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUIUpdater">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ERABEEAAAQCCAAACQAKBMJGJAKggAEACYAUDINAAAAI=</HashCode>
+      <FileName>GUIUpdater.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_NavarQTClass">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>z0AQAISRjf8YEJeQTAIQwAEAIUQC4qAAGKSQYFDifHE=</HashCode>
+      <FileName>GeneratedFiles\ui_NavarQT.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::NavarQTClass" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_NavarQT.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="`anonymous-namespace'::initializer">
+    <Position X="8.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEA=</HashCode>
+      <FileName>GeneratedFiles\qrc_NavarQT.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CustomCameraLibrary::Output" Collapsed="true">
+    <Position X="4.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAQAAAAAAAACAAAAgAAAEAEAAIAEAAAAQAQA=</HashCode>
+      <FileName>detectbr.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CustomCameraLibrary::Label">
+    <Position X="10.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAQAAAAAAAAAAAAAEAAAAAAAABACAAAAAA=</HashCode>
+      <FileName>detectbr.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CustomCameraLibrary::tip">
+    <Position X="8.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>drill.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_1013_1">
+    <Position X="2.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgAQAAAAA=</HashCode>
+      <FileName>NATUtils.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_GUIUpdater_t">
+    <Position X="12.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_GUIUpdater.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_NavarQT_t">
+    <Position X="14" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_NavarQT.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="CustomCameraLibrary::BodyR" Collapsed="true">
+    <Position X="4.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>detectbr.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="CustomCameraLibrary::Sphere" Collapsed="true">
+    <Position X="12.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>detectbr.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PointNT" Collapsed="true">
+    <Position X="14" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PointCloudT" Collapsed="true">
+    <Position X="12.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="FeatureT" Collapsed="true">
+    <Position X="10.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="FeatureEstimationT" Collapsed="true">
+    <Position X="8.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="FeatureCloudT" Collapsed="true">
+    <Position X="6.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="RadiusOutlierRemovalT" Collapsed="true">
+    <Position X="8.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="VoxelGridT" Collapsed="true">
+    <Position X="14" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="NormalEstimationT" Collapsed="true">
+    <Position X="10.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="KdTreeT" Collapsed="true">
+    <Position X="8.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SampleConsensusPrerejectiveT" Collapsed="true">
+    <Position X="10.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>icp.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Quat" Collapsed="true">
+    <Position X="2.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NATUtils.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="EulerAngles" Collapsed="true">
+    <Position X="2.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NATUtils.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="HMatrix" Collapsed="true">
+    <Position X="12.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NATUtils.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="QuatPart" Collapsed="true">
+    <Position X="6.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYAE=</HashCode>
+      <FileName>NATUtils.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

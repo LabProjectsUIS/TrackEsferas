@@ -405,13 +405,17 @@ namespace CustomCameraLibrary {
 		cout << A;
 		bool state =  false;
 		//if (!detect_broca && A.rows % 5 == 0 && A.rows <= MAX_ESFERA) {
-		if (!detect_broca && A.rows <= MAX_ESFERA) {
+		if (!detect_broca && A.rows <= MAX_ESFERA) { //si no es broca y si las filas de A son menores o iguales a el limite(20)
 			int x=0;
-			for (int i = 0; i < A.rows; i++) {
-				if (A(i, 0) < AREA) {
+			for (int i = 0; i < A.rows; i++) //recorriendo A hasta el numero de filas
+			{ 
+				int s = A.rows;
+				double uno = A(i, 0);
+				if (A(i, 0) < 60) {	//evaluando si las areas son menores a 55
 					if (x < (A.rows / 5) + 1) {
 						areas_men.push_back(i);		// guardar posición de las áreas más pequeñas.
 						state = true;
+						
 						}
 					else {
 						cout << "ERROR: Encontradas más esferas pequeñas >> correspondence.h" << endl;
@@ -438,19 +442,26 @@ namespace CustomCameraLibrary {
 				}
 			}
 		}
+
 		return state;
 	}
-	
+	/**
+	*	Detecta la correspondencia de las esferas de la cámara izq con la derecha.
+	*	@param P es el conjunto de esferas.
+	*	@param A es el conjunto de áreas.
+	*	@param	F_Broca es el conjunto de esferas de la broca
+	*	@return un conjunto de esferas ordenadas según la correspondencia.
+	**/
 	cv::Mat_<double> CorrespondenceDetection(cv::Mat_<double> P, cv::Mat_<double> A, cv::Mat_<double> F_Broca) {
 		cv::Mat_<double> F0;
 		cv::Mat_<int> areas_men;		//	posición de las áreas menores
 		//buscar la segunda area menor tal vez asi
-		if (!A.empty() && areas(A, areas_men)) {
-			//cout << areas_men;
-			
-			if (!detect_broca) { //sólo si esta detectando broca
+		if (!A.empty() && areas(A, areas_men)) // si el arreglo de areas no es vacio, y si hay areas pequeñas (esfera mas pequeña) 
+		{
+			if (!detect_broca) 
+			{ 
 				F0 = findSpheres(P, areas_men(0, 0));
-				if (F0.rows == 2 && F0.cols == 3) { /*OutputDebugString(L"OUT");**/
+				if (F0.rows == 2 && F0.cols == 3) { 
 					for (int i = 1; i < areas_men.rows; i++)
 					{
 						hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);

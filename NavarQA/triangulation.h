@@ -58,13 +58,18 @@ namespace CustomCameraLibrary {
 	*
 	* (c)Jean - Yves Bouguet - Intel Corporation - April 9th, 2003*/
 	void stereo_triangulation(Mat_<double> xL, Mat_<double> xR, Mat_<double> om, Mat_<double> T, Mat_<double> fc_left, Mat_<double> cc_left, vector<double> kc_left, double alpha_c_left, Mat_<double> fc_right, Mat_<double> cc_right, vector<double> kc_right, double alpha_c_right, Mat_<double>& XL, Mat_<double>& XR) {
-		Mat_<double> xt, xtt, R, u, T_vect, DD, n_xt2, n_xtt2, u2, u3, dot_uT, dot_xttT, dot_xttu, NN1, NN2, Zt, Ztt, X1, X2;
+		Mat_<double> xt, xtt, R, u, T_vect, DD, n_xt2, n_xtt2, u2, u3, dot_uT, dot_xttT, dot_xttu, NN1, NN2, Zt, Ztt, X1, X2, transXL;
 		normalize_pixel(xL, fc_left, cc_left, kc_left, alpha_c_left, xt);
 		normalize_pixel(xR, fc_right, cc_right, kc_right, alpha_c_right, xtt);
 		xt.push_back(cv::Mat::ones(1, xt.cols, CV_64F));
 		xtt.push_back(cv::Mat::ones(1, xtt.cols, CV_64F));
 		int N = xt.cols;
-
+		
+		ofstream archivoXL;
+		if (!archivoXL.is_open())
+		{
+			archivoXL.open("XL2.txt", std::ios::app);
+		}
 		//-- - Rotation matrix corresponding to the rigid motion between left and right cameras :
 		Rodrigues(om, R);
 
@@ -99,6 +104,33 @@ namespace CustomCameraLibrary {
 		XL = 0.5 * (X1 + X2);
 		//-- - Right coordinates :
 		XR = R*XL + T_vect;
+		transXL = XL.t();
+
+		int m = -1;
+		int s = -1;
+		
+		if (transXL.rows == 4 && transXL.cols == 3)
+		{
+			for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
+			{
+				for (int s = 0; s < transXL.cols; s++) //son 3 columnas entocnes de 0 a 2
+				{
+					if (transXL[m][s] == NULL || transXL.empty())
+					{
+						break;
+					}
+					else
+					{
+						archivoXL << transXL[m][s] << "\t";
+					}
+				}
+				archivoXL << "\t";
+			}
+
+			archivoXL << "\n";
+		}
+		
+	archivoXL.close();
 	}
 
 	/**
