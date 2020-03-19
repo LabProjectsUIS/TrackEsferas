@@ -251,7 +251,7 @@ int CreateServer(int iConnectionType) {
 	* @see CustomCameraLibrary::joskstra()
 	* @param pDescription DataSet.
 	*/
-	void BuildDescription(sDataDescriptions* pDescription) { //EL ERRROR ESTÁ ACA
+	void BuildDescription(sDataDescriptions* pDescription) { //EL ERROR ESTÁ ACA
 		pDescription->nDataDescriptions = 0;
 		int index = 0;
 		ofstream archivoD;
