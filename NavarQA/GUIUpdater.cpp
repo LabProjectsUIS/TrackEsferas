@@ -726,7 +726,9 @@ void GUIUpdater::getRigidsData() {
 			imshow("Camara Izquierda", matFrame_2);
 			frame_2->Release();
 		}
-		if ((!PP_Broca1.empty() && !PP_Broca2.empty()) && (PP_Broca1.cols == PP_Broca2.cols)) {
+		if ((!PP_Broca1.empty() && !PP_Broca2.empty()) && (PP_Broca1.cols == PP_Broca2.cols))
+		{
+			doStartServer = true;
 			bool flag = true;
 			if (samplesbr < sample_limitBr)
 			{
@@ -768,10 +770,14 @@ void GUIUpdater::getRigidsData() {
 					CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XLBroca.t(), cdata::distances, CustomCameraLibrary::rigid);
 
 					//OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
-					CustomCameraLibrary::StartServer();
+					//CustomCameraLibrary::StartServer();
 					doStartServer = false;
 					CustomCameraLibrary::StreamFrame();
 					emit startServer();
+				}
+				else
+				{
+					int y = 0;
 				}
 
 				wResult = WaitForSingleObject(CustomCameraLibrary::sSemaphore, INFINITE);	// espera por la indicación del semáforo para seguir el hilo de ejecución//
@@ -783,6 +789,7 @@ void GUIUpdater::getRigidsData() {
 		}
 		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols)) 
 		{
+			doStartServer = true;
 			Beep(350, 50);
 
 			if (samples < sample_limit) 
@@ -812,7 +819,7 @@ void GUIUpdater::getRigidsData() {
 						CustomCameraLibrary::stereo_triangulation(P2, P1, cdata::om, cdata::T, cdata::fc_left,
 						cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
 						cdata::kc_right, 0, XL, XR);
-
+				
 					if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
 						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
 						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(),cdata::distances, CustomCameraLibrary::rigid);
@@ -823,7 +830,9 @@ void GUIUpdater::getRigidsData() {
 						CustomCameraLibrary::StreamFrame();
 						emit startServer();
 					}
-
+					else {
+						int m = 0;
+					}
 					wResult = WaitForSingleObject(CustomCameraLibrary::sSemaphore, INFINITE);	// espera por la indicación del semáforo para seguir el hilo de ejecución//
 					if (wResult == WAIT_OBJECT_0) {
 						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
@@ -835,7 +844,7 @@ void GUIUpdater::getRigidsData() {
 						
 							//JOSKSTRA PARA BROCA
 							int N = 1;
-							if (CustomCameraLibrary::nbr > 0)
+						/*	if (CustomCameraLibrary::nbr > 0)
 							{
 								for (int f = 0; f < CustomCameraLibrary::nbr; f++) {
 									if (CustomCameraLibrary::rigid[f].name == POINTER) 
@@ -847,7 +856,7 @@ void GUIUpdater::getRigidsData() {
 								}
 							}
 							else
-								emit pointerNotDetected();
+								emit pointerNotDetected();*/
 							//XBroca = XLBroca.t();
 							//XBroca = CustomCameraLibrary::initDrill(matFrame_1, matFrame_2, PP_Broca1, PP_Broca2);
 

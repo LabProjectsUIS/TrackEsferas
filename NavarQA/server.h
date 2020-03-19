@@ -251,7 +251,7 @@ int CreateServer(int iConnectionType) {
 	* @see CustomCameraLibrary::joskstra()
 	* @param pDescription DataSet.
 	*/
-	void BuildDescription(sDataDescriptions* pDescription) {
+	void BuildDescription(sDataDescriptions* pDescription) { //EL ERRROR ESTÁ ACA
 		pDescription->nDataDescriptions = 0;
 		int index = 0;
 		ofstream archivoD;
@@ -259,8 +259,9 @@ int CreateServer(int iConnectionType) {
 			archivoD.open("test.txt", std::ios::app);
 
 		}
-				sResult = WaitForSingleObject(brSemaphore, INFINITE);
-				if (sResult == WAIT_OBJECT_0) {
+		sResult = WaitForSingleObject(brSemaphore, INFINITE);
+		if (sResult == WAIT_OBJECT_0) 
+		{
 		for (int i = 0; i < nbr; i++) {
 			sRigidBodyDescription* pRigidBodyDescription = new sRigidBodyDescription();
 			sprintf(pRigidBodyDescription->szName, rigid[i].name.c_str());
@@ -319,9 +320,9 @@ int CreateServer(int iConnectionType) {
 			archivoD.close();
 		}
 		// Release the semaphore when task is finished
-					if (!ReleaseSemaphore(sSemaphore, 1, NULL))
-						printf("ReleaseSemaphore error: %d\n", GetLastError());
-				} 
+		if (!ReleaseSemaphore(sSemaphore, 1, NULL))
+			printf("ReleaseSemaphore error: %d\n", GetLastError());
+} 
 
 #if STREAM_MARKERS
 		// Marker Set Description
