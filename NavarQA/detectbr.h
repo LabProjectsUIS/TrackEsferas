@@ -40,7 +40,7 @@ namespace CustomCameraLibrary {
 	const int phanton = 5;	///< indicador que representa el phanton
 	const int broca = 6;///< indicador que representa la broca
 
-	float DELTA = 1.5;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
+	float DELTA = 0.9;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
@@ -257,10 +257,10 @@ namespace CustomCameraLibrary {
 		if (!PE.empty())
 		{
 			
-			archivoP << PE[0][0] << "\t";
+			/*archivoP << PE[0][0] << "\t";
 			archivoP << PE[0][1] << "\t";
 			archivoP << PE[0][2] << "\t";
-			archivoP << "\n";
+			archivoP << "\n";*/
 			//archivoP << PE << "\n";
 		}
 		
@@ -587,7 +587,8 @@ namespace CustomCameraLibrary {
 
 		for (int i = 0; i < vec.size(); i++) {
 			float d = std::abs(distance - vec[i]);						// distancia experimental menos teórica
-																		//		cout << distance << "---" << vec[i] << endl;
+																		// Recorrer toda la matriz y guardar todas las posiciones por debajo de delta
+																			//y volver a evaluar la mas pequeña entre ellas.
 			if (d <= DELTA) {
 				//result = true;
 				//vec.erase(vec.begin() + i);							// eliminar de la lista de distancias
