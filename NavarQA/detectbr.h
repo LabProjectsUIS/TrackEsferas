@@ -587,17 +587,15 @@ namespace CustomCameraLibrary {
 
 		for (int i = 0; i < vec.size(); i++) {
 			float d = std::abs(distance - vec[i]);						// distancia experimental menos teórica
-																		// Recorrer toda la matriz y guardar todas las posiciones por debajo de delta
+																		// SUGERENCIA: Recorrer toda la matriz y guardar todas las posiciones por debajo de delta
 																			//y volver a evaluar la mas pequeña entre ellas.
 			if (d <= DELTA) {
 				//result = true;
 				//vec.erase(vec.begin() + i);							// eliminar de la lista de distancias
-				//			cout << "COINCIDENCIA" << endl;
 				result = i;
 				break;
 			}
 		}
-		//	cout << "-----" << endl;
 		return result;
 	}
 
