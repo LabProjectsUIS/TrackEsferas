@@ -18,7 +18,7 @@ namespace CustomCameraLibrary {
 	using namespace std;
 
 #define N_MARKERS 3				///< número de marcadores que la función joskstra() usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.
-#define N_MARKERSB 1
+#define N_MARKERSB 2
 	//		cout << A << endl;
 #define L_POINTER   219.70329913564//219.3295732//221.88//218.91
 #define TETHA -3.8985//-3.503764268//3.0544//3.17
@@ -760,12 +760,15 @@ namespace CustomCameraLibrary {
 					break;
 				case femur:
 					bRigid[countBR].name = FEMUR;
+					OutputDebugString(L"FEMUR");
 					break;
 				case tibia:
 					bRigid[countBR].name = TIBIA;
+					OutputDebugString(L"TIBIA");
 					break;
 				case gafas:
 					bRigid[countBR].name = GAFAS;
+					OutputDebugString(L"GAFAS");
 					break;
 				case phanton:
 					bRigid[countBR].name = PHANTON;

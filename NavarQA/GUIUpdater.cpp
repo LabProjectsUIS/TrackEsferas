@@ -765,6 +765,7 @@ void GUIUpdater::getRigidsData() {
 				CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XLBroca.t(), cdata::distances, CustomCameraLibrary::rigid);
 
 			}
+		}
 			if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
 			{
 				Beep(350, 50);
@@ -842,7 +843,7 @@ void GUIUpdater::getRigidsData() {
 							XBrocaNew(1, 1) = 3;
 							XBrocaNew(1, 2) = 2;*/
 
-							XBrocaNew(0, 0) = XLBroca(0, 0);
+							/*XBrocaNew(0, 0) = XLBroca(0, 0);
 							XBrocaNew(0, 1) = XLBroca(1, 0);
 							XBrocaNew(0, 2) = XLBroca(2, 0);
 							XBrocaNew(1, 0) = XLBroca(0, 1);
@@ -851,7 +852,7 @@ void GUIUpdater::getRigidsData() {
 							XBrocaNew(0, 3) = 0;
 							XBrocaNew(1, 3) = 0;
 
-							setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBrocaNew);
+							setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBrocaNew);*/
 							//setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBroca);
 
 							CustomCameraLibrary::nbr++;
@@ -906,7 +907,7 @@ void GUIUpdater::getRigidsData() {
 					}
 				}
 			}
-		}
+		
 		QCoreApplication::processEvents();
 	}
 	CustomCameraLibrary::StreamFrame();

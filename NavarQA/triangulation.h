@@ -109,7 +109,7 @@ namespace CustomCameraLibrary {
 		int m = -1;
 		int s = -1;
 		
-		if (transXL.rows == 4 && transXL.cols == 3)
+		if (transXL.rows == 3 && transXL.cols == 3) //Imprimir datos de esferas es un archivo xml
 		{
 			for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
 			{
@@ -120,6 +120,7 @@ namespace CustomCameraLibrary {
 						break;
 					}
 					else
+
 					{
 						archivoXL << transXL[m][s] << "\t";
 					}

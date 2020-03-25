@@ -137,7 +137,7 @@ int CreateServer(int iConnectionType) {
 		//**************************************
 		// IP DONDE CORRER� EL SERVIDOR
 		//**************************************
-		sprintf(szIPAddress, "%d.%d.%d.%d", 127, 0, 0, 1);
+		sprintf(szIPAddress, "%d.%d.%d.%d", 192,168, 1, 7);
 		//sprintf(szIPAddress, "%d.%d.%d.%d", 192, 168, 0, 101);
 
 		// Initialize NatNet server with first detected ip address - use NatNet default port assignments
@@ -271,27 +271,15 @@ int CreateServer(int iConnectionType) {
 			pRigidBodyDescription->offsety = 0.0f;
 			pRigidBodyDescription->offsetz = 0.0f;
 			if (strcmp(pRigidBodyDescription->szName, "POINTER") == 0)
-			{
 				pRigidBodyDescription->ID = POINTERR;
-				OutputDebugString(L"POINTER");
-			}
 			else if (strcmp(pRigidBodyDescription->szName, "FEMUR") == 0)
-			{
 				pRigidBodyDescription->ID = FEMURR;
-				OutputDebugString(L"ES FEMUR");
-			}
 			else if (strcmp(pRigidBodyDescription->szName, "TIBIA") == 0)
-			{
 				pRigidBodyDescription->ID = TIBIAA;
-				OutputDebugString(L"ES TIBIA");
-			}
 			else if (strcmp(pRigidBodyDescription->szName, "GAFAS") == 0)
 				pRigidBodyDescription->ID = GAFASS;
 			else if (strcmp(pRigidBodyDescription->szName, "BROCA") == 0)
-			{
 				pRigidBodyDescription->ID = BROCAA;
-				OutputDebugString(L"ES BROCA");
-			}
 			//archivoD << pRigidBodyDescription->ID<<"\n"; //testeando que elemento encontro
 
 			pDescription->arrDataDescriptions[index].type = Descriptor_RigidBody;

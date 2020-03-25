@@ -567,11 +567,11 @@ void NavarQT::startCalibration() {
 	
 	switch (calibRetries) {
 	case 3:
-		fileName = "calib/stereo/otros/Calib_17M.yml";
+		fileName = "calib/stereo/otros/Calib20M.yml";
 		doCalib = false;
 		break;
 	default:
-		fileName = "calib/stereo/otros/Calib_17M.yml";
+		fileName = "calib/stereo/otros/Calib20M.yml";
 		break;
 	}	
 	if (doCalib) { //Conexion con matlab toolkit
