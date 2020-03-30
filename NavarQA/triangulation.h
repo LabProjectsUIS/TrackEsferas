@@ -122,7 +122,7 @@ namespace CustomCameraLibrary {
 					else
 
 					{
-						archivoXL << transXL[m][s] << "\t";
+						//archivoXL << transXL[m][s] << "\t";
 					}
 				}
 				archivoXL << "\t";

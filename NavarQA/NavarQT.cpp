@@ -417,7 +417,7 @@ void NavarQT::on_pushButton_step_3_clicked() {
 	calibRetries = 2;
 	updater->setDetectRigids(true);
 	startCalibration();
-	process_rigids->start("Resources/Unity/esferasTrack.exe");
+	//process_rigids->start("Resources/Unity/esferasTrack.exe");
 	updater->getRigidsData();
 }
 
@@ -599,7 +599,7 @@ void NavarQT::startCalibration() {
 		ui->pushButton_3->setEnabled(true);
 		step = 3;
 		ui->body->setCurrentIndex(0);
-		process_rigids->start("Resources/Unity/esferasTrack2.exe");
+		//process_rigids->start("Resources/Unity/esferasTrack2.exe");
 		////process_rigids->start("Resources/Unity/VisualDesktop.exe");
 		updater->getRigidsData();
 	}

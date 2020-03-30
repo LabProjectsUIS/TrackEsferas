@@ -107,10 +107,12 @@ int CreateServer(int iConnectionType) {
 		// print version info
 		unsigned char ver[4];
 		theServer->NatNetVersion(ver);
+		s.str("");
 		printf("NatNet Server (NatNet ver. %d.%d.%d.%d)\n", ver[0], ver[1], ver[2], ver[3]);
+		WriteW(s.str());
 		s << "NatNet Server (NatNet ver. " << to_string(ver[0]) << "." << to_string(ver[1]) << "." << to_string(ver[2]) << "." << to_string(ver[3]) << ")";
 		WriteW(s.str()); // solo para escribir en la ventana.
-
+		
 						 // set callbacks
 		theServer->SetErrorMessageCallback(MessageHandler);
 		theServer->SetVerbosityLevel(Verbosity_Debug);
@@ -137,7 +139,7 @@ int CreateServer(int iConnectionType) {
 		//**************************************
 		// IP DONDE CORRER� EL SERVIDOR
 		//**************************************
-		sprintf(szIPAddress, "%d.%d.%d.%d", 192,168, 1, 7);
+		sprintf(szIPAddress, "%d.%d.%d.%d", 127, 0, 0, 1);
 		//sprintf(szIPAddress, "%d.%d.%d.%d", 192, 168, 0, 101);
 
 		// Initialize NatNet server with first detected ip address - use NatNet default port assignments
@@ -162,6 +164,7 @@ int CreateServer(int iConnectionType) {
 		int iDataPort, iCommandPort, iMulticastPort;
 		theServer->GetSocketInfo(szDataIP, &iDataPort, szCommandIP, &iCommandPort, szMulticastGroup, &iMulticastPort);
 		printf("Command Socket  : %s:%d\n", szCommandIP, iCommandPort);
+		s.str("");
 		printf("Data Socket     : %s:%d\n", szDataIP, iDataPort);
 		s.str("");
 		s << "Command Socket : " << szCommandIP << " " << iCommandPort;
@@ -174,10 +177,10 @@ int CreateServer(int iConnectionType) {
 			printf("Multicast Group : %s:%d\n", szMulticastGroup, iMulticastPort);
 		}
 		else {
-			printf("Connection Type : Unicast\n");
-			s.str("");
-			s << "Connection Type : Unicast";
-			WriteW(s.str());
+			//printf("Connection Type : Unicast\n");
+			//s.str("");
+			//s << "Connection Type : Unicast";
+			//WriteW(s.str());
 		}
 		return ErrorCode_OK;
 	}
@@ -251,7 +254,7 @@ int CreateServer(int iConnectionType) {
 	* @see CustomCameraLibrary::joskstra()
 	* @param pDescription DataSet.
 	*/
-	void BuildDescription(sDataDescriptions* pDescription) { //EL ERROR ESTÁ ACA
+	void BuildDescription(sDataDescriptions* pDescription) { 
 		pDescription->nDataDescriptions = 0;
 		int index = 0;
 		ofstream archivoD;
