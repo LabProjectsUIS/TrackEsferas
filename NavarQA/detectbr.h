@@ -12,6 +12,7 @@
 #include "data.h"
 #include "opencv\cv.hpp"
 #include <time.h>
+#include <dos.h>
 
 namespace CustomCameraLibrary {
 	using namespace cv;
@@ -37,10 +38,10 @@ namespace CustomCameraLibrary {
 	const int femur = 2;	///< indicador que representa el femur
 	const int tibia = 3;	///< indicador que representa la tibia
 	const int gafas = 4;	///< indicador que representa las gafas
-	const int phanton = 5;	///< indicador que representa el phanton
-	const int broca = 6;///< indicador que representa la broca
+	const int phanton = 6;	///< indicador que representa el phanton
+	const int broca = 5;///< indicador que representa la broca
 
-	float DELTA = 0.9;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
+	float DELTA = 0.86;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
@@ -76,6 +77,10 @@ namespace CustomCameraLibrary {
 									*  @var Output::Quat
 									*  Cuaternios que representan la orientación del objeto rígido.
 									*/
+	//time_t start, end;
+
+	clock_t time = clock();
+
 	struct Output {
 		int bdr;
 		string name;
@@ -238,9 +243,19 @@ namespace CustomCameraLibrary {
 		cv::Mat_<double> PM, Ux, Uz, Uy, temp, temp2, sum_ones, PE;
 		cv::Mat_<double> val(P3.rows, P3.cols);
 		double PointerX, PointerY, PointerZ;
-		PointerX = cdata::PARAM(0, 0);
-		PointerY = cdata::PARAM(0, 1);
-		PointerZ = cdata::PARAM(0, 2);
+		if (!detect_pointer)
+		{
+			PointerX = cdata::PARAM(0, 0);									//Si está detectando pointer evalue esto, sino evalue el otro arreglo.
+			PointerY = cdata::PARAM(0, 1);
+			PointerZ = cdata::PARAM(0, 2);
+		}
+		else
+		{
+			PointerX = cdata::PARAMPunta(0, 0);									
+			PointerY = cdata::PARAMPunta(0, 1);
+			PointerZ = cdata::PARAMPunta(0, 2);
+		}
+	
 		PM = (P1 + P2 + P3) / 3;
 
 		sum_ones = cv::Mat::ones(3, 1, CV_8UC1);
@@ -412,6 +427,10 @@ namespace CustomCameraLibrary {
 				bRigid[i].point = Point3d(punto);
 
 			}
+			if ((bRigid[i].name == FEMUR) && (norm(p1 - p3) > 51)) {
+				Point3d punto = pointerPoint(p1, p2, p3, Out);
+				bRigid[i].point = Point3d(punto);
+			}
 		}
 
 	}
@@ -560,13 +579,15 @@ namespace CustomCameraLibrary {
 			*	finalmente corregir el giro un ángulo C_TETHA entorno al eje perpendicular vP
 			*/
 			if ((bRigid[x].name == POINTER) && (norm(P1 - P3) > 51) && detect_pointer) {					// para siempre mantener la dirección del vector que apunta al pointer
-				cout << "OR=" << OR << ";" << endl;
+				
 				
 				Point3d punto = pointerPoint(P1, P2, P3, Out);
 
 				bRigid[x].point = Point3d(punto);
 
 			}
+			
+
 			//			cout << norm(p.t()-Pc.t()) << endl;
 			//cout << Pc << endl;
 		}
@@ -647,18 +668,20 @@ namespace CustomCameraLibrary {
 	ofstream archivoDI;
 	
 	int joskstra(Mat_<float> spSet, Mat_<float> dspSet, BodyR *&bRigid) {
+		time = 0;
 		Sphere *Spheres;
 		if (!archivoDI.is_open())
 		{
-			archivoDI.open("ubicacion3D.txt", std::ios::app);
+			archivoDI.open("EvaluacionBroca90cm.txt", std::ios::app);
 		}
-
-		int i, i0, j, countBR,w,h;
+		int i, i0, j, countBR,w,h,cont;
+		int flag1 = -1;
 		float peso;
 		vector<float> vec;													// vector que llevará el conjunto de distancias teóricas de los cuerpos rígidos.
 		int nBRigid = dspSet.rows;											// número de cuerpos rígidos que se deberían detectar.
 		int  N = spSet.rows;
-		/*if (!spSet.empty() && spSet.rows==4 && spSet.cols==3) {
+		//archivoDI << spSet << "\t";   //Revisando elementos 
+		/*if (!spSet.empty() && spSet.rows==3 && spSet.cols==3) {
 			for (w = 0; w < spSet.rows; w++)
 			{
 				for (int h = 0; h < spSet.cols; h++)
@@ -668,8 +691,7 @@ namespace CustomCameraLibrary {
 				archivoDI << "\t";
 			}
 			//archivoDI << "\n";
-		}
-		archivoDI.close();*/
+		}*/
 		int  N2 = dspSet.rows;
 		Mat d = dspSet.reshape(1, 1);										// convertir a una matriz 1xn.
 		double min, max;
@@ -708,13 +730,15 @@ namespace CustomCameraLibrary {
 					}
 			}
 
-			if (i0 == -1) { break; }										// termina si no encuentra.
+			if (i0 == -1) { 
+				break; 
+			}										// termina si no encuentra.
 
 			int pos;
 			for (i = 0; i < N; i++) {
 				if (Spheres[i].marca == 0 && i0 != i) {						// si el nodo no esta marcado y el nodo no es él mismo.
 					pos = -1;
-					float n = norm(spSet.row(i0) - spSet.row(i));			// calcular la distancia entre los dos nodos.
+					float n = norm(spSet.row(i0) - spSet.row(i));			// calculando la distancia entre los dos nodos.
 
 					if (n <= max + DELTA && n >= min - DELTA) {
 						pos = analizer(n, vec);
@@ -736,8 +760,11 @@ namespace CustomCameraLibrary {
 
 			//***************************DUVAN PUSO ESTO, ESTA MAL!!!!!, DEBE SER +1
 			//***********************
-			if (temp.rows + 1 > N_MARKERSB) {
-				//if (temp.rows + 2 > N_MARKERS) {										// identificar O.R. con un número de marcadores definidos
+			if (temp.rows + 1 > N_MARKERSB) 
+			{
+				//if (temp.rows + 2 > N_MARKERS) {	
+				// identificar O.R. con un número de marcadores definidos
+				
 				Spheres[i0].marca = 1;
 				Spheres[i0].prev = i0;
 				Spheres[i0].objR = Spheres[j].objR;
@@ -751,6 +778,8 @@ namespace CustomCameraLibrary {
 				else if (Spheres[1].objR == Spheres[2].objR) {
 					ref = Spheres[1].objR;
 				}
+
+	
 				switch (ref) {
 					//				switch (Spheres[j].objR) {
 				case pointer:
@@ -769,28 +798,49 @@ namespace CustomCameraLibrary {
 					bRigid[countBR].name = GAFAS;
 					OutputDebugString(L"GAFAS");
 					break;
-				case phanton:
-					bRigid[countBR].name = PHANTON;
+				case broca:
+					bRigid[countBR].name = BROCA;
 					OutputDebugString(L"broca");
 					break;
 				default:
+					OutputDebugString(L"no exist");
 					break;
 				}
+				time_t end = time;
+				int m;
+				if (bRigid[countBR].name==BROCA)
+				{
+					m = 1;
+				}
+				else
+				{
+					m = 0;
+				}
+				archivoDI << (clock() - time)*1000/CLOCKS_PER_SEC<< "\t "<< m << "\n";
+				m = -1;
 				bRigid[countBR].bdrigid = temp.t();								// añadir las coordenadas de las esferas del objeto rígido.
-				bRigid[countBR].nmarkers = temp.rows;							// número de marcadores en el O.R.
-																				//Mat temp2;
+				bRigid[countBR].nmarkers = temp.rows;	// número de marcadores en el O.R.
+				
+																			//Mat temp2;
 																				//reduce(temp, temp2, 0, CV_REDUCE_SUM);						// sumar las filas de las coordenadas de las esferas de los objeto rígido
 																				//bRigid[countBR].centroid = temp2 / temp.rows;					// calcular el centroide del objeto rígido.
 																				//			    cout << "*********" << endl << bRigid[countBR].bdrigid << endl << endl;
 				getEulerAngles(bRigid, countBR);								// Detectar los ángulos de Euler.
 				countBR++;
+				flag1 = 1;
+				
 			}
 			else {																// objeto rígido no identificado.
-				//OutputDebugString(L"NO SE QUE ES");
+				//OutputDebugString(L"No detected");
 				Spheres[i0].marca = 1;
 				Spheres[i0].prev = i0;
 				Spheres[i0].objR = -1;
+				flag1 = 0;
 			}
+			
+			
+
+
 		}
 		archivoDI.close();
 		return countBR;

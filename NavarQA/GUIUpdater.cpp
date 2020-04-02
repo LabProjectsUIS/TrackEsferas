@@ -354,7 +354,7 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			cv::String text = ostr.str();
 			putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
 
-			if (Area < 55) 
+			if (Area < 30) 
 			{
 				modif = modif + 1;
 			}
@@ -417,14 +417,15 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			archivoL << "\n";
 		}*/
 
-		for (int i = 0; i < PP_B.rows; i++)
+		archivoL << PP << "\t";
+		/*for (int i = 0; i < PP.rows; i++)
 		{
-			for (int j = 0; j < PP_B.cols; j++)
+			for (int j = 0; j < PP.cols; j++)
 			{
-				//archivoL << PP_B[i][j] << "\t";
+				archivoL << PP[i][j] << "\t";
 			}
-			//archivoL << "\n";
-		}
+			archivoL << "\n";
+		}*/
 
 		archivoL.close();
 		/*archivoL << "filas:"<<PP.rows<<" ,columnas: "<<PP.cols<<"\n";
@@ -626,8 +627,8 @@ void GUIUpdater::writeMatrices() {
 * Detecta los rígidos en escena, inicia el servidor y lo utiliza para enviar los datos a la escena de Unity.
 */
 void GUIUpdater::getRigidsData() {
-	cv::Mat_<double> PP_Broca1(2, 2); // Array de puntos del frame con datos de los marcadores de la broca
-	cv::Mat_<double> PP_Broca2(2, 2); // Array de puntos del frame con datos de los marcadores de la broca
+	//cv::Mat_<double> PP_Broca1(2, 2); // Array de puntos del frame con datos de los marcadores de la broca
+	//cv::Mat_<double> PP_Broca2(2, 2); // Array de puntos del frame con datos de los marcadores de la broca
 
 	cv::Mat_<double> XBrocaNew(2, 4);
 
@@ -680,13 +681,13 @@ void GUIUpdater::getRigidsData() {
 	while (detectRigids) {
 		CameraLibrary::Frame *frame_1 = camera_1->GetLatestFrame();
 		CameraLibrary::Frame *frame_2 = camera_2->GetLatestFrame();
-		cv::Mat_<double> PP1, PP2, A1, A2, P1, P2, D1, D2;	// Matriz de Proyeccián de puntos x,y en la imagen, A1, A2, son las areas de las esferas
+		cv::Mat_<double> PP1, PP2, A1, A2, P1, P2, D1, D2, PP_Broca1, PP_Broca2;	// Matriz de Proyeccián de puntos x,y en la imagen, A1, A2, son las areas de las esferas
 		cv::Mat_<double> XL, XR, XBroca, XLBroca, XRBroca;					// Matriz de puntos 3D vistos desde la cámara izquierda/derecha 
 																			//			BodyR *rigid;
 		CustomCameraLibrary::cFrame cframe_1, cframe_2;
 
-		PP_Broca1(1, 0) = 9999;
-		PP_Broca2(1, 0) = 9999;
+		//PP_Broca1(1, 0) = 9999;
+		//PP_Broca2(1, 0) = 9999;
 		if (frame_1) {
 			frame_1->Rasterize(cameraWidth_1, cameraHeight_1, matFrame_1.step, BACKBUFFER_BITSPERPIXEL, matFrame_1.data);
 			//				matFrame_1.copyTo(matFrame);

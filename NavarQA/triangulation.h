@@ -68,7 +68,7 @@ namespace CustomCameraLibrary {
 		ofstream archivoXL;
 		if (!archivoXL.is_open())
 		{
-			archivoXL.open("XL2.txt", std::ios::app);
+			archivoXL.open("XL1ABRIL.txt", std::ios::app);
 		}
 		//-- - Rotation matrix corresponding to the rigid motion between left and right cameras :
 		Rodrigues(om, R);
@@ -122,7 +122,7 @@ namespace CustomCameraLibrary {
 					else
 
 					{
-						//archivoXL << transXL[m][s] << "\t";
+						archivoXL << transXL[m][s] << "\t";
 					}
 				}
 				archivoXL << "\t";
