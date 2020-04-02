@@ -1,0 +1,166 @@
+\hypertarget{triangulacion__prueba_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/triangulacion\+\_\+prueba.m File Reference}
+\label{triangulacion__prueba_8m}\index{D:/TrackEsferas/NavarQA/calib/triangulacion\_prueba.m@{D:/TrackEsferas/NavarQA/calib/triangulacion\_prueba.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Punto \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} analizar de la cámara izquierda \mbox{\hyperlink{triangulacion__prueba_8m_afbe763fe06ba4eb08f5eabf46911d8c0}{figure}} (1) \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_ab203292116da4a8a72763ec58b04da8f}{imshow}} (\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}})
+\item 
+Punto \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} analizar de la camara derecha \mbox{\hyperlink{triangulacion__prueba_8m_acd8185244de823465e0bdc6da19938d3}{figure}} (2) \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_ab73d6f28b288be2899f9de8f15011dc5}{imshow}} (\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}})\mbox{[}\mbox{\hyperlink{triangulacion__prueba_8m_a2eca5b16aa41f4207af033280f2b8115}{x\+\_\+\+Der\+\_\+1}}(1
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a2eca5b16aa41f4207af033280f2b8115}{x\+\_\+\+Der\+\_\+1}} (2, 1)\mbox{]}
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_ab8c736b3f63d3ef219092ed451dfd557}{x\+\_\+\+Izq\+\_\+2}} (2, 1)\mbox{]}
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a3e6dc3e90d46befcd0f8f672b148ad8e}{x\+\_\+\+Der\+\_\+2}} (2, 1)\mbox{]}
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a963bfc9e64d4355c6edcb2516677f3e7}{disp}} (Xc\+\_\+2\+\_\+\+Izq)
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a184ae4aa2a7d6dbb05f10f1d2d6f7d14}{disp}} (\textquotesingle{}distancia\textquotesingle{})
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a99f63c47156add272106f84b832ec480}{disp}} (\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}})
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a9d3b563e349a9d471bca22d795e2db86}{disp}} (\textquotesingle{}centimetros\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_ab84cf568d3ca1b9444cef8ca3b4597f0}{x\+\_\+\+Izq\+\_\+1}} =\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,1)
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_aa78532f07ec443af5ced938b306e0158}{x\+\_\+\+Der\+\_\+1}} =\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,1)
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a32844307d9bd7950a251cc3ae526ccf8}{x\+\_\+\+Izq\+\_\+2}} =\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,1)
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a176da0eb7981a46dc197d953c47382a3}{x\+\_\+\+Der\+\_\+2}} =\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,1)
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a205b3ddc6a4dc3b18ce562ace99adb14}{dx2}} =(Xc\+\_\+1\+\_\+\+Izq(1,1)/10 -\/ Xc\+\_\+2\+\_\+\+Izq(1,1)/10)$^\wedge$2
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a16cd38d21503c6f927e15ceded31a735}{dy2}} =(Xc\+\_\+1\+\_\+\+Izq(2,1)/10 -\/ Xc\+\_\+2\+\_\+\+Izq(2,1)/10)$^\wedge$2
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a4fcf091f87f10d50ef3cc506c08cd349}{dz2}} =(Xc\+\_\+1\+\_\+\+Izq(3,1)/10 -\/ Xc\+\_\+2\+\_\+\+Izq(3,1)/10)$^\wedge$2
+\item 
+\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} =sqrt(\mbox{\hyperlink{triangulacion__prueba_8m_a205b3ddc6a4dc3b18ce562ace99adb14}{dx2}} + \mbox{\hyperlink{triangulacion__prueba_8m_a16cd38d21503c6f927e15ceded31a735}{dy2}} + \mbox{\hyperlink{triangulacion__prueba_8m_a4fcf091f87f10d50ef3cc506c08cd349}{dz2}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{triangulacion__prueba_8m_a9d3b563e349a9d471bca22d795e2db86}\label{triangulacion__prueba_8m_a9d3b563e349a9d471bca22d795e2db86}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!disp@{disp}}
+\index{disp@{disp}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}centimetros\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a184ae4aa2a7d6dbb05f10f1d2d6f7d14}\label{triangulacion__prueba_8m_a184ae4aa2a7d6dbb05f10f1d2d6f7d14}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!disp@{disp}}
+\index{disp@{disp}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}distancia\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a99f63c47156add272106f84b832ec480}\label{triangulacion__prueba_8m_a99f63c47156add272106f84b832ec480}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!disp@{disp}}
+\index{disp@{disp}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a963bfc9e64d4355c6edcb2516677f3e7}\label{triangulacion__prueba_8m_a963bfc9e64d4355c6edcb2516677f3e7}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!disp@{disp}}
+\index{disp@{disp}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{Xc\+\_\+2\+\_\+\+Izq}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_afbe763fe06ba4eb08f5eabf46911d8c0}\label{triangulacion__prueba_8m_afbe763fe06ba4eb08f5eabf46911d8c0}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!figure@{figure}}
+\index{figure@{figure}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Punto \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} analizar de la cámara izquierda figure (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_acd8185244de823465e0bdc6da19938d3}\label{triangulacion__prueba_8m_acd8185244de823465e0bdc6da19938d3}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!figure@{figure}}
+\index{figure@{figure}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Punto \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} analizar de la camara derecha figure (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_ab73d6f28b288be2899f9de8f15011dc5}\label{triangulacion__prueba_8m_ab73d6f28b288be2899f9de8f15011dc5}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!imshow@{imshow}}
+\index{imshow@{imshow}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{imshow()}{imshow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily imshow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_ab203292116da4a8a72763ec58b04da8f}\label{triangulacion__prueba_8m_ab203292116da4a8a72763ec58b04da8f}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!imshow@{imshow}}
+\index{imshow@{imshow}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{imshow()}{imshow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily imshow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a2eca5b16aa41f4207af033280f2b8115}\label{triangulacion__prueba_8m_a2eca5b16aa41f4207af033280f2b8115}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!x\_Der\_1@{x\_Der\_1}}
+\index{x\_Der\_1@{x\_Der\_1}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{x\_Der\_1()}{x\_Der\_1()}}
+{\footnotesize\ttfamily x\+\_\+\+Der\+\_\+1 (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a3e6dc3e90d46befcd0f8f672b148ad8e}\label{triangulacion__prueba_8m_a3e6dc3e90d46befcd0f8f672b148ad8e}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!x\_Der\_2@{x\_Der\_2}}
+\index{x\_Der\_2@{x\_Der\_2}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{x\_Der\_2()}{x\_Der\_2()}}
+{\footnotesize\ttfamily x\+\_\+\+Der\+\_\+2 (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_ab8c736b3f63d3ef219092ed451dfd557}\label{triangulacion__prueba_8m_ab8c736b3f63d3ef219092ed451dfd557}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!x\_Izq\_2@{x\_Izq\_2}}
+\index{x\_Izq\_2@{x\_Izq\_2}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{x\_Izq\_2()}{x\_Izq\_2()}}
+{\footnotesize\ttfamily x\+\_\+\+Izq\+\_\+2 (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}\label{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!d@{d}}
+\index{d@{d}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily d =sqrt(\mbox{\hyperlink{triangulacion__prueba_8m_a205b3ddc6a4dc3b18ce562ace99adb14}{dx2}} + \mbox{\hyperlink{triangulacion__prueba_8m_a16cd38d21503c6f927e15ceded31a735}{dy2}} + \mbox{\hyperlink{triangulacion__prueba_8m_a4fcf091f87f10d50ef3cc506c08cd349}{dz2}})}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a205b3ddc6a4dc3b18ce562ace99adb14}\label{triangulacion__prueba_8m_a205b3ddc6a4dc3b18ce562ace99adb14}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!dx2@{dx2}}
+\index{dx2@{dx2}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{dx2}{dx2}}
+{\footnotesize\ttfamily dx2 =(Xc\+\_\+1\+\_\+\+Izq(1,1)/10 -\/ Xc\+\_\+2\+\_\+\+Izq(1,1)/10)$^\wedge$2}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a16cd38d21503c6f927e15ceded31a735}\label{triangulacion__prueba_8m_a16cd38d21503c6f927e15ceded31a735}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!dy2@{dy2}}
+\index{dy2@{dy2}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{dy2}{dy2}}
+{\footnotesize\ttfamily dy2 =(Xc\+\_\+1\+\_\+\+Izq(2,1)/10 -\/ Xc\+\_\+2\+\_\+\+Izq(2,1)/10)$^\wedge$2}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a4fcf091f87f10d50ef3cc506c08cd349}\label{triangulacion__prueba_8m_a4fcf091f87f10d50ef3cc506c08cd349}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!dz2@{dz2}}
+\index{dz2@{dz2}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{dz2}{dz2}}
+{\footnotesize\ttfamily dz2 =(Xc\+\_\+1\+\_\+\+Izq(3,1)/10 -\/ Xc\+\_\+2\+\_\+\+Izq(3,1)/10)$^\wedge$2}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_aa78532f07ec443af5ced938b306e0158}\label{triangulacion__prueba_8m_aa78532f07ec443af5ced938b306e0158}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!x\_Der\_1@{x\_Der\_1}}
+\index{x\_Der\_1@{x\_Der\_1}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{x\_Der\_1}{x\_Der\_1}}
+{\footnotesize\ttfamily x\+\_\+\+Der\+\_\+1 =\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,1)}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a176da0eb7981a46dc197d953c47382a3}\label{triangulacion__prueba_8m_a176da0eb7981a46dc197d953c47382a3}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!x\_Der\_2@{x\_Der\_2}}
+\index{x\_Der\_2@{x\_Der\_2}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{x\_Der\_2}{x\_Der\_2}}
+{\footnotesize\ttfamily x\+\_\+\+Der\+\_\+2 =\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,1)}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_ab84cf568d3ca1b9444cef8ca3b4597f0}\label{triangulacion__prueba_8m_ab84cf568d3ca1b9444cef8ca3b4597f0}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!x\_Izq\_1@{x\_Izq\_1}}
+\index{x\_Izq\_1@{x\_Izq\_1}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{x\_Izq\_1}{x\_Izq\_1}}
+{\footnotesize\ttfamily x\+\_\+\+Izq\+\_\+1 =\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,1)}
+
+\mbox{\Hypertarget{triangulacion__prueba_8m_a32844307d9bd7950a251cc3ae526ccf8}\label{triangulacion__prueba_8m_a32844307d9bd7950a251cc3ae526ccf8}} 
+\index{triangulacion\_prueba.m@{triangulacion\_prueba.m}!x\_Izq\_2@{x\_Izq\_2}}
+\index{x\_Izq\_2@{x\_Izq\_2}!triangulacion\_prueba.m@{triangulacion\_prueba.m}}
+\doxysubsubsection{\texorpdfstring{x\_Izq\_2}{x\_Izq\_2}}
+{\footnotesize\ttfamily x\+\_\+\+Izq\+\_\+2 =\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,1)}
+

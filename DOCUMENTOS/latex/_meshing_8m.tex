@@ -1,0 +1,494 @@
+\hypertarget{_meshing_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/\+Meshing.m File Reference}
+\label{_meshing_8m}\index{D:/TrackEsferas/NavarQA/calib/Meshing.m@{D:/TrackEsferas/NavarQA/calib/Meshing.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+scaled \mbox{\hyperlink{go__calib__stereo_8m_af57982b1d97d2978416bd830b1ed9083}{threshold}} \mbox{\hyperlink{_meshing_8m_a816e50558c17422efd230b4306647cca}{fprintf}} (1, \textquotesingle{}Organizing the \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{data...\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_meshing_8m_a0f65f6e1b868ca0354744f5c61c42d77}{std}} (\mbox{\hyperlink{_meshing_8m_ae47bfe2e63c254dc0919ae8daa36b16a}{xp\+\_\+frac}}) $>$ std(\mbox{\hyperlink{_meshing_8m_a7eba6c61cdebb0bd5d27ae391a7282b7}{xc\+\_\+frac}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_meshing_8m_a97a42524fa498e559eb3a8b8cc5da77a}{disp}} (\textquotesingle{}Dense \mbox{\hyperlink{readras_8m_a40fbe8949b277afd0fac64228851b12a}{depth}} \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}} in the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{_meshing_8m_ab0ac4ed5d1dd4703fcdc862fc92c7351}{disp}} (\textquotesingle{}Dense \mbox{\hyperlink{readras_8m_a40fbe8949b277afd0fac64228851b12a}{depth}} \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}} in the \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} and \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} frame\textquotesingle{})
+\item 
+\mbox{\hyperlink{_meshing_8m_a5e1296aca392b4ecbce10307ed43a61c}{xp\+\_\+ind}} (2) -\/ xp\+\_\+ind(1)
+\item 
+Good \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} for \mbox{\hyperlink{_meshing_8m_a6555b58b73f299d142e99f1ae0c9759d}{Ymesh}} (\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})
+\item 
+tries \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} have it in the right \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} \mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}} (\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})
+\item 
+tries \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} have it in the right \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}} (\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})
+\item 
+\mbox{\hyperlink{_meshing_8m_af8b3c28a55cea038df7af2238e37c378}{xcmesh}} (\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})
+\item 
+\mbox{\hyperlink{_meshing_8m_ac70f2f6d4c4d153d4ea2069626b3eafc}{ycmesh}} (\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_meshing_8m_aa0f8b6c9317131c943953b9cf5298d4b}{function}} \mbox{[}Xc3, tri3, xc3, xp3, dc3, xc\+\_\+texture, nc3, conf\+\_\+nc3, Nn3\mbox{]} = Meshing(Xc2,\mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}},xp2,Thresh\+\_\+connect,\mbox{\hyperlink{scanning__script_8m_a95873e65a21d176eaa8425f449b0b2d5}{N\+\_\+smoothing}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}{N\+\_\+x}},\mbox{\hyperlink{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}{N\+\_\+y}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})
+\item 
+scaled connection \mbox{\hyperlink{go__calib__stereo_8m_af57982b1d97d2978416bd830b1ed9083}{threshold}} \mbox{\hyperlink{_meshing_8m_a5dbb3757883ec70d5c13438a8d9730b0}{T\+\_\+connect}} = Thresh\+\_\+connect
+\item 
+\mbox{\hyperlink{_meshing_8m_ae47bfe2e63c254dc0919ae8daa36b16a}{xp\+\_\+frac}} = rem(xp2,1)
+\item 
+\mbox{\hyperlink{_meshing_8m_a7eba6c61cdebb0bd5d27ae391a7282b7}{xc\+\_\+frac}} = rem(\mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}}(1,\+:),1)
+\item 
+\mbox{\hyperlink{_meshing_8m_ae51c8aaf978db2e5d5f076fca5b3d6fd}{temporal}} = 1
+\item 
+\mbox{\hyperlink{_meshing_8m_ad2b3d7a5049048b2f337618b36f76322}{spatial}} = 0
+\item 
+\mbox{\hyperlink{_meshing_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Something \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{_distor2_calib_8m_ac285722dd13662586f5478312fe11f56}{fix}} the \mbox{\hyperlink{_meshing_8m_ae43f325bb5c50461cd984f00f0235aca}{organization}}
+\item 
+\mbox{\hyperlink{_meshing_8m_abc30fcb1acfb0d56c1fed38b9387bb6a}{xp\+\_\+ind}} = round(unique(xp2 -\/ \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}}))
+\item 
+\mbox{\hyperlink{_meshing_8m_a5241c94652d6f0e2625481c273b24114}{step\+\_\+xp}} = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(diff(\mbox{\hyperlink{_meshing_8m_a5e1296aca392b4ecbce10307ed43a61c}{xp\+\_\+ind}}))
+\item 
+\mbox{\hyperlink{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}{xp4}} = (xp2 -\/ \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}})/\mbox{\hyperlink{_meshing_8m_a5241c94652d6f0e2625481c273b24114}{step\+\_\+xp}} + \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}}
+\item 
+\mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}} = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(\mbox{\hyperlink{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}{xp4}})
+\item 
+\mbox{\hyperlink{_meshing_8m_a4b1407122fa68a845901054631fe791c}{xpmax}} = max(\mbox{\hyperlink{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}{xp4}})
+\item 
+\mbox{\hyperlink{_meshing_8m_ae9b82cfd5d951621ecb0d4468fcabc21}{xcmin}} = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(\mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}}(2,\+:))
+\item 
+\mbox{\hyperlink{_meshing_8m_ae7c04e6dd7b7170d3accc621465df43b}{xcmax}} = max(\mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}}(2,\+:))
+\item 
+\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}} = \mbox{\hyperlink{_meshing_8m_ae7c04e6dd7b7170d3accc621465df43b}{xcmax}} -\/ \mbox{\hyperlink{_meshing_8m_ae9b82cfd5d951621ecb0d4468fcabc21}{xcmin}} + 1
+\item 
+\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}} = \mbox{\hyperlink{_meshing_8m_a4b1407122fa68a845901054631fe791c}{xpmax}} -\/ \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}} + 1
+\item 
+\mbox{\hyperlink{_meshing_8m_a6514ccdd4c40d8f076da5002c9b85c92}{Xmesh}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})
+\item 
+\mbox{\hyperlink{_meshing_8m_acebfd54d9d93453f66cf68446838c6ef}{Ymesh}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})
+\item 
+\mbox{\hyperlink{_meshing_8m_acfed44899b3c1aa055e9c03f24ad3a5b}{Zmesh}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})
+\item 
+\mbox{\hyperlink{_meshing_8m_a4fc0a3bbe01bea8d794ef8cc6614fe39}{Cmesh}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})
+\item 
+\mbox{\hyperlink{_meshing_8m_aa40833e90f84f88c77295c83b892753c}{xcmesh}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})
+\item 
+\mbox{\hyperlink{_meshing_8m_acce70b11b1a2d0979aecb880260f570b}{ycmesh}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})
+\item 
+\mbox{\hyperlink{_meshing_8m_af327f4ba440b3d63871bb2385f537073}{ind\+\_\+col}} = round(\mbox{\hyperlink{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}{xp4}} -\/ \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}} + 1)
+\item 
+\mbox{\hyperlink{_meshing_8m_a8ea2301c666d77bb30c0b5555ee0f02a}{ind\+\_\+row}} = \mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}}(2,\+:) -\/ \mbox{\hyperlink{_meshing_8m_ae9b82cfd5d951621ecb0d4468fcabc21}{xcmin}} + 1
+\item 
+\mbox{\hyperlink{_meshing_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}} = \mbox{\hyperlink{_meshing_8m_a8ea2301c666d77bb30c0b5555ee0f02a}{ind\+\_\+row}} + (\mbox{\hyperlink{_meshing_8m_af327f4ba440b3d63871bb2385f537073}{ind\+\_\+col}}-\/1)$\ast$\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}
+\item 
+\mbox{\hyperlink{_meshing_8m_adb5cee64d8879581f189d71178dcb055}{ni}} = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})
+\item 
+Good \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} for \mbox{\hyperlink{_meshing_8m_af07ccc5f20176a4087d05abaa3c97c39}{ivview}}
+\item 
+Hypothesis \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{_meshing_8m_a8d75df0a5bb09670d0eb29ff7043a53a}{triangles}}
+\item 
+Hypothesis \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{_meshing_8m_ad1a9991558a010340c594d279808bd88}{F1}} = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) \& D1
+\item 
+\mbox{\hyperlink{_meshing_8m_a70b7ca88e17dfeeaac499e1260b40286}{F2}} = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}) \& D1
+\item 
+\mbox{\hyperlink{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}{C1}} = (\mbox{\hyperlink{_meshing_8m_ad1a9991558a010340c594d279808bd88}{F1}} $\vert$ \mbox{\hyperlink{_meshing_8m_a70b7ca88e17dfeeaac499e1260b40286}{F2}})
+\item 
+\mbox{\hyperlink{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}{D2}} = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) \& \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})
+\item 
+\mbox{\hyperlink{_meshing_8m_afa27dddadb9aa40be7dff7b954e3cbde}{F3}} = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}) \& \mbox{\hyperlink{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}{D2}}
+\item 
+\mbox{\hyperlink{_meshing_8m_a32516faf38f84e2b2fe362381f94d26f}{F4}} = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) \& \mbox{\hyperlink{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}{D2}}
+\item 
+\mbox{\hyperlink{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}{C2}} = (\mbox{\hyperlink{_meshing_8m_afa27dddadb9aa40be7dff7b954e3cbde}{F3}} $\vert$ \mbox{\hyperlink{_meshing_8m_a32516faf38f84e2b2fe362381f94d26f}{F4}})
+\item 
+\mbox{\hyperlink{_meshing_8m_abeba97cd076f6614bc28cc0ec7476e47}{Ambi}} = \mbox{\hyperlink{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}{C1}} \& \mbox{\hyperlink{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}{C2}}
+\item 
+ambiguous zones \mbox{\hyperlink{_meshing_8m_ac2c301de314843e670bbc28ab1797eab}{Div1}} = \mbox{\hyperlink{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}{C1}} \& $\sim$\mbox{\hyperlink{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}{C2}}
+\item 
+needs \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} check relative \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}} of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{_meshing_8m_a4f34c60ed99b60ac1c1fab6e8de288a0}{Div2}} = $\sim$\mbox{\hyperlink{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}{C1}} \& \mbox{\hyperlink{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}{C2}}
+\item 
+needs \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} check relative \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}} of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{click__ima__calib__no__read_8m_a09fc09522c04b297eccb7392c10f560b}{diagonal}} \mbox{\hyperlink{_meshing_8m_ae2fdd8538edb0a5ac7868c4c3de8d620}{measure}}
+\item 
+needs \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} check relative \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}} of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{click__ima__calib__no__read_8m_a09fc09522c04b297eccb7392c10f560b}{diagonal}} \mbox{\hyperlink{_meshing_8m_a829e78cec27c87388530dc0eb63047d6}{Dm1}} =( \mbox{\hyperlink{_meshing_8m_a6514ccdd4c40d8f076da5002c9b85c92}{Xmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) -\/ \mbox{\hyperlink{_meshing_8m_a6514ccdd4c40d8f076da5002c9b85c92}{Xmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})).$^\wedge$2 + (\mbox{\hyperlink{_meshing_8m_a6555b58b73f299d142e99f1ae0c9759d}{Ymesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) -\/ \mbox{\hyperlink{_meshing_8m_a6555b58b73f299d142e99f1ae0c9759d}{Ymesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})).$^\wedge$2 + (\mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) -\/ \mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})).$^\wedge$2
+\item 
+\mbox{\hyperlink{_meshing_8m_afcdd4592bb936eccec0893ea74dc3084}{Dm2}} = \mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) -\/ \mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}))
+\item 
+\mbox{\hyperlink{_meshing_8m_a92a8c13a583e9c03bad774406e418ee8}{Div1n}} = \mbox{\hyperlink{_meshing_8m_ac2c301de314843e670bbc28ab1797eab}{Div1}} $\vert$ ((\mbox{\hyperlink{_meshing_8m_a829e78cec27c87388530dc0eb63047d6}{Dm1}} $<$= \mbox{\hyperlink{_meshing_8m_afcdd4592bb936eccec0893ea74dc3084}{Dm2}})\&\mbox{\hyperlink{_meshing_8m_abeba97cd076f6614bc28cc0ec7476e47}{Ambi}})
+\item 
+\mbox{\hyperlink{_meshing_8m_acb89fed6e03fc3a266345e73c47d6529}{Div2n}} = \mbox{\hyperlink{_meshing_8m_a4f34c60ed99b60ac1c1fab6e8de288a0}{Div2}} $\vert$ ((\mbox{\hyperlink{_meshing_8m_afcdd4592bb936eccec0893ea74dc3084}{Dm2}} $<$ \mbox{\hyperlink{_meshing_8m_a829e78cec27c87388530dc0eb63047d6}{Dm1}})\&\mbox{\hyperlink{_meshing_8m_abeba97cd076f6614bc28cc0ec7476e47}{Ambi}})
+\item 
+\mbox{\hyperlink{_meshing_8m_a3a1a835b0a219768edf489680517a57f}{Div11}} = \mbox{\hyperlink{_meshing_8m_a92a8c13a583e9c03bad774406e418ee8}{Div1n}} \& \mbox{\hyperlink{_meshing_8m_ad1a9991558a010340c594d279808bd88}{F1}}
+\item 
+\mbox{\hyperlink{_meshing_8m_a6d67a06ddee9a727419a6f89bd4be185}{Div12}} = \mbox{\hyperlink{_meshing_8m_a92a8c13a583e9c03bad774406e418ee8}{Div1n}} \& \mbox{\hyperlink{_meshing_8m_a70b7ca88e17dfeeaac499e1260b40286}{F2}}
+\item 
+\mbox{\hyperlink{_meshing_8m_af9025f614565b18bff112dd2ea5121f5}{Div21}} = \mbox{\hyperlink{_meshing_8m_acb89fed6e03fc3a266345e73c47d6529}{Div2n}} \& \mbox{\hyperlink{_meshing_8m_afa27dddadb9aa40be7dff7b954e3cbde}{F3}}
+\item 
+\mbox{\hyperlink{_meshing_8m_a81582a0a55314ffad0a76b3d92369705}{Div22}} = \mbox{\hyperlink{_meshing_8m_acb89fed6e03fc3a266345e73c47d6529}{Div2n}} \& \mbox{\hyperlink{_meshing_8m_a32516faf38f84e2b2fe362381f94d26f}{F4}}
+\item 
+look \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} \mbox{\hyperlink{_meshing_8m_a5a4539e66d689832ae810dbbd3e71468}{difference}}
+\item 
+look \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} \mbox{\hyperlink{_meshing_8m_acb2b5756530d829e1604c9244d8bc5fc}{d\+Z\+\_\+c}} = \mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\+:)-\/\mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),\+:))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}\label{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}} 
+\index{Meshing.m@{Meshing.m}!Cmesh@{Cmesh}}
+\index{Cmesh@{Cmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Cmesh()}{Cmesh()}}
+{\footnotesize\ttfamily tries \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} have it in the right \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} Cmesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_ab0ac4ed5d1dd4703fcdc862fc92c7351}\label{_meshing_8m_ab0ac4ed5d1dd4703fcdc862fc92c7351}} 
+\index{Meshing.m@{Meshing.m}!disp@{disp}}
+\index{disp@{disp}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Dense \mbox{\hyperlink{readras_8m_a40fbe8949b277afd0fac64228851b12a}{depth}} \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}} in the \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} and \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} frame\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_a97a42524fa498e559eb3a8b8cc5da77a}\label{_meshing_8m_a97a42524fa498e559eb3a8b8cc5da77a}} 
+\index{Meshing.m@{Meshing.m}!disp@{disp}}
+\index{disp@{disp}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Dense \mbox{\hyperlink{readras_8m_a40fbe8949b277afd0fac64228851b12a}{depth}} \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}} in the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_a816e50558c17422efd230b4306647cca}\label{_meshing_8m_a816e50558c17422efd230b4306647cca}} 
+\index{Meshing.m@{Meshing.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}}
+{\footnotesize\ttfamily scaled \mbox{\hyperlink{go__calib__stereo_8m_af57982b1d97d2978416bd830b1ed9083}{threshold}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Organizing the \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{data...\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_a0f65f6e1b868ca0354744f5c61c42d77}\label{_meshing_8m_a0f65f6e1b868ca0354744f5c61c42d77}} 
+\index{Meshing.m@{Meshing.m}!std@{std}}
+\index{std@{std}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{std()}{std()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} std (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_meshing_8m_ae47bfe2e63c254dc0919ae8daa36b16a}{xp\+\_\+frac}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_af8b3c28a55cea038df7af2238e37c378}\label{_meshing_8m_af8b3c28a55cea038df7af2238e37c378}} 
+\index{Meshing.m@{Meshing.m}!xcmesh@{xcmesh}}
+\index{xcmesh@{xcmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xcmesh()}{xcmesh()}}
+{\footnotesize\ttfamily xcmesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_a5e1296aca392b4ecbce10307ed43a61c}\label{_meshing_8m_a5e1296aca392b4ecbce10307ed43a61c}} 
+\index{Meshing.m@{Meshing.m}!xp\_ind@{xp\_ind}}
+\index{xp\_ind@{xp\_ind}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xp\_ind()}{xp\_ind()}}
+{\footnotesize\ttfamily xp\+\_\+ind (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_ac70f2f6d4c4d153d4ea2069626b3eafc}\label{_meshing_8m_ac70f2f6d4c4d153d4ea2069626b3eafc}} 
+\index{Meshing.m@{Meshing.m}!ycmesh@{ycmesh}}
+\index{ycmesh@{ycmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{ycmesh()}{ycmesh()}}
+{\footnotesize\ttfamily ycmesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_a6555b58b73f299d142e99f1ae0c9759d}\label{_meshing_8m_a6555b58b73f299d142e99f1ae0c9759d}} 
+\index{Meshing.m@{Meshing.m}!Ymesh@{Ymesh}}
+\index{Ymesh@{Ymesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Ymesh()}{Ymesh()}}
+{\footnotesize\ttfamily Good \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} for Ymesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}\label{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}} 
+\index{Meshing.m@{Meshing.m}!Zmesh@{Zmesh}}
+\index{Zmesh@{Zmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Zmesh()}{Zmesh()}}
+{\footnotesize\ttfamily tries \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} have it in the right \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} Zmesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_meshing_8m_abeba97cd076f6614bc28cc0ec7476e47}\label{_meshing_8m_abeba97cd076f6614bc28cc0ec7476e47}} 
+\index{Meshing.m@{Meshing.m}!Ambi@{Ambi}}
+\index{Ambi@{Ambi}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Ambi}{Ambi}}
+{\footnotesize\ttfamily Ambi = \mbox{\hyperlink{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}{C1}} \& \mbox{\hyperlink{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}{C2}}}
+
+\mbox{\Hypertarget{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}\label{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}} 
+\index{Meshing.m@{Meshing.m}!C1@{C1}}
+\index{C1@{C1}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{C1}{C1}}
+{\footnotesize\ttfamily C1 = (\mbox{\hyperlink{_meshing_8m_ad1a9991558a010340c594d279808bd88}{F1}} $\vert$ \mbox{\hyperlink{_meshing_8m_a70b7ca88e17dfeeaac499e1260b40286}{F2}})}
+
+\mbox{\Hypertarget{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}\label{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}} 
+\index{Meshing.m@{Meshing.m}!C2@{C2}}
+\index{C2@{C2}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{C2}{C2}}
+{\footnotesize\ttfamily C2 = (\mbox{\hyperlink{_meshing_8m_afa27dddadb9aa40be7dff7b954e3cbde}{F3}} $\vert$ \mbox{\hyperlink{_meshing_8m_a32516faf38f84e2b2fe362381f94d26f}{F4}})}
+
+\mbox{\Hypertarget{_meshing_8m_a4fc0a3bbe01bea8d794ef8cc6614fe39}\label{_meshing_8m_a4fc0a3bbe01bea8d794ef8cc6614fe39}} 
+\index{Meshing.m@{Meshing.m}!Cmesh@{Cmesh}}
+\index{Cmesh@{Cmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Cmesh}{Cmesh}}
+{\footnotesize\ttfamily Cmesh = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})}
+
+\mbox{\Hypertarget{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}\label{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}} 
+\index{Meshing.m@{Meshing.m}!D2@{D2}}
+\index{D2@{D2}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{D2}{D2}}
+{\footnotesize\ttfamily D2 = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) \& \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})}
+
+\mbox{\Hypertarget{_meshing_8m_a5a4539e66d689832ae810dbbd3e71468}\label{_meshing_8m_a5a4539e66d689832ae810dbbd3e71468}} 
+\index{Meshing.m@{Meshing.m}!difference@{difference}}
+\index{difference@{difference}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{difference}{difference}}
+{\footnotesize\ttfamily look \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} difference}
+
+\mbox{\Hypertarget{_meshing_8m_ac2c301de314843e670bbc28ab1797eab}\label{_meshing_8m_ac2c301de314843e670bbc28ab1797eab}} 
+\index{Meshing.m@{Meshing.m}!Div1@{Div1}}
+\index{Div1@{Div1}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Div1}{Div1}}
+{\footnotesize\ttfamily ambiguous zones Div1 = \mbox{\hyperlink{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}{C1}} \& $\sim$\mbox{\hyperlink{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}{C2}}}
+
+\mbox{\Hypertarget{_meshing_8m_a3a1a835b0a219768edf489680517a57f}\label{_meshing_8m_a3a1a835b0a219768edf489680517a57f}} 
+\index{Meshing.m@{Meshing.m}!Div11@{Div11}}
+\index{Div11@{Div11}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Div11}{Div11}}
+{\footnotesize\ttfamily Div11 = \mbox{\hyperlink{_meshing_8m_a92a8c13a583e9c03bad774406e418ee8}{Div1n}} \& \mbox{\hyperlink{_meshing_8m_ad1a9991558a010340c594d279808bd88}{F1}}}
+
+\mbox{\Hypertarget{_meshing_8m_a6d67a06ddee9a727419a6f89bd4be185}\label{_meshing_8m_a6d67a06ddee9a727419a6f89bd4be185}} 
+\index{Meshing.m@{Meshing.m}!Div12@{Div12}}
+\index{Div12@{Div12}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Div12}{Div12}}
+{\footnotesize\ttfamily Div12 = \mbox{\hyperlink{_meshing_8m_a92a8c13a583e9c03bad774406e418ee8}{Div1n}} \& \mbox{\hyperlink{_meshing_8m_a70b7ca88e17dfeeaac499e1260b40286}{F2}}}
+
+\mbox{\Hypertarget{_meshing_8m_a92a8c13a583e9c03bad774406e418ee8}\label{_meshing_8m_a92a8c13a583e9c03bad774406e418ee8}} 
+\index{Meshing.m@{Meshing.m}!Div1n@{Div1n}}
+\index{Div1n@{Div1n}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Div1n}{Div1n}}
+{\footnotesize\ttfamily Div1n = \mbox{\hyperlink{_meshing_8m_ac2c301de314843e670bbc28ab1797eab}{Div1}} $\vert$ ((\mbox{\hyperlink{_meshing_8m_a829e78cec27c87388530dc0eb63047d6}{Dm1}} $<$= \mbox{\hyperlink{_meshing_8m_afcdd4592bb936eccec0893ea74dc3084}{Dm2}})\&\mbox{\hyperlink{_meshing_8m_abeba97cd076f6614bc28cc0ec7476e47}{Ambi}})}
+
+\mbox{\Hypertarget{_meshing_8m_a4f34c60ed99b60ac1c1fab6e8de288a0}\label{_meshing_8m_a4f34c60ed99b60ac1c1fab6e8de288a0}} 
+\index{Meshing.m@{Meshing.m}!Div2@{Div2}}
+\index{Div2@{Div2}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Div2}{Div2}}
+{\footnotesize\ttfamily needs \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} check relative \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}} of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} Div2 = $\sim$\mbox{\hyperlink{_meshing_8m_ab4c2e29f0027cddbda43c092248a07b9}{C1}} \& \mbox{\hyperlink{_meshing_8m_aba5e864526cbaa667bca74e2d1d453f0}{C2}}}
+
+\mbox{\Hypertarget{_meshing_8m_af9025f614565b18bff112dd2ea5121f5}\label{_meshing_8m_af9025f614565b18bff112dd2ea5121f5}} 
+\index{Meshing.m@{Meshing.m}!Div21@{Div21}}
+\index{Div21@{Div21}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Div21}{Div21}}
+{\footnotesize\ttfamily Div21 = \mbox{\hyperlink{_meshing_8m_acb89fed6e03fc3a266345e73c47d6529}{Div2n}} \& \mbox{\hyperlink{_meshing_8m_afa27dddadb9aa40be7dff7b954e3cbde}{F3}}}
+
+\mbox{\Hypertarget{_meshing_8m_a81582a0a55314ffad0a76b3d92369705}\label{_meshing_8m_a81582a0a55314ffad0a76b3d92369705}} 
+\index{Meshing.m@{Meshing.m}!Div22@{Div22}}
+\index{Div22@{Div22}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Div22}{Div22}}
+{\footnotesize\ttfamily Div22 = \mbox{\hyperlink{_meshing_8m_acb89fed6e03fc3a266345e73c47d6529}{Div2n}} \& \mbox{\hyperlink{_meshing_8m_a32516faf38f84e2b2fe362381f94d26f}{F4}}}
+
+\mbox{\Hypertarget{_meshing_8m_acb89fed6e03fc3a266345e73c47d6529}\label{_meshing_8m_acb89fed6e03fc3a266345e73c47d6529}} 
+\index{Meshing.m@{Meshing.m}!Div2n@{Div2n}}
+\index{Div2n@{Div2n}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Div2n}{Div2n}}
+{\footnotesize\ttfamily Div2n = \mbox{\hyperlink{_meshing_8m_a4f34c60ed99b60ac1c1fab6e8de288a0}{Div2}} $\vert$ ((\mbox{\hyperlink{_meshing_8m_afcdd4592bb936eccec0893ea74dc3084}{Dm2}} $<$ \mbox{\hyperlink{_meshing_8m_a829e78cec27c87388530dc0eb63047d6}{Dm1}})\&\mbox{\hyperlink{_meshing_8m_abeba97cd076f6614bc28cc0ec7476e47}{Ambi}})}
+
+\mbox{\Hypertarget{_meshing_8m_a829e78cec27c87388530dc0eb63047d6}\label{_meshing_8m_a829e78cec27c87388530dc0eb63047d6}} 
+\index{Meshing.m@{Meshing.m}!Dm1@{Dm1}}
+\index{Dm1@{Dm1}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Dm1}{Dm1}}
+{\footnotesize\ttfamily needs \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} check relative \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}} of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{click__ima__calib__no__read_8m_a09fc09522c04b297eccb7392c10f560b}{diagonal}} Dm1 =( \mbox{\hyperlink{_meshing_8m_a6514ccdd4c40d8f076da5002c9b85c92}{Xmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) -\/ \mbox{\hyperlink{_meshing_8m_a6514ccdd4c40d8f076da5002c9b85c92}{Xmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})).$^\wedge$2 + (\mbox{\hyperlink{_meshing_8m_a6555b58b73f299d142e99f1ae0c9759d}{Ymesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) -\/ \mbox{\hyperlink{_meshing_8m_a6555b58b73f299d142e99f1ae0c9759d}{Ymesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})).$^\wedge$2 + (\mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) -\/ \mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})).$^\wedge$2}
+
+\mbox{\Hypertarget{_meshing_8m_afcdd4592bb936eccec0893ea74dc3084}\label{_meshing_8m_afcdd4592bb936eccec0893ea74dc3084}} 
+\index{Meshing.m@{Meshing.m}!Dm2@{Dm2}}
+\index{Dm2@{Dm2}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Dm2}{Dm2}}
+{\footnotesize\ttfamily Dm2 = \mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) -\/ \mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}))}
+
+\mbox{\Hypertarget{_meshing_8m_acb2b5756530d829e1604c9244d8bc5fc}\label{_meshing_8m_acb2b5756530d829e1604c9244d8bc5fc}} 
+\index{Meshing.m@{Meshing.m}!dZ\_c@{dZ\_c}}
+\index{dZ\_c@{dZ\_c}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{dZ\_c}{dZ\_c}}
+{\footnotesize\ttfamily look \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} d\+Z\+\_\+c = \mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\+:)-\/\mbox{\hyperlink{_meshing_8m_a1daa3e621adba7365af4d8028f9d8900}{Zmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),\+:))}
+
+\mbox{\Hypertarget{_meshing_8m_afb358f48b1646c750fb9da6c6585be2b}\label{_meshing_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{Meshing.m@{Meshing.m}!end@{end}}
+\index{end@{end}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{_meshing_8m_ad1a9991558a010340c594d279808bd88}\label{_meshing_8m_ad1a9991558a010340c594d279808bd88}} 
+\index{Meshing.m@{Meshing.m}!F1@{F1}}
+\index{F1@{F1}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{F1}{F1}}
+{\footnotesize\ttfamily Hypothesis \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the F1 = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) \& D1}
+
+\mbox{\Hypertarget{_meshing_8m_a70b7ca88e17dfeeaac499e1260b40286}\label{_meshing_8m_a70b7ca88e17dfeeaac499e1260b40286}} 
+\index{Meshing.m@{Meshing.m}!F2@{F2}}
+\index{F2@{F2}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{F2}{F2}}
+{\footnotesize\ttfamily F2 = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}) \& D1}
+
+\mbox{\Hypertarget{_meshing_8m_afa27dddadb9aa40be7dff7b954e3cbde}\label{_meshing_8m_afa27dddadb9aa40be7dff7b954e3cbde}} 
+\index{Meshing.m@{Meshing.m}!F3@{F3}}
+\index{F3@{F3}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{F3}{F3}}
+{\footnotesize\ttfamily F3 = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(1\+:(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}-\/1),2\+:\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}) \& \mbox{\hyperlink{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}{D2}}}
+
+\mbox{\Hypertarget{_meshing_8m_a32516faf38f84e2b2fe362381f94d26f}\label{_meshing_8m_a32516faf38f84e2b2fe362381f94d26f}} 
+\index{Meshing.m@{Meshing.m}!F4@{F4}}
+\index{F4@{F4}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{F4}{F4}}
+{\footnotesize\ttfamily F4 = \mbox{\hyperlink{_meshing_8m_a024c67aade75159a50dcad93f0d1cab4}{Cmesh}}(2\+:\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},1\+:(\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}}-\/1)) \& \mbox{\hyperlink{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}{D2}}}
+
+\mbox{\Hypertarget{_meshing_8m_aa0f8b6c9317131c943953b9cf5298d4b}\label{_meshing_8m_aa0f8b6c9317131c943953b9cf5298d4b}} 
+\index{Meshing.m@{Meshing.m}!function@{function}}
+\index{function@{function}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}Xc3, tri3, xc3, xp3, dc3, xc\+\_\+texture, nc3, conf\+\_\+nc3, Nn3\mbox{]} = Meshing(Xc2,\mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}},xp2,Thresh\+\_\+connect,\mbox{\hyperlink{scanning__script_8m_a95873e65a21d176eaa8425f449b0b2d5}{N\+\_\+smoothing}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}{N\+\_\+x}},\mbox{\hyperlink{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}{N\+\_\+y}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})}
+
+\mbox{\Hypertarget{_meshing_8m_aa1a517e3e42b3d109bc480c74e3a655c}\label{_meshing_8m_aa1a517e3e42b3d109bc480c74e3a655c}} 
+\index{Meshing.m@{Meshing.m}!ind@{ind}}
+\index{ind@{ind}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{ind}{ind}}
+{\footnotesize\ttfamily ind = \mbox{\hyperlink{_meshing_8m_a8ea2301c666d77bb30c0b5555ee0f02a}{ind\+\_\+row}} + (\mbox{\hyperlink{_meshing_8m_af327f4ba440b3d63871bb2385f537073}{ind\+\_\+col}}-\/1)$\ast$\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}}}
+
+\mbox{\Hypertarget{_meshing_8m_af327f4ba440b3d63871bb2385f537073}\label{_meshing_8m_af327f4ba440b3d63871bb2385f537073}} 
+\index{Meshing.m@{Meshing.m}!ind\_col@{ind\_col}}
+\index{ind\_col@{ind\_col}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{ind\_col}{ind\_col}}
+{\footnotesize\ttfamily ind\+\_\+col = round(\mbox{\hyperlink{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}{xp4}} -\/ \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}} + 1)}
+
+\mbox{\Hypertarget{_meshing_8m_a8ea2301c666d77bb30c0b5555ee0f02a}\label{_meshing_8m_a8ea2301c666d77bb30c0b5555ee0f02a}} 
+\index{Meshing.m@{Meshing.m}!ind\_row@{ind\_row}}
+\index{ind\_row@{ind\_row}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{ind\_row}{ind\_row}}
+{\footnotesize\ttfamily ind\+\_\+row = \mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}}(2,\+:) -\/ \mbox{\hyperlink{_meshing_8m_ae9b82cfd5d951621ecb0d4468fcabc21}{xcmin}} + 1}
+
+\mbox{\Hypertarget{_meshing_8m_af07ccc5f20176a4087d05abaa3c97c39}\label{_meshing_8m_af07ccc5f20176a4087d05abaa3c97c39}} 
+\index{Meshing.m@{Meshing.m}!ivview@{ivview}}
+\index{ivview@{ivview}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{ivview}{ivview}}
+{\footnotesize\ttfamily Good \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} for ivview}
+
+\mbox{\Hypertarget{_meshing_8m_ae2fdd8538edb0a5ac7868c4c3de8d620}\label{_meshing_8m_ae2fdd8538edb0a5ac7868c4c3de8d620}} 
+\index{Meshing.m@{Meshing.m}!measure@{measure}}
+\index{measure@{measure}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{measure}{measure}}
+{\footnotesize\ttfamily needs \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} check relative \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}} of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{click__ima__calib__no__read_8m_a09fc09522c04b297eccb7392c10f560b}{diagonal}} measure}
+
+\mbox{\Hypertarget{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}\label{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}} 
+\index{Meshing.m@{Meshing.m}!Ncol@{Ncol}}
+\index{Ncol@{Ncol}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Ncol}{Ncol}}
+{\footnotesize\ttfamily Ncol = \mbox{\hyperlink{_meshing_8m_a4b1407122fa68a845901054631fe791c}{xpmax}} -\/ \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}} + 1}
+
+\mbox{\Hypertarget{_meshing_8m_adb5cee64d8879581f189d71178dcb055}\label{_meshing_8m_adb5cee64d8879581f189d71178dcb055}} 
+\index{Meshing.m@{Meshing.m}!ni@{ni}}
+\index{ni@{ni}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{ni}{ni}}
+{\footnotesize\ttfamily ni = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})}
+
+\mbox{\Hypertarget{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}\label{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}} 
+\index{Meshing.m@{Meshing.m}!Nrow@{Nrow}}
+\index{Nrow@{Nrow}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Nrow}{Nrow}}
+{\footnotesize\ttfamily Nrow = \mbox{\hyperlink{_meshing_8m_ae7c04e6dd7b7170d3accc621465df43b}{xcmax}} -\/ \mbox{\hyperlink{_meshing_8m_ae9b82cfd5d951621ecb0d4468fcabc21}{xcmin}} + 1}
+
+\mbox{\Hypertarget{_meshing_8m_ae43f325bb5c50461cd984f00f0235aca}\label{_meshing_8m_ae43f325bb5c50461cd984f00f0235aca}} 
+\index{Meshing.m@{Meshing.m}!organization@{organization}}
+\index{organization@{organization}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{organization}{organization}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} Something \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{_distor2_calib_8m_ac285722dd13662586f5478312fe11f56}{fix}} the organization}
+
+\mbox{\Hypertarget{_meshing_8m_ad2b3d7a5049048b2f337618b36f76322}\label{_meshing_8m_ad2b3d7a5049048b2f337618b36f76322}} 
+\index{Meshing.m@{Meshing.m}!spatial@{spatial}}
+\index{spatial@{spatial}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{spatial}{spatial}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} spatial = 0}
+
+\mbox{\Hypertarget{_meshing_8m_a5241c94652d6f0e2625481c273b24114}\label{_meshing_8m_a5241c94652d6f0e2625481c273b24114}} 
+\index{Meshing.m@{Meshing.m}!step\_xp@{step\_xp}}
+\index{step\_xp@{step\_xp}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{step\_xp}{step\_xp}}
+{\footnotesize\ttfamily step\+\_\+xp = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(diff(\mbox{\hyperlink{_meshing_8m_a5e1296aca392b4ecbce10307ed43a61c}{xp\+\_\+ind}}))}
+
+\mbox{\Hypertarget{_meshing_8m_a5dbb3757883ec70d5c13438a8d9730b0}\label{_meshing_8m_a5dbb3757883ec70d5c13438a8d9730b0}} 
+\index{Meshing.m@{Meshing.m}!T\_connect@{T\_connect}}
+\index{T\_connect@{T\_connect}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{T\_connect}{T\_connect}}
+{\footnotesize\ttfamily scaled connection \mbox{\hyperlink{go__calib__stereo_8m_af57982b1d97d2978416bd830b1ed9083}{threshold}} T\+\_\+connect = Thresh\+\_\+connect}
+
+\mbox{\Hypertarget{_meshing_8m_ae51c8aaf978db2e5d5f076fca5b3d6fd}\label{_meshing_8m_ae51c8aaf978db2e5d5f076fca5b3d6fd}} 
+\index{Meshing.m@{Meshing.m}!temporal@{temporal}}
+\index{temporal@{temporal}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{temporal}{temporal}}
+{\footnotesize\ttfamily temporal = 1}
+
+\mbox{\Hypertarget{_meshing_8m_a8d75df0a5bb09670d0eb29ff7043a53a}\label{_meshing_8m_a8d75df0a5bb09670d0eb29ff7043a53a}} 
+\index{Meshing.m@{Meshing.m}!triangles@{triangles}}
+\index{triangles@{triangles}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{triangles}{triangles}}
+{\footnotesize\ttfamily Hypothesis \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the triangles}
+
+\mbox{\Hypertarget{_meshing_8m_a7eba6c61cdebb0bd5d27ae391a7282b7}\label{_meshing_8m_a7eba6c61cdebb0bd5d27ae391a7282b7}} 
+\index{Meshing.m@{Meshing.m}!xc\_frac@{xc\_frac}}
+\index{xc\_frac@{xc\_frac}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xc\_frac}{xc\_frac}}
+{\footnotesize\ttfamily xc\+\_\+frac = rem(\mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}}(1,\+:),1)}
+
+\mbox{\Hypertarget{_meshing_8m_ae7c04e6dd7b7170d3accc621465df43b}\label{_meshing_8m_ae7c04e6dd7b7170d3accc621465df43b}} 
+\index{Meshing.m@{Meshing.m}!xcmax@{xcmax}}
+\index{xcmax@{xcmax}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xcmax}{xcmax}}
+{\footnotesize\ttfamily xcmax = max(\mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}}(2,\+:))}
+
+\mbox{\Hypertarget{_meshing_8m_aa40833e90f84f88c77295c83b892753c}\label{_meshing_8m_aa40833e90f84f88c77295c83b892753c}} 
+\index{Meshing.m@{Meshing.m}!xcmesh@{xcmesh}}
+\index{xcmesh@{xcmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xcmesh}{xcmesh}}
+{\footnotesize\ttfamily xcmesh = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})}
+
+\mbox{\Hypertarget{_meshing_8m_ae9b82cfd5d951621ecb0d4468fcabc21}\label{_meshing_8m_ae9b82cfd5d951621ecb0d4468fcabc21}} 
+\index{Meshing.m@{Meshing.m}!xcmin@{xcmin}}
+\index{xcmin@{xcmin}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xcmin}{xcmin}}
+{\footnotesize\ttfamily xcmin = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(\mbox{\hyperlink{edgefinder_8m_a5a62ce42cd1ef02cb40975ee06079645}{xc2}}(2,\+:))}
+
+\mbox{\Hypertarget{_meshing_8m_a6514ccdd4c40d8f076da5002c9b85c92}\label{_meshing_8m_a6514ccdd4c40d8f076da5002c9b85c92}} 
+\index{Meshing.m@{Meshing.m}!Xmesh@{Xmesh}}
+\index{Xmesh@{Xmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Xmesh}{Xmesh}}
+{\footnotesize\ttfamily Xmesh = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})}
+
+\mbox{\Hypertarget{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}\label{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}} 
+\index{Meshing.m@{Meshing.m}!xp4@{xp4}}
+\index{xp4@{xp4}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xp4}{xp4}}
+{\footnotesize\ttfamily xp4 = (xp2 -\/ \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}})/\mbox{\hyperlink{_meshing_8m_a5241c94652d6f0e2625481c273b24114}{step\+\_\+xp}} + \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}}}
+
+\mbox{\Hypertarget{_meshing_8m_ae47bfe2e63c254dc0919ae8daa36b16a}\label{_meshing_8m_ae47bfe2e63c254dc0919ae8daa36b16a}} 
+\index{Meshing.m@{Meshing.m}!xp\_frac@{xp\_frac}}
+\index{xp\_frac@{xp\_frac}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xp\_frac}{xp\_frac}}
+{\footnotesize\ttfamily xp\+\_\+frac = rem(xp2,1)}
+
+\mbox{\Hypertarget{_meshing_8m_abc30fcb1acfb0d56c1fed38b9387bb6a}\label{_meshing_8m_abc30fcb1acfb0d56c1fed38b9387bb6a}} 
+\index{Meshing.m@{Meshing.m}!xp\_ind@{xp\_ind}}
+\index{xp\_ind@{xp\_ind}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xp\_ind}{xp\_ind}}
+{\footnotesize\ttfamily xp\+\_\+ind = round(unique(xp2 -\/ \mbox{\hyperlink{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}{xpmin}}))}
+
+\mbox{\Hypertarget{_meshing_8m_a4b1407122fa68a845901054631fe791c}\label{_meshing_8m_a4b1407122fa68a845901054631fe791c}} 
+\index{Meshing.m@{Meshing.m}!xpmax@{xpmax}}
+\index{xpmax@{xpmax}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xpmax}{xpmax}}
+{\footnotesize\ttfamily xpmax = max(\mbox{\hyperlink{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}{xp4}})}
+
+\mbox{\Hypertarget{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}\label{_meshing_8m_a357bec88074fb42b1e3ee08f8bf960c7}} 
+\index{Meshing.m@{Meshing.m}!xpmin@{xpmin}}
+\index{xpmin@{xpmin}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{xpmin}{xpmin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} Something \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{_distor2_calib_8m_ac285722dd13662586f5478312fe11f56}{fix}} the xpmin = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(\mbox{\hyperlink{_meshing_8m_a676fccc7519cf82b8fd4b323253bc8fa}{xp4}})}
+
+\mbox{\Hypertarget{_meshing_8m_acce70b11b1a2d0979aecb880260f570b}\label{_meshing_8m_acce70b11b1a2d0979aecb880260f570b}} 
+\index{Meshing.m@{Meshing.m}!ycmesh@{ycmesh}}
+\index{ycmesh@{ycmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{ycmesh}{ycmesh}}
+{\footnotesize\ttfamily ycmesh = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})}
+
+\mbox{\Hypertarget{_meshing_8m_acebfd54d9d93453f66cf68446838c6ef}\label{_meshing_8m_acebfd54d9d93453f66cf68446838c6ef}} 
+\index{Meshing.m@{Meshing.m}!Ymesh@{Ymesh}}
+\index{Ymesh@{Ymesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Ymesh}{Ymesh}}
+{\footnotesize\ttfamily Ymesh = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})}
+
+\mbox{\Hypertarget{_meshing_8m_acfed44899b3c1aa055e9c03f24ad3a5b}\label{_meshing_8m_acfed44899b3c1aa055e9c03f24ad3a5b}} 
+\index{Meshing.m@{Meshing.m}!Zmesh@{Zmesh}}
+\index{Zmesh@{Zmesh}!Meshing.m@{Meshing.m}}
+\doxysubsubsection{\texorpdfstring{Zmesh}{Zmesh}}
+{\footnotesize\ttfamily Zmesh = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_meshing_8m_a96d431bdd4765212e0b80d4da06de709}{Nrow}},\mbox{\hyperlink{_meshing_8m_a719b2fdd1ac6c05cec7a590616fdfc6b}{Ncol}})}
+

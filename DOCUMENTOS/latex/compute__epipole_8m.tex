@@ -1,0 +1,213 @@
+\hypertarget{compute__epipole_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/compute\+\_\+epipole.m File Reference}
+\label{compute__epipole_8m}\index{D:/TrackEsferas/NavarQA/calib/compute\_epipole.m@{D:/TrackEsferas/NavarQA/calib/compute\_epipole.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__epipole_8m_a4b2d388b61c044278c93737807108556}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}} (2) \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(2)
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__epipole_8m_a7921e9a29bba7c7e0aac4b899d3c0c42}{norm}} (\mbox{\hyperlink{compute__epipole_8m_ab23e4ffad0a85eb50a2546f27dbaab58}{l\+\_\+epipole}}(2)) $>$ norm(\mbox{\hyperlink{compute__epipole_8m_ab23e4ffad0a85eb50a2546f27dbaab58}{l\+\_\+epipole}}(1))
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a909cb6ac2b4c26d5d373c0a028511405}{pt}} (2,\+:)./pt(3
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a2150ce6a8deec3fa4f5acabac8e95b4e}{ones}} (1, \mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}})\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{compute__epipole_8m_abfb9c867b407075607c43e919da3d905}{function}} \mbox{[}\mbox{\hyperlink{compute__epipole_8m_ae40fdb93b2d27ff7e9ec140d6ece09e1}{epipole}}\mbox{]} = compute\+\_\+epipole(x\+Lp,\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}},\mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}},\mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}},\mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}},\mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}},\mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}},\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} = 400
+\item 
+\mbox{\hyperlink{compute__epipole_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a4500a162f923630dd09c58b47b274d51}{uo}} = \mbox{[} \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(x\+Lp,\mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}},\mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}})
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a78f5de753249930d9fffdbedec63ea7a}{S}}
+\item 
+\mbox{\hyperlink{compute__epipole_8m_ab23e4ffad0a85eb50a2546f27dbaab58}{l\+\_\+epipole}} = (\mbox{\hyperlink{skew3_8m_ad53aeb78abc83a52ab8982f5c82a3d5b}{S}}$\ast$\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}})$\ast$\mbox{\hyperlink{compute__epipole_8m_a4500a162f923630dd09c58b47b274d51}{uo}}
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a7ad3aec1cdbdc9b09573f8fc032f6e80}{K\+K\+\_\+right}} = \mbox{[}\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(1) \mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}} $\ast$ \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(1) \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(1)
+\item 
+\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}} = 800
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Horizontal \mbox{\hyperlink{compute__epipole_8m_a4ec713dc32daee0242ffd0a7acd31750}{line}}
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a3616e826fc73f828f5dbe0ca17b661af}{limit\+\_\+x\+\_\+neg}} = ((x\+Lp(1) -\/ \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}/2) -\/ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(1)) / \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(1)
+\item 
+\mbox{\hyperlink{compute__epipole_8m_ac64b09ace7fc4099ae29ba540a5b970f}{limit\+\_\+x\+\_\+pos}} = ((\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1) -\/ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(1)) / \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(1)
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a032ea392580771661c2e87ddf37551aa}{x\+\_\+list}} = (\mbox{\hyperlink{compute__epipole_8m_ac64b09ace7fc4099ae29ba540a5b970f}{limit\+\_\+x\+\_\+pos}} -\/ \mbox{\hyperlink{compute__epipole_8m_a3616e826fc73f828f5dbe0ca17b661af}{limit\+\_\+x\+\_\+neg}}) $\ast$ ((0\+:(\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}-\/1)) / (\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}-\/1)) + \mbox{\hyperlink{compute__epipole_8m_a3616e826fc73f828f5dbe0ca17b661af}{limit\+\_\+x\+\_\+neg}}
+\item 
+\mbox{\hyperlink{compute__epipole_8m_ac0ca150b0e000602a104bc1ca56005e3}{pt}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(repmat(\mbox{\hyperlink{compute__epipole_8m_ab23e4ffad0a85eb50a2546f27dbaab58}{l\+\_\+epipole}},1,\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}),\mbox{[}\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}});\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}});-\/\mbox{\hyperlink{compute__epipole_8m_a032ea392580771661c2e87ddf37551aa}{x\+\_\+list}}\mbox{]})
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{compute__epipole_8m_adc6ce18588ba1ad93d3c09cda5181068}{limit\+\_\+y\+\_\+pos}} = ((x\+Lp(2) + \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}/2) -\/ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(2)) / \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(2)
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a55507944b9ccd647965c8e5eb07992a3}{limit\+\_\+y\+\_\+neg}} = ((x\+Lp(2) -\/ \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}/2) -\/ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(2)) / \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(2)
+\item 
+\mbox{\hyperlink{compute__epipole_8m_aefb0d1e9d7fcd9b95ed08b2a57e5725e}{y\+\_\+list}} = (\mbox{\hyperlink{compute__epipole_8m_adc6ce18588ba1ad93d3c09cda5181068}{limit\+\_\+y\+\_\+pos}} -\/ \mbox{\hyperlink{compute__epipole_8m_a55507944b9ccd647965c8e5eb07992a3}{limit\+\_\+y\+\_\+neg}}) $\ast$ ((0\+:(\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}-\/1)) / (\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}-\/1)) + \mbox{\hyperlink{compute__epipole_8m_a55507944b9ccd647965c8e5eb07992a3}{limit\+\_\+y\+\_\+neg}}
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a80ad40e6270e9de09a3b433c64722d87}{\+\_\+\+\_\+pad9\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{compute__epipole_8m_a61f429dbd8a90da03fa08b9b82c88dbe}{ptd}} = apply\+\_\+distortion(\mbox{\hyperlink{compute__epipole_8m_a909cb6ac2b4c26d5d373c0a028511405}{pt}},\mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}})
+\item 
+\mbox{\hyperlink{compute__epipole_8m_ae40fdb93b2d27ff7e9ec140d6ece09e1}{epipole}} = \mbox{\hyperlink{load__stereo__calib__files_8m_a7ad3aec1cdbdc9b09573f8fc032f6e80}{K\+K\+\_\+right}} $\ast$ \mbox{[} \mbox{\hyperlink{compute__epipole_8m_a61f429dbd8a90da03fa08b9b82c88dbe}{ptd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}\label{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!fc\_right@{fc\_right}}
+\index{fc\_right@{fc\_right}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{fc\_right()}{fc\_right()}}
+{\footnotesize\ttfamily fc\+\_\+right (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__epipole_8m_a7921e9a29bba7c7e0aac4b899d3c0c42}\label{compute__epipole_8m_a7921e9a29bba7c7e0aac4b899d3c0c42}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!norm@{norm}}
+\index{norm@{norm}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{compute__epipole_8m_ab23e4ffad0a85eb50a2546f27dbaab58}{l\+\_\+epipole}}(2)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__epipole_8m_a2150ce6a8deec3fa4f5acabac8e95b4e}\label{compute__epipole_8m_a2150ce6a8deec3fa4f5acabac8e95b4e}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!ones@{ones}}
+\index{ones@{ones}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__epipole_8m_a909cb6ac2b4c26d5d373c0a028511405}\label{compute__epipole_8m_a909cb6ac2b4c26d5d373c0a028511405}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!pt@{pt}}
+\index{pt@{pt}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{pt()}{pt()}}
+{\footnotesize\ttfamily pt (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__epipole_8m_a4b2d388b61c044278c93737807108556}\label{compute__epipole_8m_a4b2d388b61c044278c93737807108556}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{compute__epipole_8m_a80ad40e6270e9de09a3b433c64722d87}\label{compute__epipole_8m_a80ad40e6270e9de09a3b433c64722d87}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!\_\_pad9\_\_@{\_\_pad9\_\_}}
+\index{\_\_pad9\_\_@{\_\_pad9\_\_}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad9\_\_}{\_\_pad9\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad9\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}\label{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!D@{D}}
+\index{D@{D}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} D = 400}
+
+\mbox{\Hypertarget{compute__epipole_8m_afb358f48b1646c750fb9da6c6585be2b}\label{compute__epipole_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!end@{end}}
+\index{end@{end}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{compute__epipole_8m_ae40fdb93b2d27ff7e9ec140d6ece09e1}\label{compute__epipole_8m_ae40fdb93b2d27ff7e9ec140d6ece09e1}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!epipole@{epipole}}
+\index{epipole@{epipole}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{epipole}{epipole}}
+{\footnotesize\ttfamily epipole = \mbox{\hyperlink{load__stereo__calib__files_8m_a7ad3aec1cdbdc9b09573f8fc032f6e80}{K\+K\+\_\+right}} $\ast$ \mbox{[} \mbox{\hyperlink{compute__epipole_8m_a61f429dbd8a90da03fa08b9b82c88dbe}{ptd}}}
+
+\mbox{\Hypertarget{compute__epipole_8m_abfb9c867b407075607c43e919da3d905}\label{compute__epipole_8m_abfb9c867b407075607c43e919da3d905}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!function@{function}}
+\index{function@{function}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{compute__epipole_8m_ae40fdb93b2d27ff7e9ec140d6ece09e1}{epipole}}\mbox{]} = compute\+\_\+epipole(x\+Lp,\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}},\mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}},\mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}},\mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}},\mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}},\mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}},\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}})}
+
+\mbox{\Hypertarget{compute__epipole_8m_a7ad3aec1cdbdc9b09573f8fc032f6e80}\label{compute__epipole_8m_a7ad3aec1cdbdc9b09573f8fc032f6e80}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!KK\_right@{KK\_right}}
+\index{KK\_right@{KK\_right}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{KK\_right}{KK\_right}}
+{\footnotesize\ttfamily K\+K\+\_\+right = \mbox{[}\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(1) \mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}} $\ast$ \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(1) \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(1)}
+
+\mbox{\Hypertarget{compute__epipole_8m_ab23e4ffad0a85eb50a2546f27dbaab58}\label{compute__epipole_8m_ab23e4ffad0a85eb50a2546f27dbaab58}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!l\_epipole@{l\_epipole}}
+\index{l\_epipole@{l\_epipole}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{l\_epipole}{l\_epipole}}
+{\footnotesize\ttfamily l\+\_\+epipole = (\mbox{\hyperlink{skew3_8m_ad53aeb78abc83a52ab8982f5c82a3d5b}{S}}$\ast$\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}})$\ast$\mbox{\hyperlink{compute__epipole_8m_a4500a162f923630dd09c58b47b274d51}{uo}}}
+
+\mbox{\Hypertarget{compute__epipole_8m_a3616e826fc73f828f5dbe0ca17b661af}\label{compute__epipole_8m_a3616e826fc73f828f5dbe0ca17b661af}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!limit\_x\_neg@{limit\_x\_neg}}
+\index{limit\_x\_neg@{limit\_x\_neg}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{limit\_x\_neg}{limit\_x\_neg}}
+{\footnotesize\ttfamily limit\+\_\+x\+\_\+neg = ((x\+Lp(1) -\/ \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}/2) -\/ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(1)) / \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(1)}
+
+\mbox{\Hypertarget{compute__epipole_8m_ac64b09ace7fc4099ae29ba540a5b970f}\label{compute__epipole_8m_ac64b09ace7fc4099ae29ba540a5b970f}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!limit\_x\_pos@{limit\_x\_pos}}
+\index{limit\_x\_pos@{limit\_x\_pos}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{limit\_x\_pos}{limit\_x\_pos}}
+{\footnotesize\ttfamily limit\+\_\+x\+\_\+pos = ((\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1) -\/ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(1)) / \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(1)}
+
+\mbox{\Hypertarget{compute__epipole_8m_a55507944b9ccd647965c8e5eb07992a3}\label{compute__epipole_8m_a55507944b9ccd647965c8e5eb07992a3}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!limit\_y\_neg@{limit\_y\_neg}}
+\index{limit\_y\_neg@{limit\_y\_neg}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{limit\_y\_neg}{limit\_y\_neg}}
+{\footnotesize\ttfamily limit\+\_\+y\+\_\+neg = ((x\+Lp(2) -\/ \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}/2) -\/ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(2)) / \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(2)}
+
+\mbox{\Hypertarget{compute__epipole_8m_adc6ce18588ba1ad93d3c09cda5181068}\label{compute__epipole_8m_adc6ce18588ba1ad93d3c09cda5181068}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!limit\_y\_pos@{limit\_y\_pos}}
+\index{limit\_y\_pos@{limit\_y\_pos}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{limit\_y\_pos}{limit\_y\_pos}}
+{\footnotesize\ttfamily limit\+\_\+y\+\_\+pos = ((x\+Lp(2) + \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}/2) -\/ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}(2)) / \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}(2)}
+
+\mbox{\Hypertarget{compute__epipole_8m_a4ec713dc32daee0242ffd0a7acd31750}\label{compute__epipole_8m_a4ec713dc32daee0242ffd0a7acd31750}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!line@{line}}
+\index{line@{line}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Horizontal line}
+
+\mbox{\Hypertarget{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}\label{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!N\_line@{N\_line}}
+\index{N\_line@{N\_line}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{N\_line}{N\_line}}
+{\footnotesize\ttfamily N\+\_\+line = 800}
+
+\mbox{\Hypertarget{compute__epipole_8m_ac0ca150b0e000602a104bc1ca56005e3}\label{compute__epipole_8m_ac0ca150b0e000602a104bc1ca56005e3}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!pt@{pt}}
+\index{pt@{pt}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{pt}{pt}}
+{\footnotesize\ttfamily pt = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(repmat(\mbox{\hyperlink{compute__epipole_8m_ab23e4ffad0a85eb50a2546f27dbaab58}{l\+\_\+epipole}},1,\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}),\mbox{[}\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}});\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}});-\/\mbox{\hyperlink{compute__epipole_8m_a032ea392580771661c2e87ddf37551aa}{x\+\_\+list}}\mbox{]})}
+
+\mbox{\Hypertarget{compute__epipole_8m_a61f429dbd8a90da03fa08b9b82c88dbe}\label{compute__epipole_8m_a61f429dbd8a90da03fa08b9b82c88dbe}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!ptd@{ptd}}
+\index{ptd@{ptd}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{ptd}{ptd}}
+{\footnotesize\ttfamily ptd = apply\+\_\+distortion(\mbox{\hyperlink{compute__epipole_8m_a909cb6ac2b4c26d5d373c0a028511405}{pt}},\mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}})}
+
+\mbox{\Hypertarget{compute__epipole_8m_a78f5de753249930d9fffdbedec63ea7a}\label{compute__epipole_8m_a78f5de753249930d9fffdbedec63ea7a}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!S@{S}}
+\index{S@{S}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{S}{S}}
+{\footnotesize\ttfamily Try \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} make the inversion S}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [   0  -\/T(3)  T(2)}
+\DoxyCodeLine{    T(3)   0   -\/T(1)}
+\DoxyCodeLine{    -\/T(2)  T(1)   0 ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{compute__epipole_8m_a4500a162f923630dd09c58b47b274d51}\label{compute__epipole_8m_a4500a162f923630dd09c58b47b274d51}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!uo@{uo}}
+\index{uo@{uo}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{uo}{uo}}
+{\footnotesize\ttfamily uo = \mbox{[} \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(x\+Lp,\mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}},\mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}})}
+
+\mbox{\Hypertarget{compute__epipole_8m_a032ea392580771661c2e87ddf37551aa}\label{compute__epipole_8m_a032ea392580771661c2e87ddf37551aa}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!x\_list@{x\_list}}
+\index{x\_list@{x\_list}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{x\_list}{x\_list}}
+{\footnotesize\ttfamily x\+\_\+list = (\mbox{\hyperlink{compute__epipole_8m_ac64b09ace7fc4099ae29ba540a5b970f}{limit\+\_\+x\+\_\+pos}} -\/ \mbox{\hyperlink{compute__epipole_8m_a3616e826fc73f828f5dbe0ca17b661af}{limit\+\_\+x\+\_\+neg}}) $\ast$ ((0\+:(\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}-\/1)) / (\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}-\/1)) + \mbox{\hyperlink{compute__epipole_8m_a3616e826fc73f828f5dbe0ca17b661af}{limit\+\_\+x\+\_\+neg}}}
+
+\mbox{\Hypertarget{compute__epipole_8m_aefb0d1e9d7fcd9b95ed08b2a57e5725e}\label{compute__epipole_8m_aefb0d1e9d7fcd9b95ed08b2a57e5725e}} 
+\index{compute\_epipole.m@{compute\_epipole.m}!y\_list@{y\_list}}
+\index{y\_list@{y\_list}!compute\_epipole.m@{compute\_epipole.m}}
+\doxysubsubsection{\texorpdfstring{y\_list}{y\_list}}
+{\footnotesize\ttfamily y\+\_\+list = (\mbox{\hyperlink{compute__epipole_8m_adc6ce18588ba1ad93d3c09cda5181068}{limit\+\_\+y\+\_\+pos}} -\/ \mbox{\hyperlink{compute__epipole_8m_a55507944b9ccd647965c8e5eb07992a3}{limit\+\_\+y\+\_\+neg}}) $\ast$ ((0\+:(\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}-\/1)) / (\mbox{\hyperlink{compute__epipole_8m_ac5860ec282f163e4e55042c2ecd38b79}{N\+\_\+line}}-\/1)) + \mbox{\hyperlink{compute__epipole_8m_a55507944b9ccd647965c8e5eb07992a3}{limit\+\_\+y\+\_\+neg}}}
+

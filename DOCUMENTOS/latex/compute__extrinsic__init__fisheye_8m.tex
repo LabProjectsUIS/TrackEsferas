@@ -1,0 +1,42 @@
+\hypertarget{compute__extrinsic__init__fisheye_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/compute\+\_\+extrinsic\+\_\+init\+\_\+fisheye.m File Reference}
+\label{compute__extrinsic__init__fisheye_8m}\index{D:/TrackEsferas/NavarQA/calib/compute\_extrinsic\_init\_fisheye.m@{D:/TrackEsferas/NavarQA/calib/compute\_extrinsic\_init\_fisheye.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+id \mbox{\hyperlink{compute__extrinsic__init__fisheye_8m_abd82fc14ca234b83f1cdd698da90bec7}{I\+N\+P\+U\+T\+:x\+\_\+kk\+:\+X\+\_\+kk\+:fc\+:cc\+:kc\+:alpha\+\_\+c\+:\+O\+U\+T\+P\+U\+T\+:omckk\+:\+Tckk\+:\+Rckk\+:\+Method\+:program\+:normalize\+\_\+pixel\+:pose3\+D\+:m\+:}} (id,\mbox{[}\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}\mbox{]} id \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}},\mbox{[}X\+\_\+kk\mbox{]} id \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}},\mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}\mbox{]} id \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}},\mbox{[}\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}\mbox{]} id \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}},\mbox{[}\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}\mbox{]} id coefficients,\mbox{[}\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}\mbox{]} id \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aece2bd00e2471c464f4b3ce1ff431b59}{coefficient}},\mbox{[}O\+U\+T\+P\+UT\mbox{]} id,\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}\mbox{]} id \mbox{\hyperlink{loadppm_8m_aae9e36bded84b28f880abb9a711c7d1e}{space}},\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}\mbox{]} id \mbox{\hyperlink{loadppm_8m_aae9e36bded84b28f880abb9a711c7d1e}{space}},\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}\mbox{]} id \mbox{\hyperlink{check__convergence_8m_a00f9aab906f3ebbbb335d16350bd3244}{vectors}},\mbox{[}\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}{Method}}\mbox{]} id \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}},\mbox{[}\mbox{\hyperlink{rigid__motion_8m_a3c8c189b0d4d2a89443cae4b60fe8ad6}{program}}\mbox{]} id,\mbox{[}\mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}\mbox{]} id \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}},\mbox{[}pose3D\mbox{]} id project\+\_\+points,\mbox{[}\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}\mbox{]} id \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{compute__extrinsic__init__fisheye_8m_a47495140bdac90a834379704ca830551}{function}} \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{compute__extrinsic__init__fisheye_8m_abd82fc14ca234b83f1cdd698da90bec7}\label{compute__extrinsic__init__fisheye_8m_abd82fc14ca234b83f1cdd698da90bec7}} 
+\index{compute\_extrinsic\_init\_fisheye.m@{compute\_extrinsic\_init\_fisheye.m}!INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:Method:program:normalize\_pixel:pose3D:m:@{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:Method:program:normalize\_pixel:pose3D:m:}}
+\index{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:Method:program:normalize\_pixel:pose3D:m:@{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:Method:program:normalize\_pixel:pose3D:m:}!compute\_extrinsic\_init\_fisheye.m@{compute\_extrinsic\_init\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:Method:program:normalize\_pixel:pose3D:m:()}{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:Method:program:normalize\_pixel:pose3D:m:()}}
+{\footnotesize\ttfamily id I\+N\+P\+U\+T\+:x\+\_\+kk\+:\+X\+\_\+kk\+:fc\+:cc\+:kc\+:alpha\+\_\+c\+:\+O\+U\+T\+P\+U\+T\+:omckk\+:\+Tckk\+:\+Rckk\+:\+Method\+:program\+:normalize\+\_\+pixel\+:pose3\+D\+:m\+: (\begin{DoxyParamCaption}\item[{id}]{,  }\item[{\mbox{[}x\+\_\+kk\mbox{]} id}]{images,  }\item[{\mbox{[}\+X\+\_\+kk\mbox{]} id}]{coordinates,  }\item[{\mbox{[}fc\mbox{]} id}]{length,  }\item[{\mbox{[}cc\mbox{]} id}]{coordinates,  }\item[{\mbox{[}kc\mbox{]} id}]{coefficients,  }\item[{\mbox{[}alpha\+\_\+c\mbox{]} id}]{coefficient,  }\item[{\mbox{[}\+O\+U\+T\+P\+U\+T\mbox{]} id}]{,  }\item[{\mbox{[}omckk\mbox{]} id}]{space,  }\item[{\mbox{[}\+Tckk\mbox{]} id}]{space,  }\item[{\mbox{[}\+Rckk\mbox{]} id}]{vectors,  }\item[{\mbox{[}\+Method\mbox{]} id}]{that,  }\item[{\mbox{[}program\mbox{]} id}]{,  }\item[{\mbox{[}normalize\+\_\+pixel\mbox{]} id}]{coordinates,  }\item[{\mbox{[}pose3\+D\mbox{]} id}]{project\+\_\+points,  }\item[{\mbox{[}m\mbox{]} id}]{alpha\+\_\+c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{compute__extrinsic__init__fisheye_8m_a47495140bdac90a834379704ca830551}\label{compute__extrinsic__init__fisheye_8m_a47495140bdac90a834379704ca830551}} 
+\index{compute\_extrinsic\_init\_fisheye.m@{compute\_extrinsic\_init\_fisheye.m}!function@{function}}
+\index{function@{function}!compute\_extrinsic\_init\_fisheye.m@{compute\_extrinsic\_init\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= compute\_extrinsic\_init\_fisheye(\mbox{\hyperlink{export__calib__data_8m_a5ea0ad593821902850aafb73aa158f49}{x\_kk}},X\_kk,\mbox{\hyperlink{_compute3_d_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}},\mbox{\hyperlink{apply__distortion_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}},\mbox{\hyperlink{calib__gui__normal_8m_abad12e09f1c957bb512efc7dd862cd16}{kc}},\mbox{\hyperlink{cam__proj__calib_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}{alpha\_c}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\%\mbox{\hyperlink{compute__extrinsic_8m_a425dd58c06e96950137478d01fcaafd2}{compute\_extrinsic}}}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%[omckk,Tckk,Rckk] = compute\_extrinsic\_init\_fisheye(\mbox{\hyperlink{export__calib__data_8m_a5ea0ad593821902850aafb73aa158f49}{x\_kk}},X\_kk,\mbox{\hyperlink{_compute3_d_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}},\mbox{\hyperlink{apply__distortion_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}},\mbox{\hyperlink{calib__gui__normal_8m_abad12e09f1c957bb512efc7dd862cd16}{kc}},\mbox{\hyperlink{cam__proj__calib_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}{alpha\_c}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%Computes the extrinsic \mbox{\hyperlink{cam__proj__calib_8m_aafd6b8a4b32e9e967ee9372af2b8b5e2}{parameters}} attached \mbox{\hyperlink{click__ima__calib3_d_8m_a7f570a4b57ed34463ad8cc2c68d36f23}{to}} \mbox{\hyperlink{ext__calib_8m_a4124bc0a9335c27f086f24ba207a4912}{a}} 3\mbox{\hyperlink{_compute3_d_8m_a350bfcb1e3cfb28ddff48ce525d4f139}{D}} \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} X\_kk given its projection}
+\DoxyCodeLine{\%\mbox{\hyperlink{click__ima__calib_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{analyse__error_8m_aee9a066043e7b7065d7cdda5fbcfba53}{image}} plane \mbox{\hyperlink{export__calib__data_8m_a5ea0ad593821902850aafb73aa158f49}{x\_kk}} and the intrinsic \mbox{\hyperlink{ext__calib__stereo_8m_a0fd8c3b5a373cf066995d09d25f40589}{camera}} \mbox{\hyperlink{cam__proj__calib_8m_aafd6b8a4b32e9e967ee9372af2b8b5e2}{parameters}} \mbox{\hyperlink{_compute3_d_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}}}
+
+\end{DoxyCode}

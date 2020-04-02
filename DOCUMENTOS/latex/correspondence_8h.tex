@@ -1,0 +1,88 @@
+\hypertarget{correspondence_8h}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/correspondence.h File Reference}
+\label{correspondence_8h}\index{D:/TrackEsferas/NavarQA/correspondence.h@{D:/TrackEsferas/NavarQA/correspondence.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}opencv\textbackslash{}cv.\+hpp\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_custom_camera_library}{Custom\+Camera\+Library}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{correspondence_8h_a3e54e4b23953aa0d01f7117cb5515282}{A\+R\+EA}}~100
+\begin{DoxyCompactList}\small\item\em área mínima de las esferas de referencia de la broca \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{correspondence_8h_aba4f3fa7b16500b2203245f20585351b}{A\+R\+E\+A\+\_\+\+E\+S\+F\+E\+R\+A\+\_\+\+P\+EQ}}~50
+\begin{DoxyCompactList}\small\item\em área mínima de las esferas peque;a de referencia de los CR \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{correspondence_8h_ae47804daa324e3df5adcb7abbcb966a9}{M\+A\+X\+\_\+\+E\+S\+F\+E\+RA}}~20
+\begin{DoxyCompactList}\small\item\em cantidad máxima de esferas en la escena \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{correspondence_8h_ad1f7f78b7e7843ca8a2f94fcc8482ceb}{D\+I\+S\+T\+\_\+\+M\+AX}}~100
+\begin{DoxyCompactList}\small\item\em distancia máxima a la que puede estar una esfera grande de una pequeña (de referencia) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a291221ce1947cd1bd52f2841481fa8c0}{Custom\+Camera\+Library\+::punto\+\_\+broca}} (2, 1)
+\begin{DoxyCompactList}\small\item\em matriz que almacena el punto que referencia la broca. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a1cbd09897dffcc41c3a642770adc8173}{Custom\+Camera\+Library\+::reorden}} (Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{skew3_8m_ad53aeb78abc83a52ab8982f5c82a3d5b}{S}})
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a26a67198e10c00fec3b2f895eb1a1abc}{Custom\+Camera\+Library\+::find\+Spheres}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{_organizar_8m_a61ebed5c652353de759645b0137674b8}{P}}, int pos\+Ref)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a109d8fa846b5cb128ad83302672fcdad}{Custom\+Camera\+Library\+::find\+Drill}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{_organizar_8m_a61ebed5c652353de759645b0137674b8}{P}}, int pos\+Ref)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aaee5f971d615a4c55380f5a9422348b2}{Custom\+Camera\+Library\+::areas}} (Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}, Mat\+\_\+$<$ int $>$ \&areas\+\_\+men)
+\item 
+cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a1107e999bd0e04019d22ae2e18af9565}{Custom\+Camera\+Library\+::\+Correspondence\+Detection}} (cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{_organizar_8m_a61ebed5c652353de759645b0137674b8}{P}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}, cv\+::\+Mat\+\_\+$<$ double $>$ F\+\_\+\+Broca)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_ac6a3213fb67b95928204f15e2ab51b1a}{Custom\+Camera\+Library\+::broca\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em posición del indicador de la broca \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_custom_camera_library_aca1469087302fa24cfd7f293b4a23d60}{Custom\+Camera\+Library\+::detect\+\_\+broca}} = false
+\begin{DoxyCompactList}\small\item\em indicador para determinar si se empieza a detectar o se detiene la detección de la broca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{correspondence_8h_a3e54e4b23953aa0d01f7117cb5515282}\label{correspondence_8h_a3e54e4b23953aa0d01f7117cb5515282}} 
+\index{correspondence.h@{correspondence.h}!AREA@{AREA}}
+\index{AREA@{AREA}!correspondence.h@{correspondence.h}}
+\doxysubsubsection{\texorpdfstring{AREA}{AREA}}
+{\footnotesize\ttfamily \#define A\+R\+EA~100}
+
+
+
+área mínima de las esferas de referencia de la broca 
+
+\mbox{\Hypertarget{correspondence_8h_aba4f3fa7b16500b2203245f20585351b}\label{correspondence_8h_aba4f3fa7b16500b2203245f20585351b}} 
+\index{correspondence.h@{correspondence.h}!AREA\_ESFERA\_PEQ@{AREA\_ESFERA\_PEQ}}
+\index{AREA\_ESFERA\_PEQ@{AREA\_ESFERA\_PEQ}!correspondence.h@{correspondence.h}}
+\doxysubsubsection{\texorpdfstring{AREA\_ESFERA\_PEQ}{AREA\_ESFERA\_PEQ}}
+{\footnotesize\ttfamily \#define A\+R\+E\+A\+\_\+\+E\+S\+F\+E\+R\+A\+\_\+\+P\+EQ~50}
+
+
+
+área mínima de las esferas peque;a de referencia de los CR 
+
+\mbox{\Hypertarget{correspondence_8h_ad1f7f78b7e7843ca8a2f94fcc8482ceb}\label{correspondence_8h_ad1f7f78b7e7843ca8a2f94fcc8482ceb}} 
+\index{correspondence.h@{correspondence.h}!DIST\_MAX@{DIST\_MAX}}
+\index{DIST\_MAX@{DIST\_MAX}!correspondence.h@{correspondence.h}}
+\doxysubsubsection{\texorpdfstring{DIST\_MAX}{DIST\_MAX}}
+{\footnotesize\ttfamily \#define D\+I\+S\+T\+\_\+\+M\+AX~100}
+
+
+
+distancia máxima a la que puede estar una esfera grande de una pequeña (de referencia) 
+
+\mbox{\Hypertarget{correspondence_8h_ae47804daa324e3df5adcb7abbcb966a9}\label{correspondence_8h_ae47804daa324e3df5adcb7abbcb966a9}} 
+\index{correspondence.h@{correspondence.h}!MAX\_ESFERA@{MAX\_ESFERA}}
+\index{MAX\_ESFERA@{MAX\_ESFERA}!correspondence.h@{correspondence.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_ESFERA}{MAX\_ESFERA}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+E\+S\+F\+E\+RA~20}
+
+
+
+cantidad máxima de esferas en la escena 
+

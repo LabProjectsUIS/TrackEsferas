@@ -1,0 +1,98 @@
+\hypertarget{runme_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/runme.m File Reference}
+\label{runme_8m}\index{D:/TrackEsferas/NavarQA/calib/runme.m@{D:/TrackEsferas/NavarQA/calib/runme.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{runme_8m_a159bccfd1fca038b154c560bd9d1f0d9}{pause}} (10) root
+\item 
+\mbox{\hyperlink{runme_8m_a8a6af6482b5fdd81e1610d090cd51af4}{addpath}} (genpath(root))
+\item 
+\mbox{\hyperlink{runme_8m_acd052051bbf4b7553429f3104d629c0e}{cd}} (root) \mbox{\hyperlink{scanner__calibration__script_8m_afa3d09130541fdcc6edfba5f3ff6c3d0}{copyfile}} left\textbackslash{}\+Left $\ast$.tif stereo \mbox{\hyperlink{scanner__calibration__script_8m_afa3d09130541fdcc6edfba5f3ff6c3d0}{copyfile}} right\textbackslash{}\+Right $\ast$.tif stereo \mbox{\hyperlink{scanner__calibration__script_8m_a617d17276396a39b1f20468a5a81f959}{clear}} \mbox{\hyperlink{_evaluar_ajedrez_8m_a3f3d3b13a15c726d6aa03db3dd0d6377}{clc}} robot
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{runme_8m_a2293eb0a08db4ba59194fe656da590e8}{send\+Cmd}} (robot, \textquotesingle{}exit\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{runme_8m_aeba62587220d4faef7cab305bb98b394}{commands}}
+\item 
+for \mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{runme_8m_a8a6af6482b5fdd81e1610d090cd51af4}\label{runme_8m_a8a6af6482b5fdd81e1610d090cd51af4}} 
+\index{runme.m@{runme.m}!addpath@{addpath}}
+\index{addpath@{addpath}!runme.m@{runme.m}}
+\doxysubsubsection{\texorpdfstring{addpath()}{addpath()}}
+{\footnotesize\ttfamily addpath (\begin{DoxyParamCaption}\item[{genpath(root)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{runme_8m_acd052051bbf4b7553429f3104d629c0e}\label{runme_8m_acd052051bbf4b7553429f3104d629c0e}} 
+\index{runme.m@{runme.m}!cd@{cd}}
+\index{cd@{cd}!runme.m@{runme.m}}
+\doxysubsubsection{\texorpdfstring{cd()}{cd()}}
+{\footnotesize\ttfamily cd (\begin{DoxyParamCaption}\item[{root}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{runme_8m_a159bccfd1fca038b154c560bd9d1f0d9}\label{runme_8m_a159bccfd1fca038b154c560bd9d1f0d9}} 
+\index{runme.m@{runme.m}!pause@{pause}}
+\index{pause@{pause}!runme.m@{runme.m}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily pause (\begin{DoxyParamCaption}\item[{10}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{runme_8m_a2293eb0a08db4ba59194fe656da590e8}\label{runme_8m_a2293eb0a08db4ba59194fe656da590e8}} 
+\index{runme.m@{runme.m}!sendCmd@{sendCmd}}
+\index{sendCmd@{sendCmd}!runme.m@{runme.m}}
+\doxysubsubsection{\texorpdfstring{sendCmd()}{sendCmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} send\+Cmd (\begin{DoxyParamCaption}\item[{robot}]{,  }\item[{\textquotesingle{}exit\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}\label{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}} 
+\index{runme.m@{runme.m}!c@{c}}
+\index{c@{c}!runme.m@{runme.m}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily for c}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= 1:\mbox{\hyperlink{click__ima__calib3_d_8m_a7a134e91d2540aeba432404d6104a7ee}{length}}(\mbox{\hyperlink{runme_8m_aeba62587220d4faef7cab305bb98b394}{commands}})}
+\DoxyCodeLine{    \mbox{\hyperlink{runme_8m_a2293eb0a08db4ba59194fe656da590e8}{sendCmd}}(robot, \mbox{\hyperlink{runme_8m_aeba62587220d4faef7cab305bb98b394}{commands}}\{\mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}\})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{runme_8m_aeba62587220d4faef7cab305bb98b394}\label{runme_8m_aeba62587220d4faef7cab305bb98b394}} 
+\index{runme.m@{runme.m}!commands@{commands}}
+\index{commands@{commands}!runme.m@{runme.m}}
+\doxysubsubsection{\texorpdfstring{commands}{commands}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} commands}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\textcolor{stringliteral}{'cd left'};}
+\DoxyCodeLine{            \textcolor{stringliteral}{'go\_calib\_optim'};}
+\DoxyCodeLine{            \textcolor{stringliteral}{'Left'};}
+\DoxyCodeLine{            \textcolor{charliteral}{'t'};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{'45'};}
+\DoxyCodeLine{            \textcolor{stringliteral}{'45'};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{''};}
+\DoxyCodeLine{            \textcolor{stringliteral}{'saving\_calib'};}
+\DoxyCodeLine{            \textcolor{stringliteral}{'cd ..'};}
+\DoxyCodeLine{            \textcolor{stringliteral}{'movefile left\(\backslash\)Calib\_Results.mat stereo\(\backslash\)Calib\_Results\_left.mat'};}
+\DoxyCodeLine{            \}}
+
+\end{DoxyCode}

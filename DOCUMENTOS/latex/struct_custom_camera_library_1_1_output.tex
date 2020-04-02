@@ -1,0 +1,116 @@
+\hypertarget{struct_custom_camera_library_1_1_output}{}\doxysection{Custom\+Camera\+Library\+::Output Struct Reference}
+\label{struct_custom_camera_library_1_1_output}\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+
+
+Esta estructura permite almacenar las características de los cuerpos rígidos que vayan siendo detectados en mientras se esta ejecutando la la función \mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{Custom\+Camera\+Library\+::joskstra()}}  
+
+
+
+
+{\ttfamily \#include $<$detectbr.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_custom_camera_library_1_1_output_a035a9b6775bc3cd9637f8b67018f628b}{bdr}}
+\item 
+string \mbox{\hyperlink{struct_custom_camera_library_1_1_output_af0a8276215ad6447ca0391d32ffe72f5}{name}}
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{struct_custom_camera_library_1_1_output_ae2017d51295ddb45390dc715b4815b29}{bdrigid}}
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{struct_custom_camera_library_1_1_output_a06fa54e7fbbd5075e6517b9a6c93ca97}{centroid}}
+\item 
+int \mbox{\hyperlink{struct_custom_camera_library_1_1_output_a3361db4b0b8107c1458feebbb50c0589}{nmarkers}}
+\item 
+double \mbox{\hyperlink{struct_custom_camera_library_1_1_output_a7fa444f6b387695a1b29c460fe5f1bad}{yaw}}
+\item 
+double \mbox{\hyperlink{struct_custom_camera_library_1_1_output_a2ecfe8192c7cc66e5d3385c21ef4ab39}{pitch}}
+\item 
+double \mbox{\hyperlink{struct_custom_camera_library_1_1_output_a9383b78c1f441b6c816533c0011c2478}{roll}}
+\item 
+Point3d \mbox{\hyperlink{struct_custom_camera_library_1_1_output_aa8d02d07cd889dd98ed76942616cd06c}{point}}
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{struct_custom_camera_library_1_1_output_a5fab2e3e26e7e4ebb82046f2c28899a7}{Quat}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta estructura permite almacenar las características de los cuerpos rígidos que vayan siendo detectados en mientras se esta ejecutando la la función \mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{Custom\+Camera\+Library\+::joskstra()}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_custom_camera_library_1_1_output_a035a9b6775bc3cd9637f8b67018f628b}\label{struct_custom_camera_library_1_1_output_a035a9b6775bc3cd9637f8b67018f628b}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!bdr@{bdr}}
+\index{bdr@{bdr}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{bdr}{bdr}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::bdr}
+
+Contiene el número que identifica un cuerpo rígido, los números que identifican a un cuerpo rígido son\+:
+\begin{DoxyItemize}
+\item Pointer = 1
+\item Femur = 2
+\item Tíbia = 3
+\item Gafas = 4
+
+Este orden es obtenido de la matriz de distancias de cuerpos rígidos. \begin{DoxySeeAlso}{See also}
+Custom\+Camera\+Library\+::distances 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}\mbox{\Hypertarget{struct_custom_camera_library_1_1_output_ae2017d51295ddb45390dc715b4815b29}\label{struct_custom_camera_library_1_1_output_ae2017d51295ddb45390dc715b4815b29}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!bdrigid@{bdrigid}}
+\index{bdrigid@{bdrigid}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{bdrigid}{bdrigid}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::bdrigid}
+
+Matriz que contiene las coordenadas {\itshape x}, {\itshape y}, {\itshape z} de un cuerpo rígido detectado. \mbox{\Hypertarget{struct_custom_camera_library_1_1_output_a06fa54e7fbbd5075e6517b9a6c93ca97}\label{struct_custom_camera_library_1_1_output_a06fa54e7fbbd5075e6517b9a6c93ca97}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!centroid@{centroid}}
+\index{centroid@{centroid}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{centroid}{centroid}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::centroid}
+
+Matriz 3x1 que contiene la coordenada del centro del circulo que forma los marcadores que componen el cuerpo rígido. \mbox{\Hypertarget{struct_custom_camera_library_1_1_output_af0a8276215ad6447ca0391d32ffe72f5}\label{struct_custom_camera_library_1_1_output_af0a8276215ad6447ca0391d32ffe72f5}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!name@{name}}
+\index{name@{name}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::name}
+
+Nombre del objeto rígido (F\+E\+M\+UR, P\+O\+I\+N\+T\+ER, T\+I\+B\+IA, G\+A\+F\+AS). \mbox{\Hypertarget{struct_custom_camera_library_1_1_output_a3361db4b0b8107c1458feebbb50c0589}\label{struct_custom_camera_library_1_1_output_a3361db4b0b8107c1458feebbb50c0589}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!nmarkers@{nmarkers}}
+\index{nmarkers@{nmarkers}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{nmarkers}{nmarkers}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::nmarkers}
+
+Número de marcadores que forman el cuerpo rígido. \mbox{\Hypertarget{struct_custom_camera_library_1_1_output_a2ecfe8192c7cc66e5d3385c21ef4ab39}\label{struct_custom_camera_library_1_1_output_a2ecfe8192c7cc66e5d3385c21ef4ab39}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!pitch@{pitch}}
+\index{pitch@{pitch}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::pitch}
+
+Ángulo de euler en grados. \mbox{\Hypertarget{struct_custom_camera_library_1_1_output_aa8d02d07cd889dd98ed76942616cd06c}\label{struct_custom_camera_library_1_1_output_aa8d02d07cd889dd98ed76942616cd06c}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!point@{point}}
+\index{point@{point}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{point}{point}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::point}
+
+Si el objeto rígido detectado es el pointer entonces esta propiedad tendrá el valor del punto que toca la punta, de lo contrario será nulo el valor. \mbox{\Hypertarget{struct_custom_camera_library_1_1_output_a5fab2e3e26e7e4ebb82046f2c28899a7}\label{struct_custom_camera_library_1_1_output_a5fab2e3e26e7e4ebb82046f2c28899a7}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!Quat@{Quat}}
+\index{Quat@{Quat}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{Quat}{Quat}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::\+Quat}
+
+Cuaternios que representan la orientación del objeto rígido. \mbox{\Hypertarget{struct_custom_camera_library_1_1_output_a9383b78c1f441b6c816533c0011c2478}\label{struct_custom_camera_library_1_1_output_a9383b78c1f441b6c816533c0011c2478}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!roll@{roll}}
+\index{roll@{roll}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{roll}{roll}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::roll}
+
+Ángulo de euler en grados. \mbox{\Hypertarget{struct_custom_camera_library_1_1_output_a7fa444f6b387695a1b29c460fe5f1bad}\label{struct_custom_camera_library_1_1_output_a7fa444f6b387695a1b29c460fe5f1bad}} 
+\index{CustomCameraLibrary::Output@{CustomCameraLibrary::Output}!yaw@{yaw}}
+\index{yaw@{yaw}!CustomCameraLibrary::Output@{CustomCameraLibrary::Output}}
+\doxysubsubsection{\texorpdfstring{yaw}{yaw}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Output\+::yaw}
+
+Ángulo de euler en grados. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{detectbr_8h}{detectbr.\+h}}\end{DoxyCompactItemize}

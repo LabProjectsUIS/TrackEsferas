@@ -1,0 +1,86 @@
+\hypertarget{check__extracted__images_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/check\+\_\+extracted\+\_\+images.m File Reference}
+\label{check__extracted__images_8m}\index{D:/TrackEsferas/NavarQA/calib/check\_extracted\_images.m@{D:/TrackEsferas/NavarQA/calib/check\_extracted\_images.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__extracted__images_8m_a78fdceb8e7575c33bcec0a47de3785fa}{$\sim$exist}} (\mbox{[}\textquotesingle{}x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})\mbox{]})
+\item 
+for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__extracted__images_8m_ad2185814c3050befd429f17c2d510284}{fprintf}} (1, \textquotesingle{}W\+A\+R\+N\+I\+N\+G\+:\+Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})
+\item 
+\mbox{\hyperlink{check__extracted__images_8m_a3550af02a9e6ef7e8bd946cfdecf01d9}{active\+\_\+images}} (\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})=0
+\item 
+\mbox{\hyperlink{check__extracted__images_8m_a64fc2c28135fc28e2c42407a3a02d397}{eval}} (\mbox{[}\textquotesingle{}d\+X\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{}=\mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__extracted__images_8m_abf688f29fbb5cf3b5caeabbcb04d2215}{isnan}} (xkk(1))
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__extracted__images_8m_afebcf4a2719305ea3b61843e65015de5}{fprintf}} (1, \textquotesingle{}W\+A\+R\+N\+I\+N\+G\+:\+Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} -\/ This \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{inactive\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{check__extracted__images_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+for \mbox{\hyperlink{check__extracted__images_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+\mbox{\hyperlink{check__extracted__images_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{check__extracted__images_8m_a3550af02a9e6ef7e8bd946cfdecf01d9}\label{check__extracted__images_8m_a3550af02a9e6ef7e8bd946cfdecf01d9}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}}
+{\footnotesize\ttfamily active\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{check__extracted__images_8m_a64fc2c28135fc28e2c42407a3a02d397}\label{check__extracted__images_8m_a64fc2c28135fc28e2c42407a3a02d397}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!eval@{eval}}
+\index{eval@{eval}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__extracted__images_8m_afebcf4a2719305ea3b61843e65015de5}\label{check__extracted__images_8m_afebcf4a2719305ea3b61843e65015de5}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}W\+A\+R\+N\+I\+N\+G\+:\+Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} -\/ This \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{inactive\textbackslash{}n}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__extracted__images_8m_ad2185814c3050befd429f17c2d510284}\label{check__extracted__images_8m_ad2185814c3050befd429f17c2d510284}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}W\+A\+R\+N\+I\+N\+G\+:\+Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__extracted__images_8m_abf688f29fbb5cf3b5caeabbcb04d2215}\label{check__extracted__images_8m_abf688f29fbb5cf3b5caeabbcb04d2215}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!isnan@{isnan}}
+\index{isnan@{isnan}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{isnan()}{isnan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isnan (\begin{DoxyParamCaption}\item[{xkk(1)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__extracted__images_8m_a78fdceb8e7575c33bcec0a47de3785fa}\label{check__extracted__images_8m_a78fdceb8e7575c33bcec0a47de3785fa}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{check__extracted__images_8m_a0d062f92217e4e073995683900fdadcb}\label{check__extracted__images_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{check__extracted__images_8m_afb358f48b1646c750fb9da6c6585be2b}\label{check__extracted__images_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!end@{end}}
+\index{end@{end}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{check__extracted__images_8m_af29949bd63fb009eacab5efd11399e40}\label{check__extracted__images_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{check\_extracted\_images.m@{check\_extracted\_images.m}!kk@{kk}}
+\index{kk@{kk}!check\_extracted\_images.m@{check\_extracted\_images.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+

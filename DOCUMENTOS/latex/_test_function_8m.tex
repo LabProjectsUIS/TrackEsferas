@@ -1,0 +1,398 @@
+\hypertarget{_test_function_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/\+Test\+Function.m File Reference}
+\label{_test_function_8m}\index{D:/TrackEsferas/NavarQA/calib/TestFunction.m@{D:/TrackEsferas/NavarQA/calib/TestFunction.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_test_function_8m_a21789dba220c2b4a92c4fccab8e4341e}{dxdom}} (1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)
+\item 
+\mbox{\hyperlink{_test_function_8m_aaf6ac1200163a15f09889f9bed7388e7}{dxdom}} (2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)
+\item 
+\mbox{\hyperlink{_test_function_8m_a14734b158e996bd29787043c5b7396dd}{dxdT}} (1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)
+\item 
+\mbox{\hyperlink{_test_function_8m_a9ab93ff5d7b12e7e93d8c7576483f203}{dxdT}} (2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_test_function_8m_aba734eacecba706d69d307234ddc8cda}{function}} \mbox{[}\mbox{\hyperlink{project__points__fisheye_8m_a45322ce0b64916fa4b3537463cd563cc}{cdist}}, \mbox{\hyperlink{_test_function_8m_ae226c88b73d3eb28b01837a267692d09}{dcdistdom}}, \mbox{\hyperlink{_test_function_8m_a5d024a343d721bf18dafa62f191214ef}{dcdistdT}}, \mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}, \mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}}, \mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}}\mbox{]} = Test\+Function(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})
+\item 
+\mbox{\hyperlink{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}{inv\+\_\+Z}} = 1./\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}(3,\+:)
+\item 
+\mbox{\hyperlink{_test_function_8m_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = (\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}(1\+:2,\+:) .$\ast$ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1) $\ast$ \mbox{\hyperlink{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}{inv\+\_\+Z}}))
+\item 
+\mbox{\hyperlink{_test_function_8m_a65ba841e01d6db7733e90a5b7f9e6f80}{bb}} = (-\/\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:) .$\ast$ \mbox{\hyperlink{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}{inv\+\_\+Z}})\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)
+\item 
+\mbox{\hyperlink{_test_function_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}} = (-\/\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:) .$\ast$ \mbox{\hyperlink{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}{inv\+\_\+Z}})\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)
+\item 
+\mbox{\hyperlink{_test_function_8m_a562b34730010e3c750d29afcfe2df23b}{dxdom}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},3)
+\item 
+\mbox{\hyperlink{_test_function_8m_ad7fb8f473d01f568fc9083df9f7c1871}{dxdT}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},3)
+\item 
+Add fisheye \mbox{\hyperlink{_test_function_8m_a489630d61c55f2188f687d347393e5d0}{distortion}}
+\item 
+Add fisheye \mbox{\hyperlink{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}{dr2dom}} = 2$\ast$((\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)\textquotesingle{})$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)) .$\ast$ \mbox{\hyperlink{_test_function_8m_aaf6ac1200163a15f09889f9bed7388e7}{dxdom}}(1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:) + 2$\ast$((\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)\textquotesingle{})$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)) .$\ast$ \mbox{\hyperlink{_test_function_8m_aaf6ac1200163a15f09889f9bed7388e7}{dxdom}}(2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)
+\item 
+\mbox{\hyperlink{_test_function_8m_afc4d5812424acb136217493379c852ef}{dr2dT}} = 2$\ast$((\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)\textquotesingle{})$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)) .$\ast$ \mbox{\hyperlink{_test_function_8m_a9ab93ff5d7b12e7e93d8c7576483f203}{dxdT}}(1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:) + 2$\ast$((\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)\textquotesingle{})$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)) .$\ast$ \mbox{\hyperlink{_test_function_8m_a9ab93ff5d7b12e7e93d8c7576483f203}{dxdT}}(2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)
+\item 
+Radial \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}}
+\item 
+\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}} = 1 ./ (2$\ast$\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}})
+\item 
+\mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}} = \mbox{[} (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}{dr2dom}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}{dr2dom}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}{dr2dom}}(\+:,3) \mbox{]}
+\item 
+\mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}} = \mbox{[} (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_afc4d5812424acb136217493379c852ef}{dr2dT}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_afc4d5812424acb136217493379c852ef}{dr2dT}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_afc4d5812424acb136217493379c852ef}{dr2dT}}(\+:,3) \mbox{]}
+\item 
+Angle of the incoming \mbox{\hyperlink{_test_function_8m_a3599f573d0bb2891b35a53a516276ee8}{ray}}
+\item 
+\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}} = 1 ./ (1 + \mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}})
+\item 
+\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}} = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}}(\+:,3) \mbox{]}
+\item 
+\mbox{\hyperlink{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}{dthetadT}} = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}}(\+:,3) \mbox{]}
+\item 
+\mbox{\hyperlink{_test_function_8m_aec56998eac5b7321db482255ade3068d}{theta3}} = theta.$^\wedge$3
+\item 
+\mbox{\hyperlink{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}{theta4}} = theta.$^\wedge$4
+\item 
+\mbox{\hyperlink{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}{theta5}} = theta.$^\wedge$5
+\item 
+\mbox{\hyperlink{_test_function_8m_a0aaf1cc5533d2ccfc9124ac08c10abb0}{theta6}} = theta.$^\wedge$6
+\item 
+\mbox{\hyperlink{_test_function_8m_adb96c8420e6e7dce022855cf4e4b8ecc}{theta\+\_\+d}} = \mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1)$\ast$theta2 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2)$\ast$\mbox{\hyperlink{_test_function_8m_aec56998eac5b7321db482255ade3068d}{theta3}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}{theta4}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}{theta5}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(5)$\ast$\mbox{\hyperlink{_test_function_8m_a0aaf1cc5533d2ccfc9124ac08c10abb0}{theta6}}
+\item 
+\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}} = 1 + 2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1)$\ast$\mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}} + 3$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2)$\ast$theta2 + 4$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{_test_function_8m_aec56998eac5b7321db482255ade3068d}{theta3}} + 5$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}{theta4}} + 6$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(5)$\ast$\mbox{\hyperlink{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}{theta5}}
+\item 
+\mbox{\hyperlink{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}{dtheta\+\_\+ddom}} = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}}(\+:,3) \mbox{]}
+\item 
+\mbox{\hyperlink{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}{dtheta\+\_\+ddT}} = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}{dthetadT}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}{dthetadT}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}{dthetadT}}(\+:,3) \mbox{]}
+\item 
+\mbox{\hyperlink{_test_function_8m_ad1dc3d216564dd4ce9b59c15e38f514e}{dtheta\+\_\+ddk}} = \mbox{[}theta2\textquotesingle{} \mbox{\hyperlink{_test_function_8m_aec56998eac5b7321db482255ade3068d}{theta3}}\textquotesingle{} \mbox{\hyperlink{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}{theta4}}\textquotesingle{} \mbox{\hyperlink{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}{theta5}}\textquotesingle{} \mbox{\hyperlink{_test_function_8m_a0aaf1cc5533d2ccfc9124ac08c10abb0}{theta6}}\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{_test_function_8m_a8879a6ed5d4542a5c9d428f98530e6d4}{r\+\_\+d}} = tan(\mbox{\hyperlink{_test_function_8m_adb96c8420e6e7dce022855cf4e4b8ecc}{theta\+\_\+d}})
+\item 
+\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}} = 1 ./ ((cos(\mbox{\hyperlink{_test_function_8m_adb96c8420e6e7dce022855cf4e4b8ecc}{theta\+\_\+d}})).$^\wedge$2)
+\item 
+\mbox{\hyperlink{_test_function_8m_aec7e1fd2b8c1186d8c2fc056d94419ca}{dr\+\_\+ddom}} = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}{dtheta\+\_\+ddom}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}{dtheta\+\_\+ddom}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}{dtheta\+\_\+ddom}}(\+:,3) \mbox{]}
+\item 
+\mbox{\hyperlink{_test_function_8m_a5d2b1a86931b9ff05078f9bcbee6aee8}{dr\+\_\+ddT}} = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}{dtheta\+\_\+ddT}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}{dtheta\+\_\+ddT}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}{dtheta\+\_\+ddT}}(\+:,3) \mbox{]}
+\item 
+\mbox{\hyperlink{_test_function_8m_aa2cdb96e6daaf27dbd97e53ca51df2fc}{cdist}} = \mbox{\hyperlink{_test_function_8m_a8879a6ed5d4542a5c9d428f98530e6d4}{r\+\_\+d}}
+\item 
+\mbox{\hyperlink{_test_function_8m_ae226c88b73d3eb28b01837a267692d09}{dcdistdom}} = \mbox{\hyperlink{_test_function_8m_aec7e1fd2b8c1186d8c2fc056d94419ca}{dr\+\_\+ddom}}
+\item 
+\mbox{\hyperlink{_test_function_8m_a5d024a343d721bf18dafa62f191214ef}{dcdistdT}} = \mbox{\hyperlink{_test_function_8m_a5d2b1a86931b9ff05078f9bcbee6aee8}{dr\+\_\+ddT}}
+\item 
+\mbox{\hyperlink{_test_function_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+ratio \mbox{\hyperlink{_test_function_8m_ac8808e5cfbcc5d4d2680c7b1f14d6b34}{\+\_\+\+\_\+pad35\+\_\+\+\_\+}}
+\item 
+Test of the \mbox{\hyperlink{_test_function_8m_abae42d8e51a0eb43fe8aebb87b4719a0}{Jacobians}}
+\item 
+\mbox{\hyperlink{_test_function_8m_ac51b57a703ba1c5869228690c93e1701}{X}} = 10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})
+\item 
+\mbox{\hyperlink{_test_function_8m_a4e3462750cc302b9a3697c379ed1d885}{om}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)
+\item 
+\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} = \mbox{[}10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(2,1)
+\item 
+\mbox{\hyperlink{_test_function_8m_adc468c70fb574ebd07287b38d0d0676d}{k}} = 0.\+5$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(5,1)
+\item 
+Test \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}{om2}} = \mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}} + \mbox{\hyperlink{rodrigues_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}}
+\item 
+\mbox{\hyperlink{_test_function_8m_a2e8af9edc67c9fc54a3e95056a7cb420}{theta\+\_\+pred}} = \mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}} + \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}}$\ast$\mbox{\hyperlink{rodrigues_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}},1,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})
+\item 
+\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(theta2 -\/ \mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}})/\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(theta2 -\/ \mbox{\hyperlink{_test_function_8m_a2e8af9edc67c9fc54a3e95056a7cb420}{theta\+\_\+pred}}) \% Test \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} \mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}} = \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} + \mbox{\hyperlink{skew3_8m_a438b04263e75696048312b1b156d1450}{dT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_test_function_8m_a21789dba220c2b4a92c4fccab8e4341e}\label{_test_function_8m_a21789dba220c2b4a92c4fccab8e4341e}} 
+\index{TestFunction.m@{TestFunction.m}!dxdom@{dxdom}}
+\index{dxdom@{dxdom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dxdom()}{dxdom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dxdom (\begin{DoxyParamCaption}\item[{1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_test_function_8m_aaf6ac1200163a15f09889f9bed7388e7}\label{_test_function_8m_aaf6ac1200163a15f09889f9bed7388e7}} 
+\index{TestFunction.m@{TestFunction.m}!dxdom@{dxdom}}
+\index{dxdom@{dxdom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dxdom()}{dxdom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dxdom (\begin{DoxyParamCaption}\item[{2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_test_function_8m_a14734b158e996bd29787043c5b7396dd}\label{_test_function_8m_a14734b158e996bd29787043c5b7396dd}} 
+\index{TestFunction.m@{TestFunction.m}!dxdT@{dxdT}}
+\index{dxdT@{dxdT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dxdT()}{dxdT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dxdT (\begin{DoxyParamCaption}\item[{1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_test_function_8m_a9ab93ff5d7b12e7e93d8c7576483f203}\label{_test_function_8m_a9ab93ff5d7b12e7e93d8c7576483f203}} 
+\index{TestFunction.m@{TestFunction.m}!dxdT@{dxdT}}
+\index{dxdT@{dxdT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dxdT()}{dxdT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dxdT (\begin{DoxyParamCaption}\item[{2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_test_function_8m_ac8808e5cfbcc5d4d2680c7b1f14d6b34}\label{_test_function_8m_ac8808e5cfbcc5d4d2680c7b1f14d6b34}} 
+\index{TestFunction.m@{TestFunction.m}!\_\_pad35\_\_@{\_\_pad35\_\_}}
+\index{\_\_pad35\_\_@{\_\_pad35\_\_}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad35\_\_}{\_\_pad35\_\_}}
+{\footnotesize\ttfamily ratio \+\_\+\+\_\+pad35\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{_test_function_8m_a65ba841e01d6db7733e90a5b7f9e6f80}\label{_test_function_8m_a65ba841e01d6db7733e90a5b7f9e6f80}} 
+\index{TestFunction.m@{TestFunction.m}!bb@{bb}}
+\index{bb@{bb}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{bb}{bb}}
+{\footnotesize\ttfamily bb = (-\/\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:) .$\ast$ \mbox{\hyperlink{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}{inv\+\_\+Z}})\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)}
+
+\mbox{\Hypertarget{_test_function_8m_a41fcba09f2bdcdf315ba4119dc7978dd}\label{_test_function_8m_a41fcba09f2bdcdf315ba4119dc7978dd}} 
+\index{TestFunction.m@{TestFunction.m}!cc@{cc}}
+\index{cc@{cc}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily cc = (-\/\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:) .$\ast$ \mbox{\hyperlink{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}{inv\+\_\+Z}})\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)}
+
+\mbox{\Hypertarget{_test_function_8m_aa2cdb96e6daaf27dbd97e53ca51df2fc}\label{_test_function_8m_aa2cdb96e6daaf27dbd97e53ca51df2fc}} 
+\index{TestFunction.m@{TestFunction.m}!cdist@{cdist}}
+\index{cdist@{cdist}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{cdist}{cdist}}
+{\footnotesize\ttfamily cdist = \mbox{\hyperlink{_test_function_8m_a8879a6ed5d4542a5c9d428f98530e6d4}{r\+\_\+d}}}
+
+\mbox{\Hypertarget{_test_function_8m_ae226c88b73d3eb28b01837a267692d09}\label{_test_function_8m_ae226c88b73d3eb28b01837a267692d09}} 
+\index{TestFunction.m@{TestFunction.m}!dcdistdom@{dcdistdom}}
+\index{dcdistdom@{dcdistdom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dcdistdom}{dcdistdom}}
+{\footnotesize\ttfamily dcdistdom = \mbox{\hyperlink{_test_function_8m_aec7e1fd2b8c1186d8c2fc056d94419ca}{dr\+\_\+ddom}}}
+
+\mbox{\Hypertarget{_test_function_8m_a5d024a343d721bf18dafa62f191214ef}\label{_test_function_8m_a5d024a343d721bf18dafa62f191214ef}} 
+\index{TestFunction.m@{TestFunction.m}!dcdistdT@{dcdistdT}}
+\index{dcdistdT@{dcdistdT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dcdistdT}{dcdistdT}}
+{\footnotesize\ttfamily dcdistdT = \mbox{\hyperlink{_test_function_8m_a5d2b1a86931b9ff05078f9bcbee6aee8}{dr\+\_\+ddT}}}
+
+\mbox{\Hypertarget{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}\label{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}} 
+\index{TestFunction.m@{TestFunction.m}!distance@{distance}}
+\index{distance@{distance}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily Radial distance}
+
+\mbox{\Hypertarget{_test_function_8m_a489630d61c55f2188f687d347393e5d0}\label{_test_function_8m_a489630d61c55f2188f687d347393e5d0}} 
+\index{TestFunction.m@{TestFunction.m}!distortion@{distortion}}
+\index{distortion@{distortion}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{distortion}{distortion}}
+{\footnotesize\ttfamily Add the distortion}
+
+\mbox{\Hypertarget{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}\label{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}} 
+\index{TestFunction.m@{TestFunction.m}!dr2dom@{dr2dom}}
+\index{dr2dom@{dr2dom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dr2dom}{dr2dom}}
+{\footnotesize\ttfamily Add fisheye dr2dom = 2$\ast$((\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)\textquotesingle{})$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)) .$\ast$ \mbox{\hyperlink{_test_function_8m_aaf6ac1200163a15f09889f9bed7388e7}{dxdom}}(1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:) + 2$\ast$((\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)\textquotesingle{})$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)) .$\ast$ \mbox{\hyperlink{_test_function_8m_aaf6ac1200163a15f09889f9bed7388e7}{dxdom}}(2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)}
+
+\mbox{\Hypertarget{_test_function_8m_afc4d5812424acb136217493379c852ef}\label{_test_function_8m_afc4d5812424acb136217493379c852ef}} 
+\index{TestFunction.m@{TestFunction.m}!dr2dT@{dr2dT}}
+\index{dr2dT@{dr2dT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dr2dT}{dr2dT}}
+{\footnotesize\ttfamily dr2dT = 2$\ast$((\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)\textquotesingle{})$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)) .$\ast$ \mbox{\hyperlink{_test_function_8m_a9ab93ff5d7b12e7e93d8c7576483f203}{dxdT}}(1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:) + 2$\ast$((\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)\textquotesingle{})$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)) .$\ast$ \mbox{\hyperlink{_test_function_8m_a9ab93ff5d7b12e7e93d8c7576483f203}{dxdT}}(2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)}
+
+\mbox{\Hypertarget{_test_function_8m_aec7e1fd2b8c1186d8c2fc056d94419ca}\label{_test_function_8m_aec7e1fd2b8c1186d8c2fc056d94419ca}} 
+\index{TestFunction.m@{TestFunction.m}!dr\_ddom@{dr\_ddom}}
+\index{dr\_ddom@{dr\_ddom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dr\_ddom}{dr\_ddom}}
+{\footnotesize\ttfamily dr\+\_\+ddom = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}{dtheta\+\_\+ddom}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}{dtheta\+\_\+ddom}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}{dtheta\+\_\+ddom}}(\+:,3) \mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_a5d2b1a86931b9ff05078f9bcbee6aee8}\label{_test_function_8m_a5d2b1a86931b9ff05078f9bcbee6aee8}} 
+\index{TestFunction.m@{TestFunction.m}!dr\_ddT@{dr\_ddT}}
+\index{dr\_ddT@{dr\_ddT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dr\_ddT}{dr\_ddT}}
+{\footnotesize\ttfamily dr\+\_\+ddT = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}{dtheta\+\_\+ddT}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}{dtheta\+\_\+ddT}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}{dr\+\_\+ddtheta\+\_\+d}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}{dtheta\+\_\+ddT}}(\+:,3) \mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}\label{_test_function_8m_a1ab06069525fe9018caf7fd89ed2697b}} 
+\index{TestFunction.m@{TestFunction.m}!dr\_ddtheta\_d@{dr\_ddtheta\_d}}
+\index{dr\_ddtheta\_d@{dr\_ddtheta\_d}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dr\_ddtheta\_d}{dr\_ddtheta\_d}}
+{\footnotesize\ttfamily dr\+\_\+ddtheta\+\_\+d = 1 ./ ((cos(\mbox{\hyperlink{_test_function_8m_adb96c8420e6e7dce022855cf4e4b8ecc}{theta\+\_\+d}})).$^\wedge$2)}
+
+\mbox{\Hypertarget{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}\label{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}} 
+\index{TestFunction.m@{TestFunction.m}!drdom@{drdom}}
+\index{drdom@{drdom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{drdom}{drdom}}
+{\footnotesize\ttfamily drdom = \mbox{[} (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}{dr2dom}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}{dr2dom}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a8e2e8c03a42528c14807e0dc4d1f8da8}{dr2dom}}(\+:,3) \mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}\label{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}} 
+\index{TestFunction.m@{TestFunction.m}!drdr2@{drdr2}}
+\index{drdr2@{drdr2}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{drdr2}{drdr2}}
+{\footnotesize\ttfamily drdr2 = 1 ./ (2$\ast$\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}})}
+
+\mbox{\Hypertarget{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}\label{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}} 
+\index{TestFunction.m@{TestFunction.m}!drdT@{drdT}}
+\index{drdT@{drdT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{drdT}{drdT}}
+{\footnotesize\ttfamily drdT = \mbox{[} (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_afc4d5812424acb136217493379c852ef}{dr2dT}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_afc4d5812424acb136217493379c852ef}{dr2dT}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_ae9b6b8ea8824c3047ad852d7a2b729f3}{drdr2}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_afc4d5812424acb136217493379c852ef}{dr2dT}}(\+:,3) \mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_ad1dc3d216564dd4ce9b59c15e38f514e}\label{_test_function_8m_ad1dc3d216564dd4ce9b59c15e38f514e}} 
+\index{TestFunction.m@{TestFunction.m}!dtheta\_ddk@{dtheta\_ddk}}
+\index{dtheta\_ddk@{dtheta\_ddk}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dtheta\_ddk}{dtheta\_ddk}}
+{\footnotesize\ttfamily dtheta\+\_\+ddk = \mbox{[}theta2\textquotesingle{} \mbox{\hyperlink{_test_function_8m_aec56998eac5b7321db482255ade3068d}{theta3}}\textquotesingle{} \mbox{\hyperlink{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}{theta4}}\textquotesingle{} \mbox{\hyperlink{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}{theta5}}\textquotesingle{} \mbox{\hyperlink{_test_function_8m_a0aaf1cc5533d2ccfc9124ac08c10abb0}{theta6}}\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}\label{_test_function_8m_a1af06fa99b0742d5f5a961e90745a806}} 
+\index{TestFunction.m@{TestFunction.m}!dtheta\_ddom@{dtheta\_ddom}}
+\index{dtheta\_ddom@{dtheta\_ddom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dtheta\_ddom}{dtheta\_ddom}}
+{\footnotesize\ttfamily dtheta\+\_\+ddom = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}}(\+:,3) \mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}\label{_test_function_8m_a76eae559829b05d3d3b3446b0117d00f}} 
+\index{TestFunction.m@{TestFunction.m}!dtheta\_ddT@{dtheta\_ddT}}
+\index{dtheta\_ddT@{dtheta\_ddT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dtheta\_ddT}{dtheta\_ddT}}
+{\footnotesize\ttfamily dtheta\+\_\+ddT = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}{dthetadT}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}{dthetadT}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}{dtheta\+\_\+ddtheta}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}{dthetadT}}(\+:,3) \mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}\label{_test_function_8m_a650d3db09e88f4eac54bace3ec56fb96}} 
+\index{TestFunction.m@{TestFunction.m}!dtheta\_ddtheta@{dtheta\_ddtheta}}
+\index{dtheta\_ddtheta@{dtheta\_ddtheta}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dtheta\_ddtheta}{dtheta\_ddtheta}}
+{\footnotesize\ttfamily dtheta\+\_\+ddtheta = 1 + 2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1)$\ast$\mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}} + 3$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2)$\ast$theta2 + 4$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{_test_function_8m_aec56998eac5b7321db482255ade3068d}{theta3}} + 5$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}{theta4}} + 6$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(5)$\ast$\mbox{\hyperlink{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}{theta5}}}
+
+\mbox{\Hypertarget{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}\label{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}} 
+\index{TestFunction.m@{TestFunction.m}!dthetadom@{dthetadom}}
+\index{dthetadom@{dthetadom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dthetadom}{dthetadom}}
+{\footnotesize\ttfamily dthetadom = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}}(\+:,3) \mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}\label{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}} 
+\index{TestFunction.m@{TestFunction.m}!dthetadr@{dthetadr}}
+\index{dthetadr@{dthetadr}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dthetadr}{dthetadr}}
+{\footnotesize\ttfamily dthetadr = 1 ./ (1 + \mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}})}
+
+\mbox{\Hypertarget{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}\label{_test_function_8m_aa84d73f1a6cdd7eb12b01a3059d81dd3}} 
+\index{TestFunction.m@{TestFunction.m}!dthetadT@{dthetadT}}
+\index{dthetadT@{dthetadT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dthetadT}{dthetadT}}
+{\footnotesize\ttfamily dthetadT = \mbox{[} (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}}(\+:,1) (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}}(\+:,2) (\mbox{\hyperlink{_test_function_8m_a5010c3b6de6793f6d893d9908e2f17da}{dthetadr}}\textquotesingle{}).$\ast$\mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}}(\+:,3) \mbox{]}}
+
+\mbox{\Hypertarget{_test_function_8m_a562b34730010e3c750d29afcfe2df23b}\label{_test_function_8m_a562b34730010e3c750d29afcfe2df23b}} 
+\index{TestFunction.m@{TestFunction.m}!dxdom@{dxdom}}
+\index{dxdom@{dxdom}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dxdom}{dxdom}}
+{\footnotesize\ttfamily dxdom = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},3)}
+
+\mbox{\Hypertarget{_test_function_8m_ad7fb8f473d01f568fc9083df9f7c1871}\label{_test_function_8m_ad7fb8f473d01f568fc9083df9f7c1871}} 
+\index{TestFunction.m@{TestFunction.m}!dxdT@{dxdT}}
+\index{dxdT@{dxdT}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{dxdT}{dxdT}}
+{\footnotesize\ttfamily dxdT = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},3)}
+
+\mbox{\Hypertarget{_test_function_8m_aba734eacecba706d69d307234ddc8cda}\label{_test_function_8m_aba734eacecba706d69d307234ddc8cda}} 
+\index{TestFunction.m@{TestFunction.m}!function@{function}}
+\index{function@{function}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{project__points__fisheye_8m_a45322ce0b64916fa4b3537463cd563cc}{cdist}}, \mbox{\hyperlink{_test_function_8m_ae226c88b73d3eb28b01837a267692d09}{dcdistdom}}, \mbox{\hyperlink{_test_function_8m_a5d024a343d721bf18dafa62f191214ef}{dcdistdT}}, \mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}, \mbox{\hyperlink{_test_function_8m_a64a4a435e1e6d6e65f9dd0c9c13dbe2e}{drdom}}, \mbox{\hyperlink{_test_function_8m_adadfabd980e05f536e73c7ea4261bfe8}{drdT}}\mbox{]} = Test\+Function(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})}
+
+\mbox{\Hypertarget{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}\label{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}} 
+\index{TestFunction.m@{TestFunction.m}!inv\_Z@{inv\_Z}}
+\index{inv\_Z@{inv\_Z}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{inv\_Z}{inv\_Z}}
+{\footnotesize\ttfamily inv\+\_\+Z = 1./\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}(3,\+:)}
+
+\mbox{\Hypertarget{_test_function_8m_abae42d8e51a0eb43fe8aebb87b4719a0}\label{_test_function_8m_abae42d8e51a0eb43fe8aebb87b4719a0}} 
+\index{TestFunction.m@{TestFunction.m}!Jacobians@{Jacobians}}
+\index{Jacobians@{Jacobians}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{Jacobians}{Jacobians}}
+{\footnotesize\ttfamily Test of the Jacobians}
+
+\mbox{\Hypertarget{_test_function_8m_adc468c70fb574ebd07287b38d0d0676d}\label{_test_function_8m_adc468c70fb574ebd07287b38d0d0676d}} 
+\index{TestFunction.m@{TestFunction.m}!k@{k}}
+\index{k@{k}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily k = 0.\+5$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(5,1)}
+
+\mbox{\Hypertarget{_test_function_8m_a4e3462750cc302b9a3697c379ed1d885}\label{_test_function_8m_a4e3462750cc302b9a3697c379ed1d885}} 
+\index{TestFunction.m@{TestFunction.m}!om@{om}}
+\index{om@{om}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{om}{om}}
+{\footnotesize\ttfamily Test \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} om = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)}
+
+\mbox{\Hypertarget{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}\label{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}} 
+\index{TestFunction.m@{TestFunction.m}!om2@{om2}}
+\index{om2@{om2}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{om2}{om2}}
+{\footnotesize\ttfamily Test \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} om2 = \mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}} + \mbox{\hyperlink{rodrigues_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}}}
+
+\mbox{\Hypertarget{_test_function_8m_a8879a6ed5d4542a5c9d428f98530e6d4}\label{_test_function_8m_a8879a6ed5d4542a5c9d428f98530e6d4}} 
+\index{TestFunction.m@{TestFunction.m}!r\_d@{r\_d}}
+\index{r\_d@{r\_d}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{r\_d}{r\_d}}
+{\footnotesize\ttfamily r\+\_\+d = tan(\mbox{\hyperlink{_test_function_8m_adb96c8420e6e7dce022855cf4e4b8ecc}{theta\+\_\+d}})}
+
+\mbox{\Hypertarget{_test_function_8m_a3599f573d0bb2891b35a53a516276ee8}\label{_test_function_8m_a3599f573d0bb2891b35a53a516276ee8}} 
+\index{TestFunction.m@{TestFunction.m}!ray@{ray}}
+\index{ray@{ray}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{ray}{ray}}
+{\footnotesize\ttfamily Angle of the incoming ray}
+
+\mbox{\Hypertarget{_test_function_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{_test_function_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{TestFunction.m@{TestFunction.m}!return@{return}}
+\index{return@{return}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}\label{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}} 
+\index{TestFunction.m@{TestFunction.m}!T@{T}}
+\index{T@{T}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily T = \mbox{[}10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(2,1)}
+
+\mbox{\Hypertarget{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}\label{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}} 
+\index{TestFunction.m@{TestFunction.m}!T2@{T2}}
+\index{T2@{T2}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{T2}{T2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}} (theta2 -\/ \mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}})/\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(theta2 -\/ \mbox{\hyperlink{_test_function_8m_a2e8af9edc67c9fc54a3e95056a7cb420}{theta\+\_\+pred}}) \% Test \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} T2 = \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} + \mbox{\hyperlink{skew3_8m_a438b04263e75696048312b1b156d1450}{dT}}}
+
+\mbox{\Hypertarget{_test_function_8m_aec56998eac5b7321db482255ade3068d}\label{_test_function_8m_aec56998eac5b7321db482255ade3068d}} 
+\index{TestFunction.m@{TestFunction.m}!theta3@{theta3}}
+\index{theta3@{theta3}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{theta3}{theta3}}
+{\footnotesize\ttfamily theta3 = theta.$^\wedge$3}
+
+\mbox{\Hypertarget{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}\label{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}} 
+\index{TestFunction.m@{TestFunction.m}!theta4@{theta4}}
+\index{theta4@{theta4}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{theta4}{theta4}}
+{\footnotesize\ttfamily theta4 = theta.$^\wedge$4}
+
+\mbox{\Hypertarget{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}\label{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}} 
+\index{TestFunction.m@{TestFunction.m}!theta5@{theta5}}
+\index{theta5@{theta5}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{theta5}{theta5}}
+{\footnotesize\ttfamily theta5 = theta.$^\wedge$5}
+
+\mbox{\Hypertarget{_test_function_8m_a0aaf1cc5533d2ccfc9124ac08c10abb0}\label{_test_function_8m_a0aaf1cc5533d2ccfc9124ac08c10abb0}} 
+\index{TestFunction.m@{TestFunction.m}!theta6@{theta6}}
+\index{theta6@{theta6}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{theta6}{theta6}}
+{\footnotesize\ttfamily theta6 = theta.$^\wedge$6}
+
+\mbox{\Hypertarget{_test_function_8m_adb96c8420e6e7dce022855cf4e4b8ecc}\label{_test_function_8m_adb96c8420e6e7dce022855cf4e4b8ecc}} 
+\index{TestFunction.m@{TestFunction.m}!theta\_d@{theta\_d}}
+\index{theta\_d@{theta\_d}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{theta\_d}{theta\_d}}
+{\footnotesize\ttfamily theta\+\_\+d = \mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1)$\ast$theta2 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2)$\ast$\mbox{\hyperlink{_test_function_8m_aec56998eac5b7321db482255ade3068d}{theta3}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{_test_function_8m_a9f7579bace68aa52123f359bb30ec7a3}{theta4}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{_test_function_8m_a4679e28f0c305b26f9468ad970cdbf35}{theta5}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(5)$\ast$\mbox{\hyperlink{_test_function_8m_a0aaf1cc5533d2ccfc9124ac08c10abb0}{theta6}}}
+
+\mbox{\Hypertarget{_test_function_8m_a2e8af9edc67c9fc54a3e95056a7cb420}\label{_test_function_8m_a2e8af9edc67c9fc54a3e95056a7cb420}} 
+\index{TestFunction.m@{TestFunction.m}!theta\_pred@{theta\_pred}}
+\index{theta\_pred@{theta\_pred}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{theta\_pred}{theta\_pred}}
+{\footnotesize\ttfamily theta\+\_\+pred = \mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}} + \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{\hyperlink{_test_function_8m_a876bbcf3c89a4c737a72ae74642ba3d3}{dthetadom}}$\ast$\mbox{\hyperlink{rodrigues_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}},1,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})}
+
+\mbox{\Hypertarget{_test_function_8m_a9336ebf25087d91c818ee6e9ec29f8c1}\label{_test_function_8m_a9336ebf25087d91c818ee6e9ec29f8c1}} 
+\index{TestFunction.m@{TestFunction.m}!x@{x}}
+\index{x@{x}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} = (\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}(1\+:2,\+:) .$\ast$ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1) $\ast$ \mbox{\hyperlink{_test_function_8m_a54c1f4ab9c10698e4f8192ffc7cac313}{inv\+\_\+Z}}))}
+
+\mbox{\Hypertarget{_test_function_8m_ac51b57a703ba1c5869228690c93e1701}\label{_test_function_8m_ac51b57a703ba1c5869228690c93e1701}} 
+\index{TestFunction.m@{TestFunction.m}!X@{X}}
+\index{X@{X}!TestFunction.m@{TestFunction.m}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily X = 10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})}
+

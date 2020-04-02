@@ -1,0 +1,284 @@
+\hypertarget{compute__collineation_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/compute\+\_\+collineation.m File Reference}
+\label{compute__collineation_8m}\index{D:/TrackEsferas/NavarQA/calib/compute\_collineation.m@{D:/TrackEsferas/NavarQA/calib/compute\_collineation.m}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}} = \mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Prenormalization of \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}(very important) \mbox{\hyperlink{compute__collineation_8m_a8a947769efb653196f5c3e6a50cc22b8}{a10}} (1)
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a91defae408d937438e2123a39d187d95}{a11}} (1)
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a3320a6c11fd94859fe38a9301f1c91e8}{a01}} (1)\mbox{]}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a8e89a4bea04d7bf9d2162f913974b653}{a10}} (2)
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a046cf22de497e72a5c3d941bf9847506}{a11}} (2)
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a07f01cf5845b1d1cada0e84bdfa67e9d}{a01}} (2)\mbox{]}
+\item 
+id \mbox{\hyperlink{compute__collineation_8m_ae5abbd88564e3d6c36bbc07e632cacbc}{scyy}} ()
+\item 
+Computation of the vanishing \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}} (\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}, \mbox{\hyperlink{compute__collineation_8m_a825dd35797145673e599d6d2a03f48c3}{a11n}}))
+\item 
+id \mbox{\hyperlink{compute__collineation_8m_aa424ecff4e699134ea479fba11d0cb0c}{coefficients\+:}} (V1n(2) $\ast$\mbox{\hyperlink{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}{a10n}}(1) -\/V1n(1) $\ast$\mbox{\hyperlink{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}{a10n}}(2) \mbox{\hyperlink{count__squares__fisheye__distorted_8m_a5041c94ecfe6d27878ebe21691a3a512}{alpha\+\_\+x}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a8676ea5f8593517602d35c62ec43aafa}{function}} \mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}, \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}\mbox{]} = compute\+\_\+collineation (\mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}}, \mbox{\hyperlink{compute__collineation_8m_a8e89a4bea04d7bf9d2162f913974b653}{a10}}, \mbox{\hyperlink{compute__collineation_8m_a046cf22de497e72a5c3d941bf9847506}{a11}}, \mbox{\hyperlink{compute__collineation_8m_a07f01cf5845b1d1cada0e84bdfa67e9d}{a01}})
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a3f159f05141495f6f72370bd355fa08d}{a10}} = a10 / a10(3)
+\item 
+\mbox{\hyperlink{compute__collineation_8m_aca2720bd8474da5dee66299dde9d4f9a}{a11}} = a11 / a11(3)
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a3ba2251e637d0e2795882ada49522b5f}{a01}} = a01 / a01(3)
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}} = \mbox{[}\mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}}(2)
+\item 
+\mbox{\hyperlink{compute__collineation_8m_afc5f7ea967e594959dabd885c326e993}{mxx}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}})
+\item 
+\mbox{\hyperlink{compute__collineation_8m_aa93893b984ddd6dd27cce0dd59249d13}{myy}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}})
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}} = ax -\/ \mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a054427b2204cca3342450367996acbb3}{scxx}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}}))
+\item 
+\mbox{\hyperlink{compute__collineation_8m_aa196633166b97fdd285f9a927cc066af}{scyy}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}}))
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}} = \mbox{[}1/\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} 0 -\/\mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}/\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}} = \mbox{[}\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} 0 \mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}} = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}{a10n}} = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_a8e89a4bea04d7bf9d2162f913974b653}{a10}}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a825dd35797145673e599d6d2a03f48c3}{a11n}} = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_a046cf22de497e72a5c3d941bf9847506}{a11}}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}} = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_a07f01cf5845b1d1cada0e84bdfa67e9d}{a01}}
+\item 
+Computation of the vanishing \mbox{\hyperlink{compute__collineation_8m_a799a9eb0a2e9c962405cb6dec6d61bea}{points}}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}},\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}),\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}{a10n}},\mbox{\hyperlink{compute__collineation_8m_a825dd35797145673e599d6d2a03f48c3}{a11n}}))
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a012f41a4e178ac7e193a1a250962f349}{V1}} = \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}$\ast$V1n
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a703f8bb6199899db9141d2b1fbadb398}{V2}} = \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}}
+\item 
+\mbox{\hyperlink{compute__collineation_8m_a3acb435a00bc4e88f04e113b7efe2d12}{alpha\+\_\+y}} = (\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}(2)$\ast$\mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}}(1) -\/ \mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}(1)$\ast$\mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}}(2))/(\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}}(2)$\ast$\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}(1)-\/\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}}(1)$\ast$\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}(2))
+\item 
+Remaining Homography \mbox{\hyperlink{compute__collineation_8m_a890e9fae22c601f7c0274c0e90f16947}{Hrem}} = \mbox{[}\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a5041c94ecfe6d27878ebe21691a3a512}{alpha\+\_\+x}}$\ast$V1n \mbox{\hyperlink{compute__collineation_8m_a3acb435a00bc4e88f04e113b7efe2d12}{alpha\+\_\+y}}$\ast$\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}} \mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}}\mbox{]}
+\item 
+Final \mbox{\hyperlink{compute__collineation_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}{homography}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}\label{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a00@{a00}}
+\index{a00@{a00}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a00}{a00}}
+{\footnotesize\ttfamily Compute the inside \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} through computation of the planar \mbox{\hyperlink{click__ima__calib3_d_8m_a9a8e74db9e8e82afbf923b5927168dd8}{homography}}(\mbox{\hyperlink{projected_grid_8m_a49b99ee0e0758c939f35fd74ee069c19}{collineation}} \mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}} = \mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{compute__collineation_8m_a3320a6c11fd94859fe38a9301f1c91e8}\label{compute__collineation_8m_a3320a6c11fd94859fe38a9301f1c91e8}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a01@{a01}}
+\index{a01@{a01}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a01()}{a01()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily a01 (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__collineation_8m_a07f01cf5845b1d1cada0e84bdfa67e9d}\label{compute__collineation_8m_a07f01cf5845b1d1cada0e84bdfa67e9d}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a01@{a01}}
+\index{a01@{a01}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a01()}{a01()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily a01 (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__collineation_8m_a8a947769efb653196f5c3e6a50cc22b8}\label{compute__collineation_8m_a8a947769efb653196f5c3e6a50cc22b8}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a10@{a10}}
+\index{a10@{a10}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a10()}{a10()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Prenormalization of \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} (very important) a10 (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__collineation_8m_a8e89a4bea04d7bf9d2162f913974b653}\label{compute__collineation_8m_a8e89a4bea04d7bf9d2162f913974b653}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a10@{a10}}
+\index{a10@{a10}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a10()}{a10()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily a10 (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__collineation_8m_a91defae408d937438e2123a39d187d95}\label{compute__collineation_8m_a91defae408d937438e2123a39d187d95}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a11@{a11}}
+\index{a11@{a11}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a11()}{a11()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily a11 (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__collineation_8m_a046cf22de497e72a5c3d941bf9847506}\label{compute__collineation_8m_a046cf22de497e72a5c3d941bf9847506}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a11@{a11}}
+\index{a11@{a11}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a11()}{a11()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily a11 (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__collineation_8m_aa424ecff4e699134ea479fba11d0cb0c}\label{compute__collineation_8m_aa424ecff4e699134ea479fba11d0cb0c}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!coefficients:@{coefficients:}}
+\index{coefficients:@{coefficients:}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{coefficients:()}{coefficients:()}}
+{\footnotesize\ttfamily id coefficients\+: (\begin{DoxyParamCaption}\item[{V1n(2) $\ast$\mbox{\hyperlink{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}{a10n}}(1) -\/V1n(1) $\ast$\mbox{\hyperlink{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}{a10n}}(2)}]{alpha\+\_\+x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}\label{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!cross@{cross}}
+\index{cross@{cross}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily Computation of the vanishing cross (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}}]{,  }\item[{\mbox{\hyperlink{compute__collineation_8m_a825dd35797145673e599d6d2a03f48c3}{a11n}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__collineation_8m_ae5abbd88564e3d6c36bbc07e632cacbc}\label{compute__collineation_8m_ae5abbd88564e3d6c36bbc07e632cacbc}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!scyy@{scyy}}
+\index{scyy@{scyy}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{scyy()}{scyy()}}
+{\footnotesize\ttfamily id scyy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}\label{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a00n@{a00n}}
+\index{a00n@{a00n}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a00n}{a00n}}
+{\footnotesize\ttfamily a00n = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}}}
+
+\mbox{\Hypertarget{compute__collineation_8m_a3ba2251e637d0e2795882ada49522b5f}\label{compute__collineation_8m_a3ba2251e637d0e2795882ada49522b5f}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a01@{a01}}
+\index{a01@{a01}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a01}{a01}}
+{\footnotesize\ttfamily a01 = a01 / a01(3)}
+
+\mbox{\Hypertarget{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}\label{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a01n@{a01n}}
+\index{a01n@{a01n}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a01n}{a01n}}
+{\footnotesize\ttfamily a01n = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_a07f01cf5845b1d1cada0e84bdfa67e9d}{a01}}}
+
+\mbox{\Hypertarget{compute__collineation_8m_a3f159f05141495f6f72370bd355fa08d}\label{compute__collineation_8m_a3f159f05141495f6f72370bd355fa08d}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a10@{a10}}
+\index{a10@{a10}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a10}{a10}}
+{\footnotesize\ttfamily a10 = a10 / a10(3)}
+
+\mbox{\Hypertarget{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}\label{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a10n@{a10n}}
+\index{a10n@{a10n}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a10n}{a10n}}
+{\footnotesize\ttfamily Computation of the vanishing a10n = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_a8e89a4bea04d7bf9d2162f913974b653}{a10}}}
+
+\mbox{\Hypertarget{compute__collineation_8m_aca2720bd8474da5dee66299dde9d4f9a}\label{compute__collineation_8m_aca2720bd8474da5dee66299dde9d4f9a}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a11@{a11}}
+\index{a11@{a11}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a11}{a11}}
+{\footnotesize\ttfamily a11 = a11 / a11(3)}
+
+\mbox{\Hypertarget{compute__collineation_8m_a825dd35797145673e599d6d2a03f48c3}\label{compute__collineation_8m_a825dd35797145673e599d6d2a03f48c3}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!a11n@{a11n}}
+\index{a11n@{a11n}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{a11n}{a11n}}
+{\footnotesize\ttfamily a11n = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_a046cf22de497e72a5c3d941bf9847506}{a11}}}
+
+\mbox{\Hypertarget{compute__collineation_8m_a3acb435a00bc4e88f04e113b7efe2d12}\label{compute__collineation_8m_a3acb435a00bc4e88f04e113b7efe2d12}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!alpha\_y@{alpha\_y}}
+\index{alpha\_y@{alpha\_y}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_y}{alpha\_y}}
+{\footnotesize\ttfamily alpha\+\_\+y = (\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}(2)$\ast$\mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}}(1) -\/ \mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}(1)$\ast$\mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}}(2))/(\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}}(2)$\ast$\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}(1)-\/\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}}(1)$\ast$\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}(2))}
+
+\mbox{\Hypertarget{compute__collineation_8m_a8fa675eb2fcec5b95d9d21c670da7f30}\label{compute__collineation_8m_a8fa675eb2fcec5b95d9d21c670da7f30}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!ax@{ax}}
+\index{ax@{ax}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{ax}{ax}}
+{\footnotesize\ttfamily ax = ax -\/ \mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}}
+
+\mbox{\Hypertarget{compute__collineation_8m_a68eea743cf30ed8fee471ccf64ea2d12}\label{compute__collineation_8m_a68eea743cf30ed8fee471ccf64ea2d12}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!ay@{ay}}
+\index{ay@{ay}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{ay}{ay}}
+{\footnotesize\ttfamily ay = \mbox{[}\mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}}(2)}
+
+\mbox{\Hypertarget{compute__collineation_8m_a8676ea5f8593517602d35c62ec43aafa}\label{compute__collineation_8m_a8676ea5f8593517602d35c62ec43aafa}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!function@{function}}
+\index{function@{function}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}, \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}\mbox{]} = compute\+\_\+collineation (\mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}}, \mbox{\hyperlink{compute__collineation_8m_a8e89a4bea04d7bf9d2162f913974b653}{a10}}, \mbox{\hyperlink{compute__collineation_8m_a046cf22de497e72a5c3d941bf9847506}{a11}}, \mbox{\hyperlink{compute__collineation_8m_a07f01cf5845b1d1cada0e84bdfa67e9d}{a01}})}
+
+\mbox{\Hypertarget{compute__collineation_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}\label{compute__collineation_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!Hnorm@{Hnorm}}
+\index{Hnorm@{Hnorm}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{Hnorm}{Hnorm}}
+{\footnotesize\ttfamily Hnorm = \mbox{[}1/\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} 0 -\/\mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}/\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}}}
+
+\mbox{\Hypertarget{compute__collineation_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}\label{compute__collineation_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!homography@{homography}}
+\index{homography@{homography}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{homography}{homography}}
+{\footnotesize\ttfamily Final homography}
+
+\mbox{\Hypertarget{compute__collineation_8m_a890e9fae22c601f7c0274c0e90f16947}\label{compute__collineation_8m_a890e9fae22c601f7c0274c0e90f16947}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!Hrem@{Hrem}}
+\index{Hrem@{Hrem}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{Hrem}{Hrem}}
+{\footnotesize\ttfamily Remaining Homography Hrem = \mbox{[}\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a5041c94ecfe6d27878ebe21691a3a512}{alpha\+\_\+x}}$\ast$V1n \mbox{\hyperlink{compute__collineation_8m_a3acb435a00bc4e88f04e113b7efe2d12}{alpha\+\_\+y}}$\ast$\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}} \mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}}\mbox{]}}
+
+\mbox{\Hypertarget{compute__collineation_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}\label{compute__collineation_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!inv\_Hnorm@{inv\_Hnorm}}
+\index{inv\_Hnorm@{inv\_Hnorm}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{inv\_Hnorm}{inv\_Hnorm}}
+{\footnotesize\ttfamily inv\+\_\+\+Hnorm = \mbox{[}\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} 0 \mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}}
+
+\mbox{\Hypertarget{compute__collineation_8m_afc5f7ea967e594959dabd885c326e993}\label{compute__collineation_8m_afc5f7ea967e594959dabd885c326e993}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!mxx@{mxx}}
+\index{mxx@{mxx}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{mxx}{mxx}}
+{\footnotesize\ttfamily mxx = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}})}
+
+\mbox{\Hypertarget{compute__collineation_8m_aa93893b984ddd6dd27cce0dd59249d13}\label{compute__collineation_8m_aa93893b984ddd6dd27cce0dd59249d13}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!myy@{myy}}
+\index{myy@{myy}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{myy}{myy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{compute__homography_8m_ae5abbd88564e3d6c36bbc07e632cacbc}{scyy}} myy = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}})}
+
+\mbox{\Hypertarget{compute__collineation_8m_a799a9eb0a2e9c962405cb6dec6d61bea}\label{compute__collineation_8m_a799a9eb0a2e9c962405cb6dec6d61bea}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!points@{points}}
+\index{points@{points}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily Normalizaion of the vanishing points}
+
+\mbox{\Hypertarget{compute__collineation_8m_a054427b2204cca3342450367996acbb3}\label{compute__collineation_8m_a054427b2204cca3342450367996acbb3}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!scxx@{scxx}}
+\index{scxx@{scxx}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{scxx}{scxx}}
+{\footnotesize\ttfamily scxx = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}}))}
+
+\mbox{\Hypertarget{compute__collineation_8m_aa196633166b97fdd285f9a927cc066af}\label{compute__collineation_8m_aa196633166b97fdd285f9a927cc066af}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!scyy@{scyy}}
+\index{scyy@{scyy}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{scyy}{scyy}}
+{\footnotesize\ttfamily scyy = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}}))}
+
+\mbox{\Hypertarget{compute__collineation_8m_a012f41a4e178ac7e193a1a250962f349}\label{compute__collineation_8m_a012f41a4e178ac7e193a1a250962f349}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!V1@{V1}}
+\index{V1@{V1}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{V1}{V1}}
+{\footnotesize\ttfamily V1 = \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}$\ast$V1n}
+
+\mbox{\Hypertarget{compute__collineation_8m_a703f8bb6199899db9141d2b1fbadb398}\label{compute__collineation_8m_a703f8bb6199899db9141d2b1fbadb398}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!V2@{V2}}
+\index{V2@{V2}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{V2}{V2}}
+{\footnotesize\ttfamily Horizon V2 = \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}$\ast$\mbox{\hyperlink{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}{V2n}}}
+
+\mbox{\Hypertarget{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}\label{compute__collineation_8m_aa03f6ee3572a11ea00fb2d637cb2efda}} 
+\index{compute\_collineation.m@{compute\_collineation.m}!V2n@{V2n}}
+\index{V2n@{V2n}!compute\_collineation.m@{compute\_collineation.m}}
+\doxysubsubsection{\texorpdfstring{V2n}{V2n}}
+{\footnotesize\ttfamily V2n = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a402d90e8fb13349a8bab26fdd3e01317}{a00n}},\mbox{\hyperlink{compute__collineation_8m_a155500296ca2ddb9f2811d3e15f90047}{a01n}}),\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a26d1b0f039d67fd830f47cd1bb385060}{a10n}},\mbox{\hyperlink{compute__collineation_8m_a825dd35797145673e599d6d2a03f48c3}{a11n}}))}
+

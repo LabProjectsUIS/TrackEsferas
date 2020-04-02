@@ -1,0 +1,174 @@
+\hypertarget{script__fit__distortion_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/script\+\_\+fit\+\_\+distortion.m File Reference}
+\label{script__fit__distortion_8m}\index{D:/TrackEsferas/NavarQA/calib/script\_fit\_distortion.m@{D:/TrackEsferas/NavarQA/calib/script\_fit\_distortion.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a9a388259866a093a4ccb6e7ecea987dc}{disp}} (\mbox{[}\textquotesingle{}Estimated focal\+:\textquotesingle{} num2str(\mbox{\hyperlink{click__ima__calib3_d_8m_a623b96a623f0f45f72406eee45505c10}{f\+\_\+g}}) \textquotesingle{} pixels\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{script__fit__distortion_8m_a7f6e36813c76f7cdef5bf0365d9aa763}{isempty}} (\mbox{\hyperlink{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}{k\+\_\+g}})
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a1347befe17132b4c63837a7f6292d160}{XX}} (1,\+:)
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}} (2,\+:)
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_ac84feabc0a5ffe70fd5e05e72a103d54}{figure}} (2)
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} (\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}})
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a7c672a3bcf6f12ef9e6e78cdb48a0ccd}{colormap}} (\mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}})
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a3cdbc75f24d53ceeeafa8380acbb3914}{plot}} (\mbox{\hyperlink{click__ima__calib3_d_8m_a623b96a623f0f45f72406eee45505c10}{f\+\_\+g}} $\ast$X\+Xu(1,\+:)+c\+\_\+g(1), \mbox{\hyperlink{click__ima__calib3_d_8m_a623b96a623f0f45f72406eee45505c10}{f\+\_\+g}} $\ast$X\+Xu(2,\+:)+c\+\_\+g(2), \textquotesingle{}ro\textquotesingle{})
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a551f5df7159246ca89cb6efc0c4e3618}{plot}} (\mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}}(1,\+:), \mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}}(2,\+:), \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a36d8655fff000b1abc397240b5ca5341}{title}} (\textquotesingle{}The red crosses should be \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the grid corners...\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a12c71abcd16969f1ed5ceb4e1e6b160c}{satis\+\_\+distort}} = 0
+\item 
+\mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} \mbox{\hyperlink{script__fit__distortion_8m_a52cce8bb267217d7f4823cd6d5270e64}{$\sim$satis\+\_\+distort}}
+\item 
+\mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} \mbox{\hyperlink{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}{k\+\_\+g}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Guess for \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} (\mbox{[}$\,$\mbox{]}=0)\+: \textquotesingle{})
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_a5b62523d31ca147a6bd288223a29a552}{xy\+\_\+corners\+\_\+undist}} = comp\+\_\+distortion2(\mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\textquotesingle{} -\/ c\+\_\+g(1);\mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}}\textquotesingle{}-\/c\+\_\+g(2)\mbox{]}/\mbox{\hyperlink{click__ima__calib3_d_8m_a623b96a623f0f45f72406eee45505c10}{f\+\_\+g}},\mbox{\hyperlink{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}{k\+\_\+g}})
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_ab96b03c3d38dac7ad0a0a0df2ddd8c7d}{xu}} = \mbox{\hyperlink{script__fit__distortion_8m_a5b62523d31ca147a6bd288223a29a552}{xy\+\_\+corners\+\_\+undist}}(1,\+:)\textquotesingle{}
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_af34d07b202eaeadf913468e95d7fcb86}{yu}} = \mbox{\hyperlink{script__fit__distortion_8m_a5b62523d31ca147a6bd288223a29a552}{xy\+\_\+corners\+\_\+undist}}(2,\+:)\textquotesingle{}
+\item 
+The full grid \mbox{\hyperlink{script__fit__distortion_8m_a7523bc3690988af977cbd63496b5c586}{XX}} = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)$\ast$(1 + \mbox{\hyperlink{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}{k\+\_\+g}} $\ast$ \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(X\+Xu.$^\wedge$2))) .$\ast$ X\+Xu
+\item 
+zoom \mbox{\hyperlink{script__fit__distortion_8m_a58ab1fd68e97078232808206b850161b}{on}}
+\item 
+hold \mbox{\hyperlink{script__fit__distortion_8m_a835accca41274fb237599d9b3c117fcf}{off}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{script__fit__distortion_8m_a7c672a3bcf6f12ef9e6e78cdb48a0ccd}\label{script__fit__distortion_8m_a7c672a3bcf6f12ef9e6e78cdb48a0ccd}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!colormap@{colormap}}
+\index{colormap@{colormap}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{colormap()}{colormap()}}
+{\footnotesize\ttfamily colormap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a9a388259866a093a4ccb6e7ecea987dc}\label{script__fit__distortion_8m_a9a388259866a093a4ccb6e7ecea987dc}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!disp@{disp}}
+\index{disp@{disp}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_ac84feabc0a5ffe70fd5e05e72a103d54}\label{script__fit__distortion_8m_ac84feabc0a5ffe70fd5e05e72a103d54}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!figure@{figure}}
+\index{figure@{figure}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}\label{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!image@{image}}
+\index{image@{image}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}}
+{\footnotesize\ttfamily image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a7f6e36813c76f7cdef5bf0365d9aa763}\label{script__fit__distortion_8m_a7f6e36813c76f7cdef5bf0365d9aa763}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!isempty@{isempty}}
+\index{isempty@{isempty}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}{k\+\_\+g}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a3cdbc75f24d53ceeeafa8380acbb3914}\label{script__fit__distortion_8m_a3cdbc75f24d53ceeeafa8380acbb3914}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!plot@{plot}}
+\index{plot@{plot}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{click__ima__calib3_d_8m_a623b96a623f0f45f72406eee45505c10}{f\+\_\+g}} $\ast$}]{X\+Xu1,\+:)+c\+\_\+g(1,  }\item[{\mbox{\hyperlink{click__ima__calib3_d_8m_a623b96a623f0f45f72406eee45505c10}{f\+\_\+g}} $\ast$}]{X\+Xu2,\+:)+c\+\_\+g(2,  }\item[{\textquotesingle{}ro\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a551f5df7159246ca89cb6efc0c4e3618}\label{script__fit__distortion_8m_a551f5df7159246ca89cb6efc0c4e3618}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!plot@{plot}}
+\index{plot@{plot}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}}(1,\+:)}]{,  }\item[{\mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}}(2,\+:)}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a36d8655fff000b1abc397240b5ca5341}\label{script__fit__distortion_8m_a36d8655fff000b1abc397240b5ca5341}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!title@{title}}
+\index{title@{title}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}The red crosses should be \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the grid corners...\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a1347befe17132b4c63837a7f6292d160}\label{script__fit__distortion_8m_a1347befe17132b4c63837a7f6292d160}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!XX@{XX}}
+\index{XX@{XX}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{XX()}{XX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily XX (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}\label{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!XX@{XX}}
+\index{XX@{XX}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{XX()}{XX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily XX (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{script__fit__distortion_8m_afb358f48b1646c750fb9da6c6585be2b}\label{script__fit__distortion_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!end@{end}}
+\index{end@{end}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}\label{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!k\_g@{k\_g}}
+\index{k\_g@{k\_g}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{k\_g}{k\_g}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} k\+\_\+g = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Guess for \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} (\mbox{[}$\,$\mbox{]}=0)\+: \textquotesingle{})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a835accca41274fb237599d9b3c117fcf}\label{script__fit__distortion_8m_a835accca41274fb237599d9b3c117fcf}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!off@{off}}
+\index{off@{off}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{off}{off}}
+{\footnotesize\ttfamily hold off}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a58ab1fd68e97078232808206b850161b}\label{script__fit__distortion_8m_a58ab1fd68e97078232808206b850161b}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!on@{on}}
+\index{on@{on}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily hold on}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a12c71abcd16969f1ed5ceb4e1e6b160c}\label{script__fit__distortion_8m_a12c71abcd16969f1ed5ceb4e1e6b160c}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!satis\_distort@{satis\_distort}}
+\index{satis\_distort@{satis\_distort}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{satis\_distort}{satis\_distort}}
+{\footnotesize\ttfamily satis\+\_\+distort = 0}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_ab96b03c3d38dac7ad0a0a0df2ddd8c7d}\label{script__fit__distortion_8m_ab96b03c3d38dac7ad0a0a0df2ddd8c7d}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!xu@{xu}}
+\index{xu@{xu}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{xu}{xu}}
+{\footnotesize\ttfamily xu = \mbox{\hyperlink{script__fit__distortion_8m_a5b62523d31ca147a6bd288223a29a552}{xy\+\_\+corners\+\_\+undist}}(1,\+:)\textquotesingle{}}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a7523bc3690988af977cbd63496b5c586}\label{script__fit__distortion_8m_a7523bc3690988af977cbd63496b5c586}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!XX@{XX}}
+\index{XX@{XX}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{XX}{XX}}
+{\footnotesize\ttfamily The full grid XX = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)$\ast$(1 + \mbox{\hyperlink{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}{k\+\_\+g}} $\ast$ \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(X\+Xu.$^\wedge$2))) .$\ast$ X\+Xu}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a5b62523d31ca147a6bd288223a29a552}\label{script__fit__distortion_8m_a5b62523d31ca147a6bd288223a29a552}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!xy\_corners\_undist@{xy\_corners\_undist}}
+\index{xy\_corners\_undist@{xy\_corners\_undist}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{xy\_corners\_undist}{xy\_corners\_undist}}
+{\footnotesize\ttfamily xy\+\_\+corners\+\_\+undist = comp\+\_\+distortion2(\mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\textquotesingle{} -\/ c\+\_\+g(1);\mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}}\textquotesingle{}-\/c\+\_\+g(2)\mbox{]}/\mbox{\hyperlink{click__ima__calib3_d_8m_a623b96a623f0f45f72406eee45505c10}{f\+\_\+g}},\mbox{\hyperlink{script__fit__distortion_8m_ac84e1cf68d1b4e6fb931609c4e59970b}{k\+\_\+g}})}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_af34d07b202eaeadf913468e95d7fcb86}\label{script__fit__distortion_8m_af34d07b202eaeadf913468e95d7fcb86}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!yu@{yu}}
+\index{yu@{yu}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{yu}{yu}}
+{\footnotesize\ttfamily yu = \mbox{\hyperlink{script__fit__distortion_8m_a5b62523d31ca147a6bd288223a29a552}{xy\+\_\+corners\+\_\+undist}}(2,\+:)\textquotesingle{}}
+
+\mbox{\Hypertarget{script__fit__distortion_8m_a52cce8bb267217d7f4823cd6d5270e64}\label{script__fit__distortion_8m_a52cce8bb267217d7f4823cd6d5270e64}} 
+\index{script\_fit\_distortion.m@{script\_fit\_distortion.m}!````~satis\_distort@{$\sim$satis\_distort}}
+\index{````~satis\_distort@{$\sim$satis\_distort}!script\_fit\_distortion.m@{script\_fit\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$satis\_distort}{~satis\_distort}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} $\sim$\mbox{\hyperlink{script__fit__distortion__fisheye_8m_a12c71abcd16969f1ed5ceb4e1e6b160c}{satis\+\_\+distort}}}
+

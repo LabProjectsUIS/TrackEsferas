@@ -1,0 +1,174 @@
+\hypertarget{extract__distortion__data_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/extract\+\_\+distortion\+\_\+data.m File Reference}
+\label{extract__distortion__data_8m}\index{D:/TrackEsferas/NavarQA/calib/extract\_distortion\_data.m@{D:/TrackEsferas/NavarQA/calib/extract\_distortion\_data.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+for \mbox{\hyperlink{extract__distortion__data_8m_ade63f856084a1db1c7bda53705332ba8}{eval}} (\mbox{[}\textquotesingle{}\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}=x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_a2e286be031d0547482321f48ebc74ed0}{figure}} (10)
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_a283f0e0fb7475db33e63fa362dd46229}{title}} (\textquotesingle{}Radial \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}}(with unit focal) -\/ \mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}} prime=\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}})\textquotesingle{})
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_a1c17cc89eb47c42bca72cc748fc15a3d}{xlabel}} (\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_ae1206f41b934dfb7f3f4e19a3b212e26}{ylabel}} (\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}} prime\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Small script \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} etst \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{extract__distortion__data_8m_a312a5e0eda1bc4ca9273f36978e6dc4f}{Calib\+\_\+\+Results}}
+\item 
+Collect \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} distorted(xd) and undistorted(\mbox{\hyperlink{normalize2_8m_ac42ffbc0f64a514fedad554ff2f8eb1e}{xn}}) from the \% \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} \mbox{\hyperlink{extract__distortion__data_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} = \mbox{[}$\,$\mbox{]}
+\item 
+for \mbox{\hyperlink{extract__distortion__data_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_a44d2e0e6ac8a47c80dcfe5fd72d2b73d}{xd\+\_\+kk}} = \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(5,1),\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_af3bc06edeb49128a523816981e1e5399}{xn\+\_\+kk}} = project\+\_\+points2(X\+\_\+kk,\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}},\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}})
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_ac42ffbc0f64a514fedad554ff2f8eb1e}{xn}} = \mbox{[}xn \mbox{\hyperlink{extract__distortion__data_8m_af3bc06edeb49128a523816981e1e5399}{xn\+\_\+kk}}\mbox{]}
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}} \mbox{\hyperlink{extract__distortion__data_8m_a4b6eb893289773511b71f439222d71fa}{points}}
+\item 
+The undistorted radii \mbox{\hyperlink{extract__distortion__data_8m_a7128ce14336d909d280814ede1a53dbd}{rp}} = sqrt(\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(xd.$^\wedge$2))
+\item 
+Calibration \mbox{\hyperlink{clearwin_8m_a68ed8cdd8e22dc147d13590fc969bdc1}{toolbox}} \mbox{\hyperlink{extract__distortion__data_8m_a1e38a11155a20de2dd24dcb177fcdaee}{model}}
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_aec70d633e7619583eb3a08a7afd638b4}{clf}}
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_a8ea5b47bab50be05608c883cc49a3f75}{h1}} = \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}}(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}},\mbox{\hyperlink{extract__distortion__data_8m_a7128ce14336d909d280814ede1a53dbd}{rp}},\textquotesingle{}r.\textquotesingle{},\textquotesingle{}markersize\textquotesingle{},.\+1)
+\item 
+hold \mbox{\hyperlink{extract__distortion__data_8m_a536cb1a22c2d6437a5761941a97cde15}{on}}
+\item 
+\mbox{\hyperlink{extract__distortion__data_8m_ac9e7e0722796a9a2748cfe71e5c1eacb}{h2}} = \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}}(ri,rt,\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}-\/\textquotesingle{},\textquotesingle{}linewidth\textquotesingle{},.\+1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{extract__distortion__data_8m_ade63f856084a1db1c7bda53705332ba8}\label{extract__distortion__data_8m_ade63f856084a1db1c7bda53705332ba8}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!eval@{eval}}
+\index{eval@{eval}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily for eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a2e286be031d0547482321f48ebc74ed0}\label{extract__distortion__data_8m_a2e286be031d0547482321f48ebc74ed0}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!figure@{figure}}
+\index{figure@{figure}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{10}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a283f0e0fb7475db33e63fa362dd46229}\label{extract__distortion__data_8m_a283f0e0fb7475db33e63fa362dd46229}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!title@{title}}
+\index{title@{title}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}Radial \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}}(with unit focal) -\/ \mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}}]{prime = {\ttfamily \mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}})\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a1c17cc89eb47c42bca72cc748fc15a3d}\label{extract__distortion__data_8m_a1c17cc89eb47c42bca72cc748fc15a3d}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{xlabel()}{xlabel()}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_ae1206f41b934dfb7f3f4e19a3b212e26}\label{extract__distortion__data_8m_ae1206f41b934dfb7f3f4e19a3b212e26}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!ylabel@{ylabel}}
+\index{ylabel@{ylabel}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{ylabel()}{ylabel()}}
+{\footnotesize\ttfamily ylabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}} prime\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{extract__distortion__data_8m_a312a5e0eda1bc4ca9273f36978e6dc4f}\label{extract__distortion__data_8m_a312a5e0eda1bc4ca9273f36978e6dc4f}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!Calib\_Results@{Calib\_Results}}
+\index{Calib\_Results@{Calib\_Results}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{Calib\_Results}{Calib\_Results}}
+{\footnotesize\ttfamily part1 Calib\+\_\+\+Results}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_aec70d633e7619583eb3a08a7afd638b4}\label{extract__distortion__data_8m_aec70d633e7619583eb3a08a7afd638b4}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!clf@{clf}}
+\index{clf@{clf}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{clf}{clf}}
+{\footnotesize\ttfamily clf}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_afb358f48b1646c750fb9da6c6585be2b}\label{extract__distortion__data_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!end@{end}}
+\index{end@{end}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a8ea5b47bab50be05608c883cc49a3f75}\label{extract__distortion__data_8m_a8ea5b47bab50be05608c883cc49a3f75}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!h1@{h1}}
+\index{h1@{h1}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{h1}{h1}}
+{\footnotesize\ttfamily h1 = \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}}(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}},\mbox{\hyperlink{extract__distortion__data_8m_a7128ce14336d909d280814ede1a53dbd}{rp}},\textquotesingle{}r.\textquotesingle{},\textquotesingle{}markersize\textquotesingle{},.\+1)}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_ac9e7e0722796a9a2748cfe71e5c1eacb}\label{extract__distortion__data_8m_ac9e7e0722796a9a2748cfe71e5c1eacb}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!h2@{h2}}
+\index{h2@{h2}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{h2}{h2}}
+{\footnotesize\ttfamily h2 = \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}}(ri,rt,\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}-\/\textquotesingle{},\textquotesingle{}linewidth\textquotesingle{},.\+1)}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_af29949bd63fb009eacab5efd11399e40}\label{extract__distortion__data_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!kk@{kk}}
+\index{kk@{kk}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a1e38a11155a20de2dd24dcb177fcdaee}\label{extract__distortion__data_8m_a1e38a11155a20de2dd24dcb177fcdaee}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!model@{model}}
+\index{model@{model}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily Calibration \mbox{\hyperlink{clearwin_8m_a68ed8cdd8e22dc147d13590fc969bdc1}{toolbox}} model}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a536cb1a22c2d6437a5761941a97cde15}\label{extract__distortion__data_8m_a536cb1a22c2d6437a5761941a97cde15}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!on@{on}}
+\index{on@{on}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily zoom on}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a4b6eb893289773511b71f439222d71fa}\label{extract__distortion__data_8m_a4b6eb893289773511b71f439222d71fa}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!points@{points}}
+\index{points@{points}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}} points}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{extract__distortion__data_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!return@{return}}
+\index{return@{return}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a7128ce14336d909d280814ede1a53dbd}\label{extract__distortion__data_8m_a7128ce14336d909d280814ede1a53dbd}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!rp@{rp}}
+\index{rp@{rp}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{rp}{rp}}
+{\footnotesize\ttfamily The undistorted radii rp = sqrt(\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(xd.$^\wedge$2))}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a0903a189cbe112bce4b75bbc7c50357c}\label{extract__distortion__data_8m_a0903a189cbe112bce4b75bbc7c50357c}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!xd@{xd}}
+\index{xd@{xd}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{xd}{xd}}
+{\footnotesize\ttfamily xd = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_a44d2e0e6ac8a47c80dcfe5fd72d2b73d}\label{extract__distortion__data_8m_a44d2e0e6ac8a47c80dcfe5fd72d2b73d}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!xd\_kk@{xd\_kk}}
+\index{xd\_kk@{xd\_kk}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{xd\_kk}{xd\_kk}}
+{\footnotesize\ttfamily xd\+\_\+kk = \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(5,1),\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_ac42ffbc0f64a514fedad554ff2f8eb1e}\label{extract__distortion__data_8m_ac42ffbc0f64a514fedad554ff2f8eb1e}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!xn@{xn}}
+\index{xn@{xn}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{xn}{xn}}
+{\footnotesize\ttfamily xn = \mbox{[}xn \mbox{\hyperlink{extract__distortion__data_8m_af3bc06edeb49128a523816981e1e5399}{xn\+\_\+kk}}\mbox{]}}
+
+\mbox{\Hypertarget{extract__distortion__data_8m_af3bc06edeb49128a523816981e1e5399}\label{extract__distortion__data_8m_af3bc06edeb49128a523816981e1e5399}} 
+\index{extract\_distortion\_data.m@{extract\_distortion\_data.m}!xn\_kk@{xn\_kk}}
+\index{xn\_kk@{xn\_kk}!extract\_distortion\_data.m@{extract\_distortion\_data.m}}
+\doxysubsubsection{\texorpdfstring{xn\_kk}{xn\_kk}}
+{\footnotesize\ttfamily xn\+\_\+kk = project\+\_\+points2(X\+\_\+kk,\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}},\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}})}
+

@@ -1,0 +1,126 @@
+\hypertarget{saveppm_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/saveppm.m File Reference}
+\label{saveppm_8m}\index{D:/TrackEsferas/NavarQA/calib/saveppm.m@{D:/TrackEsferas/NavarQA/calib/saveppm.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+S\+A\+V\+E\+P\+PM Write \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} P\+PM \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \mbox{\hyperlink{saveppm_8m_a69d82b8b01acb9fd0105951a44f80fd6}{S\+A\+V\+E\+P\+PM}} (filename, \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}) \% \% Saves the specified red
+\item 
+\mbox{\hyperlink{saveppm_8m_a69d82b8b01acb9fd0105951a44f80fd6}{S\+A\+V\+E\+P\+PM}} Write \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} P\+PM \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} green and blue planes in \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} binary(P6) \% \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} P\+PM \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} file. \% \% S\+EE \mbox{\hyperlink{loadppm_8m_af297ca8eb8596a90606dec6e46674ecb}{A\+L\+SO}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{saveppm_8m_a21b17d3e66bfe5cd83c3217ac8f7c3d7}{size}} (\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}, 3)
+\item 
+\mbox{\hyperlink{saveppm_8m_a9f132b3b81ac6670c345aab13f7d2cba}{fprintf}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}, \textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{P6\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{saveppm_8m_a6db3b3d583802e09513b41139eccbfff}{fprintf}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}, \textquotesingle{}\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} \%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}, \mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}})
+\item 
+\mbox{\hyperlink{saveppm_8m_a21cb0e48b75a8fcb236e2b71b0ee3992}{fprintf}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}, \textquotesingle{}255\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{saveppm_8m_ad30c59692996d379f9d9f144d3d947f7}{fwrite}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}, \mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}}, \textquotesingle{}uchar\textquotesingle{})
+\item 
+\mbox{\hyperlink{saveppm_8m_a5e769bbbabcaddc548203741c7100228}{fclose}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{saveppm_8m_a69d82b8b01acb9fd0105951a44f80fd6}{S\+A\+V\+E\+P\+PM}} Write \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} P\+PM \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} green and blue planes in \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} binary(P6) \% \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} P\+PM \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} file. \% \% S\+EE \mbox{\hyperlink{loadppm_8m_af297ca8eb8596a90606dec6e46674ecb}{A\+L\+SO}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{saveppm_8m_acb95449a94688af33f6e9bb090cf2936}{R}} = \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}
+\item 
+\mbox{\hyperlink{saveppm_8m_a86d8d92aba9ecf9bbf89f69cb3e49588}{G}} = \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}
+\item 
+\mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}} = \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}
+\item 
+\mbox{\hyperlink{saveppm_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{saveppm_8m_a9976f3faad68f981f425583e48b03252}{keyboard}}
+\item 
+\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}} = fopen(fname, \textquotesingle{}\mbox{\hyperlink{downsample_8m_a46ad936b31f4a26e5fc29fa4c8fd70e0}{w}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}} = \mbox{[}\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}(\+:) \mbox{\hyperlink{saveppm_8m_a86d8d92aba9ecf9bbf89f69cb3e49588}{G}}(\+:) \mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}}(\+:)\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{saveppm_8m_a5e769bbbabcaddc548203741c7100228}\label{saveppm_8m_a5e769bbbabcaddc548203741c7100228}} 
+\index{saveppm.m@{saveppm.m}!fclose@{fclose}}
+\index{fclose@{fclose}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{fclose()}{fclose()}}
+{\footnotesize\ttfamily fclose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{saveppm_8m_a6db3b3d583802e09513b41139eccbfff}\label{saveppm_8m_a6db3b3d583802e09513b41139eccbfff}} 
+\index{saveppm.m@{saveppm.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{,  }\item[{\textquotesingle{}\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} \%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}}]{,  }\item[{\mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{saveppm_8m_a21cb0e48b75a8fcb236e2b71b0ee3992}\label{saveppm_8m_a21cb0e48b75a8fcb236e2b71b0ee3992}} 
+\index{saveppm.m@{saveppm.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{,  }\item[{\textquotesingle{}255\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{saveppm_8m_a9f132b3b81ac6670c345aab13f7d2cba}\label{saveppm_8m_a9f132b3b81ac6670c345aab13f7d2cba}} 
+\index{saveppm.m@{saveppm.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{P6\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{saveppm_8m_ad30c59692996d379f9d9f144d3d947f7}\label{saveppm_8m_ad30c59692996d379f9d9f144d3d947f7}} 
+\index{saveppm.m@{saveppm.m}!fwrite@{fwrite}}
+\index{fwrite@{fwrite}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{fwrite()}{fwrite()}}
+{\footnotesize\ttfamily fwrite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{,  }\item[{\mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}}}]{,  }\item[{\textquotesingle{}uchar\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{saveppm_8m_a69d82b8b01acb9fd0105951a44f80fd6}\label{saveppm_8m_a69d82b8b01acb9fd0105951a44f80fd6}} 
+\index{saveppm.m@{saveppm.m}!SAVEPPM@{SAVEPPM}}
+\index{SAVEPPM@{SAVEPPM}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{SAVEPPM()}{SAVEPPM()}}
+{\footnotesize\ttfamily S\+A\+V\+E\+P\+PM Write \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} P\+PM \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} S\+A\+V\+E\+P\+PM (\begin{DoxyParamCaption}\item[{filename}]{,  }\item[{\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{saveppm_8m_a21b17d3e66bfe5cd83c3217ac8f7c3d7}\label{saveppm_8m_a21b17d3e66bfe5cd83c3217ac8f7c3d7}} 
+\index{saveppm.m@{saveppm.m}!size@{size}}
+\index{size@{size}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{saveppm_8m_a69d82b8b01acb9fd0105951a44f80fd6}{S\+A\+V\+E\+P\+PM}} Write \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} P\+PM \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} green and blue planes in \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} binary (P6) \% \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} P\+PM \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} file. \% \% S\+EE \mbox{\hyperlink{loadppm_8m_af297ca8eb8596a90606dec6e46674ecb}{A\+L\+SO}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}]{,  }\item[{3}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}\label{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}} 
+\index{saveppm.m@{saveppm.m}!B@{B}}
+\index{B@{B}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily B = \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}
+
+\mbox{\Hypertarget{saveppm_8m_afb358f48b1646c750fb9da6c6585be2b}\label{saveppm_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{saveppm.m@{saveppm.m}!end@{end}}
+\index{end@{end}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}\label{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}} 
+\index{saveppm.m@{saveppm.m}!fid@{fid}}
+\index{fid@{fid}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{fid}{fid}}
+{\footnotesize\ttfamily fid = fopen(fname, \textquotesingle{}\mbox{\hyperlink{downsample_8m_a46ad936b31f4a26e5fc29fa4c8fd70e0}{w}}\textquotesingle{})}
+
+\mbox{\Hypertarget{saveppm_8m_a86d8d92aba9ecf9bbf89f69cb3e49588}\label{saveppm_8m_a86d8d92aba9ecf9bbf89f69cb3e49588}} 
+\index{saveppm.m@{saveppm.m}!G@{G}}
+\index{G@{G}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily G = \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}
+
+\mbox{\Hypertarget{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}\label{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}} 
+\index{saveppm.m@{saveppm.m}!im@{im}}
+\index{im@{im}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{im}{im}}
+{\footnotesize\ttfamily im = \mbox{[}\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}(\+:) \mbox{\hyperlink{saveppm_8m_a86d8d92aba9ecf9bbf89f69cb3e49588}{G}}(\+:) \mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}}(\+:)\mbox{]}}
+
+\mbox{\Hypertarget{saveppm_8m_a9976f3faad68f981f425583e48b03252}\label{saveppm_8m_a9976f3faad68f981f425583e48b03252}} 
+\index{saveppm.m@{saveppm.m}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{keyboard}{keyboard}}
+{\footnotesize\ttfamily keyboard}
+
+\mbox{\Hypertarget{saveppm_8m_acb95449a94688af33f6e9bb090cf2936}\label{saveppm_8m_acb95449a94688af33f6e9bb090cf2936}} 
+\index{saveppm.m@{saveppm.m}!R@{R}}
+\index{R@{R}!saveppm.m@{saveppm.m}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily R = \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}
+

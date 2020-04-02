@@ -1,0 +1,268 @@
+\hypertarget{class_g_u_i_updater}{}\doxysection{G\+U\+I\+Updater Class Reference}
+\label{class_g_u_i_updater}\index{GUIUpdater@{GUIUpdater}}
+
+
+{\ttfamily \#include $<$G\+U\+I\+Updater.\+h$>$}
+
+Inheritance diagram for G\+U\+I\+Updater\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_u_i_updater}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_afacf05ece0988f07662eaab5591fd8b7}{update\+Left\+Camera}} (const Q\+Image \&)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_a1590223624b4a314a9fe56db73d984ab}{update\+Right\+Camera}} (const Q\+Image \&)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_ad8113ad71fe2b1cd68b11bf69fc04f95}{do\+Flash}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_a1ab6dfde2b8ea0700d212def0670ab9b}{start\+Calibration}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_acc51b4ad134d5972231c4815d6148b83}{start\+Server}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_af4c1cc78e23aa37ff6766be12f45b75f}{pointer\+Detected}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_a25d97041202cd55c22064b99bddefc5f}{pointer\+Not\+Detected}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_u_i_updater_aead8933227b7b7cc78e23b98d6c80ab1}{G\+U\+I\+Updater}} (Q\+Object $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_g_u_i_updater_aabcc67dca68b515f3a86caab5f347b8e}{$\sim$\+G\+U\+I\+Updater}} ()
+\item 
+bool \mbox{\hyperlink{class_g_u_i_updater_af392547bf970784b35f47118512edb0e}{activate\+Cameras}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_a965d3cc548ceb3bfad4dd3be8ddd4e54}{start\+Cameras}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_ae51c4254189ed802733dcf6922851426}{Shut\+Down\+Cameras}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_acf45c3f51346a40e94988d2544650d3b}{Show\+Cameras}} ()
+\item 
+bool \mbox{\hyperlink{class_g_u_i_updater_abfd0c6a214ab802eaa64e689010cdfeb}{get\+Pointer\+Data}} (const std\+::string \&file\+Name)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_a677be84d397c616cb70d011b127406a5}{get\+Rigids\+Data}} ()
+\item 
+bool \mbox{\hyperlink{class_g_u_i_updater_abed450cacbd127705c14f797a5c1470d}{calib\+Pointer}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_a978e2b67abc8c081b61a7b0956bcabe4}{set\+Show\+Zone}} (bool status)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_aa0677943be1e52a2852295384034fcd9}{set\+Take\+Snapshot}} (bool status)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_a0646d9ce35c4fdcfc3ffa99c2b795bbe}{set\+Pics2\+Take}} (int num\+Pics)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_ae5ce3b5dc00512e178cd7d7b16596463}{set\+Detect\+Rigids}} (bool status)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_aa938ec821b9be8d1cd953fb0f9cbde5f}{set\+Detect\+Pointer}} (bool status)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_af5e61de316d9cb02a61944319e25f6d1}{set\+Delta}} (float delta)
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_a8d47fbed8c4e041cbc91c2e868000e4e}{write\+Matrices}} ()
+\item 
+void \mbox{\hyperlink{class_g_u_i_updater_ae716caa2ecd78c5fa939f9cb34a0bc48}{set\+Centroid}} (cv\+::\+Mat\+\_\+$<$ double $>$ centroid, std\+::string \&bone)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_u_i_updater_aead8933227b7b7cc78e23b98d6c80ab1}\label{class_g_u_i_updater_aead8933227b7b7cc78e23b98d6c80ab1}} 
+\index{GUIUpdater@{GUIUpdater}!GUIUpdater@{GUIUpdater}}
+\index{GUIUpdater@{GUIUpdater}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{GUIUpdater()}{GUIUpdater()}}
+{\footnotesize\ttfamily G\+U\+I\+Updater\+::\+G\+U\+I\+Updater (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor por defecto \mbox{\Hypertarget{class_g_u_i_updater_aabcc67dca68b515f3a86caab5f347b8e}\label{class_g_u_i_updater_aabcc67dca68b515f3a86caab5f347b8e}} 
+\index{GUIUpdater@{GUIUpdater}!````~GUIUpdater@{$\sim$GUIUpdater}}
+\index{````~GUIUpdater@{$\sim$GUIUpdater}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{$\sim$GUIUpdater()}{~GUIUpdater()}}
+{\footnotesize\ttfamily G\+U\+I\+Updater\+::$\sim$\+G\+U\+I\+Updater (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor por defecto 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_u_i_updater_af392547bf970784b35f47118512edb0e}\label{class_g_u_i_updater_af392547bf970784b35f47118512edb0e}} 
+\index{GUIUpdater@{GUIUpdater}!activateCameras@{activateCameras}}
+\index{activateCameras@{activateCameras}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{activateCameras()}{activateCameras()}}
+{\footnotesize\ttfamily bool G\+U\+I\+Updater\+::activate\+Cameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtiene una instancia de cada cámaras. \begin{DoxyReturn}{Returns}
+verdadero/falso si pudo/no pudo activar las dos cámaras. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_u_i_updater_abed450cacbd127705c14f797a5c1470d}\label{class_g_u_i_updater_abed450cacbd127705c14f797a5c1470d}} 
+\index{GUIUpdater@{GUIUpdater}!calibPointer@{calibPointer}}
+\index{calibPointer@{calibPointer}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{calibPointer()}{calibPointer()}}
+{\footnotesize\ttfamily bool G\+U\+I\+Updater\+::calib\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_g_u_i_updater_ad8113ad71fe2b1cd68b11bf69fc04f95}\label{class_g_u_i_updater_ad8113ad71fe2b1cd68b11bf69fc04f95}} 
+\index{GUIUpdater@{GUIUpdater}!doFlash@{doFlash}}
+\index{doFlash@{doFlash}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{doFlash}{doFlash}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::do\+Flash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_g_u_i_updater_abfd0c6a214ab802eaa64e689010cdfeb}\label{class_g_u_i_updater_abfd0c6a214ab802eaa64e689010cdfeb}} 
+\index{GUIUpdater@{GUIUpdater}!getPointerData@{getPointerData}}
+\index{getPointerData@{getPointerData}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{getPointerData()}{getPointerData()}}
+{\footnotesize\ttfamily bool G\+U\+I\+Updater\+::get\+Pointer\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+Si detecta el pointer, almacena los puntos barridos en un archivo. También emite señales para indicar si se está detectando o no el pointer en el momento. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & nombre del archivo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_updater_a677be84d397c616cb70d011b127406a5}\label{class_g_u_i_updater_a677be84d397c616cb70d011b127406a5}} 
+\index{GUIUpdater@{GUIUpdater}!getRigidsData@{getRigidsData}}
+\index{getRigidsData@{getRigidsData}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{getRigidsData()}{getRigidsData()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::get\+Rigids\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Detecta los rígidos en escena, inicia el servidor y lo utiliza para enviar los datos a la escena de Unity. \mbox{\Hypertarget{class_g_u_i_updater_af4c1cc78e23aa37ff6766be12f45b75f}\label{class_g_u_i_updater_af4c1cc78e23aa37ff6766be12f45b75f}} 
+\index{GUIUpdater@{GUIUpdater}!pointerDetected@{pointerDetected}}
+\index{pointerDetected@{pointerDetected}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{pointerDetected}{pointerDetected}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::pointer\+Detected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_g_u_i_updater_a25d97041202cd55c22064b99bddefc5f}\label{class_g_u_i_updater_a25d97041202cd55c22064b99bddefc5f}} 
+\index{GUIUpdater@{GUIUpdater}!pointerNotDetected@{pointerNotDetected}}
+\index{pointerNotDetected@{pointerNotDetected}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{pointerNotDetected}{pointerNotDetected}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::pointer\+Not\+Detected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_g_u_i_updater_ae716caa2ecd78c5fa939f9cb34a0bc48}\label{class_g_u_i_updater_ae716caa2ecd78c5fa939f9cb34a0bc48}} 
+\index{GUIUpdater@{GUIUpdater}!setCentroid@{setCentroid}}
+\index{setCentroid@{setCentroid}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{setCentroid()}{setCentroid()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::set\+Centroid (\begin{DoxyParamCaption}\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{centroid,  }\item[{std\+::string \&}]{bone }\end{DoxyParamCaption})}
+
+Asocia las coordendas del centroide de cada uno de los huesos. 
+\begin{DoxyParams}{Parameters}
+{\em centroid} & coordenadas en 3D del centroide del hueso. \\
+\hline
+{\em bone} & nombre del hueso al cual se le asociarán las coordenadas. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_updater_af5e61de316d9cb02a61944319e25f6d1}\label{class_g_u_i_updater_af5e61de316d9cb02a61944319e25f6d1}} 
+\index{GUIUpdater@{GUIUpdater}!setDelta@{setDelta}}
+\index{setDelta@{setDelta}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{setDelta()}{setDelta()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::set\+Delta (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
+
+Setter para delta 
+\begin{DoxyParams}{Parameters}
+{\em delta} & nuevo estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_updater_aa938ec821b9be8d1cd953fb0f9cbde5f}\label{class_g_u_i_updater_aa938ec821b9be8d1cd953fb0f9cbde5f}} 
+\index{GUIUpdater@{GUIUpdater}!setDetectPointer@{setDetectPointer}}
+\index{setDetectPointer@{setDetectPointer}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{setDetectPointer()}{setDetectPointer()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::set\+Detect\+Pointer (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+Setter para detect\+Pointer 
+\begin{DoxyParams}{Parameters}
+{\em status} & nuevo estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_updater_ae5ce3b5dc00512e178cd7d7b16596463}\label{class_g_u_i_updater_ae5ce3b5dc00512e178cd7d7b16596463}} 
+\index{GUIUpdater@{GUIUpdater}!setDetectRigids@{setDetectRigids}}
+\index{setDetectRigids@{setDetectRigids}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{setDetectRigids()}{setDetectRigids()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::set\+Detect\+Rigids (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+Setter para detect\+Rigids 
+\begin{DoxyParams}{Parameters}
+{\em status} & nuevo estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_updater_a0646d9ce35c4fdcfc3ffa99c2b795bbe}\label{class_g_u_i_updater_a0646d9ce35c4fdcfc3ffa99c2b795bbe}} 
+\index{GUIUpdater@{GUIUpdater}!setPics2Take@{setPics2Take}}
+\index{setPics2Take@{setPics2Take}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{setPics2Take()}{setPics2Take()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::set\+Pics2\+Take (\begin{DoxyParamCaption}\item[{int}]{num\+Pics }\end{DoxyParamCaption})}
+
+Setter para Pics2\+Take 
+\begin{DoxyParams}{Parameters}
+{\em num\+Pics} & número de imágenes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_updater_a978e2b67abc8c081b61a7b0956bcabe4}\label{class_g_u_i_updater_a978e2b67abc8c081b61a7b0956bcabe4}} 
+\index{GUIUpdater@{GUIUpdater}!setShowZone@{setShowZone}}
+\index{setShowZone@{setShowZone}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{setShowZone()}{setShowZone()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::set\+Show\+Zone (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+Setter para show\+Zone 
+\begin{DoxyParams}{Parameters}
+{\em status} & nuevo estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_updater_aa0677943be1e52a2852295384034fcd9}\label{class_g_u_i_updater_aa0677943be1e52a2852295384034fcd9}} 
+\index{GUIUpdater@{GUIUpdater}!setTakeSnapshot@{setTakeSnapshot}}
+\index{setTakeSnapshot@{setTakeSnapshot}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{setTakeSnapshot()}{setTakeSnapshot()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::set\+Take\+Snapshot (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+Setter para take\+Snapshot 
+\begin{DoxyParams}{Parameters}
+{\em status} & nuevo estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_u_i_updater_acf45c3f51346a40e94988d2544650d3b}\label{class_g_u_i_updater_acf45c3f51346a40e94988d2544650d3b}} 
+\index{GUIUpdater@{GUIUpdater}!ShowCameras@{ShowCameras}}
+\index{ShowCameras@{ShowCameras}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{ShowCameras()}{ShowCameras()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::\+Show\+Cameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Envía los frames de cada una de las cámaras a la G\+UI mediante señales y controla la lógica de captura de imágenes. \mbox{\Hypertarget{class_g_u_i_updater_ae51c4254189ed802733dcf6922851426}\label{class_g_u_i_updater_ae51c4254189ed802733dcf6922851426}} 
+\index{GUIUpdater@{GUIUpdater}!ShutDownCameras@{ShutDownCameras}}
+\index{ShutDownCameras@{ShutDownCameras}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{ShutDownCameras()}{ShutDownCameras()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::\+Shut\+Down\+Cameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Apaga las cámaras adecuadamente. \mbox{\Hypertarget{class_g_u_i_updater_a1ab6dfde2b8ea0700d212def0670ab9b}\label{class_g_u_i_updater_a1ab6dfde2b8ea0700d212def0670ab9b}} 
+\index{GUIUpdater@{GUIUpdater}!startCalibration@{startCalibration}}
+\index{startCalibration@{startCalibration}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{startCalibration}{startCalibration}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::start\+Calibration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_g_u_i_updater_a965d3cc548ceb3bfad4dd3be8ddd4e54}\label{class_g_u_i_updater_a965d3cc548ceb3bfad4dd3be8ddd4e54}} 
+\index{GUIUpdater@{GUIUpdater}!startCameras@{startCameras}}
+\index{startCameras@{startCameras}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{startCameras()}{startCameras()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::start\+Cameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Configura el modo de video de las cámaras (modo Escala de grises) y demás parámetros iniciales (exposición, intensidad y umbral). \mbox{\Hypertarget{class_g_u_i_updater_acc51b4ad134d5972231c4815d6148b83}\label{class_g_u_i_updater_acc51b4ad134d5972231c4815d6148b83}} 
+\index{GUIUpdater@{GUIUpdater}!startServer@{startServer}}
+\index{startServer@{startServer}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{startServer}{startServer}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::start\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_g_u_i_updater_afacf05ece0988f07662eaab5591fd8b7}\label{class_g_u_i_updater_afacf05ece0988f07662eaab5591fd8b7}} 
+\index{GUIUpdater@{GUIUpdater}!updateLeftCamera@{updateLeftCamera}}
+\index{updateLeftCamera@{updateLeftCamera}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{updateLeftCamera}{updateLeftCamera}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::update\+Left\+Camera (\begin{DoxyParamCaption}\item[{const Q\+Image \&}]{\+\_\+t1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_g_u_i_updater_a1590223624b4a314a9fe56db73d984ab}\label{class_g_u_i_updater_a1590223624b4a314a9fe56db73d984ab}} 
+\index{GUIUpdater@{GUIUpdater}!updateRightCamera@{updateRightCamera}}
+\index{updateRightCamera@{updateRightCamera}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{updateRightCamera}{updateRightCamera}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::update\+Right\+Camera (\begin{DoxyParamCaption}\item[{const Q\+Image \&}]{\+\_\+t1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_g_u_i_updater_a8d47fbed8c4e041cbc91c2e868000e4e}\label{class_g_u_i_updater_a8d47fbed8c4e041cbc91c2e868000e4e}} 
+\index{GUIUpdater@{GUIUpdater}!writeMatrices@{writeMatrices}}
+\index{writeMatrices@{writeMatrices}!GUIUpdater@{GUIUpdater}}
+\doxysubsubsection{\texorpdfstring{writeMatrices()}{writeMatrices()}}
+{\footnotesize\ttfamily void G\+U\+I\+Updater\+::write\+Matrices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Escribe a un archivo las coordenadas de los clavos y los ángulos de estos respecto a los huesos que les corresponden. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{_g_u_i_updater_8h}{G\+U\+I\+Updater.\+h}}\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{_g_u_i_updater_8cpp}{G\+U\+I\+Updater.\+cpp}}\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{moc___g_u_i_updater_8cpp}{moc\+\_\+\+G\+U\+I\+Updater.\+cpp}}\end{DoxyCompactItemize}

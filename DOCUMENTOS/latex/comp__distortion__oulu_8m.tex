@@ -1,0 +1,134 @@
+\hypertarget{comp__distortion__oulu_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/comp\+\_\+distortion\+\_\+oulu.m File Reference}
+\label{comp__distortion__oulu_8m}\index{D:/TrackEsferas/NavarQA/calib/comp\_distortion\_oulu.m@{D:/TrackEsferas/NavarQA/calib/comp\_distortion\_oulu.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+comp\+\_\+distortion\+\_\+oulu check the forward projection mapping and division by the focal length \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__distortion__oulu_8m_a03b624c455ccc6373c12c070e5e746cd}{length}} (\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_acadc60b2b6d0c527f38809b693ddb280}{function}} \mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\mbox{]} = comp\+\_\+distortion\+\_\+oulu(\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}},\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})
+\item 
+comp\+\_\+distortion\+\_\+oulu \mbox{\hyperlink{comp__distortion__oulu_8m_a612cf46e573ce15e11ea86f4741c9d49}{m}} \mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\mbox{]}
+\item 
+comp\+\_\+distortion\+\_\+oulu check the forward projection mapping and division by the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{comp__distortion__oulu_8m_aef7c75663a20f9440cb0a350651c753e}{k1}} = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1)
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_adcbf6818ca1a5f06faf47e9f23063dc5}{k2}} = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2)
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_afdfd14b5efe3d4977ddaebc5a3ebf721}{k3}} = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(5)
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_a9bff7262add49b40fc9e659362cac289}{p1}} = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_a9099c7c12dde5f81f4d3ce261da3637c}{p2}} = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = \mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}
+\item 
+initial guess for \mbox{\hyperlink{comp__distortion__oulu_8m_aad5cdef9a0561172223c104ebf86b1b1}{kk}} =1\+:20
+\item 
+initial guess for \mbox{\hyperlink{comp__distortion__oulu_8m_adee962454cad4781b2048c42f004511b}{r\+\_\+2}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(x.$^\wedge$2)
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_a817a1c885715ec4cad2fe28b6995c929}{k\+\_\+radial}} = 1 + \mbox{\hyperlink{comp__distortion__oulu_8m_aef7c75663a20f9440cb0a350651c753e}{k1}} $\ast$ \mbox{\hyperlink{normalize2_8m_adee962454cad4781b2048c42f004511b}{r\+\_\+2}} + \mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}} $\ast$ r\+\_\+2.$^\wedge$2 + \mbox{\hyperlink{normalize2_8m_afdfd14b5efe3d4977ddaebc5a3ebf721}{k3}} $\ast$ r\+\_\+2.$^\wedge$3
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_a16df747e4f6ab54d4c189551f5ee570d}{delta\+\_\+x}} = \mbox{[}2$\ast$\mbox{\hyperlink{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}{p1}}$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:) + \mbox{\hyperlink{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}{p2}}$\ast$(\mbox{\hyperlink{normalize2_8m_adee962454cad4781b2048c42f004511b}{r\+\_\+2}} + 2$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$^\wedge$2)
+\item 
+\mbox{\hyperlink{comp__distortion__oulu_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{comp__distortion__oulu_8m_a03b624c455ccc6373c12c070e5e746cd}\label{comp__distortion__oulu_8m_a03b624c455ccc6373c12c070e5e746cd}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!length@{length}}
+\index{length@{length}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily comp\+\_\+distortion\+\_\+oulu check the forward projection mapping and division by the focal length \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{comp__distortion__oulu_8m_a16df747e4f6ab54d4c189551f5ee570d}\label{comp__distortion__oulu_8m_a16df747e4f6ab54d4c189551f5ee570d}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!delta\_x@{delta\_x}}
+\index{delta\_x@{delta\_x}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{delta\_x}{delta\_x}}
+{\footnotesize\ttfamily delta\+\_\+x = \mbox{[}2$\ast$\mbox{\hyperlink{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}{p1}}$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:) + \mbox{\hyperlink{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}{p2}}$\ast$(\mbox{\hyperlink{normalize2_8m_adee962454cad4781b2048c42f004511b}{r\+\_\+2}} + 2$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$^\wedge$2)}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_afb358f48b1646c750fb9da6c6585be2b}\label{comp__distortion__oulu_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!end@{end}}
+\index{end@{end}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_acadc60b2b6d0c527f38809b693ddb280}\label{comp__distortion__oulu_8m_acadc60b2b6d0c527f38809b693ddb280}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!function@{function}}
+\index{function@{function}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily comp\+\_\+distortion\+\_\+oulu check the forward projection mapping function = comp\+\_\+distortion\+\_\+oulu(\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}},\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_aef7c75663a20f9440cb0a350651c753e}\label{comp__distortion__oulu_8m_aef7c75663a20f9440cb0a350651c753e}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!k1@{k1}}
+\index{k1@{k1}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{k1}{k1}}
+{\footnotesize\ttfamily comp\+\_\+distortion\+\_\+oulu check the forward projection mapping and division by the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} k1 = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1)}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_adcbf6818ca1a5f06faf47e9f23063dc5}\label{comp__distortion__oulu_8m_adcbf6818ca1a5f06faf47e9f23063dc5}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!k2@{k2}}
+\index{k2@{k2}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{k2}{k2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}} = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2)}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_afdfd14b5efe3d4977ddaebc5a3ebf721}\label{comp__distortion__oulu_8m_afdfd14b5efe3d4977ddaebc5a3ebf721}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!k3@{k3}}
+\index{k3@{k3}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{k3}{k3}}
+{\footnotesize\ttfamily k3 = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(5)}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_a817a1c885715ec4cad2fe28b6995c929}\label{comp__distortion__oulu_8m_a817a1c885715ec4cad2fe28b6995c929}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!k\_radial@{k\_radial}}
+\index{k\_radial@{k\_radial}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{k\_radial}{k\_radial}}
+{\footnotesize\ttfamily k\+\_\+radial = 1 + \mbox{\hyperlink{comp__distortion__oulu_8m_aef7c75663a20f9440cb0a350651c753e}{k1}} $\ast$ \mbox{\hyperlink{normalize2_8m_adee962454cad4781b2048c42f004511b}{r\+\_\+2}} + \mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}} $\ast$ r\+\_\+2.$^\wedge$2 + \mbox{\hyperlink{normalize2_8m_afdfd14b5efe3d4977ddaebc5a3ebf721}{k3}} $\ast$ r\+\_\+2.$^\wedge$3}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_aad5cdef9a0561172223c104ebf86b1b1}\label{comp__distortion__oulu_8m_aad5cdef9a0561172223c104ebf86b1b1}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!kk@{kk}}
+\index{kk@{kk}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily initial guess for kk =1\+:20}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_a612cf46e573ce15e11ea86f4741c9d49}\label{comp__distortion__oulu_8m_a612cf46e573ce15e11ea86f4741c9d49}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!m@{m}}
+\index{m@{m}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily comp\+\_\+distortion\+\_\+oulu m\mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{namespace_custom_camera_library_ae449c98bbd4d02c1cfbd3164b8b1ff5e}{comp\_distortion\_oulu}}(\mbox{\hyperlink{apply__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}},\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%Compensates \textcolor{keywordflow}{for} radial and tangential \mbox{\hyperlink{apply__distortion_8m_a489630d61c55f2188f687d347393e5d0}{distortion}}. Model From \mbox{\hyperlink{project2__oulu_8m_a0f027612ac38974d7637bfd0cee07c8d}{Oulu}} university.}
+\DoxyCodeLine{\%For more informatino about the \mbox{\hyperlink{apply__distortion_8m_a489630d61c55f2188f687d347393e5d0}{distortion}} \mbox{\hyperlink{cam__proj__calib__optim_8m_a911e4f1620fa3907031829d8d91b48df}{model}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{comp__distortion__oulu_8m_a9bff7262add49b40fc9e659362cac289}\label{comp__distortion__oulu_8m_a9bff7262add49b40fc9e659362cac289}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!p1@{p1}}
+\index{p1@{p1}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} p1 = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_a9099c7c12dde5f81f4d3ce261da3637c}\label{comp__distortion__oulu_8m_a9099c7c12dde5f81f4d3ce261da3637c}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!p2@{p2}}
+\index{p2@{p2}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{p2}{p2}}
+{\footnotesize\ttfamily p2 = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_adee962454cad4781b2048c42f004511b}\label{comp__distortion__oulu_8m_adee962454cad4781b2048c42f004511b}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!r\_2@{r\_2}}
+\index{r\_2@{r\_2}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{r\_2}{r\_2}}
+{\footnotesize\ttfamily initial guess for r\+\_\+2 = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(x.$^\wedge$2)}
+
+\mbox{\Hypertarget{comp__distortion__oulu_8m_a9336ebf25087d91c818ee6e9ec29f8c1}\label{comp__distortion__oulu_8m_a9336ebf25087d91c818ee6e9ec29f8c1}} 
+\index{comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}!x@{x}}
+\index{x@{x}!comp\_distortion\_oulu.m@{comp\_distortion\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} = \mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}}
+

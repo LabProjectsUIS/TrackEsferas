@@ -1,0 +1,70 @@
+\hypertarget{saveinr_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/saveinr.m File Reference}
+\label{saveinr_8m}\index{D:/TrackEsferas/NavarQA/calib/saveinr.m@{D:/TrackEsferas/NavarQA/calib/saveinr.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{saveinr_8m_a67b6e7f037eb7587c870fe13cfb58d2c}{hdr256}} (1\+:\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{saveinr_8m_a33cf9f5c6cd1f55e3c9ab55c25c478be}{hdr}}))
+\item 
+\mbox{\hyperlink{saveinr_8m_a066a6292cc63705ca7f6716a4f20926f}{fwrite}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}, \mbox{\hyperlink{saveinr_8m_a67b6e7f037eb7587c870fe13cfb58d2c}{hdr256}}, \textquotesingle{}uchar\textquotesingle{})
+\item 
+\mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} the binary \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{saveinr_8m_aab422f3217eb3ec06dfeddd0a812f6bd}{fwrite}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}, \mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}}\textquotesingle{}, \textquotesingle{}float32\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\+A\+V\+E\+I\+NR Write an I\+N\+R\+I\+M\+A\+GE \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \mbox{\hyperlink{saveinr_8m_a585d00e190f3d1bd728acc1768217bd1}{S\+A\+V\+E\+I\+NR}} (filename, \mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}}) \% \% Saves the specified \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} array in \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} I\+N\+R\+IA \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} file. \% \% S\+EE \mbox{\hyperlink{loadppm_8m_af297ca8eb8596a90606dec6e46674ecb}{A\+L\+SO}}\mbox{[}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}, \mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}\mbox{]} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}}\textquotesingle{})
+\item 
+build the header \mbox{\hyperlink{saveinr_8m_a33cf9f5c6cd1f55e3c9ab55c25c478be}{hdr}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{saveinr_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} = sprintf(\textquotesingle{}\#I\+N\+R\+I\+M\+A\+GE-\/4\#\{\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+make it bytes long and write it \mbox{\hyperlink{saveinr_8m_a0ce46f197262cebf0eece8cc19408f45}{hdr256}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,256)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{saveinr_8m_a066a6292cc63705ca7f6716a4f20926f}\label{saveinr_8m_a066a6292cc63705ca7f6716a4f20926f}} 
+\index{saveinr.m@{saveinr.m}!fwrite@{fwrite}}
+\index{fwrite@{fwrite}!saveinr.m@{saveinr.m}}
+\doxysubsubsection{\texorpdfstring{fwrite()}{fwrite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily fwrite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{,  }\item[{\mbox{\hyperlink{saveinr_8m_a67b6e7f037eb7587c870fe13cfb58d2c}{hdr256}}}]{,  }\item[{\textquotesingle{}uchar\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{saveinr_8m_aab422f3217eb3ec06dfeddd0a812f6bd}\label{saveinr_8m_aab422f3217eb3ec06dfeddd0a812f6bd}} 
+\index{saveinr.m@{saveinr.m}!fwrite@{fwrite}}
+\index{fwrite@{fwrite}!saveinr.m@{saveinr.m}}
+\doxysubsubsection{\texorpdfstring{fwrite()}{fwrite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} the binary \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} fwrite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{,  }\item[{\mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}}\textquotesingle{}}]{,  }\item[{\textquotesingle{}float32\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{saveinr_8m_a67b6e7f037eb7587c870fe13cfb58d2c}\label{saveinr_8m_a67b6e7f037eb7587c870fe13cfb58d2c}} 
+\index{saveinr.m@{saveinr.m}!hdr256@{hdr256}}
+\index{hdr256@{hdr256}!saveinr.m@{saveinr.m}}
+\doxysubsubsection{\texorpdfstring{hdr256()}{hdr256()}}
+{\footnotesize\ttfamily hdr256 (\begin{DoxyParamCaption}\item[{1\+:\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{saveinr_8m_a33cf9f5c6cd1f55e3c9ab55c25c478be}{hdr}})}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{saveinr_8m_a33cf9f5c6cd1f55e3c9ab55c25c478be}\label{saveinr_8m_a33cf9f5c6cd1f55e3c9ab55c25c478be}} 
+\index{saveinr.m@{saveinr.m}!hdr@{hdr}}
+\index{hdr@{hdr}!saveinr.m@{saveinr.m}}
+\doxysubsubsection{\texorpdfstring{hdr}{hdr}}
+{\footnotesize\ttfamily hdr = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{saveinr_8m_a0ce46f197262cebf0eece8cc19408f45}\label{saveinr_8m_a0ce46f197262cebf0eece8cc19408f45}} 
+\index{saveinr.m@{saveinr.m}!hdr256@{hdr256}}
+\index{hdr256@{hdr256}!saveinr.m@{saveinr.m}}
+\doxysubsubsection{\texorpdfstring{hdr256}{hdr256}}
+{\footnotesize\ttfamily make it bytes long and write it hdr256 = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,256)}
+
+\mbox{\Hypertarget{saveinr_8m_a3691308f2a4c2f6983f2880d32e29c84}\label{saveinr_8m_a3691308f2a4c2f6983f2880d32e29c84}} 
+\index{saveinr.m@{saveinr.m}!s@{s}}
+\index{s@{s}!saveinr.m@{saveinr.m}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily s = sprintf(\textquotesingle{}\#I\+N\+R\+I\+M\+A\+GE-\/4\#\{\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})}
+
+\mbox{\Hypertarget{saveinr_8m_a585d00e190f3d1bd728acc1768217bd1}\label{saveinr_8m_a585d00e190f3d1bd728acc1768217bd1}} 
+\index{saveinr.m@{saveinr.m}!SAVEINR@{SAVEINR}}
+\index{SAVEINR@{SAVEINR}!saveinr.m@{saveinr.m}}
+\doxysubsubsection{\texorpdfstring{SAVEINR}{SAVEINR}}
+{\footnotesize\ttfamily S\+A\+V\+E\+I\+NR Write an I\+N\+R\+I\+M\+A\+GE \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} S\+A\+V\+E\+I\+NR(filename, \mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}}) \% \% Saves the specified \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} array in \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} I\+N\+R\+IA \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} file. \% \% S\+EE \mbox{\hyperlink{loadppm_8m_af297ca8eb8596a90606dec6e46674ecb}{A\+L\+SO}}\mbox{[}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}, \mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}\mbox{]} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{saveppm_8m_a36aff75e89a0f2a99eca767b6ece034d}{im}}\textquotesingle{})}
+

@@ -1,0 +1,165 @@
+\hypertarget{merge__two__datasets_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/merge\+\_\+two\+\_\+datasets.m File Reference}
+\label{merge__two__datasets_8m}\index{D:/TrackEsferas/NavarQA/calib/merge\_two\_datasets.m@{D:/TrackEsferas/NavarQA/calib/merge\_two\_datasets.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a4f937026306ae9a45dad33d4036d37e6}{fprintf}} (1, \textquotesingle{}Script \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} merges two \char`\"{}Cabib\+\_\+\+Results.\+mat\char`\"{} data sets of the \mbox{\hyperlink{rectify__stereo__pair_8m_a74de3909f790e0187e6baa753abebdf4}{same}} \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} into \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} single \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{dataset\textbackslash{}n}}\textquotesingle{}) \mbox{\hyperlink{load__stereo__calib__files_8m_a13165ff083bdad541bf26c0dad442daf}{dir}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{merge__two__datasets_8m_a1088d7740258d52da2059191628aa769}{fprintf}} (1, \textquotesingle{}File not found. Try \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{again.\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a100e5f847f9a8c9cccd7719547f41d1d}{load}} (\mbox{\hyperlink{merge__two__datasets_8m_a5bf6ca8f910be0329f260f6afc861889}{data\+\_\+set1}})
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a8cd06265e829ca0729d8540b46ff734e}{load}} (\mbox{\hyperlink{merge__two__datasets_8m_aa65ac7b8dbf57898ddc52bf273fd50e1}{data\+\_\+set2}})
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a55e1e40e27e959e181d2eb5498573095}{eval}} (\mbox{[}\textquotesingle{}d\+X\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}+\mbox{\hyperlink{merge__two__datasets_8m_ab3c44a76dd678c93affe68a1f8a980ab}{shift}}) \textquotesingle{}=d\+X\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+Recompute the \mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}}(in the \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} ex) \mbox{\hyperlink{merge__two__datasets_8m_aefcba43b9641ebf5310b70b8a75cc80f}{fprintf}} (\textquotesingle{}The two \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} datasets are \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} merged. You are \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} ready \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} run calibration. \textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a86c6f909356c67f3a64bf3a64955cc50}{cont}} = 1
+\item 
+\mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} \mbox{\hyperlink{saving__calib__no__results_8m_a7b207119658c4cf054d35e5f6402dffb}{cont}} \mbox{\hyperlink{merge__two__datasets_8m_a5bf6ca8f910be0329f260f6afc861889}{data\+\_\+set1}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Filename of the first \mbox{\hyperlink{scanning__script_8m_aef10db55231ee94ba6bbfb76fed5e867}{dataset}} (with \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} path \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} necessary)\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} \mbox{\hyperlink{saving__calib__no__results_8m_a7b207119658c4cf054d35e5f6402dffb}{cont}} \mbox{\hyperlink{merge__two__datasets_8m_aa65ac7b8dbf57898ddc52bf273fd50e1}{data\+\_\+set2}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Filename of the second \mbox{\hyperlink{scanning__script_8m_aef10db55231ee94ba6bbfb76fed5e867}{dataset}} (with \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} path \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} necessary)\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+part1 \mbox{\hyperlink{merge__two__datasets_8m_a312a5e0eda1bc4ca9273f36978e6dc4f}{Calib\+\_\+\+Results}}
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_ab3c44a76dd678c93affe68a1f8a980ab}{shift}} = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a7ddd679179823c0d07cf0b1937528ecc}{active\+\_\+images2}} = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a97fb9339490d6e51a1148f7a495f5944}{n\+\_\+ima2}} = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+for \mbox{\hyperlink{merge__two__datasets_8m_af29949bd63fb009eacab5efd11399e40}{kk}}
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} = n\+\_\+ima + \mbox{\hyperlink{merge__two__datasets_8m_a97fb9339490d6e51a1148f7a495f5944}{n\+\_\+ima2}}
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_a92b03440a331baeaaf23d56a1e468edc}{active\+\_\+images}} = \mbox{[}active\+\_\+images \mbox{\hyperlink{merge__two__datasets_8m_a7ddd679179823c0d07cf0b1937528ecc}{active\+\_\+images2}}\mbox{]}
+\item 
+\mbox{\hyperlink{merge__two__datasets_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}{no\+\_\+image}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{merge__two__datasets_8m_a55e1e40e27e959e181d2eb5498573095}\label{merge__two__datasets_8m_a55e1e40e27e959e181d2eb5498573095}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!eval@{eval}}
+\index{eval@{eval}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_aefcba43b9641ebf5310b70b8a75cc80f}\label{merge__two__datasets_8m_aefcba43b9641ebf5310b70b8a75cc80f}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Recompute the \mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}} (in the \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} ex) fprintf (\begin{DoxyParamCaption}\item[{\textquotesingle{}The two \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} datasets are \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} merged. You are \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} ready \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} run calibration. \textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a1088d7740258d52da2059191628aa769}\label{merge__two__datasets_8m_a1088d7740258d52da2059191628aa769}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}File not found. Try \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{again.\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a4f937026306ae9a45dad33d4036d37e6}\label{merge__two__datasets_8m_a4f937026306ae9a45dad33d4036d37e6}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Script \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} merges two \char`\"{}Cabib\+\_\+\+Results.\+mat\char`\"{} data sets of the \mbox{\hyperlink{rectify__stereo__pair_8m_a74de3909f790e0187e6baa753abebdf4}{same}} \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} into \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} single \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{dataset\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a100e5f847f9a8c9cccd7719547f41d1d}\label{merge__two__datasets_8m_a100e5f847f9a8c9cccd7719547f41d1d}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!load@{load}}
+\index{load@{load}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{merge__two__datasets_8m_a5bf6ca8f910be0329f260f6afc861889}{data\+\_\+set1}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a8cd06265e829ca0729d8540b46ff734e}\label{merge__two__datasets_8m_a8cd06265e829ca0729d8540b46ff734e}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!load@{load}}
+\index{load@{load}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{merge__two__datasets_8m_aa65ac7b8dbf57898ddc52bf273fd50e1}{data\+\_\+set2}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{merge__two__datasets_8m_a92b03440a331baeaaf23d56a1e468edc}\label{merge__two__datasets_8m_a92b03440a331baeaaf23d56a1e468edc}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{active\_images}{active\_images}}
+{\footnotesize\ttfamily active\+\_\+images = \mbox{[}active\+\_\+images \mbox{\hyperlink{merge__two__datasets_8m_a7ddd679179823c0d07cf0b1937528ecc}{active\+\_\+images2}}\mbox{]}}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a7ddd679179823c0d07cf0b1937528ecc}\label{merge__two__datasets_8m_a7ddd679179823c0d07cf0b1937528ecc}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!active\_images2@{active\_images2}}
+\index{active\_images2@{active\_images2}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{active\_images2}{active\_images2}}
+{\footnotesize\ttfamily active\+\_\+images2 = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a312a5e0eda1bc4ca9273f36978e6dc4f}\label{merge__two__datasets_8m_a312a5e0eda1bc4ca9273f36978e6dc4f}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!Calib\_Results@{Calib\_Results}}
+\index{Calib\_Results@{Calib\_Results}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{Calib\_Results}{Calib\_Results}}
+{\footnotesize\ttfamily part1 Calib\+\_\+\+Results}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a86c6f909356c67f3a64bf3a64955cc50}\label{merge__two__datasets_8m_a86c6f909356c67f3a64bf3a64955cc50}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!cont@{cont}}
+\index{cont@{cont}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{cont}{cont}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} cont = 1}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a5bf6ca8f910be0329f260f6afc861889}\label{merge__two__datasets_8m_a5bf6ca8f910be0329f260f6afc861889}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!data\_set1@{data\_set1}}
+\index{data\_set1@{data\_set1}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{data\_set1}{data\_set1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} \mbox{\hyperlink{saving__calib__no__results_8m_a7b207119658c4cf054d35e5f6402dffb}{cont}} data\+\_\+set1 = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Filename of the first \mbox{\hyperlink{scanning__script_8m_aef10db55231ee94ba6bbfb76fed5e867}{dataset}} (with \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} path \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} necessary)\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_aa65ac7b8dbf57898ddc52bf273fd50e1}\label{merge__two__datasets_8m_aa65ac7b8dbf57898ddc52bf273fd50e1}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!data\_set2@{data\_set2}}
+\index{data\_set2@{data\_set2}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{data\_set2}{data\_set2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} \mbox{\hyperlink{saving__calib__no__results_8m_a7b207119658c4cf054d35e5f6402dffb}{cont}} data\+\_\+set2 = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Filename of the second \mbox{\hyperlink{scanning__script_8m_aef10db55231ee94ba6bbfb76fed5e867}{dataset}} (with \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} path \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} necessary)\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_afb358f48b1646c750fb9da6c6585be2b}\label{merge__two__datasets_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!end@{end}}
+\index{end@{end}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_af29949bd63fb009eacab5efd11399e40}\label{merge__two__datasets_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!kk@{kk}}
+\index{kk@{kk}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= 1:\mbox{\hyperlink{merge__two__datasets_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\_ima}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{merge__two__datasets_8m_a55e1e40e27e959e181d2eb5498573095}{eval}}([\textcolor{stringliteral}{'X\_'} num2str(\mbox{\hyperlink{merge__two__datasets_8m_af29949bd63fb009eacab5efd11399e40}{kk}}+\mbox{\hyperlink{merge__two__datasets_8m_ab3c44a76dd678c93affe68a1f8a980ab}{shift}}) \textcolor{stringliteral}{' = X\_'} num2str(\mbox{\hyperlink{merge__two__datasets_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textcolor{charliteral}{';'}])}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{merge__two__datasets_8m_a4bd2a7187893657a867b1e3b03a6ca7f}\label{merge__two__datasets_8m_a4bd2a7187893657a867b1e3b03a6ca7f}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!n\_ima@{n\_ima}}
+\index{n\_ima@{n\_ima}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima}{n\_ima}}
+{\footnotesize\ttfamily n\+\_\+ima = n\+\_\+ima + \mbox{\hyperlink{merge__two__datasets_8m_a97fb9339490d6e51a1148f7a495f5944}{n\+\_\+ima2}}}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_a97fb9339490d6e51a1148f7a495f5944}\label{merge__two__datasets_8m_a97fb9339490d6e51a1148f7a495f5944}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!n\_ima2@{n\_ima2}}
+\index{n\_ima2@{n\_ima2}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima2}{n\_ima2}}
+{\footnotesize\ttfamily n\+\_\+ima2 = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}\label{merge__two__datasets_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!no\_image@{no\_image}}
+\index{no\_image@{no\_image}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{no\_image}{no\_image}}
+{\footnotesize\ttfamily no\+\_\+image = 1}
+
+\mbox{\Hypertarget{merge__two__datasets_8m_ab3c44a76dd678c93affe68a1f8a980ab}\label{merge__two__datasets_8m_ab3c44a76dd678c93affe68a1f8a980ab}} 
+\index{merge\_two\_datasets.m@{merge\_two\_datasets.m}!shift@{shift}}
+\index{shift@{shift}!merge\_two\_datasets.m@{merge\_two\_datasets.m}}
+\doxysubsubsection{\texorpdfstring{shift}{shift}}
+{\footnotesize\ttfamily shift = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+

@@ -1,0 +1,476 @@
+\hypertarget{init__intrinsic__param_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/init\+\_\+intrinsic\+\_\+param.m File Reference}
+\label{init__intrinsic__param_8m}\index{D:/TrackEsferas/NavarQA/calib/init\_intrinsic\_param.m@{D:/TrackEsferas/NavarQA/calib/init\_intrinsic\_param.m}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}} = sqrt(\mbox{\hyperlink{smooth__images_8m_a7a1752f5e40c5479a01672ac853b1541}{b}}\textquotesingle{} $\ast$(\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}\textquotesingle{})\textquotesingle{})/(\mbox{\hyperlink{smooth__images_8m_a7a1752f5e40c5479a01672ac853b1541}{b}}\textquotesingle{} $\ast$\mbox{\hyperlink{smooth__images_8m_a7a1752f5e40c5479a01672ac853b1541}{b}})) $\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2, 1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_ae3bece344865e516031107abcc20e807}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{saving__calib__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}{est\+\_\+aspect\+\_\+ratio}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_a06ac44892c3ae10ecae191e7762c6527}{$\sim$exist}} (\mbox{[}\textquotesingle{}x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}(1))\mbox{]})
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a19be99a4614791117d6a694876d6fad1}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Initialization of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} -\/ Number of \mbox{\hyperlink{_compute_stripes_8m_a6015539f242e5c2c6487b379469629f5}{images\+:}}\%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}))
+\item 
+Initialize the \mbox{\hyperlink{init__intrinsic__param_8m_ae4da44b88f2d135787f5eabbe6f5ccd0}{eval}} (\mbox{[}\textquotesingle{}\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}=x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a47aaedc05d1a5c6b3d579ab03191b443}{if}} (\mbox{\hyperlink{recomp__corner__calib__no__read_8m_ae2d0d938b49d71b3f03786c5ba342c96}{isnan}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}(1, 1)))
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_aa18517c7b1adc2d1c4bf6296c9c80863}{active\+\_\+images}} (\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_a20b6755cd3d94556d5a09f88d3d0ed40}{fprintf}} (1, \textquotesingle{}W\+A\+R\+N\+I\+N\+G\+:\+Cannot calibrate with \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%d. Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{first.\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) fprintf(1
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Set \mbox{\hyperlink{init__intrinsic__param_8m_a5f1ec5965590664430d3b39f0fe1c652}{active\+\_\+images}} (\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}})
+\item 
+2 \mbox{\hyperlink{init__intrinsic__param_8m_a522cf90bb2f02d4dc20dc79433bf7c74}{c\+\_\+init}} ()
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_abd5d5481cbc4b6fce4354d951fca6689}{f\+\_\+init}} (1)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_abe18f87ed229066b064a79d435435acb}{f\+\_\+init}} (2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param_8m_aa8bc65215279530577ab18597395bf4c}{I\+N\+P\+UT}}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param_8m_a6c0cb61256ea590f927b89209c46c748}{x\+\_\+2}}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param_8m_a94c96ba6d2c7465a8021f16d3b9fded0}{x\+\_\+3}}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param_8m_ac5e82d130582a41ec3047888835f48c8}{X\+\_\+2}}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param_8m_a3616c915ca0ca629d609144f8046b428}{X\+\_\+3}}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} \mbox{\hyperlink{init__intrinsic__param_8m_a3baf04d2cab8ccf5dfab24270b9b6480}{Method}}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} \mbox{\hyperlink{init__intrinsic__param_8m_a4dba4fac9121b9f86e6ef84a261cc36f}{H\+\_\+2}}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} \mbox{\hyperlink{init__intrinsic__param_8m_a4ce310fa39d56a9cdeba2a6a88cf9cd8}{H\+\_\+3}}
+\item 
+init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} and computes the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} from orthogonal vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a7de5f353302f31a498f14787db073c78}{constraint}} The principal \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} assumed \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} the \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} of the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} Assumes no \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}}(\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}=\mbox{[}0;0;0;0\mbox{]}) \% \%Note \mbox{\hyperlink{init__intrinsic__param_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}{est\+\_\+aspect\+\_\+ratio}} = 1
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_a932b9343e43986762f7d96df8aaba60c}{click\+\_\+calib}}
+\item 
+Initialize the \mbox{\hyperlink{init__intrinsic__param_8m_ad7fba7d56e1f72e31e6746ac84206f2a}{homographies}}
+\item 
+and run Extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{init__intrinsic__param_8m_a6ae8de2944c8ebcc485ffe8b4f0ff568}{n}}
+\item 
+initial guess for principal \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} and \mbox{\hyperlink{init__intrinsic__param_8m_a35ec99091d3f725f2ccbd62f531e0d19}{distortion}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_acfebc4cca2097aa9325d1ed13765efb5}{c\+\_\+init}} = \mbox{[}\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}
+\item 
+initialize \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} the \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} of the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{init__intrinsic__param_8m_a50623e266f38fae07ba461855ebf2b68}{k\+\_\+init}} = \mbox{[}0
+\item 
+initialize \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a0959be2ec86a98bb7fc5bf9b4d07186e}{zero}}(no \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}}) \% Compute explicitely the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} using \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the(mutually orthogonal) vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \% note \mbox{\hyperlink{init__intrinsic__param_8m_a21ad0bd836b90d08f4cf640b4c298e7c}{b}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{click__ima__calib3_d_8m_a64be3619771f8d910b3db62ba7ef990e}{matrix}} \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} subtract the principal \mbox{\hyperlink{init__intrinsic__param_8m_a60bfb22881d8ade0a15adeaa7a363c23}{point}}
+\item 
+for \mbox{\hyperlink{init__intrinsic__param_8m_af29949bd63fb009eacab5efd11399e40}{kk}} =1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}} = Sub\+\_\+cc $\ast$ Hkk
+\item 
+Extract vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}}(direct and diagonals) \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}} = \mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,2)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}} = (\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,1)+\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,2))/2
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}} = (\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,1)-\/\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,2))/2
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}} = V\+\_\+hori\+\_\+pix/\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(V\+\_\+hori\+\_\+pix)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a8dbb40f7f7bb5a67b98c95563ac0f086}{a1}} = \mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}}(1)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_ab79bcddb60b32e4a1c786cbd7b50ab5e}{b1}} = \mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}}(2)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a74fc5f6f852574d24cbca8153258784c}{c1}} = \mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}}(3)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_adbcaa199c8f4e499f2c3d049ff926d74}{a2}} = \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}}(1)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a60aee5f96367ea6d10b670a8c01da54b}{b2}} = \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}}(2)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a869bd946456256c347112f5798b5b504}{c2}} = \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}}(3)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a509a674bd7926c5406b815a055d17834}{a3}} = \mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}}(1)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_ad9a0480b773d224e0b7984791a34f5d4}{b3}} = \mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}}(2)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a2350b882068fe45413b6048893702f73}{c3}} = \mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}}(3)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_ac5faf492777bc29f52dd3ee39e3d38fa}{a4}} = \mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}}(1)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_ac88c944516968c2c7b9b4138b187045e}{b4}} = \mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}}(2)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a43753b2d4df7e84852228543f1106801}{c4}} = \mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}}(3)
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a33e43d56c8795f8523102e842b56f1f6}{A\+\_\+kk}} = \mbox{[}\mbox{\hyperlink{init__intrinsic__param_8m_a8dbb40f7f7bb5a67b98c95563ac0f086}{a1}}$\ast$\mbox{\hyperlink{project__points2_8m_a2f61d5e0e97d1e5917839088cb83bb97}{a2}} \mbox{\hyperlink{init__intrinsic__param_8m_ab79bcddb60b32e4a1c786cbd7b50ab5e}{b1}}$\ast$\mbox{\hyperlink{init__intrinsic__param_8m_a60aee5f96367ea6d10b670a8c01da54b}{b2}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a5ef7c387a16b5d170e1786b338e1cbbf}{b\+\_\+kk}} = -\/\mbox{[}\mbox{\hyperlink{init__intrinsic__param_8m_a74fc5f6f852574d24cbca8153258784c}{c1}}$\ast$\mbox{\hyperlink{project__points__fisheye_8m_a55227947c75bdffa3e00288c01434b14}{c2}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}} = \mbox{[}A
+\item 
+use \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}} focal \mbox{\hyperlink{init__intrinsic__param_8m_a4101603b836cf9a002be749849e5c830}{length}}
+\item 
+use \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}} focal \mbox{\hyperlink{init__intrinsic__param_8m_a52da1671f6a1abbd12b91fd653853e06}{two\+\_\+focals\+\_\+init}} = 1
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_a52da1671f6a1abbd12b91fd653853e06}{two\+\_\+focals\+\_\+init}} Use \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} two focals \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_a25b60101d447f9cc8e7354d7cc9e888d}{$\sim$est\+\_\+aspect\+\_\+ratio}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param_8m_a92f144e07493bc2c826a1b5df464b50a}{alpha\+\_\+init}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}\label{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!f\_init@{f\_init}}
+\index{f\_init@{f\_init}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{f\_init}{f\_init}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}} =  sqrt(\mbox{\hyperlink{smooth__images_8m_a7a1752f5e40c5479a01672ac853b1541}{b}}\textquotesingle{}$\ast$(\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}\textquotesingle{})\textquotesingle{}) / (\mbox{\hyperlink{smooth__images_8m_a7a1752f5e40c5479a01672ac853b1541}{b}}\textquotesingle{}$\ast$\mbox{\hyperlink{smooth__images_8m_a7a1752f5e40c5479a01672ac853b1541}{b}})) $\ast$ \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{init__intrinsic__param_8m_a5f1ec5965590664430d3b39f0fe1c652}\label{init__intrinsic__param_8m_a5f1ec5965590664430d3b39f0fe1c652}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Set active\+\_\+images (\begin{DoxyParamCaption}\item[{\%}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_aa18517c7b1adc2d1c4bf6296c9c80863}\label{init__intrinsic__param_8m_aa18517c7b1adc2d1c4bf6296c9c80863}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} active\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a522cf90bb2f02d4dc20dc79433bf7c74}\label{init__intrinsic__param_8m_a522cf90bb2f02d4dc20dc79433bf7c74}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!c\_init@{c\_init}}
+\index{c\_init@{c\_init}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{c\_init()}{c\_init()}}
+{\footnotesize\ttfamily 2 c\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_ae4da44b88f2d135787f5eabbe6f5ccd0}\label{init__intrinsic__param_8m_ae4da44b88f2d135787f5eabbe6f5ccd0}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!eval@{eval}}
+\index{eval@{eval}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily Initialize the eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_abd5d5481cbc4b6fce4354d951fca6689}\label{init__intrinsic__param_8m_abd5d5481cbc4b6fce4354d951fca6689}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!f\_init@{f\_init}}
+\index{f\_init@{f\_init}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{f\_init()}{f\_init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}} (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_abe18f87ed229066b064a79d435435acb}\label{init__intrinsic__param_8m_abe18f87ed229066b064a79d435435acb}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!f\_init@{f\_init}}
+\index{f\_init@{f\_init}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{f\_init()}{f\_init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}} (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a20b6755cd3d94556d5a09f88d3d0ed40}\label{init__intrinsic__param_8m_a20b6755cd3d94556d5a09f88d3d0ed40}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}W\+A\+R\+N\+I\+N\+G\+:\+Cannot calibrate with \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%d. Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{first.\textbackslash{}n}}\textquotesingle{}                                                                                                                   }]{,  }\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a19be99a4614791117d6a694876d6fad1}\label{init__intrinsic__param_8m_a19be99a4614791117d6a694876d6fad1}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Initialization of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} -\/ Number of \mbox{\hyperlink{_compute_stripes_8m_a6015539f242e5c2c6487b379469629f5}{images\+:}}\%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a47aaedc05d1a5c6b3d579ab03191b443}\label{init__intrinsic__param_8m_a47aaedc05d1a5c6b3d579ab03191b443}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!if@{if}}
+\index{if@{if}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{recomp__corner__calib__no__read_8m_ae2d0d938b49d71b3f03786c5ba342c96}{isnan}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}(1, 1))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_ae3bece344865e516031107abcc20e807}\label{init__intrinsic__param_8m_ae3bece344865e516031107abcc20e807}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{saving__calib__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}{est\+\_\+aspect\+\_\+ratio}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a06ac44892c3ae10ecae191e7762c6527}\label{init__intrinsic__param_8m_a06ac44892c3ae10ecae191e7762c6527}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{init__intrinsic__param_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}\label{init__intrinsic__param_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!A@{A}}
+\index{A@{A}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily A = \mbox{[}A}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a8dbb40f7f7bb5a67b98c95563ac0f086}\label{init__intrinsic__param_8m_a8dbb40f7f7bb5a67b98c95563ac0f086}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!a1@{a1}}
+\index{a1@{a1}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{a1}{a1}}
+{\footnotesize\ttfamily a1 = \mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}}(1)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_adbcaa199c8f4e499f2c3d049ff926d74}\label{init__intrinsic__param_8m_adbcaa199c8f4e499f2c3d049ff926d74}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!a2@{a2}}
+\index{a2@{a2}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{a2}{a2}}
+{\footnotesize\ttfamily a2 = \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}}(1)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a509a674bd7926c5406b815a055d17834}\label{init__intrinsic__param_8m_a509a674bd7926c5406b815a055d17834}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!a3@{a3}}
+\index{a3@{a3}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{a3}{a3}}
+{\footnotesize\ttfamily a3 = \mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}}(1)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_ac5faf492777bc29f52dd3ee39e3d38fa}\label{init__intrinsic__param_8m_ac5faf492777bc29f52dd3ee39e3d38fa}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!a4@{a4}}
+\index{a4@{a4}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{a4}{a4}}
+{\footnotesize\ttfamily a4 = \mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}}(1)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a33e43d56c8795f8523102e842b56f1f6}\label{init__intrinsic__param_8m_a33e43d56c8795f8523102e842b56f1f6}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!A\_kk@{A\_kk}}
+\index{A\_kk@{A\_kk}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{A\_kk}{A\_kk}}
+{\footnotesize\ttfamily A\+\_\+kk = \mbox{[}\mbox{\hyperlink{init__intrinsic__param_8m_a8dbb40f7f7bb5a67b98c95563ac0f086}{a1}}$\ast$\mbox{\hyperlink{project__points2_8m_a2f61d5e0e97d1e5917839088cb83bb97}{a2}} \mbox{\hyperlink{init__intrinsic__param_8m_ab79bcddb60b32e4a1c786cbd7b50ab5e}{b1}}$\ast$\mbox{\hyperlink{init__intrinsic__param_8m_a60aee5f96367ea6d10b670a8c01da54b}{b2}}}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a92f144e07493bc2c826a1b5df464b50a}\label{init__intrinsic__param_8m_a92f144e07493bc2c826a1b5df464b50a}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!alpha\_init@{alpha\_init}}
+\index{alpha\_init@{alpha\_init}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_init}{alpha\_init}}
+{\footnotesize\ttfamily alpha\+\_\+init = 0}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a21ad0bd836b90d08f4cf640b4c298e7c}\label{init__intrinsic__param_8m_a21ad0bd836b90d08f4cf640b4c298e7c}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!b@{b}}
+\index{b@{b}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily b = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_ab79bcddb60b32e4a1c786cbd7b50ab5e}\label{init__intrinsic__param_8m_ab79bcddb60b32e4a1c786cbd7b50ab5e}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!b1@{b1}}
+\index{b1@{b1}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{b1}{b1}}
+{\footnotesize\ttfamily b1 = \mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}}(2)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a60aee5f96367ea6d10b670a8c01da54b}\label{init__intrinsic__param_8m_a60aee5f96367ea6d10b670a8c01da54b}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!b2@{b2}}
+\index{b2@{b2}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{b2}{b2}}
+{\footnotesize\ttfamily b2 = \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}}(2)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_ad9a0480b773d224e0b7984791a34f5d4}\label{init__intrinsic__param_8m_ad9a0480b773d224e0b7984791a34f5d4}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!b3@{b3}}
+\index{b3@{b3}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{b3}{b3}}
+{\footnotesize\ttfamily b3 = \mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}}(2)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_ac88c944516968c2c7b9b4138b187045e}\label{init__intrinsic__param_8m_ac88c944516968c2c7b9b4138b187045e}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!b4@{b4}}
+\index{b4@{b4}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{b4}{b4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{project__points2_8m_a509a674bd7926c5406b815a055d17834}{a3}} $\ast$\mbox{\hyperlink{init__intrinsic__param_8m_ac5faf492777bc29f52dd3ee39e3d38fa}{a4}} \mbox{\hyperlink{init__intrinsic__param_8m_ad9a0480b773d224e0b7984791a34f5d4}{b3}} $\ast$ b4 = \mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}}(2)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a5ef7c387a16b5d170e1786b338e1cbbf}\label{init__intrinsic__param_8m_a5ef7c387a16b5d170e1786b338e1cbbf}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!b\_kk@{b\_kk}}
+\index{b\_kk@{b\_kk}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{b\_kk}{b\_kk}}
+{\footnotesize\ttfamily b\+\_\+kk = -\/\mbox{[}\mbox{\hyperlink{init__intrinsic__param_8m_a74fc5f6f852574d24cbca8153258784c}{c1}}$\ast$\mbox{\hyperlink{project__points__fisheye_8m_a55227947c75bdffa3e00288c01434b14}{c2}}}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a74fc5f6f852574d24cbca8153258784c}\label{init__intrinsic__param_8m_a74fc5f6f852574d24cbca8153258784c}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!c1@{c1}}
+\index{c1@{c1}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{c1}{c1}}
+{\footnotesize\ttfamily c1 = \mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}}(3)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a869bd946456256c347112f5798b5b504}\label{init__intrinsic__param_8m_a869bd946456256c347112f5798b5b504}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!c2@{c2}}
+\index{c2@{c2}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{c2}{c2}}
+{\footnotesize\ttfamily c2 = \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}}(3)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a2350b882068fe45413b6048893702f73}\label{init__intrinsic__param_8m_a2350b882068fe45413b6048893702f73}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!c3@{c3}}
+\index{c3@{c3}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{c3}{c3}}
+{\footnotesize\ttfamily c3 = \mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}}(3)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a43753b2d4df7e84852228543f1106801}\label{init__intrinsic__param_8m_a43753b2d4df7e84852228543f1106801}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!c4@{c4}}
+\index{c4@{c4}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{c4}{c4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{init__intrinsic__param_8m_a2350b882068fe45413b6048893702f73}{c3}} $\ast$ c4 = \mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}}(3)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_acfebc4cca2097aa9325d1ed13765efb5}\label{init__intrinsic__param_8m_acfebc4cca2097aa9325d1ed13765efb5}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!c\_init@{c\_init}}
+\index{c\_init@{c\_init}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{c\_init}{c\_init}}
+{\footnotesize\ttfamily c\+\_\+init = \mbox{[}\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a0d062f92217e4e073995683900fdadcb}\label{init__intrinsic__param_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a932b9343e43986762f7d96df8aaba60c}\label{init__intrinsic__param_8m_a932b9343e43986762f7d96df8aaba60c}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!click\_calib@{click\_calib}}
+\index{click\_calib@{click\_calib}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{click\_calib}{click\_calib}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} click\+\_\+calib}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a35ec99091d3f725f2ccbd62f531e0d19}\label{init__intrinsic__param_8m_a35ec99091d3f725f2ccbd62f531e0d19}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!distortion@{distortion}}
+\index{distortion@{distortion}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{distortion}{distortion}}
+{\footnotesize\ttfamily initial guess for principal \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} and distortion}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_afb358f48b1646c750fb9da6c6585be2b}\label{init__intrinsic__param_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!end@{end}}
+\index{end@{end}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}})}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}\label{init__intrinsic__param_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!est\_aspect\_ratio@{est\_aspect\_ratio}}
+\index{est\_aspect\_ratio@{est\_aspect\_ratio}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{est\_aspect\_ratio}{est\_aspect\_ratio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} est\+\_\+aspect\+\_\+ratio = 1}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}\label{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!estimate@{estimate}}
+\index{estimate@{estimate}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{estimate}{estimate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param_8m_a52da1671f6a1abbd12b91fd653853e06}{two\+\_\+focals\+\_\+init}} Use \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} two focals estimate}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a4dba4fac9121b9f86e6ef84a261cc36f}\label{init__intrinsic__param_8m_a4dba4fac9121b9f86e6ef84a261cc36f}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!H\_2@{H\_2}}
+\index{H\_2@{H\_2}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{H\_2}{H\_2}}
+{\footnotesize\ttfamily init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} H\+\_\+2}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a4ce310fa39d56a9cdeba2a6a88cf9cd8}\label{init__intrinsic__param_8m_a4ce310fa39d56a9cdeba2a6a88cf9cd8}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!H\_3@{H\_3}}
+\index{H\_3@{H\_3}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{H\_3}{H\_3}}
+{\footnotesize\ttfamily init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} H\+\_\+3}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}\label{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!Hkk@{Hkk}}
+\index{Hkk@{Hkk}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{Hkk}{Hkk}}
+{\footnotesize\ttfamily Hkk = Sub\+\_\+cc $\ast$ Hkk}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_ad7fba7d56e1f72e31e6746ac84206f2a}\label{init__intrinsic__param_8m_ad7fba7d56e1f72e31e6746ac84206f2a}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!homographies@{homographies}}
+\index{homographies@{homographies}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{homographies}{homographies}}
+{\footnotesize\ttfamily Initialize the homographies}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_aa8bc65215279530577ab18597395bf4c}\label{init__intrinsic__param_8m_aa8bc65215279530577ab18597395bf4c}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!INPUT@{INPUT}}
+\index{INPUT@{INPUT}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{INPUT}{INPUT}}
+{\footnotesize\ttfamily init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script I\+N\+P\+UT}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a50623e266f38fae07ba461855ebf2b68}\label{init__intrinsic__param_8m_a50623e266f38fae07ba461855ebf2b68}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!k\_init@{k\_init}}
+\index{k\_init@{k\_init}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{k\_init}{k\_init}}
+{\footnotesize\ttfamily initialize \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} the \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} of the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} k\+\_\+init = \mbox{[}0}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_af29949bd63fb009eacab5efd11399e40}\label{init__intrinsic__param_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!kk@{kk}}
+\index{kk@{kk}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk =1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a4101603b836cf9a002be749849e5c830}\label{init__intrinsic__param_8m_a4101603b836cf9a002be749849e5c830}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!length@{length}}
+\index{length@{length}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily use \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}} focal length}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a3baf04d2cab8ccf5dfab24270b9b6480}\label{init__intrinsic__param_8m_a3baf04d2cab8ccf5dfab24270b9b6480}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!Method@{Method}}
+\index{Method@{Method}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{Method}{Method}}
+{\footnotesize\ttfamily init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} Method}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a6ae8de2944c8ebcc485ffe8b4f0ff568}\label{init__intrinsic__param_8m_a6ae8de2944c8ebcc485ffe8b4f0ff568}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!n@{n}}
+\index{n@{n}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily and run Extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} n}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a60bfb22881d8ade0a15adeaa7a363c23}\label{init__intrinsic__param_8m_a60bfb22881d8ade0a15adeaa7a363c23}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!point@{point}}
+\index{point@{point}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{point}{point}}
+{\footnotesize\ttfamily Vanishing point}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a52da1671f6a1abbd12b91fd653853e06}\label{init__intrinsic__param_8m_a52da1671f6a1abbd12b91fd653853e06}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!two\_focals\_init@{two\_focals\_init}}
+\index{two\_focals\_init@{two\_focals\_init}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{two\_focals\_init}{two\_focals\_init}}
+{\footnotesize\ttfamily use \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}} focal two\+\_\+focals\+\_\+init = 1}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}\label{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!V\_diag1\_pix@{V\_diag1\_pix}}
+\index{V\_diag1\_pix@{V\_diag1\_pix}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{V\_diag1\_pix}{V\_diag1\_pix}}
+{\footnotesize\ttfamily V\+\_\+diag1\+\_\+pix = (\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,1)+\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,2))/2}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}\label{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!V\_diag2\_pix@{V\_diag2\_pix}}
+\index{V\_diag2\_pix@{V\_diag2\_pix}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{V\_diag2\_pix}{V\_diag2\_pix}}
+{\footnotesize\ttfamily V\+\_\+diag2\+\_\+pix = (\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,1)-\/\mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,2))/2}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}\label{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!V\_hori\_pix@{V\_hori\_pix}}
+\index{V\_hori\_pix@{V\_hori\_pix}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{V\_hori\_pix}{V\_hori\_pix}}
+{\footnotesize\ttfamily V\+\_\+hori\+\_\+pix = V\+\_\+hori\+\_\+pix/\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(V\+\_\+hori\+\_\+pix)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}\label{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!V\_vert\_pix@{V\_vert\_pix}}
+\index{V\_vert\_pix@{V\_vert\_pix}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{V\_vert\_pix}{V\_vert\_pix}}
+{\footnotesize\ttfamily V\+\_\+vert\+\_\+pix = \mbox{\hyperlink{init__intrinsic__param_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}}(\+:,2)}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a6c0cb61256ea590f927b89209c46c748}\label{init__intrinsic__param_8m_a6c0cb61256ea590f927b89209c46c748}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!x\_2@{x\_2}}
+\index{x\_2@{x\_2}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{x\_2}{x\_2}}
+{\footnotesize\ttfamily init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script x\+\_\+2}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_ac5e82d130582a41ec3047888835f48c8}\label{init__intrinsic__param_8m_ac5e82d130582a41ec3047888835f48c8}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!X\_2@{X\_2}}
+\index{X\_2@{X\_2}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{X\_2}{X\_2}}
+{\footnotesize\ttfamily init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script X\+\_\+2}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a94c96ba6d2c7465a8021f16d3b9fded0}\label{init__intrinsic__param_8m_a94c96ba6d2c7465a8021f16d3b9fded0}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!x\_3@{x\_3}}
+\index{x\_3@{x\_3}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{x\_3}{x\_3}}
+{\footnotesize\ttfamily init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script x\+\_\+3}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a3616c915ca0ca629d609144f8046b428}\label{init__intrinsic__param_8m_a3616c915ca0ca629d609144f8046b428}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!X\_3@{X\_3}}
+\index{X\_3@{X\_3}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{X\_3}{X\_3}}
+{\footnotesize\ttfamily init\+\_\+intrinsic\+\_\+param \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script X\+\_\+3}
+
+\mbox{\Hypertarget{init__intrinsic__param_8m_a25b60101d447f9cc8e7354d7cc9e888d}\label{init__intrinsic__param_8m_a25b60101d447f9cc8e7354d7cc9e888d}} 
+\index{init\_intrinsic\_param.m@{init\_intrinsic\_param.m}!````~est\_aspect\_ratio@{$\sim$est\_aspect\_ratio}}
+\index{````~est\_aspect\_ratio@{$\sim$est\_aspect\_ratio}!init\_intrinsic\_param.m@{init\_intrinsic\_param.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$est\_aspect\_ratio}{~est\_aspect\_ratio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{saving__calib__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}{est\+\_\+aspect\+\_\+ratio}}}
+

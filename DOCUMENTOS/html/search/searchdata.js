@@ -28,15 +28,15 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "Todo",
-  1: "Clases",
+  0: "All",
+  1: "Classes",
   2: "Namespaces",
-  3: "Archivos",
-  4: "Funciones",
+  3: "Files",
+  4: "Functions",
   5: "Variables",
-  6: "typedefs",
-  7: "Enumeraciones",
-  8: "Valores de enumeraciones",
-  9: "defines"
+  6: "Typedefs",
+  7: "Enumerations",
+  8: "Enumerator",
+  9: "Macros"
 };
 

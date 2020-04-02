@@ -1,0 +1,276 @@
+\hypertarget{stereo__triangulation_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/stereo\+\_\+triangulation.m File Reference}
+\label{stereo__triangulation_8m}\index{D:/TrackEsferas/NavarQA/calib/stereo\_triangulation.m@{D:/TrackEsferas/NavarQA/calib/stereo\_triangulation.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{click__stereo_8m_a4e338659ed764970cc686b2eec8eb240}{xL}}, \mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}}, \mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}}, \mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}}, \mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}} \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}} ()
+\item 
+id \mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}} ()
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a29c01e332a823aba1c88cb8ab71d89e3}{ones}} (1, \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}}, 2))\mbox{]}
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a948af2b323a268f06ab7ef6863833d99}{ones}} (1, \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}}, 2))\mbox{]}
+\item 
+id \mbox{\hyperlink{stereo__triangulation_8m_a20296f5e669fbe363dc5332ae7238db1}{points\+:}} (\mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}}, 2 \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}})
+\item 
+id \mbox{\hyperlink{stereo__triangulation_8m_aa61fc2a042b5fcb7ffd2c830d0aa1451}{cameras\+:}} (\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}} \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}})
+\item 
+id \mbox{\hyperlink{stereo__triangulation_8m_ad055d7549fbe2587ad0ec9c020b0d904}{space\+:}} (id \mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}})
+\item 
+id \mbox{\hyperlink{stereo__triangulation_8m_a62f8fd1936f218fee9dee97e5bb3edd4}{coordinates\+:}} (\mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}}+\mbox{\hyperlink{_un_warp_plane_8m_a84d89d0b9be279602a35e0705eab274f}{X2}} XL)
+\item 
+id \mbox{\hyperlink{stereo__triangulation_8m_a2a4ca37e7748d77df43ab3c080321c65}{coordinates\+:}} (id \mbox{\hyperlink{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}{T\+\_\+vect}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_aab5f070b31b4fce188faea685c616ceb}{function}} \mbox{[}XL, XR\mbox{]} = stereo\+\_\+triangulation(\mbox{\hyperlink{click__stereo_8m_a4e338659ed764970cc686b2eec8eb240}{xL}},\mbox{\hyperlink{click__stereo_8m_ac68a44d4834984e6fb1d37fec5c76e62}{xR}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}},\mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}},\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}},\mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}},\mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}},\mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}})
+\item 
+Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be \mbox{\hyperlink{stereo__triangulation_8m_a239074c5e554812af694dc6ca621b282}{calibrated}}
+\item 
+Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be \mbox{\hyperlink{stereo__triangulation_8m_ab618d9e823220073d1a8a85956617cab}{intrinsically}}
+\item 
+Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically \mbox{\hyperlink{stereo__triangulation_8m_abec2d1ff1655eb605407535da740f9e1}{Input}}
+\item 
+Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically \mbox{\hyperlink{stereo__triangulation_8m_a9d34887892a317ee10f50d6a045a206b}{T}}
+\item 
+Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically \mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}}
+\item 
+Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}
+\item 
+Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}
+\item 
+Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} visit \mbox{\hyperlink{stereo__triangulation_8m_a7eb6a6f0be38c0ef68ce4fd6e724f9c6}{http}}
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}} = \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{click__stereo_8m_ac68a44d4834984e6fb1d37fec5c76e62}{xR}},\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}},\mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}},\mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}},\mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}})
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_adae9840e8e4c322f3ebc6b7212a7fb85}{n\+\_\+xt2}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}},\mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}})
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a9daf74fbd07fecb617a76863765e9425}{n\+\_\+xtt2}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}},\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}})
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}{T\+\_\+vect}} = repmat(\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}, \mbox{[}1 \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}}\mbox{]})
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a5ccdb2d575e9dedb8bc91968c24093b1}{DD}} = \mbox{\hyperlink{stereo__triangulation_8m_adae9840e8e4c322f3ebc6b7212a7fb85}{n\+\_\+xt2}} .$\ast$ \mbox{\hyperlink{stereo__triangulation_8m_a9daf74fbd07fecb617a76863765e9425}{n\+\_\+xtt2}} -\/ \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{rodrigues_8m_a597dc0dd95ad804fd764c2d92578b75d}{u}},\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}}).$^\wedge$2
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a0c93e24581948c8269e4943a9b163bfe}{dot\+\_\+uT}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{rodrigues_8m_a597dc0dd95ad804fd764c2d92578b75d}{u}},\mbox{\hyperlink{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}{T\+\_\+vect}})
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_ad4ecc8fca5bc6f30752d3ca44c8f3c81}{dot\+\_\+xttT}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}},\mbox{\hyperlink{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}{T\+\_\+vect}})
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a84f2088eb1e53a65a1d58a871539859f}{dot\+\_\+xttu}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{rodrigues_8m_a597dc0dd95ad804fd764c2d92578b75d}{u}},\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}})
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a0f300d508974931a3e2b731238040f46}{N\+N1}} = dot\+\_\+xttu.$\ast$\mbox{\hyperlink{stereo__triangulation_8m_ad4ecc8fca5bc6f30752d3ca44c8f3c81}{dot\+\_\+xttT}} -\/ \mbox{\hyperlink{stereo__triangulation_8m_a9daf74fbd07fecb617a76863765e9425}{n\+\_\+xtt2}} .$\ast$ \mbox{\hyperlink{stereo__triangulation_8m_a0c93e24581948c8269e4943a9b163bfe}{dot\+\_\+uT}}
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a725a188e60986764a536191860a08bce}{N\+N2}} = n\+\_\+xt2.$\ast$\mbox{\hyperlink{stereo__triangulation_8m_ad4ecc8fca5bc6f30752d3ca44c8f3c81}{dot\+\_\+xttT}} -\/ dot\+\_\+u\+T.$\ast$\mbox{\hyperlink{stereo__triangulation_8m_a84f2088eb1e53a65a1d58a871539859f}{dot\+\_\+xttu}}
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a0ab52350923ead085c063e57192c4fd3}{Zt}} = N\+N1./\mbox{\hyperlink{stereo__triangulation_8m_a5ccdb2d575e9dedb8bc91968c24093b1}{DD}}
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a6f508464bb56f34df38fcbb23e822be0}{Ztt}} = N\+N2./\mbox{\hyperlink{stereo__triangulation_8m_a5ccdb2d575e9dedb8bc91968c24093b1}{DD}}
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}} = \mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}} .$\ast$ repmat(\mbox{\hyperlink{stereo__triangulation_8m_a0ab52350923ead085c063e57192c4fd3}{Zt}},\mbox{[}3 1\mbox{]})
+\item 
+\mbox{\hyperlink{stereo__triangulation_8m_a84d89d0b9be279602a35e0705eab274f}{X2}} = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}\textquotesingle{}$\ast$(xtt.$\ast$repmat(\mbox{\hyperlink{stereo__triangulation_8m_a6f508464bb56f34df38fcbb23e822be0}{Ztt}},\mbox{[}3,1\mbox{]}) -\/ \mbox{\hyperlink{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}{T\+\_\+vect}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stereo__triangulation_8m_aa61fc2a042b5fcb7ffd2c830d0aa1451}\label{stereo__triangulation_8m_aa61fc2a042b5fcb7ffd2c830d0aa1451}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!cameras:@{cameras:}}
+\index{cameras:@{cameras:}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{cameras:()}{cameras:()}}
+{\footnotesize\ttfamily id cameras\+: (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}}}]{rodrigues }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a2a4ca37e7748d77df43ab3c080321c65}\label{stereo__triangulation_8m_a2a4ca37e7748d77df43ab3c080321c65}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!coordinates:@{coordinates:}}
+\index{coordinates:@{coordinates:}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{coordinates:()}{coordinates:()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily id coordinates\+: (\begin{DoxyParamCaption}\item[{id}]{T\+\_\+vect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a62f8fd1936f218fee9dee97e5bb3edd4}\label{stereo__triangulation_8m_a62f8fd1936f218fee9dee97e5bb3edd4}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!coordinates:@{coordinates:}}
+\index{coordinates:@{coordinates:}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{coordinates:()}{coordinates:()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily id coordinates\+: (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}}+\mbox{\hyperlink{_un_warp_plane_8m_a84d89d0b9be279602a35e0705eab274f}{X2}}}]{XL }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}\label{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!normalize\_pixel@{normalize\_pixel}}
+\index{normalize\_pixel@{normalize\_pixel}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{normalize\_pixel()}{normalize\_pixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{click__stereo_8m_a4e338659ed764970cc686b2eec8eb240}{xL}},\mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}},\mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}} normalize\+\_\+pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a29c01e332a823aba1c88cb8ab71d89e3}\label{stereo__triangulation_8m_a29c01e332a823aba1c88cb8ab71d89e3}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!ones@{ones}}
+\index{ones@{ones}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}}, 2)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a948af2b323a268f06ab7ef6863833d99}\label{stereo__triangulation_8m_a948af2b323a268f06ab7ef6863833d99}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!ones@{ones}}
+\index{ones@{ones}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}}, 2)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a20296f5e669fbe363dc5332ae7238db1}\label{stereo__triangulation_8m_a20296f5e669fbe363dc5332ae7238db1}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!points:@{points:}}
+\index{points:@{points:}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{points:()}{points:()}}
+{\footnotesize\ttfamily id points\+: (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}}}]{,  }\item[{2}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_ad055d7549fbe2587ad0ec9c020b0d904}\label{stereo__triangulation_8m_ad055d7549fbe2587ad0ec9c020b0d904}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!space:@{space:}}
+\index{space:@{space:}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{space:()}{space:()}}
+{\footnotesize\ttfamily id space\+: (\begin{DoxyParamCaption}\item[{id}]{xt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}\label{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!xt@{xt}}
+\index{xt@{xt}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{xt()}{xt()}}
+{\footnotesize\ttfamily id xt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{stereo__triangulation_8m_a239074c5e554812af694dc6ca621b282}\label{stereo__triangulation_8m_a239074c5e554812af694dc6ca621b282}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!calibrated@{calibrated}}
+\index{calibrated@{calibrated}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{calibrated}{calibrated}}
+{\footnotesize\ttfamily Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be calibrated}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}\label{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!cc\_left@{cc\_left}}
+\index{cc\_left@{cc\_left}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{cc\_left}{cc\_left}}
+{\footnotesize\ttfamily Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically cc\+\_\+left}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}\label{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!cc\_right@{cc\_right}}
+\index{cc\_right@{cc\_right}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{cc\_right}{cc\_right}}
+{\footnotesize\ttfamily Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically cc\+\_\+right}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a5ccdb2d575e9dedb8bc91968c24093b1}\label{stereo__triangulation_8m_a5ccdb2d575e9dedb8bc91968c24093b1}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!DD@{DD}}
+\index{DD@{DD}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{DD}{DD}}
+{\footnotesize\ttfamily DD = \mbox{\hyperlink{stereo__triangulation_8m_adae9840e8e4c322f3ebc6b7212a7fb85}{n\+\_\+xt2}} .$\ast$ \mbox{\hyperlink{stereo__triangulation_8m_a9daf74fbd07fecb617a76863765e9425}{n\+\_\+xtt2}} -\/ \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{rodrigues_8m_a597dc0dd95ad804fd764c2d92578b75d}{u}},\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}}).$^\wedge$2}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a0c93e24581948c8269e4943a9b163bfe}\label{stereo__triangulation_8m_a0c93e24581948c8269e4943a9b163bfe}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!dot\_uT@{dot\_uT}}
+\index{dot\_uT@{dot\_uT}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{dot\_uT}{dot\_uT}}
+{\footnotesize\ttfamily dot\+\_\+uT = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{rodrigues_8m_a597dc0dd95ad804fd764c2d92578b75d}{u}},\mbox{\hyperlink{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}{T\+\_\+vect}})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_ad4ecc8fca5bc6f30752d3ca44c8f3c81}\label{stereo__triangulation_8m_ad4ecc8fca5bc6f30752d3ca44c8f3c81}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!dot\_xttT@{dot\_xttT}}
+\index{dot\_xttT@{dot\_xttT}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{dot\_xttT}{dot\_xttT}}
+{\footnotesize\ttfamily dot\+\_\+xttT = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}},\mbox{\hyperlink{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}{T\+\_\+vect}})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a84f2088eb1e53a65a1d58a871539859f}\label{stereo__triangulation_8m_a84f2088eb1e53a65a1d58a871539859f}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!dot\_xttu@{dot\_xttu}}
+\index{dot\_xttu@{dot\_xttu}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{dot\_xttu}{dot\_xttu}}
+{\footnotesize\ttfamily dot\+\_\+xttu = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{rodrigues_8m_a597dc0dd95ad804fd764c2d92578b75d}{u}},\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_aab5f070b31b4fce188faea685c616ceb}\label{stereo__triangulation_8m_aab5f070b31b4fce188faea685c616ceb}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!function@{function}}
+\index{function@{function}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}XL, XR\mbox{]} = stereo\+\_\+triangulation(\mbox{\hyperlink{click__stereo_8m_a4e338659ed764970cc686b2eec8eb240}{xL}},\mbox{\hyperlink{click__stereo_8m_ac68a44d4834984e6fb1d37fec5c76e62}{xR}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}},\mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}},\mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}},\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}},\mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}},\mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}},\mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a7eb6a6f0be38c0ef68ce4fd6e724f9c6}\label{stereo__triangulation_8m_a7eb6a6f0be38c0ef68ce4fd6e724f9c6}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!http@{http}}
+\index{http@{http}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{http}{http}}
+{\footnotesize\ttfamily Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} visit http}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_abec2d1ff1655eb605407535da740f9e1}\label{stereo__triangulation_8m_abec2d1ff1655eb605407535da740f9e1}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!Input@{Input}}
+\index{Input@{Input}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{Input}{Input}}
+{\footnotesize\ttfamily Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically Input}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_ab618d9e823220073d1a8a85956617cab}\label{stereo__triangulation_8m_ab618d9e823220073d1a8a85956617cab}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!intrinsically@{intrinsically}}
+\index{intrinsically@{intrinsically}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{intrinsically}{intrinsically}}
+{\footnotesize\ttfamily Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be intrinsically}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_adae9840e8e4c322f3ebc6b7212a7fb85}\label{stereo__triangulation_8m_adae9840e8e4c322f3ebc6b7212a7fb85}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!n\_xt2@{n\_xt2}}
+\index{n\_xt2@{n\_xt2}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{n\_xt2}{n\_xt2}}
+{\footnotesize\ttfamily n\+\_\+xt2 = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}},\mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a9daf74fbd07fecb617a76863765e9425}\label{stereo__triangulation_8m_a9daf74fbd07fecb617a76863765e9425}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!n\_xtt2@{n\_xtt2}}
+\index{n\_xtt2@{n\_xtt2}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{n\_xtt2}{n\_xtt2}}
+{\footnotesize\ttfamily n\+\_\+xtt2 = \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}},\mbox{\hyperlink{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}{xtt}})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a0f300d508974931a3e2b731238040f46}\label{stereo__triangulation_8m_a0f300d508974931a3e2b731238040f46}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!NN1@{NN1}}
+\index{NN1@{NN1}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{NN1}{NN1}}
+{\footnotesize\ttfamily N\+N1 = dot\+\_\+xttu.$\ast$\mbox{\hyperlink{stereo__triangulation_8m_ad4ecc8fca5bc6f30752d3ca44c8f3c81}{dot\+\_\+xttT}} -\/ \mbox{\hyperlink{stereo__triangulation_8m_a9daf74fbd07fecb617a76863765e9425}{n\+\_\+xtt2}} .$\ast$ \mbox{\hyperlink{stereo__triangulation_8m_a0c93e24581948c8269e4943a9b163bfe}{dot\+\_\+uT}}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a725a188e60986764a536191860a08bce}\label{stereo__triangulation_8m_a725a188e60986764a536191860a08bce}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!NN2@{NN2}}
+\index{NN2@{NN2}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{NN2}{NN2}}
+{\footnotesize\ttfamily N\+N2 = n\+\_\+xt2.$\ast$\mbox{\hyperlink{stereo__triangulation_8m_ad4ecc8fca5bc6f30752d3ca44c8f3c81}{dot\+\_\+xttT}} -\/ dot\+\_\+u\+T.$\ast$\mbox{\hyperlink{stereo__triangulation_8m_a84f2088eb1e53a65a1d58a871539859f}{dot\+\_\+xttu}}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}\label{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!R@{R}}
+\index{R@{R}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} R}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{calib__stereo_8m_a3aa6bf135885f06d75e5da2713b5230d}{rodrigues}}(\mbox{\hyperlink{align__structures_8m_a4e3462750cc302b9a3697c379ed1d885}{om}})}
+\DoxyCodeLine{\% For more information}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{stereo__triangulation_8m_a9d34887892a317ee10f50d6a045a206b}\label{stereo__triangulation_8m_a9d34887892a317ee10f50d6a045a206b}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!T@{T}}
+\index{T@{T}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily Function \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} computes the \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} given the left and right \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} projections The \mbox{\hyperlink{rectify__stereo__pair_8m_ab827ef2ab0cb359ea07fd83077337858}{cameras}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be and extrinsically T}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}\label{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!T\_vect@{T\_vect}}
+\index{T\_vect@{T\_vect}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{T\_vect}{T\_vect}}
+{\footnotesize\ttfamily T\+\_\+vect = repmat(\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}, \mbox{[}1 \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}}\mbox{]})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a2b2abdaf89992bbf470c74ca8de7cd62}\label{stereo__triangulation_8m_a2b2abdaf89992bbf470c74ca8de7cd62}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!X1@{X1}}
+\index{X1@{X1}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{X1}{X1}}
+{\footnotesize\ttfamily X1 = \mbox{\hyperlink{stereo__triangulation_8m_ab3c554be4c0e54bab5c9b00203de4941}{xt}} .$\ast$ repmat(\mbox{\hyperlink{stereo__triangulation_8m_a0ab52350923ead085c063e57192c4fd3}{Zt}},\mbox{[}3 1\mbox{]})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a84d89d0b9be279602a35e0705eab274f}\label{stereo__triangulation_8m_a84d89d0b9be279602a35e0705eab274f}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!X2@{X2}}
+\index{X2@{X2}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{X2}{X2}}
+{\footnotesize\ttfamily X2 = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}\textquotesingle{}$\ast$(xtt.$\ast$repmat(\mbox{\hyperlink{stereo__triangulation_8m_a6f508464bb56f34df38fcbb23e822be0}{Ztt}},\mbox{[}3,1\mbox{]}) -\/ \mbox{\hyperlink{stereo__triangulation_8m_aaaaf8c847bd9a7fbaaeb69140806532e}{T\+\_\+vect}})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}\label{stereo__triangulation_8m_aeefd53021cafbf6405c4e1e4631748a6}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!xtt@{xtt}}
+\index{xtt@{xtt}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{xtt}{xtt}}
+{\footnotesize\ttfamily xtt = \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{click__stereo_8m_ac68a44d4834984e6fb1d37fec5c76e62}{xR}},\mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}},\mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}},\mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}},\mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}})}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a0ab52350923ead085c063e57192c4fd3}\label{stereo__triangulation_8m_a0ab52350923ead085c063e57192c4fd3}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!Zt@{Zt}}
+\index{Zt@{Zt}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{Zt}{Zt}}
+{\footnotesize\ttfamily Zt = N\+N1./\mbox{\hyperlink{stereo__triangulation_8m_a5ccdb2d575e9dedb8bc91968c24093b1}{DD}}}
+
+\mbox{\Hypertarget{stereo__triangulation_8m_a6f508464bb56f34df38fcbb23e822be0}\label{stereo__triangulation_8m_a6f508464bb56f34df38fcbb23e822be0}} 
+\index{stereo\_triangulation.m@{stereo\_triangulation.m}!Ztt@{Ztt}}
+\index{Ztt@{Ztt}!stereo\_triangulation.m@{stereo\_triangulation.m}}
+\doxysubsubsection{\texorpdfstring{Ztt}{Ztt}}
+{\footnotesize\ttfamily Ztt = N\+N2./\mbox{\hyperlink{stereo__triangulation_8m_a5ccdb2d575e9dedb8bc91968c24093b1}{DD}}}
+

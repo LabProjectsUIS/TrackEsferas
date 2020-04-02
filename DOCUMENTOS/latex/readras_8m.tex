@@ -1,0 +1,140 @@
+\hypertarget{readras_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/readras.m File Reference}
+\label{readras_8m}\index{D:/TrackEsferas/NavarQA/calib/readras.m@{D:/TrackEsferas/NavarQA/calib/readras.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+R\+E\+A\+D\+R\+AS Read an \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} in sun raster \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{readras_8m_a5b394e95ee27d707e42892098a586006}{R\+E\+A\+D\+R\+AS}} (\textquotesingle{}imagefile.\+ras\textquotesingle{}) reads \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \char`\"{}sun.\+raster\char`\"{} image file. \%\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}
+\item 
+\mbox{\hyperlink{readras_8m_a5acfa6befc9e8927d051c2f9e6692bd0}{if}} (\mbox{\hyperlink{loadinr_8m_a3c5b1307a59adcb11356c7963720ebb6}{strcmp}}(lower(\mbox{\hyperlink{writeras_8m_af57fdbdb7d09e0557b2c4533b3353975}{suffix}}), \textquotesingle{}ras\textquotesingle{})) \% raster \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \% \mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}
+\item 
+\mbox{\hyperlink{readras_8m_a2c426848e1d0447ea7a531feba65f952}{if}} (\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}$<$ 0) \mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}}(\mbox{[}\textquotesingle{}Cannot open \textquotesingle{} filename \textquotesingle{}.\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 4, -\/1 \mbox{\hyperlink{readras_8m_ad3a9cd9f8ed672885882de567d026441}{fseek}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{readras_8m_a68682b365e58f8a4e6f3e31a587d15d3}{function}} \mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}, \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}}\mbox{]} = readras(filename, \mbox{\hyperlink{count__squares_8m_a285dad54ef357091de4e1179dcc6e870}{ys}}, \mbox{\hyperlink{_compute_stripes_8m_ad9d5cba7c445bd9f8dfb1f8616b2380d}{ye}}, \mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}}, \mbox{\hyperlink{_compute_stripes_8m_a699c8c9b97c65729ad1350d610174446}{xe}})
+\item 
+\mbox{\hyperlink{readras_8m_a5b394e95ee27d707e42892098a586006}{R\+E\+A\+D\+R\+AS}} Read an \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} in sun raster \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{readras_8m_a7068f38bf06df78ae86eef39f8b794f4}{map}}
+\item 
+\mbox{\hyperlink{readras_8m_a5b394e95ee27d707e42892098a586006}{R\+E\+A\+D\+R\+AS}} Read an \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} in sun raster \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} so \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} \mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}, \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}}\mbox{]} = readras(\textquotesingle{}imagefile.\+ras\textquotesingle{})
+\item 
+\mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}) \% \mbox{\hyperlink{script__fit__distortion_8m_a7c672a3bcf6f12ef9e6e78cdb48a0ccd}{colormap}}(\mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}}) \% \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}}( \textquotesingle{}equal\textquotesingle{}) \% will display the result with the proper colors. \% N\+O\+TE \mbox{\hyperlink{readras_8m_a7db852d3b628a1e3147cea3721794940}{suffix}} = filename(\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}+1\+:\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}+3)
+\item 
+\mbox{\hyperlink{readras_8m_a5558ace5433f9aabbf0a0ec059900d94}{width}} = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})
+\item 
+\mbox{\hyperlink{readras_8m_a509290c21d570ff479c1b9d9b1fe8810}{height}} = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})
+\item 
+\mbox{\hyperlink{readras_8m_a40fbe8949b277afd0fac64228851b12a}{depth}} = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})
+\item 
+\mbox{\hyperlink{readras_8m_af9d495c1655d813d553030485d00fea7}{length}} = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})
+\item 
+\mbox{\hyperlink{readras_8m_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}} = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})
+\item 
+\mbox{\hyperlink{readras_8m_a7fe700a196fc94969585c0e42a1994bb}{maptype}} = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})
+\item 
+\mbox{\hyperlink{readras_8m_a2ed405f909fb3993e7e042c9518b4c0f}{maplen}} = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{readras_8m_ad3a9cd9f8ed672885882de567d026441}\label{readras_8m_ad3a9cd9f8ed672885882de567d026441}} 
+\index{readras.m@{readras.m}!fseek@{fseek}}
+\index{fseek@{fseek}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{fseek()}{fseek()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 4, -\/1 fseek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{readras_8m_a2c426848e1d0447ea7a531feba65f952}\label{readras_8m_a2c426848e1d0447ea7a531feba65f952}} 
+\index{readras.m@{readras.m}!if@{if}}
+\index{if@{if}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{readras_8m_a5acfa6befc9e8927d051c2f9e6692bd0}\label{readras_8m_a5acfa6befc9e8927d051c2f9e6692bd0}} 
+\index{readras.m@{readras.m}!if@{if}}
+\index{if@{if}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{loadinr_8m_a3c5b1307a59adcb11356c7963720ebb6}{strcmp}}(lower(\mbox{\hyperlink{writeras_8m_af57fdbdb7d09e0557b2c4533b3353975}{suffix}}), \textquotesingle{}ras\textquotesingle{})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{readras_8m_a5b394e95ee27d707e42892098a586006}\label{readras_8m_a5b394e95ee27d707e42892098a586006}} 
+\index{readras.m@{readras.m}!READRAS@{READRAS}}
+\index{READRAS@{READRAS}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{READRAS()}{READRAS()}}
+{\footnotesize\ttfamily R\+E\+A\+D\+R\+AS Read an \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} in sun raster \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} R\+E\+A\+D\+R\+AS (\begin{DoxyParamCaption}\item[{\textquotesingle{}imagefile.\+ras\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{readras_8m_a40fbe8949b277afd0fac64228851b12a}\label{readras_8m_a40fbe8949b277afd0fac64228851b12a}} 
+\index{readras.m@{readras.m}!depth@{depth}}
+\index{depth@{depth}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily depth = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})}
+
+\mbox{\Hypertarget{readras_8m_a68682b365e58f8a4e6f3e31a587d15d3}\label{readras_8m_a68682b365e58f8a4e6f3e31a587d15d3}} 
+\index{readras.m@{readras.m}!function@{function}}
+\index{function@{function}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}, \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}}\mbox{]} = readras(filename, \mbox{\hyperlink{count__squares_8m_a285dad54ef357091de4e1179dcc6e870}{ys}}, \mbox{\hyperlink{_compute_stripes_8m_ad9d5cba7c445bd9f8dfb1f8616b2380d}{ye}}, \mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}}, \mbox{\hyperlink{_compute_stripes_8m_a699c8c9b97c65729ad1350d610174446}{xe}})}
+
+\mbox{\Hypertarget{readras_8m_a509290c21d570ff479c1b9d9b1fe8810}\label{readras_8m_a509290c21d570ff479c1b9d9b1fe8810}} 
+\index{readras.m@{readras.m}!height@{height}}
+\index{height@{height}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily height = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})}
+
+\mbox{\Hypertarget{readras_8m_af9d495c1655d813d553030485d00fea7}\label{readras_8m_af9d495c1655d813d553030485d00fea7}} 
+\index{readras.m@{readras.m}!length@{length}}
+\index{length@{length}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily length = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})}
+
+\mbox{\Hypertarget{readras_8m_a7068f38bf06df78ae86eef39f8b794f4}\label{readras_8m_a7068f38bf06df78ae86eef39f8b794f4}} 
+\index{readras.m@{readras.m}!map@{map}}
+\index{map@{map}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readras_8m_a5b394e95ee27d707e42892098a586006}{R\+E\+A\+D\+R\+AS}} Read an \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} in sun raster \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{readras_8m_a5b394e95ee27d707e42892098a586006}{READRAS}}(\textcolor{stringliteral}{'imagefile.ras'}) returns both the \mbox{\hyperlink{analyse__error_8m_aee9a066043e7b7065d7cdda5fbcfba53}{image}} and \mbox{\hyperlink{ext__calib_8m_a4124bc0a9335c27f086f24ba207a4912}{a}} }
+\DoxyCodeLine{\%    color \mbox{\hyperlink{readras_8m_a7068f38bf06df78ae86eef39f8b794f4}{map}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{readras_8m_a2ed405f909fb3993e7e042c9518b4c0f}\label{readras_8m_a2ed405f909fb3993e7e042c9518b4c0f}} 
+\index{readras.m@{readras.m}!maplen@{maplen}}
+\index{maplen@{maplen}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{maplen}{maplen}}
+{\footnotesize\ttfamily maplen = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})}
+
+\mbox{\Hypertarget{readras_8m_a7fe700a196fc94969585c0e42a1994bb}\label{readras_8m_a7fe700a196fc94969585c0e42a1994bb}} 
+\index{readras.m@{readras.m}!maptype@{maptype}}
+\index{maptype@{maptype}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{maptype}{maptype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} maptype = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})}
+
+\mbox{\Hypertarget{readras_8m_a7db852d3b628a1e3147cea3721794940}\label{readras_8m_a7db852d3b628a1e3147cea3721794940}} 
+\index{readras.m@{readras.m}!suffix@{suffix}}
+\index{suffix@{suffix}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{suffix}{suffix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} (\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}) \% \mbox{\hyperlink{script__fit__distortion_8m_a7c672a3bcf6f12ef9e6e78cdb48a0ccd}{colormap}}(\mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}}) \% \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}}(\textquotesingle{}equal\textquotesingle{}) \% will display the result with the proper colors. \% N\+O\+TE suffix = filename(\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}+1\+:\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}+3)}
+
+\mbox{\Hypertarget{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}\label{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}} 
+\index{readras.m@{readras.m}!that@{that}}
+\index{that@{that}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{that}{that}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readras_8m_a5b394e95ee27d707e42892098a586006}{R\+E\+A\+D\+R\+AS}} Read an \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} in sun raster \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} so that\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}, \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}}\mbox{]} = readras(\textquotesingle{}imagefile.\+ras\textquotesingle{})}
+
+\mbox{\Hypertarget{readras_8m_a7aead736a07eaf25623ad7bfa1f0ee2d}\label{readras_8m_a7aead736a07eaf25623ad7bfa1f0ee2d}} 
+\index{readras.m@{readras.m}!type@{type}}
+\index{type@{type}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily type = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})}
+
+\mbox{\Hypertarget{readras_8m_a5558ace5433f9aabbf0a0ec059900d94}\label{readras_8m_a5558ace5433f9aabbf0a0ec059900d94}} 
+\index{readras.m@{readras.m}!width@{width}}
+\index{width@{width}!readras.m@{readras.m}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily width = 2$^\wedge$24 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$16 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + 2$^\wedge$8 $\ast$ fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{}) + fread(\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}, 1, \textquotesingle{}uchar\textquotesingle{})}
+

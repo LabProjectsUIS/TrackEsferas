@@ -1,0 +1,350 @@
+\hypertarget{willson__convert_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/willson\+\_\+convert.m File Reference}
+\label{willson__convert_8m}\index{D:/TrackEsferas/NavarQA/calib/willson\_convert.m@{D:/TrackEsferas/NavarQA/calib/willson\_convert.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+2 \mbox{\hyperlink{willson__convert_8m_a3b5c237531bf9b124800c8b96b701ea0}{fc}} ()
+\item 
+\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}} (1,\+:)
+\item 
+\mbox{\hyperlink{willson__convert_8m_aac60d3fc00363331856f0d10c305632c}{x}} (1,\+:)
+\item 
+\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}} (\mbox{\hyperlink{willson__convert_8m_a699e0030f6296b7dc5f375f9c6bc877d}{err}}) k\+\_\+step
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{willson__convert_8m_ab0baab9dafdf15f53ab9da0ab3797470}{function}} \mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}, \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}, \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}, \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}, \mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}, \mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}}, \mbox{\hyperlink{willson__convert_8m_a2cf13b30df3f462548b2159605db426a}{omc}}, \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}, \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}, \mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}}, \mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}\mbox{]} = willson\+\_\+convert(Ncx,\mbox{\hyperlink{willson__read_8m_a28b126a9bcfcc1cd38d64e9e42d4aebd}{Nfx}},\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}},\mbox{\hyperlink{willson__read_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}},\mbox{\hyperlink{willson__read_8m_ae04cf25bb76d26e4fe8241ecc73d9612}{dpx}},\mbox{\hyperlink{willson__read_8m_a1c6d34fa78cd57d53dbf38017a464280}{dpy}},\mbox{\hyperlink{willson__read_8m_a8c77e6de3994a87a8afe0879a81b027a}{Cx}},\mbox{\hyperlink{willson__read_8m_adc2c7119329f823e18a07042b23c056a}{Cy}},\mbox{\hyperlink{willson__read_8m_a7afc17458780fd4f38cf4b53da58342e}{sx}},\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}},\mbox{\hyperlink{willson__read_8m_a09e00830e480084ea7da43dd408189b3}{kappa1}},\mbox{\hyperlink{willson__read_8m_ad46cee68b40dae85d1f70d6bb4da94a3}{Tx}},\mbox{\hyperlink{willson__read_8m_a1c6ec63ec0fbcf88d984e3bb222d2360}{Ty}},\mbox{\hyperlink{willson__read_8m_a48023596f2be6c3cc50f07e4fbb849b4}{Tz}},\mbox{\hyperlink{willson__read_8m_a4c54c680edb6b794d3bd3015a3ae83b1}{Rx}},\mbox{\hyperlink{willson__read_8m_a88c32bd7de17dde57a9a412b9a000e11}{Ry}},\mbox{\hyperlink{willson__read_8m_a8cea55429a80b9d176724f712c4cc935}{Rz}},\mbox{\hyperlink{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}{p1}},\mbox{\hyperlink{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}{p2}})
+\item 
+Conversion from Reg \mbox{\hyperlink{willson__convert_8m_adce983d382eeada5c63ec943823b9755}{Willson}} \mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} my \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{willson__convert_8m_a5c92cfa685442cc20507409d370712bd}{Conversion}}
+\item 
+\mbox{\hyperlink{willson__read_8m_a1c6d34fa78cd57d53dbf38017a464280}{dpy}} $\ast$ \mbox{\hyperlink{willson__convert_8m_a134059af7c4fc53ab7fc65d998ebd79c}{f}}
+\item 
+Principal \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}} = \mbox{[}\mbox{\hyperlink{willson__read_8m_a8c77e6de3994a87a8afe0879a81b027a}{Cx}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_adc2c7119329f823e18a07042b23c056a}{Cy}}
+\item 
+\mbox{\hyperlink{project__points__fisheye_8m_aba157a5b7437b6a17d32448a413c2d74}{Skew}} \mbox{\hyperlink{willson__convert_8m_afb0c786b387a7c04e527d4385dae8dd5}{\+\_\+\+\_\+pad37\+\_\+\+\_\+}}
+\item 
+Extrinsic \mbox{\hyperlink{willson__convert_8m_aafd6b8a4b32e9e967ee9372af2b8b5e2}{parameters}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a88c32bd7de17dde57a9a412b9a000e11}{Ry}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{[}0;Ry;0\mbox{]})
+\item 
+\mbox{\hyperlink{willson__convert_8m_a8cea55429a80b9d176724f712c4cc935}{Rz}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{[}0;0;Rz\mbox{]})
+\item 
+\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}} = \mbox{\hyperlink{willson__read_8m_a8cea55429a80b9d176724f712c4cc935}{Rz}} $\ast$ \mbox{\hyperlink{willson__read_8m_a88c32bd7de17dde57a9a412b9a000e11}{Ry}} $\ast$ \mbox{\hyperlink{willson__read_8m_a4c54c680edb6b794d3bd3015a3ae83b1}{Rx}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a2cf13b30df3f462548b2159605db426a}{omc}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}})
+\item 
+\mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}} = \mbox{[}\mbox{\hyperlink{willson__read_8m_ad46cee68b40dae85d1f70d6bb4da94a3}{Tx}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a1c6ec63ec0fbcf88d984e3bb222d2360}{Ty}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a48023596f2be6c3cc50f07e4fbb849b4}{Tz}}
+\item 
+More \mbox{\hyperlink{willson__convert_8m_a073baeea2d8789cd6e400a6257e1e4d1}{tricky}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a84e4236f07668a770c27567f1f9615ff}{nx}} = \mbox{\hyperlink{willson__read_8m_a28b126a9bcfcc1cd38d64e9e42d4aebd}{Nfx}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a289ca425eb368f1d582b6be2be0d3dfc}{ny}} = Nfy
+\item 
+Select \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of D\+I\+S\+T\+O\+R\+T\+ED \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} uniformely distributed across the \mbox{\hyperlink{willson__convert_8m_a0010f7e6333a9ae13f284ec6622edb85}{image}}
+\item 
+Select \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of D\+I\+S\+T\+O\+R\+T\+ED \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} uniformely distributed across the \mbox{\hyperlink{willson__convert_8m_a4fd7aa0ab9fc11184886e837be156165}{yp\+\_\+dist}} = meshgrid(0\+:\mbox{\hyperlink{willson__read_8m_a28b126a9bcfcc1cd38d64e9e42d4aebd}{Nfx}}-\/1,0\+:Nfy)
+\item 
+\mbox{\hyperlink{willson__convert_8m_a67b9a6942c1b615cd070d4ec5fb04f56}{xp\+\_\+dist}} = xp\+\_\+dist(\+:)\textquotesingle{}
+\item 
+Apply U\+N\+D\+I\+S\+T\+O\+R\+T\+I\+ON according \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{willson__convert_8m_adce983d382eeada5c63ec943823b9755}{Willson}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a0866be3defc09df19a3d39ec8a06a8ec}{yp\+\_\+sensor\+\_\+dist}} = \mbox{\hyperlink{willson__read_8m_a1c6d34fa78cd57d53dbf38017a464280}{dpy}}$\ast$(\mbox{\hyperlink{willson__convert_8m_a4fd7aa0ab9fc11184886e837be156165}{yp\+\_\+dist}} -\/ \mbox{\hyperlink{willson__read_8m_adc2c7119329f823e18a07042b23c056a}{Cy}})
+\item 
+\mbox{\hyperlink{willson__convert_8m_a8c51cd278fc03eb41f5226db3d80e9c8}{dist\+\_\+fact}} = 1 + \mbox{\hyperlink{willson__read_8m_a09e00830e480084ea7da43dd408189b3}{kappa1}}$\ast$(xp\+\_\+sensor\+\_\+dist.$^\wedge$2 + yp\+\_\+sensor\+\_\+dist.$^\wedge$2)
+\item 
+\mbox{\hyperlink{willson__convert_8m_ae6f4e0f4df952a338af82dad8371443c}{xp\+\_\+sensor}} = xp\+\_\+sensor\+\_\+dist .$\ast$ \mbox{\hyperlink{willson__convert_8m_a8c51cd278fc03eb41f5226db3d80e9c8}{dist\+\_\+fact}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a7377da76abeb1be4f30b75d7cb0f7269}{yp\+\_\+sensor}} = \mbox{\hyperlink{willson__convert_8m_a0866be3defc09df19a3d39ec8a06a8ec}{yp\+\_\+sensor\+\_\+dist}} .$\ast$ \mbox{\hyperlink{willson__convert_8m_a8c51cd278fc03eb41f5226db3d80e9c8}{dist\+\_\+fact}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a43532d0762a8516d395d8e603d161b10}{xp}} = \mbox{\hyperlink{willson__convert_8m_ae6f4e0f4df952a338af82dad8371443c}{xp\+\_\+sensor}} $\ast$ \mbox{\hyperlink{willson__read_8m_a7afc17458780fd4f38cf4b53da58342e}{sx}} / \mbox{\hyperlink{willson__read_8m_ae04cf25bb76d26e4fe8241ecc73d9612}{dpx}} + \mbox{\hyperlink{willson__read_8m_a8c77e6de3994a87a8afe0879a81b027a}{Cx}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_aaeb9b9dbdfddfba1414da6e256c1c112}{yp}} = \mbox{\hyperlink{willson__convert_8m_a7377da76abeb1be4f30b75d7cb0f7269}{yp\+\_\+sensor}} / \mbox{\hyperlink{willson__read_8m_a1c6d34fa78cd57d53dbf38017a464280}{dpy}} + \mbox{\hyperlink{willson__read_8m_adc2c7119329f823e18a07042b23c056a}{Cy}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}} = find((\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} $>$ 0) \& (\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} $<$ \mbox{\hyperlink{willson__read_8m_a28b126a9bcfcc1cd38d64e9e42d4aebd}{Nfx}}-\/1) \& (\mbox{\hyperlink{willson__convert_8m_aaeb9b9dbdfddfba1414da6e256c1c112}{yp}} $>$ 0) \& (\mbox{\hyperlink{willson__convert_8m_aaeb9b9dbdfddfba1414da6e256c1c112}{yp}} $<$ Nfy-\/1))
+\item 
+\mbox{\hyperlink{willson__convert_8m_a34c620201f9e42d77d9bd1972b963c2d}{Now}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = \mbox{[}(\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} -\/ \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1))/\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1)
+\item 
+\mbox{\hyperlink{willson__convert_8m_adc468c70fb574ebd07287b38d0d0676d}{k}} = \mbox{[}0
+\item 
+for \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = 1\+:5
+\item 
+for \mbox{\hyperlink{willson__convert_8m_a699e0030f6296b7dc5f375f9c6bc877d}{err}} = \mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}} -\/ \mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}
+\item 
+inv(\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}\textquotesingle{} $\ast$\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}) $\ast$(\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}\textquotesingle{}) $\ast$\mbox{\hyperlink{willson__convert_8m_a699e0030f6296b7dc5f375f9c6bc877d}{err}} \mbox{\hyperlink{willson__convert_8m_a133c81a8d59c8baec1a46a7d72d0f859}{norm}} )(k\+\_\+step)/norm(\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}) \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} norm(k\+\_\+step)/norm(\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})$<$ 10e-\/10
+\item 
+inv(\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}\textquotesingle{} $\ast$\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}) $\ast$(\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}\textquotesingle{}) $\ast$\mbox{\hyperlink{willson__convert_8m_a699e0030f6296b7dc5f375f9c6bc877d}{err}} \mbox{\hyperlink{willson__convert_8m_a433296a01a87ee0ceebcd7536459d4ba}{break}} )
+\item 
+\mbox{\hyperlink{willson__convert_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{willson__convert_8m_a737dee4ef8e09247b0da47219bf453ff}{kc}} = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{willson__convert_8m_a3b5c237531bf9b124800c8b96b701ea0}\label{willson__convert_8m_a3b5c237531bf9b124800c8b96b701ea0}} 
+\index{willson\_convert.m@{willson\_convert.m}!fc@{fc}}
+\index{fc@{fc}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{fc()}{fc()}}
+{\footnotesize\ttfamily 2 fc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}\label{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}} 
+\index{willson\_convert.m@{willson\_convert.m}!norm@{norm}}
+\index{norm@{norm}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_a699e0030f6296b7dc5f375f9c6bc877d}{err}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{willson__convert_8m_aac60d3fc00363331856f0d10c305632c}\label{willson__convert_8m_aac60d3fc00363331856f0d10c305632c}} 
+\index{willson\_convert.m@{willson\_convert.m}!x@{x}}
+\index{x@{x}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}\label{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}} 
+\index{willson\_convert.m@{willson\_convert.m}!x\_dist@{x\_dist}}
+\index{x\_dist@{x\_dist}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{x\_dist()}{x\_dist()}}
+{\footnotesize\ttfamily x\+\_\+dist (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{willson__convert_8m_afb0c786b387a7c04e527d4385dae8dd5}\label{willson__convert_8m_afb0c786b387a7c04e527d4385dae8dd5}} 
+\index{willson\_convert.m@{willson\_convert.m}!\_\_pad37\_\_@{\_\_pad37\_\_}}
+\index{\_\_pad37\_\_@{\_\_pad37\_\_}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad37\_\_}{\_\_pad37\_\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{project__points__fisheye_8m_aba157a5b7437b6a17d32448a413c2d74}{Skew}} \+\_\+\+\_\+pad37\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{willson__convert_8m_a433296a01a87ee0ceebcd7536459d4ba}\label{willson__convert_8m_a433296a01a87ee0ceebcd7536459d4ba}} 
+\index{willson\_convert.m@{willson\_convert.m}!break@{break}}
+\index{break@{break}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{break}{break}}
+{\footnotesize\ttfamily inv (\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}\textquotesingle{}$\ast$\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}})$\ast$(\mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}\textquotesingle{})$\ast$\mbox{\hyperlink{willson__convert_8m_a699e0030f6296b7dc5f375f9c6bc877d}{err}} break) }
+
+\mbox{\Hypertarget{willson__convert_8m_a41fcba09f2bdcdf315ba4119dc7978dd}\label{willson__convert_8m_a41fcba09f2bdcdf315ba4119dc7978dd}} 
+\index{willson\_convert.m@{willson\_convert.m}!cc@{cc}}
+\index{cc@{cc}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily cc = \mbox{[}\mbox{\hyperlink{willson__read_8m_a8c77e6de3994a87a8afe0879a81b027a}{Cx}}}
+
+\mbox{\Hypertarget{willson__convert_8m_a5c92cfa685442cc20507409d370712bd}\label{willson__convert_8m_a5c92cfa685442cc20507409d370712bd}} 
+\index{willson\_convert.m@{willson\_convert.m}!Conversion@{Conversion}}
+\index{Conversion@{Conversion}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Conversion}{Conversion}}
+{\footnotesize\ttfamily Conversion from Reg \mbox{\hyperlink{willson__convert_8m_adce983d382eeada5c63ec943823b9755}{Willson}} \mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} my \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} Conversion}
+
+\mbox{\Hypertarget{willson__convert_8m_adc2c7119329f823e18a07042b23c056a}\label{willson__convert_8m_adc2c7119329f823e18a07042b23c056a}} 
+\index{willson\_convert.m@{willson\_convert.m}!Cy@{Cy}}
+\index{Cy@{Cy}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Cy}{Cy}}
+{\footnotesize\ttfamily Cy}
+
+\mbox{\Hypertarget{willson__convert_8m_a8c51cd278fc03eb41f5226db3d80e9c8}\label{willson__convert_8m_a8c51cd278fc03eb41f5226db3d80e9c8}} 
+\index{willson\_convert.m@{willson\_convert.m}!dist\_fact@{dist\_fact}}
+\index{dist\_fact@{dist\_fact}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{dist\_fact}{dist\_fact}}
+{\footnotesize\ttfamily dist\+\_\+fact = 1 + \mbox{\hyperlink{willson__read_8m_a09e00830e480084ea7da43dd408189b3}{kappa1}}$\ast$(xp\+\_\+sensor\+\_\+dist.$^\wedge$2 + yp\+\_\+sensor\+\_\+dist.$^\wedge$2)}
+
+\mbox{\Hypertarget{willson__convert_8m_afb358f48b1646c750fb9da6c6585be2b}\label{willson__convert_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{willson\_convert.m@{willson\_convert.m}!end@{end}}
+\index{end@{end}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{willson__convert_8m_a699e0030f6296b7dc5f375f9c6bc877d}\label{willson__convert_8m_a699e0030f6296b7dc5f375f9c6bc877d}} 
+\index{willson\_convert.m@{willson\_convert.m}!err@{err}}
+\index{err@{err}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{err}{err}}
+{\footnotesize\ttfamily for err = \mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}} -\/ \mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}}
+
+\mbox{\Hypertarget{willson__convert_8m_a134059af7c4fc53ab7fc65d998ebd79c}\label{willson__convert_8m_a134059af7c4fc53ab7fc65d998ebd79c}} 
+\index{willson\_convert.m@{willson\_convert.m}!f@{f}}
+\index{f@{f}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily \mbox{\hyperlink{willson__read_8m_a1c6d34fa78cd57d53dbf38017a464280}{dpy}}$\ast$ f}
+
+\mbox{\Hypertarget{willson__convert_8m_ab0baab9dafdf15f53ab9da0ab3797470}\label{willson__convert_8m_ab0baab9dafdf15f53ab9da0ab3797470}} 
+\index{willson\_convert.m@{willson\_convert.m}!function@{function}}
+\index{function@{function}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}, \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}, \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}, \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}, \mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}, \mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}}, \mbox{\hyperlink{willson__convert_8m_a2cf13b30df3f462548b2159605db426a}{omc}}, \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}, \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}, \mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}}, \mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}\mbox{]} = willson\+\_\+convert(Ncx,\mbox{\hyperlink{willson__read_8m_a28b126a9bcfcc1cd38d64e9e42d4aebd}{Nfx}},\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}},\mbox{\hyperlink{willson__read_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}},\mbox{\hyperlink{willson__read_8m_ae04cf25bb76d26e4fe8241ecc73d9612}{dpx}},\mbox{\hyperlink{willson__read_8m_a1c6d34fa78cd57d53dbf38017a464280}{dpy}},\mbox{\hyperlink{willson__read_8m_a8c77e6de3994a87a8afe0879a81b027a}{Cx}},\mbox{\hyperlink{willson__read_8m_adc2c7119329f823e18a07042b23c056a}{Cy}},\mbox{\hyperlink{willson__read_8m_a7afc17458780fd4f38cf4b53da58342e}{sx}},\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}},\mbox{\hyperlink{willson__read_8m_a09e00830e480084ea7da43dd408189b3}{kappa1}},\mbox{\hyperlink{willson__read_8m_ad46cee68b40dae85d1f70d6bb4da94a3}{Tx}},\mbox{\hyperlink{willson__read_8m_a1c6ec63ec0fbcf88d984e3bb222d2360}{Ty}},\mbox{\hyperlink{willson__read_8m_a48023596f2be6c3cc50f07e4fbb849b4}{Tz}},\mbox{\hyperlink{willson__read_8m_a4c54c680edb6b794d3bd3015a3ae83b1}{Rx}},\mbox{\hyperlink{willson__read_8m_a88c32bd7de17dde57a9a412b9a000e11}{Ry}},\mbox{\hyperlink{willson__read_8m_a8cea55429a80b9d176724f712c4cc935}{Rz}},\mbox{\hyperlink{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}{p1}},\mbox{\hyperlink{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}{p2}})}
+
+\mbox{\Hypertarget{willson__convert_8m_a0010f7e6333a9ae13f284ec6622edb85}\label{willson__convert_8m_a0010f7e6333a9ae13f284ec6622edb85}} 
+\index{willson\_convert.m@{willson\_convert.m}!image@{image}}
+\index{image@{image}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily Select \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of D\+I\+S\+T\+O\+R\+T\+ED \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} uniformely distributed across the image}
+
+\mbox{\Hypertarget{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}\label{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}} 
+\index{willson\_convert.m@{willson\_convert.m}!ind@{ind}}
+\index{ind@{ind}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{ind}{ind}}
+{\footnotesize\ttfamily ind = find((\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} $>$ 0) \& (\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} $<$ \mbox{\hyperlink{willson__read_8m_a28b126a9bcfcc1cd38d64e9e42d4aebd}{Nfx}}-\/1) \& (\mbox{\hyperlink{willson__convert_8m_aaeb9b9dbdfddfba1414da6e256c1c112}{yp}} $>$ 0) \& (\mbox{\hyperlink{willson__convert_8m_aaeb9b9dbdfddfba1414da6e256c1c112}{yp}} $<$ Nfy-\/1))}
+
+\mbox{\Hypertarget{willson__convert_8m_adc468c70fb574ebd07287b38d0d0676d}\label{willson__convert_8m_adc468c70fb574ebd07287b38d0d0676d}} 
+\index{willson\_convert.m@{willson\_convert.m}!k@{k}}
+\index{k@{k}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily k = \mbox{[}0}
+
+\mbox{\Hypertarget{willson__convert_8m_a737dee4ef8e09247b0da47219bf453ff}\label{willson__convert_8m_a737dee4ef8e09247b0da47219bf453ff}} 
+\index{willson\_convert.m@{willson\_convert.m}!kc@{kc}}
+\index{kc@{kc}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{kc}{kc}}
+{\footnotesize\ttfamily kc = \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}}
+
+\mbox{\Hypertarget{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}\label{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{willson\_convert.m@{willson\_convert.m}!kk@{kk}}
+\index{kk@{kk}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = 1\+:5}
+
+\mbox{\Hypertarget{willson__convert_8m_a133c81a8d59c8baec1a46a7d72d0f859}\label{willson__convert_8m_a133c81a8d59c8baec1a46a7d72d0f859}} 
+\index{willson\_convert.m@{willson\_convert.m}!norm@{norm}}
+\index{norm@{norm}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{norm}{norm}}
+{\footnotesize\ttfamily norm}
+
+\mbox{\Hypertarget{willson__convert_8m_a34c620201f9e42d77d9bd1972b963c2d}\label{willson__convert_8m_a34c620201f9e42d77d9bd1972b963c2d}} 
+\index{willson\_convert.m@{willson\_convert.m}!Now@{Now}}
+\index{Now@{Now}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Now}{Now}}
+{\footnotesize\ttfamily Now}
+
+\mbox{\Hypertarget{willson__convert_8m_a84e4236f07668a770c27567f1f9615ff}\label{willson__convert_8m_a84e4236f07668a770c27567f1f9615ff}} 
+\index{willson\_convert.m@{willson\_convert.m}!nx@{nx}}
+\index{nx@{nx}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{nx}{nx}}
+{\footnotesize\ttfamily nx = \mbox{\hyperlink{willson__read_8m_a28b126a9bcfcc1cd38d64e9e42d4aebd}{Nfx}}}
+
+\mbox{\Hypertarget{willson__convert_8m_a289ca425eb368f1d582b6be2be0d3dfc}\label{willson__convert_8m_a289ca425eb368f1d582b6be2be0d3dfc}} 
+\index{willson\_convert.m@{willson\_convert.m}!ny@{ny}}
+\index{ny@{ny}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{ny}{ny}}
+{\footnotesize\ttfamily ny = Nfy}
+
+\mbox{\Hypertarget{willson__convert_8m_a2cf13b30df3f462548b2159605db426a}\label{willson__convert_8m_a2cf13b30df3f462548b2159605db426a}} 
+\index{willson\_convert.m@{willson\_convert.m}!omc@{omc}}
+\index{omc@{omc}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{omc}{omc}}
+{\footnotesize\ttfamily omc = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}})}
+
+\mbox{\Hypertarget{willson__convert_8m_aafd6b8a4b32e9e967ee9372af2b8b5e2}\label{willson__convert_8m_aafd6b8a4b32e9e967ee9372af2b8b5e2}} 
+\index{willson\_convert.m@{willson\_convert.m}!parameters@{parameters}}
+\index{parameters@{parameters}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{parameters}{parameters}}
+{\footnotesize\ttfamily find my own \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of parameters}
+
+\mbox{\Hypertarget{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}\label{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}} 
+\index{willson\_convert.m@{willson\_convert.m}!point@{point}}
+\index{point@{point}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{point}{point}}
+{\footnotesize\ttfamily Principal point}
+
+\mbox{\Hypertarget{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}\label{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}} 
+\index{willson\_convert.m@{willson\_convert.m}!Rc@{Rc}}
+\index{Rc@{Rc}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Rc}{Rc}}
+{\footnotesize\ttfamily Rc = \mbox{\hyperlink{willson__read_8m_a8cea55429a80b9d176724f712c4cc935}{Rz}} $\ast$ \mbox{\hyperlink{willson__read_8m_a88c32bd7de17dde57a9a412b9a000e11}{Ry}} $\ast$ \mbox{\hyperlink{willson__read_8m_a4c54c680edb6b794d3bd3015a3ae83b1}{Rx}}}
+
+\mbox{\Hypertarget{willson__convert_8m_a88c32bd7de17dde57a9a412b9a000e11}\label{willson__convert_8m_a88c32bd7de17dde57a9a412b9a000e11}} 
+\index{willson\_convert.m@{willson\_convert.m}!Ry@{Ry}}
+\index{Ry@{Ry}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Ry}{Ry}}
+{\footnotesize\ttfamily Ry = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{[}0;Ry;0\mbox{]})}
+
+\mbox{\Hypertarget{willson__convert_8m_a8cea55429a80b9d176724f712c4cc935}\label{willson__convert_8m_a8cea55429a80b9d176724f712c4cc935}} 
+\index{willson\_convert.m@{willson\_convert.m}!Rz@{Rz}}
+\index{Rz@{Rz}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Rz}{Rz}}
+{\footnotesize\ttfamily Rz = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{[}0;0;Rz\mbox{]})}
+
+\mbox{\Hypertarget{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}\label{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}} 
+\index{willson\_convert.m@{willson\_convert.m}!Tc@{Tc}}
+\index{Tc@{Tc}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Tc}{Tc}}
+{\footnotesize\ttfamily Tc = \mbox{[}\mbox{\hyperlink{willson__read_8m_ad46cee68b40dae85d1f70d6bb4da94a3}{Tx}}}
+
+\mbox{\Hypertarget{willson__convert_8m_a073baeea2d8789cd6e400a6257e1e4d1}\label{willson__convert_8m_a073baeea2d8789cd6e400a6257e1e4d1}} 
+\index{willson\_convert.m@{willson\_convert.m}!tricky@{tricky}}
+\index{tricky@{tricky}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{tricky}{tricky}}
+{\footnotesize\ttfamily More tricky}
+
+\mbox{\Hypertarget{willson__convert_8m_a1c6ec63ec0fbcf88d984e3bb222d2360}\label{willson__convert_8m_a1c6ec63ec0fbcf88d984e3bb222d2360}} 
+\index{willson\_convert.m@{willson\_convert.m}!Ty@{Ty}}
+\index{Ty@{Ty}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Ty}{Ty}}
+{\footnotesize\ttfamily Ty}
+
+\mbox{\Hypertarget{willson__convert_8m_a48023596f2be6c3cc50f07e4fbb849b4}\label{willson__convert_8m_a48023596f2be6c3cc50f07e4fbb849b4}} 
+\index{willson\_convert.m@{willson\_convert.m}!Tz@{Tz}}
+\index{Tz@{Tz}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Tz}{Tz}}
+{\footnotesize\ttfamily Tz}
+
+\mbox{\Hypertarget{willson__convert_8m_adce983d382eeada5c63ec943823b9755}\label{willson__convert_8m_adce983d382eeada5c63ec943823b9755}} 
+\index{willson\_convert.m@{willson\_convert.m}!Willson@{Willson}}
+\index{Willson@{Willson}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{Willson}{Willson}}
+{\footnotesize\ttfamily Apply U\+N\+D\+I\+S\+T\+O\+R\+T\+I\+ON according \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} Willson}
+
+\mbox{\Hypertarget{willson__convert_8m_a9336ebf25087d91c818ee6e9ec29f8c1}\label{willson__convert_8m_a9336ebf25087d91c818ee6e9ec29f8c1}} 
+\index{willson\_convert.m@{willson\_convert.m}!x@{x}}
+\index{x@{x}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} = \mbox{[}(\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} -\/ \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1))/\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1)}
+
+\mbox{\Hypertarget{willson__convert_8m_a43532d0762a8516d395d8e603d161b10}\label{willson__convert_8m_a43532d0762a8516d395d8e603d161b10}} 
+\index{willson\_convert.m@{willson\_convert.m}!xp@{xp}}
+\index{xp@{xp}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{xp}{xp}}
+{\footnotesize\ttfamily xp = \mbox{\hyperlink{willson__convert_8m_ae6f4e0f4df952a338af82dad8371443c}{xp\+\_\+sensor}} $\ast$ \mbox{\hyperlink{willson__read_8m_a7afc17458780fd4f38cf4b53da58342e}{sx}} / \mbox{\hyperlink{willson__read_8m_ae04cf25bb76d26e4fe8241ecc73d9612}{dpx}} + \mbox{\hyperlink{willson__read_8m_a8c77e6de3994a87a8afe0879a81b027a}{Cx}}}
+
+\mbox{\Hypertarget{willson__convert_8m_a67b9a6942c1b615cd070d4ec5fb04f56}\label{willson__convert_8m_a67b9a6942c1b615cd070d4ec5fb04f56}} 
+\index{willson\_convert.m@{willson\_convert.m}!xp\_dist@{xp\_dist}}
+\index{xp\_dist@{xp\_dist}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{xp\_dist}{xp\_dist}}
+{\footnotesize\ttfamily xp\+\_\+dist = xp\+\_\+dist(\+:)\textquotesingle{}}
+
+\mbox{\Hypertarget{willson__convert_8m_ae6f4e0f4df952a338af82dad8371443c}\label{willson__convert_8m_ae6f4e0f4df952a338af82dad8371443c}} 
+\index{willson\_convert.m@{willson\_convert.m}!xp\_sensor@{xp\_sensor}}
+\index{xp\_sensor@{xp\_sensor}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{xp\_sensor}{xp\_sensor}}
+{\footnotesize\ttfamily xp\+\_\+sensor = xp\+\_\+sensor\+\_\+dist .$\ast$ \mbox{\hyperlink{willson__convert_8m_a8c51cd278fc03eb41f5226db3d80e9c8}{dist\+\_\+fact}}}
+
+\mbox{\Hypertarget{willson__convert_8m_aaeb9b9dbdfddfba1414da6e256c1c112}\label{willson__convert_8m_aaeb9b9dbdfddfba1414da6e256c1c112}} 
+\index{willson\_convert.m@{willson\_convert.m}!yp@{yp}}
+\index{yp@{yp}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{yp}{yp}}
+{\footnotesize\ttfamily yp = \mbox{\hyperlink{willson__convert_8m_a7377da76abeb1be4f30b75d7cb0f7269}{yp\+\_\+sensor}} / \mbox{\hyperlink{willson__read_8m_a1c6d34fa78cd57d53dbf38017a464280}{dpy}} + \mbox{\hyperlink{willson__read_8m_adc2c7119329f823e18a07042b23c056a}{Cy}}}
+
+\mbox{\Hypertarget{willson__convert_8m_a4fd7aa0ab9fc11184886e837be156165}\label{willson__convert_8m_a4fd7aa0ab9fc11184886e837be156165}} 
+\index{willson\_convert.m@{willson\_convert.m}!yp\_dist@{yp\_dist}}
+\index{yp\_dist@{yp\_dist}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{yp\_dist}{yp\_dist}}
+{\footnotesize\ttfamily yp\+\_\+dist = meshgrid(0\+:\mbox{\hyperlink{willson__read_8m_a28b126a9bcfcc1cd38d64e9e42d4aebd}{Nfx}}-\/1,0\+:Nfy)}
+
+\mbox{\Hypertarget{willson__convert_8m_a7377da76abeb1be4f30b75d7cb0f7269}\label{willson__convert_8m_a7377da76abeb1be4f30b75d7cb0f7269}} 
+\index{willson\_convert.m@{willson\_convert.m}!yp\_sensor@{yp\_sensor}}
+\index{yp\_sensor@{yp\_sensor}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{yp\_sensor}{yp\_sensor}}
+{\footnotesize\ttfamily yp\+\_\+sensor = \mbox{\hyperlink{willson__convert_8m_a0866be3defc09df19a3d39ec8a06a8ec}{yp\+\_\+sensor\+\_\+dist}} .$\ast$ \mbox{\hyperlink{willson__convert_8m_a8c51cd278fc03eb41f5226db3d80e9c8}{dist\+\_\+fact}}}
+
+\mbox{\Hypertarget{willson__convert_8m_a0866be3defc09df19a3d39ec8a06a8ec}\label{willson__convert_8m_a0866be3defc09df19a3d39ec8a06a8ec}} 
+\index{willson\_convert.m@{willson\_convert.m}!yp\_sensor\_dist@{yp\_sensor\_dist}}
+\index{yp\_sensor\_dist@{yp\_sensor\_dist}!willson\_convert.m@{willson\_convert.m}}
+\doxysubsubsection{\texorpdfstring{yp\_sensor\_dist}{yp\_sensor\_dist}}
+{\footnotesize\ttfamily yp\+\_\+sensor\+\_\+dist = \mbox{\hyperlink{willson__read_8m_a1c6d34fa78cd57d53dbf38017a464280}{dpy}}$\ast$(\mbox{\hyperlink{willson__convert_8m_a4fd7aa0ab9fc11184886e837be156165}{yp\+\_\+dist}} -\/ \mbox{\hyperlink{willson__read_8m_adc2c7119329f823e18a07042b23c056a}{Cy}})}
+

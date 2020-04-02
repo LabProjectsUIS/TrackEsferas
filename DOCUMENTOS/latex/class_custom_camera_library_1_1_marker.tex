@@ -1,0 +1,189 @@
+\hypertarget{class_custom_camera_library_1_1_marker}{}\doxysection{Custom\+Camera\+Library\+::Marker Class Reference}
+\label{class_custom_camera_library_1_1_marker}\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+
+
+{\ttfamily \#include $<$marker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_custom_camera_library_1_1_marker_ad4e167fa334fbde49f073e4362c4d3db}{Marker}} ()
+\item 
+\mbox{\hyperlink{class_custom_camera_library_1_1_marker_ac34f00758cfb07bcf550209083633eb6}{$\sim$\+Marker}} (void)
+\item 
+\mbox{\hyperlink{class_custom_camera_library_1_1_marker_af2d2ffcc36c375af9138c1ce65751361}{Marker}} (string \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}})
+\item 
+double \mbox{\hyperlink{class_custom_camera_library_1_1_marker_a531c9ce7513ee80a7e6c226840d81463}{Marker\+::getY}} ()
+\item 
+double \mbox{\hyperlink{class_custom_camera_library_1_1_marker_af6e5dd7cd6e768429e8dcd768042f208}{Marker\+::getX}} ()
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_marker_ac7413e8da227e4e5551166ee7981f27a}{Marker\+::setX}} (float \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}})
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_marker_a9ccca6aac23f01511539d9f9e1f874b8}{Marker\+::setY}} (float \mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}})
+\item 
+string \mbox{\hyperlink{class_custom_camera_library_1_1_marker_a66beaaf58401fcbc9f69530aa23fe87f}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_marker_accb27bc1a4d0edc55571b6f29af41f4c}{set\+Type}} (string \mbox{\hyperlink{rectify__stereo__pair_8m_aaccc9105df5383111407fd5b41255e23}{t}})
+\item 
+Scalar \mbox{\hyperlink{class_custom_camera_library_1_1_marker_a4a9365c66d784ec641f36038ce0c1aa4}{get\+Color}} ()
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_marker_a7433a7e4ab0bef65ad5987a81d984307}{set\+Color}} (Scalar \mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}})
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_marker_a39e4057984377e2dd2fa772dc2816b48}{set\+Area}} (float \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}})
+\item 
+double \mbox{\hyperlink{class_custom_camera_library_1_1_marker_a80e3a9409ad839045f9b6481c2334dce}{get\+Area}} ()
+\item 
+double \mbox{\hyperlink{class_custom_camera_library_1_1_marker_a803b594fbc34bf1adc5c0a6120666d14}{get\+Eccentr}} ()
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_marker_abe60ca277c2adf23fdf7b9809099e775}{set\+Eccentr}} (float \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa un marcador reflectivo. Cuenta con propiedades que la definen y permite ir representando los marcadores que se encuentran dentro de la escena. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_ad4e167fa334fbde49f073e4362c4d3db}\label{class_custom_camera_library_1_1_marker_ad4e167fa334fbde49f073e4362c4d3db}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!Marker@{Marker}}
+\index{Marker@{Marker}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker()}{Marker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Marker\+::\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor por omisión. Establece \char`\"{}\+Marker\char`\"{} como tipo para cada marcador (solo es una etiqueta). \mbox{\Hypertarget{class_custom_camera_library_1_1_marker_ac34f00758cfb07bcf550209083633eb6}\label{class_custom_camera_library_1_1_marker_ac34f00758cfb07bcf550209083633eb6}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!````~Marker@{$\sim$Marker}}
+\index{````~Marker@{$\sim$Marker}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{$\sim$Marker()}{~Marker()}}
+{\footnotesize\ttfamily Marker\+::$\sim$\+Marker (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destructor por omisión. \mbox{\Hypertarget{class_custom_camera_library_1_1_marker_af2d2ffcc36c375af9138c1ce65751361}\label{class_custom_camera_library_1_1_marker_af2d2ffcc36c375af9138c1ce65751361}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!Marker@{Marker}}
+\index{Marker@{Marker}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker()}{Marker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Marker\+::\+Marker (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Constructor con parámetros. Utilizado si se quiere asignar un nombre distinto al por omisión a los marcadores. 
+\begin{DoxyParams}{Parameters}
+{\em name} & es el mombre que se le quiere dar a un marcador. (No utilizada por el momento) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_a80e3a9409ad839045f9b6481c2334dce}\label{class_custom_camera_library_1_1_marker_a80e3a9409ad839045f9b6481c2334dce}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!getArea@{getArea}}
+\index{getArea@{getArea}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily double Custom\+Camera\+Library\+::\+Marker\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Utilizado para obtener el área de un marcador que se ha detectado. \begin{DoxyReturn}{Returns}
+el área del marcador. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_a4a9365c66d784ec641f36038ce0c1aa4}\label{class_custom_camera_library_1_1_marker_a4a9365c66d784ec641f36038ce0c1aa4}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!getColor@{getColor}}
+\index{getColor@{getColor}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily Scalar Custom\+Camera\+Library\+::\+Marker\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtiene el color que se le ha indicado al marcador, el color es utilizado para indicar de qué color son los marcadores (El \char`\"{}color\char`\"{} es asignado desde el constructor). \begin{DoxyReturn}{Returns}
+el color del marcador. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_a803b594fbc34bf1adc5c0a6120666d14}\label{class_custom_camera_library_1_1_marker_a803b594fbc34bf1adc5c0a6120666d14}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!getEccentr@{getEccentr}}
+\index{getEccentr@{getEccentr}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{getEccentr()}{getEccentr()}}
+{\footnotesize\ttfamily double Custom\+Camera\+Library\+::\+Marker\+::get\+Eccentr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_a66beaaf58401fcbc9f69530aa23fe87f}\label{class_custom_camera_library_1_1_marker_a66beaaf58401fcbc9f69530aa23fe87f}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!getType@{getType}}
+\index{getType@{getType}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Custom\+Camera\+Library\+::\+Marker\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtiene el \char`\"{}tipo\char`\"{} que se le haya colocado a los marcadores (El \char`\"{}tipo\char`\"{} es asignado desde el constructor). \begin{DoxyReturn}{Returns}
+un string que almacena el nombre de los marcadores. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_af6e5dd7cd6e768429e8dcd768042f208}\label{class_custom_camera_library_1_1_marker_af6e5dd7cd6e768429e8dcd768042f208}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!Marker::getX@{Marker::getX}}
+\index{Marker::getX@{Marker::getX}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker::getX()}{Marker::getX()}}
+{\footnotesize\ttfamily double Custom\+Camera\+Library\+::\+Marker\+::\+Marker\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Devuelve la posición {\itshape X} en pixeles de un marcador. \begin{DoxyReturn}{Returns}
+la posición {\itshape X} en pixeles de un marcador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_a531c9ce7513ee80a7e6c226840d81463}\label{class_custom_camera_library_1_1_marker_a531c9ce7513ee80a7e6c226840d81463}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!Marker::getY@{Marker::getY}}
+\index{Marker::getY@{Marker::getY}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker::getY()}{Marker::getY()}}
+{\footnotesize\ttfamily double Custom\+Camera\+Library\+::\+Marker\+::\+Marker\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Devuelve la posición {\itshape Y} en pixeles de un marcador. \begin{DoxyReturn}{Returns}
+la posición {\itshape Y} en pixeles de un marcador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_ac7413e8da227e4e5551166ee7981f27a}\label{class_custom_camera_library_1_1_marker_ac7413e8da227e4e5551166ee7981f27a}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!Marker::setX@{Marker::setX}}
+\index{Marker::setX@{Marker::setX}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker::setX()}{Marker::setX()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Marker\+::\+Marker\+::setX (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Establece la posición {\itshape X} de un marcador detectado en la escena. 
+\begin{DoxyParams}{Parameters}
+{\em x} & un número que indica la posición en {\itshape X} en pixeles. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_a9ccca6aac23f01511539d9f9e1f874b8}\label{class_custom_camera_library_1_1_marker_a9ccca6aac23f01511539d9f9e1f874b8}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!Marker::setY@{Marker::setY}}
+\index{Marker::setY@{Marker::setY}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{Marker::setY()}{Marker::setY()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Marker\+::\+Marker\+::setY (\begin{DoxyParamCaption}\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Establece la posición {\itshape Y} de un marcador detectado en la escena. 
+\begin{DoxyParams}{Parameters}
+{\em y} & un número que indica la posición en {\itshape Y} en pixeles. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_a39e4057984377e2dd2fa772dc2816b48}\label{class_custom_camera_library_1_1_marker_a39e4057984377e2dd2fa772dc2816b48}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!setArea@{setArea}}
+\index{setArea@{setArea}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{setArea()}{setArea()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Marker\+::set\+Area (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Utilizado para guardar el área de un marcador que se ha detectado. 
+\begin{DoxyParams}{Parameters}
+{\em a} & área del marcador. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_a7433a7e4ab0bef65ad5987a81d984307}\label{class_custom_camera_library_1_1_marker_a7433a7e4ab0bef65ad5987a81d984307}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!setColor@{setColor}}
+\index{setColor@{setColor}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Marker\+::set\+Color (\begin{DoxyParamCaption}\item[{Scalar}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Asigna el color que tendrán los marcadores, el color es utilizado para indicar de qué color son los marcadores (El \char`\"{}color\char`\"{} es asignado desde el constructor). 
+\begin{DoxyParams}{Parameters}
+{\em c} & un color para el marcador. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_abe60ca277c2adf23fdf7b9809099e775}\label{class_custom_camera_library_1_1_marker_abe60ca277c2adf23fdf7b9809099e775}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!setEccentr@{setEccentr}}
+\index{setEccentr@{setEccentr}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{setEccentr()}{setEccentr()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Marker\+::set\+Eccentr (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_custom_camera_library_1_1_marker_accb27bc1a4d0edc55571b6f29af41f4c}\label{class_custom_camera_library_1_1_marker_accb27bc1a4d0edc55571b6f29af41f4c}} 
+\index{CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}!setType@{setType}}
+\index{setType@{setType}!CustomCameraLibrary::Marker@{CustomCameraLibrary::Marker}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Marker\+::set\+Type (\begin{DoxyParamCaption}\item[{string}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtiene el \char`\"{}tipo\char`\"{} que se le haya colocado a los marcadores un nombre a los marcadores detectados . 
+\begin{DoxyParams}{Parameters}
+{\em t} & un número que indica la posición en {\itshape Y} en pixeles. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{marker_8h}{marker.\+h}}\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{marker_8cpp}{marker.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,494 @@
+\hypertarget{manual__corner__extraction__no__read_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/manual\+\_\+corner\+\_\+extraction\+\_\+no\+\_\+read.m File Reference}
+\label{manual__corner__extraction__no__read_8m}\index{D:/TrackEsferas/NavarQA/calib/manual\_corner\_extraction\_no\_read.m@{D:/TrackEsferas/NavarQA/calib/manual\_corner\_extraction\_no\_read.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+This code allows \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} manual reselection of every corner in the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} This tool \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} specifically useful in the case of highly distorted \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} Use it when in \mbox{\hyperlink{ima__read__calib__no__read_8m_aac26d9ceb1494dd9a043483ad8251bde}{memory}} efficient \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}{mode}} \mbox{\hyperlink{projector__marker_8m_a033c55db5d437a3394627c0ff03db82a}{In}} standard use manual\+\_\+corner\+\_\+extraction \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a8f1e30197acb014e3f372bb708c3d6c7}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{})
+\item 
+This code allows \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} manual reselection of every corner in the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} This tool \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} specifically useful in the case of highly distorted \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} Use it when in \mbox{\hyperlink{ima__read__calib__no__read_8m_aac26d9ceb1494dd9a043483ad8251bde}{memory}} efficient \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}{mode}} \mbox{\hyperlink{projector__marker_8m_a033c55db5d437a3394627c0ff03db82a}{In}} standard use manual\+\_\+corner\+\_\+extraction \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a7bfb24ac018c21f244ff5d096d2dbf3f}{fprintf}} (1, \textquotesingle{}No \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{available\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_afd19a253f0266513010c8225ac75815b}{$\sim$exist}} (\mbox{[}\textquotesingle{}I\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}(1))\mbox{]})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a66c731c877aff4d64d5a215a68ce2d34}{disp}} (\textquotesingle{}Cannot extract \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} without \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a7b85bb3ded17bdce3123b61fbc772323}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Manual re-\/\mbox{\hyperlink{error__depth__list_8m_ad5c4a59ae665afd234a9b99e05b922f2}{extraction}} of the grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{images\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a99b4e3f7c768a436fbb847c7eab1cb69}{isempty}} (\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a9d54043e0afc32cad8b68ad648f418bb}{q\+\_\+converge}})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a16602656ca723a546dbf93a82a87a94a}{fprintf}} (1, \textquotesingle{}Automatic \mbox{\hyperlink{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}{refinement}} of the corner location after manual \mbox{\hyperlink{ginput4_8m_a6478e9255030fd6193c17b1fd5bd2ec8}{mouse}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{click\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a18b5aa983bfdbd95fdab3cb8e0b5307a}{disp}} (\textquotesingle{}Window \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}} for corner finder(\mbox{\hyperlink{saving__calib__no__results_8m_aaae28b7917f6488ebee15109ee4bf584}{wintx}} and \mbox{\hyperlink{saving__calib__no__results_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}})\+:\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_accae145f95701d007eba54d0ebce8bd5}{isempty}} (\mbox{\hyperlink{saving__calib__no__results_8m_aaae28b7917f6488ebee15109ee4bf584}{wintx}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_ac666fb7cd11037826ce3382e910288f1}{isempty}} (\mbox{\hyperlink{saving__calib__no__results_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_ae811540dd986b200fae6e072ebdcd9c9}{fprintf}} (1, \textquotesingle{}Window \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}=\%\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}}\%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}, 2 $\ast$\mbox{\hyperlink{saving__calib__no__results_8m_aaae28b7917f6488ebee15109ee4bf584}{wintx}}+1, 2 $\ast$\mbox{\hyperlink{saving__calib__no__results_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}}+1)
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_ac734725bb83b6896b5b0fc63cf463b25}{fprintf}} (1, \textquotesingle{}No attempt \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} refine the corner location after manual \mbox{\hyperlink{ginput4_8m_a6478e9255030fd6193c17b1fd5bd2ec8}{mouse}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{click\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aa137b90820d4c6733ca0ea879985137a}{isempty}} (\mbox{\hyperlink{reproject__calib__no__read_8m_a84af708a86ec28b08ede3b504f1930be}{ima\+\_\+numbers}})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a5a5ca011dc9a427449013dd2d45cad1b}{fprintf}} (1, \textquotesingle{}Processing \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aa18517c7b1adc2d1c4bf6296c9c80863}{active\+\_\+images}} (\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_ae8489d374caa5eeedd0e1a877e74d0d6}{fprintf}} (1,\textquotesingle{}\%d...\textquotesingle{}, \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a8cbcc4cc684e2a44db476d8e774cb18a}{exist}} (\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6f96088677fff1aa4206a7c2fe3887dc}{format\+\_\+image}} (1)
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_af439a1c91124e9e6e39cdb068082e6c9}{format\+\_\+image}} (2)
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}} (\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}, 3)$>$1
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a4a064d8d094eb34f74f1295b014e7457}{eval}} (\mbox{[}\textquotesingle{}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}=x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_ac84feabc0a5ffe70fd5e05e72a103d54}{figure}} (2)
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} (\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a7c672a3bcf6f12ef9e6e78cdb48a0ccd}{colormap}} (\mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}})
+\item 
+for \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a9a482dee09fbc9420f62767fd4e30146}{set}} (\mbox{\hyperlink{manual__corner__extraction__no__read_8m_af5a0bd04da61e44c9c636c22c9780234}{hcp}}, \textquotesingle{}Xdata\textquotesingle{}, \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}})+1, \textquotesingle{}Ydata\textquotesingle{}, \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}})+1)
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a4249c30641dbaaaecd2853d7ea785180}{title}} (\mbox{[}\textquotesingle{}Click \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} corner \#\textquotesingle{} num2str(\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}}) \textquotesingle{} \mbox{\hyperlink{rodrigues_8m_a2a89187d8e8e8fba509ef9ab5f815d88}{out}} of \textquotesingle{} num2str(\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}) \textquotesingle{}(right button\+:keep \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} unchanged)\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a1e4d7c07d78f8cb30824ee12eb83d83d}{x}} (1, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a33724738a6fd1552aa0b86d240fd6e03}{x}} (2, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a08e420ca2bf6fc93fb88eeb925f0820e}{set}} (\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a08b5eddfd7c1e9cf8bca05061b8a1d14}{hx}}, \textquotesingle{}Xdata\textquotesingle{}, \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)+1, \textquotesingle{}Ydata\textquotesingle{}, \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)+1)
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a8355885a720a7662d4d0749f79d64735}{fprintf}} (1, \textquotesingle{}Image \%\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} not found!!!...\textquotesingle{}, \mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a78f70a28c6b0af8bef179b64c337697b}{fprintf}} (1,\textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{ndone\textbackslash{}n}}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+This code allows \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} manual reselection of every corner in the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} This tool \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} specifically useful in the case of highly distorted \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} Use it when in \mbox{\hyperlink{ima__read__calib__no__read_8m_aac26d9ceb1494dd9a043483ad8251bde}{memory}} efficient mode \mbox{\hyperlink{projector__marker_8m_a033c55db5d437a3394627c0ff03db82a}{In}} standard \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}{mode}}
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} = cornerfinder(\mbox{\hyperlink{manual__corner__extraction__no__read_8m_aa70495f5e89e58a7b92e1c0e5cd7de93}{xxi}},\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}},\mbox{\hyperlink{saving__calib__no__results_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}},\mbox{\hyperlink{saving__calib__no__results_8m_aaae28b7917f6488ebee15109ee4bf584}{wintx}})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} == 0
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_ae9ead798fc7c5cfc54f1e6eb589f75b2}{n\+\_\+ima\+\_\+save}} = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_aa11edae0c1f71b4c305449c7678cb295}{active\+\_\+images\+\_\+save}} = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_aba920bdb4994ed63dafefff1ad1a5534}{ima\+\_\+read\+\_\+calib}}
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a92b03440a331baeaaf23d56a1e468edc}{active\+\_\+images}} = \mbox{\hyperlink{reproject__calib__no__read_8m_aa11edae0c1f71b4c305449c7678cb295}{active\+\_\+images\+\_\+save}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a8edc4e1229f597ed2b3da2271758782c}{no\+\_\+image\+\_\+file}}
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a9d54043e0afc32cad8b68ad648f418bb}{q\+\_\+converge}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Do you want \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} try \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{smooth__images_8m_a263b33f4dd7ef09d596476b3e6cb0fb9}{automatically}} find the closest corner? -\/ only works with ckecker board \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} (\mbox{[}$\,$\mbox{]}=yes, other = no)\textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a06a9e0bc0e0a0eb29f061f9a56176ac0}{wintx}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}wintx (\mbox{[}$\,$\mbox{]} = 5) = \textquotesingle{})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}winty (\mbox{[}$\,$\mbox{]} = 5) = \textquotesingle{})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a4b7046945b41bbf329b6fb0e91ae8ab1}{ima\+\_\+numbers}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Number(\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}) of \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}}(\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}) \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} process (\mbox{[}$\,$\mbox{]} = \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}) = \textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_abf2fde3daae41abcc5826b9723b7fdd9}{ima\+\_\+proc}} = 1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+for \mbox{\hyperlink{manual__corner__extraction__no__read_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = \mbox{\hyperlink{reproject__calib__no__read_8m_abf2fde3daae41abcc5826b9723b7fdd9}{ima\+\_\+proc}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_ab1f3ac9fe245de543a30fae784df3203}{$\sim$type\+\_\+numbering}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} = num2str(\mbox{\hyperlink{ima__read__calib__no__read_8m_a2cc2b5a35593a627bf151c8623349c06}{image\+\_\+numbers}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}))
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}} = \mbox{[}calib\+\_\+name \mbox{\hyperlink{write__image_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} \textquotesingle{}.\textquotesingle{} \mbox{\hyperlink{write__image_8m_a3ef97c8b89c343e5191f9293fb98785d}{format\+\_\+image}}\mbox{]}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_adb7448e14482771c374c21974efcf4e8}{I}} = double(loadppm(\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}}))
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}},2)
+\item 
+hold \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a58ab1fd68e97078232808206b850161b}{on}}
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a08b5eddfd7c1e9cf8bca05061b8a1d14}{hx}} = \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)+1,\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)+1,\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_af5a0bd04da61e44c9c636c22c9780234}{hcp}} = \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,1)+1,\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,1)+1,\textquotesingle{}co\textquotesingle{})
+\item 
+hold \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a835accca41274fb237599d9b3c117fcf}{off}}
+\item 
+for \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}} = 1\+:\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_ade49379975ae144bc258ffe4f0f35a20}{b}} ==1
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aa70495f5e89e58a7b92e1c0e5cd7de93}{xxi}} = \mbox{[}\mbox{\hyperlink{click__ima__calib__no__read_8m_ade156e39c8481df78050021b1ffcd425}{xi}}
+\item 
+\mbox{\hyperlink{manual__corner__extraction__no__read_8m_ac0fb82c01c336cc6f4ca51b5f7cace0d}{yi}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_aa18517c7b1adc2d1c4bf6296c9c80863}\label{manual__corner__extraction__no__read_8m_aa18517c7b1adc2d1c4bf6296c9c80863}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} active\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a7c672a3bcf6f12ef9e6e78cdb48a0ccd}\label{manual__corner__extraction__no__read_8m_a7c672a3bcf6f12ef9e6e78cdb48a0ccd}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!colormap@{colormap}}
+\index{colormap@{colormap}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{colormap()}{colormap()}}
+{\footnotesize\ttfamily colormap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a66c731c877aff4d64d5a215a68ce2d34}\label{manual__corner__extraction__no__read_8m_a66c731c877aff4d64d5a215a68ce2d34}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!disp@{disp}}
+\index{disp@{disp}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Cannot extract \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} without \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a18b5aa983bfdbd95fdab3cb8e0b5307a}\label{manual__corner__extraction__no__read_8m_a18b5aa983bfdbd95fdab3cb8e0b5307a}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!disp@{disp}}
+\index{disp@{disp}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Window \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}} for corner finder(\mbox{\hyperlink{saving__calib__no__results_8m_aaae28b7917f6488ebee15109ee4bf584}{wintx}} and \mbox{\hyperlink{saving__calib__no__results_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}})\+:\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a4a064d8d094eb34f74f1295b014e7457}\label{manual__corner__extraction__no__read_8m_a4a064d8d094eb34f74f1295b014e7457}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!eval@{eval}}
+\index{eval@{eval}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a8cbcc4cc684e2a44db476d8e774cb18a}\label{manual__corner__extraction__no__read_8m_a8cbcc4cc684e2a44db476d8e774cb18a}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!exist@{exist}}
+\index{exist@{exist}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} exist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ac84feabc0a5ffe70fd5e05e72a103d54}\label{manual__corner__extraction__no__read_8m_ac84feabc0a5ffe70fd5e05e72a103d54}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!figure@{figure}}
+\index{figure@{figure}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a6f96088677fff1aa4206a7c2fe3887dc}\label{manual__corner__extraction__no__read_8m_a6f96088677fff1aa4206a7c2fe3887dc}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!format\_image@{format\_image}}
+\index{format\_image@{format\_image}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{format\_image()}{format\_image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} format\+\_\+image (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_af439a1c91124e9e6e39cdb068082e6c9}\label{manual__corner__extraction__no__read_8m_af439a1c91124e9e6e39cdb068082e6c9}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!format\_image@{format\_image}}
+\index{format\_image@{format\_image}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{format\_image()}{format\_image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} format\+\_\+image (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a16602656ca723a546dbf93a82a87a94a}\label{manual__corner__extraction__no__read_8m_a16602656ca723a546dbf93a82a87a94a}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Automatic \mbox{\hyperlink{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}{refinement}} of the corner location after manual \mbox{\hyperlink{ginput4_8m_a6478e9255030fd6193c17b1fd5bd2ec8}{mouse}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{click\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a8355885a720a7662d4d0749f79d64735}\label{manual__corner__extraction__no__read_8m_a8355885a720a7662d4d0749f79d64735}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Image \%\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} not found!!!...\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ac734725bb83b6896b5b0fc63cf463b25}\label{manual__corner__extraction__no__read_8m_ac734725bb83b6896b5b0fc63cf463b25}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}No attempt \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} refine the corner location after manual \mbox{\hyperlink{ginput4_8m_a6478e9255030fd6193c17b1fd5bd2ec8}{mouse}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{click\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a7bfb24ac018c21f244ff5d096d2dbf3f}\label{manual__corner__extraction__no__read_8m_a7bfb24ac018c21f244ff5d096d2dbf3f}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily This code allows \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} manual reselection of every corner in the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} This tool \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} specifically useful in the case of highly distorted \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} Use it when in \mbox{\hyperlink{ima__read__calib__no__read_8m_aac26d9ceb1494dd9a043483ad8251bde}{memory}} efficient \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}{mode}} \mbox{\hyperlink{projector__marker_8m_a033c55db5d437a3394627c0ff03db82a}{In}} standard use manual\+\_\+corner\+\_\+extraction \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}No \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{available\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a5a5ca011dc9a427449013dd2d45cad1b}\label{manual__corner__extraction__no__read_8m_a5a5ca011dc9a427449013dd2d45cad1b}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Processing \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ae811540dd986b200fae6e072ebdcd9c9}\label{manual__corner__extraction__no__read_8m_ae811540dd986b200fae6e072ebdcd9c9}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Window}]{size = {\ttfamily \%\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}}\%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}},  }\item[{2 $\ast$\mbox{\hyperlink{saving__calib__no__results_8m_aaae28b7917f6488ebee15109ee4bf584}{wintx}}+}]{1,  }\item[{2 $\ast$\mbox{\hyperlink{saving__calib__no__results_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}}+}]{1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ae8489d374caa5eeedd0e1a877e74d0d6}\label{manual__corner__extraction__no__read_8m_ae8489d374caa5eeedd0e1a877e74d0d6}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\%d...\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a78f70a28c6b0af8bef179b64c337697b}\label{manual__corner__extraction__no__read_8m_a78f70a28c6b0af8bef179b64c337697b}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{ndone\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a7b85bb3ded17bdce3123b61fbc772323}\label{manual__corner__extraction__no__read_8m_a7b85bb3ded17bdce3123b61fbc772323}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Manual re-\/\mbox{\hyperlink{error__depth__list_8m_ad5c4a59ae665afd234a9b99e05b922f2}{extraction}} of the grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{images\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ac8a8411243371a1be29a938cf1c083fb}\label{manual__corner__extraction__no__read_8m_ac8a8411243371a1be29a938cf1c083fb}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!image@{image}}
+\index{image@{image}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}}
+{\footnotesize\ttfamily image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_aa137b90820d4c6733ca0ea879985137a}\label{manual__corner__extraction__no__read_8m_aa137b90820d4c6733ca0ea879985137a}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!isempty@{isempty}}
+\index{isempty@{isempty}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reproject__calib__no__read_8m_a84af708a86ec28b08ede3b504f1930be}{ima\+\_\+numbers}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a99b4e3f7c768a436fbb847c7eab1cb69}\label{manual__corner__extraction__no__read_8m_a99b4e3f7c768a436fbb847c7eab1cb69}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!isempty@{isempty}}
+\index{isempty@{isempty}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a9d54043e0afc32cad8b68ad648f418bb}{q\+\_\+converge}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_accae145f95701d007eba54d0ebce8bd5}\label{manual__corner__extraction__no__read_8m_accae145f95701d007eba54d0ebce8bd5}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!isempty@{isempty}}
+\index{isempty@{isempty}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saving__calib__no__results_8m_aaae28b7917f6488ebee15109ee4bf584}{wintx}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ac666fb7cd11037826ce3382e910288f1}\label{manual__corner__extraction__no__read_8m_ac666fb7cd11037826ce3382e910288f1}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!isempty@{isempty}}
+\index{isempty@{isempty}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saving__calib__no__results_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a9a482dee09fbc9420f62767fd4e30146}\label{manual__corner__extraction__no__read_8m_a9a482dee09fbc9420f62767fd4e30146}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!set@{set}}
+\index{set@{set}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily for set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{manual__corner__extraction__no__read_8m_af5a0bd04da61e44c9c636c22c9780234}{hcp}}}]{,  }\item[{\textquotesingle{}Xdata\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}})+}]{1,  }\item[{\textquotesingle{}Ydata\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}})+}]{1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a08e420ca2bf6fc93fb88eeb925f0820e}\label{manual__corner__extraction__no__read_8m_a08e420ca2bf6fc93fb88eeb925f0820e}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!set@{set}}
+\index{set@{set}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a08b5eddfd7c1e9cf8bca05061b8a1d14}{hx}}}]{,  }\item[{\textquotesingle{}Xdata\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)+}]{1,  }\item[{\textquotesingle{}Ydata\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)+}]{1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_acef99621e828a8da6e90436ef5178cea}\label{manual__corner__extraction__no__read_8m_acef99621e828a8da6e90436ef5178cea}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!size@{size}}
+\index{size@{size}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}}}]{,  }\item[{3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a4249c30641dbaaaecd2853d7ea785180}\label{manual__corner__extraction__no__read_8m_a4249c30641dbaaaecd2853d7ea785180}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!title@{title}}
+\index{title@{title}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a1e4d7c07d78f8cb30824ee12eb83d83d}\label{manual__corner__extraction__no__read_8m_a1e4d7c07d78f8cb30824ee12eb83d83d}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!x@{x}}
+\index{x@{x}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a33724738a6fd1552aa0b86d240fd6e03}\label{manual__corner__extraction__no__read_8m_a33724738a6fd1552aa0b86d240fd6e03}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!x@{x}}
+\index{x@{x}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\mbox{\hyperlink{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}{np}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a8f1e30197acb014e3f372bb708c3d6c7}\label{manual__corner__extraction__no__read_8m_a8f1e30197acb014e3f372bb708c3d6c7}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily This code allows \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} manual reselection of every corner in the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} This tool \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} specifically useful in the case of highly distorted \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} Use it when in \mbox{\hyperlink{ima__read__calib__no__read_8m_aac26d9ceb1494dd9a043483ad8251bde}{memory}} efficient \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}{mode}} \mbox{\hyperlink{projector__marker_8m_a033c55db5d437a3394627c0ff03db82a}{In}} standard use manual\+\_\+corner\+\_\+extraction \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_afd19a253f0266513010c8225ac75815b}\label{manual__corner__extraction__no__read_8m_afd19a253f0266513010c8225ac75815b}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a92b03440a331baeaaf23d56a1e468edc}\label{manual__corner__extraction__no__read_8m_a92b03440a331baeaaf23d56a1e468edc}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{active\_images}{active\_images}}
+{\footnotesize\ttfamily active\+\_\+images = \mbox{\hyperlink{reproject__calib__no__read_8m_aa11edae0c1f71b4c305449c7678cb295}{active\+\_\+images\+\_\+save}}}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_aa11edae0c1f71b4c305449c7678cb295}\label{manual__corner__extraction__no__read_8m_aa11edae0c1f71b4c305449c7678cb295}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!active\_images\_save@{active\_images\_save}}
+\index{active\_images\_save@{active\_images\_save}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{active\_images\_save}{active\_images\_save}}
+{\footnotesize\ttfamily active\+\_\+images\+\_\+save = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ade49379975ae144bc258ffe4f0f35a20}\label{manual__corner__extraction__no__read_8m_ade49379975ae144bc258ffe4f0f35a20}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!b@{b}}
+\index{b@{b}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} b ==1}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a0d062f92217e4e073995683900fdadcb}\label{manual__corner__extraction__no__read_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}\label{manual__corner__extraction__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!end@{end}}
+\index{end@{end}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end = cornerfinder(\mbox{\hyperlink{manual__corner__extraction__no__read_8m_aa70495f5e89e58a7b92e1c0e5cd7de93}{xxi}},\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}},\mbox{\hyperlink{saving__calib__no__results_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}},\mbox{\hyperlink{saving__calib__no__results_8m_aaae28b7917f6488ebee15109ee4bf584}{wintx}})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_af5a0bd04da61e44c9c636c22c9780234}\label{manual__corner__extraction__no__read_8m_af5a0bd04da61e44c9c636c22c9780234}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!hcp@{hcp}}
+\index{hcp@{hcp}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{hcp}{hcp}}
+{\footnotesize\ttfamily hcp = \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,1)+1,\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,1)+1,\textquotesingle{}co\textquotesingle{})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a08b5eddfd7c1e9cf8bca05061b8a1d14}\label{manual__corner__extraction__no__read_8m_a08b5eddfd7c1e9cf8bca05061b8a1d14}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!hx@{hx}}
+\index{hx@{hx}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{hx}{hx}}
+{\footnotesize\ttfamily hx = \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)+1,\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)+1,\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_adb7448e14482771c374c21974efcf4e8}\label{manual__corner__extraction__no__read_8m_adb7448e14482771c374c21974efcf4e8}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!I@{I}}
+\index{I@{I}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{I}{I}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} I = double(loadppm(\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}}))}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}\label{manual__corner__extraction__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!ima\_name@{ima\_name}}
+\index{ima\_name@{ima\_name}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{ima\_name}{ima\_name}}
+{\footnotesize\ttfamily ima\+\_\+name = \mbox{[}calib\+\_\+name \mbox{\hyperlink{write__image_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} \textquotesingle{}.\textquotesingle{} \mbox{\hyperlink{write__image_8m_a3ef97c8b89c343e5191f9293fb98785d}{format\+\_\+image}}\mbox{]}}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a4b7046945b41bbf329b6fb0e91ae8ab1}\label{manual__corner__extraction__no__read_8m_a4b7046945b41bbf329b6fb0e91ae8ab1}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!ima\_numbers@{ima\_numbers}}
+\index{ima\_numbers@{ima\_numbers}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{ima\_numbers}{ima\_numbers}}
+{\footnotesize\ttfamily ima\+\_\+numbers = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Number(\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}) of \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}}(\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}) \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} process (\mbox{[}$\,$\mbox{]} = \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}) = \textquotesingle{})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_abf2fde3daae41abcc5826b9723b7fdd9}\label{manual__corner__extraction__no__read_8m_abf2fde3daae41abcc5826b9723b7fdd9}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!ima\_proc@{ima\_proc}}
+\index{ima\_proc@{ima\_proc}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{ima\_proc}{ima\_proc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} ima\+\_\+proc = 1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_aba920bdb4994ed63dafefff1ad1a5534}\label{manual__corner__extraction__no__read_8m_aba920bdb4994ed63dafefff1ad1a5534}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!ima\_read\_calib@{ima\_read\_calib}}
+\index{ima\_read\_calib@{ima\_read\_calib}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{ima\_read\_calib}{ima\_read\_calib}}
+{\footnotesize\ttfamily ima\+\_\+read\+\_\+calib}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_af29949bd63fb009eacab5efd11399e40}\label{manual__corner__extraction__no__read_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!kk@{kk}}
+\index{kk@{kk}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = \mbox{\hyperlink{reproject__calib__no__read_8m_abf2fde3daae41abcc5826b9723b7fdd9}{ima\+\_\+proc}}}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}\label{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!mode@{mode}}
+\index{mode@{mode}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily This code allows \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} manual reselection of every corner in the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} This tool \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} specifically useful in the case of highly distorted \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} Use it when in \mbox{\hyperlink{ima__read__calib__no__read_8m_aac26d9ceb1494dd9a043483ad8251bde}{memory}} efficient mode \mbox{\hyperlink{projector__marker_8m_a033c55db5d437a3394627c0ff03db82a}{In}} standard mode}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}\label{manual__corner__extraction__no__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!n\_ima@{n\_ima}}
+\index{n\_ima@{n\_ima}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima}{n\_ima}}
+{\footnotesize\ttfamily n\+\_\+ima == 0}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ae9ead798fc7c5cfc54f1e6eb589f75b2}\label{manual__corner__extraction__no__read_8m_ae9ead798fc7c5cfc54f1e6eb589f75b2}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!n\_ima\_save@{n\_ima\_save}}
+\index{n\_ima\_save@{n\_ima\_save}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima\_save}{n\_ima\_save}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} n\+\_\+ima\+\_\+save = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a8edc4e1229f597ed2b3da2271758782c}\label{manual__corner__extraction__no__read_8m_a8edc4e1229f597ed2b3da2271758782c}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!no\_image\_file@{no\_image\_file}}
+\index{no\_image\_file@{no\_image\_file}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{no\_image\_file}{no\_image\_file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} no\+\_\+image\+\_\+file}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}\label{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!Np@{Np}}
+\index{Np@{Np}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{Np}{Np}}
+{\footnotesize\ttfamily Np = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}},2)}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}\label{manual__corner__extraction__no__read_8m_a6dbb95a6567826f61fac24cca7ef8752}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!np@{np}}
+\index{np@{np}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{np}{np}}
+{\footnotesize\ttfamily for np = 1\+:\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a2a121162663fdd8eb34a8fb062d77bac}\label{manual__corner__extraction__no__read_8m_a2a121162663fdd8eb34a8fb062d77bac}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!number\_ext@{number\_ext}}
+\index{number\_ext@{number\_ext}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{number\_ext}{number\_ext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} number\+\_\+ext = num2str(\mbox{\hyperlink{ima__read__calib__no__read_8m_a2cc2b5a35593a627bf151c8623349c06}{image\+\_\+numbers}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}))}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a835accca41274fb237599d9b3c117fcf}\label{manual__corner__extraction__no__read_8m_a835accca41274fb237599d9b3c117fcf}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!off@{off}}
+\index{off@{off}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{off}{off}}
+{\footnotesize\ttfamily hold off}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a58ab1fd68e97078232808206b850161b}\label{manual__corner__extraction__no__read_8m_a58ab1fd68e97078232808206b850161b}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!on@{on}}
+\index{on@{on}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily hold on}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a9d54043e0afc32cad8b68ad648f418bb}\label{manual__corner__extraction__no__read_8m_a9d54043e0afc32cad8b68ad648f418bb}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!q\_converge@{q\_converge}}
+\index{q\_converge@{q\_converge}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{q\_converge}{q\_converge}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} q\+\_\+converge = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Do you want \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} try \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{smooth__images_8m_a263b33f4dd7ef09d596476b3e6cb0fb9}{automatically}} find the closest corner? -\/ only works with ckecker board \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} (\mbox{[}$\,$\mbox{]}=yes, other = no)\textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{manual__corner__extraction__no__read_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!return@{return}}
+\index{return@{return}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a06a9e0bc0e0a0eb29f061f9a56176ac0}\label{manual__corner__extraction__no__read_8m_a06a9e0bc0e0a0eb29f061f9a56176ac0}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!wintx@{wintx}}
+\index{wintx@{wintx}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{wintx}{wintx}}
+{\footnotesize\ttfamily wintx = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}wintx (\mbox{[}$\,$\mbox{]} = 5) = \textquotesingle{})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}\label{manual__corner__extraction__no__read_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!winty@{winty}}
+\index{winty@{winty}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{winty}{winty}}
+{\footnotesize\ttfamily winty = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}winty (\mbox{[}$\,$\mbox{]} = 5) = \textquotesingle{})}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_aa70495f5e89e58a7b92e1c0e5cd7de93}\label{manual__corner__extraction__no__read_8m_aa70495f5e89e58a7b92e1c0e5cd7de93}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!xxi@{xxi}}
+\index{xxi@{xxi}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{xxi}{xxi}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} xxi = \mbox{[}\mbox{\hyperlink{click__ima__calib__no__read_8m_ade156e39c8481df78050021b1ffcd425}{xi}}}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ac0fb82c01c336cc6f4ca51b5f7cace0d}\label{manual__corner__extraction__no__read_8m_ac0fb82c01c336cc6f4ca51b5f7cace0d}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!yi@{yi}}
+\index{yi@{yi}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{yi}{yi}}
+{\footnotesize\ttfamily yi}
+
+\mbox{\Hypertarget{manual__corner__extraction__no__read_8m_ab1f3ac9fe245de543a30fae784df3203}\label{manual__corner__extraction__no__read_8m_ab1f3ac9fe245de543a30fae784df3203}} 
+\index{manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}!````~type\_numbering@{$\sim$type\_numbering}}
+\index{````~type\_numbering@{$\sim$type\_numbering}!manual\_corner\_extraction\_no\_read.m@{manual\_corner\_extraction\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$type\_numbering}{~type\_numbering}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{check__directory_8m_a0a88702dd5dcea5894185c9c25866bf6}{type\+\_\+numbering}}}
+

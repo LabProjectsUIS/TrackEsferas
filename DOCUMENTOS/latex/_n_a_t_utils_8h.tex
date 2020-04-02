@@ -1,0 +1,453 @@
+\hypertarget{_n_a_t_utils_8h}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\+N\+A\+T\+Utils.h File Reference}
+\label{_n_a_t_utils_8h}\index{D:/TrackEsferas/NavarQA/NATUtils.h@{D:/TrackEsferas/NavarQA/NATUtils.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_quat}{Quat}}
+\item 
+class \mbox{\hyperlink{class_n_a_t_utils}{N\+A\+T\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}}~0
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}}~1
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_ac4ce55bacdfa984f3534cb9ee27d028d}{Eul\+Frm}}(ord)~((unsigned)(ord)\&1)
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}}~0
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}}~1
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_addd639b33d45d4903c5726efdf5890b4}{Eul\+Rep}}(ord)~(((unsigned)(ord)$>$$>$1)\&1)
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}}~0
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}}~1
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a75b074cbadd1d84cff0bd6c29e6b0c59}{Eul\+Par}}(ord)~(((unsigned)(ord)$>$$>$2)\&1)
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a704d5cbcba13bf4104f69ce265ba92fd}{Eul\+Safe}}~\char`\"{}\textbackslash{}000\textbackslash{}001\textbackslash{}002\textbackslash{}000\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}{Eul\+Next}}~\char`\"{}\textbackslash{}001\textbackslash{}002\textbackslash{}000\textbackslash{}001\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}{Eul\+AxI}}(ord)~((int)(\mbox{\hyperlink{_n_a_t_utils_8h_a704d5cbcba13bf4104f69ce265ba92fd}{Eul\+Safe}}\mbox{[}(((unsigned)(ord)$>$$>$3)\&3)\mbox{]}))
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a8661c88cb839c18730114597597a7a8f}{Eul\+AxJ}}(ord)~((int)(\mbox{\hyperlink{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}{Eul\+Next}}\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}{Eul\+AxI}}(ord)+(\mbox{\hyperlink{_n_a_t_utils_8h_a75b074cbadd1d84cff0bd6c29e6b0c59}{Eul\+Par}}(ord)==\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}})\mbox{]}))
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_ab6b7d496f5e6829a62f4fd161ac39ca1}{Eul\+AxK}}(ord)~((int)(\mbox{\hyperlink{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}{Eul\+Next}}\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}{Eul\+AxI}}(ord)+(\mbox{\hyperlink{_n_a_t_utils_8h_a75b074cbadd1d84cff0bd6c29e6b0c59}{Eul\+Par}}(ord)!=\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}})\mbox{]}))
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a2bb8c02781dc6eae893e406d9a9e07c7}{Eul\+AxH}}(ord)~((\mbox{\hyperlink{_n_a_t_utils_8h_addd639b33d45d4903c5726efdf5890b4}{Eul\+Rep}}(ord)==\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}})?\mbox{\hyperlink{_n_a_t_utils_8h_ab6b7d496f5e6829a62f4fd161ac39ca1}{Eul\+AxK}}(ord)\+:\mbox{\hyperlink{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}{Eul\+AxI}}(ord))
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a9e1db89e4e803214b25b2214fe51fc77}{Eul\+Get\+Ord}}(ord,  \mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}},  \mbox{\hyperlink{stereo__gui_8m_aed5077f9061202364a037430da73bb80}{j}},  \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}},  \mbox{\hyperlink{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}{h}},  \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},  \mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}},  \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}},  \mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}},  \mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}},  \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}})~(((((((\mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}})$<$$<$1)+(\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}))$<$$<$1)+(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}))$<$$<$1)+(\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}))
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a816d6d69af121dd325be4adeb80ec0b7}{Eul\+Ord\+X\+Y\+Zs}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a527a54c6567b191695f8b6b6116fbacb}{Eul\+Ord\+X\+Y\+Xs}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_aad025bb70b7cee604b8bd00e9aa612a9}{Eul\+Ord\+X\+Z\+Ys}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a88d03bbe8a9bc64b3cb90e226a42a1c5}{Eul\+Ord\+X\+Z\+Xs}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_af92dcdb0b5a613ce3d19238b7c6e2258}{Eul\+Ord\+Y\+Z\+Xs}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a9e148f93274d9413cef164b6e668625d}{Eul\+Ord\+Y\+Z\+Ys}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a0c9dc62119954f46534d6f0ae292ea77}{Eul\+Ord\+Y\+X\+Zs}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_afd0632773646eed497f0762824ab14b4}{Eul\+Ord\+Y\+X\+Ys}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a475b449b10a97bc3f06ba401a4afeac1}{Eul\+Ord\+Z\+X\+Ys}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_abb625db1600c08ef1ad76c922eec0e95}{Eul\+Ord\+Z\+X\+Zs}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a90168b5fc3a7a7dae3333b63df99c674}{Eul\+Ord\+Z\+Y\+Xs}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a50c036ee3c82b8d1f669767541794af7}{Eul\+Ord\+Z\+Y\+Zs}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a1b39dc6ebbd178aeab727822caa7d4a2}{Eul\+Ord\+Z\+Y\+Xr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_ab7620b7bb0ca9eeca9878094f2bff99f}{Eul\+Ord\+X\+Y\+Xr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a3639d458d24c246aa1279ae110ecaf38}{Eul\+Ord\+Y\+Z\+Xr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_ae224da789dcc7fc1f8efd5b9a57d2cd0}{Eul\+Ord\+X\+Z\+Xr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a5ee7d08e2404f9dbe7f39ce124f2e5bb}{Eul\+Ord\+X\+Z\+Yr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a2d0a5eba7e40b3ab6a5999019da61e2a}{Eul\+Ord\+Y\+Z\+Yr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a1f533ec099a30663ebfdf002da0f1577}{Eul\+Ord\+Z\+X\+Yr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_add69ecc84c4356bd47f43e9e0d15623f}{Eul\+Ord\+Y\+X\+Yr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_aab4d898cd1377ef6e84b0b0bef48682f}{Eul\+Ord\+Y\+X\+Zr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a7cd1f17f6d22dc0b7d6d6239af7087a1}{Eul\+Ord\+Z\+X\+Zr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_aab12e966c34899d1c08bad457cd9128b}{Eul\+Ord\+X\+Y\+Zr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8h_a2eca8cab8aba238e041fed9135f1a34d}{Eul\+Ord\+Z\+Y\+Zr}}~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_quat}{Quat}} \mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}}
+\item 
+typedef float \mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6}{Quat\+Part}} \{ \mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}, 
+\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a5596231eabd6cf29050967d5ac83ad84}{Y}}, 
+\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}}, 
+\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} \mbox{\hyperlink{_n_a_t_utils_8h_a88a3948a50da248e784b69c6721c0be2}{Eul\+\_\+}} (float ai, float aj, float ah, int order)
+\item 
+\mbox{\hyperlink{struct_quat}{Quat}} \mbox{\hyperlink{_n_a_t_utils_8h_aa3447403e13f8ff499cf18b18748855d}{Eul\+\_\+\+To\+Quat}} (\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} ea)
+\item 
+void \mbox{\hyperlink{_n_a_t_utils_8h_a5a538b02ec5133fec8f916d711a60b68}{Eul\+\_\+\+To\+H\+Matrix}} (\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} ea, \mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}} \mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}})
+\item 
+\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} \mbox{\hyperlink{_n_a_t_utils_8h_a377a11a20ff480206077422a98664dfb}{Eul\+\_\+\+From\+H\+Matrix}} (\mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}} \mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}, int order)
+\item 
+\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} \mbox{\hyperlink{_n_a_t_utils_8h_a2043274ebc2f950cba37c6f6ec219ca7}{Eul\+\_\+\+From\+Quat}} (\mbox{\hyperlink{struct_quat}{Quat}} \mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}, int order)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_n_a_t_utils_8h_a2bb8c02781dc6eae893e406d9a9e07c7}\label{_n_a_t_utils_8h_a2bb8c02781dc6eae893e406d9a9e07c7}} 
+\index{NATUtils.h@{NATUtils.h}!EulAxH@{EulAxH}}
+\index{EulAxH@{EulAxH}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulAxH}{EulAxH}}
+{\footnotesize\ttfamily \#define Eul\+AxH(\begin{DoxyParamCaption}\item[{}]{ord }\end{DoxyParamCaption})~((\mbox{\hyperlink{_n_a_t_utils_8h_addd639b33d45d4903c5726efdf5890b4}{Eul\+Rep}}(ord)==\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}})?\mbox{\hyperlink{_n_a_t_utils_8h_ab6b7d496f5e6829a62f4fd161ac39ca1}{Eul\+AxK}}(ord)\+:\mbox{\hyperlink{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}{Eul\+AxI}}(ord))}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}\label{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}} 
+\index{NATUtils.h@{NATUtils.h}!EulAxI@{EulAxI}}
+\index{EulAxI@{EulAxI}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulAxI}{EulAxI}}
+{\footnotesize\ttfamily \#define Eul\+AxI(\begin{DoxyParamCaption}\item[{}]{ord }\end{DoxyParamCaption})~((int)(\mbox{\hyperlink{_n_a_t_utils_8h_a704d5cbcba13bf4104f69ce265ba92fd}{Eul\+Safe}}\mbox{[}(((unsigned)(ord)$>$$>$3)\&3)\mbox{]}))}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a8661c88cb839c18730114597597a7a8f}\label{_n_a_t_utils_8h_a8661c88cb839c18730114597597a7a8f}} 
+\index{NATUtils.h@{NATUtils.h}!EulAxJ@{EulAxJ}}
+\index{EulAxJ@{EulAxJ}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulAxJ}{EulAxJ}}
+{\footnotesize\ttfamily \#define Eul\+AxJ(\begin{DoxyParamCaption}\item[{}]{ord }\end{DoxyParamCaption})~((int)(\mbox{\hyperlink{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}{Eul\+Next}}\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}{Eul\+AxI}}(ord)+(\mbox{\hyperlink{_n_a_t_utils_8h_a75b074cbadd1d84cff0bd6c29e6b0c59}{Eul\+Par}}(ord)==\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}})\mbox{]}))}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_ab6b7d496f5e6829a62f4fd161ac39ca1}\label{_n_a_t_utils_8h_ab6b7d496f5e6829a62f4fd161ac39ca1}} 
+\index{NATUtils.h@{NATUtils.h}!EulAxK@{EulAxK}}
+\index{EulAxK@{EulAxK}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulAxK}{EulAxK}}
+{\footnotesize\ttfamily \#define Eul\+AxK(\begin{DoxyParamCaption}\item[{}]{ord }\end{DoxyParamCaption})~((int)(\mbox{\hyperlink{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}{Eul\+Next}}\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a37c9b72fabb7a24c0e084d18952ee2d3}{Eul\+AxI}}(ord)+(\mbox{\hyperlink{_n_a_t_utils_8h_a75b074cbadd1d84cff0bd6c29e6b0c59}{Eul\+Par}}(ord)!=\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}})\mbox{]}))}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_ac4ce55bacdfa984f3534cb9ee27d028d}\label{_n_a_t_utils_8h_ac4ce55bacdfa984f3534cb9ee27d028d}} 
+\index{NATUtils.h@{NATUtils.h}!EulFrm@{EulFrm}}
+\index{EulFrm@{EulFrm}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulFrm}{EulFrm}}
+{\footnotesize\ttfamily \#define Eul\+Frm(\begin{DoxyParamCaption}\item[{}]{ord }\end{DoxyParamCaption})~((unsigned)(ord)\&1)}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}\label{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}} 
+\index{NATUtils.h@{NATUtils.h}!EulFrmR@{EulFrmR}}
+\index{EulFrmR@{EulFrmR}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulFrmR}{EulFrmR}}
+{\footnotesize\ttfamily \#define Eul\+FrmR~1}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}\label{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}} 
+\index{NATUtils.h@{NATUtils.h}!EulFrmS@{EulFrmS}}
+\index{EulFrmS@{EulFrmS}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulFrmS}{EulFrmS}}
+{\footnotesize\ttfamily \#define Eul\+FrmS~0}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a9e1db89e4e803214b25b2214fe51fc77}\label{_n_a_t_utils_8h_a9e1db89e4e803214b25b2214fe51fc77}} 
+\index{NATUtils.h@{NATUtils.h}!EulGetOrd@{EulGetOrd}}
+\index{EulGetOrd@{EulGetOrd}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulGetOrd}{EulGetOrd}}
+{\footnotesize\ttfamily \#define Eul\+Get\+Ord(\begin{DoxyParamCaption}\item[{}]{ord,  }\item[{}]{\mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}},  }\item[{}]{\mbox{\hyperlink{stereo__gui_8m_aed5077f9061202364a037430da73bb80}{j}},  }\item[{}]{\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}},  }\item[{}]{\mbox{\hyperlink{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}{h}},  }\item[{}]{\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},  }\item[{}]{\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}},  }\item[{}]{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\textcolor{keywordtype}{unsigned} o=ord;\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a18cfc20aaeac2254c25e7b9a97a5f199}{f}}=o\&1;o>>=1;\mbox{\hyperlink{apply__distortion2_8m_aca921670c13923eac3fe8dff3f71e463}{s}}=o\&1;o>>=1;\(\backslash\)}
+\DoxyCodeLine{    n=o\&1;o>>=1;\mbox{\hyperlink{apply__distortion2_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}=\mbox{\hyperlink{_n_a_t_utils_8h_a704d5cbcba13bf4104f69ce265ba92fd}{EulSafe}}[o\&3];\mbox{\hyperlink{apply__distortion2_8m_aed5077f9061202364a037430da73bb80}{j}}=\mbox{\hyperlink{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}{EulNext}}[\mbox{\hyperlink{apply__distortion2_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}+\mbox{\hyperlink{cam__proj__calib__optim_8m_a5bf8e9bd225c9965657036965db3c3fb}{n}}];\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}}=\mbox{\hyperlink{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}{EulNext}}[\mbox{\hyperlink{apply__distortion2_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}+1-\/\mbox{\hyperlink{cam__proj__calib__optim_8m_a5bf8e9bd225c9965657036965db3c3fb}{n}}];\mbox{\hyperlink{click__ima__calib3_d_8m_a5e36941b3d856737e81516acd45edc50}{h}}=\mbox{\hyperlink{apply__distortion2_8m_aca921670c13923eac3fe8dff3f71e463}{s}}?\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}}:\mbox{\hyperlink{apply__distortion2_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}\label{_n_a_t_utils_8h_ac26c6d5bc76334e594e0ac87f6d3e5f2}} 
+\index{NATUtils.h@{NATUtils.h}!EulNext@{EulNext}}
+\index{EulNext@{EulNext}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulNext}{EulNext}}
+{\footnotesize\ttfamily \#define Eul\+Next~\char`\"{}\textbackslash{}001\textbackslash{}002\textbackslash{}000\textbackslash{}001\char`\"{}}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}\label{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrd@{EulOrd}}
+\index{EulOrd@{EulOrd}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrd}{EulOrd}}
+{\footnotesize\ttfamily \#define Eul\+Ord(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}},  }\item[{}]{\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}},  }\item[{}]{\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}},  }\item[{}]{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} }\end{DoxyParamCaption})~(((((((\mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}})$<$$<$1)+(\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}))$<$$<$1)+(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}))$<$$<$1)+(\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}))}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_ab7620b7bb0ca9eeca9878094f2bff99f}\label{_n_a_t_utils_8h_ab7620b7bb0ca9eeca9878094f2bff99f}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdXYXr@{EulOrdXYXr}}
+\index{EulOrdXYXr@{EulOrdXYXr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdXYXr}{EulOrdXYXr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+X\+Y\+Xr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a527a54c6567b191695f8b6b6116fbacb}\label{_n_a_t_utils_8h_a527a54c6567b191695f8b6b6116fbacb}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdXYXs@{EulOrdXYXs}}
+\index{EulOrdXYXs@{EulOrdXYXs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdXYXs}{EulOrdXYXs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+X\+Y\+Xs~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_aab12e966c34899d1c08bad457cd9128b}\label{_n_a_t_utils_8h_aab12e966c34899d1c08bad457cd9128b}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdXYZr@{EulOrdXYZr}}
+\index{EulOrdXYZr@{EulOrdXYZr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdXYZr}{EulOrdXYZr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+X\+Y\+Zr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a816d6d69af121dd325be4adeb80ec0b7}\label{_n_a_t_utils_8h_a816d6d69af121dd325be4adeb80ec0b7}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdXYZs@{EulOrdXYZs}}
+\index{EulOrdXYZs@{EulOrdXYZs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdXYZs}{EulOrdXYZs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+X\+Y\+Zs~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_ae224da789dcc7fc1f8efd5b9a57d2cd0}\label{_n_a_t_utils_8h_ae224da789dcc7fc1f8efd5b9a57d2cd0}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdXZXr@{EulOrdXZXr}}
+\index{EulOrdXZXr@{EulOrdXZXr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdXZXr}{EulOrdXZXr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+X\+Z\+Xr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a88d03bbe8a9bc64b3cb90e226a42a1c5}\label{_n_a_t_utils_8h_a88d03bbe8a9bc64b3cb90e226a42a1c5}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdXZXs@{EulOrdXZXs}}
+\index{EulOrdXZXs@{EulOrdXZXs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdXZXs}{EulOrdXZXs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+X\+Z\+Xs~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a5ee7d08e2404f9dbe7f39ce124f2e5bb}\label{_n_a_t_utils_8h_a5ee7d08e2404f9dbe7f39ce124f2e5bb}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdXZYr@{EulOrdXZYr}}
+\index{EulOrdXZYr@{EulOrdXZYr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdXZYr}{EulOrdXZYr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+X\+Z\+Yr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_aad025bb70b7cee604b8bd00e9aa612a9}\label{_n_a_t_utils_8h_aad025bb70b7cee604b8bd00e9aa612a9}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdXZYs@{EulOrdXZYs}}
+\index{EulOrdXZYs@{EulOrdXZYs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdXZYs}{EulOrdXZYs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+X\+Z\+Ys~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_add69ecc84c4356bd47f43e9e0d15623f}\label{_n_a_t_utils_8h_add69ecc84c4356bd47f43e9e0d15623f}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdYXYr@{EulOrdYXYr}}
+\index{EulOrdYXYr@{EulOrdYXYr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdYXYr}{EulOrdYXYr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Y\+X\+Yr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_afd0632773646eed497f0762824ab14b4}\label{_n_a_t_utils_8h_afd0632773646eed497f0762824ab14b4}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdYXYs@{EulOrdYXYs}}
+\index{EulOrdYXYs@{EulOrdYXYs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdYXYs}{EulOrdYXYs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Y\+X\+Ys~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_aab4d898cd1377ef6e84b0b0bef48682f}\label{_n_a_t_utils_8h_aab4d898cd1377ef6e84b0b0bef48682f}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdYXZr@{EulOrdYXZr}}
+\index{EulOrdYXZr@{EulOrdYXZr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdYXZr}{EulOrdYXZr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Y\+X\+Zr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a0c9dc62119954f46534d6f0ae292ea77}\label{_n_a_t_utils_8h_a0c9dc62119954f46534d6f0ae292ea77}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdYXZs@{EulOrdYXZs}}
+\index{EulOrdYXZs@{EulOrdYXZs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdYXZs}{EulOrdYXZs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Y\+X\+Zs~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a3639d458d24c246aa1279ae110ecaf38}\label{_n_a_t_utils_8h_a3639d458d24c246aa1279ae110ecaf38}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdYZXr@{EulOrdYZXr}}
+\index{EulOrdYZXr@{EulOrdYZXr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdYZXr}{EulOrdYZXr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Y\+Z\+Xr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_af92dcdb0b5a613ce3d19238b7c6e2258}\label{_n_a_t_utils_8h_af92dcdb0b5a613ce3d19238b7c6e2258}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdYZXs@{EulOrdYZXs}}
+\index{EulOrdYZXs@{EulOrdYZXs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdYZXs}{EulOrdYZXs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Y\+Z\+Xs~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a2d0a5eba7e40b3ab6a5999019da61e2a}\label{_n_a_t_utils_8h_a2d0a5eba7e40b3ab6a5999019da61e2a}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdYZYr@{EulOrdYZYr}}
+\index{EulOrdYZYr@{EulOrdYZYr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdYZYr}{EulOrdYZYr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Y\+Z\+Yr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a9e148f93274d9413cef164b6e668625d}\label{_n_a_t_utils_8h_a9e148f93274d9413cef164b6e668625d}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdYZYs@{EulOrdYZYs}}
+\index{EulOrdYZYs@{EulOrdYZYs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdYZYs}{EulOrdYZYs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Y\+Z\+Ys~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a1f533ec099a30663ebfdf002da0f1577}\label{_n_a_t_utils_8h_a1f533ec099a30663ebfdf002da0f1577}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdZXYr@{EulOrdZXYr}}
+\index{EulOrdZXYr@{EulOrdZXYr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdZXYr}{EulOrdZXYr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Z\+X\+Yr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a475b449b10a97bc3f06ba401a4afeac1}\label{_n_a_t_utils_8h_a475b449b10a97bc3f06ba401a4afeac1}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdZXYs@{EulOrdZXYs}}
+\index{EulOrdZXYs@{EulOrdZXYs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdZXYs}{EulOrdZXYs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Z\+X\+Ys~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a7cd1f17f6d22dc0b7d6d6239af7087a1}\label{_n_a_t_utils_8h_a7cd1f17f6d22dc0b7d6d6239af7087a1}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdZXZr@{EulOrdZXZr}}
+\index{EulOrdZXZr@{EulOrdZXZr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdZXZr}{EulOrdZXZr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Z\+X\+Zr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_abb625db1600c08ef1ad76c922eec0e95}\label{_n_a_t_utils_8h_abb625db1600c08ef1ad76c922eec0e95}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdZXZs@{EulOrdZXZs}}
+\index{EulOrdZXZs@{EulOrdZXZs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdZXZs}{EulOrdZXZs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Z\+X\+Zs~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a1b39dc6ebbd178aeab727822caa7d4a2}\label{_n_a_t_utils_8h_a1b39dc6ebbd178aeab727822caa7d4a2}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdZYXr@{EulOrdZYXr}}
+\index{EulOrdZYXr@{EulOrdZYXr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdZYXr}{EulOrdZYXr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Z\+Y\+Xr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}{Eul\+Par\+Even}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a90168b5fc3a7a7dae3333b63df99c674}\label{_n_a_t_utils_8h_a90168b5fc3a7a7dae3333b63df99c674}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdZYXs@{EulOrdZYXs}}
+\index{EulOrdZYXs@{EulOrdZYXs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdZYXs}{EulOrdZYXs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Z\+Y\+Xs~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}{Eul\+Rep\+No}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a2eca8cab8aba238e041fed9135f1a34d}\label{_n_a_t_utils_8h_a2eca8cab8aba238e041fed9135f1a34d}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdZYZr@{EulOrdZYZr}}
+\index{EulOrdZYZr@{EulOrdZYZr}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdZYZr}{EulOrdZYZr}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Z\+Y\+Zr~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_ad17334be40cb9c32e1f85517fb000968}{Eul\+FrmR}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a50c036ee3c82b8d1f669767541794af7}\label{_n_a_t_utils_8h_a50c036ee3c82b8d1f669767541794af7}} 
+\index{NATUtils.h@{NATUtils.h}!EulOrdZYZs@{EulOrdZYZs}}
+\index{EulOrdZYZs@{EulOrdZYZs}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulOrdZYZs}{EulOrdZYZs}}
+{\footnotesize\ttfamily \#define Eul\+Ord\+Z\+Y\+Zs~\mbox{\hyperlink{_n_a_t_utils_8h_abc1ef07c111ce028b051b96b89e360e0}{Eul\+Ord}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}},\mbox{\hyperlink{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}{Eul\+Par\+Odd}},\mbox{\hyperlink{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}{Eul\+Rep\+Yes}},\mbox{\hyperlink{_n_a_t_utils_8h_aa0ae65b3e71a2740d4ec3f6906f421e2}{Eul\+FrmS}})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a75b074cbadd1d84cff0bd6c29e6b0c59}\label{_n_a_t_utils_8h_a75b074cbadd1d84cff0bd6c29e6b0c59}} 
+\index{NATUtils.h@{NATUtils.h}!EulPar@{EulPar}}
+\index{EulPar@{EulPar}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulPar}{EulPar}}
+{\footnotesize\ttfamily \#define Eul\+Par(\begin{DoxyParamCaption}\item[{}]{ord }\end{DoxyParamCaption})~(((unsigned)(ord)$>$$>$2)\&1)}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}\label{_n_a_t_utils_8h_a3520d085896953c5beb6e02a0ea11f68}} 
+\index{NATUtils.h@{NATUtils.h}!EulParEven@{EulParEven}}
+\index{EulParEven@{EulParEven}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulParEven}{EulParEven}}
+{\footnotesize\ttfamily \#define Eul\+Par\+Even~0}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}\label{_n_a_t_utils_8h_ad8ab8e9cdc2d2a743059ed394487e35a}} 
+\index{NATUtils.h@{NATUtils.h}!EulParOdd@{EulParOdd}}
+\index{EulParOdd@{EulParOdd}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulParOdd}{EulParOdd}}
+{\footnotesize\ttfamily \#define Eul\+Par\+Odd~1}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_addd639b33d45d4903c5726efdf5890b4}\label{_n_a_t_utils_8h_addd639b33d45d4903c5726efdf5890b4}} 
+\index{NATUtils.h@{NATUtils.h}!EulRep@{EulRep}}
+\index{EulRep@{EulRep}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulRep}{EulRep}}
+{\footnotesize\ttfamily \#define Eul\+Rep(\begin{DoxyParamCaption}\item[{}]{ord }\end{DoxyParamCaption})~(((unsigned)(ord)$>$$>$1)\&1)}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}\label{_n_a_t_utils_8h_a90afebf88efc1904caa472448680f02e}} 
+\index{NATUtils.h@{NATUtils.h}!EulRepNo@{EulRepNo}}
+\index{EulRepNo@{EulRepNo}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulRepNo}{EulRepNo}}
+{\footnotesize\ttfamily \#define Eul\+Rep\+No~0}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}\label{_n_a_t_utils_8h_a0d565a50edea1a226cb76dfe2305b6b7}} 
+\index{NATUtils.h@{NATUtils.h}!EulRepYes@{EulRepYes}}
+\index{EulRepYes@{EulRepYes}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulRepYes}{EulRepYes}}
+{\footnotesize\ttfamily \#define Eul\+Rep\+Yes~1}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a704d5cbcba13bf4104f69ce265ba92fd}\label{_n_a_t_utils_8h_a704d5cbcba13bf4104f69ce265ba92fd}} 
+\index{NATUtils.h@{NATUtils.h}!EulSafe@{EulSafe}}
+\index{EulSafe@{EulSafe}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulSafe}{EulSafe}}
+{\footnotesize\ttfamily \#define Eul\+Safe~\char`\"{}\textbackslash{}000\textbackslash{}001\textbackslash{}002\textbackslash{}000\char`\"{}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}\label{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}} 
+\index{NATUtils.h@{NATUtils.h}!EulerAngles@{EulerAngles}}
+\index{EulerAngles@{EulerAngles}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{EulerAngles}{EulerAngles}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{struct_quat}{Quat}} \mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}}}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}\label{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}} 
+\index{NATUtils.h@{NATUtils.h}!HMatrix@{HMatrix}}
+\index{HMatrix@{HMatrix}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{HMatrix}{HMatrix}}
+{\footnotesize\ttfamily typedef float H\+Matrix\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6}\label{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6}} 
+\index{NATUtils.h@{NATUtils.h}!QuatPart@{QuatPart}}
+\index{QuatPart@{QuatPart}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{QuatPart}{QuatPart}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6}{Quat\+Part}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!NATUtils.h@{NATUtils.h}}\index{NATUtils.h@{NATUtils.h}!X@{X}}}\mbox{\Hypertarget{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}\label{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}} 
+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y@{Y}!NATUtils.h@{NATUtils.h}}\index{NATUtils.h@{NATUtils.h}!Y@{Y}}}\mbox{\Hypertarget{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a5596231eabd6cf29050967d5ac83ad84}\label{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a5596231eabd6cf29050967d5ac83ad84}} 
+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z@{Z}!NATUtils.h@{NATUtils.h}}\index{NATUtils.h@{NATUtils.h}!Z@{Z}}}\mbox{\Hypertarget{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}\label{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}} 
+Z&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W@{W}!NATUtils.h@{NATUtils.h}}\index{NATUtils.h@{NATUtils.h}!W@{W}}}\mbox{\Hypertarget{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}\label{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}} 
+W&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_n_a_t_utils_8h_a88a3948a50da248e784b69c6721c0be2}\label{_n_a_t_utils_8h_a88a3948a50da248e784b69c6721c0be2}} 
+\index{NATUtils.h@{NATUtils.h}!Eul\_@{Eul\_}}
+\index{Eul\_@{Eul\_}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{Eul\_()}{Eul\_()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} Eul\+\_\+ (\begin{DoxyParamCaption}\item[{float}]{ai,  }\item[{float}]{aj,  }\item[{float}]{ah,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a377a11a20ff480206077422a98664dfb}\label{_n_a_t_utils_8h_a377a11a20ff480206077422a98664dfb}} 
+\index{NATUtils.h@{NATUtils.h}!Eul\_FromHMatrix@{Eul\_FromHMatrix}}
+\index{Eul\_FromHMatrix@{Eul\_FromHMatrix}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{Eul\_FromHMatrix()}{Eul\_FromHMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} Eul\+\_\+\+From\+H\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}}}]{M,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a2043274ebc2f950cba37c6f6ec219ca7}\label{_n_a_t_utils_8h_a2043274ebc2f950cba37c6f6ec219ca7}} 
+\index{NATUtils.h@{NATUtils.h}!Eul\_FromQuat@{Eul\_FromQuat}}
+\index{Eul\_FromQuat@{Eul\_FromQuat}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{Eul\_FromQuat()}{Eul\_FromQuat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} Eul\+\_\+\+From\+Quat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_quat}{Quat}}}]{q,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_a5a538b02ec5133fec8f916d711a60b68}\label{_n_a_t_utils_8h_a5a538b02ec5133fec8f916d711a60b68}} 
+\index{NATUtils.h@{NATUtils.h}!Eul\_ToHMatrix@{Eul\_ToHMatrix}}
+\index{Eul\_ToHMatrix@{Eul\_ToHMatrix}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{Eul\_ToHMatrix()}{Eul\_ToHMatrix()}}
+{\footnotesize\ttfamily void Eul\+\_\+\+To\+H\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}}}]{ea,  }\item[{\mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}}}]{M }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8h_aa3447403e13f8ff499cf18b18748855d}\label{_n_a_t_utils_8h_aa3447403e13f8ff499cf18b18748855d}} 
+\index{NATUtils.h@{NATUtils.h}!Eul\_ToQuat@{Eul\_ToQuat}}
+\index{Eul\_ToQuat@{Eul\_ToQuat}!NATUtils.h@{NATUtils.h}}
+\doxysubsubsection{\texorpdfstring{Eul\_ToQuat()}{Eul\_ToQuat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_quat}{Quat}} Eul\+\_\+\+To\+Quat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}}}]{ea }\end{DoxyParamCaption})}
+

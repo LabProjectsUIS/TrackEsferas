@@ -1,0 +1,94 @@
+\hypertarget{extrinsic__computation_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/extrinsic\+\_\+computation.m File Reference}
+\label{extrinsic__computation_8m}\index{D:/TrackEsferas/NavarQA/calib/extrinsic\_computation.m@{D:/TrackEsferas/NavarQA/calib/extrinsic\_computation.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE \mbox{\hyperlink{extrinsic__computation_8m_a93d0318a16b49458347e28e2212d1e14}{fprintf}} (1, \textquotesingle{}No intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{available.\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{extrinsic__computation_8m_a5b73fe9c8c69a608735845c241cc4938}{fprintf}} (1,\textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{extrinsic__computation_8m_af8a83cec962eb20d7776744d39b2e540}{disp}} (\textquotesingle{}Computation of the extrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} from an \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} pattern\textquotesingle{})
+\item 
+\mbox{\hyperlink{extrinsic__computation_8m_a693243f20041774e59d7382f441f40bc}{disp}} (\textquotesingle{}The intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be known(previously computed)\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE \mbox{\hyperlink{extrinsic__computation_8m_ab54351c0ebd7e63eee204284cab68ff2}{N\+A\+ME}}
+\item 
+\mbox{\hyperlink{extrinsic__computation_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{extrinsic__computation_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{extrinsic__computation_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}}
+\item 
+\mbox{\hyperlink{extrinsic__computation_8m_add554a581f88219648bdf4e757a9bb13}{image\+\_\+name}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Image \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} (full \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} without extension)\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{extrinsic__computation_8m_a6d1a5450e09277411aab56c7da5c27c0}{format\+\_\+image2}} = \textquotesingle{}0\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{extrinsic__computation_8m_af8a83cec962eb20d7776744d39b2e540}\label{extrinsic__computation_8m_af8a83cec962eb20d7776744d39b2e540}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!disp@{disp}}
+\index{disp@{disp}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Computation of the extrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} from an \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} of \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} pattern\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extrinsic__computation_8m_a693243f20041774e59d7382f441f40bc}\label{extrinsic__computation_8m_a693243f20041774e59d7382f441f40bc}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!disp@{disp}}
+\index{disp@{disp}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be known(previously computed)\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extrinsic__computation_8m_a93d0318a16b49458347e28e2212d1e14}\label{extrinsic__computation_8m_a93d0318a16b49458347e28e2212d1e14}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}No intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{available.\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extrinsic__computation_8m_a5b73fe9c8c69a608735845c241cc4938}\label{extrinsic__computation_8m_a5b73fe9c8c69a608735845c241cc4938}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{extrinsic__computation_8m_a4ca269cf93df1b512b52174c1a256fe5}\label{extrinsic__computation_8m_a4ca269cf93df1b512b52174c1a256fe5}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!dir@{dir}}
+\index{dir@{dir}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily dir}
+
+\mbox{\Hypertarget{extrinsic__computation_8m_afb358f48b1646c750fb9da6c6585be2b}\label{extrinsic__computation_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!end@{end}}
+\index{end@{end}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{extrinsic__computation_8m_a6d1a5450e09277411aab56c7da5c27c0}\label{extrinsic__computation_8m_a6d1a5450e09277411aab56c7da5c27c0}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!format\_image2@{format\_image2}}
+\index{format\_image2@{format\_image2}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{format\_image2}{format\_image2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} format\+\_\+image2 = \textquotesingle{}0\textquotesingle{}}
+
+\mbox{\Hypertarget{extrinsic__computation_8m_add554a581f88219648bdf4e757a9bb13}\label{extrinsic__computation_8m_add554a581f88219648bdf4e757a9bb13}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!image\_name@{image\_name}}
+\index{image\_name@{image\_name}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{image\_name}{image\_name}}
+{\footnotesize\ttfamily image\+\_\+name = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Image \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} (full \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} without extension)\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{extrinsic__computation_8m_ab54351c0ebd7e63eee204284cab68ff2}\label{extrinsic__computation_8m_ab54351c0ebd7e63eee204284cab68ff2}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!NAME@{NAME}}
+\index{NAME@{NAME}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{NAME}{NAME}}
+{\footnotesize\ttfamily \mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE N\+A\+ME}
+
+\mbox{\Hypertarget{extrinsic__computation_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{extrinsic__computation_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{extrinsic\_computation.m@{extrinsic\_computation.m}!return@{return}}
+\index{return@{return}!extrinsic\_computation.m@{extrinsic\_computation.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+

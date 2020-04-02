@@ -1,0 +1,152 @@
+\hypertarget{_evaluar_ajedrez_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\+Distance/\+Evaluar\+Ajedrez.m File Reference}
+\label{_evaluar_ajedrez_8m}\index{D:/TrackEsferas/NavarQA/Distance/EvaluarAjedrez.m@{D:/TrackEsferas/NavarQA/Distance/EvaluarAjedrez.m}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_aebfdce4f6cc7241ba38924f77a12e7cf}{clear}}
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a3f3d3b13a15c726d6aa03db3dd0d6377}{clc}}
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}} = \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}}(\textquotesingle{}Evaluando\+T\+A\+B\+L\+E\+R\+O.\+txt\textquotesingle{})
+\item 
+Separando esferas \mbox{\hyperlink{_evaluar_ajedrez_8m_af044595e4f055dbffd19bc66a786a436}{Esfera1}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(\+:,1\+:3))
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a09c18283f3cb74e5c3f60e195088b2b6}{Esfera2}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(\+:,4\+:6))
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a2077c5047245bfa6dc41c60426c8fecc}{Esfera3}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(\+:,7\+:9))
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a1a295ce76502a74500cce1e0676a367b}{Esfera4}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(\+:,10\+:12))
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a116e7e445e54c3c23db8512a49d3feec}{Punto1}} =\mbox{[}\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(1\+:50,1) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(1\+:50,2) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(1\+:50,3)\mbox{]}
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a8b9cb85109eb153bef6d5cf56b8d9a57}{Punto2}} =\mbox{[}\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(51\+:100,1) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(51\+:100,2) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(51\+:100,3)\mbox{]}
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_aad914d20295269d61c35f0c8a44ebf32}{Punto3}} =\mbox{[}\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(101\+:150,1) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(101\+:150,2) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(101\+:150,3)\mbox{]}
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_ac6f1a5f3209482c7c039643c5655a346}{Punto4}} =\mbox{[}\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(151\+:200,1) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(151\+:200,2) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(151\+:200,3)\mbox{]}
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}{p1}} =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a116e7e445e54c3c23db8512a49d3feec}{Punto1}})
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}{p2}} =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a8b9cb85109eb153bef6d5cf56b8d9a57}{Punto2}})
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}{p3}} =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_aad914d20295269d61c35f0c8a44ebf32}{Punto3}})
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a4d51e9c35c70dec46722c5f40c7cf8ce}{p4}} =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_ac6f1a5f3209482c7c039643c5655a346}{Punto4}})
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_ac6c7665a63571c6025f66249aba96c53}{d1}} = \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}{p3}} -\/ \mbox{\hyperlink{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}{p1}})
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a479b78c01efbe4664b402a300da492f7}{d2}} = \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}{p3}} -\/ \mbox{\hyperlink{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}{p2}})
+\item 
+\mbox{\hyperlink{_evaluar_ajedrez_8m_a247b520f1fdcc871acfe9e02ea88d960}{d3}} = \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}{p3}} -\/ \mbox{\hyperlink{_evaluar_ajedrez_8m_a4d51e9c35c70dec46722c5f40c7cf8ce}{p4}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a3f3d3b13a15c726d6aa03db3dd0d6377}\label{_evaluar_ajedrez_8m_a3f3d3b13a15c726d6aa03db3dd0d6377}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!clc@{clc}}
+\index{clc@{clc}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{clc}{clc}}
+{\footnotesize\ttfamily clc}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_aebfdce4f6cc7241ba38924f77a12e7cf}\label{_evaluar_ajedrez_8m_aebfdce4f6cc7241ba38924f77a12e7cf}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!clear@{clear}}
+\index{clear@{clear}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{clear}{clear}}
+{\footnotesize\ttfamily clear}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_ac6c7665a63571c6025f66249aba96c53}\label{_evaluar_ajedrez_8m_ac6c7665a63571c6025f66249aba96c53}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!d1@{d1}}
+\index{d1@{d1}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{d1}{d1}}
+{\footnotesize\ttfamily d1 = \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}{p3}} -\/ \mbox{\hyperlink{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}{p1}})}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a479b78c01efbe4664b402a300da492f7}\label{_evaluar_ajedrez_8m_a479b78c01efbe4664b402a300da492f7}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!d2@{d2}}
+\index{d2@{d2}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{d2}{d2}}
+{\footnotesize\ttfamily d2 = \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}{p3}} -\/ \mbox{\hyperlink{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}{p2}})}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a247b520f1fdcc871acfe9e02ea88d960}\label{_evaluar_ajedrez_8m_a247b520f1fdcc871acfe9e02ea88d960}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!d3@{d3}}
+\index{d3@{d3}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{d3}{d3}}
+{\footnotesize\ttfamily d3 = \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}{p3}} -\/ \mbox{\hyperlink{_evaluar_ajedrez_8m_a4d51e9c35c70dec46722c5f40c7cf8ce}{p4}})}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}\label{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Data@{Data}}
+\index{Data@{Data}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily Data = \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}}(\textquotesingle{}Evaluando\+T\+A\+B\+L\+E\+R\+O.\+txt\textquotesingle{})}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_af044595e4f055dbffd19bc66a786a436}\label{_evaluar_ajedrez_8m_af044595e4f055dbffd19bc66a786a436}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Esfera1@{Esfera1}}
+\index{Esfera1@{Esfera1}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Esfera1}{Esfera1}}
+{\footnotesize\ttfamily Separando esferas Esfera1 = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(\+:,1\+:3))}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a09c18283f3cb74e5c3f60e195088b2b6}\label{_evaluar_ajedrez_8m_a09c18283f3cb74e5c3f60e195088b2b6}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Esfera2@{Esfera2}}
+\index{Esfera2@{Esfera2}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Esfera2}{Esfera2}}
+{\footnotesize\ttfamily Esfera2 = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(\+:,4\+:6))}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a2077c5047245bfa6dc41c60426c8fecc}\label{_evaluar_ajedrez_8m_a2077c5047245bfa6dc41c60426c8fecc}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Esfera3@{Esfera3}}
+\index{Esfera3@{Esfera3}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Esfera3}{Esfera3}}
+{\footnotesize\ttfamily Esfera3 = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(\+:,7\+:9))}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a1a295ce76502a74500cce1e0676a367b}\label{_evaluar_ajedrez_8m_a1a295ce76502a74500cce1e0676a367b}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Esfera4@{Esfera4}}
+\index{Esfera4@{Esfera4}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Esfera4}{Esfera4}}
+{\footnotesize\ttfamily Esfera4 = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(\+:,10\+:12))}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}\label{_evaluar_ajedrez_8m_aa850ae5126b39a75859039aa84c3a577}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!p1@{p1}}
+\index{p1@{p1}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily p1 =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a116e7e445e54c3c23db8512a49d3feec}{Punto1}})}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}\label{_evaluar_ajedrez_8m_a9099c7c12dde5f81f4d3ce261da3637c}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!p2@{p2}}
+\index{p2@{p2}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{p2}{p2}}
+{\footnotesize\ttfamily p2 =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_a8b9cb85109eb153bef6d5cf56b8d9a57}{Punto2}})}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}\label{_evaluar_ajedrez_8m_a5e2c8ac9008420e9ac3c008bef292c01}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!p3@{p3}}
+\index{p3@{p3}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{p3}{p3}}
+{\footnotesize\ttfamily p3 =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_aad914d20295269d61c35f0c8a44ebf32}{Punto3}})}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a4d51e9c35c70dec46722c5f40c7cf8ce}\label{_evaluar_ajedrez_8m_a4d51e9c35c70dec46722c5f40c7cf8ce}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!p4@{p4}}
+\index{p4@{p4}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{p4}{p4}}
+{\footnotesize\ttfamily p4 =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{_evaluar_ajedrez_8m_ac6f1a5f3209482c7c039643c5655a346}{Punto4}})}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a116e7e445e54c3c23db8512a49d3feec}\label{_evaluar_ajedrez_8m_a116e7e445e54c3c23db8512a49d3feec}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Punto1@{Punto1}}
+\index{Punto1@{Punto1}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Punto1}{Punto1}}
+{\footnotesize\ttfamily Punto1 =\mbox{[}\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(1\+:50,1) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(1\+:50,2) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(1\+:50,3)\mbox{]}}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_a8b9cb85109eb153bef6d5cf56b8d9a57}\label{_evaluar_ajedrez_8m_a8b9cb85109eb153bef6d5cf56b8d9a57}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Punto2@{Punto2}}
+\index{Punto2@{Punto2}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Punto2}{Punto2}}
+{\footnotesize\ttfamily Punto2 =\mbox{[}\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(51\+:100,1) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(51\+:100,2) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(51\+:100,3)\mbox{]}}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_aad914d20295269d61c35f0c8a44ebf32}\label{_evaluar_ajedrez_8m_aad914d20295269d61c35f0c8a44ebf32}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Punto3@{Punto3}}
+\index{Punto3@{Punto3}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Punto3}{Punto3}}
+{\footnotesize\ttfamily Punto3 =\mbox{[}\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(101\+:150,1) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(101\+:150,2) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(101\+:150,3)\mbox{]}}
+
+\mbox{\Hypertarget{_evaluar_ajedrez_8m_ac6f1a5f3209482c7c039643c5655a346}\label{_evaluar_ajedrez_8m_ac6f1a5f3209482c7c039643c5655a346}} 
+\index{EvaluarAjedrez.m@{EvaluarAjedrez.m}!Punto4@{Punto4}}
+\index{Punto4@{Punto4}!EvaluarAjedrez.m@{EvaluarAjedrez.m}}
+\doxysubsubsection{\texorpdfstring{Punto4}{Punto4}}
+{\footnotesize\ttfamily Punto4 =\mbox{[}\mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(151\+:200,1) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(151\+:200,2) \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}}(151\+:200,3)\mbox{]}}
+

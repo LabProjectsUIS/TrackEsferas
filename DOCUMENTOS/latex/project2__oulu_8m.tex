@@ -1,0 +1,158 @@
+\hypertarget{project2__oulu_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/project2\+\_\+oulu.m File Reference}
+\label{project2__oulu_8m}\index{D:/TrackEsferas/NavarQA/calib/project2\_oulu.m@{D:/TrackEsferas/NavarQA/calib/project2\_oulu.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+make \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} column \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{project2__oulu_8m_a1694978be8af2bb048809533c81c0b71}{length}} (\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{project2__oulu_8m_a5ee289cacb2a360fc87912f8e1c3dac8}{length}} (\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}) $>$ 1
+\item 
+\mbox{\hyperlink{project2__oulu_8m_acf9c5091650684266b1d00897acf38ac}{k}} (3) $\ast$(\mbox{\hyperlink{project2__oulu_8m_a6566270454830f3a71d2a9876c899761}{radius\+\_\+2}}+2 $\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{project2__oulu_8m_aeed293c815572bf9274c9c7ab3ed66d4}{function}} \mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\mbox{]}
+\item 
+California Institute of \mbox{\hyperlink{_distor2_calib_8m_ae357344f0e5ab555d514e06ef20ad763}{Technology}} \mbox{\hyperlink{project2__oulu_8m_a0fb00ea2dd4389bfaa54fd8be9858961}{Pasadena}}
+\item 
+California Institute of \mbox{\hyperlink{_distor2_calib_8m_ae357344f0e5ab555d514e06ef20ad763}{Technology}} CA Renamed because project exists in matlab \mbox{\hyperlink{willson__convert_8m_a34c620201f9e42d77d9bd1972b963c2d}{Now}} uses the more elaborate intrinsic \mbox{\hyperlink{cam__proj__calib__optim_8m_ae1b7b537d79d3e859cbc94a0d1a0383f}{model}} from \mbox{\hyperlink{project2__oulu_8m_a0f027612ac38974d7637bfd0cee07c8d}{Oulu}} \mbox{[}\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}, \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\mbox{]} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}})
+\item 
+\mbox{\hyperlink{project2__oulu_8m_a0867f43e27585e019c13f7f4b7c4ab6b}{Y}} = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}$\ast$\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}} + \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})
+\item 
+\mbox{\hyperlink{project2__oulu_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}{Z}} = \mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}(3,\+:)
+\item 
+\mbox{\hyperlink{project2__oulu_8m_a18cfc20aaeac2254c25e7b9a97a5f199}{f}} = f(\+:)
+\item 
+\mbox{\hyperlink{project2__oulu_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{project2__oulu_8m_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = (\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}(1\+:2,\+:) ./ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1) $\ast$ \mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}}))
+\item 
+\mbox{\hyperlink{project2__oulu_8m_a6566270454830f3a71d2a9876c899761}{radius\+\_\+2}} = \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$^\wedge$2 + \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:).$^\wedge$2
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{project2__oulu_8m_a22b3e8c93fa5edfc155429c8814bdf3d}{radial\+\_\+distortion}} = 1 + \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1) $\ast$ ((\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1) $\ast$ \mbox{\hyperlink{project2__oulu_8m_a6566270454830f3a71d2a9876c899761}{radius\+\_\+2}}) + (\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2) $\ast$ radius\+\_\+2.$^\wedge$2))
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{project2__oulu_8m_a16df747e4f6ab54d4c189551f5ee570d}{delta\+\_\+x}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})
+\item 
+\mbox{\hyperlink{project2__oulu_8m_a91269b7003ef6d1a26e92c77e9da0c39}{\+\_\+\+\_\+pad20\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{project2__oulu_8m_ac1f0922387a4dfabaa7c5a5837939a16}{\+\_\+\+\_\+pad21\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{project2__oulu_8m_a8ae82fd219bc8df60f738b0cb0fd1e57}{\+\_\+\+\_\+pad22\+\_\+\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{project2__oulu_8m_acf9c5091650684266b1d00897acf38ac}\label{project2__oulu_8m_acf9c5091650684266b1d00897acf38ac}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!k@{k}}
+\index{k@{k}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{k()}{k()}}
+{\footnotesize\ttfamily k (\begin{DoxyParamCaption}\item[{3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{project2__oulu_8m_a1694978be8af2bb048809533c81c0b71}\label{project2__oulu_8m_a1694978be8af2bb048809533c81c0b71}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!length@{length}}
+\index{length@{length}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily make \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} column \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{project2__oulu_8m_a5ee289cacb2a360fc87912f8e1c3dac8}\label{project2__oulu_8m_a5ee289cacb2a360fc87912f8e1c3dac8}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!length@{length}}
+\index{length@{length}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{project2__oulu_8m_a91269b7003ef6d1a26e92c77e9da0c39}\label{project2__oulu_8m_a91269b7003ef6d1a26e92c77e9da0c39}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!\_\_pad20\_\_@{\_\_pad20\_\_}}
+\index{\_\_pad20\_\_@{\_\_pad20\_\_}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad20\_\_}{\_\_pad20\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad20\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{project2__oulu_8m_ac1f0922387a4dfabaa7c5a5837939a16}\label{project2__oulu_8m_ac1f0922387a4dfabaa7c5a5837939a16}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!\_\_pad21\_\_@{\_\_pad21\_\_}}
+\index{\_\_pad21\_\_@{\_\_pad21\_\_}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad21\_\_}{\_\_pad21\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad21\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{project2__oulu_8m_a8ae82fd219bc8df60f738b0cb0fd1e57}\label{project2__oulu_8m_a8ae82fd219bc8df60f738b0cb0fd1e57}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!\_\_pad22\_\_@{\_\_pad22\_\_}}
+\index{\_\_pad22\_\_@{\_\_pad22\_\_}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad22\_\_}{\_\_pad22\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad22\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{project2__oulu_8m_a16df747e4f6ab54d4c189551f5ee570d}\label{project2__oulu_8m_a16df747e4f6ab54d4c189551f5ee570d}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!delta\_x@{delta\_x}}
+\index{delta\_x@{delta\_x}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{delta\_x}{delta\_x}}
+{\footnotesize\ttfamily delta\+\_\+x = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})}
+
+\mbox{\Hypertarget{project2__oulu_8m_afb358f48b1646c750fb9da6c6585be2b}\label{project2__oulu_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!end@{end}}
+\index{end@{end}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{project2__oulu_8m_a18cfc20aaeac2254c25e7b9a97a5f199}\label{project2__oulu_8m_a18cfc20aaeac2254c25e7b9a97a5f199}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!f@{f}}
+\index{f@{f}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily make \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} column \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} f = f(\+:)}
+
+\mbox{\Hypertarget{project2__oulu_8m_aeed293c815572bf9274c9c7ab3ed66d4}\label{project2__oulu_8m_aeed293c815572bf9274c9c7ab3ed66d4}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!function@{function}}
+\index{function@{function}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= project2\_oulu(\mbox{\hyperlink{click__ima__calib3_d_8m_ac51b57a703ba1c5869228690c93e1701}{X}},\mbox{\hyperlink{cam__proj__calib_8m_ace3fdf821957e9266501abadd2926b1c}{R}},\mbox{\hyperlink{align__structures_8m_a1e8af1b834749c5cbe9484070c2a9977}{T}},\mbox{\hyperlink{project2__oulu_8m_a18cfc20aaeac2254c25e7b9a97a5f199}{f}},\mbox{\hyperlink{rectify__stereo__pair_8m_aaccc9105df5383111407fd5b41255e23}{t}},\mbox{\hyperlink{project2__oulu_8m_acf9c5091650684266b1d00897acf38ac}{k}})}
+\DoxyCodeLine{\%PROJECT     Subsidiary \mbox{\hyperlink{click__ima__calib3_d_8m_a7f570a4b57ed34463ad8cc2c68d36f23}{to}} \mbox{\hyperlink{calib_8m_a8fbfa4a3586684f44929c6253999479c}{calib}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\%         (\mbox{\hyperlink{ginput2_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}) Pietro Perona -\/-\/ March 24}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{project2__oulu_8m_a0f027612ac38974d7637bfd0cee07c8d}\label{project2__oulu_8m_a0f027612ac38974d7637bfd0cee07c8d}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!Oulu@{Oulu}}
+\index{Oulu@{Oulu}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{Oulu}{Oulu}}
+{\footnotesize\ttfamily California Institute of \mbox{\hyperlink{_distor2_calib_8m_ae357344f0e5ab555d514e06ef20ad763}{Technology}} CA Renamed because project exists in matlab \mbox{\hyperlink{willson__convert_8m_a34c620201f9e42d77d9bd1972b963c2d}{Now}} uses the more elaborate intrinsic \mbox{\hyperlink{cam__proj__calib__optim_8m_ae1b7b537d79d3e859cbc94a0d1a0383f}{model}} from Oulu\mbox{[}\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}, \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\mbox{]} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}})}
+
+\mbox{\Hypertarget{project2__oulu_8m_a0fb00ea2dd4389bfaa54fd8be9858961}\label{project2__oulu_8m_a0fb00ea2dd4389bfaa54fd8be9858961}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!Pasadena@{Pasadena}}
+\index{Pasadena@{Pasadena}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{Pasadena}{Pasadena}}
+{\footnotesize\ttfamily California Institute of \mbox{\hyperlink{_distor2_calib_8m_ae357344f0e5ab555d514e06ef20ad763}{Technology}} Pasadena}
+
+\mbox{\Hypertarget{project2__oulu_8m_a22b3e8c93fa5edfc155429c8814bdf3d}\label{project2__oulu_8m_a22b3e8c93fa5edfc155429c8814bdf3d}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!radial\_distortion@{radial\_distortion}}
+\index{radial\_distortion@{radial\_distortion}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{radial\_distortion}{radial\_distortion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} radial\+\_\+distortion = 1 + \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1) $\ast$ ((\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1) $\ast$ \mbox{\hyperlink{project2__oulu_8m_a6566270454830f3a71d2a9876c899761}{radius\+\_\+2}}) + (\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2) $\ast$ radius\+\_\+2.$^\wedge$2))}
+
+\mbox{\Hypertarget{project2__oulu_8m_a6566270454830f3a71d2a9876c899761}\label{project2__oulu_8m_a6566270454830f3a71d2a9876c899761}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!radius\_2@{radius\_2}}
+\index{radius\_2@{radius\_2}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{radius\_2}{radius\_2}}
+{\footnotesize\ttfamily radius\+\_\+2 = \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$^\wedge$2 + \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:).$^\wedge$2}
+
+\mbox{\Hypertarget{project2__oulu_8m_a9336ebf25087d91c818ee6e9ec29f8c1}\label{project2__oulu_8m_a9336ebf25087d91c818ee6e9ec29f8c1}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!x@{x}}
+\index{x@{x}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} = (\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}(1\+:2,\+:) ./ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1) $\ast$ \mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}}))}
+
+\mbox{\Hypertarget{project2__oulu_8m_a0867f43e27585e019c13f7f4b7c4ab6b}\label{project2__oulu_8m_a0867f43e27585e019c13f7f4b7c4ab6b}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!Y@{Y}}
+\index{Y@{Y}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily Y = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}$\ast$\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}} + \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})}
+
+\mbox{\Hypertarget{project2__oulu_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}\label{project2__oulu_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}} 
+\index{project2\_oulu.m@{project2\_oulu.m}!Z@{Z}}
+\index{Z@{Z}!project2\_oulu.m@{project2\_oulu.m}}
+\doxysubsubsection{\texorpdfstring{Z}{Z}}
+{\footnotesize\ttfamily Z = \mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}(3,\+:)}
+

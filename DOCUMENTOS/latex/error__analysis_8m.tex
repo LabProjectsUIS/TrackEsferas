@@ -1,0 +1,398 @@
+\hypertarget{error__analysis_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/error\+\_\+analysis.m File Reference}
+\label{error__analysis_8m}\index{D:/TrackEsferas/NavarQA/calib/error\_analysis.m@{D:/TrackEsferas/NavarQA/calib/error\_analysis.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{error__analysis_8m_abb12f5d93deef2f798f921330e93d913}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}{fc\+\_\+list}}\textquotesingle{})
+\item 
+for \mbox{\hyperlink{error__analysis_8m_a2428197005641b9251051feceacd7f38}{eval}} (\mbox{[}\textquotesingle{}omc\+\_\+list\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{}=\mbox{[}$\,$\mbox{]};\textquotesingle{}\mbox{]})
+\item 
+Saving the feature \mbox{\hyperlink{error__analysis_8m_a09323682de502cf737ff62b77a7c04a9}{eval}} (\mbox{[}\textquotesingle{}x\+\_\+save\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{}=x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+The \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} \mbox{\hyperlink{error__analysis_8m_accb9b6351679ee7db95522d5ffc6726c}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Run number\+:\%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}, ntrial)
+\item 
+\mbox{\hyperlink{error__analysis_8m_a4a01cb58cb0f6b161a9df85bd51918a6}{fprintf}} (1, \textquotesingle{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+for \mbox{\hyperlink{error__analysis_8m_af3eea196aa825acccd4f840c2c9790cb}{eval}} (\mbox{[}\textquotesingle{}y\+\_\+kk=y\+\_\+save\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]}) \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \&$\sim$\mbox{\hyperlink{recomp__corner__calib__no__read_8m_ae2d0d938b49d71b3f03786c5ba342c96}{isnan}}(y\+\_\+kk(1
+\item 
+\mbox{\hyperlink{error__analysis_8m_a22828bc75d634212ef406fa49c02e2ca}{sy}} $\ast$ \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}} (1, \mbox{\hyperlink{error__analysis_8m_a064967ff2670f3b5f2024e4177e48782}{Nkk}})\mbox{]}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a67287a2989d9c200005987d03dbb4fc1}{active\+\_\+images}} (\mbox{\hyperlink{error__analysis_8m_a675b6685e1313480b37b7485694576a9}{ind\+\_\+active\+\_\+save}}(junk2(1\+:\mbox{\hyperlink{run__error__analysis_8m_a019f110db1607b31993d77155c2f2f05}{N\+\_\+ima\+\_\+active}})))
+\item 
+\mbox{\hyperlink{error__analysis_8m_af2881054090a09aa9699569af6035a53}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Final run(with the real \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}})\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{error__analysis_8m_affb9e4d4161db407e617d6a026d10225}{fprintf}} (1, \textquotesingle{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{error__analysis_8m_a848cea55b3ab92e149e0bd48ef5220e7}{disp}} (\mbox{[}\textquotesingle{}Save Calibration accuracy \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}} under Calib\+\_\+\+Accuracies\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{run__error__analysis_8m_a019f110db1607b31993d77155c2f2f05}{N\+\_\+ima\+\_\+active}}) \textquotesingle{}.\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{mat}}\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{error__analysis_8m_a66ef00acf686fb8596728e382977b8e5}{eval}} (\mbox{\hyperlink{saving__stereo__calib_8m_a268d2ebd8212f29d540791b1143be926}{string\+\_\+save}})
+\item 
+\mbox{\hyperlink{error__analysis_8m_aeaba2e0ae10f2bcb87c1e9a04ceb54c2}{std}} (\mbox{\hyperlink{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}{fc\+\_\+list}}\textquotesingle{}) std(\mbox{\hyperlink{error__analysis_8m_a880e695eabe2789ef89a7b141d44eed5}{cc\+\_\+list}}\textquotesingle{}) std(\mbox{\hyperlink{error__analysis_8m_a6a8b08a29331123799bfd39a23fc582e}{kc\+\_\+list}}\textquotesingle{}) for \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+E\+R\+R\+O\+R\+\_\+\+A\+N\+A\+L\+Y\+S\+IS This simulation helps coputing the acturacies of \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} Run it after the \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{error__analysis_8m_a17700fdc1d93e80d02460f1058fb653e}{N\+\_\+runs}} = 200
+\item 
+\mbox{\hyperlink{error__analysis_8m_adeb17169623f229808d013b484012101}{N\+\_\+ima\+\_\+active}} = 4
+\item 
+\mbox{\hyperlink{error__analysis_8m_a8f9edfc685adde77480d7c98c4a020de}{saving}} = 1
+\item 
+\mbox{\hyperlink{error__analysis_8m_ab42c9eadb9f6da518e4bb580fa7f7d31}{if}}
+\item 
+initialization \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}{fc\+\_\+list}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a880e695eabe2789ef89a7b141d44eed5}{cc\+\_\+list}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a6a8b08a29331123799bfd39a23fc582e}{kc\+\_\+list}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a75073efb40606ac9fe2577210e8126d4}{active\+\_\+images\+\_\+list}} = \mbox{[}$\,$\mbox{]}
+\item 
+for \mbox{\hyperlink{error__analysis_8m_af29949bd63fb009eacab5efd11399e40}{kk}} =1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a7afc17458780fd4f38cf4b53da58342e}{sx}} = median(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(ex(1,\+:)))$\ast$1.\+4836
+\item 
+\mbox{\hyperlink{error__analysis_8m_a22828bc75d634212ef406fa49c02e2ca}{sy}} = median(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(ex(2,\+:)))$\ast$1.\+4836
+\item 
+Saving the feature \mbox{\hyperlink{error__analysis_8m_ad433454e41644431582e6554dfd197c6}{locations}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_aa11edae0c1f71b4c305449c7678cb295}{active\+\_\+images\+\_\+save}} = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a675b6685e1313480b37b7485694576a9}{ind\+\_\+active\+\_\+save}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_ada90763d079be650efe688501a0e0d1d}{fc\+\_\+save}} = \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a7004a299c36e0dff0b0fdc7a4f13c5fb}{cc\+\_\+save}} = \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a469180bfe48ce2d048a63077e859354b}{kc\+\_\+save}} = \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a3d3a69f15880d664490d1bc1560dae87}{K\+K\+\_\+save}} = \mbox{\hyperlink{willson__read_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}}
+\item 
+The \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} \mbox{\hyperlink{error__analysis_8m_a5bfe976b69d720a2ec9b7ac1ea797ffd}{loop}}
+\item 
+for \mbox{\hyperlink{error__analysis_8m_a064967ff2670f3b5f2024e4177e48782}{Nkk}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(y\+\_\+kk,2)
+\item 
+\mbox{\hyperlink{error__analysis_8m_a186c4a04d234f3fd05e12d57cc8ede65}{x\+\_\+kk\+\_\+new}} = y\+\_\+kk + \mbox{[}\mbox{\hyperlink{willson__read_8m_a7afc17458780fd4f38cf4b53da58342e}{sx}} $\ast$ \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(1,\mbox{\hyperlink{error__analysis_8m_a064967ff2670f3b5f2024e4177e48782}{Nkk}})
+\item 
+\mbox{\hyperlink{error__analysis_8m_a8b38833b46884242d34fa7e7eacc488a}{N\+\_\+active}} = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{error__analysis_8m_a675b6685e1313480b37b7485694576a9}{ind\+\_\+active\+\_\+save}})
+\item 
+\mbox{\hyperlink{error__analysis_8m_a0ddbcd223bfdf0e5179301d9b8aed109}{junk}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(1,\mbox{\hyperlink{error__analysis_8m_a8b38833b46884242d34fa7e7eacc488a}{N\+\_\+active}})
+\item 
+\mbox{\hyperlink{error__analysis_8m_a92b03440a331baeaaf23d56a1e468edc}{active\+\_\+images}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})
+\item 
+\mbox{\hyperlink{error__analysis_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}} = \mbox{\hyperlink{error__analysis_8m_ada90763d079be650efe688501a0e0d1d}{fc\+\_\+save}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}} = \mbox{\hyperlink{error__analysis_8m_a7004a299c36e0dff0b0fdc7a4f13c5fb}{cc\+\_\+save}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a737dee4ef8e09247b0da47219bf453ff}{kc}} = \mbox{\hyperlink{error__analysis_8m_a469180bfe48ce2d048a63077e859354b}{kc\+\_\+save}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}} = \mbox{\hyperlink{error__analysis_8m_a3d3a69f15880d664490d1bc1560dae87}{K\+K\+\_\+save}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}} = \mbox{\hyperlink{error__analysis_8m_a675b6685e1313480b37b7485694576a9}{ind\+\_\+active\+\_\+save}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a268d2ebd8212f29d540791b1143be926}{string\+\_\+save}} = \mbox{[}\textquotesingle{}save Calib\+\_\+\+Accuracies\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{run__error__analysis_8m_a019f110db1607b31993d77155c2f2f05}{N\+\_\+ima\+\_\+active}}) \textquotesingle{} \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}} \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} \mbox{\hyperlink{run__error__analysis_8m_a019f110db1607b31993d77155c2f2f05}{N\+\_\+ima\+\_\+active}} \mbox{\hyperlink{error__analysis_8m_a17700fdc1d93e80d02460f1058fb653e}{N\+\_\+runs}} \mbox{\hyperlink{error__analysis_8m_a75073efb40606ac9fe2577210e8126d4}{active\+\_\+images\+\_\+list}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} \mbox{\hyperlink{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}{fc\+\_\+list}} \mbox{\hyperlink{error__analysis_8m_a880e695eabe2789ef89a7b141d44eed5}{cc\+\_\+list}} \mbox{\hyperlink{error__analysis_8m_a6a8b08a29331123799bfd39a23fc582e}{kc\+\_\+list}}\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{error__analysis_8m_a67287a2989d9c200005987d03dbb4fc1}\label{error__analysis_8m_a67287a2989d9c200005987d03dbb4fc1}} 
+\index{error\_analysis.m@{error\_analysis.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}}
+{\footnotesize\ttfamily active\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{error__analysis_8m_a675b6685e1313480b37b7485694576a9}{ind\+\_\+active\+\_\+save}}(junk2(1\+:\mbox{\hyperlink{run__error__analysis_8m_a019f110db1607b31993d77155c2f2f05}{N\+\_\+ima\+\_\+active}}))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_a848cea55b3ab92e149e0bd48ef5220e7}\label{error__analysis_8m_a848cea55b3ab92e149e0bd48ef5220e7}} 
+\index{error\_analysis.m@{error\_analysis.m}!disp@{disp}}
+\index{disp@{disp}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_a2428197005641b9251051feceacd7f38}\label{error__analysis_8m_a2428197005641b9251051feceacd7f38}} 
+\index{error\_analysis.m@{error\_analysis.m}!eval@{eval}}
+\index{eval@{eval}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily for eval (\begin{DoxyParamCaption}\item[{\mbox{[}\textquotesingle{}omc\+\_\+list\+\_\+\textquotesingle{} num2str(kk) \textquotesingle{}=\mbox{[}$\,$\mbox{]} ;\textquotesingle{}\mbox{]}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_a09323682de502cf737ff62b77a7c04a9}\label{error__analysis_8m_a09323682de502cf737ff62b77a7c04a9}} 
+\index{error\_analysis.m@{error\_analysis.m}!eval@{eval}}
+\index{eval@{eval}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Saving the feature eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_af3eea196aa825acccd4f840c2c9790cb}\label{error__analysis_8m_af3eea196aa825acccd4f840c2c9790cb}} 
+\index{error\_analysis.m@{error\_analysis.m}!eval@{eval}}
+\index{eval@{eval}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily for eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&}
+
+\mbox{\Hypertarget{error__analysis_8m_a66ef00acf686fb8596728e382977b8e5}\label{error__analysis_8m_a66ef00acf686fb8596728e382977b8e5}} 
+\index{error\_analysis.m@{error\_analysis.m}!eval@{eval}}
+\index{eval@{eval}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saving__stereo__calib_8m_a268d2ebd8212f29d540791b1143be926}{string\+\_\+save}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_affb9e4d4161db407e617d6a026d10225}\label{error__analysis_8m_affb9e4d4161db407e617d6a026d10225}} 
+\index{error\_analysis.m@{error\_analysis.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_a4a01cb58cb0f6b161a9df85bd51918a6}\label{error__analysis_8m_a4a01cb58cb0f6b161a9df85bd51918a6}} 
+\index{error\_analysis.m@{error\_analysis.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_af2881054090a09aa9699569af6035a53}\label{error__analysis_8m_af2881054090a09aa9699569af6035a53}} 
+\index{error\_analysis.m@{error\_analysis.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Final run(with the real \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}})\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_accb9b6351679ee7db95522d5ffc6726c}\label{error__analysis_8m_accb9b6351679ee7db95522d5ffc6726c}} 
+\index{error\_analysis.m@{error\_analysis.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily The \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Run number\+:\%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}}]{,  }\item[{ntrial}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}\label{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}} 
+\index{error\_analysis.m@{error\_analysis.m}!randn@{randn}}
+\index{randn@{randn}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{randn()}{randn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a22828bc75d634212ef406fa49c02e2ca}{sy}}$\ast$ randn (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{error__analysis_8m_a064967ff2670f3b5f2024e4177e48782}{Nkk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_aeaba2e0ae10f2bcb87c1e9a04ceb54c2}\label{error__analysis_8m_aeaba2e0ae10f2bcb87c1e9a04ceb54c2}} 
+\index{error\_analysis.m@{error\_analysis.m}!std@{std}}
+\index{std@{std}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{std()}{std()}}
+{\footnotesize\ttfamily std (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}{fc\+\_\+list}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__analysis_8m_abb12f5d93deef2f798f921330e93d913}\label{error__analysis_8m_abb12f5d93deef2f798f921330e93d913}} 
+\index{error\_analysis.m@{error\_analysis.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}{fc\+\_\+list}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{error__analysis_8m_a92b03440a331baeaaf23d56a1e468edc}\label{error__analysis_8m_a92b03440a331baeaaf23d56a1e468edc}} 
+\index{error\_analysis.m@{error\_analysis.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{active\_images}{active\_images}}
+{\footnotesize\ttfamily active\+\_\+images = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})}
+
+\mbox{\Hypertarget{error__analysis_8m_a75073efb40606ac9fe2577210e8126d4}\label{error__analysis_8m_a75073efb40606ac9fe2577210e8126d4}} 
+\index{error\_analysis.m@{error\_analysis.m}!active\_images\_list@{active\_images\_list}}
+\index{active\_images\_list@{active\_images\_list}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{active\_images\_list}{active\_images\_list}}
+{\footnotesize\ttfamily active\+\_\+images\+\_\+list = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{error__analysis_8m_aa11edae0c1f71b4c305449c7678cb295}\label{error__analysis_8m_aa11edae0c1f71b4c305449c7678cb295}} 
+\index{error\_analysis.m@{error\_analysis.m}!active\_images\_save@{active\_images\_save}}
+\index{active\_images\_save@{active\_images\_save}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{active\_images\_save}{active\_images\_save}}
+{\footnotesize\ttfamily active\+\_\+images\+\_\+save = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a41fcba09f2bdcdf315ba4119dc7978dd}\label{error__analysis_8m_a41fcba09f2bdcdf315ba4119dc7978dd}} 
+\index{error\_analysis.m@{error\_analysis.m}!cc@{cc}}
+\index{cc@{cc}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily cc = \mbox{\hyperlink{error__analysis_8m_a7004a299c36e0dff0b0fdc7a4f13c5fb}{cc\+\_\+save}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a880e695eabe2789ef89a7b141d44eed5}\label{error__analysis_8m_a880e695eabe2789ef89a7b141d44eed5}} 
+\index{error\_analysis.m@{error\_analysis.m}!cc\_list@{cc\_list}}
+\index{cc\_list@{cc\_list}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{cc\_list}{cc\_list}}
+{\footnotesize\ttfamily cc\+\_\+list = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{error__analysis_8m_a7004a299c36e0dff0b0fdc7a4f13c5fb}\label{error__analysis_8m_a7004a299c36e0dff0b0fdc7a4f13c5fb}} 
+\index{error\_analysis.m@{error\_analysis.m}!cc\_save@{cc\_save}}
+\index{cc\_save@{cc\_save}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{cc\_save}{cc\_save}}
+{\footnotesize\ttfamily cc\+\_\+save = \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a0d062f92217e4e073995683900fdadcb}\label{error__analysis_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{error\_analysis.m@{error\_analysis.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{error__analysis_8m_afb358f48b1646c750fb9da6c6585be2b}\label{error__analysis_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{error\_analysis.m@{error\_analysis.m}!end@{end}}
+\index{end@{end}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{error__analysis_8m_a72d54db2b27ce046aab6e6a414c407e9}\label{error__analysis_8m_a72d54db2b27ce046aab6e6a414c407e9}} 
+\index{error\_analysis.m@{error\_analysis.m}!fc@{fc}}
+\index{fc@{fc}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{fc}{fc}}
+{\footnotesize\ttfamily fc = \mbox{\hyperlink{error__analysis_8m_ada90763d079be650efe688501a0e0d1d}{fc\+\_\+save}}}
+
+\mbox{\Hypertarget{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}\label{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}} 
+\index{error\_analysis.m@{error\_analysis.m}!fc\_list@{fc\_list}}
+\index{fc\_list@{fc\_list}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{fc\_list}{fc\_list}}
+{\footnotesize\ttfamily fc\+\_\+list = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{error__analysis_8m_ada90763d079be650efe688501a0e0d1d}\label{error__analysis_8m_ada90763d079be650efe688501a0e0d1d}} 
+\index{error\_analysis.m@{error\_analysis.m}!fc\_save@{fc\_save}}
+\index{fc\_save@{fc\_save}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{fc\_save}{fc\_save}}
+{\footnotesize\ttfamily fc\+\_\+save = \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}\label{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}} 
+\index{error\_analysis.m@{error\_analysis.m}!go\_calib\_optim@{go\_calib\_optim}}
+\index{go\_calib\_optim@{go\_calib\_optim}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{go\_calib\_optim}{go\_calib\_optim}}
+{\footnotesize\ttfamily go\+\_\+calib\+\_\+optim}
+
+\mbox{\Hypertarget{error__analysis_8m_ab42c9eadb9f6da518e4bb580fa7f7d31}\label{error__analysis_8m_ab42c9eadb9f6da518e4bb580fa7f7d31}} 
+\index{error\_analysis.m@{error\_analysis.m}!if@{if}}
+\index{if@{if}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily if}
+
+\mbox{\Hypertarget{error__analysis_8m_aa0d59e9a11aa79e15026fec05d972fc7}\label{error__analysis_8m_aa0d59e9a11aa79e15026fec05d972fc7}} 
+\index{error\_analysis.m@{error\_analysis.m}!ind\_active@{ind\_active}}
+\index{ind\_active@{ind\_active}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{ind\_active}{ind\_active}}
+{\footnotesize\ttfamily ind\+\_\+active = \mbox{\hyperlink{error__analysis_8m_a675b6685e1313480b37b7485694576a9}{ind\+\_\+active\+\_\+save}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a675b6685e1313480b37b7485694576a9}\label{error__analysis_8m_a675b6685e1313480b37b7485694576a9}} 
+\index{error\_analysis.m@{error\_analysis.m}!ind\_active\_save@{ind\_active\_save}}
+\index{ind\_active\_save@{ind\_active\_save}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{ind\_active\_save}{ind\_active\_save}}
+{\footnotesize\ttfamily ind\+\_\+active\+\_\+save = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}\label{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}} 
+\index{error\_analysis.m@{error\_analysis.m}!Initialization@{Initialization}}
+\index{Initialization@{Initialization}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{Initialization}{Initialization}}
+{\footnotesize\ttfamily initialization Initialization}
+
+\mbox{\Hypertarget{error__analysis_8m_a0ddbcd223bfdf0e5179301d9b8aed109}\label{error__analysis_8m_a0ddbcd223bfdf0e5179301d9b8aed109}} 
+\index{error\_analysis.m@{error\_analysis.m}!junk@{junk}}
+\index{junk@{junk}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{junk}{junk}}
+{\footnotesize\ttfamily junk = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(1,\mbox{\hyperlink{error__analysis_8m_a8b38833b46884242d34fa7e7eacc488a}{N\+\_\+active}})}
+
+\mbox{\Hypertarget{error__analysis_8m_a737dee4ef8e09247b0da47219bf453ff}\label{error__analysis_8m_a737dee4ef8e09247b0da47219bf453ff}} 
+\index{error\_analysis.m@{error\_analysis.m}!kc@{kc}}
+\index{kc@{kc}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{kc}{kc}}
+{\footnotesize\ttfamily kc = \mbox{\hyperlink{error__analysis_8m_a469180bfe48ce2d048a63077e859354b}{kc\+\_\+save}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a6a8b08a29331123799bfd39a23fc582e}\label{error__analysis_8m_a6a8b08a29331123799bfd39a23fc582e}} 
+\index{error\_analysis.m@{error\_analysis.m}!kc\_list@{kc\_list}}
+\index{kc\_list@{kc\_list}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{kc\_list}{kc\_list}}
+{\footnotesize\ttfamily kc\+\_\+list = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{error__analysis_8m_a469180bfe48ce2d048a63077e859354b}\label{error__analysis_8m_a469180bfe48ce2d048a63077e859354b}} 
+\index{error\_analysis.m@{error\_analysis.m}!kc\_save@{kc\_save}}
+\index{kc\_save@{kc\_save}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{kc\_save}{kc\_save}}
+{\footnotesize\ttfamily kc\+\_\+save = \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}}
+
+\mbox{\Hypertarget{error__analysis_8m_af29949bd63fb009eacab5efd11399e40}\label{error__analysis_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{error\_analysis.m@{error\_analysis.m}!kk@{kk}}
+\index{kk@{kk}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk =1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a30ec4b5ab03426226e08bd6309a70bb8}\label{error__analysis_8m_a30ec4b5ab03426226e08bd6309a70bb8}} 
+\index{error\_analysis.m@{error\_analysis.m}!KK@{KK}}
+\index{KK@{KK}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{KK}{KK}}
+{\footnotesize\ttfamily KK = \mbox{\hyperlink{error__analysis_8m_a3d3a69f15880d664490d1bc1560dae87}{K\+K\+\_\+save}}}
+
+\mbox{\Hypertarget{error__analysis_8m_a3d3a69f15880d664490d1bc1560dae87}\label{error__analysis_8m_a3d3a69f15880d664490d1bc1560dae87}} 
+\index{error\_analysis.m@{error\_analysis.m}!KK\_save@{KK\_save}}
+\index{KK\_save@{KK\_save}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{KK\_save}{KK\_save}}
+{\footnotesize\ttfamily K\+K\+\_\+save = \mbox{\hyperlink{willson__read_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}}}
+
+\mbox{\Hypertarget{error__analysis_8m_ad433454e41644431582e6554dfd197c6}\label{error__analysis_8m_ad433454e41644431582e6554dfd197c6}} 
+\index{error\_analysis.m@{error\_analysis.m}!locations@{locations}}
+\index{locations@{locations}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{locations}{locations}}
+{\footnotesize\ttfamily Restoring the feature locations}
+
+\mbox{\Hypertarget{error__analysis_8m_a5bfe976b69d720a2ec9b7ac1ea797ffd}\label{error__analysis_8m_a5bfe976b69d720a2ec9b7ac1ea797ffd}} 
+\index{error\_analysis.m@{error\_analysis.m}!loop@{loop}}
+\index{loop@{loop}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily The \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} loop}
+
+\mbox{\Hypertarget{error__analysis_8m_a8b38833b46884242d34fa7e7eacc488a}\label{error__analysis_8m_a8b38833b46884242d34fa7e7eacc488a}} 
+\index{error\_analysis.m@{error\_analysis.m}!N\_active@{N\_active}}
+\index{N\_active@{N\_active}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{N\_active}{N\_active}}
+{\footnotesize\ttfamily N\+\_\+active = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{error__analysis_8m_a675b6685e1313480b37b7485694576a9}{ind\+\_\+active\+\_\+save}})}
+
+\mbox{\Hypertarget{error__analysis_8m_adeb17169623f229808d013b484012101}\label{error__analysis_8m_adeb17169623f229808d013b484012101}} 
+\index{error\_analysis.m@{error\_analysis.m}!N\_ima\_active@{N\_ima\_active}}
+\index{N\_ima\_active@{N\_ima\_active}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{N\_ima\_active}{N\_ima\_active}}
+{\footnotesize\ttfamily N\+\_\+ima\+\_\+active = 4}
+
+\mbox{\Hypertarget{error__analysis_8m_a17700fdc1d93e80d02460f1058fb653e}\label{error__analysis_8m_a17700fdc1d93e80d02460f1058fb653e}} 
+\index{error\_analysis.m@{error\_analysis.m}!N\_runs@{N\_runs}}
+\index{N\_runs@{N\_runs}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{N\_runs}{N\_runs}}
+{\footnotesize\ttfamily E\+R\+R\+O\+R\+\_\+\+A\+N\+A\+L\+Y\+S\+IS This simulation helps coputing the acturacies of \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} Run it after the \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} N\+\_\+runs = 200}
+
+\mbox{\Hypertarget{error__analysis_8m_a064967ff2670f3b5f2024e4177e48782}\label{error__analysis_8m_a064967ff2670f3b5f2024e4177e48782}} 
+\index{error\_analysis.m@{error\_analysis.m}!Nkk@{Nkk}}
+\index{Nkk@{Nkk}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{Nkk}{Nkk}}
+{\footnotesize\ttfamily for Nkk = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(y\+\_\+kk,2)}
+
+\mbox{\Hypertarget{error__analysis_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{error__analysis_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{error\_analysis.m@{error\_analysis.m}!return@{return}}
+\index{return@{return}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{error__analysis_8m_a8f9edfc685adde77480d7c98c4a020de}\label{error__analysis_8m_a8f9edfc685adde77480d7c98c4a020de}} 
+\index{error\_analysis.m@{error\_analysis.m}!saving@{saving}}
+\index{saving@{saving}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{saving}{saving}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} saving = 1}
+
+\mbox{\Hypertarget{error__analysis_8m_a268d2ebd8212f29d540791b1143be926}\label{error__analysis_8m_a268d2ebd8212f29d540791b1143be926}} 
+\index{error\_analysis.m@{error\_analysis.m}!string\_save@{string\_save}}
+\index{string\_save@{string\_save}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{string\_save}{string\_save}}
+{\footnotesize\ttfamily for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} string\+\_\+save = \mbox{[}\textquotesingle{}save Calib\+\_\+\+Accuracies\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{run__error__analysis_8m_a019f110db1607b31993d77155c2f2f05}{N\+\_\+ima\+\_\+active}}) \textquotesingle{} \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}} \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} \mbox{\hyperlink{run__error__analysis_8m_a019f110db1607b31993d77155c2f2f05}{N\+\_\+ima\+\_\+active}} \mbox{\hyperlink{error__analysis_8m_a17700fdc1d93e80d02460f1058fb653e}{N\+\_\+runs}} \mbox{\hyperlink{error__analysis_8m_a75073efb40606ac9fe2577210e8126d4}{active\+\_\+images\+\_\+list}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} \mbox{\hyperlink{error__analysis_8m_afe43e03891ec5669da4a9cd414987de1}{fc\+\_\+list}} \mbox{\hyperlink{error__analysis_8m_a880e695eabe2789ef89a7b141d44eed5}{cc\+\_\+list}} \mbox{\hyperlink{error__analysis_8m_a6a8b08a29331123799bfd39a23fc582e}{kc\+\_\+list}}\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{error__analysis_8m_a7afc17458780fd4f38cf4b53da58342e}\label{error__analysis_8m_a7afc17458780fd4f38cf4b53da58342e}} 
+\index{error\_analysis.m@{error\_analysis.m}!sx@{sx}}
+\index{sx@{sx}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{sx}{sx}}
+{\footnotesize\ttfamily sx = median(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(ex(1,\+:)))$\ast$1.\+4836}
+
+\mbox{\Hypertarget{error__analysis_8m_a22828bc75d634212ef406fa49c02e2ca}\label{error__analysis_8m_a22828bc75d634212ef406fa49c02e2ca}} 
+\index{error\_analysis.m@{error\_analysis.m}!sy@{sy}}
+\index{sy@{sy}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{sy}{sy}}
+{\footnotesize\ttfamily sy = median(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(ex(2,\+:)))$\ast$1.\+4836}
+
+\mbox{\Hypertarget{error__analysis_8m_a186c4a04d234f3fd05e12d57cc8ede65}\label{error__analysis_8m_a186c4a04d234f3fd05e12d57cc8ede65}} 
+\index{error\_analysis.m@{error\_analysis.m}!x\_kk\_new@{x\_kk\_new}}
+\index{x\_kk\_new@{x\_kk\_new}!error\_analysis.m@{error\_analysis.m}}
+\doxysubsubsection{\texorpdfstring{x\_kk\_new}{x\_kk\_new}}
+{\footnotesize\ttfamily x\+\_\+kk\+\_\+new = y\+\_\+kk + \mbox{[}\mbox{\hyperlink{willson__read_8m_a7afc17458780fd4f38cf4b53da58342e}{sx}} $\ast$ \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(1,\mbox{\hyperlink{error__analysis_8m_a064967ff2670f3b5f2024e4177e48782}{Nkk}})}
+

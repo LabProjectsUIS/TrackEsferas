@@ -1,0 +1,182 @@
+\hypertarget{_un_warp_plane_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/\+Un\+Warp\+Plane.m File Reference}
+\label{_un_warp_plane_8m}\index{D:/TrackEsferas/NavarQA/calib/UnWarpPlane.m@{D:/TrackEsferas/NavarQA/calib/UnWarpPlane.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}} (3)$<$ 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a765191e71ae4c3fa748f983630fcb861}{function}} \mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_aef510dc247276e2e3c40d648bab6aac2}{u\+\_\+hori}}, \mbox{\hyperlink{_un_warp_plane_8m_af784efc513f721ddb66344cdb7df1f81}{u\+\_\+vert}}\mbox{]} = Un\+Warp\+Plane(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}},\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}},\mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}},\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}})
+\item 
+Recovers the two directions of the rectangular patch x1x2x3x4 \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the origin \mbox{\hyperlink{_un_warp_plane_8m_a60bfb22881d8ade0a15adeaa7a363c23}{point}}
+\item 
+Recovers the two directions of the rectangular patch x1x2x3x4 \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the origin ie any \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} of planar coordinate(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}, \mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}}) \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \% rectangular patch will be projected \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} plane \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} \mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}} = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}(\+:,3)
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}} = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}(\+:,2)
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_ac39b33361203e68d7820336db48d45e6}{x1}} = x1(\+:,1)
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+Image \mbox{\hyperlink{_un_warp_plane_8m_a3df44c8cb66806f4c9b6508728467aa6}{Projection}}
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_ae36be53f4ab8809ba6d620f2b839ea6c}{L2}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}},\mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}})
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_ac35a35eb6d977940113e96d3e0b1c036}{L3}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}},\mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}})
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a1c22cad3c8d355b552c5ecb7e602ba29}{L4}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}},\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}})
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a703f8bb6199899db9141d2b1fbadb398}{V2}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_un_warp_plane_8m_ac35a35eb6d977940113e96d3e0b1c036}{L3}},\mbox{\hyperlink{_un_warp_plane_8m_a1c22cad3c8d355b552c5ecb7e602ba29}{L4}})
+\item 
+Horizon \mbox{\hyperlink{_un_warp_plane_8m_ad4aef594687d17789ed49f3ebbc2195d}{line}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_un_warp_plane_8m_afaafc315b95987fc2b071bcd8f698b81}{H}} = -\/H
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}} = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}} / \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}},\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}})
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a84d89d0b9be279602a35e0705eab274f}{X2}} = \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}} / \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}},\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}})
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a6a0bad581d349dc63425f540a6ffdd31}{X3}} = \mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}} / \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}},\mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}})
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a216f111711fde76302c2bf153eeff612}{X4}} = \mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}} / \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}},\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}})
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_acec6d8ad52a28972fa74e071c1a63b6a}{scale}} = \mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}}(3)
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_aef510dc247276e2e3c40d648bab6aac2}{u\+\_\+hori}} = \mbox{\hyperlink{_un_warp_plane_8m_a84d89d0b9be279602a35e0705eab274f}{X2}} -\/ \mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}}
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_af784efc513f721ddb66344cdb7df1f81}{u\+\_\+vert}} = \mbox{\hyperlink{_un_warp_plane_8m_a216f111711fde76302c2bf153eeff612}{X4}} -\/ \mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}\label{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!H@{H}}
+\index{H@{H}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{H()}{H()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} H (\begin{DoxyParamCaption}\item[{3}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_un_warp_plane_8m_afb358f48b1646c750fb9da6c6585be2b}\label{_un_warp_plane_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!end@{end}}
+\index{end@{end}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a765191e71ae4c3fa748f983630fcb861}\label{_un_warp_plane_8m_a765191e71ae4c3fa748f983630fcb861}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!function@{function}}
+\index{function@{function}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_aef510dc247276e2e3c40d648bab6aac2}{u\+\_\+hori}}, \mbox{\hyperlink{_un_warp_plane_8m_af784efc513f721ddb66344cdb7df1f81}{u\+\_\+vert}}\mbox{]} = Un\+Warp\+Plane(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}},\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}},\mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}},\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}})}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_afaafc315b95987fc2b071bcd8f698b81}\label{_un_warp_plane_8m_afaafc315b95987fc2b071bcd8f698b81}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!H@{H}}
+\index{H@{H}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily H = -\/H}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_ae36be53f4ab8809ba6d620f2b839ea6c}\label{_un_warp_plane_8m_ae36be53f4ab8809ba6d620f2b839ea6c}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!L2@{L2}}
+\index{L2@{L2}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{L2}{L2}}
+{\footnotesize\ttfamily Vanishing L2 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}},\mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}})}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_ac35a35eb6d977940113e96d3e0b1c036}\label{_un_warp_plane_8m_ac35a35eb6d977940113e96d3e0b1c036}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!L3@{L3}}
+\index{L3@{L3}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{L3}{L3}}
+{\footnotesize\ttfamily L3 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}},\mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}})}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a1c22cad3c8d355b552c5ecb7e602ba29}\label{_un_warp_plane_8m_a1c22cad3c8d355b552c5ecb7e602ba29}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!L4@{L4}}
+\index{L4@{L4}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{L4}{L4}}
+{\footnotesize\ttfamily L4 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}},\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}})}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_ad4aef594687d17789ed49f3ebbc2195d}\label{_un_warp_plane_8m_ad4aef594687d17789ed49f3ebbc2195d}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!line@{line}}
+\index{line@{line}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily Horizon line}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a60bfb22881d8ade0a15adeaa7a363c23}\label{_un_warp_plane_8m_a60bfb22881d8ade0a15adeaa7a363c23}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!point@{point}}
+\index{point@{point}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{point}{point}}
+{\footnotesize\ttfamily Vanishing point}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a3df44c8cb66806f4c9b6508728467aa6}\label{_un_warp_plane_8m_a3df44c8cb66806f4c9b6508728467aa6}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!Projection@{Projection}}
+\index{Projection@{Projection}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{Projection}{Projection}}
+{\footnotesize\ttfamily Image Projection}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_acec6d8ad52a28972fa74e071c1a63b6a}\label{_un_warp_plane_8m_acec6d8ad52a28972fa74e071c1a63b6a}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!scale@{scale}}
+\index{scale@{scale}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily scale = \mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}}(3)}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_aef510dc247276e2e3c40d648bab6aac2}\label{_un_warp_plane_8m_aef510dc247276e2e3c40d648bab6aac2}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!u\_hori@{u\_hori}}
+\index{u\_hori@{u\_hori}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{u\_hori}{u\_hori}}
+{\footnotesize\ttfamily u\+\_\+hori = \mbox{\hyperlink{_un_warp_plane_8m_a84d89d0b9be279602a35e0705eab274f}{X2}} -\/ \mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}}}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_af784efc513f721ddb66344cdb7df1f81}\label{_un_warp_plane_8m_af784efc513f721ddb66344cdb7df1f81}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!u\_vert@{u\_vert}}
+\index{u\_vert@{u\_vert}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{u\_vert}{u\_vert}}
+{\footnotesize\ttfamily u\+\_\+vert = \mbox{\hyperlink{_un_warp_plane_8m_a216f111711fde76302c2bf153eeff612}{X4}} -\/ \mbox{\hyperlink{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}{X1}}}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a703f8bb6199899db9141d2b1fbadb398}\label{_un_warp_plane_8m_a703f8bb6199899db9141d2b1fbadb398}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!V2@{V2}}
+\index{V2@{V2}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{V2}{V2}}
+{\footnotesize\ttfamily Horizon V2 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_un_warp_plane_8m_ac35a35eb6d977940113e96d3e0b1c036}{L3}},\mbox{\hyperlink{_un_warp_plane_8m_a1c22cad3c8d355b552c5ecb7e602ba29}{L4}})}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_ac39b33361203e68d7820336db48d45e6}\label{_un_warp_plane_8m_ac39b33361203e68d7820336db48d45e6}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!x1@{x1}}
+\index{x1@{x1}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily x1 = x1(\+:,1)}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}\label{_un_warp_plane_8m_a2b2abdaf89992bbf470c74ca8de7cd62}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!X1@{X1}}
+\index{X1@{X1}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{X1}{X1}}
+{\footnotesize\ttfamily X1 = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}} / \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}},\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}})}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}\label{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!x2@{x2}}
+\index{x2@{x2}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{x2}{x2}}
+{\footnotesize\ttfamily Image x2 = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}(\+:,2)}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a84d89d0b9be279602a35e0705eab274f}\label{_un_warp_plane_8m_a84d89d0b9be279602a35e0705eab274f}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!X2@{X2}}
+\index{X2@{X2}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{X2}{X2}}
+{\footnotesize\ttfamily X2 = \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}} / \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}},\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}})}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}\label{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!x3@{x3}}
+\index{x3@{x3}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{x3}{x3}}
+{\footnotesize\ttfamily Recovers the two directions of the rectangular patch x1x2x3x4 \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the origin ie any \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} of planar coordinate (\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}},\mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}}) \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \% rectangular patch will be projected \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} plane \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} x3 = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}(\+:,3)}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a6a0bad581d349dc63425f540a6ffdd31}\label{_un_warp_plane_8m_a6a0bad581d349dc63425f540a6ffdd31}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!X3@{X3}}
+\index{X3@{X3}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{X3}{X3}}
+{\footnotesize\ttfamily X3 = \mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}} / \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}},\mbox{\hyperlink{_un_warp_plane_8m_a30f641f4abb6755a621780dcf702289f}{x3}})}
+
+\mbox{\Hypertarget{_un_warp_plane_8m_a216f111711fde76302c2bf153eeff612}\label{_un_warp_plane_8m_a216f111711fde76302c2bf153eeff612}} 
+\index{UnWarpPlane.m@{UnWarpPlane.m}!X4@{X4}}
+\index{X4@{X4}!UnWarpPlane.m@{UnWarpPlane.m}}
+\doxysubsubsection{\texorpdfstring{X4}{X4}}
+{\footnotesize\ttfamily X4 = \mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}} / \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}},\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}})}
+

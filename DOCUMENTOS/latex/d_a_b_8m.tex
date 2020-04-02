@@ -1,0 +1,134 @@
+\hypertarget{d_a_b_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/d\+AB.m File Reference}
+\label{d_a_b_8m}\index{D:/TrackEsferas/NavarQA/calib/dAB.m@{D:/TrackEsferas/NavarQA/calib/dAB.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{d_a_b_8m_a73adeff62e48dae451205871a72bd6a8}{error}} (\textquotesingle{} \mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}} and \mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}} must have equal inner dimensions\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{d_a_b_8m_a66cb625ee6e17f26266ff1cfc6c72690}{issparse}} (\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}})$\vert$issparse(\mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}})$\vert$\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}} $\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}} $\ast$\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}} $\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}} $>$625
+\item 
+\mbox{\hyperlink{d_a_b_8m_aeaa62f31243b669479b97afbbfcfbe87}{d\+A\+BdA}} (\mbox{\hyperlink{visualize__distortions_8m_ae24f77ff12cae6a0738f32d207c5bfdd}{ij}}, \mbox{\hyperlink{d_a_b_8m_a4cdcf79e5100eb32b274adaba96bdf09}{kj}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{d_a_b_8m_af19760117b36235a85acf9cddc59a8e6}{function}} \mbox{[}\mbox{\hyperlink{d_a_b_8m_aeaa62f31243b669479b97afbbfcfbe87}{d\+A\+BdA}}, \mbox{\hyperlink{d_a_b_8m_abb9f4bd76d24b028c364cbe51b3dea76}{d\+A\+BdB}}\mbox{]} = d\+AB(\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}},\mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}})
+\item 
+returns \mbox{\hyperlink{d_a_b_8m_aeb52d275ef789366074e31229a2f64c9}{\+\_\+\+\_\+pad13\+\_\+\+\_\+}} = d\+AB(\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}},\mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}})
+\item 
+returns \mbox{\hyperlink{d_a_b_8m_a48b7185d2e7ea9bd945366ad813d0985}{n}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{d_a_b_8m_a09e7ccbb924cd51f5f71368b44360200}{n2}} = \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}
+\item 
+\mbox{\hyperlink{d_a_b_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{d_a_b_8m_a5f19033f3389d2dde8f392570acbf38c}{d\+A\+BdA}} =spalloc(\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}},\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})
+\item 
+for \mbox{\hyperlink{d_a_b_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}} =1\+:\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}
+\item 
+for for \mbox{\hyperlink{d_a_b_8m_aed5077f9061202364a037430da73bb80}{j}} =1\+:\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}
+\item 
+for for \mbox{\hyperlink{d_a_b_8m_ae24f77ff12cae6a0738f32d207c5bfdd}{ij}} = \mbox{\hyperlink{stereo__gui_8m_aed5077f9061202364a037430da73bb80}{j}} + (\mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}-\/1)$\ast$\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}
+\item 
+for \mbox{\hyperlink{d_a_b_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}} =1\+:\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}
+\item 
+for \mbox{\hyperlink{d_a_b_8m_a4cdcf79e5100eb32b274adaba96bdf09}{kj}} = \mbox{\hyperlink{stereo__gui_8m_aed5077f9061202364a037430da73bb80}{j}} + (\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}-\/1)$\ast$\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{d_a_b_8m_abb9f4bd76d24b028c364cbe51b3dea76}{d\+A\+BdB}} =spalloc(\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}},\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}},\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{d_a_b_8m_aeaa62f31243b669479b97afbbfcfbe87}\label{d_a_b_8m_aeaa62f31243b669479b97afbbfcfbe87}} 
+\index{dAB.m@{dAB.m}!dABdA@{dABdA}}
+\index{dABdA@{dABdA}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{dABdA()}{dABdA()}}
+{\footnotesize\ttfamily d\+A\+BdA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ae24f77ff12cae6a0738f32d207c5bfdd}{ij}}}]{,  }\item[{\mbox{\hyperlink{d_a_b_8m_a4cdcf79e5100eb32b274adaba96bdf09}{kj}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{d_a_b_8m_a73adeff62e48dae451205871a72bd6a8}\label{d_a_b_8m_a73adeff62e48dae451205871a72bd6a8}} 
+\index{dAB.m@{dAB.m}!error@{error}}
+\index{error@{error}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} error (\begin{DoxyParamCaption}\item[{\textquotesingle{} \mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}} and \mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}} must have equal inner dimensions\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{d_a_b_8m_a66cb625ee6e17f26266ff1cfc6c72690}\label{d_a_b_8m_a66cb625ee6e17f26266ff1cfc6c72690}} 
+\index{dAB.m@{dAB.m}!issparse@{issparse}}
+\index{issparse@{issparse}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{issparse()}{issparse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} issparse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{d_a_b_8m_aeb52d275ef789366074e31229a2f64c9}\label{d_a_b_8m_aeb52d275ef789366074e31229a2f64c9}} 
+\index{dAB.m@{dAB.m}!\_\_pad13\_\_@{\_\_pad13\_\_}}
+\index{\_\_pad13\_\_@{\_\_pad13\_\_}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad13\_\_}{\_\_pad13\_\_}}
+{\footnotesize\ttfamily returns \+\_\+\+\_\+pad13\+\_\+\+\_\+ = d\+AB(\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}},\mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}})}
+
+\mbox{\Hypertarget{d_a_b_8m_a5f19033f3389d2dde8f392570acbf38c}\label{d_a_b_8m_a5f19033f3389d2dde8f392570acbf38c}} 
+\index{dAB.m@{dAB.m}!dABdA@{dABdA}}
+\index{dABdA@{dABdA}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{dABdA}{dABdA}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} d\+A\+BdA =spalloc(\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}},\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})}
+
+\mbox{\Hypertarget{d_a_b_8m_abb9f4bd76d24b028c364cbe51b3dea76}\label{d_a_b_8m_abb9f4bd76d24b028c364cbe51b3dea76}} 
+\index{dAB.m@{dAB.m}!dABdB@{dABdB}}
+\index{dABdB@{dABdB}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{dABdB}{dABdB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} d\+A\+BdB =spalloc(\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}},\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}},\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}$\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})}
+
+\mbox{\Hypertarget{d_a_b_8m_afb358f48b1646c750fb9da6c6585be2b}\label{d_a_b_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{dAB.m@{dAB.m}!end@{end}}
+\index{end@{end}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{d_a_b_8m_af19760117b36235a85acf9cddc59a8e6}\label{d_a_b_8m_af19760117b36235a85acf9cddc59a8e6}} 
+\index{dAB.m@{dAB.m}!function@{function}}
+\index{function@{function}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{d_a_b_8m_aeaa62f31243b669479b97afbbfcfbe87}{d\+A\+BdA}}, \mbox{\hyperlink{d_a_b_8m_abb9f4bd76d24b028c364cbe51b3dea76}{d\+A\+BdB}}\mbox{]} = d\+AB(\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}},\mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}})}
+
+\mbox{\Hypertarget{d_a_b_8m_a6f6ccfcf58b31cb6412107d9d5281426}\label{d_a_b_8m_a6f6ccfcf58b31cb6412107d9d5281426}} 
+\index{dAB.m@{dAB.m}!i@{i}}
+\index{i@{i}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily for i =1\+:\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}}
+
+\mbox{\Hypertarget{d_a_b_8m_ae24f77ff12cae6a0738f32d207c5bfdd}\label{d_a_b_8m_ae24f77ff12cae6a0738f32d207c5bfdd}} 
+\index{dAB.m@{dAB.m}!ij@{ij}}
+\index{ij@{ij}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{ij}{ij}}
+{\footnotesize\ttfamily \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} ij = \mbox{\hyperlink{stereo__gui_8m_aed5077f9061202364a037430da73bb80}{j}} + (\mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}-\/1)$\ast$\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}}
+
+\mbox{\Hypertarget{d_a_b_8m_aed5077f9061202364a037430da73bb80}\label{d_a_b_8m_aed5077f9061202364a037430da73bb80}} 
+\index{dAB.m@{dAB.m}!j@{j}}
+\index{j@{j}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily for for j =1\+:\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}}
+
+\mbox{\Hypertarget{d_a_b_8m_a1c73327b2882639bc9f5e416bb3cc7ac}\label{d_a_b_8m_a1c73327b2882639bc9f5e416bb3cc7ac}} 
+\index{dAB.m@{dAB.m}!k@{k}}
+\index{k@{k}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily for k =1\+:\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}}
+
+\mbox{\Hypertarget{d_a_b_8m_a4cdcf79e5100eb32b274adaba96bdf09}\label{d_a_b_8m_a4cdcf79e5100eb32b274adaba96bdf09}} 
+\index{dAB.m@{dAB.m}!kj@{kj}}
+\index{kj@{kj}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{kj}{kj}}
+{\footnotesize\ttfamily for kj = \mbox{\hyperlink{stereo__gui_8m_aed5077f9061202364a037430da73bb80}{j}} + (\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}-\/1)$\ast$\mbox{\hyperlink{downsample_8m_ac483f6ce851c9ecd9fb835ff7551737c}{p}}}
+
+\mbox{\Hypertarget{d_a_b_8m_a48b7185d2e7ea9bd945366ad813d0985}\label{d_a_b_8m_a48b7185d2e7ea9bd945366ad813d0985}} 
+\index{dAB.m@{dAB.m}!n@{n}}
+\index{n@{n}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily returns n = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}})}
+
+\mbox{\Hypertarget{d_a_b_8m_a09e7ccbb924cd51f5f71368b44360200}\label{d_a_b_8m_a09e7ccbb924cd51f5f71368b44360200}} 
+\index{dAB.m@{dAB.m}!n2@{n2}}
+\index{n2@{n2}!dAB.m@{dAB.m}}
+\doxysubsubsection{\texorpdfstring{n2}{n2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} n2 = \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}}
+

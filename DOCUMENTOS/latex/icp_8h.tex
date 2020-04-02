@@ -1,0 +1,174 @@
+\hypertarget{icp_8h}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/icp.h File Reference}
+\label{icp_8h}\index{D:/TrackEsferas/NavarQA/icp.h@{D:/TrackEsferas/NavarQA/icp.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include $<$pcl/point\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/point\+\_\+cloud.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/common/time.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/console/print.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/features/normal\+\_\+3d.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/features/fpfh.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/filters/filter.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/filters/radius\+\_\+outlier\+\_\+removal.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/filters/voxel\+\_\+grid.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/registration/icp\+\_\+nl.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/registration/sample\+\_\+consensus\+\_\+prerejective.\+h$>$}\newline
+{\ttfamily \#include $<$pcl/visualization/cloud\+\_\+viewer.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}opencv\textbackslash{}cv.\+hpp\char`\"{}}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef pcl\+::\+Point\+Normal \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}
+\item 
+typedef pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}} $>$ \mbox{\hyperlink{icp_8h_ad93204a7f4525b1c5996b7fcd1288882}{Point\+CloudT}}
+\item 
+typedef pcl\+::\+F\+P\+F\+H\+Signature33 \mbox{\hyperlink{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}{FeatureT}}
+\item 
+typedef pcl\+::\+F\+P\+F\+H\+Estimation$<$ \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}{FeatureT}} $>$ \mbox{\hyperlink{icp_8h_a81ea2857fb11a1371f8f85910c0c6567}{Feature\+EstimationT}}
+\item 
+typedef pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}{FeatureT}} $>$ \mbox{\hyperlink{icp_8h_a1d57b3efb32bcb80b7d9eee199ec129c}{Feature\+CloudT}}
+\item 
+typedef pcl\+::\+Radius\+Outlier\+Removal$<$ \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}} $>$ \mbox{\hyperlink{icp_8h_a8a252ebeb0a59670d57f27a59e90b63f}{Radius\+Outlier\+RemovalT}}
+\item 
+typedef pcl\+::\+Voxel\+Grid$<$ \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}} $>$ \mbox{\hyperlink{icp_8h_abc1c9327acafcd9444aa5f5dc2e48c7f}{Voxel\+GridT}}
+\item 
+typedef pcl\+::\+Normal\+Estimation$<$ \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}} $>$ \mbox{\hyperlink{icp_8h_af9f7d40f18e05df27c0cbfcf91815414}{Normal\+EstimationT}}
+\item 
+typedef pcl\+::search\+::\+Kd\+Tree$<$ \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}} $>$ \mbox{\hyperlink{icp_8h_af6e3801e4a90f10b0de111ee1fcb574c}{Kd\+TreeT}}
+\item 
+typedef pcl\+::\+Sample\+Consensus\+Prerejective$<$ \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}{FeatureT}} $>$ \mbox{\hyperlink{icp_8h_a49128cba5f2855fec1a9d8f054a3a896}{Sample\+Consensus\+PrerejectiveT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{icp_8h_acfddc67dd108d18922a84f03726f2029}{read\+\_\+file}} (const std\+::string \&\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}, int numel, Point\+Cloud\+T\+::\+Ptr cloud)
+\item 
+void \mbox{\hyperlink{icp_8h_add5a1848feb6a9aa24d9cb29fb3d1bdc}{bring\+\_\+cloud\+\_\+near}} (Point\+Cloud\+T\+::\+Ptr object, Point\+Cloud\+T\+::\+Ptr scene, Eigen\+::\+Matrix4f \&transformation, int \mbox{\hyperlink{recomp__corner__calib__no__read_8m_ad354302590c04bf615eaee9f3294e32f}{flag}})
+\item 
+void \mbox{\hyperlink{icp_8h_a42ce499a27faae2aa4130d236a19733a}{do\+\_\+icp}} (Point\+Cloud\+T\+::\+Ptr object, Point\+Cloud\+T\+::\+Ptr scene, Eigen\+::\+Matrix4f \&transformation)
+\item 
+void \mbox{\hyperlink{icp_8h_aec59e8c716772606624c6820dff4dee2}{run\+\_\+icp}} (const std\+::string \&source\+\_\+file, const std\+::string \&target\+\_\+file, int numel\+\_\+source, int numel\+\_\+target, cv\+::\+Mat\+\_\+$<$ double $>$ \&cloud\+\_\+centroid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{icp_8h_a1d57b3efb32bcb80b7d9eee199ec129c}\label{icp_8h_a1d57b3efb32bcb80b7d9eee199ec129c}} 
+\index{icp.h@{icp.h}!FeatureCloudT@{FeatureCloudT}}
+\index{FeatureCloudT@{FeatureCloudT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{FeatureCloudT}{FeatureCloudT}}
+{\footnotesize\ttfamily typedef pcl\+::\+Point\+Cloud$<$\mbox{\hyperlink{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}{FeatureT}}$>$ \mbox{\hyperlink{icp_8h_a1d57b3efb32bcb80b7d9eee199ec129c}{Feature\+CloudT}}}
+
+\mbox{\Hypertarget{icp_8h_a81ea2857fb11a1371f8f85910c0c6567}\label{icp_8h_a81ea2857fb11a1371f8f85910c0c6567}} 
+\index{icp.h@{icp.h}!FeatureEstimationT@{FeatureEstimationT}}
+\index{FeatureEstimationT@{FeatureEstimationT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{FeatureEstimationT}{FeatureEstimationT}}
+{\footnotesize\ttfamily typedef pcl\+::\+F\+P\+F\+H\+Estimation$<$\mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}{FeatureT}}$>$ \mbox{\hyperlink{icp_8h_a81ea2857fb11a1371f8f85910c0c6567}{Feature\+EstimationT}}}
+
+\mbox{\Hypertarget{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}\label{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}} 
+\index{icp.h@{icp.h}!FeatureT@{FeatureT}}
+\index{FeatureT@{FeatureT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{FeatureT}{FeatureT}}
+{\footnotesize\ttfamily typedef pcl\+::\+F\+P\+F\+H\+Signature33 \mbox{\hyperlink{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}{FeatureT}}}
+
+\mbox{\Hypertarget{icp_8h_af6e3801e4a90f10b0de111ee1fcb574c}\label{icp_8h_af6e3801e4a90f10b0de111ee1fcb574c}} 
+\index{icp.h@{icp.h}!KdTreeT@{KdTreeT}}
+\index{KdTreeT@{KdTreeT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{KdTreeT}{KdTreeT}}
+{\footnotesize\ttfamily typedef pcl\+::search\+::\+Kd\+Tree$<$\mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}$>$ \mbox{\hyperlink{icp_8h_af6e3801e4a90f10b0de111ee1fcb574c}{Kd\+TreeT}}}
+
+\mbox{\Hypertarget{icp_8h_af9f7d40f18e05df27c0cbfcf91815414}\label{icp_8h_af9f7d40f18e05df27c0cbfcf91815414}} 
+\index{icp.h@{icp.h}!NormalEstimationT@{NormalEstimationT}}
+\index{NormalEstimationT@{NormalEstimationT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{NormalEstimationT}{NormalEstimationT}}
+{\footnotesize\ttfamily typedef pcl\+::\+Normal\+Estimation$<$\mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}$>$ \mbox{\hyperlink{icp_8h_af9f7d40f18e05df27c0cbfcf91815414}{Normal\+EstimationT}}}
+
+\mbox{\Hypertarget{icp_8h_ad93204a7f4525b1c5996b7fcd1288882}\label{icp_8h_ad93204a7f4525b1c5996b7fcd1288882}} 
+\index{icp.h@{icp.h}!PointCloudT@{PointCloudT}}
+\index{PointCloudT@{PointCloudT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{PointCloudT}{PointCloudT}}
+{\footnotesize\ttfamily typedef pcl\+::\+Point\+Cloud$<$\mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}$>$ \mbox{\hyperlink{icp_8h_ad93204a7f4525b1c5996b7fcd1288882}{Point\+CloudT}}}
+
+\mbox{\Hypertarget{icp_8h_addedd5f094ff6a9309d30e396aa0514b}\label{icp_8h_addedd5f094ff6a9309d30e396aa0514b}} 
+\index{icp.h@{icp.h}!PointNT@{PointNT}}
+\index{PointNT@{PointNT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{PointNT}{PointNT}}
+{\footnotesize\ttfamily typedef pcl\+::\+Point\+Normal \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}}
+
+\mbox{\Hypertarget{icp_8h_a8a252ebeb0a59670d57f27a59e90b63f}\label{icp_8h_a8a252ebeb0a59670d57f27a59e90b63f}} 
+\index{icp.h@{icp.h}!RadiusOutlierRemovalT@{RadiusOutlierRemovalT}}
+\index{RadiusOutlierRemovalT@{RadiusOutlierRemovalT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{RadiusOutlierRemovalT}{RadiusOutlierRemovalT}}
+{\footnotesize\ttfamily typedef pcl\+::\+Radius\+Outlier\+Removal$<$\mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}$>$ \mbox{\hyperlink{icp_8h_a8a252ebeb0a59670d57f27a59e90b63f}{Radius\+Outlier\+RemovalT}}}
+
+\mbox{\Hypertarget{icp_8h_a49128cba5f2855fec1a9d8f054a3a896}\label{icp_8h_a49128cba5f2855fec1a9d8f054a3a896}} 
+\index{icp.h@{icp.h}!SampleConsensusPrerejectiveT@{SampleConsensusPrerejectiveT}}
+\index{SampleConsensusPrerejectiveT@{SampleConsensusPrerejectiveT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{SampleConsensusPrerejectiveT}{SampleConsensusPrerejectiveT}}
+{\footnotesize\ttfamily typedef pcl\+::\+Sample\+Consensus\+Prerejective$<$\mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}, \mbox{\hyperlink{icp_8h_a0247fab5667a82dc7d876c2944fb1a82}{FeatureT}}$>$ \mbox{\hyperlink{icp_8h_a49128cba5f2855fec1a9d8f054a3a896}{Sample\+Consensus\+PrerejectiveT}}}
+
+\mbox{\Hypertarget{icp_8h_abc1c9327acafcd9444aa5f5dc2e48c7f}\label{icp_8h_abc1c9327acafcd9444aa5f5dc2e48c7f}} 
+\index{icp.h@{icp.h}!VoxelGridT@{VoxelGridT}}
+\index{VoxelGridT@{VoxelGridT}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{VoxelGridT}{VoxelGridT}}
+{\footnotesize\ttfamily typedef pcl\+::\+Voxel\+Grid$<$\mbox{\hyperlink{icp_8h_addedd5f094ff6a9309d30e396aa0514b}{Point\+NT}}$>$ \mbox{\hyperlink{icp_8h_abc1c9327acafcd9444aa5f5dc2e48c7f}{Voxel\+GridT}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{icp_8h_add5a1848feb6a9aa24d9cb29fb3d1bdc}\label{icp_8h_add5a1848feb6a9aa24d9cb29fb3d1bdc}} 
+\index{icp.h@{icp.h}!bring\_cloud\_near@{bring\_cloud\_near}}
+\index{bring\_cloud\_near@{bring\_cloud\_near}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{bring\_cloud\_near()}{bring\_cloud\_near()}}
+{\footnotesize\ttfamily void bring\+\_\+cloud\+\_\+near (\begin{DoxyParamCaption}\item[{Point\+Cloud\+T\+::\+Ptr}]{object,  }\item[{Point\+Cloud\+T\+::\+Ptr}]{scene,  }\item[{Eigen\+::\+Matrix4f \&}]{transformation,  }\item[{int}]{flag }\end{DoxyParamCaption})}
+
+Acerca un primer cuerpo rígido a un segundo. 
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto rígido a acercar. \\
+\hline
+{\em scene} & objeto de referencia. @out transformation matriz de transformación. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{icp_8h_a42ce499a27faae2aa4130d236a19733a}\label{icp_8h_a42ce499a27faae2aa4130d236a19733a}} 
+\index{icp.h@{icp.h}!do\_icp@{do\_icp}}
+\index{do\_icp@{do\_icp}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{do\_icp()}{do\_icp()}}
+{\footnotesize\ttfamily void do\+\_\+icp (\begin{DoxyParamCaption}\item[{Point\+Cloud\+T\+::\+Ptr}]{object,  }\item[{Point\+Cloud\+T\+::\+Ptr}]{scene,  }\item[{Eigen\+::\+Matrix4f \&}]{transformation }\end{DoxyParamCaption})}
+
+Alinea un objeto rígido a una escena utilizando una variante del algoritmo I\+CP 
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto rígido. \\
+\hline
+{\em scene} & escena. @out transformation matriz de transformación. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{icp_8h_acfddc67dd108d18922a84f03726f2029}\label{icp_8h_acfddc67dd108d18922a84f03726f2029}} 
+\index{icp.h@{icp.h}!read\_file@{read\_file}}
+\index{read\_file@{read\_file}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{read\_file()}{read\_file()}}
+{\footnotesize\ttfamily void read\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{int}]{numel,  }\item[{Point\+Cloud\+T\+::\+Ptr}]{cloud }\end{DoxyParamCaption})}
+
+Carga datos en bruto a una nube de puntos desde un archivo de texto sin un formato específico. 
+\begin{DoxyParams}{Parameters}
+{\em file} & nombre del archivo. \\
+\hline
+{\em numel} & número de elementos. @out cloud nube de puntos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{icp_8h_aec59e8c716772606624c6820dff4dee2}\label{icp_8h_aec59e8c716772606624c6820dff4dee2}} 
+\index{icp.h@{icp.h}!run\_icp@{run\_icp}}
+\index{run\_icp@{run\_icp}!icp.h@{icp.h}}
+\doxysubsubsection{\texorpdfstring{run\_icp()}{run\_icp()}}
+{\footnotesize\ttfamily void run\+\_\+icp (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source\+\_\+file,  }\item[{const std\+::string \&}]{target\+\_\+file,  }\item[{int}]{numel\+\_\+source,  }\item[{int}]{numel\+\_\+target,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$ \&}]{cloud\+\_\+centroid }\end{DoxyParamCaption})}
+
+Acerca una nube de puntos lejana a otra de referencia. 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+file} & archivo nube 1 (a acercar). \\
+\hline
+{\em target\+\_\+file} & archivo nube 2 (de referencia). \\
+\hline
+{\em numel\+\_\+source} & número de elementos de la nube 1. \\
+\hline
+{\em numel\+\_\+target} & número de elementos de la nube 2. \\
+\hline
+\end{DoxyParams}

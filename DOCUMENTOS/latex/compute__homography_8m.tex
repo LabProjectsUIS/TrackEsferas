@@ -1,0 +1,491 @@
+\hypertarget{compute__homography_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/compute\+\_\+homography.m File Reference}
+\label{compute__homography_8m}\index{D:/TrackEsferas/NavarQA/calib/compute\_homography.m@{D:/TrackEsferas/NavarQA/calib/compute\_homography.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the total number of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} larger optimize the \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}} by minimizing the reprojection \mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}}(in the least \mbox{\hyperlink{click__ima__calib3_d_8m_a157441835dd2f451ee6aec60b4a9acef}{squares}} \mbox{\hyperlink{comp__error__calib__fisheye_8m_abb15673642fe34932c402078811ef2ff}{sense}}). \% \% \%Important functions called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} \mbox{\hyperlink{rigid__motion_8m_a3c8c189b0d4d2a89443cae4b60fe8ad6}{program}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__homography_8m_a99ef8f8e776692f374f4e1d8afeb6f98}{size}} (\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}, 1)$<$ 3
+\item 
+\mbox{\hyperlink{compute__homography_8m_ae865728603594350ea6b219db66bbe42}{ones}} (1, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})\mbox{]}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__homography_8m_a79b5f22ba54982150d73d4319114f880}{size}} (\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}, 1)$<$ 3
+\item 
+id \mbox{\hyperlink{compute__homography_8m_ae5abbd88564e3d6c36bbc07e632cacbc}{scyy}} ()
+\item 
+Compute the \mbox{\hyperlink{click__ima__calib3_d_8m_a9a8e74db9e8e82afbf923b5927168dd8}{homography}} between \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} and \mbox{\hyperlink{compute__homography_8m_a919d1d88db8534c047bfc1ecc8305db5}{L}} (1\+:2\+:2 $\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}, 1\+:3)
+\item 
+\mbox{\hyperlink{compute__homography_8m_ac659642ed3908eb512538980d9f9c511}{L}} (2\+:2\+:2 $\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}, 4\+:6)
+\item 
+\mbox{\hyperlink{compute__homography_8m_aa7b4d264d5d5888d5e5073f545122446}{L}} (1\+:2\+:2 $\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}, 7\+:9)
+\item 
+\mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}} (2\+:2\+:2 $\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}, 7\+:9)
+\item 
+\mbox{\hyperlink{compute__homography_8m_ad81a38151163b39207c748b8a8e116a8}{m2}} (2,\+:)./m2(3
+\item 
+\mbox{\hyperlink{compute__homography_8m_a1f2990d7c8f4ef0e0ccc1bf9643d5f2c}{J}} (1\+:2\+:2 $\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}, 1\+:3)
+\item 
+\mbox{\hyperlink{compute__homography_8m_ab81b2a0ca4f40c27f3d584eb11cc1396}{J}} (2\+:2\+:2 $\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}, 4\+:6)
+\item 
+\mbox{\hyperlink{compute__homography_8m_a70407f43edb260a392dd6f878c214564}{J}} (1\+:2\+:2 $\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}, 7\+:8)
+\item 
+\mbox{\hyperlink{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}{J}} (2\+:2\+:2 $\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}, 7\+:8)
+\item 
+\mbox{\hyperlink{compute__homography_8m_ad9d0c7bdee6004b75802c56c9fdb8219}{norm}} (\mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}}) \%norm(\mbox{\hyperlink{compute__homography_8m_af563da2b8426c2b78beb54767aedf1f5}{hh\+\_\+innov}}) \mbox{\hyperlink{compute__homography_8m_a7095a3e701f475db13eaca64dba5dcc1}{hhv}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a3f83917df652286d6361986ce08fc439}{figure}} (8)
+\item 
+\mbox{\hyperlink{compute__homography_8m_ab1518c3a3560bbfdfd89751e2c8b6797}{plot}} (\mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}}(1,\+:), \mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}}(2,\+:), \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a8676ea5f8593517602d35c62ec43aafa}{function}} \mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}, \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}\mbox{]} = \mbox{\hyperlink{compute__homography_8m_ac2424d6c028ea5ea4de1b56a01d72169}{compute\+\_\+homography}}(\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}},\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}})
+\item 
+\mbox{\hyperlink{compute__homography_8m_ac2424d6c028ea5ea4de1b56a01d72169}{compute\+\_\+homography}} \mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}, \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}\mbox{]}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the total number of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} larger \mbox{\hyperlink{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}{than}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the total number of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} larger optimize the \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}} by minimizing the reprojection \mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}}(in the least \mbox{\hyperlink{click__ima__calib3_d_8m_a157441835dd2f451ee6aec60b4a9acef}{squares}} \mbox{\hyperlink{comp__error__calib__fisheye_8m_abb15673642fe34932c402078811ef2ff}{sense}}). \% \% \%Important functions called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} \mbox{\hyperlink{rigid__motion_8m_a3c8c189b0d4d2a89443cae4b60fe8ad6}{program}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__homography_8m_ab3cd915d758008bd19d0f2428fbb354a}{m}} = \mbox{[}m
+\item 
+\mbox{\hyperlink{compute__homography_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__homography_8m_aad05f78187c942f9dd521605fa81f1ba}{M}} = \mbox{[}M
+\item 
+Prenormalization of \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}(very important) \mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}} = \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}(2,\+:)
+\item 
+\mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}})
+\item 
+\mbox{\hyperlink{compute__homography_8m_aa93893b984ddd6dd27cce0dd59249d13}{myy}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}})
+\item 
+\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}} = ax -\/ \mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}}))
+\item 
+\mbox{\hyperlink{compute__homography_8m_aa196633166b97fdd285f9a927cc066af}{scyy}} = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}}))
+\item 
+\mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}} = \mbox{[}1/\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} 0 -\/\mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}/\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}} = \mbox{[}\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} 0 \mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a3f27aa082c966976d719454c3efe1d2e}{mn}} = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__homography_8m_aa23cd3f9d6fe3a9da846609c5b11e234}{Np}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{compute__homography_8m_a61fc7f10c2010bca2c0589346cddbba1}{L}} = L\textquotesingle{}$\ast$L
+\item 
+\mbox{\hyperlink{compute__homography_8m_ae61e7de603852182385da5e907b4b232}{hh}} = \mbox{\hyperlink{downsample_8m_a4677652ee1aa71901a1b9b41f3f27bd5}{V}}(\+:,9)
+\item 
+\mbox{\hyperlink{compute__homography_8m_aaf2b56f51d609c9b9d431a57c5c9d7df}{Hrem}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{\hyperlink{ext__calib2_8m_a9e9ab06afceed41241a6f50f91e1e86f}{hh}},3,3)\textquotesingle{}
+\item 
+Final \mbox{\hyperlink{compute__homography_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}{homography}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_ab42c9eadb9f6da518e4bb580fa7f7d31}{if}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a683f09a8fde8fd5aca2637267de85ef4}{m2}} = \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}$\ast$\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_ab22006c17a71a5a0b3cf940aaf63fb44}{\+\_\+\+\_\+pad11\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a376232097e0bfeda9f49b76b28257fcf}{merr}} = \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}(1\+:2,\+:) -\/ \mbox{\hyperlink{compute__homography_8m_ad81a38151163b39207c748b8a8e116a8}{m2}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a9976f3faad68f981f425583e48b03252}{keyboard}}
+\item 
+Homography \mbox{\hyperlink{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}{refinement}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are more \mbox{\hyperlink{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}{than}} \mbox{\hyperlink{compute__homography_8m_a8c8fbba90d0ea2f931cf48759fcc3dd4}{points}}
+\item 
+Homography refinement \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are more \mbox{\hyperlink{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}{than}} Final \mbox{\hyperlink{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}{refinement}}
+\item 
+Homography \mbox{\hyperlink{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}{refinement}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are more \mbox{\hyperlink{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}{than}} Final \mbox{\hyperlink{compute__homography_8m_a7095a3e701f475db13eaca64dba5dcc1}{hhv}} = hhv(1\+:8)
+\item 
+for \mbox{\hyperlink{compute__homography_8m_afbbd5087eb3e54e252b3e7e10f2e9c62}{iter}} =1\+:10
+\item 
+for \mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}} = \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}} $\ast$ \mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_aeb9806a56e1e80b69cc9a606b36cfe4b}{J}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}},8)
+\item 
+\mbox{\hyperlink{compute__homography_8m_adc94400359436f34843a23fd3c50d7b0}{M\+MM}} = (\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}} ./ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}}(3,\+:)))
+\item 
+\mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}} = \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}(1\+:2,\+:) -\/ \mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}}(1\+:2,\+:)
+\item 
+\mbox{\hyperlink{compute__homography_8m_a2c9d78049d0d038055887ce13f96f521}{M\+M\+M2}} = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}}(1,\+:)) .$\ast$ \mbox{\hyperlink{compute__homography_8m_adc94400359436f34843a23fd3c50d7b0}{M\+MM}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a94ddb68377fc789830d0e04beb3d3c64}{M\+M\+M3}} = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}}(2,\+:)) .$\ast$ \mbox{\hyperlink{compute__homography_8m_adc94400359436f34843a23fd3c50d7b0}{M\+MM}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_af563da2b8426c2b78beb54767aedf1f5}{hh\+\_\+innov}} = inv(\mbox{\hyperlink{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}{J}}\textquotesingle{}$\ast$\mbox{\hyperlink{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}{J}})$\ast$\mbox{\hyperlink{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}{J}}\textquotesingle{}$\ast$\mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_ab6405e7da4217bd6510350ecb4d711fe}{hhv\+\_\+up}} = \mbox{\hyperlink{compute__homography_8m_a7095a3e701f475db13eaca64dba5dcc1}{hhv}} -\/ \mbox{\hyperlink{compute__homography_8m_af563da2b8426c2b78beb54767aedf1f5}{hh\+\_\+innov}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_ae5f2da61d69568165ae5a49479238c7b}{H\+\_\+up}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{[}\mbox{\hyperlink{compute__homography_8m_ab6405e7da4217bd6510350ecb4d711fe}{hhv\+\_\+up}};1\mbox{]},3,3)\textquotesingle{}
+\item 
+\mbox{\hyperlink{compute__homography_8m_afaafc315b95987fc2b071bcd8f698b81}{H}} = \mbox{\hyperlink{compute__homography_8m_ae5f2da61d69568165ae5a49479238c7b}{H\+\_\+up}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a706e2cd18c4c8ee20525ba31bc8765d5}{\+\_\+\+\_\+pad12\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{compute__homography_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{compute__homography_8m_a3f83917df652286d6361986ce08fc439}\label{compute__homography_8m_a3f83917df652286d6361986ce08fc439}} 
+\index{compute\_homography.m@{compute\_homography.m}!figure@{figure}}
+\index{figure@{figure}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{8}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_a1f2990d7c8f4ef0e0ccc1bf9643d5f2c}\label{compute__homography_8m_a1f2990d7c8f4ef0e0ccc1bf9643d5f2c}} 
+\index{compute\_homography.m@{compute\_homography.m}!J@{J}}
+\index{J@{J}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{J()}{J()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily J (\begin{DoxyParamCaption}\item[{1\+:2\+:2 $\ast$}]{Np,  }\item[{1\+:3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_a70407f43edb260a392dd6f878c214564}\label{compute__homography_8m_a70407f43edb260a392dd6f878c214564}} 
+\index{compute\_homography.m@{compute\_homography.m}!J@{J}}
+\index{J@{J}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{J()}{J()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily J (\begin{DoxyParamCaption}\item[{1\+:2\+:2 $\ast$}]{Np,  }\item[{7\+:8}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_ab81b2a0ca4f40c27f3d584eb11cc1396}\label{compute__homography_8m_ab81b2a0ca4f40c27f3d584eb11cc1396}} 
+\index{compute\_homography.m@{compute\_homography.m}!J@{J}}
+\index{J@{J}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{J()}{J()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily J (\begin{DoxyParamCaption}\item[{2\+:2\+:2 $\ast$}]{Np,  }\item[{4\+:6}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}\label{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}} 
+\index{compute\_homography.m@{compute\_homography.m}!J@{J}}
+\index{J@{J}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{J()}{J()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily J (\begin{DoxyParamCaption}\item[{2\+:2\+:2 $\ast$}]{Np,  }\item[{7\+:8}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_a919d1d88db8534c047bfc1ecc8305db5}\label{compute__homography_8m_a919d1d88db8534c047bfc1ecc8305db5}} 
+\index{compute\_homography.m@{compute\_homography.m}!L@{L}}
+\index{L@{L}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{L()}{L()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Compute the \mbox{\hyperlink{click__ima__calib3_d_8m_a9a8e74db9e8e82afbf923b5927168dd8}{homography}} between \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} and L (\begin{DoxyParamCaption}\item[{1\+:2\+:2 $\ast$}]{Np,  }\item[{1\+:3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_aa7b4d264d5d5888d5e5073f545122446}\label{compute__homography_8m_aa7b4d264d5d5888d5e5073f545122446}} 
+\index{compute\_homography.m@{compute\_homography.m}!L@{L}}
+\index{L@{L}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{L()}{L()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily L (\begin{DoxyParamCaption}\item[{1\+:2\+:2 $\ast$}]{Np,  }\item[{7\+:9}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_ac659642ed3908eb512538980d9f9c511}\label{compute__homography_8m_ac659642ed3908eb512538980d9f9c511}} 
+\index{compute\_homography.m@{compute\_homography.m}!L@{L}}
+\index{L@{L}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{L()}{L()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily L (\begin{DoxyParamCaption}\item[{2\+:2\+:2 $\ast$}]{Np,  }\item[{4\+:6}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}\label{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}} 
+\index{compute\_homography.m@{compute\_homography.m}!L@{L}}
+\index{L@{L}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{L()}{L()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily L (\begin{DoxyParamCaption}\item[{2\+:2\+:2 $\ast$}]{Np,  }\item[{7\+:9}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_ad81a38151163b39207c748b8a8e116a8}\label{compute__homography_8m_ad81a38151163b39207c748b8a8e116a8}} 
+\index{compute\_homography.m@{compute\_homography.m}!m2@{m2}}
+\index{m2@{m2}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{m2()}{m2()}}
+{\footnotesize\ttfamily m2 (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_ad9d0c7bdee6004b75802c56c9fdb8219}\label{compute__homography_8m_ad9d0c7bdee6004b75802c56c9fdb8219}} 
+\index{compute\_homography.m@{compute\_homography.m}!norm@{norm}}
+\index{norm@{norm}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_ae865728603594350ea6b219db66bbe42}\label{compute__homography_8m_ae865728603594350ea6b219db66bbe42}} 
+\index{compute\_homography.m@{compute\_homography.m}!ones@{ones}}
+\index{ones@{ones}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_ab1518c3a3560bbfdfd89751e2c8b6797}\label{compute__homography_8m_ab1518c3a3560bbfdfd89751e2c8b6797}} 
+\index{compute\_homography.m@{compute\_homography.m}!plot@{plot}}
+\index{plot@{plot}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}}(1,\+:)}]{,  }\item[{\mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}}(2,\+:)}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_ae5abbd88564e3d6c36bbc07e632cacbc}\label{compute__homography_8m_ae5abbd88564e3d6c36bbc07e632cacbc}} 
+\index{compute\_homography.m@{compute\_homography.m}!scyy@{scyy}}
+\index{scyy@{scyy}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{scyy()}{scyy()}}
+{\footnotesize\ttfamily id scyy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{compute__homography_8m_a99ef8f8e776692f374f4e1d8afeb6f98}\label{compute__homography_8m_a99ef8f8e776692f374f4e1d8afeb6f98}} 
+\index{compute\_homography.m@{compute\_homography.m}!size@{size}}
+\index{size@{size}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the total number of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} larger optimize the \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}} by minimizing the reprojection \mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}} (in the least \mbox{\hyperlink{click__ima__calib3_d_8m_a157441835dd2f451ee6aec60b4a9acef}{squares}} \mbox{\hyperlink{comp__error__calib__fisheye_8m_abb15673642fe34932c402078811ef2ff}{sense}}). \% \% \%Important functions called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} \mbox{\hyperlink{rigid__motion_8m_a3c8c189b0d4d2a89443cae4b60fe8ad6}{program}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{compute__homography_8m_a79b5f22ba54982150d73d4319114f880}\label{compute__homography_8m_a79b5f22ba54982150d73d4319114f880}} 
+\index{compute\_homography.m@{compute\_homography.m}!size@{size}}
+\index{size@{size}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{compute__homography_8m_ab22006c17a71a5a0b3cf940aaf63fb44}\label{compute__homography_8m_ab22006c17a71a5a0b3cf940aaf63fb44}} 
+\index{compute\_homography.m@{compute\_homography.m}!\_\_pad11\_\_@{\_\_pad11\_\_}}
+\index{\_\_pad11\_\_@{\_\_pad11\_\_}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad11\_\_}{\_\_pad11\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad11\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{compute__homography_8m_a706e2cd18c4c8ee20525ba31bc8765d5}\label{compute__homography_8m_a706e2cd18c4c8ee20525ba31bc8765d5}} 
+\index{compute\_homography.m@{compute\_homography.m}!\_\_pad12\_\_@{\_\_pad12\_\_}}
+\index{\_\_pad12\_\_@{\_\_pad12\_\_}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad12\_\_}{\_\_pad12\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad12\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}\label{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}} 
+\index{compute\_homography.m@{compute\_homography.m}!ax@{ax}}
+\index{ax@{ax}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{ax}{ax}}
+{\footnotesize\ttfamily ax = ax -\/ \mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}}
+
+\mbox{\Hypertarget{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}\label{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}} 
+\index{compute\_homography.m@{compute\_homography.m}!ay@{ay}}
+\index{ay@{ay}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{ay}{ay}}
+{\footnotesize\ttfamily ay = \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}(2,\+:)}
+
+\mbox{\Hypertarget{compute__homography_8m_ac2424d6c028ea5ea4de1b56a01d72169}\label{compute__homography_8m_ac2424d6c028ea5ea4de1b56a01d72169}} 
+\index{compute\_homography.m@{compute\_homography.m}!compute\_homography@{compute\_homography}}
+\index{compute\_homography@{compute\_homography}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{compute\_homography}{compute\_homography}}
+{\footnotesize\ttfamily compute\+\_\+homography\mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}, \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{compute__homography_8m_ac2424d6c028ea5ea4de1b56a01d72169}{compute\_homography}}(\mbox{\hyperlink{compute__homography_8m_ab3cd915d758008bd19d0f2428fbb354a}{m}},\mbox{\hyperlink{compute__homography_8m_aad05f78187c942f9dd521605fa81f1ba}{M}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%Computes the planar \mbox{\hyperlink{compute__homography_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}{homography}} between the \mbox{\hyperlink{init__intrinsic__param_8m_a60bfb22881d8ade0a15adeaa7a363c23}{point}} \mbox{\hyperlink{_compute_stripes_8m_a5c4aa834f79d9bba4ec3f74f17439836}{coordinates}} \mbox{\hyperlink{click__ima__calib_8m_a58ab1fd68e97078232808206b850161b}{on}} the plane (\mbox{\hyperlink{compute__homography_8m_aad05f78187c942f9dd521605fa81f1ba}{M}}) and the \mbox{\hyperlink{analyse__error_8m_aee9a066043e7b7065d7cdda5fbcfba53}{image}}}
+\DoxyCodeLine{\%\mbox{\hyperlink{init__intrinsic__param_8m_a60bfb22881d8ade0a15adeaa7a363c23}{point}} \mbox{\hyperlink{_compute_stripes_8m_a5c4aa834f79d9bba4ec3f74f17439836}{coordinates}} (\mbox{\hyperlink{compute__homography_8m_ab3cd915d758008bd19d0f2428fbb354a}{m}}).}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%\mbox{\hyperlink{_compute_stripes_8m_ae27da7df4d207577ee411ff134a16eea}{INPUT}}: \mbox{\hyperlink{compute__homography_8m_ab3cd915d758008bd19d0f2428fbb354a}{m}}: homogeneous \mbox{\hyperlink{_compute_stripes_8m_a5c4aa834f79d9bba4ec3f74f17439836}{coordinates}} in the \mbox{\hyperlink{analyse__error_8m_aee9a066043e7b7065d7cdda5fbcfba53}{image}} plane (3xN \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}})}
+\DoxyCodeLine{\%       \mbox{\hyperlink{compute__homography_8m_aad05f78187c942f9dd521605fa81f1ba}{M}}: homogeneous \mbox{\hyperlink{_compute_stripes_8m_a5c4aa834f79d9bba4ec3f74f17439836}{coordinates}} in the plane in 3\mbox{\hyperlink{_compute3_d_8m_a350bfcb1e3cfb28ddff48ce525d4f139}{D}} (3xN \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%OUTPUT: \mbox{\hyperlink{compute__homography_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}: Homography \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}} (3\mbox{\hyperlink{click__ima__calib_8m_a03ad2628eb1c540113251638112541e3}{x3}} homogeneous \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}})}
+\DoxyCodeLine{\%        \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}: Normalization \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}} \mbox{\hyperlink{ginput4_8m_a31280f103486341d6cc9935e1ef22e36}{used}} \mbox{\hyperlink{click__ima__calib_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{compute__homography_8m_a8c8fbba90d0ea2f931cf48759fcc3dd4}{points}} before \mbox{\hyperlink{compute__homography_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}{homography}} computation}
+\DoxyCodeLine{\%               (useful \textcolor{keywordflow}{for} numerical stability \mbox{\hyperlink{go__calib__optim__iter_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{compute__homography_8m_a8c8fbba90d0ea2f931cf48759fcc3dd4}{points}} in pixel \mbox{\hyperlink{_compute_stripes_8m_a5c4aa834f79d9bba4ec3f74f17439836}{coordinates}})}
+\DoxyCodeLine{\%        \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\_Hnorm}}: The inverse of \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%Definition: \mbox{\hyperlink{compute__homography_8m_ab3cd915d758008bd19d0f2428fbb354a}{m}} ~ \mbox{\hyperlink{compute__homography_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}*\mbox{\hyperlink{compute__homography_8m_aad05f78187c942f9dd521605fa81f1ba}{M}} \mbox{\hyperlink{project__points_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} \textcolor{stringliteral}{"~"} means equal \mbox{\hyperlink{go__calib__optim__iter_8m_a6211fe17b7cc15ccc7b7072fe22e1f4d}{up}} \mbox{\hyperlink{click__ima__calib3_d_8m_a7f570a4b57ed34463ad8cc2c68d36f23}{to}} \mbox{\hyperlink{ext__calib_8m_a4124bc0a9335c27f086f24ba207a4912}{a}} non \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a0959be2ec86a98bb7fc5bf9b4d07186e}{zero}} scalar factor.}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%\mbox{\hyperlink{init__intrinsic__param_8m_a3baf04d2cab8ccf5dfab24270b9b6480}{Method}}: First computes an initial guess \textcolor{keywordflow}{for} the \mbox{\hyperlink{compute__homography_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}{homography}} through quasi-\/linear method.}
+\DoxyCodeLine{\%        Then}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{compute__homography_8m_afb358f48b1646c750fb9da6c6585be2b}\label{compute__homography_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{compute\_homography.m@{compute\_homography.m}!end@{end}}
+\index{end@{end}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{compute__homography_8m_a8676ea5f8593517602d35c62ec43aafa}\label{compute__homography_8m_a8676ea5f8593517602d35c62ec43aafa}} 
+\index{compute\_homography.m@{compute\_homography.m}!function@{function}}
+\index{function@{function}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}, \mbox{\hyperlink{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}{inv\+\_\+\+Hnorm}}\mbox{]} = \mbox{\hyperlink{compute__homography_8m_ac2424d6c028ea5ea4de1b56a01d72169}{compute\+\_\+homography}}(\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}},\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}})}
+
+\mbox{\Hypertarget{compute__homography_8m_afaafc315b95987fc2b071bcd8f698b81}\label{compute__homography_8m_afaafc315b95987fc2b071bcd8f698b81}} 
+\index{compute\_homography.m@{compute\_homography.m}!H@{H}}
+\index{H@{H}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily H = \mbox{\hyperlink{compute__homography_8m_ae5f2da61d69568165ae5a49479238c7b}{H\+\_\+up}}}
+
+\mbox{\Hypertarget{compute__homography_8m_ae5f2da61d69568165ae5a49479238c7b}\label{compute__homography_8m_ae5f2da61d69568165ae5a49479238c7b}} 
+\index{compute\_homography.m@{compute\_homography.m}!H\_up@{H\_up}}
+\index{H\_up@{H\_up}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{H\_up}{H\_up}}
+{\footnotesize\ttfamily H\+\_\+up = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{[}\mbox{\hyperlink{compute__homography_8m_ab6405e7da4217bd6510350ecb4d711fe}{hhv\+\_\+up}};1\mbox{]},3,3)\textquotesingle{}}
+
+\mbox{\Hypertarget{compute__homography_8m_ae61e7de603852182385da5e907b4b232}\label{compute__homography_8m_ae61e7de603852182385da5e907b4b232}} 
+\index{compute\_homography.m@{compute\_homography.m}!hh@{hh}}
+\index{hh@{hh}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{hh}{hh}}
+{\footnotesize\ttfamily hh = \mbox{\hyperlink{downsample_8m_a4677652ee1aa71901a1b9b41f3f27bd5}{V}}(\+:,9)}
+
+\mbox{\Hypertarget{compute__homography_8m_af563da2b8426c2b78beb54767aedf1f5}\label{compute__homography_8m_af563da2b8426c2b78beb54767aedf1f5}} 
+\index{compute\_homography.m@{compute\_homography.m}!hh\_innov@{hh\_innov}}
+\index{hh\_innov@{hh\_innov}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{hh\_innov}{hh\_innov}}
+{\footnotesize\ttfamily hh\+\_\+innov = inv(\mbox{\hyperlink{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}{J}}\textquotesingle{}$\ast$\mbox{\hyperlink{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}{J}})$\ast$\mbox{\hyperlink{compute__homography_8m_abfc8e0bb025a222c9efd7c6540674b4a}{J}}\textquotesingle{}$\ast$\mbox{\hyperlink{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}{m\+\_\+err}}}
+
+\mbox{\Hypertarget{compute__homography_8m_a7095a3e701f475db13eaca64dba5dcc1}\label{compute__homography_8m_a7095a3e701f475db13eaca64dba5dcc1}} 
+\index{compute\_homography.m@{compute\_homography.m}!hhv@{hhv}}
+\index{hhv@{hhv}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{hhv}{hhv}}
+{\footnotesize\ttfamily Homography \mbox{\hyperlink{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}{refinement}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are more \mbox{\hyperlink{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}{than}} Final hhv = hhv(1\+:8)}
+
+\mbox{\Hypertarget{compute__homography_8m_ab6405e7da4217bd6510350ecb4d711fe}\label{compute__homography_8m_ab6405e7da4217bd6510350ecb4d711fe}} 
+\index{compute\_homography.m@{compute\_homography.m}!hhv\_up@{hhv\_up}}
+\index{hhv\_up@{hhv\_up}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{hhv\_up}{hhv\_up}}
+{\footnotesize\ttfamily hhv\+\_\+up = \mbox{\hyperlink{compute__homography_8m_a7095a3e701f475db13eaca64dba5dcc1}{hhv}} -\/ \mbox{\hyperlink{compute__homography_8m_af563da2b8426c2b78beb54767aedf1f5}{hh\+\_\+innov}}}
+
+\mbox{\Hypertarget{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}\label{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}} 
+\index{compute\_homography.m@{compute\_homography.m}!Hnorm@{Hnorm}}
+\index{Hnorm@{Hnorm}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{Hnorm}{Hnorm}}
+{\footnotesize\ttfamily Hnorm = \mbox{[}1/\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} 0 -\/\mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}/\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}}}
+
+\mbox{\Hypertarget{compute__homography_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}\label{compute__homography_8m_a74cf1f2e2526fdf59c652525e4b2a4f2}} 
+\index{compute\_homography.m@{compute\_homography.m}!homography@{homography}}
+\index{homography@{homography}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{homography}{homography}}
+{\footnotesize\ttfamily Final homography}
+
+\mbox{\Hypertarget{compute__homography_8m_aaf2b56f51d609c9b9d431a57c5c9d7df}\label{compute__homography_8m_aaf2b56f51d609c9b9d431a57c5c9d7df}} 
+\index{compute\_homography.m@{compute\_homography.m}!Hrem@{Hrem}}
+\index{Hrem@{Hrem}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{Hrem}{Hrem}}
+{\footnotesize\ttfamily Hrem = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{\hyperlink{ext__calib2_8m_a9e9ab06afceed41241a6f50f91e1e86f}{hh}},3,3)\textquotesingle{}}
+
+\mbox{\Hypertarget{compute__homography_8m_ab42c9eadb9f6da518e4bb580fa7f7d31}\label{compute__homography_8m_ab42c9eadb9f6da518e4bb580fa7f7d31}} 
+\index{compute\_homography.m@{compute\_homography.m}!if@{if}}
+\index{if@{if}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily if}
+
+\mbox{\Hypertarget{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}\label{compute__homography_8m_ac188b84731ebf0dfee2a0a33c6cbcdb8}} 
+\index{compute\_homography.m@{compute\_homography.m}!inv\_Hnorm@{inv\_Hnorm}}
+\index{inv\_Hnorm@{inv\_Hnorm}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{inv\_Hnorm}{inv\_Hnorm}}
+{\footnotesize\ttfamily inv\+\_\+\+Hnorm = \mbox{[}\mbox{\hyperlink{compute__homography_8m_a054427b2204cca3342450367996acbb3}{scxx}} 0 \mbox{\hyperlink{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}{mxx}}}
+
+\mbox{\Hypertarget{compute__homography_8m_afbbd5087eb3e54e252b3e7e10f2e9c62}\label{compute__homography_8m_afbbd5087eb3e54e252b3e7e10f2e9c62}} 
+\index{compute\_homography.m@{compute\_homography.m}!iter@{iter}}
+\index{iter@{iter}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{iter}{iter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} iter =1\+:10}
+
+\mbox{\Hypertarget{compute__homography_8m_aeb9806a56e1e80b69cc9a606b36cfe4b}\label{compute__homography_8m_aeb9806a56e1e80b69cc9a606b36cfe4b}} 
+\index{compute\_homography.m@{compute\_homography.m}!J@{J}}
+\index{J@{J}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{J}{J}}
+{\footnotesize\ttfamily J = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}},8)}
+
+\mbox{\Hypertarget{compute__homography_8m_a9976f3faad68f981f425583e48b03252}\label{compute__homography_8m_a9976f3faad68f981f425583e48b03252}} 
+\index{compute\_homography.m@{compute\_homography.m}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{keyboard}{keyboard}}
+{\footnotesize\ttfamily keyboard}
+
+\mbox{\Hypertarget{compute__homography_8m_a61fc7f10c2010bca2c0589346cddbba1}\label{compute__homography_8m_a61fc7f10c2010bca2c0589346cddbba1}} 
+\index{compute\_homography.m@{compute\_homography.m}!L@{L}}
+\index{L@{L}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{L}{L}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} L = L\textquotesingle{}$\ast$L}
+
+\mbox{\Hypertarget{compute__homography_8m_ab3cd915d758008bd19d0f2428fbb354a}\label{compute__homography_8m_ab3cd915d758008bd19d0f2428fbb354a}} 
+\index{compute\_homography.m@{compute\_homography.m}!m@{m}}
+\index{m@{m}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily m = \mbox{[}m}
+
+\mbox{\Hypertarget{compute__homography_8m_aad05f78187c942f9dd521605fa81f1ba}\label{compute__homography_8m_aad05f78187c942f9dd521605fa81f1ba}} 
+\index{compute\_homography.m@{compute\_homography.m}!M@{M}}
+\index{M@{M}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily M = \mbox{[}M}
+
+\mbox{\Hypertarget{compute__homography_8m_a683f09a8fde8fd5aca2637267de85ef4}\label{compute__homography_8m_a683f09a8fde8fd5aca2637267de85ef4}} 
+\index{compute\_homography.m@{compute\_homography.m}!m2@{m2}}
+\index{m2@{m2}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{m2}{m2}}
+{\footnotesize\ttfamily m2 = \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}$\ast$\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}}
+
+\mbox{\Hypertarget{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}\label{compute__homography_8m_a4c3d3652a440471a7c9a57c2537b223a}} 
+\index{compute\_homography.m@{compute\_homography.m}!m\_err@{m\_err}}
+\index{m\_err@{m\_err}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{m\_err}{m\_err}}
+{\footnotesize\ttfamily m\+\_\+err = \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}(1\+:2,\+:) -\/ \mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}}(1\+:2,\+:)}
+
+\mbox{\Hypertarget{compute__homography_8m_a376232097e0bfeda9f49b76b28257fcf}\label{compute__homography_8m_a376232097e0bfeda9f49b76b28257fcf}} 
+\index{compute\_homography.m@{compute\_homography.m}!merr@{merr}}
+\index{merr@{merr}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{merr}{merr}}
+{\footnotesize\ttfamily merr = \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}(1\+:2,\+:) -\/ \mbox{\hyperlink{compute__homography_8m_ad81a38151163b39207c748b8a8e116a8}{m2}}}
+
+\mbox{\Hypertarget{compute__homography_8m_adc94400359436f34843a23fd3c50d7b0}\label{compute__homography_8m_adc94400359436f34843a23fd3c50d7b0}} 
+\index{compute\_homography.m@{compute\_homography.m}!MMM@{MMM}}
+\index{MMM@{MMM}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{MMM}{MMM}}
+{\footnotesize\ttfamily M\+MM = (\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}} ./ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}}(3,\+:)))}
+
+\mbox{\Hypertarget{compute__homography_8m_a2c9d78049d0d038055887ce13f96f521}\label{compute__homography_8m_a2c9d78049d0d038055887ce13f96f521}} 
+\index{compute\_homography.m@{compute\_homography.m}!MMM2@{MMM2}}
+\index{MMM2@{MMM2}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{MMM2}{MMM2}}
+{\footnotesize\ttfamily M\+M\+M2 = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}}(1,\+:)) .$\ast$ \mbox{\hyperlink{compute__homography_8m_adc94400359436f34843a23fd3c50d7b0}{M\+MM}}}
+
+\mbox{\Hypertarget{compute__homography_8m_a94ddb68377fc789830d0e04beb3d3c64}\label{compute__homography_8m_a94ddb68377fc789830d0e04beb3d3c64}} 
+\index{compute\_homography.m@{compute\_homography.m}!MMM3@{MMM3}}
+\index{MMM3@{MMM3}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{MMM3}{MMM3}}
+{\footnotesize\ttfamily M\+M\+M3 = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}{mrep}}(2,\+:)) .$\ast$ \mbox{\hyperlink{compute__homography_8m_adc94400359436f34843a23fd3c50d7b0}{M\+MM}}}
+
+\mbox{\Hypertarget{compute__homography_8m_a3f27aa082c966976d719454c3efe1d2e}\label{compute__homography_8m_a3f27aa082c966976d719454c3efe1d2e}} 
+\index{compute\_homography.m@{compute\_homography.m}!mn@{mn}}
+\index{mn@{mn}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{mn}{mn}}
+{\footnotesize\ttfamily Compute the \mbox{\hyperlink{click__ima__calib3_d_8m_a9a8e74db9e8e82afbf923b5927168dd8}{homography}} between \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} and mn = \mbox{\hyperlink{compute__homography_8m_a5ec4c7ba56199486e9d6b3c8fea233ab}{Hnorm}}$\ast$\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}}
+
+\mbox{\Hypertarget{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}\label{compute__homography_8m_aa0486bed431f03b4d28c6d0569692973}} 
+\index{compute\_homography.m@{compute\_homography.m}!mrep@{mrep}}
+\index{mrep@{mrep}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{mrep}{mrep}}
+{\footnotesize\ttfamily \mbox{\hyperlink{is3_d_8m_a05a671c66aefea124cc08b76ea6d30bb}{test}} of \mbox{\hyperlink{skew3_8m_ab0e07e8b6d0528a9ffb33aeeb7114b54}{Jacobian}} mrep = \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}} $\ast$ \mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}}
+
+\mbox{\Hypertarget{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}\label{compute__homography_8m_afc5f7ea967e594959dabd885c326e993}} 
+\index{compute\_homography.m@{compute\_homography.m}!mxx@{mxx}}
+\index{mxx@{mxx}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{mxx}{mxx}}
+{\footnotesize\ttfamily mxx = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}})}
+
+\mbox{\Hypertarget{compute__homography_8m_aa93893b984ddd6dd27cce0dd59249d13}\label{compute__homography_8m_aa93893b984ddd6dd27cce0dd59249d13}} 
+\index{compute\_homography.m@{compute\_homography.m}!myy@{myy}}
+\index{myy@{myy}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{myy}{myy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{compute__homography_8m_ae5abbd88564e3d6c36bbc07e632cacbc}{scyy}} myy = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}})}
+
+\mbox{\Hypertarget{compute__homography_8m_aa23cd3f9d6fe3a9da846609c5b11e234}\label{compute__homography_8m_aa23cd3f9d6fe3a9da846609c5b11e234}} 
+\index{compute\_homography.m@{compute\_homography.m}!Np@{Np}}
+\index{Np@{Np}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{Np}{Np}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Np}
+
+\mbox{\Hypertarget{compute__homography_8m_a8c8fbba90d0ea2f931cf48759fcc3dd4}\label{compute__homography_8m_a8c8fbba90d0ea2f931cf48759fcc3dd4}} 
+\index{compute\_homography.m@{compute\_homography.m}!points@{points}}
+\index{points@{points}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily Homography \mbox{\hyperlink{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}{refinement}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are more \mbox{\hyperlink{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}{than}} points}
+
+\mbox{\Hypertarget{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}\label{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}} 
+\index{compute\_homography.m@{compute\_homography.m}!refinement@{refinement}}
+\index{refinement@{refinement}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{refinement}{refinement}}
+{\footnotesize\ttfamily Homography refinement \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are more \mbox{\hyperlink{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}{than}} Final refinement}
+
+\mbox{\Hypertarget{compute__homography_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{compute__homography_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{compute\_homography.m@{compute\_homography.m}!return@{return}}
+\index{return@{return}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{compute__homography_8m_a054427b2204cca3342450367996acbb3}\label{compute__homography_8m_a054427b2204cca3342450367996acbb3}} 
+\index{compute\_homography.m@{compute\_homography.m}!scxx@{scxx}}
+\index{scxx@{scxx}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{scxx}{scxx}}
+{\footnotesize\ttfamily scxx = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{compute__homography_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax}}))}
+
+\mbox{\Hypertarget{compute__homography_8m_aa196633166b97fdd285f9a927cc066af}\label{compute__homography_8m_aa196633166b97fdd285f9a927cc066af}} 
+\index{compute\_homography.m@{compute\_homography.m}!scyy@{scyy}}
+\index{scyy@{scyy}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{scyy}{scyy}}
+{\footnotesize\ttfamily scyy = \mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}}(\mbox{\hyperlink{compute__homography_8m_a68eea743cf30ed8fee471ccf64ea2d12}{ay}}))}
+
+\mbox{\Hypertarget{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}\label{compute__homography_8m_af3f959e84fefd95105b45aa5de288711}} 
+\index{compute\_homography.m@{compute\_homography.m}!than@{than}}
+\index{than@{than}!compute\_homography.m@{compute\_homography.m}}
+\doxysubsubsection{\texorpdfstring{than}{than}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the total number of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} larger than}
+

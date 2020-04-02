@@ -1,0 +1,72 @@
+\hypertarget{rigid__motion_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/rigid\+\_\+motion.m File Reference}
+\label{rigid__motion_8m}\index{D:/TrackEsferas/NavarQA/calib/rigid\_motion.m@{D:/TrackEsferas/NavarQA/calib/rigid\_motion.m}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rigid__motion_8m_ae794dc5090bdbf8459d94f28a49c89a8}{function}} \mbox{[}\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}, d\+Ydom, d\+YdT\mbox{]} = rigid\+\_\+motion(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}})
+\item 
+rigid\+\_\+motion \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} \mbox{[}\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}, d\+Ydom, d\+YdT\mbox{]}
+\item 
+rigid\+\_\+motion \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} \mbox{\hyperlink{rigid__motion_8m_a9f31d6ada3fcaf57df1cc205a7dc7b96}{R}}
+\item 
+\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} \mbox{\hyperlink{rigid__motion_8m_ad18ddb89133b7720116a8c6f6b506cf9}{\+\_\+\+\_\+pad30\+\_\+\+\_\+}}
+\item 
+Important \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} \mbox{\hyperlink{rigid__motion_8m_a3c8c189b0d4d2a89443cae4b60fe8ad6}{program}}
+\item 
+Important \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} \mbox{\hyperlink{rigid__motion_8m_a28a4ec3a65fd1ca8cde9398dc15c5f8a}{T}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rigid__motion_8m_ad18ddb89133b7720116a8c6f6b506cf9}\label{rigid__motion_8m_ad18ddb89133b7720116a8c6f6b506cf9}} 
+\index{rigid\_motion.m@{rigid\_motion.m}!\_\_pad30\_\_@{\_\_pad30\_\_}}
+\index{\_\_pad30\_\_@{\_\_pad30\_\_}!rigid\_motion.m@{rigid\_motion.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad30\_\_}{\_\_pad30\_\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} \+\_\+\+\_\+pad30\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{rigid__motion_8m_ae794dc5090bdbf8459d94f28a49c89a8}\label{rigid__motion_8m_ae794dc5090bdbf8459d94f28a49c89a8}} 
+\index{rigid\_motion.m@{rigid\_motion.m}!function@{function}}
+\index{function@{function}!rigid\_motion.m@{rigid\_motion.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}, d\+Ydom, d\+YdT\mbox{]} = rigid\+\_\+motion(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}})}
+
+\mbox{\Hypertarget{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}\label{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}} 
+\index{rigid\_motion.m@{rigid\_motion.m}!m@{m}}
+\index{m@{m}!rigid\_motion.m@{rigid\_motion.m}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily rigid\+\_\+motion m\mbox{[}\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}, d\+Ydom, d\+YdT\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= rigid\_motion(\mbox{\hyperlink{click__ima__calib3_d_8m_ac51b57a703ba1c5869228690c93e1701}{X}},\mbox{\hyperlink{align__structures_8m_a4e3462750cc302b9a3697c379ed1d885}{om}},\mbox{\hyperlink{rigid__motion_8m_a28a4ec3a65fd1ca8cde9398dc15c5f8a}{T}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%Computes the \mbox{\hyperlink{namespace_custom_camera_library_a749c51cb23f6d5d8d2f43b5e7ba9affd}{rigid}} motion transformation \mbox{\hyperlink{align__structures_8m_aff75dbcbe674794c36a7741a0800e51b}{Y}} = \mbox{\hyperlink{rigid__motion_8m_a9f31d6ada3fcaf57df1cc205a7dc7b96}{R}}*\mbox{\hyperlink{click__ima__calib3_d_8m_ac51b57a703ba1c5869228690c93e1701}{X}}+\mbox{\hyperlink{rigid__motion_8m_a28a4ec3a65fd1ca8cde9398dc15c5f8a}{T}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{rigid__motion_8m_a3c8c189b0d4d2a89443cae4b60fe8ad6}\label{rigid__motion_8m_a3c8c189b0d4d2a89443cae4b60fe8ad6}} 
+\index{rigid\_motion.m@{rigid\_motion.m}!program@{program}}
+\index{program@{program}!rigid\_motion.m@{rigid\_motion.m}}
+\doxysubsubsection{\texorpdfstring{program}{program}}
+{\footnotesize\ttfamily Important \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} program}
+
+\mbox{\Hypertarget{rigid__motion_8m_a9f31d6ada3fcaf57df1cc205a7dc7b96}\label{rigid__motion_8m_a9f31d6ada3fcaf57df1cc205a7dc7b96}} 
+\index{rigid\_motion.m@{rigid\_motion.m}!R@{R}}
+\index{R@{R}!rigid\_motion.m@{rigid\_motion.m}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily rigid\+\_\+motion \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} R}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{calib__stereo_8m_a3aa6bf135885f06d75e5da2713b5230d}{rodrigues}}(\mbox{\hyperlink{align__structures_8m_a4e3462750cc302b9a3697c379ed1d885}{om}}).}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%\mbox{\hyperlink{_compute_stripes_8m_ae27da7df4d207577ee411ff134a16eea}{INPUT}}: \mbox{\hyperlink{click__ima__calib3_d_8m_ac51b57a703ba1c5869228690c93e1701}{X}}: 3\mbox{\hyperlink{_compute3_d_8m_a350bfcb1e3cfb28ddff48ce525d4f139}{D}} \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} in the \mbox{\hyperlink{cam__proj__calib_8m_a1abddb9576a47442fd34f9124ce421c8}{world}} coordinate frame (3xN \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}} \textcolor{keywordflow}{for} \mbox{\hyperlink{calib__stereo_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}} \mbox{\hyperlink{centercirclefinder_8m_a799a9eb0a2e9c962405cb6dec6d61bea}{points}})}
+\DoxyCodeLine{\%       (\mbox{\hyperlink{align__structures_8m_a4e3462750cc302b9a3697c379ed1d885}{om}},\mbox{\hyperlink{rigid__motion_8m_a28a4ec3a65fd1ca8cde9398dc15c5f8a}{T}}): Rigid motion \mbox{\hyperlink{cam__proj__calib_8m_aafd6b8a4b32e9e967ee9372af2b8b5e2}{parameters}} between \mbox{\hyperlink{cam__proj__calib_8m_a1abddb9576a47442fd34f9124ce421c8}{world}} coordinate frame and \mbox{\hyperlink{ext__calib__stereo_8m_a0fd8c3b5a373cf066995d09d25f40589}{camera}} \mbox{\hyperlink{ext__calib__stereo_8m_ab87f249565eabdb0609876a0a0dac519}{reference}} frame}
+\DoxyCodeLine{\%               \mbox{\hyperlink{align__structures_8m_a4e3462750cc302b9a3697c379ed1d885}{om}}: rotation \mbox{\hyperlink{go__calib__optim__iter_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} (3\mbox{\hyperlink{click__ima__calib_8m_aa3e5e1187c13261975d66c1290431e52}{x1}} \mbox{\hyperlink{go__calib__optim__iter_8m_a944b0ff7b0378fbacbea580c66148200}{vector}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{rigid__motion_8m_a28a4ec3a65fd1ca8cde9398dc15c5f8a}\label{rigid__motion_8m_a28a4ec3a65fd1ca8cde9398dc15c5f8a}} 
+\index{rigid\_motion.m@{rigid\_motion.m}!T@{T}}
+\index{T@{T}!rigid\_motion.m@{rigid\_motion.m}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily Important \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} T = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,1)}
+

@@ -1,0 +1,190 @@
+\hypertarget{apply__fisheye__distortion_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/apply\+\_\+fisheye\+\_\+distortion.m File Reference}
+\label{apply__fisheye__distortion_8m}\index{D:/TrackEsferas/NavarQA/calib/apply\_fisheye\_distortion.m@{D:/TrackEsferas/NavarQA/calib/apply\_fisheye\_distortion.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a6350479b226075576da46f39ce665050}{scaling}} (\mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}})
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a833b2f33dd83015a360665b39d8573bc}{if}} (\mbox{\hyperlink{rodrigues_8m_acda6303f8e0e875891d99e821a16e598}{nargout}} $>$ 1) \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_abbee01e1c675351248bef1cb576a4e6d}{dr\+\_\+dx}} (\+:, \mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}})
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a62473366c9238f6d65a8c5b4a1e82002}{theta\+\_\+d\+\_\+r2}} (\mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}})
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a323c7c0e24065e1d8076146cf349ddbc}{dtheta\+\_\+d\+\_\+dr\+\_\+r}} (\mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_acbe37f4f33f662302e44fea3ed71baec}{function}} \mbox{[}\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}, \mbox{\hyperlink{apply__fisheye__distortion_8m_a53d86cdc35307befc4c3995384104025}{dxd\+\_\+dx}}\mbox{]}
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a4239e318cc3ffbed6b985fb5870418d0}{theta}} = atan(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}})
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_adb96c8420e6e7dce022855cf4e4b8ecc}{theta\+\_\+d}} = \mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}} .$\ast$ (1 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1)$\ast$theta.$^\wedge$2 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2)$\ast$theta.$^\wedge$4 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$theta.$^\wedge$6 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$theta.$^\wedge$8)
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a83e4e30239128472979d5017bf6a950d}{scaling}} = \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}))
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}} = find(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}} $>$ 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/8)
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} = \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} .$\ast$ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)$\ast$\mbox{\hyperlink{apply__fisheye__distortion_8m_a6350479b226075576da46f39ce665050}{scaling}})
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_aea9f64094c5374752838c3081bd4ae8f}{dr\+\_\+dx}} = \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_ae91e257d0133d599b7540ad045ca3b50}{theta\+\_\+d\+\_\+r2}} = \mbox{\hyperlink{apply__fisheye__distortion_8m_a6350479b226075576da46f39ce665050}{scaling}}
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a5c653f3e86a959e6fc099e7e1d58ffa3}{dtheta\+\_\+dr}} = 1 ./ (1 + r.$^\wedge$2)
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_aebd0c283bd05105c502b7c99f88e4373}{dtheta\+\_\+d\+\_\+dtheta}}
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_ac1e98d5e8b3ad8b2e11223b79c86a238}{dtheta\+\_\+d\+\_\+dr\+\_\+r}} = \mbox{\hyperlink{apply__fisheye__distortion_8m_aebd0c283bd05105c502b7c99f88e4373}{dtheta\+\_\+d\+\_\+dtheta}} .$\ast$ \mbox{\hyperlink{apply__fisheye__distortion_8m_a5c653f3e86a959e6fc099e7e1d58ffa3}{dtheta\+\_\+dr}}
+\item 
+\mbox{\hyperlink{apply__fisheye__distortion_8m_a53d86cdc35307befc4c3995384104025}{dxd\+\_\+dx}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,2,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})
+\item 
+for \mbox{\hyperlink{apply__fisheye__distortion_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_abbee01e1c675351248bef1cb576a4e6d}\label{apply__fisheye__distortion_8m_abbee01e1c675351248bef1cb576a4e6d}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!dr\_dx@{dr\_dx}}
+\index{dr\_dx@{dr\_dx}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dr\_dx()}{dr\_dx()}}
+{\footnotesize\ttfamily dr\+\_\+dx (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{\mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a323c7c0e24065e1d8076146cf349ddbc}\label{apply__fisheye__distortion_8m_a323c7c0e24065e1d8076146cf349ddbc}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!dtheta\_d\_dr\_r@{dtheta\_d\_dr\_r}}
+\index{dtheta\_d\_dr\_r@{dtheta\_d\_dr\_r}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dtheta\_d\_dr\_r()}{dtheta\_d\_dr\_r()}}
+{\footnotesize\ttfamily dtheta\+\_\+d\+\_\+dr\+\_\+r (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a833b2f33dd83015a360665b39d8573bc}\label{apply__fisheye__distortion_8m_a833b2f33dd83015a360665b39d8573bc}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!if@{if}}
+\index{if@{if}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{rodrigues_8m_acda6303f8e0e875891d99e821a16e598}{nargout}}}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a6350479b226075576da46f39ce665050}\label{apply__fisheye__distortion_8m_a6350479b226075576da46f39ce665050}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!scaling@{scaling}}
+\index{scaling@{scaling}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{scaling()}{scaling()}}
+{\footnotesize\ttfamily scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a62473366c9238f6d65a8c5b4a1e82002}\label{apply__fisheye__distortion_8m_a62473366c9238f6d65a8c5b4a1e82002}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!theta\_d\_r2@{theta\_d\_r2}}
+\index{theta\_d\_r2@{theta\_d\_r2}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{theta\_d\_r2()}{theta\_d\_r2()}}
+{\footnotesize\ttfamily theta\+\_\+d\+\_\+r2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}{ind\+\_\+good}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_aea9f64094c5374752838c3081bd4ae8f}\label{apply__fisheye__distortion_8m_aea9f64094c5374752838c3081bd4ae8f}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!dr\_dx@{dr\_dx}}
+\index{dr\_dx@{dr\_dx}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dr\_dx}{dr\_dx}}
+{\footnotesize\ttfamily dr\+\_\+dx = \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_ac1e98d5e8b3ad8b2e11223b79c86a238}\label{apply__fisheye__distortion_8m_ac1e98d5e8b3ad8b2e11223b79c86a238}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!dtheta\_d\_dr\_r@{dtheta\_d\_dr\_r}}
+\index{dtheta\_d\_dr\_r@{dtheta\_d\_dr\_r}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dtheta\_d\_dr\_r}{dtheta\_d\_dr\_r}}
+{\footnotesize\ttfamily dtheta\+\_\+d\+\_\+dr\+\_\+r = \mbox{\hyperlink{apply__fisheye__distortion_8m_aebd0c283bd05105c502b7c99f88e4373}{dtheta\+\_\+d\+\_\+dtheta}} .$\ast$ \mbox{\hyperlink{apply__fisheye__distortion_8m_a5c653f3e86a959e6fc099e7e1d58ffa3}{dtheta\+\_\+dr}}}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_aebd0c283bd05105c502b7c99f88e4373}\label{apply__fisheye__distortion_8m_aebd0c283bd05105c502b7c99f88e4373}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!dtheta\_d\_dtheta@{dtheta\_d\_dtheta}}
+\index{dtheta\_d\_dtheta@{dtheta\_d\_dtheta}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dtheta\_d\_dtheta}{dtheta\_d\_dtheta}}
+{\footnotesize\ttfamily dtheta\+\_\+d\+\_\+dtheta}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= 1 + 3*\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}}(1)*\mbox{\hyperlink{apply__fisheye__distortion_8m_a4239e318cc3ffbed6b985fb5870418d0}{theta}}.\string^2 + 5*\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}}(2)*\mbox{\hyperlink{apply__fisheye__distortion_8m_a4239e318cc3ffbed6b985fb5870418d0}{theta}}.\string^4 + ...}
+\DoxyCodeLine{      7*\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}}(3)*\mbox{\hyperlink{apply__fisheye__distortion_8m_a4239e318cc3ffbed6b985fb5870418d0}{theta}}.\string^6 + 9*\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}}(4)*\mbox{\hyperlink{apply__fisheye__distortion_8m_a4239e318cc3ffbed6b985fb5870418d0}{theta}}.\string^8}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a5c653f3e86a959e6fc099e7e1d58ffa3}\label{apply__fisheye__distortion_8m_a5c653f3e86a959e6fc099e7e1d58ffa3}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!dtheta\_dr@{dtheta\_dr}}
+\index{dtheta\_dr@{dtheta\_dr}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dtheta\_dr}{dtheta\_dr}}
+{\footnotesize\ttfamily dtheta\+\_\+dr = 1 ./ (1 + r.$^\wedge$2)}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a53d86cdc35307befc4c3995384104025}\label{apply__fisheye__distortion_8m_a53d86cdc35307befc4c3995384104025}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!dxd\_dx@{dxd\_dx}}
+\index{dxd\_dx@{dxd\_dx}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dxd\_dx}{dxd\_dx}}
+{\footnotesize\ttfamily dxd\+\_\+dx = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2,2,\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}})}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_acbe37f4f33f662302e44fea3ed71baec}\label{apply__fisheye__distortion_8m_acbe37f4f33f662302e44fea3ed71baec}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!function@{function}}
+\index{function@{function}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}, \mbox{\hyperlink{apply__fisheye__distortion_8m_a53d86cdc35307befc4c3995384104025}{dxd\+\_\+dx}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= apply\_fisheye\_distortion(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}},\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\%apply\_fisheye\_distortion.m}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%[x] =  apply\_fisheye\_distortion(\mbox{\hyperlink{apply__fisheye__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}},\mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%Apply the fisheye distortions}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%\mbox{\hyperlink{_compute_stripes_8m_ae27da7df4d207577ee411ff134a16eea}{INPUT}}: \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}: undistorted (normalized) \mbox{\hyperlink{init__intrinsic__param_8m_a60bfb22881d8ade0a15adeaa7a363c23}{point}} \mbox{\hyperlink{_compute_stripes_8m_a5c4aa834f79d9bba4ec3f74f17439836}{coordinates}} in the \mbox{\hyperlink{analyse__error_8m_aee9a066043e7b7065d7cdda5fbcfba53}{image}} plane (2xN \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}})}
+\DoxyCodeLine{\%       \mbox{\hyperlink{apply__distortion2_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}}: Fisheye \mbox{\hyperlink{apply__distortion_8m_a489630d61c55f2188f687d347393e5d0}{distortion}} coefficients (5\mbox{\hyperlink{click__ima__calib_8m_aa3e5e1187c13261975d66c1290431e52}{x1}} \mbox{\hyperlink{go__calib__optim__iter_8m_a944b0ff7b0378fbacbea580c66148200}{vector}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%OUTPUT: \mbox{\hyperlink{apply__fisheye__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}: distorted (normalized) \mbox{\hyperlink{init__intrinsic__param_8m_a60bfb22881d8ade0a15adeaa7a363c23}{point}} \mbox{\hyperlink{_compute_stripes_8m_a5c4aa834f79d9bba4ec3f74f17439836}{coordinates}} in the \mbox{\hyperlink{analyse__error_8m_aee9a066043e7b7065d7cdda5fbcfba53}{image}} plane (2xN \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}})}
+\DoxyCodeLine{\%        \mbox{\hyperlink{apply__fisheye__distortion_8m_a53d86cdc35307befc4c3995384104025}{dxd\_dx}} : jacobian (2x2xN \mbox{\hyperlink{extract__parameters_8m_aa29c479aca4eef75a9f1c16e1c1ff766}{matrix}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}} = sqrt(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,:).\string^2 + \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,:).\string^2)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a6f6ccfcf58b31cb6412107d9d5281426}\label{apply__fisheye__distortion_8m_a6f6ccfcf58b31cb6412107d9d5281426}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!i@{i}}
+\index{i@{i}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily for i}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= 1:\mbox{\hyperlink{cam__proj__calib__optim_8m_a5bf8e9bd225c9965657036965db3c3fb}{n}}}
+\DoxyCodeLine{    \mbox{\hyperlink{apply__fisheye__distortion_8m_a53d86cdc35307befc4c3995384104025}{dxd\_dx}}(:,:,\mbox{\hyperlink{apply__fisheye__distortion_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}) = \mbox{\hyperlink{apply__fisheye__distortion_8m_a83e4e30239128472979d5017bf6a950d}{scaling}}(\mbox{\hyperlink{apply__fisheye__distortion_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}})*eye(2,2) + \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(:,i)*(\mbox{\hyperlink{apply__fisheye__distortion_8m_ac1e98d5e8b3ad8b2e11223b79c86a238}{dtheta\_d\_dr\_r}}(\mbox{\hyperlink{apply__fisheye__distortion_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}) -\/ ...}
+\DoxyCodeLine{                    theta\_d\_r2(\mbox{\hyperlink{apply__fisheye__distortion_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}}))*dr\_dx(:,\mbox{\hyperlink{apply__fisheye__distortion_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}})'}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}\label{apply__fisheye__distortion_8m_ae1b2ff77fb8400b6f6ae38d58dc50b19}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!ind\_good@{ind\_good}}
+\index{ind\_good@{ind\_good}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{ind\_good}{ind\_good}}
+{\footnotesize\ttfamily ind\+\_\+good = find(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}} $>$ 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/8)}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a83e4e30239128472979d5017bf6a950d}\label{apply__fisheye__distortion_8m_a83e4e30239128472979d5017bf6a950d}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!scaling@{scaling}}
+\index{scaling@{scaling}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{scaling}{scaling}}
+{\footnotesize\ttfamily scaling = \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}))}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a4239e318cc3ffbed6b985fb5870418d0}\label{apply__fisheye__distortion_8m_a4239e318cc3ffbed6b985fb5870418d0}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!theta@{theta}}
+\index{theta@{theta}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{theta}{theta}}
+{\footnotesize\ttfamily initial guess for theta = atan(\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}})}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_adb96c8420e6e7dce022855cf4e4b8ecc}\label{apply__fisheye__distortion_8m_adb96c8420e6e7dce022855cf4e4b8ecc}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!theta\_d@{theta\_d}}
+\index{theta\_d@{theta\_d}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{theta\_d}{theta\_d}}
+{\footnotesize\ttfamily theta\+\_\+d = \mbox{\hyperlink{rodrigues_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}} .$\ast$ (1 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1)$\ast$theta.$^\wedge$2 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2)$\ast$theta.$^\wedge$4 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$theta.$^\wedge$6 + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$theta.$^\wedge$8)}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_ae91e257d0133d599b7540ad045ca3b50}\label{apply__fisheye__distortion_8m_ae91e257d0133d599b7540ad045ca3b50}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!theta\_d\_r2@{theta\_d\_r2}}
+\index{theta\_d\_r2@{theta\_d\_r2}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{theta\_d\_r2}{theta\_d\_r2}}
+{\footnotesize\ttfamily theta\+\_\+d\+\_\+r2 = \mbox{\hyperlink{apply__fisheye__distortion_8m_a6350479b226075576da46f39ce665050}{scaling}}}
+
+\mbox{\Hypertarget{apply__fisheye__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}\label{apply__fisheye__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}} 
+\index{apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}!xd@{xd}}
+\index{xd@{xd}!apply\_fisheye\_distortion.m@{apply\_fisheye\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{xd}{xd}}
+{\footnotesize\ttfamily xd = \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} .$\ast$ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)$\ast$\mbox{\hyperlink{apply__fisheye__distortion_8m_a6350479b226075576da46f39ce665050}{scaling}})}
+

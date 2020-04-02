@@ -1,0 +1,216 @@
+\hypertarget{compose__motion_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/compose\+\_\+motion.m File Reference}
+\label{compose__motion_8m}\index{D:/TrackEsferas/NavarQA/calib/compose\_motion.m@{D:/TrackEsferas/NavarQA/calib/compose\_motion.m}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{compose__motion_8m_aa2ce9eca767b2df0425c94d9ebe18530}{function}} \mbox{[}om3, \mbox{\hyperlink{compose__motion_8m_a46f7973da1d3aac82976aecba9301120}{T3}}, \mbox{\hyperlink{compose__motion_8m_ad75fbe8465cef2733bf32c6698af8144}{dom3dom1}}, \mbox{\hyperlink{compose__motion_8m_a929ec0370207f43cfc3f50420b100b8f}{dom3d\+T1}}, \mbox{\hyperlink{compose__motion_8m_a0fd411c0aa9d9af20d93316d14419af3}{dom3dom2}}, \mbox{\hyperlink{compose__motion_8m_a602c5dc9e93d58b2c1c98b56ee2e8c39}{dom3d\+T2}}, \mbox{\hyperlink{compose__motion_8m_a1d46ea7bcd0ac7497b99766fa484772d}{d\+T3dom1}}, \mbox{\hyperlink{compose__motion_8m_aee44b9f985c6e2bb268b8d1271161978}{d\+T3d\+T1}}, \mbox{\hyperlink{compose__motion_8m_a266a13adf99ffc17dc89ddcf45da37cb}{d\+T3dom2}}, \mbox{\hyperlink{compose__motion_8m_a79a1315f3a7bd75103df05b886a42ad9}{d\+T3d\+T2}}\mbox{]} = compose\+\_\+motion(\mbox{\hyperlink{rodrigues_8m_ab1e211a2ccf98ca7f9cd960ad411a1d9}{om1}},\mbox{\hyperlink{compose__motion_8m_aa7255c4bc0e9fa663f62fbafe1026daa}{T1}},\mbox{\hyperlink{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}{om2}},\mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}})
+\item 
+Rotations \mbox{\hyperlink{compose__motion_8m_a39360b1df8ddfcd515de36e0712c2a0c}{\+\_\+\+\_\+pad3\+\_\+\+\_\+}}
+\item 
+Rotations \mbox{\hyperlink{compose__motion_8m_a5c30d24fc7fb13af59e6527a93057a74}{d\+R1dom1}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{rodrigues_8m_ab1e211a2ccf98ca7f9cd960ad411a1d9}{om1}})
+\item 
+\mbox{\hyperlink{compose__motion_8m_a1822f3ea905724b212b227913ab56e75}{R3}} = \mbox{\hyperlink{rodrigues_8m_ab477549012f7889a894f39499202efdf}{R2}} $\ast$ R1
+\item 
+\mbox{\hyperlink{compose__motion_8m_ad75fbe8465cef2733bf32c6698af8144}{dom3dom1}} = dom3d\+R3 $\ast$ d\+R3d\+R1 $\ast$ \mbox{\hyperlink{compose__motion_8m_a5c30d24fc7fb13af59e6527a93057a74}{d\+R1dom1}}
+\item 
+\mbox{\hyperlink{compose__motion_8m_a0fd411c0aa9d9af20d93316d14419af3}{dom3dom2}} = dom3d\+R3 $\ast$ d\+R3d\+R2 $\ast$ d\+R2dom2
+\item 
+\mbox{\hyperlink{compose__motion_8m_a929ec0370207f43cfc3f50420b100b8f}{dom3d\+T1}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,3)
+\item 
+\mbox{\hyperlink{compose__motion_8m_a602c5dc9e93d58b2c1c98b56ee2e8c39}{dom3d\+T2}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,3)
+\item 
+Translations \mbox{\hyperlink{compose__motion_8m_ae508df4b30d1c7e682134abfab3fdc0f}{\+\_\+\+\_\+pad4\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{compose__motion_8m_adf03ba91f1ff5b97de47079a5dc768e0}{d\+T3tdom2}} = d\+T3td\+R2 $\ast$ d\+R2dom2
+\item 
+\mbox{\hyperlink{compose__motion_8m_a46f7973da1d3aac82976aecba9301120}{T3}} = T3t + \mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}}
+\item 
+\mbox{\hyperlink{compose__motion_8m_aee44b9f985c6e2bb268b8d1271161978}{d\+T3d\+T1}} = d\+T3td\+T1
+\item 
+\mbox{\hyperlink{compose__motion_8m_a79a1315f3a7bd75103df05b886a42ad9}{d\+T3d\+T2}} = eye(3)
+\item 
+\mbox{\hyperlink{compose__motion_8m_a266a13adf99ffc17dc89ddcf45da37cb}{d\+T3dom2}} = \mbox{\hyperlink{compose__motion_8m_adf03ba91f1ff5b97de47079a5dc768e0}{d\+T3tdom2}}
+\item 
+\mbox{\hyperlink{compose__motion_8m_a1d46ea7bcd0ac7497b99766fa484772d}{d\+T3dom1}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,3)
+\item 
+\mbox{\hyperlink{compose__motion_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+Test of the \mbox{\hyperlink{compose__motion_8m_abae42d8e51a0eb43fe8aebb87b4719a0}{Jacobians}}
+\item 
+Test of the \mbox{\hyperlink{compose__motion_8m_aef4e46e0cc51912bd66daea41307b39e}{om2}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)
+\item 
+\mbox{\hyperlink{compose__motion_8m_aa7255c4bc0e9fa663f62fbafe1026daa}{T1}} = 10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)
+\item 
+\mbox{\hyperlink{compose__motion_8m_a5a30d530a77bc992810b0c24a3e8f550}{T2}} = 10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)
+\item 
+\mbox{\hyperlink{compose__motion_8m_a22a174ffa6396234255513dc7e0183cf}{dom1}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 1000
+\item 
+\mbox{\hyperlink{compose__motion_8m_a8ee5e850745909fc4e7e77e364dd507e}{dom2}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 1000
+\item 
+\mbox{\hyperlink{compose__motion_8m_a1341745852d9b8d122bb52e651dd2657}{d\+T1}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 10000
+\item 
+\mbox{\hyperlink{compose__motion_8m_a6fd4cff1947d98761c9756ab10625b0f}{d\+T2}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 10000
+\item 
+\mbox{\hyperlink{compose__motion_8m_a270da0d4833e47e71e71c1a2ff5d60e2}{om3p}} = om3 + \mbox{\hyperlink{compose__motion_8m_ad75fbe8465cef2733bf32c6698af8144}{dom3dom1}}$\ast$\mbox{\hyperlink{compose__motion_8m_a22a174ffa6396234255513dc7e0183cf}{dom1}} + \mbox{\hyperlink{compose__motion_8m_a929ec0370207f43cfc3f50420b100b8f}{dom3d\+T1}}$\ast$\mbox{\hyperlink{compose__motion_8m_a1341745852d9b8d122bb52e651dd2657}{d\+T1}} + \mbox{\hyperlink{compose__motion_8m_a0fd411c0aa9d9af20d93316d14419af3}{dom3dom2}}$\ast$\mbox{\hyperlink{compose__motion_8m_a8ee5e850745909fc4e7e77e364dd507e}{dom2}} + \mbox{\hyperlink{compose__motion_8m_a602c5dc9e93d58b2c1c98b56ee2e8c39}{dom3d\+T2}}$\ast$\mbox{\hyperlink{compose__motion_8m_a6fd4cff1947d98761c9756ab10625b0f}{d\+T2}}
+\item 
+\mbox{\hyperlink{compose__motion_8m_a030865f0ab0b29f6f84fe9dcdd5a2610}{T3p}} = \mbox{\hyperlink{compose__motion_8m_a46f7973da1d3aac82976aecba9301120}{T3}} + \mbox{\hyperlink{compose__motion_8m_a1d46ea7bcd0ac7497b99766fa484772d}{d\+T3dom1}}$\ast$\mbox{\hyperlink{compose__motion_8m_a22a174ffa6396234255513dc7e0183cf}{dom1}} + \mbox{\hyperlink{compose__motion_8m_aee44b9f985c6e2bb268b8d1271161978}{d\+T3d\+T1}}$\ast$\mbox{\hyperlink{compose__motion_8m_a1341745852d9b8d122bb52e651dd2657}{d\+T1}} + \mbox{\hyperlink{compose__motion_8m_a266a13adf99ffc17dc89ddcf45da37cb}{d\+T3dom2}}$\ast$\mbox{\hyperlink{compose__motion_8m_a8ee5e850745909fc4e7e77e364dd507e}{dom2}} + \mbox{\hyperlink{compose__motion_8m_a79a1315f3a7bd75103df05b886a42ad9}{d\+T3d\+T2}}$\ast$\mbox{\hyperlink{compose__motion_8m_a6fd4cff1947d98761c9756ab10625b0f}{d\+T2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{compose__motion_8m_a39360b1df8ddfcd515de36e0712c2a0c}\label{compose__motion_8m_a39360b1df8ddfcd515de36e0712c2a0c}} 
+\index{compose\_motion.m@{compose\_motion.m}!\_\_pad3\_\_@{\_\_pad3\_\_}}
+\index{\_\_pad3\_\_@{\_\_pad3\_\_}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad3\_\_}{\_\_pad3\_\_}}
+{\footnotesize\ttfamily Rotations \+\_\+\+\_\+pad3\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{compose__motion_8m_ae508df4b30d1c7e682134abfab3fdc0f}\label{compose__motion_8m_ae508df4b30d1c7e682134abfab3fdc0f}} 
+\index{compose\_motion.m@{compose\_motion.m}!\_\_pad4\_\_@{\_\_pad4\_\_}}
+\index{\_\_pad4\_\_@{\_\_pad4\_\_}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad4\_\_}{\_\_pad4\_\_}}
+{\footnotesize\ttfamily Translations \+\_\+\+\_\+pad4\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{compose__motion_8m_a22a174ffa6396234255513dc7e0183cf}\label{compose__motion_8m_a22a174ffa6396234255513dc7e0183cf}} 
+\index{compose\_motion.m@{compose\_motion.m}!dom1@{dom1}}
+\index{dom1@{dom1}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom1}{dom1}}
+{\footnotesize\ttfamily dom1 = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 1000}
+
+\mbox{\Hypertarget{compose__motion_8m_a8ee5e850745909fc4e7e77e364dd507e}\label{compose__motion_8m_a8ee5e850745909fc4e7e77e364dd507e}} 
+\index{compose\_motion.m@{compose\_motion.m}!dom2@{dom2}}
+\index{dom2@{dom2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom2}{dom2}}
+{\footnotesize\ttfamily dom2 = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 1000}
+
+\mbox{\Hypertarget{compose__motion_8m_ad75fbe8465cef2733bf32c6698af8144}\label{compose__motion_8m_ad75fbe8465cef2733bf32c6698af8144}} 
+\index{compose\_motion.m@{compose\_motion.m}!dom3dom1@{dom3dom1}}
+\index{dom3dom1@{dom3dom1}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom3dom1}{dom3dom1}}
+{\footnotesize\ttfamily dom3dom1 = dom3d\+R3 $\ast$ d\+R3d\+R1 $\ast$ \mbox{\hyperlink{compose__motion_8m_a5c30d24fc7fb13af59e6527a93057a74}{d\+R1dom1}}}
+
+\mbox{\Hypertarget{compose__motion_8m_a0fd411c0aa9d9af20d93316d14419af3}\label{compose__motion_8m_a0fd411c0aa9d9af20d93316d14419af3}} 
+\index{compose\_motion.m@{compose\_motion.m}!dom3dom2@{dom3dom2}}
+\index{dom3dom2@{dom3dom2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom3dom2}{dom3dom2}}
+{\footnotesize\ttfamily dom3dom2 = dom3d\+R3 $\ast$ d\+R3d\+R2 $\ast$ d\+R2dom2}
+
+\mbox{\Hypertarget{compose__motion_8m_a929ec0370207f43cfc3f50420b100b8f}\label{compose__motion_8m_a929ec0370207f43cfc3f50420b100b8f}} 
+\index{compose\_motion.m@{compose\_motion.m}!dom3dT1@{dom3dT1}}
+\index{dom3dT1@{dom3dT1}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom3dT1}{dom3dT1}}
+{\footnotesize\ttfamily dom3d\+T1 = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,3)}
+
+\mbox{\Hypertarget{compose__motion_8m_a602c5dc9e93d58b2c1c98b56ee2e8c39}\label{compose__motion_8m_a602c5dc9e93d58b2c1c98b56ee2e8c39}} 
+\index{compose\_motion.m@{compose\_motion.m}!dom3dT2@{dom3dT2}}
+\index{dom3dT2@{dom3dT2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom3dT2}{dom3dT2}}
+{\footnotesize\ttfamily dom3d\+T2 = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,3)}
+
+\mbox{\Hypertarget{compose__motion_8m_a5c30d24fc7fb13af59e6527a93057a74}\label{compose__motion_8m_a5c30d24fc7fb13af59e6527a93057a74}} 
+\index{compose\_motion.m@{compose\_motion.m}!dR1dom1@{dR1dom1}}
+\index{dR1dom1@{dR1dom1}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dR1dom1}{dR1dom1}}
+{\footnotesize\ttfamily Rotations d\+R1dom1 = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{rodrigues_8m_ab1e211a2ccf98ca7f9cd960ad411a1d9}{om1}})}
+
+\mbox{\Hypertarget{compose__motion_8m_a1341745852d9b8d122bb52e651dd2657}\label{compose__motion_8m_a1341745852d9b8d122bb52e651dd2657}} 
+\index{compose\_motion.m@{compose\_motion.m}!dT1@{dT1}}
+\index{dT1@{dT1}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT1}{dT1}}
+{\footnotesize\ttfamily d\+T1 = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 10000}
+
+\mbox{\Hypertarget{compose__motion_8m_a6fd4cff1947d98761c9756ab10625b0f}\label{compose__motion_8m_a6fd4cff1947d98761c9756ab10625b0f}} 
+\index{compose\_motion.m@{compose\_motion.m}!dT2@{dT2}}
+\index{dT2@{dT2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT2}{dT2}}
+{\footnotesize\ttfamily d\+T2 = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 10000}
+
+\mbox{\Hypertarget{compose__motion_8m_a1d46ea7bcd0ac7497b99766fa484772d}\label{compose__motion_8m_a1d46ea7bcd0ac7497b99766fa484772d}} 
+\index{compose\_motion.m@{compose\_motion.m}!dT3dom1@{dT3dom1}}
+\index{dT3dom1@{dT3dom1}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT3dom1}{dT3dom1}}
+{\footnotesize\ttfamily d\+T3dom1 = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,3)}
+
+\mbox{\Hypertarget{compose__motion_8m_a266a13adf99ffc17dc89ddcf45da37cb}\label{compose__motion_8m_a266a13adf99ffc17dc89ddcf45da37cb}} 
+\index{compose\_motion.m@{compose\_motion.m}!dT3dom2@{dT3dom2}}
+\index{dT3dom2@{dT3dom2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT3dom2}{dT3dom2}}
+{\footnotesize\ttfamily d\+T3dom2 = \mbox{\hyperlink{compose__motion_8m_adf03ba91f1ff5b97de47079a5dc768e0}{d\+T3tdom2}}}
+
+\mbox{\Hypertarget{compose__motion_8m_aee44b9f985c6e2bb268b8d1271161978}\label{compose__motion_8m_aee44b9f985c6e2bb268b8d1271161978}} 
+\index{compose\_motion.m@{compose\_motion.m}!dT3dT1@{dT3dT1}}
+\index{dT3dT1@{dT3dT1}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT3dT1}{dT3dT1}}
+{\footnotesize\ttfamily d\+T3d\+T1 = d\+T3td\+T1}
+
+\mbox{\Hypertarget{compose__motion_8m_a79a1315f3a7bd75103df05b886a42ad9}\label{compose__motion_8m_a79a1315f3a7bd75103df05b886a42ad9}} 
+\index{compose\_motion.m@{compose\_motion.m}!dT3dT2@{dT3dT2}}
+\index{dT3dT2@{dT3dT2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT3dT2}{dT3dT2}}
+{\footnotesize\ttfamily d\+T3d\+T2 = eye(3)}
+
+\mbox{\Hypertarget{compose__motion_8m_adf03ba91f1ff5b97de47079a5dc768e0}\label{compose__motion_8m_adf03ba91f1ff5b97de47079a5dc768e0}} 
+\index{compose\_motion.m@{compose\_motion.m}!dT3tdom2@{dT3tdom2}}
+\index{dT3tdom2@{dT3tdom2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT3tdom2}{dT3tdom2}}
+{\footnotesize\ttfamily d\+T3tdom2 = d\+T3td\+R2 $\ast$ d\+R2dom2}
+
+\mbox{\Hypertarget{compose__motion_8m_aa2ce9eca767b2df0425c94d9ebe18530}\label{compose__motion_8m_aa2ce9eca767b2df0425c94d9ebe18530}} 
+\index{compose\_motion.m@{compose\_motion.m}!function@{function}}
+\index{function@{function}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}om3, \mbox{\hyperlink{compose__motion_8m_a46f7973da1d3aac82976aecba9301120}{T3}}, \mbox{\hyperlink{compose__motion_8m_ad75fbe8465cef2733bf32c6698af8144}{dom3dom1}}, \mbox{\hyperlink{compose__motion_8m_a929ec0370207f43cfc3f50420b100b8f}{dom3d\+T1}}, \mbox{\hyperlink{compose__motion_8m_a0fd411c0aa9d9af20d93316d14419af3}{dom3dom2}}, \mbox{\hyperlink{compose__motion_8m_a602c5dc9e93d58b2c1c98b56ee2e8c39}{dom3d\+T2}}, \mbox{\hyperlink{compose__motion_8m_a1d46ea7bcd0ac7497b99766fa484772d}{d\+T3dom1}}, \mbox{\hyperlink{compose__motion_8m_aee44b9f985c6e2bb268b8d1271161978}{d\+T3d\+T1}}, \mbox{\hyperlink{compose__motion_8m_a266a13adf99ffc17dc89ddcf45da37cb}{d\+T3dom2}}, \mbox{\hyperlink{compose__motion_8m_a79a1315f3a7bd75103df05b886a42ad9}{d\+T3d\+T2}}\mbox{]} = compose\+\_\+motion(\mbox{\hyperlink{rodrigues_8m_ab1e211a2ccf98ca7f9cd960ad411a1d9}{om1}},\mbox{\hyperlink{compose__motion_8m_aa7255c4bc0e9fa663f62fbafe1026daa}{T1}},\mbox{\hyperlink{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}{om2}},\mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}})}
+
+\mbox{\Hypertarget{compose__motion_8m_abae42d8e51a0eb43fe8aebb87b4719a0}\label{compose__motion_8m_abae42d8e51a0eb43fe8aebb87b4719a0}} 
+\index{compose\_motion.m@{compose\_motion.m}!Jacobians@{Jacobians}}
+\index{Jacobians@{Jacobians}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{Jacobians}{Jacobians}}
+{\footnotesize\ttfamily Test of the Jacobians}
+
+\mbox{\Hypertarget{compose__motion_8m_aef4e46e0cc51912bd66daea41307b39e}\label{compose__motion_8m_aef4e46e0cc51912bd66daea41307b39e}} 
+\index{compose\_motion.m@{compose\_motion.m}!om2@{om2}}
+\index{om2@{om2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{om2}{om2}}
+{\footnotesize\ttfamily Test of the om2 = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)}
+
+\mbox{\Hypertarget{compose__motion_8m_a270da0d4833e47e71e71c1a2ff5d60e2}\label{compose__motion_8m_a270da0d4833e47e71e71c1a2ff5d60e2}} 
+\index{compose\_motion.m@{compose\_motion.m}!om3p@{om3p}}
+\index{om3p@{om3p}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{om3p}{om3p}}
+{\footnotesize\ttfamily om3p = om3 + \mbox{\hyperlink{compose__motion_8m_ad75fbe8465cef2733bf32c6698af8144}{dom3dom1}}$\ast$\mbox{\hyperlink{compose__motion_8m_a22a174ffa6396234255513dc7e0183cf}{dom1}} + \mbox{\hyperlink{compose__motion_8m_a929ec0370207f43cfc3f50420b100b8f}{dom3d\+T1}}$\ast$\mbox{\hyperlink{compose__motion_8m_a1341745852d9b8d122bb52e651dd2657}{d\+T1}} + \mbox{\hyperlink{compose__motion_8m_a0fd411c0aa9d9af20d93316d14419af3}{dom3dom2}}$\ast$\mbox{\hyperlink{compose__motion_8m_a8ee5e850745909fc4e7e77e364dd507e}{dom2}} + \mbox{\hyperlink{compose__motion_8m_a602c5dc9e93d58b2c1c98b56ee2e8c39}{dom3d\+T2}}$\ast$\mbox{\hyperlink{compose__motion_8m_a6fd4cff1947d98761c9756ab10625b0f}{d\+T2}}}
+
+\mbox{\Hypertarget{compose__motion_8m_a1822f3ea905724b212b227913ab56e75}\label{compose__motion_8m_a1822f3ea905724b212b227913ab56e75}} 
+\index{compose\_motion.m@{compose\_motion.m}!R3@{R3}}
+\index{R3@{R3}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{R3}{R3}}
+{\footnotesize\ttfamily R3 = \mbox{\hyperlink{rodrigues_8m_ab477549012f7889a894f39499202efdf}{R2}} $\ast$ R1}
+
+\mbox{\Hypertarget{compose__motion_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{compose__motion_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{compose\_motion.m@{compose\_motion.m}!return@{return}}
+\index{return@{return}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{compose__motion_8m_aa7255c4bc0e9fa663f62fbafe1026daa}\label{compose__motion_8m_aa7255c4bc0e9fa663f62fbafe1026daa}} 
+\index{compose\_motion.m@{compose\_motion.m}!T1@{T1}}
+\index{T1@{T1}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{T1}{T1}}
+{\footnotesize\ttfamily T1 = 10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)}
+
+\mbox{\Hypertarget{compose__motion_8m_a5a30d530a77bc992810b0c24a3e8f550}\label{compose__motion_8m_a5a30d530a77bc992810b0c24a3e8f550}} 
+\index{compose\_motion.m@{compose\_motion.m}!T2@{T2}}
+\index{T2@{T2}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{T2}{T2}}
+{\footnotesize\ttfamily T2 = 10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)}
+
+\mbox{\Hypertarget{compose__motion_8m_a46f7973da1d3aac82976aecba9301120}\label{compose__motion_8m_a46f7973da1d3aac82976aecba9301120}} 
+\index{compose\_motion.m@{compose\_motion.m}!T3@{T3}}
+\index{T3@{T3}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{T3}{T3}}
+{\footnotesize\ttfamily T3 = T3t + \mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}}}
+
+\mbox{\Hypertarget{compose__motion_8m_a030865f0ab0b29f6f84fe9dcdd5a2610}\label{compose__motion_8m_a030865f0ab0b29f6f84fe9dcdd5a2610}} 
+\index{compose\_motion.m@{compose\_motion.m}!T3p@{T3p}}
+\index{T3p@{T3p}!compose\_motion.m@{compose\_motion.m}}
+\doxysubsubsection{\texorpdfstring{T3p}{T3p}}
+{\footnotesize\ttfamily T3p = \mbox{\hyperlink{compose__motion_8m_a46f7973da1d3aac82976aecba9301120}{T3}} + \mbox{\hyperlink{compose__motion_8m_a1d46ea7bcd0ac7497b99766fa484772d}{d\+T3dom1}}$\ast$\mbox{\hyperlink{compose__motion_8m_a22a174ffa6396234255513dc7e0183cf}{dom1}} + \mbox{\hyperlink{compose__motion_8m_aee44b9f985c6e2bb268b8d1271161978}{d\+T3d\+T1}}$\ast$\mbox{\hyperlink{compose__motion_8m_a1341745852d9b8d122bb52e651dd2657}{d\+T1}} + \mbox{\hyperlink{compose__motion_8m_a266a13adf99ffc17dc89ddcf45da37cb}{d\+T3dom2}}$\ast$\mbox{\hyperlink{compose__motion_8m_a8ee5e850745909fc4e7e77e364dd507e}{dom2}} + \mbox{\hyperlink{compose__motion_8m_a79a1315f3a7bd75103df05b886a42ad9}{d\+T3d\+T2}}$\ast$\mbox{\hyperlink{compose__motion_8m_a6fd4cff1947d98761c9756ab10625b0f}{d\+T2}}}
+

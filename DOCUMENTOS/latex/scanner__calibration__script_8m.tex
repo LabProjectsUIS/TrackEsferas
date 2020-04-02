@@ -1,0 +1,1478 @@
+\hypertarget{scanner__calibration__script_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/scanner\+\_\+calibration\+\_\+script.m File Reference}
+\label{scanner__calibration__script_8m}\index{D:/TrackEsferas/NavarQA/calib/scanner\_calibration\_script.m@{D:/TrackEsferas/NavarQA/calib/scanner\_calibration\_script.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_a617d17276396a39b1f20468a5a81f959}{clear}} ()
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_a3841c0dc97fc5f98bcb82dfe22b3997c}{S\+T\+E\+P\+:projector\+:}} (id the,\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}}\mbox{]} 1, \textquotesingle{}S\+T\+EP 1\+:Calibration of the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{} \mbox{\hyperlink{write__image_8m_ad30f90d7c677b07123060e504ccd3d87}{fprintf}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a2e286be031d0547482321f48ebc74ed0}{figure}} (10)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a7888c1fe7ec0cb0a2aed00c7e3f8d8d2}{image}} (I\+\_\+cam1)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a785e543090bc356de9802e8bae0ad968}{plot}} (\mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}}(1,\+:)+1, \mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}}(2,\+:)+1, \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ac81a72aa226bab776c041a4c980ad04d}{title}} (\textquotesingle{}Example \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} image\+:cam01.\+bmp\textquotesingle{}) hold \mbox{\hyperlink{visualize__distortions_8m_a835accca41274fb237599d9b3c117fcf}{off}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a8bc9371ba794d02634a58a6280b5ef7f}{figure}} (11)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aab810cc6cad3ed27b64113aac7b177fc}{plot3}} (\mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}}(1,\+:), \mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}}(2,\+:), \mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}}(3,\+:), \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a7b8c25def30d842e110fd329991ae043}{xlabel}} (\textquotesingle{}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a44be30ecd4122a8ac3728d1370f7f917}{ylabel}} (\textquotesingle{}\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a0faf5a6161e9f8cdb658831d495b6652}{zlabel}} (\textquotesingle{}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a1f9915eb0cd613a885a884f18f4607fc}{title}} (\textquotesingle{}3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the corresponding \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}}(\mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}})...\textquotesingle{}) \mbox{\hyperlink{scanner__calibration__script_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}{drawnow}}
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_a17a9165b4f73593c557e86d0305384bc}{est\+\_\+alpha}} ()
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ac6cf928a861e386e8417b2f5bc0f1656}{copyfile}} (\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{camera\+\_\+results.\+mat}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a95094a7d1dd5a8b085a41ba28c076216}{delete}} (\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a494854a197c968b631635365a4240890}{delete}} (\textquotesingle{}\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{Calib\+\_\+\+Results.\+m}}\textquotesingle{})
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_ae2904e2f0b578fedd4d82b083c516a81}{variables\+:}} (id \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a617d17276396a39b1f20468a5a81f959}{clear}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} Saving the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}} (for further \mbox{\hyperlink{compute__homography_8m_a64290fa0a6b548b1be749ab2710f0b31}{refinement}}) \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_ac3d328530d7739ba408e747ee792237f}{S\+T\+E\+P\+:calibration\+:}} (id \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}},\mbox{[}\mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}}\mbox{]} 1, \textquotesingle{}S\+T\+EP 2\+:Calibration of the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}}(having done \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}})...\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{} \mbox{\hyperlink{write__image_8m_ad30f90d7c677b07123060e504ccd3d87}{fprintf}})
+\item 
+\mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}}(previously saved) \% Show how an example of \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{scanner__calibration__script_8m_ab111bd97d2d98278d812100d2f3370dc}{figure}} (20)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aea34318eafe9fe2e857dd32d246a0399}{image}} (I\+\_\+proj1)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aa04ed8a5805b1ba70d873dc32226fc7e}{plot}} (xproj\+\_\+1(1,\+:)+1, xproj\+\_\+1(2,\+:)+1, \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a3569c96fd7fe6b385fde8f99e23d89f6}{title}} (\textquotesingle{}Corner \mbox{\hyperlink{error__analysis_8m_ad433454e41644431582e6554dfd197c6}{locations}} in \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} proj01n.\+bmp\textquotesingle{}) hold \mbox{\hyperlink{visualize__distortions_8m_a835accca41274fb237599d9b3c117fcf}{off}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a5a7f03eb3879d2a75c5cd507480c6b02}{figure}} (21)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a3d9047edda68ff53708474d5adf2cd0a}{plot}} (x\+\_\+proj\+\_\+1(1,\+:)+1, x\+\_\+proj\+\_\+1(2,\+:)+1, \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a2764de1b101dc4f99b39109686461572}{title}} (\textquotesingle{}Corner \mbox{\hyperlink{error__analysis_8m_ad433454e41644431582e6554dfd197c6}{locations}} in the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} plane\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a5886ad32ea8d76d30b23019b00e2a9ad}{xlabel}} (\textquotesingle{}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(in \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}})\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a2fa27ad6ce4ccd7dec14681a1a21458f}{ylabel}} (\textquotesingle{}\mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}}(in \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}})\textquotesingle{})
+\item 
+for \mbox{\hyperlink{scanner__calibration__script_8m_aa76c5a3d49f5a43517b8097d27083d58}{eval}} (\mbox{[}\textquotesingle{}\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}}=xproj\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a57ea0dd2fc9dbda9586e1f8bf5f6f61d}{ones}} (1, \mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}})\mbox{]}
+\item 
+\mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in the \mbox{\hyperlink{scanner__calibration__script_8m_a07f21f5ec95a2fe3cfa111e323fbd489}{eval}} (\mbox{[}\textquotesingle{}\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}=\mbox{[}\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}} X\+\_\+proj\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{}\mbox{]};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a47289f771f5a61543e6e71a4e8a7f271}{figure}} (22)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_af1b3967494f49c0d918de327e43ecb1f}{plot}} (\mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}}(1,\+:)+1, \mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}}(2,\+:)+1, \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a459ec5e570c4d8940cb047b4c2ef0367}{title}} (\textquotesingle{}Complete \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}}\textquotesingle{}) \mbox{\hyperlink{small__test__script_8m_a00fe093ccc1c704788889a1b49bdf388}{xlabel}}(\textquotesingle{}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(in \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}})\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a5de06e6ccd87120f7f126963f09127d8}{figure}} (23)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a0606a3b712ee7d32c6a37fbbe6634832}{plot3}} (\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}(1,\+:), \mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}(2,\+:), \mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}(3,\+:), \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} equal \mbox{\hyperlink{scanner__calibration__script_8m_ae43f84a42632e5a82fb8e071444fbfaa}{title}} (\textquotesingle{}3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}}(computed using the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}})\textquotesingle{}) \mbox{\hyperlink{small__test__script_8m_a00fe093ccc1c704788889a1b49bdf388}{xlabel}}(\textquotesingle{}\mbox{\hyperlink{project__points__weak_8m_a50022e2d102ea7933c1d0eae181cfd2f}{Xc}}(\mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{ext__calib__stereo_8m_ab87f249565eabdb0609876a0a0dac519}{reference}} frame)\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a6a34dc97bba941cce5c350625149d896}{ylabel}} (\textquotesingle{}Yc(\mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{ext__calib__stereo_8m_ab87f249565eabdb0609876a0a0dac519}{reference}} frame)\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a307388ea1cab9781ac4e19245ab9f991}{zlabel}} (\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}{Zc}}(\mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{ext__calib__stereo_8m_ab87f249565eabdb0609876a0a0dac519}{reference}} frame)\textquotesingle{})
+\item 
+No \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{scanner__calibration__script_8m_a71a47a62812c2587f08c33fec039ef4d}{available}} (only the corner \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}) \mbox{\hyperlink{scanner__calibration__script_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}{no\+\_\+image}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a7b8f1c70b2c01535e5f0f79f486b081f}{ones}} (5, 1)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a45809192ccb5ea8e200e9405e86e980b}{copyfile}} (\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{projector\+\_\+results.\+mat}}\textquotesingle{})
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_a1c79f9f6958040ed48b1a24e09944cff}{parameters\+:}} (id \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}})
+\item 
+previously saved in local \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a05521d996b2297d6af7adb8a01ccc856}{variables}} \mbox{\hyperlink{scanner__calibration__script_8m_aa1bc654f3a990eb652c052f79503228a}{n\+\_\+ima\+\_\+cam}} ()
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_a30aa06a26e1d5dedca7d915f0e967997}{results\+:parameters\+:\+Projector\+:}} (id Intrinsic,\mbox{[}\mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}}\mbox{]} id,\mbox{[}Projector\mbox{]} id fc\+\_\+proj)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a9454bedeaf85aaa7616a452b8fdce3c7}{fprintf}} (1, \textquotesingle{}Saving the scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}} in \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{calib\+\_\+cam\+\_\+proj.\+mat...\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a48136976ea3599d2f10db464ccacf876}{eval}} (\mbox{\hyperlink{scanner__calibration__script_8m_aea30b88858361dce26d8103aae56867d}{saving\+\_\+string}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ae420eba92ac5d8df25b5e513c1006f11}{eval}} (\mbox{\hyperlink{scanner__calibration__script_8m_addf5814dfda05ad7e965d42b20b83efa}{string\+\_\+global}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aee4435bb9d8082957102dce5cea6f383}{param\+\_\+proj}} (\mbox{[}1\+:4 6 11\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}\mbox{]})\mbox{]}
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_a900ae7971d8cbc46d9e7b98772ab688f}{parameters\+:}} (1\+:2 \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}} (4, 1)\mbox{]}
+\item 
+id \mbox{\hyperlink{scanner__calibration__script_8m_a8e6bd239b4f97087edf01c1de95654f3}{parameters\+:}} (1\+:4 \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aeba36d421b3201fabf31ee6abe1fa50b}{param}} (5)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a22c3b079ec854cbaaeeda41392344ebf}{param}} (6\+:5+6 $\ast$\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})\mbox{]}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a04f70756a692e330967c17913df909b9}{param}} (5+5+6 $\ast$\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}} ((6\+:11)+5+6 $\ast$\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})\mbox{]}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a91f05233b8646a3635190319e541ce92}{fprintf}} (1, \textquotesingle{}Saving the optimized scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}} in \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{calib\+\_\+cam\+\_\+proj\+\_\+optim.\+mat...\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_acc79c9768c32d3188e46fb389812488a}{copyfile}} (\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{camera\+\_\+results\+\_\+optim.\+mat}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_afa3d09130541fdcc6edfba5f3ff6c3d0}{copyfile}} (\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{projector\+\_\+results\+\_\+optim.\+mat}}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Load the corner \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} in \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{scanner__calibration__script_8m_ae33a3350450935eb7f316846415fd2b6}{camera\+\_\+data}}
+\item 
+Show one example \mbox{\hyperlink{scanner__calibration__script_8m_aea6fb5b62ed693473b2858400a151f36}{image}}
+\item 
+hold \mbox{\hyperlink{scanner__calibration__script_8m_a58ab1fd68e97078232808206b850161b}{on}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}{drawnow}}
+\item 
+Setup the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{cam__proj__calib__optim_8m_ae1b7b537d79d3e859cbc94a0d1a0383f}{model}} before \mbox{\hyperlink{scanner__calibration__script_8m_a692c0a875c0bea8818b8ad23120f0125}{calibration}}
+\item 
+No \mbox{\hyperlink{project__points__fisheye_8m_aba157a5b7437b6a17d32448a413c2d74}{Skew}} needed \mbox{\hyperlink{scanner__calibration__script_8m_aedd546fd88c21abba536a21c0bedb9ab}{center\+\_\+optim}} = 1
+\item 
+Estimate the principal \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} Run the \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{scanner__calibration__script_8m_a5e266dea6cdf288ea68372e3aeef0ae4}{routine}}
+\item 
+Show the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} location with respect \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} the \mbox{\hyperlink{scanner__calibration__script_8m_a1b8e1f2303694f3e8c37f500986cbc84}{patterns}}
+\item 
+Saving the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}} under \mbox{\hyperlink{cam__proj__calib__optim_8m_a644faffbabf04b8e75137026799fa7e9}{camera\+\_\+results}} \mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{mat}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_af8f65eed1e9ac72f79a0c3d8f4656af5}{fc\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ad50d11193e03270b519c5d8084a653d3}{cc\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a97a53ee5f08596c5fc6d710a8844d346}{kc\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a0445847554897e041aedfddc5fefbaf7}{alpha\+\_\+c\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a8350d00d536ab69e93c25c010c96743a}{fc\+\_\+error\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ac8e499789f8da5ed2de508141f924875}{cc\+\_\+error\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a684f53c1f63056d55475e1aed5153caf}{kc\+\_\+error\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a5592f61dcd63b6e6fd7ad16a0eff73e6}{alpha\+\_\+c\+\_\+error\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a0b9d7df603a4b2f13405d3f7179a1bb4}{est\+\_\+fc\+\_\+cam}} = \mbox{\hyperlink{saving__calib__fisheye_8m_a204294180c24086a6b201f68b04f0751}{est\+\_\+fc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a274b2dc973e2a386bf533de904ea43dc}{est\+\_\+dist\+\_\+cam}} = \mbox{\hyperlink{show__calib__results__fisheye_8m_aeb5022556d599a591607bf9592b7d345}{est\+\_\+dist}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_afc4397531811974633254d8bf4c88295}{est\+\_\+alpha\+\_\+cam}} = \mbox{\hyperlink{go__calib__optim__iter_8m_ac144986f6280f2e1aaeb62473f8bb1c8}{est\+\_\+alpha}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_adf1a644257b5a3653e984f4e2190194a}{center\+\_\+optim\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_aedd546fd88c21abba536a21c0bedb9ab}{center\+\_\+optim}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_af3ae74c2ed2405fec055b11d316989aa}{nx\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a56e3cabe97fdc6c01d29b5866a178e40}{ny\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a2a31debe6e5ea1f7e9c0ecff9ccab612}{active\+\_\+images\+\_\+cam}} = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a72c4b51df4f11aadf411a8baef0dcfb6}{ind\+\_\+active\+\_\+cam}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a4aa17ed6678315abdc33430a784990ff}{X\+\_\+1\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a37a257a621601cc82fadac3eca62a1d9}{x\+\_\+1\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a142cf277a18652e86489c8a5bec2ed4c}{omc\+\_\+1\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_a61a843662f1b0d474a5e6c4d19764e6c}{omc\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a96f937a5b8637542f6f360d93e5c91c1}{Rc\+\_\+1}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{willson__read_8m_a61a843662f1b0d474a5e6c4d19764e6c}{omc\+\_\+1}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a0012f0c99818672efb15be199c3b4544}{Rc\+\_\+1\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_ac7df82d30368ff29184b32392007c1b9}{Rc\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a79f744cc2384c48ba95eaff9fc05db5e}{Tc\+\_\+1\+\_\+cam}} = \mbox{\hyperlink{willson__read_8m_aa5c5acf324d725ca38bdc6b698a20719}{Tc\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a3dd8f39778103ef83f80e2e6ed2e39d2}{omc\+\_\+error\+\_\+1\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_a5f62a828646b3e46f0eb126944400556}{omc\+\_\+error\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ac507fcce2cf2d7d0406a69e241ee9408}{Tc\+\_\+error\+\_\+1\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_a6491316402d282a6d8af22f4c2ad1811}{Tc\+\_\+error\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aa69cab928ed8f6248e784967b520056a}{d\+X\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_a921b80a0245a4f241fc0dda5e364b471}{dX}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ab547f375fc597a8b3f0833cb1c88fa85}{d\+Y\+\_\+cam}} = \mbox{\hyperlink{ext__calib__stereo_8m_a3f6322ffca6ccdf5a3a095bca2d2dc61}{dY}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a31d2941e4ce09cd79f860e63f06a5242}{param\+\_\+cam}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{[}1\+:10 16\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}\mbox{]})
+\item 
+Load the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{scanner__calibration__script_8m_a56a9c09a52f6c7d6f43b9d04fd5504d3}{data}}
+\item 
+\mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{scanner__calibration__script_8m_ae554365512091e178cdd7614481b277a}{n\+\_\+ima\+\_\+proj}} = \mbox{[}$\,$\mbox{]}
+\item 
+for \mbox{\hyperlink{scanner__calibration__script_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}} = \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}},\mbox{\hyperlink{scanner__calibration__script_8m_af8f65eed1e9ac72f79a0c3d8f4656af5}{fc\+\_\+cam}},\mbox{\hyperlink{scanner__calibration__script_8m_ad50d11193e03270b519c5d8084a653d3}{cc\+\_\+cam}},\mbox{\hyperlink{scanner__calibration__script_8m_a97a53ee5f08596c5fc6d710a8844d346}{kc\+\_\+cam}},\mbox{\hyperlink{scanner__calibration__script_8m_a0445847554897e041aedfddc5fefbaf7}{alpha\+\_\+c\+\_\+cam}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}},2)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}{Zc}} = ((\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}(\+:,3)\textquotesingle{}$\ast$\mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}}) $\ast$ (1./(\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}(\+:,3)\textquotesingle{} $\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}}; \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}})\mbox{]})))
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a8a1d9c766bee8e3c8fd1cd2b4c99fe1e}{Xcp}} = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}{Zc}}) .$\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+Projector \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{scanner__calibration__script_8m_a09a62a6cfacc026c1623a4f2e138ad88}{size}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a289ca425eb368f1d582b6be2be0d3dfc}{ny}} = 768
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} = 1
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}} = \mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}} = \mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}}
+\item 
+Do \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}} \mbox{\hyperlink{scanner__calibration__script_8m_aba27252ae9faefb7e33606f2128edb70}{distortion}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ac7af07d7213b437c38978956c3447112}{est\+\_\+alpha}} = 0
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ad7edd47559694043db7fd865537f5d2e}{param\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{[}1\+:10 16\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}\mbox{]})
+\item 
+Shows the extrinsic \mbox{\hyperlink{scanner__calibration__script_8m_ac4576b32d72c2fb66d82267a551bf699}{parameters}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a90011e7d69aec5376e286b72ae9e0730}{dY}} = 30
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a66657f901543607c50a0c310a202deeb}{ext\+\_\+calib}}
+\item 
+Reprojection \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the original \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ae1a0d15e3f23af3f51cfd495ba6be602}{reproject\+\_\+calib}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a376ef46bba571bf15c01e3bf3e599012}{dont\+\_\+ask}} = 0
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a53d239ba805a5194c71afa5dd5ead203}{saving\+\_\+calib}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a253632f06c58da2aeb2d66522d1b0d7e}{cc\+\_\+proj}} = \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aa291fc7628276bae4d2f19b9d0b694cd}{kc\+\_\+proj}} = \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ae053626f0cbcb7f7a21a53639ad1e203}{alpha\+\_\+c\+\_\+proj}} = \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a097d14ac66b9598004309ae0f2a411e0}{fc\+\_\+error\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a3fd62ca7e9b20b03ab63872248d37b9d}{cc\+\_\+error\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a541974735123da56ab18e6e14c00e4a7}{kc\+\_\+error\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_abf86b34b91d4ba85be7d9cc93d8e9daf}{alpha\+\_\+c\+\_\+error\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a98f366d74ce4a6f1f03843869bae169a}{est\+\_\+fc\+\_\+proj}} = \mbox{\hyperlink{saving__calib__fisheye_8m_a204294180c24086a6b201f68b04f0751}{est\+\_\+fc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aa5a7d457b065a040aa99ed664b0e970f}{est\+\_\+dist\+\_\+proj}} = \mbox{\hyperlink{show__calib__results__fisheye_8m_aeb5022556d599a591607bf9592b7d345}{est\+\_\+dist}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a300bc2e55bc7fa21f66377daf59321c8}{est\+\_\+alpha\+\_\+proj}} = \mbox{\hyperlink{go__calib__optim__iter_8m_ac144986f6280f2e1aaeb62473f8bb1c8}{est\+\_\+alpha}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a59c40641029533e2a43d8377d73a6f9f}{center\+\_\+optim\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_aedd546fd88c21abba536a21c0bedb9ab}{center\+\_\+optim}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aabe9804e7b9d90f99de383d3ce527d91}{nx\+\_\+proj}} = \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_acf18d2885b18b62254fb0e83e121a8c7}{ny\+\_\+proj}} = \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a5cd3e19eb8f7882933fc3353b0f39e9b}{active\+\_\+images\+\_\+proj}} = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a2ee055ac1bd33ab23cf7176b45dd3fc2}{ind\+\_\+active\+\_\+proj}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+Position of the global \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} wrt the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ae478750005bd7da64820312f607cc7fc}{om\+\_\+proj}} = \mbox{\hyperlink{willson__read_8m_a61a843662f1b0d474a5e6c4d19764e6c}{omc\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aab2ec39c163ce09f4508bbcd37f45daf}{R\+\_\+proj}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_ae478750005bd7da64820312f607cc7fc}{om\+\_\+proj}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a4161e150f5219c06baf44f1cfa801b09}{T\+\_\+error\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_a6491316402d282a6d8af22f4c2ad1811}{Tc\+\_\+error\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a85fe4b65bc827c235b12d4391b94e85e}{om\+\_\+error\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_a5f62a828646b3e46f0eb126944400556}{omc\+\_\+error\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}{no\+\_\+image}} = 0
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a921b80a0245a4f241fc0dda5e364b471}{dX}} = \mbox{\hyperlink{scanner__calibration__script_8m_aa69cab928ed8f6248e784967b520056a}{d\+X\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aa363c3f3f7668c5847bb7b4f58f0a83f}{omc\+\_\+1}} = \mbox{\hyperlink{scanner__calibration__script_8m_a142cf277a18652e86489c8a5bec2ed4c}{omc\+\_\+1\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a412310131d4b9095d7a2db14e3b4fae4}{Tc\+\_\+1}} = \mbox{\hyperlink{scanner__calibration__script_8m_a79f744cc2384c48ba95eaff9fc05db5e}{Tc\+\_\+1\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a5f62a828646b3e46f0eb126944400556}{omc\+\_\+error\+\_\+1}} = \mbox{\hyperlink{scanner__calibration__script_8m_a3dd8f39778103ef83f80e2e6ed2e39d2}{omc\+\_\+error\+\_\+1\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a6491316402d282a6d8af22f4c2ad1811}{Tc\+\_\+error\+\_\+1}} = \mbox{\hyperlink{scanner__calibration__script_8m_ac507fcce2cf2d7d0406a69e241ee9408}{Tc\+\_\+error\+\_\+1\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}} = \mbox{\hyperlink{scanner__calibration__script_8m_a253632f06c58da2aeb2d66522d1b0d7e}{cc\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}} = \mbox{\hyperlink{scanner__calibration__script_8m_aa291fc7628276bae4d2f19b9d0b694cd}{kc\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ad1eb49846d1fc9a39aa839da84b499c7}{alpha\+\_\+p}} = \mbox{\hyperlink{scanner__calibration__script_8m_ae053626f0cbcb7f7a21a53639ad1e203}{alpha\+\_\+c\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a6c470cd0d5e07a4e4ca18aba0b1e1063}{fp\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_a097d14ac66b9598004309ae0f2a411e0}{fc\+\_\+error\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aa5cd1923a027f69467317ca602a04500}{cp\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_a3fd62ca7e9b20b03ab63872248d37b9d}{cc\+\_\+error\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a30db50906b6f7ed92bb180231509647a}{kp\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_a541974735123da56ab18e6e14c00e4a7}{kc\+\_\+error\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ac96e52c5442f5c4181c28f2de7b51ac7}{alpha\+\_\+p\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_abf86b34b91d4ba85be7d9cc93d8e9daf}{alpha\+\_\+c\+\_\+error\+\_\+proj}}
+\item 
+Camera \mbox{\hyperlink{scanner__calibration__script_8m_a91f3aa1c870a387c2d78c36e566e5383}{\+\_\+\+\_\+pad32\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}} = \mbox{\hyperlink{scanner__calibration__script_8m_ad50d11193e03270b519c5d8084a653d3}{cc\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a737dee4ef8e09247b0da47219bf453ff}{kc}} = \mbox{\hyperlink{scanner__calibration__script_8m_a97a53ee5f08596c5fc6d710a8844d346}{kc\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}{alpha\+\_\+c}} = \mbox{\hyperlink{scanner__calibration__script_8m_a0445847554897e041aedfddc5fefbaf7}{alpha\+\_\+c\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_a8350d00d536ab69e93c25c010c96743a}{fc\+\_\+error\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_ac8e499789f8da5ed2de508141f924875}{cc\+\_\+error\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_a684f53c1f63056d55475e1aed5153caf}{kc\+\_\+error\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_a5592f61dcd63b6e6fd7ad16a0eff73e6}{alpha\+\_\+c\+\_\+error\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a1423606ec53137cfece8ae197d1f7196}{om}} = \mbox{\hyperlink{scanner__calibration__script_8m_ae478750005bd7da64820312f607cc7fc}{om\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_acb95449a94688af33f6e9bb090cf2936}{R}} = \mbox{\hyperlink{scanner__calibration__script_8m_aab2ec39c163ce09f4508bbcd37f45daf}{R\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_abd526e51f925af46b23aaf51588ef1d8}{T\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_a4161e150f5219c06baf44f1cfa801b09}{T\+\_\+error\+\_\+proj}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_afe3caa91414cd5f4a3f3da325e9566ef}{om\+\_\+error}} = \mbox{\hyperlink{scanner__calibration__script_8m_a85fe4b65bc827c235b12d4391b94e85e}{om\+\_\+error\+\_\+proj}}
+\item 
+Relative prosition of \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} wrt \mbox{\hyperlink{cam__proj__calib__optim_8m_a1abddb9576a47442fd34f9124ce421c8}{world}}(assuming first pattern as \mbox{\hyperlink{ext__calib__stereo_8m_ab87f249565eabdb0609876a0a0dac519}{reference}} -\/-\/ arbitrary) \mbox{\hyperlink{scanner__calibration__script_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}} = \mbox{\hyperlink{scanner__calibration__script_8m_a0012f0c99818672efb15be199c3b4544}{Rc\+\_\+1\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}} = \mbox{\hyperlink{scanner__calibration__script_8m_a79f744cc2384c48ba95eaff9fc05db5e}{Tc\+\_\+1\+\_\+cam}}
+\item 
+Relative \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} of \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} wrt \mbox{\hyperlink{cam__proj__calib__optim_8m_a1abddb9576a47442fd34f9124ce421c8}{world}}(assuming first pattern as \mbox{\hyperlink{ext__calib__stereo_8m_ab87f249565eabdb0609876a0a0dac519}{reference}} -\/-\/ arbitrary) \mbox{\hyperlink{scanner__calibration__script_8m_a5f28a5a2640ef5edbfe405af522ce5b2}{omp}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_a60d0525f6a2950fed98f65dadbe82453}{Rp}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ad652ee3260af21f50359895da1674c9d}{Tp}} = \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} + \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}$\ast$\mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_aea30b88858361dce26d8103aae56867d}{saving\+\_\+string}} = \textquotesingle{}save calib\+\_\+cam\+\_\+proj \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}} \mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}} \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} \mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}} \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} \mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}} \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} \mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}} \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} \mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}} \mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}} \mbox{\hyperlink{scanner__calibration__script_8m_a60d0525f6a2950fed98f65dadbe82453}{Rp}} \mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}} \mbox{\hyperlink{scanner__calibration__script_8m_ad652ee3260af21f50359895da1674c9d}{Tp}} \mbox{\hyperlink{willson__convert_8m_a2cf13b30df3f462548b2159605db426a}{omc}} \mbox{\hyperlink{scanner__calibration__script_8m_a5f28a5a2640ef5edbfe405af522ce5b2}{omp}} \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} \mbox{\hyperlink{scanner__calibration__script_8m_a2a31debe6e5ea1f7e9c0ecff9ccab612}{active\+\_\+images\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a5cd3e19eb8f7882933fc3353b0f39e9b}{active\+\_\+images\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_a72c4b51df4f11aadf411a8baef0dcfb6}{ind\+\_\+active\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a2ee055ac1bd33ab23cf7176b45dd3fc2}{ind\+\_\+active\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_abd526e51f925af46b23aaf51588ef1d8}{T\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_afe3caa91414cd5f4a3f3da325e9566ef}{om\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a6c470cd0d5e07a4e4ca18aba0b1e1063}{fp\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_aa5cd1923a027f69467317ca602a04500}{cp\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a30db50906b6f7ed92bb180231509647a}{kp\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_ac96e52c5442f5c4181c28f2de7b51ac7}{alpha\+\_\+p\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a0b9d7df603a4b2f13405d3f7179a1bb4}{est\+\_\+fc\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a274b2dc973e2a386bf533de904ea43dc}{est\+\_\+dist\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_afc4397531811974633254d8bf4c88295}{est\+\_\+alpha\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_adf1a644257b5a3653e984f4e2190194a}{center\+\_\+optim\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a98f366d74ce4a6f1f03843869bae169a}{est\+\_\+fc\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_aa5a7d457b065a040aa99ed664b0e970f}{est\+\_\+dist\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_a300bc2e55bc7fa21f66377daf59321c8}{est\+\_\+alpha\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_a59c40641029533e2a43d8377d73a6f9f}{center\+\_\+optim\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_a31d2941e4ce09cd79f860e63f06a5242}{param\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_aee4435bb9d8082957102dce5cea6f383}{param\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_af3ae74c2ed2405fec055b11d316989aa}{nx\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a56e3cabe97fdc6c01d29b5866a178e40}{ny\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_aabe9804e7b9d90f99de383d3ce527d91}{nx\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_acf18d2885b18b62254fb0e83e121a8c7}{ny\+\_\+proj}}\textquotesingle{}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_addf5814dfda05ad7e965d42b20b83efa}{string\+\_\+global}} = \textquotesingle{}global \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a51f20d6b1b54a2eee3be0e8adc96a0ae}{param}} = \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a31d2941e4ce09cd79f860e63f06a5242}{param\+\_\+cam}}(\mbox{[}1\+:4 6 11\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}\mbox{]})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_ac273cbfaf014240a823c753f847844dd}{param\+\_\+init}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a02eacfd40be9042ceb0f07547365203d}{options}} = \mbox{[}1 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/4 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/4 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/6 0 0 0 0 0 0 0 0 0 12000 0 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/8 0.\+1 0\mbox{]}
+\item 
+for \mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6\+:\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+2)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+3\+:\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+5)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}})
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((1\+:2)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((9\+:11)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a2cf13b30df3f462548b2159605db426a}{omc}} = \mbox{\hyperlink{willson__read_8m_a61a843662f1b0d474a5e6c4d19764e6c}{omc\+\_\+1}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a60d0525f6a2950fed98f65dadbe82453}{Rp}} = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}$\ast$\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a84e4236f07668a770c27567f1f9615ff}{nx}} = \mbox{\hyperlink{scanner__calibration__script_8m_af3ae74c2ed2405fec055b11d316989aa}{nx\+\_\+cam}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a9b27800af3e6d47fb0ed949b53dbe9ae}{comp\+\_\+error\+\_\+calib}}
+\item 
+\mbox{\hyperlink{scanner__calibration__script_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}} = \mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scanner__calibration__script_8m_a71a47a62812c2587f08c33fec039ef4d}\label{scanner__calibration__script_8m_a71a47a62812c2587f08c33fec039ef4d}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!available@{available}}
+\index{available@{available}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily No \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} available (\begin{DoxyParamCaption}\item[{only the corner}]{coordinates }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a617d17276396a39b1f20468a5a81f959}\label{scanner__calibration__script_8m_a617d17276396a39b1f20468a5a81f959}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!clear@{clear}}
+\index{clear@{clear}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily id clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac6cf928a861e386e8417b2f5bc0f1656}\label{scanner__calibration__script_8m_ac6cf928a861e386e8417b2f5bc0f1656}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!copyfile@{copyfile}}
+\index{copyfile@{copyfile}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{copyfile()}{copyfile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily copyfile (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{camera\+\_\+results.\+mat}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_acc79c9768c32d3188e46fb389812488a}\label{scanner__calibration__script_8m_acc79c9768c32d3188e46fb389812488a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!copyfile@{copyfile}}
+\index{copyfile@{copyfile}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{copyfile()}{copyfile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily copyfile (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{camera\+\_\+results\+\_\+optim.\+mat}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a45809192ccb5ea8e200e9405e86e980b}\label{scanner__calibration__script_8m_a45809192ccb5ea8e200e9405e86e980b}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!copyfile@{copyfile}}
+\index{copyfile@{copyfile}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{copyfile()}{copyfile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily copyfile (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{projector\+\_\+results.\+mat}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_afa3d09130541fdcc6edfba5f3ff6c3d0}\label{scanner__calibration__script_8m_afa3d09130541fdcc6edfba5f3ff6c3d0}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!copyfile@{copyfile}}
+\index{copyfile@{copyfile}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{copyfile()}{copyfile()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily copyfile (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{projector\+\_\+results\+\_\+optim.\+mat}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a494854a197c968b631635365a4240890}\label{scanner__calibration__script_8m_a494854a197c968b631635365a4240890}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!delete@{delete}}
+\index{delete@{delete}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{Calib\+\_\+\+Results.\+m}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a95094a7d1dd5a8b085a41ba28c076216}\label{scanner__calibration__script_8m_a95094a7d1dd5a8b085a41ba28c076216}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!delete@{delete}}
+\index{delete@{delete}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a17a9165b4f73593c557e86d0305384bc}\label{scanner__calibration__script_8m_a17a9165b4f73593c557e86d0305384bc}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!est\_alpha@{est\_alpha}}
+\index{est\_alpha@{est\_alpha}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{est\_alpha()}{est\_alpha()}}
+{\footnotesize\ttfamily id \mbox{\hyperlink{go__calib__optim__iter_8m_ac144986f6280f2e1aaeb62473f8bb1c8}{est\+\_\+alpha}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a07f21f5ec95a2fe3cfa111e323fbd489}\label{scanner__calibration__script_8m_a07f21f5ec95a2fe3cfa111e323fbd489}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!eval@{eval}}
+\index{eval@{eval}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in the eval (\begin{DoxyParamCaption}\item[{\mbox{[}\textquotesingle{}\+X\+\_\+proj=\mbox{[}\+X\+\_\+proj X\+\_\+proj\+\_\+\textquotesingle{} num2str(kk) \textquotesingle{}\mbox{]} ;\textquotesingle{}\mbox{]}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aa76c5a3d49f5a43517b8097d27083d58}\label{scanner__calibration__script_8m_aa76c5a3d49f5a43517b8097d27083d58}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!eval@{eval}}
+\index{eval@{eval}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily for eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a48136976ea3599d2f10db464ccacf876}\label{scanner__calibration__script_8m_a48136976ea3599d2f10db464ccacf876}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!eval@{eval}}
+\index{eval@{eval}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{scanner__calibration__script_8m_aea30b88858361dce26d8103aae56867d}{saving\+\_\+string}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae420eba92ac5d8df25b5e513c1006f11}\label{scanner__calibration__script_8m_ae420eba92ac5d8df25b5e513c1006f11}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!eval@{eval}}
+\index{eval@{eval}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{scanner__calibration__script_8m_addf5814dfda05ad7e965d42b20b83efa}{string\+\_\+global}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a2e286be031d0547482321f48ebc74ed0}\label{scanner__calibration__script_8m_a2e286be031d0547482321f48ebc74ed0}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!figure@{figure}}
+\index{figure@{figure}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{10}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a8bc9371ba794d02634a58a6280b5ef7f}\label{scanner__calibration__script_8m_a8bc9371ba794d02634a58a6280b5ef7f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!figure@{figure}}
+\index{figure@{figure}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{11}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ab111bd97d2d98278d812100d2f3370dc}\label{scanner__calibration__script_8m_ab111bd97d2d98278d812100d2f3370dc}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!figure@{figure}}
+\index{figure@{figure}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} (previously saved) \% Show how an example of \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} figure (\begin{DoxyParamCaption}\item[{20}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5a7f03eb3879d2a75c5cd507480c6b02}\label{scanner__calibration__script_8m_a5a7f03eb3879d2a75c5cd507480c6b02}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!figure@{figure}}
+\index{figure@{figure}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{21}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a47289f771f5a61543e6e71a4e8a7f271}\label{scanner__calibration__script_8m_a47289f771f5a61543e6e71a4e8a7f271}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!figure@{figure}}
+\index{figure@{figure}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{22}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5de06e6ccd87120f7f126963f09127d8}\label{scanner__calibration__script_8m_a5de06e6ccd87120f7f126963f09127d8}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!figure@{figure}}
+\index{figure@{figure}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{23}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a91f05233b8646a3635190319e541ce92}\label{scanner__calibration__script_8m_a91f05233b8646a3635190319e541ce92}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Saving the optimized scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}} in \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{calib\+\_\+cam\+\_\+proj\+\_\+optim.\+mat...\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a9454bedeaf85aaa7616a452b8fdce3c7}\label{scanner__calibration__script_8m_a9454bedeaf85aaa7616a452b8fdce3c7}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Saving the scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}} in \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{calib\+\_\+cam\+\_\+proj.\+mat...\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a7888c1fe7ec0cb0a2aed00c7e3f8d8d2}\label{scanner__calibration__script_8m_a7888c1fe7ec0cb0a2aed00c7e3f8d8d2}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!image@{image}}
+\index{image@{image}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily image (\begin{DoxyParamCaption}\item[{I\+\_\+cam1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aea34318eafe9fe2e857dd32d246a0399}\label{scanner__calibration__script_8m_aea34318eafe9fe2e857dd32d246a0399}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!image@{image}}
+\index{image@{image}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily image (\begin{DoxyParamCaption}\item[{I\+\_\+proj1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aa1bc654f3a990eb652c052f79503228a}\label{scanner__calibration__script_8m_aa1bc654f3a990eb652c052f79503228a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!n\_ima\_cam@{n\_ima\_cam}}
+\index{n\_ima\_cam@{n\_ima\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima\_cam()}{n\_ima\_cam()}}
+{\footnotesize\ttfamily previously saved in local \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a05521d996b2297d6af7adb8a01ccc856}{variables}} n\+\_\+ima\+\_\+cam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a57ea0dd2fc9dbda9586e1f8bf5f6f61d}\label{scanner__calibration__script_8m_a57ea0dd2fc9dbda9586e1f8bf5f6f61d}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ones@{ones}}
+\index{ones@{ones}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a7b8f1c70b2c01535e5f0f79f486b081f}\label{scanner__calibration__script_8m_a7b8f1c70b2c01535e5f0f79f486b081f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ones@{ones}}
+\index{ones@{ones}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{5}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}\label{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param@{param}}
+\index{param@{param}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param()}{param()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily param (\begin{DoxyParamCaption}\item[{(6\+:11)+5+6 $\ast$}]{n\+\_\+ima }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aeba36d421b3201fabf31ee6abe1fa50b}\label{scanner__calibration__script_8m_aeba36d421b3201fabf31ee6abe1fa50b}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param@{param}}
+\index{param@{param}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param()}{param()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily param (\begin{DoxyParamCaption}\item[{5}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a04f70756a692e330967c17913df909b9}\label{scanner__calibration__script_8m_a04f70756a692e330967c17913df909b9}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param@{param}}
+\index{param@{param}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param()}{param()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily param (\begin{DoxyParamCaption}\item[{5+5+6 $\ast$}]{n\+\_\+ima }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a22c3b079ec854cbaaeeda41392344ebf}\label{scanner__calibration__script_8m_a22c3b079ec854cbaaeeda41392344ebf}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param@{param}}
+\index{param@{param}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param()}{param()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily param (\begin{DoxyParamCaption}\item[{6\+:5+6 $\ast$}]{n\+\_\+ima }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aee4435bb9d8082957102dce5cea6f383}\label{scanner__calibration__script_8m_aee4435bb9d8082957102dce5cea6f383}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param\_proj@{param\_proj}}
+\index{param\_proj@{param\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param\_proj()}{param\_proj()}}
+{\footnotesize\ttfamily param\+\_\+proj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a900ae7971d8cbc46d9e7b98772ab688f}\label{scanner__calibration__script_8m_a900ae7971d8cbc46d9e7b98772ab688f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!parameters:@{parameters:}}
+\index{parameters:@{parameters:}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{parameters:()}{parameters:()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily id parameters\+: (\begin{DoxyParamCaption}\item[{1\+:2}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a8e6bd239b4f97087edf01c1de95654f3}\label{scanner__calibration__script_8m_a8e6bd239b4f97087edf01c1de95654f3}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!parameters:@{parameters:}}
+\index{parameters:@{parameters:}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{parameters:()}{parameters:()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily id parameters\+: (\begin{DoxyParamCaption}\item[{1\+:4}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a1c79f9f6958040ed48b1a24e09944cff}\label{scanner__calibration__script_8m_a1c79f9f6958040ed48b1a24e09944cff}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!parameters:@{parameters:}}
+\index{parameters:@{parameters:}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{parameters:()}{parameters:()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily id parameters\+: (\begin{DoxyParamCaption}\item[{id}]{fc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a785e543090bc356de9802e8bae0ad968}\label{scanner__calibration__script_8m_a785e543090bc356de9802e8bae0ad968}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!plot@{plot}}
+\index{plot@{plot}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}}(1,\+:)+}]{1,  }\item[{\mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}}(2,\+:)+}]{1,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_af1b3967494f49c0d918de327e43ecb1f}\label{scanner__calibration__script_8m_af1b3967494f49c0d918de327e43ecb1f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!plot@{plot}}
+\index{plot@{plot}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}}(1,\+:)+}]{1,  }\item[{\mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}}(2,\+:)+}]{1,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a3d9047edda68ff53708474d5adf2cd0a}\label{scanner__calibration__script_8m_a3d9047edda68ff53708474d5adf2cd0a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!plot@{plot}}
+\index{plot@{plot}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{x\+\_\+proj\+\_\+1(1,\+:)+}]{1,  }\item[{x\+\_\+proj\+\_\+1(2,\+:)+}]{1,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aa04ed8a5805b1ba70d873dc32226fc7e}\label{scanner__calibration__script_8m_aa04ed8a5805b1ba70d873dc32226fc7e}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!plot@{plot}}
+\index{plot@{plot}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{xproj\+\_\+1(1,\+:)+}]{1,  }\item[{xproj\+\_\+1(2,\+:)+}]{1,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aab810cc6cad3ed27b64113aac7b177fc}\label{scanner__calibration__script_8m_aab810cc6cad3ed27b64113aac7b177fc}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!plot3@{plot3}}
+\index{plot3@{plot3}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{plot3()}{plot3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily plot3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}}(1,\+:)}]{,  }\item[{\mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}}(2,\+:)}]{,  }\item[{\mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}}(3,\+:)}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a0606a3b712ee7d32c6a37fbbe6634832}\label{scanner__calibration__script_8m_a0606a3b712ee7d32c6a37fbbe6634832}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!plot3@{plot3}}
+\index{plot3@{plot3}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{plot3()}{plot3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily plot3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}(1,\+:)}]{,  }\item[{\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}(2,\+:)}]{,  }\item[{\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}(3,\+:)}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a30aa06a26e1d5dedca7d915f0e967997}\label{scanner__calibration__script_8m_a30aa06a26e1d5dedca7d915f0e967997}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!results:parameters:Projector:@{results:parameters:Projector:}}
+\index{results:parameters:Projector:@{results:parameters:Projector:}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{results:parameters:Projector:()}{results:parameters:Projector:()}}
+{\footnotesize\ttfamily id results\+:parameters\+:\+Projector\+: (\begin{DoxyParamCaption}\item[{id}]{Intrinsic,  }\item[{\mbox{[}parameters\mbox{]} id}]{,  }\item[{\mbox{[}\+Projector\mbox{]} id}]{fc\+\_\+proj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}\label{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!solution@{solution}}
+\index{solution@{solution}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{solution()}{solution()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{scanner__calibration__script_8m_a617d17276396a39b1f20468a5a81f959}{clear}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} Saving the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} solution (\begin{DoxyParamCaption}\item[{for further}]{refinement }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac3d328530d7739ba408e747ee792237f}\label{scanner__calibration__script_8m_ac3d328530d7739ba408e747ee792237f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!STEP:calibration:@{STEP:calibration:}}
+\index{STEP:calibration:@{STEP:calibration:}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{STEP:calibration:()}{STEP:calibration:()}}
+{\footnotesize\ttfamily id S\+T\+E\+P\+:calibration\+: (\begin{DoxyParamCaption}\item[{id}]{camera,  }\item[{\mbox{[}calibration\mbox{]} 1}]{,  }\item[{\textquotesingle{}S\+T\+EP 2\+:Calibration of the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}}(having done \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}})...\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{fprintf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a3841c0dc97fc5f98bcb82dfe22b3997c}\label{scanner__calibration__script_8m_a3841c0dc97fc5f98bcb82dfe22b3997c}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!STEP:projector:@{STEP:projector:}}
+\index{STEP:projector:@{STEP:projector:}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{STEP:projector:()}{STEP:projector:()}}
+{\footnotesize\ttfamily id S\+T\+E\+P\+:projector\+: (\begin{DoxyParamCaption}\item[{id}]{the,  }\item[{\mbox{[}projector\mbox{]} 1}]{,  }\item[{\textquotesingle{}S\+T\+EP 1\+:Calibration of the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{fprintf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a1f9915eb0cd613a885a884f18f4607fc}\label{scanner__calibration__script_8m_a1f9915eb0cd613a885a884f18f4607fc}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!title@{title}}
+\index{title@{title}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the corresponding \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}}(\mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}})...\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae43f84a42632e5a82fb8e071444fbfaa}\label{scanner__calibration__script_8m_ae43f84a42632e5a82fb8e071444fbfaa}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!title@{title}}
+\index{title@{title}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} equal title (\begin{DoxyParamCaption}\item[{\textquotesingle{}3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}}(computed using the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}})\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a459ec5e570c4d8940cb047b4c2ef0367}\label{scanner__calibration__script_8m_a459ec5e570c4d8940cb047b4c2ef0367}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!title@{title}}
+\index{title@{title}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}Complete \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a3569c96fd7fe6b385fde8f99e23d89f6}\label{scanner__calibration__script_8m_a3569c96fd7fe6b385fde8f99e23d89f6}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!title@{title}}
+\index{title@{title}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}Corner \mbox{\hyperlink{error__analysis_8m_ad433454e41644431582e6554dfd197c6}{locations}} in \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} proj01n.\+bmp\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a2764de1b101dc4f99b39109686461572}\label{scanner__calibration__script_8m_a2764de1b101dc4f99b39109686461572}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!title@{title}}
+\index{title@{title}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}Corner \mbox{\hyperlink{error__analysis_8m_ad433454e41644431582e6554dfd197c6}{locations}} in the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} plane\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac81a72aa226bab776c041a4c980ad04d}\label{scanner__calibration__script_8m_ac81a72aa226bab776c041a4c980ad04d}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!title@{title}}
+\index{title@{title}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}Example \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} image\+:cam01.\+bmp\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae2904e2f0b578fedd4d82b083c516a81}\label{scanner__calibration__script_8m_ae2904e2f0b578fedd4d82b083c516a81}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!variables:@{variables:}}
+\index{variables:@{variables:}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{variables:()}{variables:()}}
+{\footnotesize\ttfamily id variables\+: (\begin{DoxyParamCaption}\item[{id}]{n\+\_\+ima }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a7b8c25def30d842e110fd329991ae043}\label{scanner__calibration__script_8m_a7b8c25def30d842e110fd329991ae043}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{xlabel()}{xlabel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5886ad32ea8d76d30b23019b00e2a9ad}\label{scanner__calibration__script_8m_a5886ad32ea8d76d30b23019b00e2a9ad}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{xlabel()}{xlabel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(in \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}})\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a44be30ecd4122a8ac3728d1370f7f917}\label{scanner__calibration__script_8m_a44be30ecd4122a8ac3728d1370f7f917}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ylabel@{ylabel}}
+\index{ylabel@{ylabel}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ylabel()}{ylabel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ylabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a2fa27ad6ce4ccd7dec14681a1a21458f}\label{scanner__calibration__script_8m_a2fa27ad6ce4ccd7dec14681a1a21458f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ylabel@{ylabel}}
+\index{ylabel@{ylabel}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ylabel()}{ylabel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ylabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}}(in \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}})\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a6a34dc97bba941cce5c350625149d896}\label{scanner__calibration__script_8m_a6a34dc97bba941cce5c350625149d896}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ylabel@{ylabel}}
+\index{ylabel@{ylabel}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ylabel()}{ylabel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ylabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}Yc(\mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{ext__calib__stereo_8m_ab87f249565eabdb0609876a0a0dac519}{reference}} frame)\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}\label{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!zeros@{zeros}}
+\index{zeros@{zeros}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}}
+{\footnotesize\ttfamily zeros (\begin{DoxyParamCaption}\item[{4}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a0faf5a6161e9f8cdb658831d495b6652}\label{scanner__calibration__script_8m_a0faf5a6161e9f8cdb658831d495b6652}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!zlabel@{zlabel}}
+\index{zlabel@{zlabel}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{zlabel()}{zlabel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily zlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a307388ea1cab9781ac4e19245ab9f991}\label{scanner__calibration__script_8m_a307388ea1cab9781ac4e19245ab9f991}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!zlabel@{zlabel}}
+\index{zlabel@{zlabel}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{zlabel()}{zlabel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily zlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}{Zc}}(\mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{ext__calib__stereo_8m_ab87f249565eabdb0609876a0a0dac519}{reference}} frame)\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{scanner__calibration__script_8m_a91f3aa1c870a387c2d78c36e566e5383}\label{scanner__calibration__script_8m_a91f3aa1c870a387c2d78c36e566e5383}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!\_\_pad32\_\_@{\_\_pad32\_\_}}
+\index{\_\_pad32\_\_@{\_\_pad32\_\_}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad32\_\_}{\_\_pad32\_\_}}
+{\footnotesize\ttfamily Camera \+\_\+\+\_\+pad32\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a2a31debe6e5ea1f7e9c0ecff9ccab612}\label{scanner__calibration__script_8m_a2a31debe6e5ea1f7e9c0ecff9ccab612}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!active\_images\_cam@{active\_images\_cam}}
+\index{active\_images\_cam@{active\_images\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{active\_images\_cam}{active\_images\_cam}}
+{\footnotesize\ttfamily active\+\_\+images\+\_\+cam = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5cd3e19eb8f7882933fc3353b0f39e9b}\label{scanner__calibration__script_8m_a5cd3e19eb8f7882933fc3353b0f39e9b}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!active\_images\_proj@{active\_images\_proj}}
+\index{active\_images\_proj@{active\_images\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{active\_images\_proj}{active\_images\_proj}}
+{\footnotesize\ttfamily active\+\_\+images\+\_\+proj = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}\label{scanner__calibration__script_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!alpha\_c@{alpha\_c}}
+\index{alpha\_c@{alpha\_c}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c}{alpha\_c}}
+{\footnotesize\ttfamily alpha\+\_\+c = \mbox{\hyperlink{scanner__calibration__script_8m_a0445847554897e041aedfddc5fefbaf7}{alpha\+\_\+c\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a0445847554897e041aedfddc5fefbaf7}\label{scanner__calibration__script_8m_a0445847554897e041aedfddc5fefbaf7}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!alpha\_c\_cam@{alpha\_c\_cam}}
+\index{alpha\_c\_cam@{alpha\_c\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c\_cam}{alpha\_c\_cam}}
+{\footnotesize\ttfamily alpha\+\_\+c\+\_\+cam = \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}\label{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!alpha\_c\_error@{alpha\_c\_error}}
+\index{alpha\_c\_error@{alpha\_c\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c\_error}{alpha\_c\_error}}
+{\footnotesize\ttfamily alpha\+\_\+c\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_a5592f61dcd63b6e6fd7ad16a0eff73e6}{alpha\+\_\+c\+\_\+error\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5592f61dcd63b6e6fd7ad16a0eff73e6}\label{scanner__calibration__script_8m_a5592f61dcd63b6e6fd7ad16a0eff73e6}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!alpha\_c\_error\_cam@{alpha\_c\_error\_cam}}
+\index{alpha\_c\_error\_cam@{alpha\_c\_error\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c\_error\_cam}{alpha\_c\_error\_cam}}
+{\footnotesize\ttfamily alpha\+\_\+c\+\_\+error\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_abf86b34b91d4ba85be7d9cc93d8e9daf}\label{scanner__calibration__script_8m_abf86b34b91d4ba85be7d9cc93d8e9daf}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!alpha\_c\_error\_proj@{alpha\_c\_error\_proj}}
+\index{alpha\_c\_error\_proj@{alpha\_c\_error\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c\_error\_proj}{alpha\_c\_error\_proj}}
+{\footnotesize\ttfamily alpha\+\_\+c\+\_\+error\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae053626f0cbcb7f7a21a53639ad1e203}\label{scanner__calibration__script_8m_ae053626f0cbcb7f7a21a53639ad1e203}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!alpha\_c\_proj@{alpha\_c\_proj}}
+\index{alpha\_c\_proj@{alpha\_c\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c\_proj}{alpha\_c\_proj}}
+{\footnotesize\ttfamily alpha\+\_\+c\+\_\+proj = \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ad1eb49846d1fc9a39aa839da84b499c7}\label{scanner__calibration__script_8m_ad1eb49846d1fc9a39aa839da84b499c7}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!alpha\_p@{alpha\_p}}
+\index{alpha\_p@{alpha\_p}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_p}{alpha\_p}}
+{\footnotesize\ttfamily alpha\+\_\+p = \mbox{\hyperlink{scanner__calibration__script_8m_ae053626f0cbcb7f7a21a53639ad1e203}{alpha\+\_\+c\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac96e52c5442f5c4181c28f2de7b51ac7}\label{scanner__calibration__script_8m_ac96e52c5442f5c4181c28f2de7b51ac7}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!alpha\_p\_error@{alpha\_p\_error}}
+\index{alpha\_p\_error@{alpha\_p\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_p\_error}{alpha\_p\_error}}
+{\footnotesize\ttfamily alpha\+\_\+p\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_abf86b34b91d4ba85be7d9cc93d8e9daf}{alpha\+\_\+c\+\_\+error\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a692c0a875c0bea8818b8ad23120f0125}\label{scanner__calibration__script_8m_a692c0a875c0bea8818b8ad23120f0125}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!calibration@{calibration}}
+\index{calibration@{calibration}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{calibration}{calibration}}
+{\footnotesize\ttfamily Start \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} calibration making use of the information from \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} calibration}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae33a3350450935eb7f316846415fd2b6}\label{scanner__calibration__script_8m_ae33a3350450935eb7f316846415fd2b6}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!camera\_data@{camera\_data}}
+\index{camera\_data@{camera\_data}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{camera\_data}{camera\_data}}
+{\footnotesize\ttfamily Load the corner \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} in \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} camera\+\_\+data}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a41fcba09f2bdcdf315ba4119dc7978dd}\label{scanner__calibration__script_8m_a41fcba09f2bdcdf315ba4119dc7978dd}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!cc@{cc}}
+\index{cc@{cc}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily cc = \mbox{\hyperlink{scanner__calibration__script_8m_ad50d11193e03270b519c5d8084a653d3}{cc\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ad50d11193e03270b519c5d8084a653d3}\label{scanner__calibration__script_8m_ad50d11193e03270b519c5d8084a653d3}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!cc\_cam@{cc\_cam}}
+\index{cc\_cam@{cc\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{cc\_cam}{cc\_cam}}
+{\footnotesize\ttfamily cc\+\_\+cam = \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}\label{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!cc\_error@{cc\_error}}
+\index{cc\_error@{cc\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{cc\_error}{cc\_error}}
+{\footnotesize\ttfamily cc\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_ac8e499789f8da5ed2de508141f924875}{cc\+\_\+error\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac8e499789f8da5ed2de508141f924875}\label{scanner__calibration__script_8m_ac8e499789f8da5ed2de508141f924875}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!cc\_error\_cam@{cc\_error\_cam}}
+\index{cc\_error\_cam@{cc\_error\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{cc\_error\_cam}{cc\_error\_cam}}
+{\footnotesize\ttfamily cc\+\_\+error\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a3fd62ca7e9b20b03ab63872248d37b9d}\label{scanner__calibration__script_8m_a3fd62ca7e9b20b03ab63872248d37b9d}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!cc\_error\_proj@{cc\_error\_proj}}
+\index{cc\_error\_proj@{cc\_error\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{cc\_error\_proj}{cc\_error\_proj}}
+{\footnotesize\ttfamily cc\+\_\+error\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a253632f06c58da2aeb2d66522d1b0d7e}\label{scanner__calibration__script_8m_a253632f06c58da2aeb2d66522d1b0d7e}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!cc\_proj@{cc\_proj}}
+\index{cc\_proj@{cc\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{cc\_proj}{cc\_proj}}
+{\footnotesize\ttfamily cc\+\_\+proj = \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aedd546fd88c21abba536a21c0bedb9ab}\label{scanner__calibration__script_8m_aedd546fd88c21abba536a21c0bedb9ab}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!center\_optim@{center\_optim}}
+\index{center\_optim@{center\_optim}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{center\_optim}{center\_optim}}
+{\footnotesize\ttfamily center\+\_\+optim = 1}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_adf1a644257b5a3653e984f4e2190194a}\label{scanner__calibration__script_8m_adf1a644257b5a3653e984f4e2190194a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!center\_optim\_cam@{center\_optim\_cam}}
+\index{center\_optim\_cam@{center\_optim\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{center\_optim\_cam}{center\_optim\_cam}}
+{\footnotesize\ttfamily center\+\_\+optim\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_aedd546fd88c21abba536a21c0bedb9ab}{center\+\_\+optim}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a59c40641029533e2a43d8377d73a6f9f}\label{scanner__calibration__script_8m_a59c40641029533e2a43d8377d73a6f9f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!center\_optim\_proj@{center\_optim\_proj}}
+\index{center\_optim\_proj@{center\_optim\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{center\_optim\_proj}{center\_optim\_proj}}
+{\footnotesize\ttfamily center\+\_\+optim\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_aedd546fd88c21abba536a21c0bedb9ab}{center\+\_\+optim}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a9b27800af3e6d47fb0ed949b53dbe9ae}\label{scanner__calibration__script_8m_a9b27800af3e6d47fb0ed949b53dbe9ae}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!comp\_error\_calib@{comp\_error\_calib}}
+\index{comp\_error\_calib@{comp\_error\_calib}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{comp\_error\_calib}{comp\_error\_calib}}
+{\footnotesize\ttfamily comp\+\_\+error\+\_\+calib}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}\label{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!cp@{cp}}
+\index{cp@{cp}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{cp}{cp}}
+{\footnotesize\ttfamily cp = \mbox{\hyperlink{scanner__calibration__script_8m_a253632f06c58da2aeb2d66522d1b0d7e}{cc\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aa5cd1923a027f69467317ca602a04500}\label{scanner__calibration__script_8m_aa5cd1923a027f69467317ca602a04500}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!cp\_error@{cp\_error}}
+\index{cp\_error@{cp\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{cp\_error}{cp\_error}}
+{\footnotesize\ttfamily cp\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_a3fd62ca7e9b20b03ab63872248d37b9d}{cc\+\_\+error\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a56a9c09a52f6c7d6f43b9d04fd5504d3}\label{scanner__calibration__script_8m_a56a9c09a52f6c7d6f43b9d04fd5504d3}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!data@{data}}
+\index{data@{data}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily Load the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} data}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aba27252ae9faefb7e33606f2128edb70}\label{scanner__calibration__script_8m_aba27252ae9faefb7e33606f2128edb70}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!distortion@{distortion}}
+\index{distortion@{distortion}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{distortion}{distortion}}
+{\footnotesize\ttfamily Do \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}} distortion}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a376ef46bba571bf15c01e3bf3e599012}\label{scanner__calibration__script_8m_a376ef46bba571bf15c01e3bf3e599012}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!dont\_ask@{dont\_ask}}
+\index{dont\_ask@{dont\_ask}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{dont\_ask}{dont\_ask}}
+{\footnotesize\ttfamily dont\+\_\+ask = 0}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}\label{scanner__calibration__script_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!drawnow@{drawnow}}
+\index{drawnow@{drawnow}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{drawnow}{drawnow}}
+{\footnotesize\ttfamily drawnow}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a921b80a0245a4f241fc0dda5e364b471}\label{scanner__calibration__script_8m_a921b80a0245a4f241fc0dda5e364b471}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!dX@{dX}}
+\index{dX@{dX}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{dX}{dX}}
+{\footnotesize\ttfamily dX = \mbox{\hyperlink{scanner__calibration__script_8m_aa69cab928ed8f6248e784967b520056a}{d\+X\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aa69cab928ed8f6248e784967b520056a}\label{scanner__calibration__script_8m_aa69cab928ed8f6248e784967b520056a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!dX\_cam@{dX\_cam}}
+\index{dX\_cam@{dX\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{dX\_cam}{dX\_cam}}
+{\footnotesize\ttfamily d\+X\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_a921b80a0245a4f241fc0dda5e364b471}{dX}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a90011e7d69aec5376e286b72ae9e0730}\label{scanner__calibration__script_8m_a90011e7d69aec5376e286b72ae9e0730}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!dY@{dY}}
+\index{dY@{dY}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{dY}{dY}}
+{\footnotesize\ttfamily dY = 30}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ab547f375fc597a8b3f0833cb1c88fa85}\label{scanner__calibration__script_8m_ab547f375fc597a8b3f0833cb1c88fa85}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!dY\_cam@{dY\_cam}}
+\index{dY\_cam@{dY\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{dY\_cam}{dY\_cam}}
+{\footnotesize\ttfamily d\+Y\+\_\+cam = \mbox{\hyperlink{ext__calib__stereo_8m_a3f6322ffca6ccdf5a3a095bca2d2dc61}{dY}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_afb358f48b1646c750fb9da6c6585be2b}\label{scanner__calibration__script_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!end@{end}}
+\index{end@{end}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac7af07d7213b437c38978956c3447112}\label{scanner__calibration__script_8m_ac7af07d7213b437c38978956c3447112}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!est\_alpha@{est\_alpha}}
+\index{est\_alpha@{est\_alpha}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{est\_alpha}{est\_alpha}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter_8m_ac144986f6280f2e1aaeb62473f8bb1c8}{est\+\_\+alpha}} = 0}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_afc4397531811974633254d8bf4c88295}\label{scanner__calibration__script_8m_afc4397531811974633254d8bf4c88295}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!est\_alpha\_cam@{est\_alpha\_cam}}
+\index{est\_alpha\_cam@{est\_alpha\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{est\_alpha\_cam}{est\_alpha\_cam}}
+{\footnotesize\ttfamily est\+\_\+alpha\+\_\+cam = \mbox{\hyperlink{go__calib__optim__iter_8m_ac144986f6280f2e1aaeb62473f8bb1c8}{est\+\_\+alpha}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a300bc2e55bc7fa21f66377daf59321c8}\label{scanner__calibration__script_8m_a300bc2e55bc7fa21f66377daf59321c8}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!est\_alpha\_proj@{est\_alpha\_proj}}
+\index{est\_alpha\_proj@{est\_alpha\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{est\_alpha\_proj}{est\_alpha\_proj}}
+{\footnotesize\ttfamily est\+\_\+alpha\+\_\+proj = \mbox{\hyperlink{go__calib__optim__iter_8m_ac144986f6280f2e1aaeb62473f8bb1c8}{est\+\_\+alpha}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a274b2dc973e2a386bf533de904ea43dc}\label{scanner__calibration__script_8m_a274b2dc973e2a386bf533de904ea43dc}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!est\_dist\_cam@{est\_dist\_cam}}
+\index{est\_dist\_cam@{est\_dist\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{est\_dist\_cam}{est\_dist\_cam}}
+{\footnotesize\ttfamily est\+\_\+dist\+\_\+cam = \mbox{\hyperlink{show__calib__results__fisheye_8m_aeb5022556d599a591607bf9592b7d345}{est\+\_\+dist}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aa5a7d457b065a040aa99ed664b0e970f}\label{scanner__calibration__script_8m_aa5a7d457b065a040aa99ed664b0e970f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!est\_dist\_proj@{est\_dist\_proj}}
+\index{est\_dist\_proj@{est\_dist\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{est\_dist\_proj}{est\_dist\_proj}}
+{\footnotesize\ttfamily est\+\_\+dist\+\_\+proj = \mbox{\hyperlink{show__calib__results__fisheye_8m_aeb5022556d599a591607bf9592b7d345}{est\+\_\+dist}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a0b9d7df603a4b2f13405d3f7179a1bb4}\label{scanner__calibration__script_8m_a0b9d7df603a4b2f13405d3f7179a1bb4}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!est\_fc\_cam@{est\_fc\_cam}}
+\index{est\_fc\_cam@{est\_fc\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{est\_fc\_cam}{est\_fc\_cam}}
+{\footnotesize\ttfamily est\+\_\+fc\+\_\+cam = \mbox{\hyperlink{saving__calib__fisheye_8m_a204294180c24086a6b201f68b04f0751}{est\+\_\+fc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a98f366d74ce4a6f1f03843869bae169a}\label{scanner__calibration__script_8m_a98f366d74ce4a6f1f03843869bae169a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!est\_fc\_proj@{est\_fc\_proj}}
+\index{est\_fc\_proj@{est\_fc\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{est\_fc\_proj}{est\_fc\_proj}}
+{\footnotesize\ttfamily est\+\_\+fc\+\_\+proj = \mbox{\hyperlink{saving__calib__fisheye_8m_a204294180c24086a6b201f68b04f0751}{est\+\_\+fc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a66657f901543607c50a0c310a202deeb}\label{scanner__calibration__script_8m_a66657f901543607c50a0c310a202deeb}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ext\_calib@{ext\_calib}}
+\index{ext\_calib@{ext\_calib}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ext\_calib}{ext\_calib}}
+{\footnotesize\ttfamily ext\+\_\+calib}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a72d54db2b27ce046aab6e6a414c407e9}\label{scanner__calibration__script_8m_a72d54db2b27ce046aab6e6a414c407e9}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fc@{fc}}
+\index{fc@{fc}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fc}{fc}}
+{\footnotesize\ttfamily fc = \mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_af8f65eed1e9ac72f79a0c3d8f4656af5}\label{scanner__calibration__script_8m_af8f65eed1e9ac72f79a0c3d8f4656af5}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fc\_cam@{fc\_cam}}
+\index{fc\_cam@{fc\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fc\_cam}{fc\_cam}}
+{\footnotesize\ttfamily fc\+\_\+cam = \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}\label{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fc\_error@{fc\_error}}
+\index{fc\_error@{fc\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fc\_error}{fc\_error}}
+{\footnotesize\ttfamily fc\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_a8350d00d536ab69e93c25c010c96743a}{fc\+\_\+error\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a8350d00d536ab69e93c25c010c96743a}\label{scanner__calibration__script_8m_a8350d00d536ab69e93c25c010c96743a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fc\_error\_cam@{fc\_error\_cam}}
+\index{fc\_error\_cam@{fc\_error\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fc\_error\_cam}{fc\_error\_cam}}
+{\footnotesize\ttfamily fc\+\_\+error\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a097d14ac66b9598004309ae0f2a411e0}\label{scanner__calibration__script_8m_a097d14ac66b9598004309ae0f2a411e0}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fc\_error\_proj@{fc\_error\_proj}}
+\index{fc\_error\_proj@{fc\_error\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fc\_error\_proj}{fc\_error\_proj}}
+{\footnotesize\ttfamily fc\+\_\+error\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}\label{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fp@{fp}}
+\index{fp@{fp}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fp}{fp}}
+{\footnotesize\ttfamily fp = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((1\+:2)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a6c470cd0d5e07a4e4ca18aba0b1e1063}\label{scanner__calibration__script_8m_a6c470cd0d5e07a4e4ca18aba0b1e1063}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!fp\_error@{fp\_error}}
+\index{fp\_error@{fp\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{fp\_error}{fp\_error}}
+{\footnotesize\ttfamily fp\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_a097d14ac66b9598004309ae0f2a411e0}{fc\+\_\+error\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aea6fb5b62ed693473b2858400a151f36}\label{scanner__calibration__script_8m_aea6fb5b62ed693473b2858400a151f36}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!image@{image}}
+\index{image@{image}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily Show one example image}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}\label{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!images@{images}}
+\index{images@{images}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{images}{images}}
+{\footnotesize\ttfamily Reprojection \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the original images}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a72c4b51df4f11aadf411a8baef0dcfb6}\label{scanner__calibration__script_8m_a72c4b51df4f11aadf411a8baef0dcfb6}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ind\_active\_cam@{ind\_active\_cam}}
+\index{ind\_active\_cam@{ind\_active\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ind\_active\_cam}{ind\_active\_cam}}
+{\footnotesize\ttfamily ind\+\_\+active\+\_\+cam = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a2ee055ac1bd33ab23cf7176b45dd3fc2}\label{scanner__calibration__script_8m_a2ee055ac1bd33ab23cf7176b45dd3fc2}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ind\_active\_proj@{ind\_active\_proj}}
+\index{ind\_active\_proj@{ind\_active\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ind\_active\_proj}{ind\_active\_proj}}
+{\footnotesize\ttfamily ind\+\_\+active\+\_\+proj = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a737dee4ef8e09247b0da47219bf453ff}\label{scanner__calibration__script_8m_a737dee4ef8e09247b0da47219bf453ff}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kc@{kc}}
+\index{kc@{kc}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kc}{kc}}
+{\footnotesize\ttfamily kc = \mbox{\hyperlink{scanner__calibration__script_8m_a97a53ee5f08596c5fc6d710a8844d346}{kc\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a97a53ee5f08596c5fc6d710a8844d346}\label{scanner__calibration__script_8m_a97a53ee5f08596c5fc6d710a8844d346}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kc\_cam@{kc\_cam}}
+\index{kc\_cam@{kc\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kc\_cam}{kc\_cam}}
+{\footnotesize\ttfamily kc\+\_\+cam = \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}\label{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kc\_error@{kc\_error}}
+\index{kc\_error@{kc\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kc\_error}{kc\_error}}
+{\footnotesize\ttfamily kc\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_a684f53c1f63056d55475e1aed5153caf}{kc\+\_\+error\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a684f53c1f63056d55475e1aed5153caf}\label{scanner__calibration__script_8m_a684f53c1f63056d55475e1aed5153caf}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kc\_error\_cam@{kc\_error\_cam}}
+\index{kc\_error\_cam@{kc\_error\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kc\_error\_cam}{kc\_error\_cam}}
+{\footnotesize\ttfamily kc\+\_\+error\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a541974735123da56ab18e6e14c00e4a7}\label{scanner__calibration__script_8m_a541974735123da56ab18e6e14c00e4a7}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kc\_error\_proj@{kc\_error\_proj}}
+\index{kc\_error\_proj@{kc\_error\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kc\_error\_proj}{kc\_error\_proj}}
+{\footnotesize\ttfamily kc\+\_\+error\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aa291fc7628276bae4d2f19b9d0b694cd}\label{scanner__calibration__script_8m_aa291fc7628276bae4d2f19b9d0b694cd}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kc\_proj@{kc\_proj}}
+\index{kc\_proj@{kc\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kc\_proj}{kc\_proj}}
+{\footnotesize\ttfamily kc\+\_\+proj = \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_af29949bd63fb009eacab5efd11399e40}\label{scanner__calibration__script_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kk@{kk}}
+\index{kk@{kk}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}\label{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kp@{kp}}
+\index{kp@{kp}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kp}{kp}}
+{\footnotesize\ttfamily kp = \mbox{\hyperlink{scanner__calibration__script_8m_aa291fc7628276bae4d2f19b9d0b694cd}{kc\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a30db50906b6f7ed92bb180231509647a}\label{scanner__calibration__script_8m_a30db50906b6f7ed92bb180231509647a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!kp\_error@{kp\_error}}
+\index{kp\_error@{kp\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{kp\_error}{kp\_error}}
+{\footnotesize\ttfamily kp\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_a541974735123da56ab18e6e14c00e4a7}{kc\+\_\+error\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}\label{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!mat@{mat}}
+\index{mat@{mat}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{mat}{mat}}
+{\footnotesize\ttfamily Saving the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}} under \mbox{\hyperlink{cam__proj__calib__optim_8m_a644faffbabf04b8e75137026799fa7e9}{camera\+\_\+results}} mat}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a4bd2a7187893657a867b1e3b03a6ca7f}\label{scanner__calibration__script_8m_a4bd2a7187893657a867b1e3b03a6ca7f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!n\_ima@{n\_ima}}
+\index{n\_ima@{n\_ima}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima}{n\_ima}}
+{\footnotesize\ttfamily n\+\_\+ima = 1}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae554365512091e178cdd7614481b277a}\label{scanner__calibration__script_8m_ae554365512091e178cdd7614481b277a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!n\_ima\_proj@{n\_ima\_proj}}
+\index{n\_ima\_proj@{n\_ima\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima\_proj}{n\_ima\_proj}}
+{\footnotesize\ttfamily n\+\_\+ima\+\_\+proj = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}\label{scanner__calibration__script_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!no\_image@{no\_image}}
+\index{no\_image@{no\_image}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{no\_image}{no\_image}}
+{\footnotesize\ttfamily no\+\_\+image = 0}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}\label{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Np\_proj@{Np\_proj}}
+\index{Np\_proj@{Np\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Np\_proj}{Np\_proj}}
+{\footnotesize\ttfamily Np\+\_\+proj = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}},2)}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a84e4236f07668a770c27567f1f9615ff}\label{scanner__calibration__script_8m_a84e4236f07668a770c27567f1f9615ff}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!nx@{nx}}
+\index{nx@{nx}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{nx}{nx}}
+{\footnotesize\ttfamily nx = \mbox{\hyperlink{scanner__calibration__script_8m_af3ae74c2ed2405fec055b11d316989aa}{nx\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_af3ae74c2ed2405fec055b11d316989aa}\label{scanner__calibration__script_8m_af3ae74c2ed2405fec055b11d316989aa}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!nx\_cam@{nx\_cam}}
+\index{nx\_cam@{nx\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{nx\_cam}{nx\_cam}}
+{\footnotesize\ttfamily nx\+\_\+cam = \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aabe9804e7b9d90f99de383d3ce527d91}\label{scanner__calibration__script_8m_aabe9804e7b9d90f99de383d3ce527d91}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!nx\_proj@{nx\_proj}}
+\index{nx\_proj@{nx\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{nx\_proj}{nx\_proj}}
+{\footnotesize\ttfamily nx\+\_\+proj = \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a289ca425eb368f1d582b6be2be0d3dfc}\label{scanner__calibration__script_8m_a289ca425eb368f1d582b6be2be0d3dfc}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ny@{ny}}
+\index{ny@{ny}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ny}{ny}}
+{\footnotesize\ttfamily ny = 768}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a56e3cabe97fdc6c01d29b5866a178e40}\label{scanner__calibration__script_8m_a56e3cabe97fdc6c01d29b5866a178e40}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ny\_cam@{ny\_cam}}
+\index{ny\_cam@{ny\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ny\_cam}{ny\_cam}}
+{\footnotesize\ttfamily ny\+\_\+cam = \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_acf18d2885b18b62254fb0e83e121a8c7}\label{scanner__calibration__script_8m_acf18d2885b18b62254fb0e83e121a8c7}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!ny\_proj@{ny\_proj}}
+\index{ny\_proj@{ny\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{ny\_proj}{ny\_proj}}
+{\footnotesize\ttfamily ny\+\_\+proj = \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a1423606ec53137cfece8ae197d1f7196}\label{scanner__calibration__script_8m_a1423606ec53137cfece8ae197d1f7196}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!om@{om}}
+\index{om@{om}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{om}{om}}
+{\footnotesize\ttfamily om = \mbox{\hyperlink{scanner__calibration__script_8m_ae478750005bd7da64820312f607cc7fc}{om\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_afe3caa91414cd5f4a3f3da325e9566ef}\label{scanner__calibration__script_8m_afe3caa91414cd5f4a3f3da325e9566ef}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!om\_error@{om\_error}}
+\index{om\_error@{om\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{om\_error}{om\_error}}
+{\footnotesize\ttfamily om\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_a85fe4b65bc827c235b12d4391b94e85e}{om\+\_\+error\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a85fe4b65bc827c235b12d4391b94e85e}\label{scanner__calibration__script_8m_a85fe4b65bc827c235b12d4391b94e85e}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!om\_error\_proj@{om\_error\_proj}}
+\index{om\_error\_proj@{om\_error\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{om\_error\_proj}{om\_error\_proj}}
+{\footnotesize\ttfamily om\+\_\+error\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_a5f62a828646b3e46f0eb126944400556}{omc\+\_\+error\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae478750005bd7da64820312f607cc7fc}\label{scanner__calibration__script_8m_ae478750005bd7da64820312f607cc7fc}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!om\_proj@{om\_proj}}
+\index{om\_proj@{om\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{om\_proj}{om\_proj}}
+{\footnotesize\ttfamily om\+\_\+proj = \mbox{\hyperlink{willson__read_8m_a61a843662f1b0d474a5e6c4d19764e6c}{omc\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a2cf13b30df3f462548b2159605db426a}\label{scanner__calibration__script_8m_a2cf13b30df3f462548b2159605db426a}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!omc@{omc}}
+\index{omc@{omc}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{omc}{omc}}
+{\footnotesize\ttfamily omc = \mbox{\hyperlink{willson__read_8m_a61a843662f1b0d474a5e6c4d19764e6c}{omc\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aa363c3f3f7668c5847bb7b4f58f0a83f}\label{scanner__calibration__script_8m_aa363c3f3f7668c5847bb7b4f58f0a83f}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!omc\_1@{omc\_1}}
+\index{omc\_1@{omc\_1}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{omc\_1}{omc\_1}}
+{\footnotesize\ttfamily omc\+\_\+1 = \mbox{\hyperlink{scanner__calibration__script_8m_a142cf277a18652e86489c8a5bec2ed4c}{omc\+\_\+1\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a142cf277a18652e86489c8a5bec2ed4c}\label{scanner__calibration__script_8m_a142cf277a18652e86489c8a5bec2ed4c}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!omc\_1\_cam@{omc\_1\_cam}}
+\index{omc\_1\_cam@{omc\_1\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{omc\_1\_cam}{omc\_1\_cam}}
+{\footnotesize\ttfamily omc\+\_\+1\+\_\+cam = \mbox{\hyperlink{willson__read_8m_a61a843662f1b0d474a5e6c4d19764e6c}{omc\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5f62a828646b3e46f0eb126944400556}\label{scanner__calibration__script_8m_a5f62a828646b3e46f0eb126944400556}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!omc\_error\_1@{omc\_error\_1}}
+\index{omc\_error\_1@{omc\_error\_1}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{omc\_error\_1}{omc\_error\_1}}
+{\footnotesize\ttfamily omc\+\_\+error\+\_\+1 = \mbox{\hyperlink{scanner__calibration__script_8m_a3dd8f39778103ef83f80e2e6ed2e39d2}{omc\+\_\+error\+\_\+1\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a3dd8f39778103ef83f80e2e6ed2e39d2}\label{scanner__calibration__script_8m_a3dd8f39778103ef83f80e2e6ed2e39d2}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!omc\_error\_1\_cam@{omc\_error\_1\_cam}}
+\index{omc\_error\_1\_cam@{omc\_error\_1\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{omc\_error\_1\_cam}{omc\_error\_1\_cam}}
+{\footnotesize\ttfamily omc\+\_\+error\+\_\+1\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_a5f62a828646b3e46f0eb126944400556}{omc\+\_\+error\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}\label{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!omckk@{omckk}}
+\index{omckk@{omckk}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{omckk}{omckk}}
+{\footnotesize\ttfamily for omckk = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6\+:\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+2)}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5f28a5a2640ef5edbfe405af522ce5b2}\label{scanner__calibration__script_8m_a5f28a5a2640ef5edbfe405af522ce5b2}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!omp@{omp}}
+\index{omp@{omp}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{omp}{omp}}
+{\footnotesize\ttfamily omp = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_a60d0525f6a2950fed98f65dadbe82453}{Rp}})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a58ab1fd68e97078232808206b850161b}\label{scanner__calibration__script_8m_a58ab1fd68e97078232808206b850161b}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!on@{on}}
+\index{on@{on}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily hold on}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a02eacfd40be9042ceb0f07547365203d}\label{scanner__calibration__script_8m_a02eacfd40be9042ceb0f07547365203d}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!options@{options}}
+\index{options@{options}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily options = \mbox{[}1 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/4 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/4 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/6 0 0 0 0 0 0 0 0 0 12000 0 1\mbox{\hyperlink{rodrigues_8m_a329626dffc42c84371831246a2ddac71}{e}}-\/8 0.\+1 0\mbox{]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a51f20d6b1b54a2eee3be0e8adc96a0ae}\label{scanner__calibration__script_8m_a51f20d6b1b54a2eee3be0e8adc96a0ae}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param@{param}}
+\index{param@{param}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param}{param}}
+{\footnotesize\ttfamily param = \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a31d2941e4ce09cd79f860e63f06a5242}{param\+\_\+cam}}(\mbox{[}1\+:4 6 11\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}\mbox{]})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a31d2941e4ce09cd79f860e63f06a5242}\label{scanner__calibration__script_8m_a31d2941e4ce09cd79f860e63f06a5242}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param\_cam@{param\_cam}}
+\index{param\_cam@{param\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param\_cam}{param\_cam}}
+{\footnotesize\ttfamily param\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{[}1\+:10 16\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}\mbox{]})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac273cbfaf014240a823c753f847844dd}\label{scanner__calibration__script_8m_ac273cbfaf014240a823c753f847844dd}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param\_init@{param\_init}}
+\index{param\_init@{param\_init}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param\_init}{param\_init}}
+{\footnotesize\ttfamily param\+\_\+init = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ad7edd47559694043db7fd865537f5d2e}\label{scanner__calibration__script_8m_ad7edd47559694043db7fd865537f5d2e}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!param\_proj@{param\_proj}}
+\index{param\_proj@{param\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{param\_proj}{param\_proj}}
+{\footnotesize\ttfamily param\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{[}1\+:10 16\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}\mbox{]})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac4576b32d72c2fb66d82267a551bf699}\label{scanner__calibration__script_8m_ac4576b32d72c2fb66d82267a551bf699}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!parameters@{parameters}}
+\index{parameters@{parameters}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{parameters}{parameters}}
+{\footnotesize\ttfamily Save the optimal \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} parameters}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a1b8e1f2303694f3e8c37f500986cbc84}\label{scanner__calibration__script_8m_a1b8e1f2303694f3e8c37f500986cbc84}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!patterns@{patterns}}
+\index{patterns@{patterns}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{patterns}{patterns}}
+{\footnotesize\ttfamily Show the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} location with respect \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} the patterns}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}\label{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!projector@{projector}}
+\index{projector@{projector}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{projector}{projector}}
+{\footnotesize\ttfamily Position of the global \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} wrt the projector}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_acb95449a94688af33f6e9bb090cf2936}\label{scanner__calibration__script_8m_acb95449a94688af33f6e9bb090cf2936}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!R@{R}}
+\index{R@{R}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily R = \mbox{\hyperlink{scanner__calibration__script_8m_aab2ec39c163ce09f4508bbcd37f45daf}{R\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aab2ec39c163ce09f4508bbcd37f45daf}\label{scanner__calibration__script_8m_aab2ec39c163ce09f4508bbcd37f45daf}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!R\_proj@{R\_proj}}
+\index{R\_proj@{R\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{R\_proj}{R\_proj}}
+{\footnotesize\ttfamily R\+\_\+proj = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_ae478750005bd7da64820312f607cc7fc}{om\+\_\+proj}})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a195c01e73b5733070a0ed794ccd6291b}\label{scanner__calibration__script_8m_a195c01e73b5733070a0ed794ccd6291b}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Rc@{Rc}}
+\index{Rc@{Rc}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Rc}{Rc}}
+{\footnotesize\ttfamily Rc = \mbox{\hyperlink{scanner__calibration__script_8m_a0012f0c99818672efb15be199c3b4544}{Rc\+\_\+1\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a96f937a5b8637542f6f360d93e5c91c1}\label{scanner__calibration__script_8m_a96f937a5b8637542f6f360d93e5c91c1}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Rc\_1@{Rc\_1}}
+\index{Rc\_1@{Rc\_1}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Rc\_1}{Rc\_1}}
+{\footnotesize\ttfamily Rc\+\_\+1 = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{willson__read_8m_a61a843662f1b0d474a5e6c4d19764e6c}{omc\+\_\+1}})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a0012f0c99818672efb15be199c3b4544}\label{scanner__calibration__script_8m_a0012f0c99818672efb15be199c3b4544}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Rc\_1\_cam@{Rc\_1\_cam}}
+\index{Rc\_1\_cam@{Rc\_1\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Rc\_1\_cam}{Rc\_1\_cam}}
+{\footnotesize\ttfamily Rc\+\_\+1\+\_\+cam = \mbox{\hyperlink{willson__read_8m_ac7df82d30368ff29184b32392007c1b9}{Rc\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}\label{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Rckk@{Rckk}}
+\index{Rckk@{Rckk}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Rckk}{Rckk}}
+{\footnotesize\ttfamily Rckk = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ae1a0d15e3f23af3f51cfd495ba6be602}\label{scanner__calibration__script_8m_ae1a0d15e3f23af3f51cfd495ba6be602}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!reproject\_calib@{reproject\_calib}}
+\index{reproject\_calib@{reproject\_calib}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{reproject\_calib}{reproject\_calib}}
+{\footnotesize\ttfamily reproject\+\_\+calib}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a5e266dea6cdf288ea68372e3aeef0ae4}\label{scanner__calibration__script_8m_a5e266dea6cdf288ea68372e3aeef0ae4}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!routine@{routine}}
+\index{routine@{routine}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{routine}{routine}}
+{\footnotesize\ttfamily Run the \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} routine}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a60d0525f6a2950fed98f65dadbe82453}\label{scanner__calibration__script_8m_a60d0525f6a2950fed98f65dadbe82453}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Rp@{Rp}}
+\index{Rp@{Rp}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Rp}{Rp}}
+{\footnotesize\ttfamily Rp = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}$\ast$\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a53d239ba805a5194c71afa5dd5ead203}\label{scanner__calibration__script_8m_a53d239ba805a5194c71afa5dd5ead203}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!saving\_calib@{saving\_calib}}
+\index{saving\_calib@{saving\_calib}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{saving\_calib}{saving\_calib}}
+{\footnotesize\ttfamily saving\+\_\+calib}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aea30b88858361dce26d8103aae56867d}\label{scanner__calibration__script_8m_aea30b88858361dce26d8103aae56867d}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!saving\_string@{saving\_string}}
+\index{saving\_string@{saving\_string}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{saving\_string}{saving\_string}}
+{\footnotesize\ttfamily for saving\+\_\+string = \textquotesingle{}save calib\+\_\+cam\+\_\+proj \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}} \mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}} \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} \mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}} \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} \mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}} \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} \mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}} \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} \mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}} \mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}} \mbox{\hyperlink{scanner__calibration__script_8m_a60d0525f6a2950fed98f65dadbe82453}{Rp}} \mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}} \mbox{\hyperlink{scanner__calibration__script_8m_ad652ee3260af21f50359895da1674c9d}{Tp}} \mbox{\hyperlink{willson__convert_8m_a2cf13b30df3f462548b2159605db426a}{omc}} \mbox{\hyperlink{scanner__calibration__script_8m_a5f28a5a2640ef5edbfe405af522ce5b2}{omp}} \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} \mbox{\hyperlink{scanner__calibration__script_8m_a2a31debe6e5ea1f7e9c0ecff9ccab612}{active\+\_\+images\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a5cd3e19eb8f7882933fc3353b0f39e9b}{active\+\_\+images\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_a72c4b51df4f11aadf411a8baef0dcfb6}{ind\+\_\+active\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a2ee055ac1bd33ab23cf7176b45dd3fc2}{ind\+\_\+active\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_abd526e51f925af46b23aaf51588ef1d8}{T\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_afe3caa91414cd5f4a3f3da325e9566ef}{om\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a6c470cd0d5e07a4e4ca18aba0b1e1063}{fp\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_aa5cd1923a027f69467317ca602a04500}{cp\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a30db50906b6f7ed92bb180231509647a}{kp\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_ac96e52c5442f5c4181c28f2de7b51ac7}{alpha\+\_\+p\+\_\+error}} \mbox{\hyperlink{scanner__calibration__script_8m_a0b9d7df603a4b2f13405d3f7179a1bb4}{est\+\_\+fc\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a274b2dc973e2a386bf533de904ea43dc}{est\+\_\+dist\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_afc4397531811974633254d8bf4c88295}{est\+\_\+alpha\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_adf1a644257b5a3653e984f4e2190194a}{center\+\_\+optim\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a98f366d74ce4a6f1f03843869bae169a}{est\+\_\+fc\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_aa5a7d457b065a040aa99ed664b0e970f}{est\+\_\+dist\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_a300bc2e55bc7fa21f66377daf59321c8}{est\+\_\+alpha\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_a59c40641029533e2a43d8377d73a6f9f}{center\+\_\+optim\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_a31d2941e4ce09cd79f860e63f06a5242}{param\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_aee4435bb9d8082957102dce5cea6f383}{param\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_af3ae74c2ed2405fec055b11d316989aa}{nx\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_a56e3cabe97fdc6c01d29b5866a178e40}{ny\+\_\+cam}} \mbox{\hyperlink{scanner__calibration__script_8m_aabe9804e7b9d90f99de383d3ce527d91}{nx\+\_\+proj}} \mbox{\hyperlink{scanner__calibration__script_8m_acf18d2885b18b62254fb0e83e121a8c7}{ny\+\_\+proj}}\textquotesingle{}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a09a62a6cfacc026c1623a4f2e138ad88}\label{scanner__calibration__script_8m_a09a62a6cfacc026c1623a4f2e138ad88}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!size@{size}}
+\index{size@{size}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily Image size}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_addf5814dfda05ad7e965d42b20b83efa}\label{scanner__calibration__script_8m_addf5814dfda05ad7e965d42b20b83efa}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!string\_global@{string\_global}}
+\index{string\_global@{string\_global}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{string\_global}{string\_global}}
+{\footnotesize\ttfamily for string\+\_\+global = \textquotesingle{}global \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_adf1f3edb9115acb0a1e04209b7a9937b}\label{scanner__calibration__script_8m_adf1f3edb9115acb0a1e04209b7a9937b}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!T@{T}}
+\index{T@{T}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily T = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((9\+:11)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_abd526e51f925af46b23aaf51588ef1d8}\label{scanner__calibration__script_8m_abd526e51f925af46b23aaf51588ef1d8}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!T\_error@{T\_error}}
+\index{T\_error@{T\_error}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{T\_error}{T\_error}}
+{\footnotesize\ttfamily T\+\_\+error = \mbox{\hyperlink{scanner__calibration__script_8m_a4161e150f5219c06baf44f1cfa801b09}{T\+\_\+error\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a4161e150f5219c06baf44f1cfa801b09}\label{scanner__calibration__script_8m_a4161e150f5219c06baf44f1cfa801b09}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!T\_error\_proj@{T\_error\_proj}}
+\index{T\_error\_proj@{T\_error\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{T\_error\_proj}{T\_error\_proj}}
+{\footnotesize\ttfamily T\+\_\+error\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_a6491316402d282a6d8af22f4c2ad1811}{Tc\+\_\+error\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_aabe8a15c211e7cd11663da12cb5e5503}\label{scanner__calibration__script_8m_aabe8a15c211e7cd11663da12cb5e5503}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Tc@{Tc}}
+\index{Tc@{Tc}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Tc}{Tc}}
+{\footnotesize\ttfamily Tc = \mbox{\hyperlink{scanner__calibration__script_8m_a79f744cc2384c48ba95eaff9fc05db5e}{Tc\+\_\+1\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a412310131d4b9095d7a2db14e3b4fae4}\label{scanner__calibration__script_8m_a412310131d4b9095d7a2db14e3b4fae4}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Tc\_1@{Tc\_1}}
+\index{Tc\_1@{Tc\_1}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Tc\_1}{Tc\_1}}
+{\footnotesize\ttfamily Tc\+\_\+1 = \mbox{\hyperlink{scanner__calibration__script_8m_a79f744cc2384c48ba95eaff9fc05db5e}{Tc\+\_\+1\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a79f744cc2384c48ba95eaff9fc05db5e}\label{scanner__calibration__script_8m_a79f744cc2384c48ba95eaff9fc05db5e}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Tc\_1\_cam@{Tc\_1\_cam}}
+\index{Tc\_1\_cam@{Tc\_1\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Tc\_1\_cam}{Tc\_1\_cam}}
+{\footnotesize\ttfamily Tc\+\_\+1\+\_\+cam = \mbox{\hyperlink{willson__read_8m_aa5c5acf324d725ca38bdc6b698a20719}{Tc\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a6491316402d282a6d8af22f4c2ad1811}\label{scanner__calibration__script_8m_a6491316402d282a6d8af22f4c2ad1811}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Tc\_error\_1@{Tc\_error\_1}}
+\index{Tc\_error\_1@{Tc\_error\_1}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Tc\_error\_1}{Tc\_error\_1}}
+{\footnotesize\ttfamily Tc\+\_\+error\+\_\+1 = \mbox{\hyperlink{scanner__calibration__script_8m_ac507fcce2cf2d7d0406a69e241ee9408}{Tc\+\_\+error\+\_\+1\+\_\+cam}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ac507fcce2cf2d7d0406a69e241ee9408}\label{scanner__calibration__script_8m_ac507fcce2cf2d7d0406a69e241ee9408}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Tc\_error\_1\_cam@{Tc\_error\_1\_cam}}
+\index{Tc\_error\_1\_cam@{Tc\_error\_1\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Tc\_error\_1\_cam}{Tc\_error\_1\_cam}}
+{\footnotesize\ttfamily Tc\+\_\+error\+\_\+1\+\_\+cam = \mbox{\hyperlink{scanner__calibration__script_8m_a6491316402d282a6d8af22f4c2ad1811}{Tc\+\_\+error\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}\label{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Tckk@{Tckk}}
+\index{Tckk@{Tckk}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Tckk}{Tckk}}
+{\footnotesize\ttfamily Tckk = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+3\+:\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+5)}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ad652ee3260af21f50359895da1674c9d}\label{scanner__calibration__script_8m_ad652ee3260af21f50359895da1674c9d}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Tp@{Tp}}
+\index{Tp@{Tp}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Tp}{Tp}}
+{\footnotesize\ttfamily Tp = \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} + \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}$\ast$\mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a1db58ffdf10033879a2793e9908971a5}\label{scanner__calibration__script_8m_a1db58ffdf10033879a2793e9908971a5}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!X\_1@{X\_1}}
+\index{X\_1@{X\_1}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{X\_1}{X\_1}}
+{\footnotesize\ttfamily X\+\_\+1 = \mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a35555c30538b98b701fb2c84ac2064a1}\label{scanner__calibration__script_8m_a35555c30538b98b701fb2c84ac2064a1}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!x\_1@{x\_1}}
+\index{x\_1@{x\_1}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{x\_1}{x\_1}}
+{\footnotesize\ttfamily x\+\_\+1 = \mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a4aa17ed6678315abdc33430a784990ff}\label{scanner__calibration__script_8m_a4aa17ed6678315abdc33430a784990ff}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!X\_1\_cam@{X\_1\_cam}}
+\index{X\_1\_cam@{X\_1\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{X\_1\_cam}{X\_1\_cam}}
+{\footnotesize\ttfamily X\+\_\+1\+\_\+cam = \mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a37a257a621601cc82fadac3eca62a1d9}\label{scanner__calibration__script_8m_a37a257a621601cc82fadac3eca62a1d9}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!x\_1\_cam@{x\_1\_cam}}
+\index{x\_1\_cam@{x\_1\_cam}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{x\_1\_cam}{x\_1\_cam}}
+{\footnotesize\ttfamily x\+\_\+1\+\_\+cam = \mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}\label{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!x\_proj@{x\_proj}}
+\index{x\_proj@{x\_proj}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{x\_proj}{x\_proj}}
+{\footnotesize\ttfamily x\+\_\+proj = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a8a1d9c766bee8e3c8fd1cd2b4c99fe1e}\label{scanner__calibration__script_8m_a8a1d9c766bee8e3c8fd1cd2b4c99fe1e}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Xcp@{Xcp}}
+\index{Xcp@{Xcp}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Xcp}{Xcp}}
+{\footnotesize\ttfamily Xcp = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}{Zc}}) .$\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}}}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}\label{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!xprojn@{xprojn}}
+\index{xprojn@{xprojn}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{xprojn}{xprojn}}
+{\footnotesize\ttfamily xprojn = \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}},\mbox{\hyperlink{scanner__calibration__script_8m_af8f65eed1e9ac72f79a0c3d8f4656af5}{fc\+\_\+cam}},\mbox{\hyperlink{scanner__calibration__script_8m_ad50d11193e03270b519c5d8084a653d3}{cc\+\_\+cam}},\mbox{\hyperlink{scanner__calibration__script_8m_a97a53ee5f08596c5fc6d710a8844d346}{kc\+\_\+cam}},\mbox{\hyperlink{scanner__calibration__script_8m_a0445847554897e041aedfddc5fefbaf7}{alpha\+\_\+c\+\_\+cam}})}
+
+\mbox{\Hypertarget{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}\label{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}} 
+\index{scanner\_calibration\_script.m@{scanner\_calibration\_script.m}!Zc@{Zc}}
+\index{Zc@{Zc}!scanner\_calibration\_script.m@{scanner\_calibration\_script.m}}
+\doxysubsubsection{\texorpdfstring{Zc}{Zc}}
+{\footnotesize\ttfamily Zc = ((\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}(\+:,3)\textquotesingle{}$\ast$\mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}}) $\ast$ (1./(\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}(\+:,3)\textquotesingle{} $\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}}; \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}})\mbox{]})))}
+

@@ -1,0 +1,246 @@
+\hypertarget{error__cam__proj3_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/error\+\_\+cam\+\_\+proj3.m File Reference}
+\label{error__cam__proj3_8m}\index{D:/TrackEsferas/NavarQA/calib/error\_cam\_proj3.m@{D:/TrackEsferas/NavarQA/calib/error\_cam\_proj3.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a495838e20f780998846263933acb0819}{zeros}} (4, 1)\mbox{]}
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a704efce07c57a6678b60cb147b2a2408}{eval}} (\mbox{[}\textquotesingle{}Xkk=X\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a57ea0dd2fc9dbda9586e1f8bf5f6f61d}{ones}} (1, \mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}})\mbox{]}
+\item 
+\mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in the \mbox{\hyperlink{error__cam__proj3_8m_a07f21f5ec95a2fe3cfa111e323fbd489}{eval}} (\mbox{[}\textquotesingle{}\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}}=\mbox{[}\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}} X\+\_\+proj\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{}\mbox{]};\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} \mbox{\hyperlink{error__cam__proj3_8m_a75b51375988b8484b5b4637b70361058}{e\+\_\+global}} = error\+\_\+cam\+\_\+proj(\mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}})
+\item 
+global \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} \mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}} \mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}} xproj\+\_\+1 x\+\_\+proj\+\_\+1 \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_afbd54a109fec66a96f33aca5358b0093}{x\+\_\+2}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_abe2d5cda0a5a22d71df40aff966ad8c6}{X\+\_\+2}} xproj\+\_\+2 x\+\_\+proj\+\_\+2 \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a046fb6a0fa548900f68e5016dd536de3}{x\+\_\+3}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_aae2a9eac695c85c1c0ddfc3e94558084}{X\+\_\+3}} xproj\+\_\+3 x\+\_\+proj\+\_\+3 x\+\_\+4 X\+\_\+4 xproj\+\_\+4 x\+\_\+proj\+\_\+4 x\+\_\+5 X\+\_\+5 xproj\+\_\+5 x\+\_\+proj\+\_\+5 x\+\_\+6 X\+\_\+6 xproj\+\_\+6 x\+\_\+proj\+\_\+6 x\+\_\+7 X\+\_\+7 xproj\+\_\+7 x\+\_\+proj\+\_\+7 x\+\_\+8 X\+\_\+8 xproj\+\_\+8 x\+\_\+proj\+\_\+8 x\+\_\+9 X\+\_\+9 xproj\+\_\+9 x\+\_\+proj\+\_\+9 x\+\_\+10 X\+\_\+10 xproj\+\_\+10 x\+\_\+proj\+\_\+10 x\+\_\+11 X\+\_\+11 xproj\+\_\+11 x\+\_\+proj\+\_\+11 x\+\_\+12 X\+\_\+12 xproj\+\_\+12 x\+\_\+proj\+\_\+12 x\+\_\+13 X\+\_\+13 xproj\+\_\+13 x\+\_\+proj\+\_\+13 x\+\_\+14 X\+\_\+14 xproj\+\_\+14 x\+\_\+proj\+\_\+14 x\+\_\+15 X\+\_\+15 xproj\+\_\+15 x\+\_\+proj\+\_\+15 x\+\_\+16 X\+\_\+16 xproj\+\_\+16 x\+\_\+proj\+\_\+16 x\+\_\+17 X\+\_\+17 xproj\+\_\+17 x\+\_\+proj\+\_\+17 x\+\_\+18 X\+\_\+18 xproj\+\_\+18 x\+\_\+proj\+\_\+18 x\+\_\+19 X\+\_\+19 xproj\+\_\+19 x\+\_\+proj\+\_\+19 x\+\_\+20 X\+\_\+20 xproj\+\_\+20 x\+\_\+proj\+\_\+20 x\+\_\+21 X\+\_\+21 xproj\+\_\+21 x\+\_\+proj\+\_\+21 x\+\_\+22 X\+\_\+22 xproj\+\_\+22 x\+\_\+proj\+\_\+22 x\+\_\+23 X\+\_\+23 xproj\+\_\+23 x\+\_\+proj\+\_\+23 x\+\_\+24 X\+\_\+24 xproj\+\_\+24 x\+\_\+proj\+\_\+24 x\+\_\+25 X\+\_\+25 xproj\+\_\+25 x\+\_\+proj\+\_\+25 x\+\_\+26 X\+\_\+26 xproj\+\_\+26 x\+\_\+proj\+\_\+26 x\+\_\+27 X\+\_\+27 xproj\+\_\+27 x\+\_\+proj\+\_\+27 x\+\_\+28 X\+\_\+28 xproj\+\_\+28 x\+\_\+proj\+\_\+28 x\+\_\+29 X\+\_\+29 xproj\+\_\+29 x\+\_\+proj\+\_\+29 x\+\_\+30 X\+\_\+30 xproj\+\_\+30 x\+\_\+proj\+\_\+30 This \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the \mbox{\hyperlink{rectify__stereo__pair_8m_a74de3909f790e0187e6baa753abebdf4}{same}} \mbox{\hyperlink{error__cam__proj3_8m_a052fa88213df8e8f1e98188d68a0b2a4}{model}}
+\item 
+global \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} \mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}} \mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}} xproj\+\_\+1 x\+\_\+proj\+\_\+1 \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_afbd54a109fec66a96f33aca5358b0093}{x\+\_\+2}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_abe2d5cda0a5a22d71df40aff966ad8c6}{X\+\_\+2}} xproj\+\_\+2 x\+\_\+proj\+\_\+2 \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a046fb6a0fa548900f68e5016dd536de3}{x\+\_\+3}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_aae2a9eac695c85c1c0ddfc3e94558084}{X\+\_\+3}} xproj\+\_\+3 x\+\_\+proj\+\_\+3 x\+\_\+4 X\+\_\+4 xproj\+\_\+4 x\+\_\+proj\+\_\+4 x\+\_\+5 X\+\_\+5 xproj\+\_\+5 x\+\_\+proj\+\_\+5 x\+\_\+6 X\+\_\+6 xproj\+\_\+6 x\+\_\+proj\+\_\+6 x\+\_\+7 X\+\_\+7 xproj\+\_\+7 x\+\_\+proj\+\_\+7 x\+\_\+8 X\+\_\+8 xproj\+\_\+8 x\+\_\+proj\+\_\+8 x\+\_\+9 X\+\_\+9 xproj\+\_\+9 x\+\_\+proj\+\_\+9 x\+\_\+10 X\+\_\+10 xproj\+\_\+10 x\+\_\+proj\+\_\+10 x\+\_\+11 X\+\_\+11 xproj\+\_\+11 x\+\_\+proj\+\_\+11 x\+\_\+12 X\+\_\+12 xproj\+\_\+12 x\+\_\+proj\+\_\+12 x\+\_\+13 X\+\_\+13 xproj\+\_\+13 x\+\_\+proj\+\_\+13 x\+\_\+14 X\+\_\+14 xproj\+\_\+14 x\+\_\+proj\+\_\+14 x\+\_\+15 X\+\_\+15 xproj\+\_\+15 x\+\_\+proj\+\_\+15 x\+\_\+16 X\+\_\+16 xproj\+\_\+16 x\+\_\+proj\+\_\+16 x\+\_\+17 X\+\_\+17 xproj\+\_\+17 x\+\_\+proj\+\_\+17 x\+\_\+18 X\+\_\+18 xproj\+\_\+18 x\+\_\+proj\+\_\+18 x\+\_\+19 X\+\_\+19 xproj\+\_\+19 x\+\_\+proj\+\_\+19 x\+\_\+20 X\+\_\+20 xproj\+\_\+20 x\+\_\+proj\+\_\+20 x\+\_\+21 X\+\_\+21 xproj\+\_\+21 x\+\_\+proj\+\_\+21 x\+\_\+22 X\+\_\+22 xproj\+\_\+22 x\+\_\+proj\+\_\+22 x\+\_\+23 X\+\_\+23 xproj\+\_\+23 x\+\_\+proj\+\_\+23 x\+\_\+24 X\+\_\+24 xproj\+\_\+24 x\+\_\+proj\+\_\+24 x\+\_\+25 X\+\_\+25 xproj\+\_\+25 x\+\_\+proj\+\_\+25 x\+\_\+26 X\+\_\+26 xproj\+\_\+26 x\+\_\+proj\+\_\+26 x\+\_\+27 X\+\_\+27 xproj\+\_\+27 x\+\_\+proj\+\_\+27 x\+\_\+28 X\+\_\+28 xproj\+\_\+28 x\+\_\+proj\+\_\+28 x\+\_\+29 X\+\_\+29 xproj\+\_\+29 x\+\_\+proj\+\_\+29 x\+\_\+30 X\+\_\+30 xproj\+\_\+30 x\+\_\+proj\+\_\+30 This \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the \mbox{\hyperlink{rectify__stereo__pair_8m_a74de3909f790e0187e6baa753abebdf4}{same}} but with \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} simpler \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} \mbox{\hyperlink{cam__proj__calib__optim_8m_ae1b7b537d79d3e859cbc94a0d1a0383f}{model}}(no 6\mbox{\hyperlink{rodrigues_8m_ae9382b39fa1c6777321aa83183037a20}{th}} order) \% Computation of the \mbox{\hyperlink{reproject__calib__no__read_8m_acb3a6b3434e09cb089a332664f683a54}{errors}} \mbox{\hyperlink{error__cam__proj3_8m_afb6347abafba6042c6ddb36d9b009ba4}{cc}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(3\+:4)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}{alpha\+\_\+c}} = 0
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a737dee4ef8e09247b0da47219bf453ff}{kc}} = \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(5)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_aaad98d59e8128f2d314253b078111af0}{e\+\_\+cam}} = \mbox{[}$\,$\mbox{]}
+\item 
+for \mbox{\hyperlink{error__cam__proj3_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = 1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+for \mbox{\hyperlink{error__cam__proj3_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6\+:\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+2)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a4508a179901753e284c1a88754994d88}{Tckk}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+3\+:\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+5)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a6e86b27143fadbe27aad836e90387ab0}{ekk}} = xkk -\/ project\+\_\+points2(Xkk,\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}},\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}})
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}} = \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}},2)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_ab6843abffb4b43b92c0b917ed67318df}{Zc}} = ((\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}(\+:,3)\textquotesingle{}$\ast$\mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}}) $\ast$ (1./(\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}(\+:,3)\textquotesingle{} $\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}}; \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}})\mbox{]})))
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a8a1d9c766bee8e3c8fd1cd2b4c99fe1e}{Xcp}} = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}{Zc}}) .$\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}}
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((1\+:2)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((3\+:4)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_ad1eb49846d1fc9a39aa839da84b499c7}{alpha\+\_\+p}} = 0
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}} = \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((5)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_a1423606ec53137cfece8ae197d1f7196}{om}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((6\+:8)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((9\+:11)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)
+\item 
+\mbox{\hyperlink{error__cam__proj3_8m_acb7c32c51bdf3ec602304e6ad51eaaf1}{e\+\_\+proj}} = \mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}} -\/ project\+\_\+points2(\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{error__cam__proj3_8m_a07f21f5ec95a2fe3cfa111e323fbd489}\label{error__cam__proj3_8m_a07f21f5ec95a2fe3cfa111e323fbd489}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!eval@{eval}}
+\index{eval@{eval}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} of the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in the eval (\begin{DoxyParamCaption}\item[{\mbox{[}\textquotesingle{}\+X\+\_\+proj=\mbox{[}\+X\+\_\+proj X\+\_\+proj\+\_\+\textquotesingle{} num2str(kk) \textquotesingle{}\mbox{]} ;\textquotesingle{}\mbox{]}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a704efce07c57a6678b60cb147b2a2408}\label{error__cam__proj3_8m_a704efce07c57a6678b60cb147b2a2408}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!eval@{eval}}
+\index{eval@{eval}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a57ea0dd2fc9dbda9586e1f8bf5f6f61d}\label{error__cam__proj3_8m_a57ea0dd2fc9dbda9586e1f8bf5f6f61d}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!ones@{ones}}
+\index{ones@{ones}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a495838e20f780998846263933acb0819}\label{error__cam__proj3_8m_a495838e20f780998846263933acb0819}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!zeros@{zeros}}
+\index{zeros@{zeros}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}}
+{\footnotesize\ttfamily zeros (\begin{DoxyParamCaption}\item[{4}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{error__cam__proj3_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}\label{error__cam__proj3_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!alpha\_c@{alpha\_c}}
+\index{alpha\_c@{alpha\_c}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c}{alpha\_c}}
+{\footnotesize\ttfamily alpha\+\_\+c = 0}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_ad1eb49846d1fc9a39aa839da84b499c7}\label{error__cam__proj3_8m_ad1eb49846d1fc9a39aa839da84b499c7}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!alpha\_p@{alpha\_p}}
+\index{alpha\_p@{alpha\_p}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_p}{alpha\_p}}
+{\footnotesize\ttfamily alpha\+\_\+p = 0}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_afb6347abafba6042c6ddb36d9b009ba4}\label{error__cam__proj3_8m_afb6347abafba6042c6ddb36d9b009ba4}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!cc@{cc}}
+\index{cc@{cc}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily global \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} \mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}} \mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}} xproj\+\_\+1 x\+\_\+proj\+\_\+1 \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_afbd54a109fec66a96f33aca5358b0093}{x\+\_\+2}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_abe2d5cda0a5a22d71df40aff966ad8c6}{X\+\_\+2}} xproj\+\_\+2 x\+\_\+proj\+\_\+2 \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a046fb6a0fa548900f68e5016dd536de3}{x\+\_\+3}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_aae2a9eac695c85c1c0ddfc3e94558084}{X\+\_\+3}} xproj\+\_\+3 x\+\_\+proj\+\_\+3 x\+\_\+4 X\+\_\+4 xproj\+\_\+4 x\+\_\+proj\+\_\+4 x\+\_\+5 X\+\_\+5 xproj\+\_\+5 x\+\_\+proj\+\_\+5 x\+\_\+6 X\+\_\+6 xproj\+\_\+6 x\+\_\+proj\+\_\+6 x\+\_\+7 X\+\_\+7 xproj\+\_\+7 x\+\_\+proj\+\_\+7 x\+\_\+8 X\+\_\+8 xproj\+\_\+8 x\+\_\+proj\+\_\+8 x\+\_\+9 X\+\_\+9 xproj\+\_\+9 x\+\_\+proj\+\_\+9 x\+\_\+10 X\+\_\+10 xproj\+\_\+10 x\+\_\+proj\+\_\+10 x\+\_\+11 X\+\_\+11 xproj\+\_\+11 x\+\_\+proj\+\_\+11 x\+\_\+12 X\+\_\+12 xproj\+\_\+12 x\+\_\+proj\+\_\+12 x\+\_\+13 X\+\_\+13 xproj\+\_\+13 x\+\_\+proj\+\_\+13 x\+\_\+14 X\+\_\+14 xproj\+\_\+14 x\+\_\+proj\+\_\+14 x\+\_\+15 X\+\_\+15 xproj\+\_\+15 x\+\_\+proj\+\_\+15 x\+\_\+16 X\+\_\+16 xproj\+\_\+16 x\+\_\+proj\+\_\+16 x\+\_\+17 X\+\_\+17 xproj\+\_\+17 x\+\_\+proj\+\_\+17 x\+\_\+18 X\+\_\+18 xproj\+\_\+18 x\+\_\+proj\+\_\+18 x\+\_\+19 X\+\_\+19 xproj\+\_\+19 x\+\_\+proj\+\_\+19 x\+\_\+20 X\+\_\+20 xproj\+\_\+20 x\+\_\+proj\+\_\+20 x\+\_\+21 X\+\_\+21 xproj\+\_\+21 x\+\_\+proj\+\_\+21 x\+\_\+22 X\+\_\+22 xproj\+\_\+22 x\+\_\+proj\+\_\+22 x\+\_\+23 X\+\_\+23 xproj\+\_\+23 x\+\_\+proj\+\_\+23 x\+\_\+24 X\+\_\+24 xproj\+\_\+24 x\+\_\+proj\+\_\+24 x\+\_\+25 X\+\_\+25 xproj\+\_\+25 x\+\_\+proj\+\_\+25 x\+\_\+26 X\+\_\+26 xproj\+\_\+26 x\+\_\+proj\+\_\+26 x\+\_\+27 X\+\_\+27 xproj\+\_\+27 x\+\_\+proj\+\_\+27 x\+\_\+28 X\+\_\+28 xproj\+\_\+28 x\+\_\+proj\+\_\+28 x\+\_\+29 X\+\_\+29 xproj\+\_\+29 x\+\_\+proj\+\_\+29 x\+\_\+30 X\+\_\+30 xproj\+\_\+30 x\+\_\+proj\+\_\+30 This \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the \mbox{\hyperlink{rectify__stereo__pair_8m_a74de3909f790e0187e6baa753abebdf4}{same}} but with \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} simpler \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} \mbox{\hyperlink{cam__proj__calib__optim_8m_ae1b7b537d79d3e859cbc94a0d1a0383f}{model}} (no 6\mbox{\hyperlink{rodrigues_8m_ae9382b39fa1c6777321aa83183037a20}{th}} order) \% Computation of the \mbox{\hyperlink{reproject__calib__no__read_8m_acb3a6b3434e09cb089a332664f683a54}{errors}} cc = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(3\+:4)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_ad0e5f55e3c0a06964a25a922047c023c}\label{error__cam__proj3_8m_ad0e5f55e3c0a06964a25a922047c023c}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!cp@{cp}}
+\index{cp@{cp}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{cp}{cp}}
+{\footnotesize\ttfamily cp = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((3\+:4)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_aaad98d59e8128f2d314253b078111af0}\label{error__cam__proj3_8m_aaad98d59e8128f2d314253b078111af0}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!e\_cam@{e\_cam}}
+\index{e\_cam@{e\_cam}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{e\_cam}{e\_cam}}
+{\footnotesize\ttfamily e\+\_\+cam = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a75b51375988b8484b5b4637b70361058}\label{error__cam__proj3_8m_a75b51375988b8484b5b4637b70361058}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!e\_global@{e\_global}}
+\index{e\_global@{e\_global}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{e\_global}{e\_global}}
+{\footnotesize\ttfamily e\+\_\+global = error\+\_\+cam\+\_\+proj(\mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}})}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_acb7c32c51bdf3ec602304e6ad51eaaf1}\label{error__cam__proj3_8m_acb7c32c51bdf3ec602304e6ad51eaaf1}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!e\_proj@{e\_proj}}
+\index{e\_proj@{e\_proj}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{e\_proj}{e\_proj}}
+{\footnotesize\ttfamily e\+\_\+proj = \mbox{\hyperlink{scanner__calibration__script_8m_a87d4491119c8201717c987f547100fef}{x\+\_\+proj}} -\/ project\+\_\+points2(\mbox{\hyperlink{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}{X\+\_\+proj}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a6e86b27143fadbe27aad836e90387ab0}\label{error__cam__proj3_8m_a6e86b27143fadbe27aad836e90387ab0}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!ekk@{ekk}}
+\index{ekk@{ekk}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{ekk}{ekk}}
+{\footnotesize\ttfamily ekk = xkk -\/ project\+\_\+points2(Xkk,\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}},\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_afb358f48b1646c750fb9da6c6585be2b}\label{error__cam__proj3_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!end@{end}}
+\index{end@{end}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a883a1b899b644be7fc6d704c1d8e0c04}\label{error__cam__proj3_8m_a883a1b899b644be7fc6d704c1d8e0c04}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!fp@{fp}}
+\index{fp@{fp}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{fp}{fp}}
+{\footnotesize\ttfamily fp = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((1\+:2)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a737dee4ef8e09247b0da47219bf453ff}\label{error__cam__proj3_8m_a737dee4ef8e09247b0da47219bf453ff}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!kc@{kc}}
+\index{kc@{kc}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{kc}{kc}}
+{\footnotesize\ttfamily kc = \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(5)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_af29949bd63fb009eacab5efd11399e40}\label{error__cam__proj3_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!kk@{kk}}
+\index{kk@{kk}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = 1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}\label{error__cam__proj3_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!kp@{kp}}
+\index{kp@{kp}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{kp}{kp}}
+{\footnotesize\ttfamily kp = \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((5)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a052fa88213df8e8f1e98188d68a0b2a4}\label{error__cam__proj3_8m_a052fa88213df8e8f1e98188d68a0b2a4}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!model@{model}}
+\index{model@{model}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily global \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} \mbox{\hyperlink{willson__read_8m_a35555c30538b98b701fb2c84ac2064a1}{x\+\_\+1}} \mbox{\hyperlink{willson__read_8m_a1db58ffdf10033879a2793e9908971a5}{X\+\_\+1}} xproj\+\_\+1 x\+\_\+proj\+\_\+1 \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_afbd54a109fec66a96f33aca5358b0093}{x\+\_\+2}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_abe2d5cda0a5a22d71df40aff966ad8c6}{X\+\_\+2}} xproj\+\_\+2 x\+\_\+proj\+\_\+2 \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a046fb6a0fa548900f68e5016dd536de3}{x\+\_\+3}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_aae2a9eac695c85c1c0ddfc3e94558084}{X\+\_\+3}} xproj\+\_\+3 x\+\_\+proj\+\_\+3 x\+\_\+4 X\+\_\+4 xproj\+\_\+4 x\+\_\+proj\+\_\+4 x\+\_\+5 X\+\_\+5 xproj\+\_\+5 x\+\_\+proj\+\_\+5 x\+\_\+6 X\+\_\+6 xproj\+\_\+6 x\+\_\+proj\+\_\+6 x\+\_\+7 X\+\_\+7 xproj\+\_\+7 x\+\_\+proj\+\_\+7 x\+\_\+8 X\+\_\+8 xproj\+\_\+8 x\+\_\+proj\+\_\+8 x\+\_\+9 X\+\_\+9 xproj\+\_\+9 x\+\_\+proj\+\_\+9 x\+\_\+10 X\+\_\+10 xproj\+\_\+10 x\+\_\+proj\+\_\+10 x\+\_\+11 X\+\_\+11 xproj\+\_\+11 x\+\_\+proj\+\_\+11 x\+\_\+12 X\+\_\+12 xproj\+\_\+12 x\+\_\+proj\+\_\+12 x\+\_\+13 X\+\_\+13 xproj\+\_\+13 x\+\_\+proj\+\_\+13 x\+\_\+14 X\+\_\+14 xproj\+\_\+14 x\+\_\+proj\+\_\+14 x\+\_\+15 X\+\_\+15 xproj\+\_\+15 x\+\_\+proj\+\_\+15 x\+\_\+16 X\+\_\+16 xproj\+\_\+16 x\+\_\+proj\+\_\+16 x\+\_\+17 X\+\_\+17 xproj\+\_\+17 x\+\_\+proj\+\_\+17 x\+\_\+18 X\+\_\+18 xproj\+\_\+18 x\+\_\+proj\+\_\+18 x\+\_\+19 X\+\_\+19 xproj\+\_\+19 x\+\_\+proj\+\_\+19 x\+\_\+20 X\+\_\+20 xproj\+\_\+20 x\+\_\+proj\+\_\+20 x\+\_\+21 X\+\_\+21 xproj\+\_\+21 x\+\_\+proj\+\_\+21 x\+\_\+22 X\+\_\+22 xproj\+\_\+22 x\+\_\+proj\+\_\+22 x\+\_\+23 X\+\_\+23 xproj\+\_\+23 x\+\_\+proj\+\_\+23 x\+\_\+24 X\+\_\+24 xproj\+\_\+24 x\+\_\+proj\+\_\+24 x\+\_\+25 X\+\_\+25 xproj\+\_\+25 x\+\_\+proj\+\_\+25 x\+\_\+26 X\+\_\+26 xproj\+\_\+26 x\+\_\+proj\+\_\+26 x\+\_\+27 X\+\_\+27 xproj\+\_\+27 x\+\_\+proj\+\_\+27 x\+\_\+28 X\+\_\+28 xproj\+\_\+28 x\+\_\+proj\+\_\+28 x\+\_\+29 X\+\_\+29 xproj\+\_\+29 x\+\_\+proj\+\_\+29 x\+\_\+30 X\+\_\+30 xproj\+\_\+30 x\+\_\+proj\+\_\+30 This \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the \mbox{\hyperlink{rectify__stereo__pair_8m_a74de3909f790e0187e6baa753abebdf4}{same}} model}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}\label{error__cam__proj3_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!Np\_proj@{Np\_proj}}
+\index{Np\_proj@{Np\_proj}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{Np\_proj}{Np\_proj}}
+{\footnotesize\ttfamily Np\+\_\+proj = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}},2)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a1423606ec53137cfece8ae197d1f7196}\label{error__cam__proj3_8m_a1423606ec53137cfece8ae197d1f7196}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!om@{om}}
+\index{om@{om}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{om}{om}}
+{\footnotesize\ttfamily om = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((6\+:8)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a2de5fcb88516c541766dcbebbda30ea5}\label{error__cam__proj3_8m_a2de5fcb88516c541766dcbebbda30ea5}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!omckk@{omckk}}
+\index{omckk@{omckk}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{omckk}{omckk}}
+{\footnotesize\ttfamily for omckk = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6\+:\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+2)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}\label{error__cam__proj3_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!Rckk@{Rckk}}
+\index{Rckk@{Rckk}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{Rckk}{Rckk}}
+{\footnotesize\ttfamily Rckk = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}})}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_adf1f3edb9115acb0a1e04209b7a9937b}\label{error__cam__proj3_8m_adf1f3edb9115acb0a1e04209b7a9937b}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!T@{T}}
+\index{T@{T}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily T = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}((9\+:11)+\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} $\ast$ 6 + 5)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a4508a179901753e284c1a88754994d88}\label{error__cam__proj3_8m_a4508a179901753e284c1a88754994d88}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!Tckk@{Tckk}}
+\index{Tckk@{Tckk}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{Tckk}{Tckk}}
+{\footnotesize\ttfamily Tckk = \mbox{\hyperlink{scanner__calibration__script_8m_a1aac993aff8e07a659255e2fe7a94ec0}{param}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+3\+:\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}$\ast$6+5)}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}\label{error__cam__proj3_8m_a7b15ecd04723c782dae24f528c22144e}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!X\_proj@{X\_proj}}
+\index{X\_proj@{X\_proj}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{X\_proj}{X\_proj}}
+{\footnotesize\ttfamily X\+\_\+proj = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a87d4491119c8201717c987f547100fef}\label{error__cam__proj3_8m_a87d4491119c8201717c987f547100fef}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!x\_proj@{x\_proj}}
+\index{x\_proj@{x\_proj}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{x\_proj}{x\_proj}}
+{\footnotesize\ttfamily x\+\_\+proj = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a8a1d9c766bee8e3c8fd1cd2b4c99fe1e}\label{error__cam__proj3_8m_a8a1d9c766bee8e3c8fd1cd2b4c99fe1e}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!Xcp@{Xcp}}
+\index{Xcp@{Xcp}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{Xcp}{Xcp}}
+{\footnotesize\ttfamily Xcp = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)$\ast$\mbox{\hyperlink{scanner__calibration__script_8m_ab6843abffb4b43b92c0b917ed67318df}{Zc}}) .$\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}}}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_a90c7f8b16a9fa47b103ff13848cef569}\label{error__cam__proj3_8m_a90c7f8b16a9fa47b103ff13848cef569}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!xprojn@{xprojn}}
+\index{xprojn@{xprojn}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{xprojn}{xprojn}}
+{\footnotesize\ttfamily xprojn = \mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{projector__ima__corners_8m_ab7119da363d64751f46f611124519e39}{xproj}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})}
+
+\mbox{\Hypertarget{error__cam__proj3_8m_ab6843abffb4b43b92c0b917ed67318df}\label{error__cam__proj3_8m_ab6843abffb4b43b92c0b917ed67318df}} 
+\index{error\_cam\_proj3.m@{error\_cam\_proj3.m}!Zc@{Zc}}
+\index{Zc@{Zc}!error\_cam\_proj3.m@{error\_cam\_proj3.m}}
+\doxysubsubsection{\texorpdfstring{Zc}{Zc}}
+{\footnotesize\ttfamily Zc = ((\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}(\+:,3)\textquotesingle{}$\ast$\mbox{\hyperlink{willson__convert_8m_aabe8a15c211e7cd11663da12cb5e5503}{Tc}}) $\ast$ (1./(\mbox{\hyperlink{willson__convert_8m_a195c01e73b5733070a0ed794ccd6291b}{Rc}}(\+:,3)\textquotesingle{} $\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a90c7f8b16a9fa47b103ff13848cef569}{xprojn}}; \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{scanner__calibration__script_8m_ac3c13fb27872f21d9b0fa6fbfa075c6a}{Np\+\_\+proj}})\mbox{]})))}
+

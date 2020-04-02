@@ -1,0 +1,206 @@
+\hypertarget{extract__parameters__fisheye_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/extract\+\_\+parameters\+\_\+fisheye.m File Reference}
+\label{extract__parameters__fisheye_8m}\index{D:/TrackEsferas/NavarQA/calib/extract\_parameters\_fisheye.m@{D:/TrackEsferas/NavarQA/calib/extract\_parameters\_fisheye.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{extract__parameters__fisheye_8m_a881ddac0f92ab46f2971e32a71992c3a}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}\textquotesingle{}) \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} (2) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2)
+\item 
+Extract the extrinsic and recomputer the collineations for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{extract__parameters__fisheye_8m_abbf8fc0a3b13cdaab3d40bddd83983fb}{active\+\_\+images}} (\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a22cfac2df329b4a52028fddc365d6f7f}{eval}} (\mbox{[}\textquotesingle{}omc\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{}=\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}};\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Extraction of the final intrinsic and extrinsic \mbox{\hyperlink{extract__parameters__fisheye_8m_a5764554a67d94c602ff97cda338ed5db}{paramaters}}
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}} = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(1\+:2)
+\item 
+$\ast$$\ast$$\ast$ \mbox{\hyperlink{extract__parameters__fisheye_8m_acfecbf1b9aa5a6e6e9a9b6d2e4dfa937}{cc}} = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(3\+:4)
+\item 
+$\ast$$\ast$$\ast$ \mbox{\hyperlink{extract__parameters__fisheye_8m_a63513f99a978643d54866b110812e17a}{alpha\+\_\+c}} = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(5)
+\item 
+$\ast$$\ast$$\ast$ \mbox{\hyperlink{extract__parameters__fisheye_8m_acf16b34b463fad7498d5415e51a44826}{kc}} = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(6\+:9)
+\item 
+$\ast$$\ast$$\ast$ \mbox{\hyperlink{extract__parameters__fisheye_8m_aab1d724fa256f601098764dda6e86f9d}{fc\+\_\+error}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(1\+:2)
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(3\+:4)
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(5)
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(6\+:9)
+\item 
+Calibration \mbox{\hyperlink{extract__parameters__fisheye_8m_af11ed0b23179c5443ade790615f5f490}{matrix}}
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_ae18b1980f35114a664a851f82b2f3098}{inv\+\_\+\+KK}} = inv(\mbox{\hyperlink{willson__read_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}})
+\item 
+Extract the extrinsic \mbox{\hyperlink{extract__parameters__fisheye_8m_a78974b12364a0c431fa4a87b180224ed}{paramters}}
+\item 
+Extract the extrinsic and recomputer the collineations for \mbox{\hyperlink{extract__parameters__fisheye_8m_a99ee4f1e3e529259596a8093b544d7fd}{kk}} = 1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+Extract the extrinsic and recomputer the collineations for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{extract__parameters__fisheye_8m_a0428f240719e50213a56a96b5c94d0cf}{omckk}} = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 1\+:15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 3)
+\item 
+$\ast$$\ast$$\ast$ \mbox{\hyperlink{extract__parameters__fisheye_8m_a4508a179901753e284c1a88754994d88}{Tckk}} = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 4\+:15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 6)
+\item 
+$\ast$$\ast$$\ast$ \mbox{\hyperlink{extract__parameters__fisheye_8m_a2bb2d9f5936ba74de85f4c9ac1bd8e88}{omckk\+\_\+error}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 1\+:15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 3)
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a9da77c7d8c50c73a3af0cd401da3539d}{Tckk\+\_\+error}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 4\+:15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 6)
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}})
+\item 
+\mbox{\hyperlink{extract__parameters__fisheye_8m_a232743e3a85f0585fefda3744fc9f3c2}{Hkk}} = \mbox{\hyperlink{willson__read_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}} $\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}(\+:,1) \mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}(\+:,2) \mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_abbf8fc0a3b13cdaab3d40bddd83983fb}\label{extract__parameters__fisheye_8m_abbf8fc0a3b13cdaab3d40bddd83983fb}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}}
+{\footnotesize\ttfamily Extract the extrinsic and recomputer the collineations for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} active\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a22cfac2df329b4a52028fddc365d6f7f}\label{extract__parameters__fisheye_8m_a22cfac2df329b4a52028fddc365d6f7f}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!eval@{eval}}
+\index{eval@{eval}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a97b90595eac8d87ee5eb4e52aa624f1d}\label{extract__parameters__fisheye_8m_a97b90595eac8d87ee5eb4e52aa624f1d}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!fc@{fc}}
+\index{fc@{fc}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fc()}{fc()}}
+{\footnotesize\ttfamily fc (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a881ddac0f92ab46f2971e32a71992c3a}\label{extract__parameters__fisheye_8m_a881ddac0f92ab46f2971e32a71992c3a}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a63513f99a978643d54866b110812e17a}\label{extract__parameters__fisheye_8m_a63513f99a978643d54866b110812e17a}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!alpha\_c@{alpha\_c}}
+\index{alpha\_c@{alpha\_c}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c}{alpha\_c}}
+{\footnotesize\ttfamily $\ast$$\ast$$\ast$ alpha\+\_\+c = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(5)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a0e2dae28e3d7505808bb2f47824bc2a2}\label{extract__parameters__fisheye_8m_a0e2dae28e3d7505808bb2f47824bc2a2}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!alpha\_c\_error@{alpha\_c\_error}}
+\index{alpha\_c\_error@{alpha\_c\_error}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c\_error}{alpha\_c\_error}}
+{\footnotesize\ttfamily alpha\+\_\+c\+\_\+error = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(5)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_acfecbf1b9aa5a6e6e9a9b6d2e4dfa937}\label{extract__parameters__fisheye_8m_acfecbf1b9aa5a6e6e9a9b6d2e4dfa937}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!cc@{cc}}
+\index{cc@{cc}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily $\ast$$\ast$$\ast$ cc = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(3\+:4)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a7494a839f85e504913610f06e84c525a}\label{extract__parameters__fisheye_8m_a7494a839f85e504913610f06e84c525a}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!cc\_error@{cc\_error}}
+\index{cc\_error@{cc\_error}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{cc\_error}{cc\_error}}
+{\footnotesize\ttfamily cc\+\_\+error = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(3\+:4)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}\label{extract__parameters__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!end@{end}}
+\index{end@{end}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a72d54db2b27ce046aab6e6a414c407e9}\label{extract__parameters__fisheye_8m_a72d54db2b27ce046aab6e6a414c407e9}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!fc@{fc}}
+\index{fc@{fc}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fc}{fc}}
+{\footnotesize\ttfamily fc = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(1\+:2)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_aab1d724fa256f601098764dda6e86f9d}\label{extract__parameters__fisheye_8m_aab1d724fa256f601098764dda6e86f9d}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!fc\_error@{fc\_error}}
+\index{fc\_error@{fc\_error}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fc\_error}{fc\_error}}
+{\footnotesize\ttfamily $\ast$$\ast$$\ast$ fc\+\_\+error = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(1\+:2)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a232743e3a85f0585fefda3744fc9f3c2}\label{extract__parameters__fisheye_8m_a232743e3a85f0585fefda3744fc9f3c2}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!Hkk@{Hkk}}
+\index{Hkk@{Hkk}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{Hkk}{Hkk}}
+{\footnotesize\ttfamily Hkk = \mbox{\hyperlink{willson__read_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}} $\ast$ \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}(\+:,1) \mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}(\+:,2) \mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}\mbox{]}}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_ae18b1980f35114a664a851f82b2f3098}\label{extract__parameters__fisheye_8m_ae18b1980f35114a664a851f82b2f3098}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!inv\_KK@{inv\_KK}}
+\index{inv\_KK@{inv\_KK}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{inv\_KK}{inv\_KK}}
+{\footnotesize\ttfamily inv\+\_\+\+KK = inv(\mbox{\hyperlink{willson__read_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}})}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_acf16b34b463fad7498d5415e51a44826}\label{extract__parameters__fisheye_8m_acf16b34b463fad7498d5415e51a44826}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!kc@{kc}}
+\index{kc@{kc}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{kc}{kc}}
+{\footnotesize\ttfamily $\ast$$\ast$$\ast$ kc = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(6\+:9)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a7313be71a16c2a7058951ec29e43be7f}\label{extract__parameters__fisheye_8m_a7313be71a16c2a7058951ec29e43be7f}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!kc\_error@{kc\_error}}
+\index{kc\_error@{kc\_error}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{kc\_error}{kc\_error}}
+{\footnotesize\ttfamily kc\+\_\+error = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(6\+:9)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a99ee4f1e3e529259596a8093b544d7fd}\label{extract__parameters__fisheye_8m_a99ee4f1e3e529259596a8093b544d7fd}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!kk@{kk}}
+\index{kk@{kk}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily Extract the extrinsic and recomputer the collineations for kk = 1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_af11ed0b23179c5443ade790615f5f490}\label{extract__parameters__fisheye_8m_af11ed0b23179c5443ade790615f5f490}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!matrix@{matrix}}
+\index{matrix@{matrix}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{matrix}{matrix}}
+{\footnotesize\ttfamily Calibration matrix}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a0428f240719e50213a56a96b5c94d0cf}\label{extract__parameters__fisheye_8m_a0428f240719e50213a56a96b5c94d0cf}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!omckk@{omckk}}
+\index{omckk@{omckk}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{omckk}{omckk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} omckk = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 1\+:15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 3)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a2bb2d9f5936ba74de85f4c9ac1bd8e88}\label{extract__parameters__fisheye_8m_a2bb2d9f5936ba74de85f4c9ac1bd8e88}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!omckk\_error@{omckk\_error}}
+\index{omckk\_error@{omckk\_error}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{omckk\_error}{omckk\_error}}
+{\footnotesize\ttfamily omckk\+\_\+error = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 1\+:15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 3)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a5764554a67d94c602ff97cda338ed5db}\label{extract__parameters__fisheye_8m_a5764554a67d94c602ff97cda338ed5db}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!paramaters@{paramaters}}
+\index{paramaters@{paramaters}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{paramaters}{paramaters}}
+{\footnotesize\ttfamily Extraction of the final intrinsic and extrinsic paramaters}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a78974b12364a0c431fa4a87b180224ed}\label{extract__parameters__fisheye_8m_a78974b12364a0c431fa4a87b180224ed}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!paramters@{paramters}}
+\index{paramters@{paramters}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{paramters}{paramters}}
+{\footnotesize\ttfamily Extract the extrinsic paramters}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}\label{extract__parameters__fisheye_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!Rckk@{Rckk}}
+\index{Rckk@{Rckk}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{Rckk}{Rckk}}
+{\footnotesize\ttfamily Rckk = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}})}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a4508a179901753e284c1a88754994d88}\label{extract__parameters__fisheye_8m_a4508a179901753e284c1a88754994d88}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!Tckk@{Tckk}}
+\index{Tckk@{Tckk}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{Tckk}{Tckk}}
+{\footnotesize\ttfamily Tckk = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}(15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 4\+:15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 6)}
+
+\mbox{\Hypertarget{extract__parameters__fisheye_8m_a9da77c7d8c50c73a3af0cd401da3539d}\label{extract__parameters__fisheye_8m_a9da77c7d8c50c73a3af0cd401da3539d}} 
+\index{extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}!Tckk\_error@{Tckk\_error}}
+\index{Tckk\_error@{Tckk\_error}!extract\_parameters\_fisheye.m@{extract\_parameters\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{Tckk\_error}{Tckk\_error}}
+{\footnotesize\ttfamily Tckk\+\_\+error = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_af1ba698b09287feaa960d91e3ef6694a}{solution\+\_\+error}}(15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 4\+:15+6$\ast$(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}-\/1) + 6)}
+

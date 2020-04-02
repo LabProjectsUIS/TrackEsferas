@@ -1,0 +1,94 @@
+\hypertarget{class_n_a_t_utils}{}\doxysection{N\+A\+T\+Utils Class Reference}
+\label{class_n_a_t_utils}\index{NATUtils@{NATUtils}}
+
+
+{\ttfamily \#include $<$N\+A\+T\+Utils.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_n_a_t_utils_ae555d6ef00b1390a4a69ee677c8a97f1}{Get\+Local\+I\+P\+Addresses}} (unsigned long Addresses\mbox{[}$\,$\mbox{]}, int n\+Max)
+\item 
+static int \mbox{\hyperlink{class_n_a_t_utils_aeaa1337aa84cffe493d53fdcd809eff7}{Get\+Local\+I\+P\+Addresses2}} (unsigned long Addresses\mbox{[}$\,$\mbox{]}, int n\+Max)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{class_n_a_t_utils_a1786ab9e713ac59587dbe6050d8b91fc}{Qaternion\+To\+Rotation\+Matrix}} (\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} $\ast$\mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}, \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} $\ast$\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}})
+\begin{DoxyCompactList}\small\item\em Converts a quaternion to a rotation matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{class_n_a_t_utils_a825d3061e86f9ac7323935786e8d6c73}{Vec3\+Matrix\+Mult}} (\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} $\ast$v, \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} $\ast$\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}})
+\begin{DoxyCompactList}\small\item\em Multiplies a vector with 3 components by a 3 x 3 matrix and overwrites the input vector with the result. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_n_a_t_utils_a2abf69f59abce23991c399d9775cec5a}{Radians\+To\+Degrees}} (float f\+Radians)
+\begin{DoxyCompactList}\small\item\em Converts radians to degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_a_t_utils_ae555d6ef00b1390a4a69ee677c8a97f1}\label{class_n_a_t_utils_ae555d6ef00b1390a4a69ee677c8a97f1}} 
+\index{NATUtils@{NATUtils}!GetLocalIPAddresses@{GetLocalIPAddresses}}
+\index{GetLocalIPAddresses@{GetLocalIPAddresses}!NATUtils@{NATUtils}}
+\doxysubsubsection{\texorpdfstring{GetLocalIPAddresses()}{GetLocalIPAddresses()}}
+{\footnotesize\ttfamily int N\+A\+T\+Utils\+::\+Get\+Local\+I\+P\+Addresses (\begin{DoxyParamCaption}\item[{unsigned long}]{Addresses\mbox{[}$\,$\mbox{]},  }\item[{int}]{n\+Max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_n_a_t_utils_aeaa1337aa84cffe493d53fdcd809eff7}\label{class_n_a_t_utils_aeaa1337aa84cffe493d53fdcd809eff7}} 
+\index{NATUtils@{NATUtils}!GetLocalIPAddresses2@{GetLocalIPAddresses2}}
+\index{GetLocalIPAddresses2@{GetLocalIPAddresses2}!NATUtils@{NATUtils}}
+\doxysubsubsection{\texorpdfstring{GetLocalIPAddresses2()}{GetLocalIPAddresses2()}}
+{\footnotesize\ttfamily int N\+A\+T\+Utils\+::\+Get\+Local\+I\+P\+Addresses2 (\begin{DoxyParamCaption}\item[{unsigned long}]{Addresses\mbox{[}$\,$\mbox{]},  }\item[{int}]{n\+Max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_n_a_t_utils_a1786ab9e713ac59587dbe6050d8b91fc}\label{class_n_a_t_utils_a1786ab9e713ac59587dbe6050d8b91fc}} 
+\index{NATUtils@{NATUtils}!QaternionToRotationMatrix@{QaternionToRotationMatrix}}
+\index{QaternionToRotationMatrix@{QaternionToRotationMatrix}!NATUtils@{NATUtils}}
+\doxysubsubsection{\texorpdfstring{QaternionToRotationMatrix()}{QaternionToRotationMatrix()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void N\+A\+T\+Utils\+::\+Qaternion\+To\+Rotation\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} $\ast$}]{q,  }\item[{\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} $\ast$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a quaternion to a rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & Quaternion stored in x, y, z, w order.\\
+\hline
+{\em m} & Pointer to an array of length 9. Rotation matrix is placed into this array in column major order.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_a_t_utils_a2abf69f59abce23991c399d9775cec5a}\label{class_n_a_t_utils_a2abf69f59abce23991c399d9775cec5a}} 
+\index{NATUtils@{NATUtils}!RadiansToDegrees@{RadiansToDegrees}}
+\index{RadiansToDegrees@{RadiansToDegrees}!NATUtils@{NATUtils}}
+\doxysubsubsection{\texorpdfstring{RadiansToDegrees()}{RadiansToDegrees()}}
+{\footnotesize\ttfamily static float N\+A\+T\+Utils\+::\+Radians\+To\+Degrees (\begin{DoxyParamCaption}\item[{float}]{f\+Radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts radians to degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+Radians} & Radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Degrees.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_a_t_utils_a825d3061e86f9ac7323935786e8d6c73}\label{class_n_a_t_utils_a825d3061e86f9ac7323935786e8d6c73}} 
+\index{NATUtils@{NATUtils}!Vec3MatrixMult@{Vec3MatrixMult}}
+\index{Vec3MatrixMult@{Vec3MatrixMult}!NATUtils@{NATUtils}}
+\doxysubsubsection{\texorpdfstring{Vec3MatrixMult()}{Vec3MatrixMult()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void N\+A\+T\+Utils\+::\+Vec3\+Matrix\+Mult (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} $\ast$}]{v,  }\item[{\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}} $\ast$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Multiplies a vector with 3 components by a 3 x 3 matrix and overwrites the input vector with the result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & On input a vector with 3 components. On output the result of the multiplication.\\
+\hline
+{\em m} & 3 x 3 matrix stored in column major order\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{_n_a_t_utils_8h}{N\+A\+T\+Utils.\+h}}\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{_n_a_t_utils_8cpp}{N\+A\+T\+Utils.\+cpp}}\end{DoxyCompactItemize}

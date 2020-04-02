@@ -1,0 +1,310 @@
+\hypertarget{scanning__script_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/scanning\+\_\+script.m File Reference}
+\label{scanning__script_8m}\index{D:/TrackEsferas/NavarQA/calib/scanning\_script.m@{D:/TrackEsferas/NavarQA/calib/scanning\_script.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textquotesingle{}The scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} does not exist. Make sure \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a08a151c6a6cca71defbca10663c46f63}{go}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} the directory \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} the scanning \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} and the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} are located(folder scanning\+\_\+example \mbox{\hyperlink{scanning__script_8m_aeeee95b82ca1041dca72e0028cdc6af1}{error}} ()
+\item 
+Choose \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} \mbox{\hyperlink{scanning__script_8m_aef10db55231ee94ba6bbfb76fed5e867}{dataset}} (scan \#20 for example) ind\+\_\+view
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{scanning__script_8m_ad1f74bbd6683116ab641430212712a34}{exist}} (\mbox{[}\mbox{\hyperlink{scanning__script_8m_a269c63f6ef2e0b48a417b09d9f9148d2}{stripe\+\_\+image}} \textquotesingle{}\+\_\+pat00p.\+bmp\textquotesingle{}\mbox{]})$\sim$
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{scanning__script_8m_adf8c5375cc9d7bd443c1aac507d622f1}{error}} (\textquotesingle{}The scanning \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} cannot be found. Make sure \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a08a151c6a6cca71defbca10663c46f63}{go}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} the directory \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} the scanning \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are located(folder scanning\+\_\+example)\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a884ce1b862a6a515bb00eeb2e631be82}{fprintf}} (1, \textquotesingle{}Computing the 3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} surface \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{mesh...\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a58aa4b4e8af819393e3bb06a22e32e31}{set}} (\mbox{\hyperlink{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}{h}}, \textquotesingle{}Edge\+Color\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{smooth__images_8m_a7a1752f5e40c5479a01672ac853b1541}{b}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a7b8c25def30d842e110fd329991ae043}{xlabel}} (\textquotesingle{}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a44be30ecd4122a8ac3728d1370f7f917}{ylabel}} (\textquotesingle{}\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a0faf5a6161e9f8cdb658831d495b6652}{zlabel}} (\textquotesingle{}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a53dab94fd5cf7c9da9ec54164c98c580}{axis}} (\textquotesingle{}equal\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a3675142f18310417233b46f5997d16f6}{view}} (0.\+5, 12)
+\item 
+\mbox{\hyperlink{scanning__script_8m_a1ae1b8a84a8cd3b1ccf858c419ba2f9b}{fprintf}} (1, \textquotesingle{}Saving Geometry in the V\+R\+ML \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \%s...(use Cosmo Player \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} visualize the \mbox{\hyperlink{scanning__script_8m_aa601e0a3f5df0cd2cd41e7d822d2bd76}{mesh}})\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}, \mbox{\hyperlink{scanning__script_8m_ab14608db917e4f761c4d46f1559b9903}{filename\+\_\+\+V\+R\+ML}})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a7c99ede1509c1db0bff258b648254c4e}{fprintf}} (\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}},\textquotesingle{}\#V\+R\+ML V2.\+0 \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{utf8\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a5ac385354e77a9a5cb914f32fc67724f}{fprintf}} (\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}, \textquotesingle{}Transform \{ children\mbox{[}Viewpoint \{\mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} \%.\+4\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.\+4\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.\+4\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} orientation \%.\+4\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.\+4\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.\+4\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.\+4\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \mbox{\hyperlink{scanning__script_8m_a0d829b24ff5342eb9f411e85020b50f5}{field\+Of\+View}} \%.\+4\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \} \textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{},\mbox{[}TT ;\mbox{\hyperlink{scanning__script_8m_a5bd030dfd8deb926eb61eeaf424de410}{wwn}} ;\mbox{\hyperlink{scanning__script_8m_a371815f74d602ff1338376abbd1278e4}{nw}};\mbox{\hyperlink{scanning__script_8m_a0d829b24ff5342eb9f411e85020b50f5}{field\+Of\+View}}\mbox{]})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a68e34cd3184c13f517bf968c1ad48fbf}{fprintf}} (\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}},\textquotesingle{}\%.\+3\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.\+3\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.\+3\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}},\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}, Xc2)
+\item 
+\mbox{\hyperlink{scanning__script_8m_ae0d9af456aa61d0eb43ce3dd1a950818}{fprintf}} (\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}},\textquotesingle{}\mbox{]}\} coord\+Index\mbox{[}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a0d39ee272294ec36ef2db4e64bb007a0}{fprintf}} (\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}},\textquotesingle{}\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}},\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}},\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}},-\/1,\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}, tri2\textquotesingle{}-\/1)
+\item 
+\mbox{\hyperlink{scanning__script_8m_a374e20b97c86d5a5fe0069fca73e2343}{fprintf}} (\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}},\textquotesingle{}\mbox{]}\}\}\mbox{]}\}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_ab63a17f5da06310c373a4a8cd0724a51}{fprintf}} (\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}},\textquotesingle{}\mbox{]}\} \textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a116ec12743ee2c1915ca1b3840312aa2}{fclose}} (\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scanning__script_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+Loading the scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{scanning__script_8m_adc08c3995da44a8a890a5df11366fb31}{parameters}}
+\item 
+Loading the scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} Loading the scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{scanning__script_8m_a5bf8e9bd225c9965657036965db3c3fb}{n}}
+\item 
+\mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{scanning__script_8m_a138669110488f0d8d6116d4640ff9a64}{calib\+\_\+cam\+\_\+proj\+\_\+optim}}
+\item 
+\mbox{\hyperlink{scanning__script_8m_a269c63f6ef2e0b48a417b09d9f9148d2}{stripe\+\_\+image}} = \mbox{[}\textquotesingle{}strip\textquotesingle{} sprintf(\textquotesingle{}\%.\+4\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}\textquotesingle{},ind\+\_\+view) \mbox{]}
+\item 
+Compute the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} every pixel in the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{scanning__script_8m_a832c80eddd7fec0ac3da7558706305d0}{image}}
+\item 
+Triangulate the \mbox{\hyperlink{scanning__script_8m_af518ecbfd888f723aab1850f2bb271ab}{geometry}} = Compute\+Stripes(\mbox{\hyperlink{scanning__script_8m_a269c63f6ef2e0b48a417b09d9f9148d2}{stripe\+\_\+image}},1)
+\item 
+Meshing the \mbox{\hyperlink{scanning__script_8m_a7fc3713b787547b1416ab159ea3280cb}{points}} = Compute3D(\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}},\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a95873e65a21d176eaa8425f449b0b2d5}{N\+\_\+smoothing}} = 1
+\item 
+Display the \mbox{\hyperlink{scanning__script_8m_aa601e0a3f5df0cd2cd41e7d822d2bd76}{mesh}} = Meshing(\mbox{\hyperlink{project__points__weak_8m_a50022e2d102ea7933c1d0eae181cfd2f}{Xc}},\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}},\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}},Thresh\+\_\+connect,\mbox{\hyperlink{scanning__script_8m_a95873e65a21d176eaa8425f449b0b2d5}{N\+\_\+smoothing}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}},\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}{h}} = trimesh(tri2,Xc2(1,\+:),Xc2(3,\+:),-\/Xc2(2,\+:))
+\item 
+rotate3d \mbox{\hyperlink{scanning__script_8m_a9e9015470b91825f777de9a03ff60329}{on}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} equal Save the \mbox{\hyperlink{scanning__script_8m_aa601e0a3f5df0cd2cd41e7d822d2bd76}{mesh}} in \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} V\+R\+ML \mbox{\hyperlink{scanning__script_8m_a40a5d58ffa6e88aa578d6683ac413105}{file}} = fopen(\mbox{\hyperlink{scanning__script_8m_ab14608db917e4f761c4d46f1559b9903}{filename\+\_\+\+V\+R\+ML}},\textquotesingle{}wt\textquotesingle{})
+\item 
+\mbox{\hyperlink{scanning__script_8m_a5bd030dfd8deb926eb61eeaf424de410}{wwn}} = \mbox{[}1
+\item 
+\mbox{\hyperlink{scanning__script_8m_a371815f74d602ff1338376abbd1278e4}{nw}} = pi
+\item 
+\mbox{\hyperlink{scanning__script_8m_a0d829b24ff5342eb9f411e85020b50f5}{field\+Of\+View}} = 3$\ast$atan((\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}/2)/\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(2))
+\item 
+\mbox{\hyperlink{scanning__script_8m_ab14608db917e4f761c4d46f1559b9903}{filename\+\_\+\+V\+R\+ML}} = \mbox{[}\textquotesingle{}\mbox{\hyperlink{scanning__script_8m_aa601e0a3f5df0cd2cd41e7d822d2bd76}{mesh}}\textquotesingle{} sprintf(\textquotesingle{}\%.\+4\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}\textquotesingle{},ind\+\_\+view) \textquotesingle{}.wrl\textquotesingle{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scanning__script_8m_a53dab94fd5cf7c9da9ec54164c98c580}\label{scanning__script_8m_a53dab94fd5cf7c9da9ec54164c98c580}} 
+\index{scanning\_script.m@{scanning\_script.m}!axis@{axis}}
+\index{axis@{axis}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{axis()}{axis()}}
+{\footnotesize\ttfamily axis (\begin{DoxyParamCaption}\item[{\textquotesingle{}equal\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_aef10db55231ee94ba6bbfb76fed5e867}\label{scanning__script_8m_aef10db55231ee94ba6bbfb76fed5e867}} 
+\index{scanning\_script.m@{scanning\_script.m}!dataset@{dataset}}
+\index{dataset@{dataset}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{dataset()}{dataset()}}
+{\footnotesize\ttfamily Choose \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} dataset (\begin{DoxyParamCaption}\item[{scan \#20 for}]{example }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_adf8c5375cc9d7bd443c1aac507d622f1}\label{scanning__script_8m_adf8c5375cc9d7bd443c1aac507d622f1}} 
+\index{scanning\_script.m@{scanning\_script.m}!error@{error}}
+\index{error@{error}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} error (\begin{DoxyParamCaption}\item[{\textquotesingle{}The scanning \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} cannot be found. Make sure \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a08a151c6a6cca71defbca10663c46f63}{go}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} the directory \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} the scanning \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are located(folder scanning\+\_\+example)\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_aeeee95b82ca1041dca72e0028cdc6af1}\label{scanning__script_8m_aeeee95b82ca1041dca72e0028cdc6af1}} 
+\index{scanning\_script.m@{scanning\_script.m}!error@{error}}
+\index{error@{error}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textquotesingle{}The scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} does not exist. Make sure \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a08a151c6a6cca71defbca10663c46f63}{go}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} the directory \mbox{\hyperlink{project__points__weak_8m_a5552711badc1e09aa9eddba4cb539b69}{where}} the scanning \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} and the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} are located (folder scanning\+\_\+example error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{scanning__script_8m_ad1f74bbd6683116ab641430212712a34}\label{scanning__script_8m_ad1f74bbd6683116ab641430212712a34}} 
+\index{scanning\_script.m@{scanning\_script.m}!exist@{exist}}
+\index{exist@{exist}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} exist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a116ec12743ee2c1915ca1b3840312aa2}\label{scanning__script_8m_a116ec12743ee2c1915ca1b3840312aa2}} 
+\index{scanning\_script.m@{scanning\_script.m}!fclose@{fclose}}
+\index{fclose@{fclose}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fclose()}{fclose()}}
+{\footnotesize\ttfamily fclose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a884ce1b862a6a515bb00eeb2e631be82}\label{scanning__script_8m_a884ce1b862a6a515bb00eeb2e631be82}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Computing the 3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} surface \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{mesh...\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a1ae1b8a84a8cd3b1ccf858c419ba2f9b}\label{scanning__script_8m_a1ae1b8a84a8cd3b1ccf858c419ba2f9b}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Saving Geometry in the V\+R\+ML \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \%s...(use Cosmo Player \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} visualize the \mbox{\hyperlink{scanning__script_8m_aa601e0a3f5df0cd2cd41e7d822d2bd76}{mesh}})\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{scanning__script_8m_ab14608db917e4f761c4d46f1559b9903}{filename\+\_\+\+V\+R\+ML}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a5ac385354e77a9a5cb914f32fc67724f}\label{scanning__script_8m_a5ac385354e77a9a5cb914f32fc67724f}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a7c99ede1509c1db0bff258b648254c4e}\label{scanning__script_8m_a7c99ede1509c1db0bff258b648254c4e}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}}]{,  }\item[{\textquotesingle{}\#V\+R\+ML V2.\+0 \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{utf8\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a68e34cd3184c13f517bf968c1ad48fbf}\label{scanning__script_8m_a68e34cd3184c13f517bf968c1ad48fbf}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}}]{,  }\item[{\textquotesingle{}\%.\+3\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.\+3\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%.}]{3f,  }\item[{\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{,  }\item[{Xc2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a0d39ee272294ec36ef2db4e64bb007a0}\label{scanning__script_8m_a0d39ee272294ec36ef2db4e64bb007a0}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}}]{,  }\item[{\textquotesingle{}\%}]{d,  }\item[{\%}]{d,  }\item[{\%}]{d,  }\item[{-\/}]{1,  }\item[{\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{,  }\item[{tri2\textquotesingle{}-\/}]{1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_ab63a17f5da06310c373a4a8cd0724a51}\label{scanning__script_8m_ab63a17f5da06310c373a4a8cd0724a51}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}}]{,  }\item[{\textquotesingle{}\mbox{]}\} \textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_ae0d9af456aa61d0eb43ce3dd1a950818}\label{scanning__script_8m_ae0d9af456aa61d0eb43ce3dd1a950818}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}}]{,  }\item[{\textquotesingle{}\mbox{]}\} coord\+Index\mbox{[}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a374e20b97c86d5a5fe0069fca73e2343}\label{scanning__script_8m_a374e20b97c86d5a5fe0069fca73e2343}} 
+\index{scanning\_script.m@{scanning\_script.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}}}]{,  }\item[{\textquotesingle{}\mbox{]}\}\}\mbox{]}\}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a58aa4b4e8af819393e3bb06a22e32e31}\label{scanning__script_8m_a58aa4b4e8af819393e3bb06a22e32e31}} 
+\index{scanning\_script.m@{scanning\_script.m}!set@{set}}
+\index{set@{set}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}{h}}}]{,  }\item[{\textquotesingle{}Edge\+Color\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{smooth__images_8m_a7a1752f5e40c5479a01672ac853b1541}{b}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a3675142f18310417233b46f5997d16f6}\label{scanning__script_8m_a3675142f18310417233b46f5997d16f6}} 
+\index{scanning\_script.m@{scanning\_script.m}!view@{view}}
+\index{view@{view}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}}
+{\footnotesize\ttfamily view (\begin{DoxyParamCaption}\item[{0.}]{5,  }\item[{12}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a7b8c25def30d842e110fd329991ae043}\label{scanning__script_8m_a7b8c25def30d842e110fd329991ae043}} 
+\index{scanning\_script.m@{scanning\_script.m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{xlabel()}{xlabel()}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a44be30ecd4122a8ac3728d1370f7f917}\label{scanning__script_8m_a44be30ecd4122a8ac3728d1370f7f917}} 
+\index{scanning\_script.m@{scanning\_script.m}!ylabel@{ylabel}}
+\index{ylabel@{ylabel}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{ylabel()}{ylabel()}}
+{\footnotesize\ttfamily ylabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scanning__script_8m_a0faf5a6161e9f8cdb658831d495b6652}\label{scanning__script_8m_a0faf5a6161e9f8cdb658831d495b6652}} 
+\index{scanning\_script.m@{scanning\_script.m}!zlabel@{zlabel}}
+\index{zlabel@{zlabel}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{zlabel()}{zlabel()}}
+{\footnotesize\ttfamily zlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{scanning__script_8m_a138669110488f0d8d6116d4640ff9a64}\label{scanning__script_8m_a138669110488f0d8d6116d4640ff9a64}} 
+\index{scanning\_script.m@{scanning\_script.m}!calib\_cam\_proj\_optim@{calib\_cam\_proj\_optim}}
+\index{calib\_cam\_proj\_optim@{calib\_cam\_proj\_optim}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{calib\_cam\_proj\_optim}{calib\_cam\_proj\_optim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} calib\+\_\+cam\+\_\+proj\+\_\+optim}
+
+\mbox{\Hypertarget{scanning__script_8m_afb358f48b1646c750fb9da6c6585be2b}\label{scanning__script_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{scanning\_script.m@{scanning\_script.m}!end@{end}}
+\index{end@{end}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{scanning__script_8m_a0d829b24ff5342eb9f411e85020b50f5}\label{scanning__script_8m_a0d829b24ff5342eb9f411e85020b50f5}} 
+\index{scanning\_script.m@{scanning\_script.m}!fieldOfView@{fieldOfView}}
+\index{fieldOfView@{fieldOfView}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{fieldOfView}{fieldOfView}}
+{\footnotesize\ttfamily field\+Of\+View = 3$\ast$atan((\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}/2)/\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(2))}
+
+\mbox{\Hypertarget{scanning__script_8m_a40a5d58ffa6e88aa578d6683ac413105}\label{scanning__script_8m_a40a5d58ffa6e88aa578d6683ac413105}} 
+\index{scanning\_script.m@{scanning\_script.m}!file@{file}}
+\index{file@{file}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily file = fopen(\mbox{\hyperlink{scanning__script_8m_ab14608db917e4f761c4d46f1559b9903}{filename\+\_\+\+V\+R\+ML}},\textquotesingle{}wt\textquotesingle{})}
+
+\mbox{\Hypertarget{scanning__script_8m_ab14608db917e4f761c4d46f1559b9903}\label{scanning__script_8m_ab14608db917e4f761c4d46f1559b9903}} 
+\index{scanning\_script.m@{scanning\_script.m}!filename\_VRML@{filename\_VRML}}
+\index{filename\_VRML@{filename\_VRML}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{filename\_VRML}{filename\_VRML}}
+{\footnotesize\ttfamily filename\+\_\+\+V\+R\+ML = \mbox{[}\textquotesingle{}\mbox{\hyperlink{scanning__script_8m_aa601e0a3f5df0cd2cd41e7d822d2bd76}{mesh}}\textquotesingle{} sprintf(\textquotesingle{}\%.\+4\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}\textquotesingle{},ind\+\_\+view) \textquotesingle{}.wrl\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{scanning__script_8m_af518ecbfd888f723aab1850f2bb271ab}\label{scanning__script_8m_af518ecbfd888f723aab1850f2bb271ab}} 
+\index{scanning\_script.m@{scanning\_script.m}!geometry@{geometry}}
+\index{geometry@{geometry}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{geometry}{geometry}}
+{\footnotesize\ttfamily Triangulate the geometry = Compute\+Stripes(\mbox{\hyperlink{scanning__script_8m_a269c63f6ef2e0b48a417b09d9f9148d2}{stripe\+\_\+image}},1)}
+
+\mbox{\Hypertarget{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}\label{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}} 
+\index{scanning\_script.m@{scanning\_script.m}!h@{h}}
+\index{h@{h}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily h = trimesh(tri2,Xc2(1,\+:),Xc2(3,\+:),-\/Xc2(2,\+:))}
+
+\mbox{\Hypertarget{scanning__script_8m_a832c80eddd7fec0ac3da7558706305d0}\label{scanning__script_8m_a832c80eddd7fec0ac3da7558706305d0}} 
+\index{scanning\_script.m@{scanning\_script.m}!image@{image}}
+\index{image@{image}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily Compute the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} every pixel in the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} image}
+
+\mbox{\Hypertarget{scanning__script_8m_aa601e0a3f5df0cd2cd41e7d822d2bd76}\label{scanning__script_8m_aa601e0a3f5df0cd2cd41e7d822d2bd76}} 
+\index{scanning\_script.m@{scanning\_script.m}!mesh@{mesh}}
+\index{mesh@{mesh}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{mesh}{mesh}}
+{\footnotesize\ttfamily Display the mesh = Meshing(\mbox{\hyperlink{project__points__weak_8m_a50022e2d102ea7933c1d0eae181cfd2f}{Xc}},\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}},\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}},Thresh\+\_\+connect,\mbox{\hyperlink{scanning__script_8m_a95873e65a21d176eaa8425f449b0b2d5}{N\+\_\+smoothing}},\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}},\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})}
+
+\mbox{\Hypertarget{scanning__script_8m_a5bf8e9bd225c9965657036965db3c3fb}\label{scanning__script_8m_a5bf8e9bd225c9965657036965db3c3fb}} 
+\index{scanning\_script.m@{scanning\_script.m}!n@{n}}
+\index{n@{n}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily Triangulate the Triangulating the \mbox{\hyperlink{scanning__script_8m_af518ecbfd888f723aab1850f2bb271ab}{geometry}} n}
+
+\mbox{\Hypertarget{scanning__script_8m_a95873e65a21d176eaa8425f449b0b2d5}\label{scanning__script_8m_a95873e65a21d176eaa8425f449b0b2d5}} 
+\index{scanning\_script.m@{scanning\_script.m}!N\_smoothing@{N\_smoothing}}
+\index{N\_smoothing@{N\_smoothing}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{N\_smoothing}{N\_smoothing}}
+{\footnotesize\ttfamily N\+\_\+smoothing = 1}
+
+\mbox{\Hypertarget{scanning__script_8m_a371815f74d602ff1338376abbd1278e4}\label{scanning__script_8m_a371815f74d602ff1338376abbd1278e4}} 
+\index{scanning\_script.m@{scanning\_script.m}!nw@{nw}}
+\index{nw@{nw}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{nw}{nw}}
+{\footnotesize\ttfamily nw = pi}
+
+\mbox{\Hypertarget{scanning__script_8m_a9e9015470b91825f777de9a03ff60329}\label{scanning__script_8m_a9e9015470b91825f777de9a03ff60329}} 
+\index{scanning\_script.m@{scanning\_script.m}!on@{on}}
+\index{on@{on}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily rotate3d on}
+
+\mbox{\Hypertarget{scanning__script_8m_adc08c3995da44a8a890a5df11366fb31}\label{scanning__script_8m_adc08c3995da44a8a890a5df11366fb31}} 
+\index{scanning\_script.m@{scanning\_script.m}!parameters@{parameters}}
+\index{parameters@{parameters}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{parameters}{parameters}}
+{\footnotesize\ttfamily Loading the scanner \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} parameters}
+
+\mbox{\Hypertarget{scanning__script_8m_a7fc3713b787547b1416ab159ea3280cb}\label{scanning__script_8m_a7fc3713b787547b1416ab159ea3280cb}} 
+\index{scanning\_script.m@{scanning\_script.m}!points@{points}}
+\index{points@{points}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily Meshing the points = Compute3D(\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}},\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})}
+
+\mbox{\Hypertarget{scanning__script_8m_a269c63f6ef2e0b48a417b09d9f9148d2}\label{scanning__script_8m_a269c63f6ef2e0b48a417b09d9f9148d2}} 
+\index{scanning\_script.m@{scanning\_script.m}!stripe\_image@{stripe\_image}}
+\index{stripe\_image@{stripe\_image}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{stripe\_image}{stripe\_image}}
+{\footnotesize\ttfamily stripe\+\_\+image = \mbox{[}\textquotesingle{}strip\textquotesingle{} sprintf(\textquotesingle{}\%.\+4\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}\textquotesingle{},ind\+\_\+view) \mbox{]}}
+
+\mbox{\Hypertarget{scanning__script_8m_a5bd030dfd8deb926eb61eeaf424de410}\label{scanning__script_8m_a5bd030dfd8deb926eb61eeaf424de410}} 
+\index{scanning\_script.m@{scanning\_script.m}!wwn@{wwn}}
+\index{wwn@{wwn}!scanning\_script.m@{scanning\_script.m}}
+\doxysubsubsection{\texorpdfstring{wwn}{wwn}}
+{\footnotesize\ttfamily wwn = \mbox{[}1}
+

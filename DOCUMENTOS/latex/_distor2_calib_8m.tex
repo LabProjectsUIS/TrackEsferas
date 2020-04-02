@@ -1,0 +1,502 @@
+\hypertarget{_distor2_calib_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/\+Distor2\+Calib.m File Reference}
+\label{_distor2_calib_8m}\index{D:/TrackEsferas/NavarQA/calib/Distor2Calib.m@{D:/TrackEsferas/NavarQA/calib/Distor2Calib.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} \mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}} (can \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}}\mbox{[}$\,$\mbox{]}) \% can provide the number of iterations for the Iterative Vanishing Point Algorithm \% \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} known perfectly
+\item 
+California Institute of \mbox{\hyperlink{_distor2_calib_8m_ae357344f0e5ab555d514e06ef20ad763}{Technology}} (\mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}) Jean-\/Yves Bouguet -\/ October 7\mbox{\hyperlink{rodrigues_8m_ae9382b39fa1c6777321aa83183037a20}{th}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_af556806122e87ed45b9f800a0d91134f}{exist}} (\textquotesingle{}\mbox{\hyperlink{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}{two\+\_\+focal}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a1a0aa19fd145633d00eb9d52f89e87e6}{isempty}} (\mbox{\hyperlink{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}{two\+\_\+focal}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a90b9755e8e3d60f27f93dee77918b560}{exist}} (\textquotesingle{}\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a262617915a78f4e9431aa4847a73a2d3}{$\sim$isempty}} (\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a4ea11ccca9ed67db8191547097ae6c2f}{disp}} (\textquotesingle{}Use number of iterations provided\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a88542a930a33e14b9389973a68ceb288}{exist}} (\textquotesingle{}\mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a623a99662c9096d9aba7af2250ff03f9}{$\sim$isempty}} (\mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_aff7c387979d63e2d313d63d1602fd62d}{disp}} (\textquotesingle{}Use focal provided\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_ae048e23744a94d86386ff0a4e45ba295}{length}} (\mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}})$<$ 2
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} (2,\+:)/\mbox{\hyperlink{_distor2_calib_8m_abdf89c2ad6b5d95cc2aa9bc1348662db}{fc\+\_\+2}}(2)\mbox{]}
+\item 
+Computation of the four vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in pixels \mbox{\hyperlink{_distor2_calib_8m_ab6561893654b4faecb5f17833344374c}{x\+\_\+grid}} (\+:)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_aca2bec36dce1221cabc3e803a5d0dde7}{y\+\_\+grid}} (\+:)
+\item 
+for \mbox{\hyperlink{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}{vert}} (\+:, \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})
+\item 
+for \mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}} (\+:, \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})
+\item 
+V\+\_\+vert, V\+\_\+vert \mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}} ()
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} of computation of the vanishing points in pixels \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} only \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} we attempt \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}} two focals Use \mbox{\hyperlink{click__ima__calib__no__read_8m_a09fc09522c04b297eccb7392c10f560b}{diagonal}} lines also \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} add two extra vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} (?) N\+\_\+min
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a937d8a4bb89c2cd2e3248dbde00e6c3c}{function}} \mbox{[}\mbox{\hyperlink{_distor2_calib_8m_abdf89c2ad6b5d95cc2aa9bc1348662db}{fc\+\_\+2}}, \mbox{\hyperlink{go__calib__optim__no__read_8m_ac2fa99a10a17da928af876b6d515bd4e}{Rc\+\_\+2}}, \mbox{\hyperlink{go__calib__optim__no__read_8m_a57e0ff13aaf5ea27fc7f29db44b1be0f}{Tc\+\_\+2}}, \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a876123ad4edc9b30dc469ce9df30f84d}{H\+\_\+2}}, \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}}, \mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}}, \mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}, \mbox{\hyperlink{_distor2_calib_8m_aa0dc7dd8d4153de8d277adc05cf9ff77}{x\+\_\+all\+\_\+c}}, \mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}}, \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}}, \mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}}, \mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}}\mbox{]} =Distor2\+Calib(k\+\_\+dist,\mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}},\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}},\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}},\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}},\mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}},Xgrid\+\_\+2,\mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}},\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}},\mbox{\hyperlink{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}{two\+\_\+focal}})
+\item 
+Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} \mbox{\hyperlink{_distor2_calib_8m_ae04b2d6e3b6416f0290a3e7f8b3c1266}{then}}
+\item 
+Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} there \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} no need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{_distor2_calib_8m_a2eafbc7dfb3a57b6456d4778a49d0ab2}{iterate}}
+\item 
+Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} there \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} no need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} and \mbox{\hyperlink{_distor2_calib_8m_a8d11f3adfc9684b10fcf25a7929eb9a4}{therefore}}
+\item 
+Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} there \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} no need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} and one can \mbox{\hyperlink{_distor2_calib_8m_ac285722dd13662586f5478312fe11f56}{fix}}
+\item 
+California Institute of \mbox{\hyperlink{_distor2_calib_8m_aadd8191b87d49360ba18344520f747b4}{keyboard}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}{two\+\_\+focal}} =0
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}} = 10
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a940698addfed0fb478c809a11b939f78}{f\+\_\+ini}} =\mbox{[}f\+\_\+ini
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_abdf89c2ad6b5d95cc2aa9bc1348662db}{fc\+\_\+2}} = \mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_aa0dc7dd8d4153de8d277adc05cf9ff77}{x\+\_\+all\+\_\+c}} = \mbox{[}\mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}}(1,\+:)/\mbox{\hyperlink{_distor2_calib_8m_abdf89c2ad6b5d95cc2aa9bc1348662db}{fc\+\_\+2}}(1)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a921b80a0245a4f241fc0dda5e364b471}{dX}} = \mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}}/\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a90011e7d69aec5376e286b72ae9e0730}{dY}} = \mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}}/\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}{N\+\_\+x}} = \mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}{N\+\_\+y}} = \mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a2dfe811117b7e86ad0446268b90fe3b5}{x\+\_\+grid}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}{N\+\_\+x}},\mbox{\hyperlink{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}{N\+\_\+y}})
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a1cd95c07ee910dc34871ec9095a07726}{y\+\_\+grid}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}{N\+\_\+x}},\mbox{\hyperlink{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}{N\+\_\+y}})
+\item 
+for \mbox{\hyperlink{_distor2_calib_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}} =1\+:\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1
+\item 
+principle Vanishing \mbox{\hyperlink{_distor2_calib_8m_a970215b3fe2610ac24286289484f3730}{points}}
+\item 
+principle Vanishing \mbox{\hyperlink{_distor2_calib_8m_ae78885ddbd17542d920018fa2ef0f241}{S}}
+\item 
+principle Vanishing \mbox{\hyperlink{_distor2_calib_8m_ad3ffda33a54939b0e86deec6b9e48033}{V}} = svd(\mbox{\hyperlink{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}{vert}})
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a3a9bb81064f63b5fae937ff5389ea7be}{V\+\_\+vert}} = \mbox{\hyperlink{downsample_8m_afbfeed85a467718cf36259f8885b6947}{U}}(\+:,3)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}} = \mbox{\hyperlink{downsample_8m_afbfeed85a467718cf36259f8885b6947}{U}}(\+:,3)
+\item 
+Square \mbox{\hyperlink{_distor2_calib_8m_af094d050aa31e1bf4667b9039a1afd87}{warping}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a66db418e19359ad6cb8da841880e1d5f}{vert\+\_\+last}} = \mbox{\hyperlink{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}{vert}}(\+:,\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1) -\/ \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}},\mbox{\hyperlink{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}{vert}}(\+:,\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1))/\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}},\mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}}) $\ast$ \mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a9d8574b84bc5625dc82daa22a0114838}{hori\+\_\+first}} = \mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}}(\+:,1) -\/ \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}},\mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}}(\+:,1))/\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}},\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}) $\ast$ \mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_aae530153f38527a9a2bd0b4883a4d9be}{hori\+\_\+last}} = \mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}}(\+:,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1) -\/ \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}},\mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}}(\+:,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1))/\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}},\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}) $\ast$ \mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_ac39b33361203e68d7820336db48d45e6}{x1}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_a9d8574b84bc5625dc82daa22a0114838}{hori\+\_\+first}},vert\+\_\+first)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_aab2463cd078f7c5368f6eb80f5a549b8}{x2}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_a9d8574b84bc5625dc82daa22a0114838}{hori\+\_\+first}},\mbox{\hyperlink{_distor2_calib_8m_a66db418e19359ad6cb8da841880e1d5f}{vert\+\_\+last}})
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a03ad2628eb1c540113251638112541e3}{x3}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_aae530153f38527a9a2bd0b4883a4d9be}{hori\+\_\+last}},\mbox{\hyperlink{_distor2_calib_8m_a66db418e19359ad6cb8da841880e1d5f}{vert\+\_\+last}})
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}{x4}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_aae530153f38527a9a2bd0b4883a4d9be}{hori\+\_\+last}},vert\+\_\+first)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a7f911dc1dbbc41c6cae56357e8fb2230}{y1}} = \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}(\+:,1)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}} = \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}(\+:,2)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_ade1417f93b8addbf3d5a62e132e169fd}{y3}} = \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}(\+:,3)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a43b90609f1cd51c8825b2e75476cf54b}{y4}} = \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}(\+:,4)
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_ab6553dbc99719803cd55247cf5df96d4}{H2}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}},\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}})
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a959473c8c411c6c7c60f34d00bc27b19}{V\+\_\+diag1}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}},\mbox{\hyperlink{_distor2_calib_8m_ade1417f93b8addbf3d5a62e132e169fd}{y3}}),\mbox{\hyperlink{_distor2_calib_8m_ab6553dbc99719803cd55247cf5df96d4}{H2}})
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a3ecb4727cc5fe8c8f403cccc4eea9ea6}{V\+\_\+diag2}} = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}},\mbox{\hyperlink{_distor2_calib_8m_a43b90609f1cd51c8825b2e75476cf54b}{y4}}),\mbox{\hyperlink{_distor2_calib_8m_ab6553dbc99719803cd55247cf5df96d4}{H2}})
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}} = \mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}} = \mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}} = \mbox{\hyperlink{_distor2_calib_8m_a959473c8c411c6c7c60f34d00bc27b19}{V\+\_\+diag1}}
+\item 
+\mbox{\hyperlink{_distor2_calib_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}} = \mbox{\hyperlink{_distor2_calib_8m_a3ecb4727cc5fe8c8f403cccc4eea9ea6}{V\+\_\+diag2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_distor2_calib_8m_aff7c387979d63e2d313d63d1602fd62d}\label{_distor2_calib_8m_aff7c387979d63e2d313d63d1602fd62d}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!disp@{disp}}
+\index{disp@{disp}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Use focal provided\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a4ea11ccca9ed67db8191547097ae6c2f}\label{_distor2_calib_8m_a4ea11ccca9ed67db8191547097ae6c2f}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!disp@{disp}}
+\index{disp@{disp}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Use number of iterations provided\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a88542a930a33e14b9389973a68ceb288}\label{_distor2_calib_8m_a88542a930a33e14b9389973a68ceb288}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!exist@{exist}}
+\index{exist@{exist}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} exist (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a90b9755e8e3d60f27f93dee77918b560}\label{_distor2_calib_8m_a90b9755e8e3d60f27f93dee77918b560}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!exist@{exist}}
+\index{exist@{exist}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} exist (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_af556806122e87ed45b9f800a0d91134f}\label{_distor2_calib_8m_af556806122e87ed45b9f800a0d91134f}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!exist@{exist}}
+\index{exist@{exist}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} exist (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}{two\+\_\+focal}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}\label{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!f\_ini@{f\_ini}}
+\index{f\_ini@{f\_ini}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{f\_ini()}{f\_ini()}}
+{\footnotesize\ttfamily Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} f\+\_\+ini (\begin{DoxyParamCaption}\item[{can \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}}}]{to\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}\label{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!grid\_pts\_centered@{grid\_pts\_centered}}
+\index{grid\_pts\_centered@{grid\_pts\_centered}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{grid\_pts\_centered()}{grid\_pts\_centered()}}
+{\footnotesize\ttfamily grid\+\_\+pts\+\_\+centered (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}\label{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!hori@{hori}}
+\index{hori@{hori}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{hori()}{hori()}}
+{\footnotesize\ttfamily for hori (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a1a0aa19fd145633d00eb9d52f89e87e6}\label{_distor2_calib_8m_a1a0aa19fd145633d00eb9d52f89e87e6}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!isempty@{isempty}}
+\index{isempty@{isempty}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}{two\+\_\+focal}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ae048e23744a94d86386ff0a4e45ba295}\label{_distor2_calib_8m_ae048e23744a94d86386ff0a4e45ba295}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!length@{length}}
+\index{length@{length}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}\label{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!points@{points}}
+\index{points@{points}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{points()}{points()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} of computation of the vanishing points in pixels \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} only \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} we attempt \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param_8m_a173dff6aa2fcd5f9bf369deccf1f0b9d}{estimate}} two focals Use \mbox{\hyperlink{click__ima__calib__no__read_8m_a09fc09522c04b297eccb7392c10f560b}{diagonal}} lines also \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} add two extra vanishing points (\begin{DoxyParamCaption}\item[{?}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ae357344f0e5ab555d514e06ef20ad763}\label{_distor2_calib_8m_ae357344f0e5ab555d514e06ef20ad763}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!Technology@{Technology}}
+\index{Technology@{Technology}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{Technology()}{Technology()}}
+{\footnotesize\ttfamily California Institute of Technology (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}\label{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_vert@{V\_vert}}
+\index{V\_vert@{V\_vert}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_vert()}{V\_vert()}}
+{\footnotesize\ttfamily V\+\_\+vert,V\+\_\+vert V\+\_\+vert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}\label{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!vert@{vert}}
+\index{vert@{vert}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{vert()}{vert()}}
+{\footnotesize\ttfamily for vert (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ab6561893654b4faecb5f17833344374c}\label{_distor2_calib_8m_ab6561893654b4faecb5f17833344374c}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!x\_grid@{x\_grid}}
+\index{x\_grid@{x\_grid}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{x\_grid()}{x\_grid()}}
+{\footnotesize\ttfamily Computation of the four vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in pixels x\+\_\+grid (\begin{DoxyParamCaption}\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_aca2bec36dce1221cabc3e803a5d0dde7}\label{_distor2_calib_8m_aca2bec36dce1221cabc3e803a5d0dde7}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!y\_grid@{y\_grid}}
+\index{y\_grid@{y\_grid}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{y\_grid()}{y\_grid()}}
+{\footnotesize\ttfamily y\+\_\+grid (\begin{DoxyParamCaption}\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a623a99662c9096d9aba7af2250ff03f9}\label{_distor2_calib_8m_a623a99662c9096d9aba7af2250ff03f9}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!````~isempty@{$\sim$isempty}}
+\index{````~isempty@{$\sim$isempty}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isempty()}{~isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a9ca3ce0cd02a2339cfd495cb85090c97}{isempty}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a262617915a78f4e9431aa4847a73a2d3}\label{_distor2_calib_8m_a262617915a78f4e9431aa4847a73a2d3}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!````~isempty@{$\sim$isempty}}
+\index{````~isempty@{$\sim$isempty}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isempty()}{~isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a9ca3ce0cd02a2339cfd495cb85090c97}{isempty}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_distor2_calib_8m_a921b80a0245a4f241fc0dda5e364b471}\label{_distor2_calib_8m_a921b80a0245a4f241fc0dda5e364b471}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!dX@{dX}}
+\index{dX@{dX}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{dX}{dX}}
+{\footnotesize\ttfamily dX = \mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}}/\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a90011e7d69aec5376e286b72ae9e0730}\label{_distor2_calib_8m_a90011e7d69aec5376e286b72ae9e0730}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!dY@{dY}}
+\index{dY@{dY}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{dY}{dY}}
+{\footnotesize\ttfamily dY = \mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}}/\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_afb358f48b1646c750fb9da6c6585be2b}\label{_distor2_calib_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!end@{end}}
+\index{end@{end}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a940698addfed0fb478c809a11b939f78}\label{_distor2_calib_8m_a940698addfed0fb478c809a11b939f78}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!f\_ini@{f\_ini}}
+\index{f\_ini@{f\_ini}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{f\_ini}{f\_ini}}
+{\footnotesize\ttfamily f\+\_\+ini =\mbox{[}f\+\_\+ini}
+
+\mbox{\Hypertarget{_distor2_calib_8m_abdf89c2ad6b5d95cc2aa9bc1348662db}\label{_distor2_calib_8m_abdf89c2ad6b5d95cc2aa9bc1348662db}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!fc\_2@{fc\_2}}
+\index{fc\_2@{fc\_2}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{fc\_2}{fc\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} fc\+\_\+2 = \mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ac285722dd13662586f5478312fe11f56}\label{_distor2_calib_8m_ac285722dd13662586f5478312fe11f56}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!fix@{fix}}
+\index{fix@{fix}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{fix}{fix}}
+{\footnotesize\ttfamily Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} there \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} no need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} and one can fix}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a937d8a4bb89c2cd2e3248dbde00e6c3c}\label{_distor2_calib_8m_a937d8a4bb89c2cd2e3248dbde00e6c3c}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!function@{function}}
+\index{function@{function}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{_distor2_calib_8m_abdf89c2ad6b5d95cc2aa9bc1348662db}{fc\+\_\+2}}, \mbox{\hyperlink{go__calib__optim__no__read_8m_ac2fa99a10a17da928af876b6d515bd4e}{Rc\+\_\+2}}, \mbox{\hyperlink{go__calib__optim__no__read_8m_a57e0ff13aaf5ea27fc7f29db44b1be0f}{Tc\+\_\+2}}, \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a876123ad4edc9b30dc469ce9df30f84d}{H\+\_\+2}}, \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}}, \mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}}, \mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}, \mbox{\hyperlink{_distor2_calib_8m_aa0dc7dd8d4153de8d277adc05cf9ff77}{x\+\_\+all\+\_\+c}}, \mbox{\hyperlink{init__intrinsic__param_8m_a96cb4edb880064757c2f04a6581b913b}{V\+\_\+hori\+\_\+pix}}, \mbox{\hyperlink{init__intrinsic__param_8m_a6cea23bab5bae7791342d702be77b5db}{V\+\_\+vert\+\_\+pix}}, \mbox{\hyperlink{init__intrinsic__param_8m_a5d174095fed381c04676eed51845fab5}{V\+\_\+diag1\+\_\+pix}}, \mbox{\hyperlink{init__intrinsic__param_8m_a296d40df631ecc000b553164f11e2329}{V\+\_\+diag2\+\_\+pix}}\mbox{]} =Distor2\+Calib(k\+\_\+dist,\mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}},\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}},\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}},\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}},\mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}},Xgrid\+\_\+2,\mbox{\hyperlink{_distor2_calib_8m_a53870bd9729417133cd4ace8a4a24d9e}{f\+\_\+ini}},\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}},\mbox{\hyperlink{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}{two\+\_\+focal}})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ab6553dbc99719803cd55247cf5df96d4}\label{_distor2_calib_8m_ab6553dbc99719803cd55247cf5df96d4}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!H2@{H2}}
+\index{H2@{H2}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{H2}{H2}}
+{\footnotesize\ttfamily H2 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}},\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a9d8574b84bc5625dc82daa22a0114838}\label{_distor2_calib_8m_a9d8574b84bc5625dc82daa22a0114838}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!hori\_first@{hori\_first}}
+\index{hori\_first@{hori\_first}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{hori\_first}{hori\_first}}
+{\footnotesize\ttfamily hori\+\_\+first = \mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}}(\+:,1) -\/ \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}},\mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}}(\+:,1))/\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}},\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}) $\ast$ \mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_aae530153f38527a9a2bd0b4883a4d9be}\label{_distor2_calib_8m_aae530153f38527a9a2bd0b4883a4d9be}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!hori\_last@{hori\_last}}
+\index{hori\_last@{hori\_last}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{hori\_last}{hori\_last}}
+{\footnotesize\ttfamily hori\+\_\+last = \mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}}(\+:,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1) -\/ \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}},\mbox{\hyperlink{_distor2_calib_8m_a85d3d2e16f621506e28f888c5f9b90ae}{hori}}(\+:,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1))/\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}},\mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}) $\ast$ \mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a2eafbc7dfb3a57b6456d4778a49d0ab2}\label{_distor2_calib_8m_a2eafbc7dfb3a57b6456d4778a49d0ab2}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!iterate@{iterate}}
+\index{iterate@{iterate}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{iterate}{iterate}}
+{\footnotesize\ttfamily Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} there \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} no need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} iterate}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a1c73327b2882639bc9f5e416bb3cc7ac}\label{_distor2_calib_8m_a1c73327b2882639bc9f5e416bb3cc7ac}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!k@{k}}
+\index{k@{k}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily for k =1\+:\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1}
+
+\mbox{\Hypertarget{_distor2_calib_8m_aadd8191b87d49360ba18344520f747b4}\label{_distor2_calib_8m_aadd8191b87d49360ba18344520f747b4}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{keyboard}{keyboard}}
+{\footnotesize\ttfamily California Institute of keyboard}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}\label{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!N\_iter@{N\_iter}}
+\index{N\_iter@{N\_iter}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{N\_iter}{N\_iter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} N\+\_\+iter = 10}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}\label{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!N\_x@{N\_x}}
+\index{N\_x@{N\_x}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{N\_x}{N\_x}}
+{\footnotesize\ttfamily N\+\_\+x = \mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}\label{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!N\_y@{N\_y}}
+\index{N\_y@{N\_y}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{N\_y}{N\_y}}
+{\footnotesize\ttfamily N\+\_\+y = \mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a970215b3fe2610ac24286289484f3730}\label{_distor2_calib_8m_a970215b3fe2610ac24286289484f3730}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!points@{points}}
+\index{points@{points}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily principle Vanishing points}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ae78885ddbd17542d920018fa2ef0f241}\label{_distor2_calib_8m_ae78885ddbd17542d920018fa2ef0f241}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!S@{S}}
+\index{S@{S}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{S}{S}}
+{\footnotesize\ttfamily principle Vanishing S}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ae04b2d6e3b6416f0290a3e7f8b3c1266}\label{_distor2_calib_8m_ae04b2d6e3b6416f0290a3e7f8b3c1266}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!then@{then}}
+\index{then@{then}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{then}{then}}
+{\footnotesize\ttfamily Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} then}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a8d11f3adfc9684b10fcf25a7929eb9a4}\label{_distor2_calib_8m_a8d11f3adfc9684b10fcf25a7929eb9a4}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!therefore@{therefore}}
+\index{therefore@{therefore}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{therefore}{therefore}}
+{\footnotesize\ttfamily Computes the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} knowing the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} factor k\+\_\+dist \mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}} are the grid \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}} after substraction of the optical \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} can give an optional guess for the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} there \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} no need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} and therefore}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}\label{_distor2_calib_8m_a614dcfc685715c03449d66ce48a0ffc9}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!two\_focal@{two\_focal}}
+\index{two\_focal@{two\_focal}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{two\_focal}{two\_focal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} of computation of the vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} in pixels \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} two\+\_\+focal =0}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ad3ffda33a54939b0e86deec6b9e48033}\label{_distor2_calib_8m_ad3ffda33a54939b0e86deec6b9e48033}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V@{V}}
+\index{V@{V}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily Try \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} make the inversion V = svd(\mbox{\hyperlink{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}{vert}})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a959473c8c411c6c7c60f34d00bc27b19}\label{_distor2_calib_8m_a959473c8c411c6c7c60f34d00bc27b19}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_diag1@{V\_diag1}}
+\index{V\_diag1@{V\_diag1}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_diag1}{V\_diag1}}
+{\footnotesize\ttfamily V\+\_\+diag1 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}},\mbox{\hyperlink{_distor2_calib_8m_ade1417f93b8addbf3d5a62e132e169fd}{y3}}),\mbox{\hyperlink{_distor2_calib_8m_ab6553dbc99719803cd55247cf5df96d4}{H2}})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a5d174095fed381c04676eed51845fab5}\label{_distor2_calib_8m_a5d174095fed381c04676eed51845fab5}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_diag1\_pix@{V\_diag1\_pix}}
+\index{V\_diag1\_pix@{V\_diag1\_pix}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_diag1\_pix}{V\_diag1\_pix}}
+{\footnotesize\ttfamily V\+\_\+diag1\+\_\+pix = \mbox{\hyperlink{_distor2_calib_8m_a959473c8c411c6c7c60f34d00bc27b19}{V\+\_\+diag1}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a3ecb4727cc5fe8c8f403cccc4eea9ea6}\label{_distor2_calib_8m_a3ecb4727cc5fe8c8f403cccc4eea9ea6}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_diag2@{V\_diag2}}
+\index{V\_diag2@{V\_diag2}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_diag2}{V\_diag2}}
+{\footnotesize\ttfamily V\+\_\+diag2 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}},\mbox{\hyperlink{_distor2_calib_8m_a43b90609f1cd51c8825b2e75476cf54b}{y4}}),\mbox{\hyperlink{_distor2_calib_8m_ab6553dbc99719803cd55247cf5df96d4}{H2}})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a296d40df631ecc000b553164f11e2329}\label{_distor2_calib_8m_a296d40df631ecc000b553164f11e2329}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_diag2\_pix@{V\_diag2\_pix}}
+\index{V\_diag2\_pix@{V\_diag2\_pix}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_diag2\_pix}{V\_diag2\_pix}}
+{\footnotesize\ttfamily V\+\_\+diag2\+\_\+pix = \mbox{\hyperlink{_distor2_calib_8m_a3ecb4727cc5fe8c8f403cccc4eea9ea6}{V\+\_\+diag2}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}\label{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_hori@{V\_hori}}
+\index{V\_hori@{V\_hori}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_hori}{V\_hori}}
+{\footnotesize\ttfamily V\+\_\+hori = \mbox{\hyperlink{downsample_8m_afbfeed85a467718cf36259f8885b6947}{U}}(\+:,3)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a96cb4edb880064757c2f04a6581b913b}\label{_distor2_calib_8m_a96cb4edb880064757c2f04a6581b913b}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_hori\_pix@{V\_hori\_pix}}
+\index{V\_hori\_pix@{V\_hori\_pix}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_hori\_pix}{V\_hori\_pix}}
+{\footnotesize\ttfamily V\+\_\+hori\+\_\+pix = \mbox{\hyperlink{_distor2_calib_8m_a7b8cac28f2f3f200e4c49cef76c847ce}{V\+\_\+hori}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a3a9bb81064f63b5fae937ff5389ea7be}\label{_distor2_calib_8m_a3a9bb81064f63b5fae937ff5389ea7be}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_vert@{V\_vert}}
+\index{V\_vert@{V\_vert}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_vert}{V\_vert}}
+{\footnotesize\ttfamily V\+\_\+vert = \mbox{\hyperlink{downsample_8m_afbfeed85a467718cf36259f8885b6947}{U}}(\+:,3)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a6cea23bab5bae7791342d702be77b5db}\label{_distor2_calib_8m_a6cea23bab5bae7791342d702be77b5db}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!V\_vert\_pix@{V\_vert\_pix}}
+\index{V\_vert\_pix@{V\_vert\_pix}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{V\_vert\_pix}{V\_vert\_pix}}
+{\footnotesize\ttfamily V\+\_\+vert\+\_\+pix = \mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a66db418e19359ad6cb8da841880e1d5f}\label{_distor2_calib_8m_a66db418e19359ad6cb8da841880e1d5f}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!vert\_last@{vert\_last}}
+\index{vert\_last@{vert\_last}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{vert\_last}{vert\_last}}
+{\footnotesize\ttfamily vert\+\_\+last = \mbox{\hyperlink{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}{vert}}(\+:,\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1) -\/ \mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}},\mbox{\hyperlink{_distor2_calib_8m_abd8a1fe752c52501d6895563260bd1a1}{vert}}(\+:,\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1))/\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}},\mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}}) $\ast$ \mbox{\hyperlink{_distor2_calib_8m_af9feb8ab284b498b49c35af5577d5a8e}{V\+\_\+vert}}}
+
+\mbox{\Hypertarget{_distor2_calib_8m_af094d050aa31e1bf4667b9039a1afd87}\label{_distor2_calib_8m_af094d050aa31e1bf4667b9039a1afd87}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!warping@{warping}}
+\index{warping@{warping}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{warping}{warping}}
+{\footnotesize\ttfamily Square warping}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ac39b33361203e68d7820336db48d45e6}\label{_distor2_calib_8m_ac39b33361203e68d7820336db48d45e6}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!x1@{x1}}
+\index{x1@{x1}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily x1 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_a9d8574b84bc5625dc82daa22a0114838}{hori\+\_\+first}},vert\+\_\+first)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_aab2463cd078f7c5368f6eb80f5a549b8}\label{_distor2_calib_8m_aab2463cd078f7c5368f6eb80f5a549b8}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!x2@{x2}}
+\index{x2@{x2}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{x2}{x2}}
+{\footnotesize\ttfamily x2 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_a9d8574b84bc5625dc82daa22a0114838}{hori\+\_\+first}},\mbox{\hyperlink{_distor2_calib_8m_a66db418e19359ad6cb8da841880e1d5f}{vert\+\_\+last}})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a03ad2628eb1c540113251638112541e3}\label{_distor2_calib_8m_a03ad2628eb1c540113251638112541e3}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!x3@{x3}}
+\index{x3@{x3}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{x3}{x3}}
+{\footnotesize\ttfamily x3 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_aae530153f38527a9a2bd0b4883a4d9be}{hori\+\_\+last}},\mbox{\hyperlink{_distor2_calib_8m_a66db418e19359ad6cb8da841880e1d5f}{vert\+\_\+last}})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}\label{_distor2_calib_8m_a6bda50c9c4fcd62d903ac36326be97fa}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!x4@{x4}}
+\index{x4@{x4}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{x4}{x4}}
+{\footnotesize\ttfamily x4 = \mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{\hyperlink{_distor2_calib_8m_aae530153f38527a9a2bd0b4883a4d9be}{hori\+\_\+last}},vert\+\_\+first)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_aa0dc7dd8d4153de8d277adc05cf9ff77}\label{_distor2_calib_8m_aa0dc7dd8d4153de8d277adc05cf9ff77}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!x\_all\_c@{x\_all\_c}}
+\index{x\_all\_c@{x\_all\_c}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{x\_all\_c}{x\_all\_c}}
+{\footnotesize\ttfamily x\+\_\+all\+\_\+c = \mbox{[}\mbox{\hyperlink{_distor2_calib_8m_a7544aa73280c654abef8404a0de3f8ab}{grid\+\_\+pts\+\_\+centered}}(1,\+:)/\mbox{\hyperlink{_distor2_calib_8m_abdf89c2ad6b5d95cc2aa9bc1348662db}{fc\+\_\+2}}(1)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a2dfe811117b7e86ad0446268b90fe3b5}\label{_distor2_calib_8m_a2dfe811117b7e86ad0446268b90fe3b5}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!x\_grid@{x\_grid}}
+\index{x\_grid@{x\_grid}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{x\_grid}{x\_grid}}
+{\footnotesize\ttfamily x\+\_\+grid = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}{N\+\_\+x}},\mbox{\hyperlink{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}{N\+\_\+y}})}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a7f911dc1dbbc41c6cae56357e8fb2230}\label{_distor2_calib_8m_a7f911dc1dbbc41c6cae56357e8fb2230}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!y1@{y1}}
+\index{y1@{y1}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{y1}{y1}}
+{\footnotesize\ttfamily y1 = \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}(\+:,1)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}\label{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!y2@{y2}}
+\index{y2@{y2}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{y2}{y2}}
+{\footnotesize\ttfamily y2 = \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}(\+:,2)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_ade1417f93b8addbf3d5a62e132e169fd}\label{_distor2_calib_8m_ade1417f93b8addbf3d5a62e132e169fd}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!y3@{y3}}
+\index{y3@{y3}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{y3}{y3}}
+{\footnotesize\ttfamily y3 = \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}(\+:,3)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a43b90609f1cd51c8825b2e75476cf54b}\label{_distor2_calib_8m_a43b90609f1cd51c8825b2e75476cf54b}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!y4@{y4}}
+\index{y4@{y4}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{y4}{y4}}
+{\footnotesize\ttfamily y4 = \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}(\+:,4)}
+
+\mbox{\Hypertarget{_distor2_calib_8m_a1cd95c07ee910dc34871ec9095a07726}\label{_distor2_calib_8m_a1cd95c07ee910dc34871ec9095a07726}} 
+\index{Distor2Calib.m@{Distor2Calib.m}!y\_grid@{y\_grid}}
+\index{y\_grid@{y\_grid}!Distor2Calib.m@{Distor2Calib.m}}
+\doxysubsubsection{\texorpdfstring{y\_grid}{y\_grid}}
+{\footnotesize\ttfamily y\+\_\+grid = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{_distor2_calib_8m_a729602dbc4286b4000c8448be11d5ca5}{N\+\_\+x}},\mbox{\hyperlink{_distor2_calib_8m_a37947f0cf345e92de4f25c9fecc122bf}{N\+\_\+y}})}
+

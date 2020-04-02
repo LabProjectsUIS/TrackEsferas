@@ -1,0 +1,222 @@
+\hypertarget{go__calib__optim__fisheye__no__read_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/go\+\_\+calib\+\_\+optim\+\_\+fisheye\+\_\+no\+\_\+read.m File Reference}
+\label{go__calib__optim__fisheye__no__read_8m}\index{D:/TrackEsferas/NavarQA/calib/go\_calib\_optim\_fisheye\_no\_read.m@{D:/TrackEsferas/NavarQA/calib/go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are too many do not spend time recomputing the extrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} twice M\+A\+IN O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+ON \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a7ec253856cf4dbe577918751ae6836e2}{C\+A\+LL}} (look into this \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} for the details of implementation) \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a9c93b7d96d4b7e22b45a0799c99b2029}{go\+\_\+calib\+\_\+optim\+\_\+iter\+\_\+fisheye}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a717b38c8f8648837010835ebf311f2c5}{$\sim$isempty}} (\mbox{\hyperlink{go__calib__optim__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}{desactivated\+\_\+images}})
+\item 
+\mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a82bb3ecb56dc573d024b884c7e0fde47}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+New optimization including the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} have been deactivated during the previous \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{optimization.\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_abe308ab31c0041e570b85fcccb37ba66}{active\+\_\+images}} (\mbox{\hyperlink{go__calib__optim__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}{desactivated\+\_\+images}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a684aff7c7f3e52f90b5062446543dd50}{fprintf}} (1,\mbox{[}\textquotesingle{}List of \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} left desactivated\+:\textquotesingle{} num2str(\mbox{\hyperlink{go__calib__optim__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}{desactivated\+\_\+images}}) \textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a0d1925a2d4375a0b7c1fdf7e42b9d949}{I\+N\+P\+UT}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_aac6b5befc7bbb4841d2fc8c9a7b3cce1}{x\+\_\+2}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a017f2d194f1ccf419d6ae8d956abde93}{x\+\_\+3}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a6332ffc2c4374312f4f1b8373e57b50d}{X\+\_\+2}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a9ba72ca2bfafa760fab98d32452fb625}{X\+\_\+3}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a0bb82225acff625564bbbfb71fb110bd}{omc\+\_\+2}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_ab150e6d63ebd9295f0801fdcbd439894}{omc\+\_\+3}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a57e0ff13aaf5ea27fc7f29db44b1be0f}{Tc\+\_\+2}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a2dea7bcd02da528c17747cd0396d45fa}{Tc\+\_\+3}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_ac2fa99a10a17da928af876b6d515bd4e}{Rc\+\_\+2}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_aa44b0d8bcadade895b20c92107726c96}{Rc\+\_\+3}}
+\item 
+\mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script and the extrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}}(3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{error__analysis_8m_ad433454e41644431582e6554dfd197c6}{locations}} of the grids in \mbox{\hyperlink{loadppm_8m_aae9e36bded84b28f880abb9a711c7d1e}{space}}) \% \%Note Load the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a373bc79c1a0659093173096f29750086}{click\+\_\+calib\+\_\+fisheye\+\_\+no\+\_\+read}}
+\item 
+Extract the \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a0f3da7d940db54dec149e82a9e34ea60}{check\+\_\+extracted\+\_\+images}}
+\item 
+\mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}{desactivated\+\_\+images}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_accee6663aa443d4a0e54a8b35b30249f}{recompute\+\_\+extrinsic}} = (\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}) $<$ 100)
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are too many \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a6d056ac38dc1b09a04b0ec5a053ad71f}{images}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_aab1de3c058491b5b0b2959b2408e6ca0}{param\+\_\+list\+\_\+save}} = \mbox{\hyperlink{saving__calib__fisheye_8m_a5e56fdbe829c0a673e6c5c3efee804f9}{param\+\_\+list}}
+\item 
+\mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_a9c93b7d96d4b7e22b45a0799c99b2029}{go\+\_\+calib\+\_\+optim\+\_\+iter\+\_\+fisheye}}
+\item 
+\mbox{\hyperlink{go__calib__optim__fisheye__no__read_8m_ae54f57be4afd4135a765fa9ca5051def}{param\+\_\+list}} = \mbox{[}\mbox{\hyperlink{go__calib__optim__no__read_8m_aab1de3c058491b5b0b2959b2408e6ca0}{param\+\_\+list\+\_\+save}}(\+:,1\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}-\/1) param\+\_\+list\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_abe308ab31c0041e570b85fcccb37ba66}\label{go__calib__optim__fisheye__no__read_8m_abe308ab31c0041e570b85fcccb37ba66}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}}
+{\footnotesize\ttfamily active\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{go__calib__optim__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}{desactivated\+\_\+images}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a7ec253856cf4dbe577918751ae6836e2}\label{go__calib__optim__fisheye__no__read_8m_a7ec253856cf4dbe577918751ae6836e2}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!CALL@{CALL}}
+\index{CALL@{CALL}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{CALL()}{CALL()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are too many do not spend time recomputing the extrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} twice M\+A\+IN O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+ON C\+A\+LL (\begin{DoxyParamCaption}\item[{look into this \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} for the details of}]{implementation }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a82bb3ecb56dc573d024b884c7e0fde47}\label{go__calib__optim__fisheye__no__read_8m_a82bb3ecb56dc573d024b884c7e0fde47}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+New optimization including the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} have been deactivated during the previous \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{optimization.\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a684aff7c7f3e52f90b5062446543dd50}\label{go__calib__optim__fisheye__no__read_8m_a684aff7c7f3e52f90b5062446543dd50}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a717b38c8f8648837010835ebf311f2c5}\label{go__calib__optim__fisheye__no__read_8m_a717b38c8f8648837010835ebf311f2c5}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!````~isempty@{$\sim$isempty}}
+\index{````~isempty@{$\sim$isempty}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isempty()}{~isempty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a9ca3ce0cd02a2339cfd495cb85090c97}{isempty}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{go__calib__optim__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}{desactivated\+\_\+images}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a0d062f92217e4e073995683900fdadcb}\label{go__calib__optim__fisheye__no__read_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a0f3da7d940db54dec149e82a9e34ea60}\label{go__calib__optim__fisheye__no__read_8m_a0f3da7d940db54dec149e82a9e34ea60}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!check\_extracted\_images@{check\_extracted\_images}}
+\index{check\_extracted\_images@{check\_extracted\_images}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{check\_extracted\_images}{check\_extracted\_images}}
+{\footnotesize\ttfamily check\+\_\+extracted\+\_\+images}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a373bc79c1a0659093173096f29750086}\label{go__calib__optim__fisheye__no__read_8m_a373bc79c1a0659093173096f29750086}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!click\_calib\_fisheye\_no\_read@{click\_calib\_fisheye\_no\_read}}
+\index{click\_calib\_fisheye\_no\_read@{click\_calib\_fisheye\_no\_read}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{click\_calib\_fisheye\_no\_read}{click\_calib\_fisheye\_no\_read}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script and the extrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} (3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{error__analysis_8m_ad433454e41644431582e6554dfd197c6}{locations}} of the grids in \mbox{\hyperlink{loadppm_8m_aae9e36bded84b28f880abb9a711c7d1e}{space}}) \% \%Note Load the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} click\+\_\+calib\+\_\+fisheye\+\_\+no\+\_\+read}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}\label{go__calib__optim__fisheye__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!desactivated\_images@{desactivated\_images}}
+\index{desactivated\_images@{desactivated\_images}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{desactivated\_images}{desactivated\_images}}
+{\footnotesize\ttfamily desactivated\+\_\+images = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}\label{go__calib__optim__fisheye__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!end@{end}}
+\index{end@{end}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a9c93b7d96d4b7e22b45a0799c99b2029}\label{go__calib__optim__fisheye__no__read_8m_a9c93b7d96d4b7e22b45a0799c99b2029}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!go\_calib\_optim\_iter\_fisheye@{go\_calib\_optim\_iter\_fisheye}}
+\index{go\_calib\_optim\_iter\_fisheye@{go\_calib\_optim\_iter\_fisheye}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{go\_calib\_optim\_iter\_fisheye}{go\_calib\_optim\_iter\_fisheye}}
+{\footnotesize\ttfamily go\+\_\+calib\+\_\+optim\+\_\+iter\+\_\+fisheye}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a6d056ac38dc1b09a04b0ec5a053ad71f}\label{go__calib__optim__fisheye__no__read_8m_a6d056ac38dc1b09a04b0ec5a053ad71f}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!images@{images}}
+\index{images@{images}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{images}{images}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} there are too many images}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a0d1925a2d4375a0b7c1fdf7e42b9d949}\label{go__calib__optim__fisheye__no__read_8m_a0d1925a2d4375a0b7c1fdf7e42b9d949}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!INPUT@{INPUT}}
+\index{INPUT@{INPUT}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{INPUT}{INPUT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script I\+N\+P\+UT}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a0bb82225acff625564bbbfb71fb110bd}\label{go__calib__optim__fisheye__no__read_8m_a0bb82225acff625564bbbfb71fb110bd}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!omc\_2@{omc\_2}}
+\index{omc\_2@{omc\_2}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{omc\_2}{omc\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script omc\+\_\+2}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_ab150e6d63ebd9295f0801fdcbd439894}\label{go__calib__optim__fisheye__no__read_8m_ab150e6d63ebd9295f0801fdcbd439894}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!omc\_3@{omc\_3}}
+\index{omc\_3@{omc\_3}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{omc\_3}{omc\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script omc\+\_\+3}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_ae54f57be4afd4135a765fa9ca5051def}\label{go__calib__optim__fisheye__no__read_8m_ae54f57be4afd4135a765fa9ca5051def}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!param\_list@{param\_list}}
+\index{param\_list@{param\_list}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{param\_list}{param\_list}}
+{\footnotesize\ttfamily param\+\_\+list = \mbox{[}\mbox{\hyperlink{go__calib__optim__no__read_8m_aab1de3c058491b5b0b2959b2408e6ca0}{param\+\_\+list\+\_\+save}}(\+:,1\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}-\/1) param\+\_\+list\mbox{]}}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_aab1de3c058491b5b0b2959b2408e6ca0}\label{go__calib__optim__fisheye__no__read_8m_aab1de3c058491b5b0b2959b2408e6ca0}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!param\_list\_save@{param\_list\_save}}
+\index{param\_list\_save@{param\_list\_save}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{param\_list\_save}{param\_list\_save}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} param\+\_\+list\+\_\+save = \mbox{\hyperlink{saving__calib__fisheye_8m_a5e56fdbe829c0a673e6c5c3efee804f9}{param\+\_\+list}}}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_ac2fa99a10a17da928af876b6d515bd4e}\label{go__calib__optim__fisheye__no__read_8m_ac2fa99a10a17da928af876b6d515bd4e}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!Rc\_2@{Rc\_2}}
+\index{Rc\_2@{Rc\_2}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{Rc\_2}{Rc\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script Rc\+\_\+2}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_aa44b0d8bcadade895b20c92107726c96}\label{go__calib__optim__fisheye__no__read_8m_aa44b0d8bcadade895b20c92107726c96}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!Rc\_3@{Rc\_3}}
+\index{Rc\_3@{Rc\_3}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{Rc\_3}{Rc\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script Rc\+\_\+3}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_accee6663aa443d4a0e54a8b35b30249f}\label{go__calib__optim__fisheye__no__read_8m_accee6663aa443d4a0e54a8b35b30249f}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!recompute\_extrinsic@{recompute\_extrinsic}}
+\index{recompute\_extrinsic@{recompute\_extrinsic}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{recompute\_extrinsic}{recompute\_extrinsic}}
+{\footnotesize\ttfamily recompute\+\_\+extrinsic = (\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}) $<$ 100)}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a57e0ff13aaf5ea27fc7f29db44b1be0f}\label{go__calib__optim__fisheye__no__read_8m_a57e0ff13aaf5ea27fc7f29db44b1be0f}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!Tc\_2@{Tc\_2}}
+\index{Tc\_2@{Tc\_2}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{Tc\_2}{Tc\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script Tc\+\_\+2}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a2dea7bcd02da528c17747cd0396d45fa}\label{go__calib__optim__fisheye__no__read_8m_a2dea7bcd02da528c17747cd0396d45fa}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!Tc\_3@{Tc\_3}}
+\index{Tc\_3@{Tc\_3}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{Tc\_3}{Tc\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script Tc\+\_\+3}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_aac6b5befc7bbb4841d2fc8c9a7b3cce1}\label{go__calib__optim__fisheye__no__read_8m_aac6b5befc7bbb4841d2fc8c9a7b3cce1}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!x\_2@{x\_2}}
+\index{x\_2@{x\_2}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{x\_2}{x\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script x\+\_\+2}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a6332ffc2c4374312f4f1b8373e57b50d}\label{go__calib__optim__fisheye__no__read_8m_a6332ffc2c4374312f4f1b8373e57b50d}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!X\_2@{X\_2}}
+\index{X\_2@{X\_2}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{X\_2}{X\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script X\+\_\+2}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a017f2d194f1ccf419d6ae8d956abde93}\label{go__calib__optim__fisheye__no__read_8m_a017f2d194f1ccf419d6ae8d956abde93}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!x\_3@{x\_3}}
+\index{x\_3@{x\_3}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{x\_3}{x\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script x\+\_\+3}
+
+\mbox{\Hypertarget{go__calib__optim__fisheye__no__read_8m_a9ba72ca2bfafa760fab98d32452fb625}\label{go__calib__optim__fisheye__no__read_8m_a9ba72ca2bfafa760fab98d32452fb625}} 
+\index{go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}!X\_3@{X\_3}}
+\index{X\_3@{X\_3}!go\_calib\_optim\_fisheye\_no\_read.m@{go\_calib\_optim\_fisheye\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{X\_3}{X\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{error__analysis_8m_a615586c87caaea6591794026dc2b03f2}{go\+\_\+calib\+\_\+optim}} Main \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} Computes the intrinsic andextrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script X\+\_\+3}
+

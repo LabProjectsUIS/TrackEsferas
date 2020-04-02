@@ -1,0 +1,118 @@
+\hypertarget{error__depth_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/error\+\_\+depth.m File Reference}
+\label{error__depth_8m}\index{D:/TrackEsferas/NavarQA/calib/error\_depth.m@{D:/TrackEsferas/NavarQA/calib/error\_depth.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{error__depth_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}{X\+\_\+shape2}} (\+:, 2))
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} \mbox{\hyperlink{error__depth_8m_aab338ec617b352329ca2cf73382a5f72}{err\+\_\+shape}} = error\+\_\+depth(param\+\_\+dist,\mbox{\hyperlink{error__depth__list_8m_a8d11fd759451593f9f4450151af51f68}{xcn}},\mbox{\hyperlink{error__depth__list_8m_af889627b8225d05eb70f690e4fda5f9f}{xpn}},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{error__depth__list_8m_aa7efdd8d3d5657f267e76d1b6f67382e}{X\+\_\+shape}},\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})
+\item 
+\mbox{\hyperlink{error__depth_8m_aa5cc0e42af3b0aac8e76f279c9a56943}{X\+\_\+new}} = depth\+\_\+compute(\mbox{\hyperlink{error__depth__list_8m_a8d11fd759451593f9f4450151af51f68}{xcn}},\mbox{\hyperlink{error__depth__list_8m_af889627b8225d05eb70f690e4fda5f9f}{xpn}},\mbox{[}param\+\_\+dist\mbox{]},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}})
+\item 
+\mbox{\hyperlink{error__depth_8m_a58aeea82c37560a8dd659d66894bd8b7}{N\+\_\+pt\+\_\+calib}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{error__depth__list_8m_a8d11fd759451593f9f4450151af51f68}{xcn}},2)
+\item 
+Un\+Normalized shape \mbox{\hyperlink{error__depth_8m_ad5c4a59ae665afd234a9b99e05b922f2}{extraction}}
+\item 
+\mbox{\hyperlink{error__depth_8m_a3d3a07e68ac6e201f55acee4088dc39f}{X\+\_\+shape2}} = X\+\_\+shape2 -\/ (X\+\_\+shape2(\+:,1)$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{error__depth__list_8m_a58aeea82c37560a8dd659d66894bd8b7}{N\+\_\+pt\+\_\+calib}}))
+\item 
+\mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}} the second \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} \mbox{\hyperlink{error__depth_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} \mbox{[}1;0;0\mbox{]}
+\item 
+\mbox{\hyperlink{error__depth_8m_a480cdbc819e81d5b1353169bc8113b1f}{omu}} = acos((\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{[}1;0;0\mbox{]},\mbox{\hyperlink{error__depth__list_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}{X\+\_\+shape2}}(\+:,2)))/\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{error__depth__list_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}{X\+\_\+shape2}}(\+:,2)))$\ast$(omu / \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(omu))
+\item 
+\mbox{\hyperlink{error__depth_8m_a9aa598539f1f30ef597cf6b32f3dbc58}{Ru}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{rodrigues_8m_a480cdbc819e81d5b1353169bc8113b1f}{omu}})
+\item 
+\mbox{\hyperlink{error__depth_8m_ab92c6eb5f67a943120f4921c081ca476}{omu2}} = -\/\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{[}0;1;0\mbox{]},\mbox{[}0;\mbox{\hyperlink{error__depth__list_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}{X\+\_\+shape2}}(2\+:3,\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})\mbox{]})
+\item 
+\mbox{\hyperlink{error__depth_8m_ab22ec550c42c38c503c34eddea88ccc0}{Ru2}} = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{error__depth__list_8m_ab92c6eb5f67a943120f4921c081ca476}{omu2}})
+\item 
+Error \mbox{\hyperlink{error__depth_8m_acf0e0d2acae210cfd582982a32b3a61d}{\+\_\+\+\_\+pad15\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{error__depth_8m_adf4fe3feace71070ae669cbe1d79901e}{err\+\_\+depth}} = Z\+\_\+new -\/ Z\+\_\+ref
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{error__depth_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}\label{error__depth_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}} 
+\index{error\_depth.m@{error\_depth.m}!X\_shape2@{X\_shape2}}
+\index{X\_shape2@{X\_shape2}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{X\_shape2()}{X\_shape2()}}
+{\footnotesize\ttfamily X\+\_\+shape2 (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{error__depth_8m_acf0e0d2acae210cfd582982a32b3a61d}\label{error__depth_8m_acf0e0d2acae210cfd582982a32b3a61d}} 
+\index{error\_depth.m@{error\_depth.m}!\_\_pad15\_\_@{\_\_pad15\_\_}}
+\index{\_\_pad15\_\_@{\_\_pad15\_\_}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad15\_\_}{\_\_pad15\_\_}}
+{\footnotesize\ttfamily Error \+\_\+\+\_\+pad15\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{error__depth_8m_a55c22a6a304cef3bba5ac7dc105146d0}\label{error__depth_8m_a55c22a6a304cef3bba5ac7dc105146d0}} 
+\index{error\_depth.m@{error\_depth.m}!at@{at}}
+\index{at@{at}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{at}{at}}
+{\footnotesize\ttfamily \mbox{\hyperlink{willson__read_8m_a9ec9dda576db2a36c42c1c3af155d07c}{map}} the second \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} at\mbox{[}1;0;0\mbox{]}}
+
+\mbox{\Hypertarget{error__depth_8m_adf4fe3feace71070ae669cbe1d79901e}\label{error__depth_8m_adf4fe3feace71070ae669cbe1d79901e}} 
+\index{error\_depth.m@{error\_depth.m}!err\_depth@{err\_depth}}
+\index{err\_depth@{err\_depth}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{err\_depth}{err\_depth}}
+{\footnotesize\ttfamily err\+\_\+depth = Z\+\_\+new -\/ Z\+\_\+ref}
+
+\mbox{\Hypertarget{error__depth_8m_aab338ec617b352329ca2cf73382a5f72}\label{error__depth_8m_aab338ec617b352329ca2cf73382a5f72}} 
+\index{error\_depth.m@{error\_depth.m}!err\_shape@{err\_shape}}
+\index{err\_shape@{err\_shape}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{err\_shape}{err\_shape}}
+{\footnotesize\ttfamily Error err\+\_\+shape = error\+\_\+depth(param\+\_\+dist,\mbox{\hyperlink{error__depth__list_8m_a8d11fd759451593f9f4450151af51f68}{xcn}},\mbox{\hyperlink{error__depth__list_8m_af889627b8225d05eb70f690e4fda5f9f}{xpn}},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{error__depth__list_8m_aa7efdd8d3d5657f267e76d1b6f67382e}{X\+\_\+shape}},\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})}
+
+\mbox{\Hypertarget{error__depth_8m_ad5c4a59ae665afd234a9b99e05b922f2}\label{error__depth_8m_ad5c4a59ae665afd234a9b99e05b922f2}} 
+\index{error\_depth.m@{error\_depth.m}!extraction@{extraction}}
+\index{extraction@{extraction}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{extraction}{extraction}}
+{\footnotesize\ttfamily Un\+Normalized shape extraction}
+
+\mbox{\Hypertarget{error__depth_8m_a58aeea82c37560a8dd659d66894bd8b7}\label{error__depth_8m_a58aeea82c37560a8dd659d66894bd8b7}} 
+\index{error\_depth.m@{error\_depth.m}!N\_pt\_calib@{N\_pt\_calib}}
+\index{N\_pt\_calib@{N\_pt\_calib}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{N\_pt\_calib}{N\_pt\_calib}}
+{\footnotesize\ttfamily N\+\_\+pt\+\_\+calib = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{error__depth__list_8m_a8d11fd759451593f9f4450151af51f68}{xcn}},2)}
+
+\mbox{\Hypertarget{error__depth_8m_a480cdbc819e81d5b1353169bc8113b1f}\label{error__depth_8m_a480cdbc819e81d5b1353169bc8113b1f}} 
+\index{error\_depth.m@{error\_depth.m}!omu@{omu}}
+\index{omu@{omu}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{omu}{omu}}
+{\footnotesize\ttfamily omu = acos((\mbox{\hyperlink{rectify__stereo__pair_8m_a8d68283eda3e03d906ed4986ea445325}{dot}}(\mbox{[}1;0;0\mbox{]},\mbox{\hyperlink{error__depth__list_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}{X\+\_\+shape2}}(\+:,2)))/\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{error__depth__list_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}{X\+\_\+shape2}}(\+:,2)))$\ast$(omu / \mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(omu))}
+
+\mbox{\Hypertarget{error__depth_8m_ab92c6eb5f67a943120f4921c081ca476}\label{error__depth_8m_ab92c6eb5f67a943120f4921c081ca476}} 
+\index{error\_depth.m@{error\_depth.m}!omu2@{omu2}}
+\index{omu2@{omu2}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{omu2}{omu2}}
+{\footnotesize\ttfamily omu2 = -\/\mbox{\hyperlink{compute__collineation_8m_a62c535505844afc502e64f5b0662f6d7}{cross}}(\mbox{[}0;1;0\mbox{]},\mbox{[}0;\mbox{\hyperlink{error__depth__list_8m_a89ad6bb2c8939835cec1ded5ead4b5b5}{X\+\_\+shape2}}(2\+:3,\mbox{\hyperlink{willson__convert_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}})\mbox{]})}
+
+\mbox{\Hypertarget{error__depth_8m_a9aa598539f1f30ef597cf6b32f3dbc58}\label{error__depth_8m_a9aa598539f1f30ef597cf6b32f3dbc58}} 
+\index{error\_depth.m@{error\_depth.m}!Ru@{Ru}}
+\index{Ru@{Ru}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{Ru}{Ru}}
+{\footnotesize\ttfamily Ru = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{rodrigues_8m_a480cdbc819e81d5b1353169bc8113b1f}{omu}})}
+
+\mbox{\Hypertarget{error__depth_8m_ab22ec550c42c38c503c34eddea88ccc0}\label{error__depth_8m_ab22ec550c42c38c503c34eddea88ccc0}} 
+\index{error\_depth.m@{error\_depth.m}!Ru2@{Ru2}}
+\index{Ru2@{Ru2}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{Ru2}{Ru2}}
+{\footnotesize\ttfamily Ru2 = \mbox{\hyperlink{rectify__stereo__pair_8m_a1d6e2cb9a890ce05682547d57d06251e}{rodrigues}}(\mbox{\hyperlink{error__depth__list_8m_ab92c6eb5f67a943120f4921c081ca476}{omu2}})}
+
+\mbox{\Hypertarget{error__depth_8m_aa5cc0e42af3b0aac8e76f279c9a56943}\label{error__depth_8m_aa5cc0e42af3b0aac8e76f279c9a56943}} 
+\index{error\_depth.m@{error\_depth.m}!X\_new@{X\_new}}
+\index{X\_new@{X\_new}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{X\_new}{X\_new}}
+{\footnotesize\ttfamily X\+\_\+new = depth\+\_\+compute(\mbox{\hyperlink{error__depth__list_8m_a8d11fd759451593f9f4450151af51f68}{xcn}},\mbox{\hyperlink{error__depth__list_8m_af889627b8225d05eb70f690e4fda5f9f}{xpn}},\mbox{[}param\+\_\+dist\mbox{]},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}})}
+
+\mbox{\Hypertarget{error__depth_8m_a3d3a07e68ac6e201f55acee4088dc39f}\label{error__depth_8m_a3d3a07e68ac6e201f55acee4088dc39f}} 
+\index{error\_depth.m@{error\_depth.m}!X\_shape2@{X\_shape2}}
+\index{X\_shape2@{X\_shape2}!error\_depth.m@{error\_depth.m}}
+\doxysubsubsection{\texorpdfstring{X\_shape2}{X\_shape2}}
+{\footnotesize\ttfamily X\+\_\+shape2 = X\+\_\+shape2 -\/ (X\+\_\+shape2(\+:,1)$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{error__depth__list_8m_a58aeea82c37560a8dd659d66894bd8b7}{N\+\_\+pt\+\_\+calib}}))}
+

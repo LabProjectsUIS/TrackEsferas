@@ -1,0 +1,1365 @@
+\hypertarget{namespace_custom_camera_library}{}\doxysection{Custom\+Camera\+Library Namespace Reference}
+\label{namespace_custom_camera_library}\index{CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_custom_camera_library_1_1c_frame}{c\+Frame}}
+\item 
+class \mbox{\hyperlink{class_custom_camera_library_1_1_cloud}{Cloud}}
+\item 
+struct \mbox{\hyperlink{struct_custom_camera_library_1_1_label}{Label}}
+\begin{DoxyCompactList}\small\item\em Esta estructura permite ir haciendo un seguimiento de cada uno de los nodos encontrados en proceso de indentificación de los cuerpos rígidos y es utilizada en el momento de identificar los objetos rígidos en escena. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_custom_camera_library_1_1_marker}{Marker}}
+\item 
+struct \mbox{\hyperlink{struct_custom_camera_library_1_1_output}{Output}}
+\begin{DoxyCompactList}\small\item\em Esta estructura permite almacenar las características de los cuerpos rígidos que vayan siendo detectados en mientras se esta ejecutando la la función \mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{Custom\+Camera\+Library\+::joskstra()}} \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_custom_camera_library_1_1tip}{tip}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_custom_camera_library_1_1_output}{Output}} \mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}}
+\item 
+typedef struct \mbox{\hyperlink{struct_custom_camera_library_1_1_label}{Label}} \mbox{\hyperlink{namespace_custom_camera_library_a31a6fd1b5d5514aeb736e1aa409b18d6}{Sphere}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a291221ce1947cd1bd52f2841481fa8c0}{punto\+\_\+broca}} (2, 1)
+\begin{DoxyCompactList}\small\item\em matriz que almacena el punto que referencia la broca. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a1cbd09897dffcc41c3a642770adc8173}{reorden}} (Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{skew3_8m_ad53aeb78abc83a52ab8982f5c82a3d5b}{S}})
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a26a67198e10c00fec3b2f895eb1a1abc}{find\+Spheres}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{_organizar_8m_a61ebed5c652353de759645b0137674b8}{P}}, int pos\+Ref)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a109d8fa846b5cb128ad83302672fcdad}{find\+Drill}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{_organizar_8m_a61ebed5c652353de759645b0137674b8}{P}}, int pos\+Ref)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aaee5f971d615a4c55380f5a9422348b2}{areas}} (Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}, Mat\+\_\+$<$ int $>$ \&areas\+\_\+men)
+\item 
+cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a1107e999bd0e04019d22ae2e18af9565}{Correspondence\+Detection}} (cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{_organizar_8m_a61ebed5c652353de759645b0137674b8}{P}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}, cv\+::\+Mat\+\_\+$<$ double $>$ F\+\_\+\+Broca)
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a0e5c6c4f04fdac899b7f0690846aabbc}{rotate\+Vector}} (Mat\+\_\+$<$ double $>$ v, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}, double angle)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_aff3b0f8be2afbec8d929908066638b7f}{update\+Cordinates}} (cv\+::\+Mat\+\_\+$<$ double $>$ \&origin)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{namespace_custom_camera_library_ad2170ba501eebad9df0db56b6cb78677}{cross\+\_\+product}} (cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}})
+\item 
+cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a6bf1144326e7d7f4bd4614813d91eb70}{define\+\_\+local\+\_\+axis}} (cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{teste___8m_a9b33a9232288458b5b31f0b6c9ce80ee}{PR}})
+\item 
+Point3d \mbox{\hyperlink{namespace_custom_camera_library_a1a00a449628a95efff7606fc1812c946}{pointer\+Point}} (cv\+::\+Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}, cv\+::\+Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}, cv\+::\+Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{rodrigues_8m_a2a89187d8e8e8fba509ef9ab5f815d88}{out}})
+\item 
+Point3d \mbox{\hyperlink{namespace_custom_camera_library_a236e9dbd2296a548c20eed05fa49f899}{pointer\+Point2}} (Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}, Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}, Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}, Mat\+\_\+$<$ double $>$ \&Out)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a80d0984bb0c661e35fcf1ea95d5ccedd}{get\+Euler\+Angles}} (\mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$\&b\+Rigid, int \mbox{\hyperlink{namespace_custom_camera_library_abbfe5d4dfda37a253682293774986fa1}{i}})
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a0209a945cb4fe5e4c1e80a4366e65dcf}{get\+Euler\+Angles\+Old}} (\mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$\&b\+Rigid, int \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}})
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aedd88d76c6f4e55b5dceaa8022c86ebc}{analizer}} (float \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}}, \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ float $>$ \&vec)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a520cc1f31f0f545e009382ad65e236e7}{set\+Delta}} (float \mbox{\hyperlink{calib__pointer2_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}})
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a82b54de13f18e3d7f20c5bfbfe92696f}{num\+B\+Rigid}} (int \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}}, cv\+::\+Mat\+\_\+$<$ float $>$ dsp\+Set)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{joskstra}} (Mat\+\_\+$<$ float $>$ sp\+Set, Mat\+\_\+$<$ float $>$ dsp\+Set, \mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$\&b\+Rigid)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a37d5fea964793f87cef18d44d8fb95cd}{joskstraB}} (Mat\+\_\+$<$ float $>$ sp\+Set, Mat\+\_\+$<$ float $>$ dsp\+Set, \mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$\&b\+Rigid)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a8513336b5052e9fb84cbef8658c65b3c}{init\+Python}} (int \mbox{\hyperlink{readras_8m_a509290c21d570ff479c1b9d9b1fe8810}{height}}, int \mbox{\hyperlink{readras_8m_a5558ace5433f9aabbf0a0ec059900d94}{width}})
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_abe12cd8639bbfbffbad70ef47a83509c}{compute\+Tip}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}})
+\item 
+Py\+Array\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_aa9b882afe629942ab77642103b08b9dc}{do\+Drill}} ()
+\item 
+\mbox{\hyperlink{struct_custom_camera_library_1_1tip}{tip}} \mbox{\hyperlink{namespace_custom_camera_library_aeed79410627ea8e32fcccf2cb3b9ef92}{find\+Tip}} (Mat\+\_\+$<$ double $>$ P\+P\+P1, Mat\+\_\+$<$ double $>$ P\+P\+P2)
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_aa4f098b0536d515de9fb44e491c8af47}{init\+Drill}} (Mat mat\+Frame, Mat mat\+Frame2, Mat\+\_\+$<$ double $>$ P2D, Mat\+\_\+$<$ double $>$ P2\+D2)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ad8a18d2ccbe60ec7183b9e6ed6e7793a}{Build\+Description}} (s\+Data\+Descriptions $\ast$p\+Description)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a6d82efdba8384db92d1584db8a6d4cec}{Send\+Description}} (s\+Data\+Descriptions $\ast$p\+Description)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ad425d4b89dc6454673b3d19672472baf}{Free\+Description}} (s\+Data\+Descriptions $\ast$p\+Description)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a07ff154c6c3502e4dd7dc1e09fc55eb6}{Build\+Frame}} (long Frame\+Number, s\+Data\+Descriptions $\ast$p\+Data\+Descriptions, s\+Frame\+Of\+Mocap\+Data $\ast$p\+Out\+Frame)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_af835b95386bb9c526113afde0cbda651}{Send\+Frame}} (s\+Frame\+Of\+Mocap\+Data $\ast$p\+Frame)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ae0b9189c9b45e345fe906c55f1d184d9}{Free\+Frame}} (s\+Frame\+Of\+Mocap\+Data $\ast$p\+Frame)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a7f3c463898854696109478cfecf69271}{reset\+Server}} ()
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a0ed3899efef24299489ead14b23b380d}{Create\+Server}} (int i\+Connection\+Type)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_ac59c4a3c07a228c88fd2f5bb24b080ff}{Hi\+Res\+Sleep}} (int msecs)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aaafbd494c48d1a4f9ef4c7a108992f8c}{Start\+Server}} ()
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a5736bb7f0bd20ca078273ce4099c3ce7}{WriteW}} (string \mbox{\hyperlink{namespace_custom_camera_library_a571bde774acd8cd6b9529af1b2964f92}{s}})
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ad7230f8dd56f8a7f25a93e29dbba5153}{Stream\+Frame}} ()
+\item 
+\mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} \mbox{\hyperlink{namespace_custom_camera_library_a8db811bbcdd3581b3cccd42949ad5baf}{get\+Bdrigid}} (char $\ast$\mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}}, int nrig)
+\item 
+void \+\_\+\+\_\+cdecl \mbox{\hyperlink{namespace_custom_camera_library_a92d59d4ec1910feb06563d4dbd98ca9b}{Message\+Handler}} (int msg\+Type, char $\ast$msg)
+\item 
+int \+\_\+\+\_\+cdecl \mbox{\hyperlink{namespace_custom_camera_library_ae287913595dd611d75c8a70d4f780d91}{Request\+Handler}} (s\+Packet $\ast$p\+Packet\+In, s\+Packet $\ast$p\+Packet\+Out, void $\ast$p\+User\+Data)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a744f9cbdb37fa00e986169752b6a0933}{Start\+Playing\+Thread}} ()
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aebe90ea0c0154b61c778aff27d76eb96}{Stop\+Playing\+Thread}} ()
+\item 
+D\+W\+O\+RD W\+I\+N\+A\+PI \mbox{\hyperlink{namespace_custom_camera_library_adaeae6eab87b4dba4155c0e16c930422}{Playing\+Thread\+\_\+\+Func}} (void $\ast$dummy)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a6663223341529ff3324adf04e67bb12f}{stereo\+\_\+triangulation}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{click__stereo_8m_a4e338659ed764970cc686b2eec8eb240}{xL}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{click__stereo_8m_ac68a44d4834984e6fb1d37fec5c76e62}{xR}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{load__stereo__calib__files_8m_aecdaf7e4eed129b6416ee1ba30deaf29}{fc\+\_\+left}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{stereo__triangulation_8m_a3faa4c3fbc27b573c46e71cdd3940f3e}{cc\+\_\+left}}, \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ double $>$ \mbox{\hyperlink{load__stereo__calib__files_8m_a972a362cbc69f656885b661b71720409}{kc\+\_\+left}}, double \mbox{\hyperlink{load__stereo__calib__files_8m_ab143cf29d29212ee3462bdcca119b7a4}{alpha\+\_\+c\+\_\+left}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{compute__epipole_8m_a023f13b1a419850c715e8fd7d4ac2344}{fc\+\_\+right}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{stereo__triangulation_8m_a3c6f929f4342539243f55bc45a6065d4}{cc\+\_\+right}}, \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ double $>$ \mbox{\hyperlink{rectify__stereo__pair_8m_a38c4a14fb20e4d14f25a99846af884b6}{kc\+\_\+right}}, double \mbox{\hyperlink{load__stereo__calib__files_8m_a8dc5da0de837b1dcea479bf91e6b25ea}{alpha\+\_\+c\+\_\+right}}, Mat\+\_\+$<$ double $>$ \&XL, Mat\+\_\+$<$ double $>$ \&XR)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ae64b57f9a55c470f1e94c684d39da775}{normalize\+\_\+pixel}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}, \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ double $>$ \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}, double \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}, Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}})
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ae449c98bbd4d02c1cfbd3164b8b1ff5e}{comp\+\_\+distortion\+\_\+oulu}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}, \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ double $>$ \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}, Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}})
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_af285f01ae1c4eadcb7bb5253b96f0cef}{dot\+Product}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}}, Mat\+\_\+$<$ double $>$ \&K)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a2db847cd9dba942e0a0c855e86f8122a}{extendM}} (Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6aa70478ce277ffc322f8e1e3418e07355}{Z}}, double \mbox{\hyperlink{ginput4_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}{C}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_ac6a3213fb67b95928204f15e2ab51b1a}{broca\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em posición del indicador de la broca \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_custom_camera_library_aca1469087302fa24cfd7f293b4a23d60}{detect\+\_\+broca}} = false
+\begin{DoxyCompactList}\small\item\em indicador para determinar si se empieza a detectar o se detiene la detección de la broca. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_aed67233f328389a3c30369b23451bf0b}{pointer}} = 1
+\begin{DoxyCompactList}\small\item\em indicador que representa el pointer \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_ada4ad2b496070f2519ae6799d37f2435}{femur}} = 2
+\begin{DoxyCompactList}\small\item\em indicador que representa el femur \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_a25472cc1d60a3d4d3ba66dcffd5bd549}{tibia}} = 3
+\begin{DoxyCompactList}\small\item\em indicador que representa la tibia \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_ac68e2b3459410cf9d14f29501c5d0b87}{gafas}} = 4
+\begin{DoxyCompactList}\small\item\em indicador que representa las gafas \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_a1a319bd0a91f16b41735fc34c11e9fd3}{phanton}} = 6
+\begin{DoxyCompactList}\small\item\em indicador que representa el phanton \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_ad593e2847f48ac9daba23815d253fc02}{broca}} = 5
+\begin{DoxyCompactList}\small\item\em indicador que representa la broca \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespace_custom_camera_library_ab6c89920e610f79de42854858b9590af}{D\+E\+L\+TA}} = 1.\+09
+\begin{DoxyCompactList}\small\item\em Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_custom_camera_library_a87ce3dd4358f0757a08b71f4149dc7f7}{detect\+\_\+pointer}} = true
+\begin{DoxyCompactList}\small\item\em indicador para manejar la decisión de detectar o no el pointer. \end{DoxyCompactList}\item 
+clock\+\_\+t \mbox{\hyperlink{namespace_custom_camera_library_a9d316af1494fd3aee3b6207b7c9ffeaf}{time}} = clock()
+\item 
+ofstream \mbox{\hyperlink{namespace_custom_camera_library_a5b2d42af9eccd9c9e7bc074a5ce6f7e3}{archivo\+DI}}
+\item 
+npy\+\_\+intp \mbox{\hyperlink{namespace_custom_camera_library_a54875c6bf6339f002ecaae15320126ad}{data\+\_\+dims}} \mbox{[}2\mbox{]}
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a43deee0e4586de39b7f6423426ff3f2c}{m}}
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ac5942b4921f6918e92cb0eb43b0fce0b}{m2}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a5c0a04b8c59c7ef3676496c87983f52f}{dims}}
+\item 
+npy\+\_\+intp \mbox{\hyperlink{namespace_custom_camera_library_a3f2f0ffd3451d1d928b1fe5546844793}{size}}
+\item 
+double $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ad81045b7ac3a5e3cb23aa1ebe3171c03}{optr}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aecbcf65102cd4a0c34742245dc1da038}{control}} = 0
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a9f45524a362ec07a12f7f0d94f14b68b}{camera\+Height}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a28a0047cabfd3cfcb388233c7f3d3551}{camera\+Width}}
+\item 
+Py\+Array\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ac8002f921b6351e8e5fc7e3bae8653fc}{data}}
+\item 
+Py\+Array\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a91a27fb0cffa767172f8ae329a824da6}{data2}}
+\item 
+Py\+Array\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_abc57c04573f11129bd2734522d3376ce}{drill}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a41a702a89007012c9f7038d47fc26409}{ref\+Zone}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ace2694a53e1a869cf8d71bcdbd9a16d9}{param\+\_\+stereo}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a292252c43516c5048c54237ab1f58be8}{ref\+Zone2}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a7398e0e91b84f627e9811401a6c49c6b}{param\+\_\+broca}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a71ac5b70f2da22a3e35020cba25080ff}{args}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ac5b36d407e35f82b5d8343641df0e704}{my\+Module\+String}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a284a6fb7f92a429a46d724a7755be204}{mdict}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ad72ed7104fc4bfffcb6328199bfe0043}{python\+Func}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a8d6822d0e3953b33dd329ac6faeba5d1}{my\+Module}}
+\item 
+D\+W\+O\+RD \mbox{\hyperlink{namespace_custom_camera_library_ada9d3285ca13fb83ba3bfc16196feb78}{d\+Result}}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{namespace_custom_camera_library_ad7b885f8ca93585b97e411c7073fb762}{drill\+Semaphore}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a26626715b8f47d86b14a63f98a36f2b3}{threshold\+\_\+value}} = 254
+\begin{DoxyCompactList}\small\item\em valor por omisión en el momento de aplicarle el threshold a la imágen (usado en tratamiento de binarización) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a6bf2d0dd64ca9e2ee6065b4e49bf2a7d}{max\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+value}} = 255
+\begin{DoxyCompactList}\small\item\em máximo nivel de binarizado (usado en tratamiento de binarización) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a7590a34dfcbded8f875ca4d85428a65b}{threshold\+\_\+type}} = 3
+\begin{DoxyCompactList}\small\item\em tipo de de threshold (usado en tratamiento de binarización) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a3432149e25b0dad25c2d405a0f0698f1}{exposure\+\_\+cvalue}} = 1195
+\begin{DoxyCompactList}\small\item\em valor por omisión para la exposición de la cámara. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a8f2ef50979abb593eb80e8b717b0a99f}{threshold\+\_\+cvalue}} = 187
+\begin{DoxyCompactList}\small\item\em valor por omisión para el threshold la cámara. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a5e26ce9d496eef9f8e3f0a212e57f0ff}{intensity\+\_\+cvalue}} = 2
+\begin{DoxyCompactList}\small\item\em valor por omisión para la intensidad de la cámara. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_af431a40464751f26a8cad11e8b56379e}{fps}} = 211
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a25d541e8b194a3e3dba66671e35682d6}{square\+\_\+size}} = 400
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a108dbb5a6ecf8c026df2516b31456ad8}{cloud\+\_\+size}} = 50
+\item 
+Nat\+Net\+Server $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_af3fae95e0ec006bf05965558dfa723b7}{the\+Server}}
+\begin{DoxyCompactList}\small\item\em Instancia del servidor. \end{DoxyCompactList}\item 
+s\+Data\+Descriptions \mbox{\hyperlink{namespace_custom_camera_library_a83db737e66aaa2911e4c43c772c6be54}{descriptions}}
+\begin{DoxyCompactList}\small\item\em Descripci{\ucr}n de los datos que se van a enviar (Descripci{\ucr}n de los cuerpos r{\ucr}gidos y sus caracter{\ucr}sticas). \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{namespace_custom_camera_library_ac021c79b8f9e931cc5a39e5ac854e673}{g\+\_\+l\+Current\+Frame}} = 0
+\begin{DoxyCompactList}\small\item\em Contador de Frames que va enviando el servidor al cliente. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_custom_camera_library_a2992c70ad26c9328155a6248ba16db7e}{g\+\_\+b\+Playing}} = false
+\begin{DoxyCompactList}\small\item\em Indicador que muestra si el servidor esta enviando datos al cliente. \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{namespace_custom_camera_library_a102539dc8232b6ea67d1c151fc794f9b}{Playing\+Thread\+\_\+\+ID}} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em Id del hilo que ejecuta el servidor. \end{DoxyCompactList}\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{namespace_custom_camera_library_ae752d34506c2248b3e0f3fbba416be84}{Playing\+Thread\+\_\+\+Handle}} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em Manejador del hilo que ejecuta el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a2e5d1887c710afec78867d350c66d130}{counter}} = 0
+\begin{DoxyCompactList}\small\item\em Sin uso importante. Puede ser borrado. ~\newline
+ \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespace_custom_camera_library_a47eaf041647a8f53d7b8a7c15ef1eda4}{Data\+Port}} = 1511
+\begin{DoxyCompactList}\small\item\em Puerto utilizado para el env{\ucr}o de datos. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespace_custom_camera_library_a110c4a43276b32c71d600133797ab457}{Command\+Port}} = 1510
+\begin{DoxyCompactList}\small\item\em Puerto utilizado para la recepci{\ucr}n de comandos desde el cliente. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{namespace_custom_camera_library_a7245a10ec33386757292966eb71ee6e4}{l\+Addresses}} \mbox{[}10\mbox{]}
+\item 
+stringstream \mbox{\hyperlink{namespace_custom_camera_library_a571bde774acd8cd6b9529af1b2964f92}{s}}
+\begin{DoxyCompactList}\small\item\em Utilizado para ir concatenando texto y mostrarlo cuando se inicia el servidor. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{namespace_custom_camera_library_a190c217558e81cb19b0ef664ae5ed7f5}{pic}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{cv\+::\+Mat\+::zeros}}(800, 600, C\+V\+\_\+8\+U\+C3)
+\begin{DoxyCompactList}\small\item\em imagen que se muestra de color negro en la ventana que sale al iniciar el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a173720ab8fc85fd6b7713b84b60e4118}{y0}} = 50
+\begin{DoxyCompactList}\small\item\em Posici{\ucr}n inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a033014ef2e1c38a596fe7958d30e8c44}{dy}} = 20
+\begin{DoxyCompactList}\small\item\em incremento inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_abbfe5d4dfda37a253682293774986fa1}{i}} = 0
+\item 
+\mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a749c51cb23f6d5d8d2f43b5e7ba9affd}{rigid}}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{namespace_custom_camera_library_ab68fe88225503c8aed13e2d23723b000}{s\+Semaphore}}
+\begin{DoxyCompactList}\small\item\em Sem{\ucr}foro que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se env{\ucr}an los datos al cliente. \end{DoxyCompactList}\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{namespace_custom_camera_library_a025e8a9f084836bade15e4afa9ed37f2}{br\+Semaphore}}
+\begin{DoxyCompactList}\small\item\em Sem{\ucr}foro que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se env{\ucr}an los datos al cliente. \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{namespace_custom_camera_library_a846fb8dfc2febfd259c72adb84f5c0c9}{s\+Result}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aa10a28ccfd1b995cd9a0dac4c59b9900}{nbr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}\label{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!BodyR@{BodyR}}
+\index{BodyR@{BodyR}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{BodyR}{BodyR}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_custom_camera_library_1_1_output}{Output}} \mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{Custom\+Camera\+Library\+::\+BodyR}}}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a31a6fd1b5d5514aeb736e1aa409b18d6}\label{namespace_custom_camera_library_a31a6fd1b5d5514aeb736e1aa409b18d6}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{Sphere}{Sphere}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_custom_camera_library_1_1_label}{Label}} \mbox{\hyperlink{namespace_custom_camera_library_a31a6fd1b5d5514aeb736e1aa409b18d6}{Custom\+Camera\+Library\+::\+Sphere}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_custom_camera_library_aedd88d76c6f4e55b5dceaa8022c86ebc}\label{namespace_custom_camera_library_aedd88d76c6f4e55b5dceaa8022c86ebc}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!analizer@{analizer}}
+\index{analizer@{analizer}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{analizer()}{analizer()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::analizer (\begin{DoxyParamCaption}\item[{float}]{distance,  }\item[{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ float $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+Compara las distancias experimentales entre esferas con las teóricas para establecer si hay o no una equivalencia. 
+\begin{DoxyParams}{Parameters}
+{\em distance} & distancia obtenida entre dos esferas seleccionadas en algún momento del flujo en que se están detectando los cuerpos rígidos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{joskstra()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & vector que contiene las distancias teóricas entre cada esfera que forman los cuerpos rígidos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un entero positivo equivalente a la posición de la esfera aceptada como una esfera que hace parte del cuerpo rígido, de lo contrario devuelve -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_aaee5f971d615a4c55380f5a9422348b2}\label{namespace_custom_camera_library_aaee5f971d615a4c55380f5a9422348b2}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!areas@{areas}}
+\index{areas@{areas}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{areas()}{areas()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::areas (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$ \&}]{A,  }\item[{Mat\+\_\+$<$ int $>$ \&}]{areas\+\_\+men }\end{DoxyParamCaption})}
+
+Compara las áreas y detecta la posición de las esferas más pequeñas (esferas de referencia en cada cuerpo rígido) en el conjunto de esferas. 
+\begin{DoxyParams}{Parameters}
+{\em A} & referencia al conjunto de áreas. \\
+\hline
+{\em areas\+\_\+men} & matriz que será llenada con las ubicaciones de las áreas más pequeñas encontradas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+entero que indica el estado de la búsqueda de éstas esferas de referencia. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_ad8a18d2ccbe60ec7183b9e6ed6e7793a}\label{namespace_custom_camera_library_ad8a18d2ccbe60ec7183b9e6ed6e7793a}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!BuildDescription@{BuildDescription}}
+\index{BuildDescription@{BuildDescription}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{BuildDescription()}{BuildDescription()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Build\+Description (\begin{DoxyParamCaption}\item[{s\+Data\+Descriptions $\ast$}]{p\+Description }\end{DoxyParamCaption})}
+
+Contruye un Data\+Set que contiene la descripci{\ucr}n de los objetos r{\ucr}gidos en escena. Utiliza la descripci{\ucr}n de los cuerpos r{\ucr}gidos detectados para ir armando el Data\+Set. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{Custom\+Camera\+Library\+::joskstra()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Description} & Data\+Set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_custom_camera_library_a07ff154c6c3502e4dd7dc1e09fc55eb6}\label{namespace_custom_camera_library_a07ff154c6c3502e4dd7dc1e09fc55eb6}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!BuildFrame@{BuildFrame}}
+\index{BuildFrame@{BuildFrame}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{BuildFrame()}{BuildFrame()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Build\+Frame (\begin{DoxyParamCaption}\item[{long}]{Frame\+Number,  }\item[{s\+Data\+Descriptions $\ast$}]{p\+Models,  }\item[{s\+Frame\+Of\+Mocap\+Data $\ast$}]{p\+Out\+Frame }\end{DoxyParamCaption})}
+
+Construye el frame de datos que ser{\ucr}n enviados al cliente. Identifica el objeto r{\ucr}gido que se va a enviar y saca sus propiedades tales como coordenadas 3D de sus esferas, centro del circulo que forman las esferas del cuerpo r{\ucr}gido, nombre del cuerpo r{\ucr}gido y orientaci{\ucr}n. 
+\begin{DoxyParams}{Parameters}
+{\em Frame\+Number} & contador de frames enviados que indica el frame actual. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_custom_camera_library_ae449c98bbd4d02c1cfbd3164b8b1ff5e}\label{namespace_custom_camera_library_ae449c98bbd4d02c1cfbd3164b8b1ff5e}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!comp\_distortion\_oulu@{comp\_distortion\_oulu}}
+\index{comp\_distortion\_oulu@{comp\_distortion\_oulu}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{comp\_distortion\_oulu()}{comp\_distortion\_oulu()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::comp\+\_\+distortion\+\_\+oulu (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{xd,  }\item[{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ double $>$}]{k,  }\item[{Mat\+\_\+$<$ double $>$ \&}]{x }\end{DoxyParamCaption})}
+
+\mbox{[}x\mbox{]} = comp\+\_\+distortion\+\_\+oulu(xd, k)
+
+Compensates for radial and tangential distortion.\+Model From Oulu university. For more informatino about the distortion model, check the forward projection mapping function \+: project\+\_\+points.\+m
+
+I\+N\+P\+UT \+: xd \+: distorted(normalized) point coordinates in the image plane(2x\+N matrix) k \+: Distortion coefficients(radial and tangential) (4x1 vector)
+
+O\+U\+T\+P\+UT \+: x \+: undistorted(normalized) point coordinates in the image plane(2x\+N matrix)
+
+Method \+: Iterative method for compensation.
+
+N\+O\+TE \+: This compensation has to be done after the subtraction of the principal point, and division by the focal length. \mbox{\Hypertarget{namespace_custom_camera_library_abe12cd8639bbfbffbad70ef47a83509c}\label{namespace_custom_camera_library_abe12cd8639bbfbffbad70ef47a83509c}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!computeTip@{computeTip}}
+\index{computeTip@{computeTip}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{computeTip()}{computeTip()}}
+{\footnotesize\ttfamily Mat\+\_\+$<$double$>$ Custom\+Camera\+Library\+::compute\+Tip (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{XX }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a1107e999bd0e04019d22ae2e18af9565}\label{namespace_custom_camera_library_a1107e999bd0e04019d22ae2e18af9565}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!CorrespondenceDetection@{CorrespondenceDetection}}
+\index{CorrespondenceDetection@{CorrespondenceDetection}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{CorrespondenceDetection()}{CorrespondenceDetection()}}
+{\footnotesize\ttfamily cv\+::\+Mat\+\_\+$<$double$>$ Custom\+Camera\+Library\+::\+Correspondence\+Detection (\begin{DoxyParamCaption}\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{P,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{A,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{F\+\_\+\+Broca }\end{DoxyParamCaption})}
+
+Detecta la correspondencia de las esferas de la cámara izq con la derecha. 
+\begin{DoxyParams}{Parameters}
+{\em P} & es el conjunto de esferas. \\
+\hline
+{\em A} & es el conjunto de áreas. \\
+\hline
+{\em F\+\_\+\+Broca} & es el conjunto de esferas de la broca \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un conjunto de esferas ordenadas según la correspondencia. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_a0ed3899efef24299489ead14b23b380d}\label{namespace_custom_camera_library_a0ed3899efef24299489ead14b23b380d}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!CreateServer@{CreateServer}}
+\index{CreateServer@{CreateServer}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{CreateServer()}{CreateServer()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::\+Create\+Server (\begin{DoxyParamCaption}\item[{int}]{i\+Connection\+Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ad2170ba501eebad9df0db56b6cb78677}\label{namespace_custom_camera_library_ad2170ba501eebad9df0db56b6cb78677}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!cross\_product@{cross\_product}}
+\index{cross\_product@{cross\_product}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{cross\_product()}{cross\_product()}}
+{\footnotesize\ttfamily cv\+::\+Mat Custom\+Camera\+Library\+::cross\+\_\+product (\begin{DoxyParamCaption}\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{A,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{B }\end{DoxyParamCaption})}
+
+Obtiene el producto cruz entre dos Mat\+\_\+ 
+\begin{DoxyParams}{Parameters}
+{\em A} & Primer Mat\+\_\+ \\
+\hline
+{\em B} & Segundo Mat\+\_\+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+producto cruz entre A y B 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_a6bf1144326e7d7f4bd4614813d91eb70}\label{namespace_custom_camera_library_a6bf1144326e7d7f4bd4614813d91eb70}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!define\_local\_axis@{define\_local\_axis}}
+\index{define\_local\_axis@{define\_local\_axis}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{define\_local\_axis()}{define\_local\_axis()}}
+{\footnotesize\ttfamily cv\+::\+Mat\+\_\+$<$double$>$ Custom\+Camera\+Library\+::define\+\_\+local\+\_\+axis (\begin{DoxyParamCaption}\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{P1,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{P2,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{P3,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{PR }\end{DoxyParamCaption})}
+
+Define un sistema de ejes local a partir de 3 puntos dados y un punto de referencia 
+\begin{DoxyParams}{Parameters}
+{\em P1} & primer punto \\
+\hline
+{\em P2} & segundo punto \\
+\hline
+{\em P3} & tercer punto \\
+\hline
+{\em PR} & punto de referencia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz de rotación asociada a los nuevos ejes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_aa9b882afe629942ab77642103b08b9dc}\label{namespace_custom_camera_library_aa9b882afe629942ab77642103b08b9dc}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!doDrill@{doDrill}}
+\index{doDrill@{doDrill}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{doDrill()}{doDrill()}}
+{\footnotesize\ttfamily Py\+Array\+Object$\ast$ Custom\+Camera\+Library\+::do\+Drill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_af285f01ae1c4eadcb7bb5253b96f0cef}\label{namespace_custom_camera_library_af285f01ae1c4eadcb7bb5253b96f0cef}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!dotProduct@{dotProduct}}
+\index{dotProduct@{dotProduct}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{dotProduct()}{dotProduct()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::dot\+Product (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{M,  }\item[{Mat\+\_\+$<$ double $>$}]{N,  }\item[{Mat\+\_\+$<$ double $>$ \&}]{K }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a2db847cd9dba942e0a0c855e86f8122a}\label{namespace_custom_camera_library_a2db847cd9dba942e0a0c855e86f8122a}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!extendM@{extendM}}
+\index{extendM@{extendM}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{extendM()}{extendM()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::extendM (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$ \&}]{Z,  }\item[{double}]{C }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a109d8fa846b5cb128ad83302672fcdad}\label{namespace_custom_camera_library_a109d8fa846b5cb128ad83302672fcdad}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!findDrill@{findDrill}}
+\index{findDrill@{findDrill}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{findDrill()}{findDrill()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::find\+Drill (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{P,  }\item[{int}]{pos\+Ref }\end{DoxyParamCaption})}
+
+Ejecutado en el momento de rastrear la broca. Localiza el indicador de la broca. 
+\begin{DoxyParams}{Parameters}
+{\em P} & es el conjunto de esferas. \\
+\hline
+{\em pos\+Ref} & es la posición de la esfera de referencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la posición en pixeles de la ubicación del indicador de la broca. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_a26a67198e10c00fec3b2f895eb1a1abc}\label{namespace_custom_camera_library_a26a67198e10c00fec3b2f895eb1a1abc}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!findSpheres@{findSpheres}}
+\index{findSpheres@{findSpheres}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{findSpheres()}{findSpheres()}}
+{\footnotesize\ttfamily Mat\+\_\+$<$double$>$ Custom\+Camera\+Library\+::find\+Spheres (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{P,  }\item[{int}]{pos\+Ref }\end{DoxyParamCaption})}
+
+Encuentra las 4 esferas más cercanas a la esfera de referencia (la que tiene menor área). 
+\begin{DoxyParams}{Parameters}
+{\em P} & es el conjunto de esferas. \\
+\hline
+{\em pos\+Ref} & es la posición de la esfera de referencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un conjunto de esferas que hacen parte de un objeto rígido. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_aeed79410627ea8e32fcccf2cb3b9ef92}\label{namespace_custom_camera_library_aeed79410627ea8e32fcccf2cb3b9ef92}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!findTip@{findTip}}
+\index{findTip@{findTip}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{findTip()}{findTip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_custom_camera_library_1_1tip}{tip}} Custom\+Camera\+Library\+::find\+Tip (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{P\+P\+P1,  }\item[{Mat\+\_\+$<$ double $>$}]{P\+P\+P2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ad425d4b89dc6454673b3d19672472baf}\label{namespace_custom_camera_library_ad425d4b89dc6454673b3d19672472baf}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!FreeDescription@{FreeDescription}}
+\index{FreeDescription@{FreeDescription}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{FreeDescription()}{FreeDescription()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Free\+Description (\begin{DoxyParamCaption}\item[{s\+Data\+Descriptions $\ast$}]{p\+Description }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ae0b9189c9b45e345fe906c55f1d184d9}\label{namespace_custom_camera_library_ae0b9189c9b45e345fe906c55f1d184d9}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!FreeFrame@{FreeFrame}}
+\index{FreeFrame@{FreeFrame}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{FreeFrame()}{FreeFrame()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Free\+Frame (\begin{DoxyParamCaption}\item[{s\+Frame\+Of\+Mocap\+Data $\ast$}]{p\+Frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a8db811bbcdd3581b3cccd42949ad5baf}\label{namespace_custom_camera_library_a8db811bbcdd3581b3cccd42949ad5baf}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!getBdrigid@{getBdrigid}}
+\index{getBdrigid@{getBdrigid}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{getBdrigid()}{getBdrigid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} Custom\+Camera\+Library\+::get\+Bdrigid (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{int}]{nrig }\end{DoxyParamCaption})}
+
+Encuentra un cuerpo r{\ucr}gido por su nombre, para luego seleccionar sus marcadores. 
+\begin{DoxyParams}{Parameters}
+{\em name} & apuntador al nombre del cuerpo r{\ucr}gido que se le quieren obtener los marcadores que lo conforman. \\
+\hline
+{\em nrig} & n{\ucr}mero de cuerpos r{\ucr}gidos detectados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un cuerpo r{\ucr}gido con todos sus atributos o caracter{\ucr}sticas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_a80d0984bb0c661e35fcf1ea95d5ccedd}\label{namespace_custom_camera_library_a80d0984bb0c661e35fcf1ea95d5ccedd}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!getEulerAngles@{getEulerAngles}}
+\index{getEulerAngles@{getEulerAngles}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{getEulerAngles()}{getEulerAngles()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::get\+Euler\+Angles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$\&}]{b\+Rigid,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a0209a945cb4fe5e4c1e80a4366e65dcf}\label{namespace_custom_camera_library_a0209a945cb4fe5e4c1e80a4366e65dcf}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!getEulerAnglesOld@{getEulerAnglesOld}}
+\index{getEulerAnglesOld@{getEulerAnglesOld}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{getEulerAnglesOld()}{getEulerAnglesOld()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::get\+Euler\+Angles\+Old (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$\&}]{b\+Rigid,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+Obtiene los ángulos de euler para cada cuerpo rígido detectado. La mayor parte de la teoría de este proceso se encuentra explicada aquí \href{https://www.fastgraph.com/makegames/3drotation/}{\texttt{ The Mathematics of the 3D Rotation Matrix}} El método funciona solo cuando se detectan los 4 marcadores que conforman el cuerpo rígido. 
+\begin{DoxyParams}{Parameters}
+{\em b\+Rigid} & referencia al conjunto de cuerpos rígidos detectados, de aquí se extrae el cuerpo rígido y las coordenadas en 3D de las esferas que lo forman. \\
+\hline
+{\em x} & posición en el array de objetos rígidos del objeto rígido que se le desean obtener los ángulos de euler. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_custom_camera_library_ac59c4a3c07a228c88fd2f5bb24b080ff}\label{namespace_custom_camera_library_ac59c4a3c07a228c88fd2f5bb24b080ff}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!HiResSleep@{HiResSleep}}
+\index{HiResSleep@{HiResSleep}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{HiResSleep()}{HiResSleep()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::\+Hi\+Res\+Sleep (\begin{DoxyParamCaption}\item[{int}]{msecs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_aa4f098b0536d515de9fb44e491c8af47}\label{namespace_custom_camera_library_aa4f098b0536d515de9fb44e491c8af47}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!initDrill@{initDrill}}
+\index{initDrill@{initDrill}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{initDrill()}{initDrill()}}
+{\footnotesize\ttfamily Mat\+\_\+$<$double$>$ Custom\+Camera\+Library\+::init\+Drill (\begin{DoxyParamCaption}\item[{Mat}]{mat\+Frame,  }\item[{Mat}]{mat\+Frame2,  }\item[{Mat\+\_\+$<$ double $>$}]{P2D,  }\item[{Mat\+\_\+$<$ double $>$}]{P2\+D2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a8513336b5052e9fb84cbef8658c65b3c}\label{namespace_custom_camera_library_a8513336b5052e9fb84cbef8658c65b3c}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!initPython@{initPython}}
+\index{initPython@{initPython}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{initPython()}{initPython()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::init\+Python (\begin{DoxyParamCaption}\item[{int}]{height,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}\label{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!joskstra@{joskstra}}
+\index{joskstra@{joskstra}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{joskstra()}{joskstra()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::joskstra (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ float $>$}]{sp\+Set,  }\item[{Mat\+\_\+$<$ float $>$}]{dsp\+Set,  }\item[{\mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$\&}]{b\+Rigid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a37d5fea964793f87cef18d44d8fb95cd}\label{namespace_custom_camera_library_a37d5fea964793f87cef18d44d8fb95cd}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!joskstraB@{joskstraB}}
+\index{joskstraB@{joskstraB}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{joskstraB()}{joskstraB()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::joskstraB (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ float $>$}]{sp\+Set,  }\item[{Mat\+\_\+$<$ float $>$}]{dsp\+Set,  }\item[{\mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}} $\ast$\&}]{b\+Rigid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a92d59d4ec1910feb06563d4dbd98ca9b}\label{namespace_custom_camera_library_a92d59d4ec1910feb06563d4dbd98ca9b}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!MessageHandler@{MessageHandler}}
+\index{MessageHandler@{MessageHandler}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{MessageHandler()}{MessageHandler()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cdecl Custom\+Camera\+Library\+::\+Message\+Handler (\begin{DoxyParamCaption}\item[{int}]{msg\+Type,  }\item[{char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ae64b57f9a55c470f1e94c684d39da775}\label{namespace_custom_camera_library_ae64b57f9a55c470f1e94c684d39da775}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!normalize\_pixel@{normalize\_pixel}}
+\index{normalize\_pixel@{normalize\_pixel}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{normalize\_pixel()}{normalize\_pixel()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::normalize\+\_\+pixel (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{x\+\_\+kk,  }\item[{Mat\+\_\+$<$ double $>$}]{fc,  }\item[{Mat\+\_\+$<$ double $>$}]{cc,  }\item[{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ double $>$}]{kc,  }\item[{double}]{alpha\+\_\+c,  }\item[{Mat\+\_\+$<$ double $>$ \&}]{x }\end{DoxyParamCaption})}
+
+normalize
+
+\mbox{[}xn\mbox{]} = normalize\+\_\+pixel(x\+\_\+kk, fc, cc, kc, alpha\+\_\+c)
+
+Computes the normalized coordinates xn given the pixel coordinates x\+\_\+kk and the intrinsic camera parameters fc, cc and kc.
+
+I\+N\+P\+UT\+: x\+\_\+kk\+: Feature locations on the images fc \+: Camera focal length cc \+: Principal point coordinates kc \+: Distortion coefficients alpha\+\_\+c \+: Skew coefficient
+
+O\+U\+T\+P\+UT \+: xn \+: Normalized feature locations on the image plane(a 2\+X\+N matrix)
+
+Important functions called within that program \+:
+
+comp\+\_\+distortion\+\_\+oulu \+: undistort pixel coordinates. \mbox{\Hypertarget{namespace_custom_camera_library_a82b54de13f18e3d7f20c5bfbfe92696f}\label{namespace_custom_camera_library_a82b54de13f18e3d7f20c5bfbfe92696f}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!numBRigid@{numBRigid}}
+\index{numBRigid@{numBRigid}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{numBRigid()}{numBRigid()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::num\+B\+Rigid (\begin{DoxyParamCaption}\item[{int}]{position,  }\item[{cv\+::\+Mat\+\_\+$<$ float $>$}]{dsp\+Set }\end{DoxyParamCaption})}
+
+Identifica a qué número corresponde el cuerpo rígido encontrado. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{joskstra()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & resultado de ejecutar el método \mbox{\hyperlink{namespace_custom_camera_library_aedd88d76c6f4e55b5dceaa8022c86ebc}{analizer()}} \\
+\hline
+{\em dsp\+Set} & conjunto de distancias teóricas. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_custom_camera_library_adaeae6eab87b4dba4155c0e16c930422}\label{namespace_custom_camera_library_adaeae6eab87b4dba4155c0e16c930422}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!PlayingThread\_Func@{PlayingThread\_Func}}
+\index{PlayingThread\_Func@{PlayingThread\_Func}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{PlayingThread\_Func()}{PlayingThread\_Func()}}
+{\footnotesize\ttfamily D\+W\+O\+RD W\+I\+N\+A\+PI Custom\+Camera\+Library\+::\+Playing\+Thread\+\_\+\+Func (\begin{DoxyParamCaption}\item[{void $\ast$}]{empty }\end{DoxyParamCaption})}
+
+Funci{\ucr}n que se ejecuta en un hilo distinto al principal. \mbox{\Hypertarget{namespace_custom_camera_library_a1a00a449628a95efff7606fc1812c946}\label{namespace_custom_camera_library_a1a00a449628a95efff7606fc1812c946}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!pointerPoint@{pointerPoint}}
+\index{pointerPoint@{pointerPoint}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{pointerPoint()}{pointerPoint()}}
+{\footnotesize\ttfamily Point3d Custom\+Camera\+Library\+::pointer\+Point (\begin{DoxyParamCaption}\item[{cv\+::\+Mat\+\_\+$<$ double $>$ \&}]{P1,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$ \&}]{P2,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$ \&}]{P3,  }\item[{cv\+::\+Mat\+\_\+$<$ double $>$}]{out }\end{DoxyParamCaption})}
+
+Obtiene el punto que toca la punta del pointer. Se genera un eje de cordenadas sobre las esferas que forman el pointer y luego se rota el vector que indica la dirección del pointer sobre un eje de rotación que viene siendo uno de los ejes del sistema de coordenada sobre el pointer. 
+\begin{DoxyParams}{Parameters}
+{\em P1} & coordenada de una esfera utilizada para formar el eje de coordenada sobre el pointer. \\
+\hline
+{\em P2} & coordenada de una esfera utilizada para formar el eje de coordenada sobre el pointer. \\
+\hline
+{\em P3} & coordenada de una esfera utilizada para formar el eje de coordenada sobre el pointer. \\
+\hline
+{\em P\+A\+R\+AM} & vector que indica la vista del pointer; hacia donde apunta. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+coordenadas en 3D del punto que toca la punta del pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_a236e9dbd2296a548c20eed05fa49f899}\label{namespace_custom_camera_library_a236e9dbd2296a548c20eed05fa49f899}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!pointerPoint2@{pointerPoint2}}
+\index{pointerPoint2@{pointerPoint2}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{pointerPoint2()}{pointerPoint2()}}
+{\footnotesize\ttfamily Point3d Custom\+Camera\+Library\+::pointer\+Point2 (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$ \&}]{P1,  }\item[{Mat\+\_\+$<$ double $>$ \&}]{P2,  }\item[{Mat\+\_\+$<$ double $>$ \&}]{P3,  }\item[{Mat\+\_\+$<$ double $>$ \&}]{Out }\end{DoxyParamCaption})}
+
+Obtiene el punto que toca la punta del pointer. Se genera un eje de cordenadas sobre las esferas que forman el pointer y luego se rota el vector que indica la dirección del pointer sobre un eje de rotación que viene siendo uno de los ejes del sistema de coordenada sobre el pointer. 
+\begin{DoxyParams}{Parameters}
+{\em P1} & coordenada de una esfera utilizada para formar el eje de coordenada sobre el pointer. \\
+\hline
+{\em P2} & coordenada de una esfera utilizada para formar el eje de coordenada sobre el pointer. \\
+\hline
+{\em P3} & coordenada de una esfera utilizada para formar el eje de coordenada sobre el pointer. \\
+\hline
+{\em Out} & vector que indica la vista del pointer; hacia donde apunta. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+coordenadas en 3D del punto que toca la punta del pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_a291221ce1947cd1bd52f2841481fa8c0}\label{namespace_custom_camera_library_a291221ce1947cd1bd52f2841481fa8c0}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!punto\_broca@{punto\_broca}}
+\index{punto\_broca@{punto\_broca}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{punto\_broca()}{punto\_broca()}}
+{\footnotesize\ttfamily Mat\+\_\+$<$double$>$ Custom\+Camera\+Library\+::punto\+\_\+broca (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+matriz que almacena el punto que referencia la broca. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a1cbd09897dffcc41c3a642770adc8173}\label{namespace_custom_camera_library_a1cbd09897dffcc41c3a642770adc8173}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!reorden@{reorden}}
+\index{reorden@{reorden}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{reorden()}{reorden()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::reorden (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$ \&}]{S }\end{DoxyParamCaption})}
+
+Reordena un conjunto de esferas de tal manera que la correspondencia se cumpla. Las ordena siguiendo sentido horario y partiendo de la esfera más pequeña que tienen los marcadores. 
+\begin{DoxyParams}{Parameters}
+{\em S} & una referencia al conjunto de esferas que van a ser ordenadas. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_custom_camera_library_ae287913595dd611d75c8a70d4f780d91}\label{namespace_custom_camera_library_ae287913595dd611d75c8a70d4f780d91}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!RequestHandler@{RequestHandler}}
+\index{RequestHandler@{RequestHandler}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{RequestHandler()}{RequestHandler()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+cdecl Custom\+Camera\+Library\+::\+Request\+Handler (\begin{DoxyParamCaption}\item[{s\+Packet $\ast$}]{p\+Packet\+In,  }\item[{s\+Packet $\ast$}]{p\+Packet\+Out,  }\item[{void $\ast$}]{p\+User\+Data }\end{DoxyParamCaption})}
+
+Manejador de peticiones, recive peticiones de el cliente. El servidor deber{\ucr}a armar y retornar un paquete \char`\"{}respuesta a la petici{\ucr}n\char`\"{} en el mismo hilo 
+\begin{DoxyParams}{Parameters}
+{\em p\+Packet\+In} & paquete de datos de el cliente. \\
+\hline
+{\em p\+Packet\+Out} & paquete vac{\ucr}o, para ser llenado antes de ser retornado al cliente como la \char`\"{}respuesta a la petici{\ucr}n\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_custom_camera_library_a7f3c463898854696109478cfecf69271}\label{namespace_custom_camera_library_a7f3c463898854696109478cfecf69271}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!resetServer@{resetServer}}
+\index{resetServer@{resetServer}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{resetServer()}{resetServer()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::reset\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reinicia el servidor, volviendose a conectar a la misma direcci{\ucr}n ip. \mbox{\Hypertarget{namespace_custom_camera_library_a0e5c6c4f04fdac899b7f0690846aabbc}\label{namespace_custom_camera_library_a0e5c6c4f04fdac899b7f0690846aabbc}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!rotateVector@{rotateVector}}
+\index{rotateVector@{rotateVector}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{rotateVector()}{rotateVector()}}
+{\footnotesize\ttfamily Mat\+\_\+$<$double$>$ Custom\+Camera\+Library\+::rotate\+Vector (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{v,  }\item[{Mat\+\_\+$<$ double $>$}]{k,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+Rota un vector alrededor de un eje utilizando la fórmula de rotación de Rodriges 
+\begin{DoxyParams}{Parameters}
+{\em v} & vector a rotar. \\
+\hline
+{\em k} & eje de rotación. \\
+\hline
+{\em angle} & ángulo de rotación. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector {\itshape v} rotado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_a6d82efdba8384db92d1584db8a6d4cec}\label{namespace_custom_camera_library_a6d82efdba8384db92d1584db8a6d4cec}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!SendDescription@{SendDescription}}
+\index{SendDescription@{SendDescription}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{SendDescription()}{SendDescription()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Send\+Description (\begin{DoxyParamCaption}\item[{s\+Data\+Descriptions $\ast$}]{p\+Description }\end{DoxyParamCaption})}
+
+Env{\ucr}a el Data\+Set a el cliente. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Description} & Data\+Set con la descripci{\ucr}n de los datos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_custom_camera_library_ad8a18d2ccbe60ec7183b9e6ed6e7793a}{Build\+Description()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{namespace_custom_camera_library_af835b95386bb9c526113afde0cbda651}\label{namespace_custom_camera_library_af835b95386bb9c526113afde0cbda651}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!SendFrame@{SendFrame}}
+\index{SendFrame@{SendFrame}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{SendFrame()}{SendFrame()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Send\+Frame (\begin{DoxyParamCaption}\item[{s\+Frame\+Of\+Mocap\+Data $\ast$}]{p\+Frame }\end{DoxyParamCaption})}
+
+Empaqueta y env{\ucr}a un solo frama con datos a el cliente 
+\begin{DoxyParams}{Parameters}
+{\em p\+Frame} & paquete de datos a enviar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_custom_camera_library_a520cc1f31f0f545e009382ad65e236e7}\label{namespace_custom_camera_library_a520cc1f31f0f545e009382ad65e236e7}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!setDelta@{setDelta}}
+\index{setDelta@{setDelta}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{setDelta()}{setDelta()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::set\+Delta (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
+
+Establece un valor para el error máximo permitido en la búsqueda de las distancias que formas un cuerpo rígido. El algoritmo de búsqueda de cuerpo rígido tomará como aceptable un nodo analizado si la distancia entre el nodo fijo y el de comparación tiene un error menor o igual a este valor establecido. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_custom_camera_library_aedd88d76c6f4e55b5dceaa8022c86ebc}{analizer()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & error máximo en milímetros para la búsqueda de distancias entre esferas que forman un cuerpo rígido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_custom_camera_library_a744f9cbdb37fa00e986169752b6a0933}\label{namespace_custom_camera_library_a744f9cbdb37fa00e986169752b6a0933}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!StartPlayingThread@{StartPlayingThread}}
+\index{StartPlayingThread@{StartPlayingThread}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{StartPlayingThread()}{StartPlayingThread()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::\+Start\+Playing\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Inicia el env{\ucr}o de datos hacia el cliente. Crea un segundo hilo y los sem{\ucr}foros correspondientes para garantizar la sincronizaci{\ucr}n. \mbox{\Hypertarget{namespace_custom_camera_library_aaafbd494c48d1a4f9ef4c7a108992f8c}\label{namespace_custom_camera_library_aaafbd494c48d1a4f9ef4c7a108992f8c}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!StartServer@{StartServer}}
+\index{StartServer@{StartServer}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{StartServer()}{StartServer()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::\+Start\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Inicia el servidor y muetsra una ventana con informaci{\ucr}n de la conexi{\ucr}n. \mbox{\Hypertarget{namespace_custom_camera_library_a6663223341529ff3324adf04e67bb12f}\label{namespace_custom_camera_library_a6663223341529ff3324adf04e67bb12f}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!stereo\_triangulation@{stereo\_triangulation}}
+\index{stereo\_triangulation@{stereo\_triangulation}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{stereo\_triangulation()}{stereo\_triangulation()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::stereo\+\_\+triangulation (\begin{DoxyParamCaption}\item[{Mat\+\_\+$<$ double $>$}]{xL,  }\item[{Mat\+\_\+$<$ double $>$}]{xR,  }\item[{Mat\+\_\+$<$ double $>$}]{om,  }\item[{Mat\+\_\+$<$ double $>$}]{T,  }\item[{Mat\+\_\+$<$ double $>$}]{fc\+\_\+left,  }\item[{Mat\+\_\+$<$ double $>$}]{cc\+\_\+left,  }\item[{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ double $>$}]{kc\+\_\+left,  }\item[{double}]{alpha\+\_\+c\+\_\+left,  }\item[{Mat\+\_\+$<$ double $>$}]{fc\+\_\+right,  }\item[{Mat\+\_\+$<$ double $>$}]{cc\+\_\+right,  }\item[{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ double $>$}]{kc\+\_\+right,  }\item[{double}]{alpha\+\_\+c\+\_\+right,  }\item[{Mat\+\_\+$<$ double $>$ \&}]{XL,  }\item[{Mat\+\_\+$<$ double $>$ \&}]{XR }\end{DoxyParamCaption})}
+
+Función que computa la posición de un conjunto de {\itshape N} puntos datas la imagen de proyección de la izquierda y la derecha. Se asume que las cámaras han sido calibradas, intrísicamente, y extrínsicamente. 
+\begin{DoxyParams}{Parameters}
+{\em xL} & matriz 2xN de las coordenadas en pixeles de la imágen de la izquierda. \\
+\hline
+{\em xR} & matriz 2xN de las coordenadas en pixeles de la imágen de la derecha. \\
+\hline
+{\em om} & vector de rotación entre la cámara de la derecha y la cámara de la izquierda \\
+\hline
+{\em T} & vector de translación entre la cámara de la derecha y la cámara de la izquierda (salida de la calibración estéreo) \\
+\hline
+{\em fc\+\_\+left} & parámetro intrínseco de la cámara izquierda (salida de la calibración estéreo). \\
+\hline
+{\em cc\+\_\+left} & parámetro intrínseco de la cámara izquierda (salida de la calibración estéreo). \\
+\hline
+{\em kc\+\_\+left} & parámetro intrínseco de la cámara izquierda (salida de la calibración estéreo). \\
+\hline
+{\em fc\+\_\+right} & parámetro intrínseco de la cámara derecha (salida de la calibración estéreo). \\
+\hline
+{\em cc\+\_\+right} & parámetro intrínseco de la cámara derecha (salida de la calibración estéreo). \\
+\hline
+{\em kc\+\_\+right} & parámetro intrínseco de la cámara derecha (salida de la calibración estéreo). \\
+\hline
+{\em alpha\+\_\+c\+\_\+left} & valor 0 por omision. \\
+\hline
+{\em alpha\+\_\+c\+\_\+right} & valor 0 por omision. \\
+\hline
+{\em XL} & matriz vacía que alamcenará los puntos en 3D con respecto al marco de referencia de la cámara izquierda. \\
+\hline
+{\em XR} & matriz vacía que alamcenará los puntos en 3D con respecto al marco de referencia de la cámara derecha. \\
+\hline
+{\em alpha\+\_\+c\+\_\+right} & valor 0 por omision. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape XL} matriz 3xN de coordinadas de puntos en 3D con respecto al marco de referencia de la cámara izquierda. {\itshape XR} matriz 3xN de coordinadas de puntos en 3D con respecto al marco de referencia de la cámara derecha. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_custom_camera_library_aebe90ea0c0154b61c778aff27d76eb96}\label{namespace_custom_camera_library_aebe90ea0c0154b61c778aff27d76eb96}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!StopPlayingThread@{StopPlayingThread}}
+\index{StopPlayingThread@{StopPlayingThread}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{StopPlayingThread()}{StopPlayingThread()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::\+Stop\+Playing\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Detiene el env{\ucr}o de datos hacia el cliente.\+Cierra el segundo hilo por donde se env{\ucr}an los datos y los sem{\ucr}foros que garantizan la sincronizaci{\ucr}n. \mbox{\Hypertarget{namespace_custom_camera_library_ad7230f8dd56f8a7f25a93e29dbba5153}\label{namespace_custom_camera_library_ad7230f8dd56f8a7f25a93e29dbba5153}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!StreamFrame@{StreamFrame}}
+\index{StreamFrame@{StreamFrame}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{StreamFrame()}{StreamFrame()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Stream\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_aff3b0f8be2afbec8d929908066638b7f}\label{namespace_custom_camera_library_aff3b0f8be2afbec8d929908066638b7f}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!updateCordinates@{updateCordinates}}
+\index{updateCordinates@{updateCordinates}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{updateCordinates()}{updateCordinates()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::update\+Cordinates (\begin{DoxyParamCaption}\item[{cv\+::\+Mat\+\_\+$<$ double $>$ \&}]{origin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a5736bb7f0bd20ca078273ce4099c3ce7}\label{namespace_custom_camera_library_a5736bb7f0bd20ca078273ce4099c3ce7}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!WriteW@{WriteW}}
+\index{WriteW@{WriteW}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{WriteW()}{WriteW()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+WriteW (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_custom_camera_library_a5b2d42af9eccd9c9e7bc074a5ce6f7e3}\label{namespace_custom_camera_library_a5b2d42af9eccd9c9e7bc074a5ce6f7e3}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!archivoDI@{archivoDI}}
+\index{archivoDI@{archivoDI}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{archivoDI}{archivoDI}}
+{\footnotesize\ttfamily ofstream Custom\+Camera\+Library\+::archivo\+DI}
+
+\begin{DoxyVerb}De el conjunto de esferas en la escena, encuentra los objetos rígidos.
+A cada marcador o esfera se le asocia una etiqueta que se compone principalmente de valores:
+\end{DoxyVerb}
+
+\begin{DoxyItemize}
+\item peso\+: indica la distancia de un nodo o esfera a la esfera seleccionada.
+\item marca\+: indica si el nodo ya ha sido analizado.
+\item antecesor\+: inidca el nodo que le sigue como parte del mismo objeto rígido.
+
+el nodo inicial tiene un peso de 0 y no tiene antecesor, se empieza analizando el primer nodo con todos los demás hasta encontrar los nodos del primer cuerpo rígido, los nodos ya selecionados como parte del primer cuerpo rígido se descartan para las siguiente búsqueda y así sucesivamente. 
+\begin{DoxyParams}{Parameters}
+{\em sp\+Set} & conjunto de coordenadas en 3D, resultantes producto de la triangulación. Equivalente a la posición en 3D de cada esfera que hace parte de los marcadores que esta en escena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_custom_camera_library_a6663223341529ff3324adf04e67bb12f}{Custom\+Camera\+Library\+::stereo\+\_\+triangulation()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em dsp\+Set} & distancias teóricas que hay entre cada esfera de un objeto rígido. Son utilizadas para comparar y detectar cuando se encuentra una distancia conocida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Custom\+Camera\+Library\+::distances 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Rigid} & referencia a un array de estructuras que representa un cuerpo rígido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_custom_camera_library_1_1_output}{Custom\+Camera\+Library\+::\+Output}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+el número de cuerpos rígidos detectados. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{namespace_custom_camera_library_a71ac5b70f2da22a3e35020cba25080ff}\label{namespace_custom_camera_library_a71ac5b70f2da22a3e35020cba25080ff}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!args@{args}}
+\index{args@{args}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily Py\+Object$\ast$ Custom\+Camera\+Library\+::args}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ad593e2847f48ac9daba23815d253fc02}\label{namespace_custom_camera_library_ad593e2847f48ac9daba23815d253fc02}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!broca@{broca}}
+\index{broca@{broca}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{broca}{broca}}
+{\footnotesize\ttfamily const int Custom\+Camera\+Library\+::broca = 5}
+
+
+
+indicador que representa la broca 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ac6a3213fb67b95928204f15e2ab51b1a}\label{namespace_custom_camera_library_ac6a3213fb67b95928204f15e2ab51b1a}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!broca\_pos@{broca\_pos}}
+\index{broca\_pos@{broca\_pos}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{broca\_pos}{broca\_pos}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::broca\+\_\+pos}
+
+
+
+posición del indicador de la broca 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a025e8a9f084836bade15e4afa9ed37f2}\label{namespace_custom_camera_library_a025e8a9f084836bade15e4afa9ed37f2}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!brSemaphore@{brSemaphore}}
+\index{brSemaphore@{brSemaphore}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{brSemaphore}{brSemaphore}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE Custom\+Camera\+Library\+::br\+Semaphore}
+
+
+
+Sem{\ucr}foro que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se env{\ucr}an los datos al cliente. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a9f45524a362ec07a12f7f0d94f14b68b}\label{namespace_custom_camera_library_a9f45524a362ec07a12f7f0d94f14b68b}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!cameraHeight@{cameraHeight}}
+\index{cameraHeight@{cameraHeight}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{cameraHeight}{cameraHeight}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::camera\+Height}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a28a0047cabfd3cfcb388233c7f3d3551}\label{namespace_custom_camera_library_a28a0047cabfd3cfcb388233c7f3d3551}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!cameraWidth@{cameraWidth}}
+\index{cameraWidth@{cameraWidth}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{cameraWidth}{cameraWidth}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::camera\+Width}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a108dbb5a6ecf8c026df2516b31456ad8}\label{namespace_custom_camera_library_a108dbb5a6ecf8c026df2516b31456ad8}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!cloud\_size@{cloud\_size}}
+\index{cloud\_size@{cloud\_size}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{cloud\_size}{cloud\_size}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::cloud\+\_\+size = 50}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a110c4a43276b32c71d600133797ab457}\label{namespace_custom_camera_library_a110c4a43276b32c71d600133797ab457}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!CommandPort@{CommandPort}}
+\index{CommandPort@{CommandPort}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{CommandPort}{CommandPort}}
+{\footnotesize\ttfamily unsigned int Custom\+Camera\+Library\+::\+Command\+Port = 1510}
+
+
+
+Puerto utilizado para la recepci{\ucr}n de comandos desde el cliente. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_aecbcf65102cd4a0c34742245dc1da038}\label{namespace_custom_camera_library_aecbcf65102cd4a0c34742245dc1da038}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!control@{control}}
+\index{control@{control}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{control}{control}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::control = 0}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a2e5d1887c710afec78867d350c66d130}\label{namespace_custom_camera_library_a2e5d1887c710afec78867d350c66d130}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!counter@{counter}}
+\index{counter@{counter}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::counter = 0}
+
+
+
+Sin uso importante. Puede ser borrado. ~\newline
+ 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ac8002f921b6351e8e5fc7e3bae8653fc}\label{namespace_custom_camera_library_ac8002f921b6351e8e5fc7e3bae8653fc}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!data@{data}}
+\index{data@{data}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily Py\+Array\+Object$\ast$ Custom\+Camera\+Library\+::data}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a91a27fb0cffa767172f8ae329a824da6}\label{namespace_custom_camera_library_a91a27fb0cffa767172f8ae329a824da6}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!data2@{data2}}
+\index{data2@{data2}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{data2}{data2}}
+{\footnotesize\ttfamily Py\+Array\+Object $\ast$ Custom\+Camera\+Library\+::data2}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a54875c6bf6339f002ecaae15320126ad}\label{namespace_custom_camera_library_a54875c6bf6339f002ecaae15320126ad}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!data\_dims@{data\_dims}}
+\index{data\_dims@{data\_dims}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{data\_dims}{data\_dims}}
+{\footnotesize\ttfamily npy\+\_\+intp Custom\+Camera\+Library\+::data\+\_\+dims\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a47eaf041647a8f53d7b8a7c15ef1eda4}\label{namespace_custom_camera_library_a47eaf041647a8f53d7b8a7c15ef1eda4}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!DataPort@{DataPort}}
+\index{DataPort@{DataPort}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{DataPort}{DataPort}}
+{\footnotesize\ttfamily unsigned int Custom\+Camera\+Library\+::\+Data\+Port = 1511}
+
+
+
+Puerto utilizado para el env{\ucr}o de datos. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ab6c89920e610f79de42854858b9590af}\label{namespace_custom_camera_library_ab6c89920e610f79de42854858b9590af}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!DELTA@{DELTA}}
+\index{DELTA@{DELTA}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{DELTA}{DELTA}}
+{\footnotesize\ttfamily float Custom\+Camera\+Library\+::\+D\+E\+L\+TA = 1.\+09}
+
+
+
+Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro). 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a83db737e66aaa2911e4c43c772c6be54}\label{namespace_custom_camera_library_a83db737e66aaa2911e4c43c772c6be54}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!descriptions@{descriptions}}
+\index{descriptions@{descriptions}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{descriptions}{descriptions}}
+{\footnotesize\ttfamily s\+Data\+Descriptions Custom\+Camera\+Library\+::descriptions}
+
+
+
+Descripci{\ucr}n de los datos que se van a enviar (Descripci{\ucr}n de los cuerpos r{\ucr}gidos y sus caracter{\ucr}sticas). 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_aca1469087302fa24cfd7f293b4a23d60}\label{namespace_custom_camera_library_aca1469087302fa24cfd7f293b4a23d60}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!detect\_broca@{detect\_broca}}
+\index{detect\_broca@{detect\_broca}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{detect\_broca}{detect\_broca}}
+{\footnotesize\ttfamily bool Custom\+Camera\+Library\+::detect\+\_\+broca = false}
+
+
+
+indicador para determinar si se empieza a detectar o se detiene la detección de la broca. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a87ce3dd4358f0757a08b71f4149dc7f7}\label{namespace_custom_camera_library_a87ce3dd4358f0757a08b71f4149dc7f7}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!detect\_pointer@{detect\_pointer}}
+\index{detect\_pointer@{detect\_pointer}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{detect\_pointer}{detect\_pointer}}
+{\footnotesize\ttfamily bool Custom\+Camera\+Library\+::detect\+\_\+pointer = true}
+
+
+
+indicador para manejar la decisión de detectar o no el pointer. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a5c0a04b8c59c7ef3676496c87983f52f}\label{namespace_custom_camera_library_a5c0a04b8c59c7ef3676496c87983f52f}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!dims@{dims}}
+\index{dims@{dims}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{dims}{dims}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::dims}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ada9d3285ca13fb83ba3bfc16196feb78}\label{namespace_custom_camera_library_ada9d3285ca13fb83ba3bfc16196feb78}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!dResult@{dResult}}
+\index{dResult@{dResult}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{dResult}{dResult}}
+{\footnotesize\ttfamily D\+W\+O\+RD Custom\+Camera\+Library\+::d\+Result}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_abc57c04573f11129bd2734522d3376ce}\label{namespace_custom_camera_library_abc57c04573f11129bd2734522d3376ce}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!drill@{drill}}
+\index{drill@{drill}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{drill}{drill}}
+{\footnotesize\ttfamily Py\+Array\+Object $\ast$ Custom\+Camera\+Library\+::drill}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ad7b885f8ca93585b97e411c7073fb762}\label{namespace_custom_camera_library_ad7b885f8ca93585b97e411c7073fb762}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!drillSemaphore@{drillSemaphore}}
+\index{drillSemaphore@{drillSemaphore}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{drillSemaphore}{drillSemaphore}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE Custom\+Camera\+Library\+::drill\+Semaphore}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a033014ef2e1c38a596fe7958d30e8c44}\label{namespace_custom_camera_library_a033014ef2e1c38a596fe7958d30e8c44}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!dy@{dy}}
+\index{dy@{dy}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::dy = 20}
+
+
+
+incremento inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a3432149e25b0dad25c2d405a0f0698f1}\label{namespace_custom_camera_library_a3432149e25b0dad25c2d405a0f0698f1}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!exposure\_cvalue@{exposure\_cvalue}}
+\index{exposure\_cvalue@{exposure\_cvalue}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{exposure\_cvalue}{exposure\_cvalue}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::exposure\+\_\+cvalue = 1195}
+
+
+
+valor por omisión para la exposición de la cámara. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ada4ad2b496070f2519ae6799d37f2435}\label{namespace_custom_camera_library_ada4ad2b496070f2519ae6799d37f2435}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!femur@{femur}}
+\index{femur@{femur}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{femur}{femur}}
+{\footnotesize\ttfamily const int Custom\+Camera\+Library\+::femur = 2}
+
+
+
+indicador que representa el femur 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_af431a40464751f26a8cad11e8b56379e}\label{namespace_custom_camera_library_af431a40464751f26a8cad11e8b56379e}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!fps@{fps}}
+\index{fps@{fps}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{fps}{fps}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::fps = 211}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a2992c70ad26c9328155a6248ba16db7e}\label{namespace_custom_camera_library_a2992c70ad26c9328155a6248ba16db7e}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!g\_bPlaying@{g\_bPlaying}}
+\index{g\_bPlaying@{g\_bPlaying}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{g\_bPlaying}{g\_bPlaying}}
+{\footnotesize\ttfamily bool Custom\+Camera\+Library\+::g\+\_\+b\+Playing = false}
+
+
+
+Indicador que muestra si el servidor esta enviando datos al cliente. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ac021c79b8f9e931cc5a39e5ac854e673}\label{namespace_custom_camera_library_ac021c79b8f9e931cc5a39e5ac854e673}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!g\_lCurrentFrame@{g\_lCurrentFrame}}
+\index{g\_lCurrentFrame@{g\_lCurrentFrame}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{g\_lCurrentFrame}{g\_lCurrentFrame}}
+{\footnotesize\ttfamily long Custom\+Camera\+Library\+::g\+\_\+l\+Current\+Frame = 0}
+
+
+
+Contador de Frames que va enviando el servidor al cliente. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ac68e2b3459410cf9d14f29501c5d0b87}\label{namespace_custom_camera_library_ac68e2b3459410cf9d14f29501c5d0b87}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!gafas@{gafas}}
+\index{gafas@{gafas}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{gafas}{gafas}}
+{\footnotesize\ttfamily const int Custom\+Camera\+Library\+::gafas = 4}
+
+
+
+indicador que representa las gafas 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_abbfe5d4dfda37a253682293774986fa1}\label{namespace_custom_camera_library_abbfe5d4dfda37a253682293774986fa1}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!i@{i}}
+\index{i@{i}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::i = 0}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a5e26ce9d496eef9f8e3f0a212e57f0ff}\label{namespace_custom_camera_library_a5e26ce9d496eef9f8e3f0a212e57f0ff}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!intensity\_cvalue@{intensity\_cvalue}}
+\index{intensity\_cvalue@{intensity\_cvalue}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{intensity\_cvalue}{intensity\_cvalue}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::intensity\+\_\+cvalue = 2}
+
+
+
+valor por omisión para la intensidad de la cámara. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a7245a10ec33386757292966eb71ee6e4}\label{namespace_custom_camera_library_a7245a10ec33386757292966eb71ee6e4}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!lAddresses@{lAddresses}}
+\index{lAddresses@{lAddresses}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{lAddresses}{lAddresses}}
+{\footnotesize\ttfamily unsigned long Custom\+Camera\+Library\+::l\+Addresses\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a43deee0e4586de39b7f6423426ff3f2c}\label{namespace_custom_camera_library_a43deee0e4586de39b7f6423426ff3f2c}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!m@{m}}
+\index{m@{m}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily double$\ast$$\ast$ Custom\+Camera\+Library\+::m}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ac5942b4921f6918e92cb0eb43b0fce0b}\label{namespace_custom_camera_library_ac5942b4921f6918e92cb0eb43b0fce0b}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!m2@{m2}}
+\index{m2@{m2}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{m2}{m2}}
+{\footnotesize\ttfamily double$\ast$$\ast$ Custom\+Camera\+Library\+::m2}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a6bf2d0dd64ca9e2ee6065b4e49bf2a7d}\label{namespace_custom_camera_library_a6bf2d0dd64ca9e2ee6065b4e49bf2a7d}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!max\_BINARY\_value@{max\_BINARY\_value}}
+\index{max\_BINARY\_value@{max\_BINARY\_value}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{max\_BINARY\_value}{max\_BINARY\_value}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::max\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+value = 255}
+
+
+
+máximo nivel de binarizado (usado en tratamiento de binarización) 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a284a6fb7f92a429a46d724a7755be204}\label{namespace_custom_camera_library_a284a6fb7f92a429a46d724a7755be204}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!mdict@{mdict}}
+\index{mdict@{mdict}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{mdict}{mdict}}
+{\footnotesize\ttfamily Py\+Object $\ast$ Custom\+Camera\+Library\+::mdict}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a8d6822d0e3953b33dd329ac6faeba5d1}\label{namespace_custom_camera_library_a8d6822d0e3953b33dd329ac6faeba5d1}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!myModule@{myModule}}
+\index{myModule@{myModule}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{myModule}{myModule}}
+{\footnotesize\ttfamily Py\+Object $\ast$ Custom\+Camera\+Library\+::my\+Module}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ac5b36d407e35f82b5d8343641df0e704}\label{namespace_custom_camera_library_ac5b36d407e35f82b5d8343641df0e704}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!myModuleString@{myModuleString}}
+\index{myModuleString@{myModuleString}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{myModuleString}{myModuleString}}
+{\footnotesize\ttfamily Py\+Object $\ast$ Custom\+Camera\+Library\+::my\+Module\+String}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_aa10a28ccfd1b995cd9a0dac4c59b9900}\label{namespace_custom_camera_library_aa10a28ccfd1b995cd9a0dac4c59b9900}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!nbr@{nbr}}
+\index{nbr@{nbr}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{nbr}{nbr}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::nbr}
+
+cantidad de cuerpos r{\ucr}gidos detectados. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{Custom\+Camera\+Library\+::joskstra()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{namespace_custom_camera_library_ad81045b7ac3a5e3cb23aa1ebe3171c03}\label{namespace_custom_camera_library_ad81045b7ac3a5e3cb23aa1ebe3171c03}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!optr@{optr}}
+\index{optr@{optr}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{optr}{optr}}
+{\footnotesize\ttfamily double$\ast$ Custom\+Camera\+Library\+::optr}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a7398e0e91b84f627e9811401a6c49c6b}\label{namespace_custom_camera_library_a7398e0e91b84f627e9811401a6c49c6b}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!param\_broca@{param\_broca}}
+\index{param\_broca@{param\_broca}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{param\_broca}{param\_broca}}
+{\footnotesize\ttfamily Py\+Object $\ast$ Custom\+Camera\+Library\+::param\+\_\+broca}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ace2694a53e1a869cf8d71bcdbd9a16d9}\label{namespace_custom_camera_library_ace2694a53e1a869cf8d71bcdbd9a16d9}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!param\_stereo@{param\_stereo}}
+\index{param\_stereo@{param\_stereo}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{param\_stereo}{param\_stereo}}
+{\footnotesize\ttfamily Py\+Object $\ast$ Custom\+Camera\+Library\+::param\+\_\+stereo}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a1a319bd0a91f16b41735fc34c11e9fd3}\label{namespace_custom_camera_library_a1a319bd0a91f16b41735fc34c11e9fd3}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!phanton@{phanton}}
+\index{phanton@{phanton}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{phanton}{phanton}}
+{\footnotesize\ttfamily const int Custom\+Camera\+Library\+::phanton = 6}
+
+
+
+indicador que representa el phanton 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a190c217558e81cb19b0ef664ae5ed7f5}\label{namespace_custom_camera_library_a190c217558e81cb19b0ef664ae5ed7f5}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!pic@{pic}}
+\index{pic@{pic}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{pic}{pic}}
+{\footnotesize\ttfamily cv\+::\+Mat Custom\+Camera\+Library\+::pic = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{cv\+::\+Mat\+::zeros}}(800, 600, C\+V\+\_\+8\+U\+C3)}
+
+
+
+imagen que se muestra de color negro en la ventana que sale al iniciar el servidor. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ae752d34506c2248b3e0f3fbba416be84}\label{namespace_custom_camera_library_ae752d34506c2248b3e0f3fbba416be84}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!PlayingThread\_Handle@{PlayingThread\_Handle}}
+\index{PlayingThread\_Handle@{PlayingThread\_Handle}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{PlayingThread\_Handle}{PlayingThread\_Handle}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE Custom\+Camera\+Library\+::\+Playing\+Thread\+\_\+\+Handle = N\+U\+LL}
+
+
+
+Manejador del hilo que ejecuta el servidor. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a102539dc8232b6ea67d1c151fc794f9b}\label{namespace_custom_camera_library_a102539dc8232b6ea67d1c151fc794f9b}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!PlayingThread\_ID@{PlayingThread\_ID}}
+\index{PlayingThread\_ID@{PlayingThread\_ID}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{PlayingThread\_ID}{PlayingThread\_ID}}
+{\footnotesize\ttfamily D\+W\+O\+RD Custom\+Camera\+Library\+::\+Playing\+Thread\+\_\+\+ID = N\+U\+LL}
+
+
+
+Id del hilo que ejecuta el servidor. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_aed67233f328389a3c30369b23451bf0b}\label{namespace_custom_camera_library_aed67233f328389a3c30369b23451bf0b}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!pointer@{pointer}}
+\index{pointer@{pointer}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily const int Custom\+Camera\+Library\+::pointer = 1}
+
+
+
+indicador que representa el pointer 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ad72ed7104fc4bfffcb6328199bfe0043}\label{namespace_custom_camera_library_ad72ed7104fc4bfffcb6328199bfe0043}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!pythonFunc@{pythonFunc}}
+\index{pythonFunc@{pythonFunc}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{pythonFunc}{pythonFunc}}
+{\footnotesize\ttfamily Py\+Object $\ast$ Custom\+Camera\+Library\+::python\+Func}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a41a702a89007012c9f7038d47fc26409}\label{namespace_custom_camera_library_a41a702a89007012c9f7038d47fc26409}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!refZone@{refZone}}
+\index{refZone@{refZone}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{refZone}{refZone}}
+{\footnotesize\ttfamily Py\+Object$\ast$ Custom\+Camera\+Library\+::ref\+Zone}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a292252c43516c5048c54237ab1f58be8}\label{namespace_custom_camera_library_a292252c43516c5048c54237ab1f58be8}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!refZone2@{refZone2}}
+\index{refZone2@{refZone2}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{refZone2}{refZone2}}
+{\footnotesize\ttfamily Py\+Object$\ast$ Custom\+Camera\+Library\+::ref\+Zone2}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a749c51cb23f6d5d8d2f43b5e7ba9affd}\label{namespace_custom_camera_library_a749c51cb23f6d5d8d2f43b5e7ba9affd}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!rigid@{rigid}}
+\index{rigid@{rigid}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{rigid}{rigid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{BodyR}}$\ast$ Custom\+Camera\+Library\+::rigid}
+
+puntero al almacen de cuerpos r{\ucr}gidos, de aqu{\ucr} se pueden acceder despu{\ucr}s de ser detectados. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{Custom\+Camera\+Library\+::joskstra()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{namespace_custom_camera_library_a571bde774acd8cd6b9529af1b2964f92}\label{namespace_custom_camera_library_a571bde774acd8cd6b9529af1b2964f92}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!s@{s}}
+\index{s@{s}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily stringstream Custom\+Camera\+Library\+::s}
+
+
+
+Utilizado para ir concatenando texto y mostrarlo cuando se inicia el servidor. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a3f2f0ffd3451d1d928b1fe5546844793}\label{namespace_custom_camera_library_a3f2f0ffd3451d1d928b1fe5546844793}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!size@{size}}
+\index{size@{size}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily npy\+\_\+intp Custom\+Camera\+Library\+::size}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a25d541e8b194a3e3dba66671e35682d6}\label{namespace_custom_camera_library_a25d541e8b194a3e3dba66671e35682d6}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!square\_size@{square\_size}}
+\index{square\_size@{square\_size}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{square\_size}{square\_size}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::square\+\_\+size = 400}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a846fb8dfc2febfd259c72adb84f5c0c9}\label{namespace_custom_camera_library_a846fb8dfc2febfd259c72adb84f5c0c9}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!sResult@{sResult}}
+\index{sResult@{sResult}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{sResult}{sResult}}
+{\footnotesize\ttfamily D\+W\+O\+RD Custom\+Camera\+Library\+::s\+Result}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_ab68fe88225503c8aed13e2d23723b000}\label{namespace_custom_camera_library_ab68fe88225503c8aed13e2d23723b000}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!sSemaphore@{sSemaphore}}
+\index{sSemaphore@{sSemaphore}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{sSemaphore}{sSemaphore}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE Custom\+Camera\+Library\+::s\+Semaphore}
+
+
+
+Sem{\ucr}foro que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se env{\ucr}an los datos al cliente. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_af3fae95e0ec006bf05965558dfa723b7}\label{namespace_custom_camera_library_af3fae95e0ec006bf05965558dfa723b7}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!theServer@{theServer}}
+\index{theServer@{theServer}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{theServer}{theServer}}
+{\footnotesize\ttfamily Nat\+Net\+Server$\ast$ Custom\+Camera\+Library\+::the\+Server}
+
+
+
+Instancia del servidor. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a8f2ef50979abb593eb80e8b717b0a99f}\label{namespace_custom_camera_library_a8f2ef50979abb593eb80e8b717b0a99f}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!threshold\_cvalue@{threshold\_cvalue}}
+\index{threshold\_cvalue@{threshold\_cvalue}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{threshold\_cvalue}{threshold\_cvalue}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::threshold\+\_\+cvalue = 187}
+
+
+
+valor por omisión para el threshold la cámara. 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a7590a34dfcbded8f875ca4d85428a65b}\label{namespace_custom_camera_library_a7590a34dfcbded8f875ca4d85428a65b}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!threshold\_type@{threshold\_type}}
+\index{threshold\_type@{threshold\_type}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{threshold\_type}{threshold\_type}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::threshold\+\_\+type = 3}
+
+
+
+tipo de de threshold (usado en tratamiento de binarización) 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a26626715b8f47d86b14a63f98a36f2b3}\label{namespace_custom_camera_library_a26626715b8f47d86b14a63f98a36f2b3}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!threshold\_value@{threshold\_value}}
+\index{threshold\_value@{threshold\_value}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{threshold\_value}{threshold\_value}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::threshold\+\_\+value = 254}
+
+
+
+valor por omisión en el momento de aplicarle el threshold a la imágen (usado en tratamiento de binarización) 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a25472cc1d60a3d4d3ba66dcffd5bd549}\label{namespace_custom_camera_library_a25472cc1d60a3d4d3ba66dcffd5bd549}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!tibia@{tibia}}
+\index{tibia@{tibia}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{tibia}{tibia}}
+{\footnotesize\ttfamily const int Custom\+Camera\+Library\+::tibia = 3}
+
+
+
+indicador que representa la tibia 
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a9d316af1494fd3aee3b6207b7c9ffeaf}\label{namespace_custom_camera_library_a9d316af1494fd3aee3b6207b7c9ffeaf}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!time@{time}}
+\index{time@{time}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily clock\+\_\+t Custom\+Camera\+Library\+::time = clock()}
+
+\mbox{\Hypertarget{namespace_custom_camera_library_a173720ab8fc85fd6b7713b84b60e4118}\label{namespace_custom_camera_library_a173720ab8fc85fd6b7713b84b60e4118}} 
+\index{CustomCameraLibrary@{CustomCameraLibrary}!y0@{y0}}
+\index{y0@{y0}!CustomCameraLibrary@{CustomCameraLibrary}}
+\doxysubsubsection{\texorpdfstring{y0}{y0}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::y0 = 50}
+
+
+
+Posici{\ucr}n inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor. 
+

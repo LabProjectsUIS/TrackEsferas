@@ -1,0 +1,278 @@
+\hypertarget{init__intrinsic__param__fisheye_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/init\+\_\+intrinsic\+\_\+param\+\_\+fisheye.m File Reference}
+\label{init__intrinsic__param__fisheye_8m}\index{D:/TrackEsferas/NavarQA/calib/init\_intrinsic\_param\_fisheye.m@{D:/TrackEsferas/NavarQA/calib/init\_intrinsic\_param\_fisheye.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_ae3bece344865e516031107abcc20e807}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{saving__calib__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}{est\+\_\+aspect\+\_\+ratio}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a06ac44892c3ae10ecae191e7762c6527}{$\sim$exist}} (\mbox{[}\textquotesingle{}x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}(1))\mbox{]})
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a19be99a4614791117d6a694876d6fad1}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Initialization of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} -\/ Number of \mbox{\hyperlink{_compute_stripes_8m_a6015539f242e5c2c6487b379469629f5}{images\+:}}\%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}))
+\item 
+initialize \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a0959be2ec86a98bb7fc5bf9b4d07186e}{zero}} (no \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}}) \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{saving__calib__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}{est\+\_\+aspect\+\_\+ratio}}
+\item 
+initialize \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a60ec0fb6991412d37fd18168094b1384}{f\+\_\+init}} (1)
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_abe18f87ed229066b064a79d435435acb}{f\+\_\+init}} (2)
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_adf370f16db049232603544dc8991497c}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\textbackslash{}n\+Calibration \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} after \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{initialization\+:\textbackslash{}n\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_ad0e9f33887b545e1d4badd9b9ec71247}{fprintf}} (1, \textquotesingle{}Focal Length\+:fc=\mbox{[}\%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}\mbox{]}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}, \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}})
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a93fd8ce9a53255417b859c85677944b7}{fprintf}} (1, \textquotesingle{}Principal point\+:cc=\mbox{[}\%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}\mbox{]}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}, \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}})
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a9fabe77f6a06f1dca956f90d2d7e55dc}{fprintf}} (1, \textquotesingle{}Skew\+:alpha\+\_\+c=\mbox{[}\%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}\mbox{]}=$>$ angle of pixel=\%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{degrees\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}, 90 -\/ atan(\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}) $\ast$180/pi)
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a53a3c2b4dcf42337cd074ad511deecf6}{fprintf}} (1, \textquotesingle{}Fisheye Distortion\+:kc=\mbox{[}\%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}} \%3.\+5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}\mbox{]}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}, \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_afc984aa22c2099bf06c3660a112258e0}{I\+N\+P\+UT}}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_afbd54a109fec66a96f33aca5358b0093}{x\+\_\+2}}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a046fb6a0fa548900f68e5016dd536de3}{x\+\_\+3}}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_abe2d5cda0a5a22d71df40aff966ad8c6}{X\+\_\+2}}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_aae2a9eac695c85c1c0ddfc3e94558084}{X\+\_\+3}}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}{Method}}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a876123ad4edc9b30dc469ce9df30f84d}{H\+\_\+2}}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_ae70a6eb3e00c3a7a505e6c04fb27e152}{H\+\_\+3}}
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} and computes the focal \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} from orthogonal vanishing \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a7de5f353302f31a498f14787db073c78}{constraint}} The principal \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} assumed \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} the \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} of the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} Assumes no \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}}(\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}=\mbox{[}0;0;0;0\mbox{]}) \% \%Note \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}{est\+\_\+aspect\+\_\+ratio}} = 1
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a932b9343e43986762f7d96df8aaba60c}{click\+\_\+calib}}
+\item 
+initial guess for principal \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} and \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a35ec99091d3f725f2ccbd62f531e0d19}{distortion}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_afbaed4415d1b6411f75a72ed3c8ef907}{f\+\_\+init}} = (max(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}},\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}) / pi) $\ast$ \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_acfebc4cca2097aa9325d1ed13765efb5}{c\+\_\+init}} = \mbox{[}\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}
+\item 
+initialize \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} the \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} of the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a50623e266f38fae07ba461855ebf2b68}{k\+\_\+init}} = \mbox{[}0
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a92f144e07493bc2c826a1b5df464b50a}{alpha\+\_\+init}} = 0
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_ae18b1980f35114a664a851f82b2f3098}{inv\+\_\+\+KK}} = inv(\mbox{\hyperlink{willson__read_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}})
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}} = \mbox{\hyperlink{init__intrinsic__param_8m_a522cf90bb2f02d4dc20dc79433bf7c74}{c\+\_\+init}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}} = \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a737dee4ef8e09247b0da47219bf453ff}{kc}} = \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a50623e266f38fae07ba461855ebf2b68}{k\+\_\+init}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}{alpha\+\_\+c}} = \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a92f144e07493bc2c826a1b5df464b50a}{alpha\+\_\+init}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a60ec0fb6991412d37fd18168094b1384}\label{init__intrinsic__param__fisheye_8m_a60ec0fb6991412d37fd18168094b1384}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!f\_init@{f\_init}}
+\index{f\_init@{f\_init}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{f\_init()}{f\_init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily initialize \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}} (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_abe18f87ed229066b064a79d435435acb}\label{init__intrinsic__param__fisheye_8m_abe18f87ed229066b064a79d435435acb}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!f\_init@{f\_init}}
+\index{f\_init@{f\_init}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{f\_init()}{f\_init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}} (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a53a3c2b4dcf42337cd074ad511deecf6}\label{init__intrinsic__param__fisheye_8m_a53a3c2b4dcf42337cd074ad511deecf6}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{ \textquotesingle{}Fisheye Distortion\+:kc}]{ = {\ttfamily \mbox{[}\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}~\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}~\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}~\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}\mbox{]}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}},  }\item[{\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_ad0e9f33887b545e1d4badd9b9ec71247}\label{init__intrinsic__param__fisheye_8m_ad0e9f33887b545e1d4badd9b9ec71247}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{ \textquotesingle{}Focal Length\+:fc}]{ = {\ttfamily \mbox{[}\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}~\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}\mbox{]}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}},  }\item[{\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a93fd8ce9a53255417b859c85677944b7}\label{init__intrinsic__param__fisheye_8m_a93fd8ce9a53255417b859c85677944b7}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{ \textquotesingle{}Principal point\+:cc}]{ = {\ttfamily \mbox{[}\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}~\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}\mbox{]}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}},  }\item[{\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a9fabe77f6a06f1dca956f90d2d7e55dc}\label{init__intrinsic__param__fisheye_8m_a9fabe77f6a06f1dca956f90d2d7e55dc}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{ \textquotesingle{}Skew\+:alpha\+\_\+c}]{ = {\ttfamily \mbox{[}\%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}\mbox{]}=},  }\item[{angle of}]{pixel = {\ttfamily \%3.5\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a890c24221087beeb8c84a4abb363ce83}{f}}~\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{degrees\textbackslash{}n}}\textquotesingle{}},  }\item[{\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}}]{,  }\item[{90 -\/ atan(\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}) $\ast$180/}]{pi }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_adf370f16db049232603544dc8991497c}\label{init__intrinsic__param__fisheye_8m_adf370f16db049232603544dc8991497c}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\textbackslash{}n\+Calibration \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} after \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{initialization\+:\textbackslash{}n\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a19be99a4614791117d6a694876d6fad1}\label{init__intrinsic__param__fisheye_8m_a19be99a4614791117d6a694876d6fad1}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Initialization of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} -\/ Number of \mbox{\hyperlink{_compute_stripes_8m_a6015539f242e5c2c6487b379469629f5}{images\+:}}\%\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{d\textbackslash{}n}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a0959be2ec86a98bb7fc5bf9b4d07186e}\label{init__intrinsic__param__fisheye_8m_a0959be2ec86a98bb7fc5bf9b4d07186e}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!zero@{zero}}
+\index{zero@{zero}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{zero()}{zero()}}
+{\footnotesize\ttfamily initialize \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} zero (\begin{DoxyParamCaption}\item[{no}]{distortion }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_ae3bece344865e516031107abcc20e807}\label{init__intrinsic__param__fisheye_8m_ae3bece344865e516031107abcc20e807}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{saving__calib__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}{est\+\_\+aspect\+\_\+ratio}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a06ac44892c3ae10ecae191e7762c6527}\label{init__intrinsic__param__fisheye_8m_a06ac44892c3ae10ecae191e7762c6527}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}\label{init__intrinsic__param__fisheye_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!alpha\_c@{alpha\_c}}
+\index{alpha\_c@{alpha\_c}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_c}{alpha\_c}}
+{\footnotesize\ttfamily alpha\+\_\+c = \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a92f144e07493bc2c826a1b5df464b50a}{alpha\+\_\+init}}}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a92f144e07493bc2c826a1b5df464b50a}\label{init__intrinsic__param__fisheye_8m_a92f144e07493bc2c826a1b5df464b50a}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!alpha\_init@{alpha\_init}}
+\index{alpha\_init@{alpha\_init}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_init}{alpha\_init}}
+{\footnotesize\ttfamily alpha\+\_\+init = 0}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_acfebc4cca2097aa9325d1ed13765efb5}\label{init__intrinsic__param__fisheye_8m_acfebc4cca2097aa9325d1ed13765efb5}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!c\_init@{c\_init}}
+\index{c\_init@{c\_init}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{c\_init}{c\_init}}
+{\footnotesize\ttfamily c\+\_\+init = \mbox{[}\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a41fcba09f2bdcdf315ba4119dc7978dd}\label{init__intrinsic__param__fisheye_8m_a41fcba09f2bdcdf315ba4119dc7978dd}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!cc@{cc}}
+\index{cc@{cc}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily cc = \mbox{\hyperlink{init__intrinsic__param_8m_a522cf90bb2f02d4dc20dc79433bf7c74}{c\+\_\+init}}}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a0d062f92217e4e073995683900fdadcb}\label{init__intrinsic__param__fisheye_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a932b9343e43986762f7d96df8aaba60c}\label{init__intrinsic__param__fisheye_8m_a932b9343e43986762f7d96df8aaba60c}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!click\_calib@{click\_calib}}
+\index{click\_calib@{click\_calib}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{click\_calib}{click\_calib}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} click\+\_\+calib}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a35ec99091d3f725f2ccbd62f531e0d19}\label{init__intrinsic__param__fisheye_8m_a35ec99091d3f725f2ccbd62f531e0d19}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!distortion@{distortion}}
+\index{distortion@{distortion}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{distortion}{distortion}}
+{\footnotesize\ttfamily initial guess for principal \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}} and distortion}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}\label{init__intrinsic__param__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!end@{end}}
+\index{end@{end}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}\label{init__intrinsic__param__fisheye_8m_a6f29e4f7bfc6281a0c73b61eeb8a26f6}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!est\_aspect\_ratio@{est\_aspect\_ratio}}
+\index{est\_aspect\_ratio@{est\_aspect\_ratio}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{est\_aspect\_ratio}{est\_aspect\_ratio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} est\+\_\+aspect\+\_\+ratio = 1}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_afbaed4415d1b6411f75a72ed3c8ef907}\label{init__intrinsic__param__fisheye_8m_afbaed4415d1b6411f75a72ed3c8ef907}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!f\_init@{f\_init}}
+\index{f\_init@{f\_init}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{f\_init}{f\_init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}} = (max(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}},\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}) / pi) $\ast$ \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a72d54db2b27ce046aab6e6a414c407e9}\label{init__intrinsic__param__fisheye_8m_a72d54db2b27ce046aab6e6a414c407e9}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!fc@{fc}}
+\index{fc@{fc}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fc}{fc}}
+{\footnotesize\ttfamily fc = \mbox{\hyperlink{init__intrinsic__param_8m_a04adf8172d3678c9845c2ca519d5ad95}{f\+\_\+init}}}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a876123ad4edc9b30dc469ce9df30f84d}\label{init__intrinsic__param__fisheye_8m_a876123ad4edc9b30dc469ce9df30f84d}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!H\_2@{H\_2}}
+\index{H\_2@{H\_2}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{H\_2}{H\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} H\+\_\+2}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_ae70a6eb3e00c3a7a505e6c04fb27e152}\label{init__intrinsic__param__fisheye_8m_ae70a6eb3e00c3a7a505e6c04fb27e152}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!H\_3@{H\_3}}
+\index{H\_3@{H\_3}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{H\_3}{H\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} H\+\_\+3}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_afc984aa22c2099bf06c3660a112258e0}\label{init__intrinsic__param__fisheye_8m_afc984aa22c2099bf06c3660a112258e0}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!INPUT@{INPUT}}
+\index{INPUT@{INPUT}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{INPUT}{INPUT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script I\+N\+P\+UT}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_ae18b1980f35114a664a851f82b2f3098}\label{init__intrinsic__param__fisheye_8m_ae18b1980f35114a664a851f82b2f3098}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!inv\_KK@{inv\_KK}}
+\index{inv\_KK@{inv\_KK}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{inv\_KK}{inv\_KK}}
+{\footnotesize\ttfamily inv\+\_\+\+KK = inv(\mbox{\hyperlink{willson__read_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}})}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a50623e266f38fae07ba461855ebf2b68}\label{init__intrinsic__param__fisheye_8m_a50623e266f38fae07ba461855ebf2b68}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!k\_init@{k\_init}}
+\index{k\_init@{k\_init}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{k\_init}{k\_init}}
+{\footnotesize\ttfamily initialize \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} the \mbox{\hyperlink{click__ima__calib__no__read_8m_a60f19ad54362e45aedbd36b9a34e52f3}{center}} of the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} k\+\_\+init = \mbox{[}0}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a737dee4ef8e09247b0da47219bf453ff}\label{init__intrinsic__param__fisheye_8m_a737dee4ef8e09247b0da47219bf453ff}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!kc@{kc}}
+\index{kc@{kc}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{kc}{kc}}
+{\footnotesize\ttfamily kc = \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a50623e266f38fae07ba461855ebf2b68}{k\+\_\+init}}}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}\label{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!Method@{Method}}
+\index{Method@{Method}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{Method}{Method}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}} and \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} Method}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_afbd54a109fec66a96f33aca5358b0093}\label{init__intrinsic__param__fisheye_8m_afbd54a109fec66a96f33aca5358b0093}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!x\_2@{x\_2}}
+\index{x\_2@{x\_2}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{x\_2}{x\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script x\+\_\+2}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_abe2d5cda0a5a22d71df40aff966ad8c6}\label{init__intrinsic__param__fisheye_8m_abe2d5cda0a5a22d71df40aff966ad8c6}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!X\_2@{X\_2}}
+\index{X\_2@{X\_2}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{X\_2}{X\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script X\+\_\+2}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_a046fb6a0fa548900f68e5016dd536de3}\label{init__intrinsic__param__fisheye_8m_a046fb6a0fa548900f68e5016dd536de3}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!x\_3@{x\_3}}
+\index{x\_3@{x\_3}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{x\_3}{x\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script x\+\_\+3}
+
+\mbox{\Hypertarget{init__intrinsic__param__fisheye_8m_aae2a9eac695c85c1c0ddfc3e94558084}\label{init__intrinsic__param__fisheye_8m_aae2a9eac695c85c1c0ddfc3e94558084}} 
+\index{init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}!X\_3@{X\_3}}
+\index{X\_3@{X\_3}!init\_intrinsic\_param\_fisheye.m@{init\_intrinsic\_param\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{X\_3}{X\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__fisheye_8m_a756d3a26d07cc012c3df66014cb4e01d}{init\+\_\+intrinsic\+\_\+param\+\_\+fisheye}} \mbox{\hyperlink{error__analysis_8m_a191666a0178ccd3215d4049297e3a116}{Initialization}} of the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} Runs as \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} script X\+\_\+3}
+

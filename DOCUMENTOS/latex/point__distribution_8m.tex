@@ -1,0 +1,109 @@
+\hypertarget{point__distribution_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/point\+\_\+distribution.m File Reference}
+\label{point__distribution_8m}\index{D:/TrackEsferas/NavarQA/calib/point\_distribution.m@{D:/TrackEsferas/NavarQA/calib/point\_distribution.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{point__distribution_8m_a1d33d485fe4c5955387fcdc745c4f065}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{})$\vert$$\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}}(\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{point__distribution_8m_a551836e3ade7a54004ebc9b7bdf192a3}{fprintf}} (1, \textquotesingle{}No \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{available.\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{point__distribution_8m_a00c73ddeccac21e65ed337de2a6635ea}{$\sim$exist}} (\mbox{[}\textquotesingle{}ex\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}(1))\mbox{]})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{point__distribution_8m_a426ff89164e72d536429512c855d2af0}{fprintf}} (1, \textquotesingle{}Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} calibrate before analysing reprojection error. Maybe need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{file.\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{point__distribution_8m_a19dc8f9cdeda4275f0dd155cc42cb1c6}{figure}} (6)
+\item 
+for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{point__distribution_8m_ad0bf628aaf21127b443821ea1ba947f8}{active\+\_\+images}} (\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \&\mbox{\hyperlink{willson__read_8m_a2d01ecfe1f18cf1d4d5fcb28d3b72681}{eval}}(\mbox{[}\textquotesingle{}$\sim$\mbox{\hyperlink{recomp__corner__calib__no__read_8m_ae2d0d938b49d71b3f03786c5ba342c96}{isnan}}(x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{}(1
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Point Distribution \mbox{\hyperlink{point__distribution_8m_a2582613e1acb764ebf1cb05bf6f39cbf}{colors}} = \textquotesingle{}brgkcm\textquotesingle{}
+\item 
+\mbox{\hyperlink{point__distribution_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{point__distribution_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{point__distribution_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+for \mbox{\hyperlink{point__distribution_8m_af29949bd63fb009eacab5efd11399e40}{kk}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{point__distribution_8m_ad0bf628aaf21127b443821ea1ba947f8}\label{point__distribution_8m_ad0bf628aaf21127b443821ea1ba947f8}} 
+\index{point\_distribution.m@{point\_distribution.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}}
+{\footnotesize\ttfamily for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} active\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption}) \&}
+
+\mbox{\Hypertarget{point__distribution_8m_a19dc8f9cdeda4275f0dd155cc42cb1c6}\label{point__distribution_8m_a19dc8f9cdeda4275f0dd155cc42cb1c6}} 
+\index{point\_distribution.m@{point\_distribution.m}!figure@{figure}}
+\index{figure@{figure}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{6}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{point__distribution_8m_a426ff89164e72d536429512c855d2af0}\label{point__distribution_8m_a426ff89164e72d536429512c855d2af0}} 
+\index{point\_distribution.m@{point\_distribution.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} calibrate before analysing reprojection error. Maybe need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{scanner__calibration__script_8m_a34062ad532d204c69c819ca7c9fe20a2}{Calib\+\_\+\+Results.\+mat}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{file.\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{point__distribution_8m_a551836e3ade7a54004ebc9b7bdf192a3}\label{point__distribution_8m_a551836e3ade7a54004ebc9b7bdf192a3}} 
+\index{point\_distribution.m@{point\_distribution.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}No \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{available.\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{point__distribution_8m_a1d33d485fe4c5955387fcdc745c4f065}\label{point__distribution_8m_a1d33d485fe4c5955387fcdc745c4f065}} 
+\index{point\_distribution.m@{point\_distribution.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{point__distribution_8m_a00c73ddeccac21e65ed337de2a6635ea}\label{point__distribution_8m_a00c73ddeccac21e65ed337de2a6635ea}} 
+\index{point\_distribution.m@{point\_distribution.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{point__distribution_8m_a0d062f92217e4e073995683900fdadcb}\label{point__distribution_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{point\_distribution.m@{point\_distribution.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{point__distribution_8m_a2582613e1acb764ebf1cb05bf6f39cbf}\label{point__distribution_8m_a2582613e1acb764ebf1cb05bf6f39cbf}} 
+\index{point\_distribution.m@{point\_distribution.m}!colors@{colors}}
+\index{colors@{colors}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{colors}{colors}}
+{\footnotesize\ttfamily Point Distribution colors = \textquotesingle{}brgkcm\textquotesingle{}}
+
+\mbox{\Hypertarget{point__distribution_8m_afb358f48b1646c750fb9da6c6585be2b}\label{point__distribution_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{point\_distribution.m@{point\_distribution.m}!end@{end}}
+\index{end@{end}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{point__distribution_8m_af29949bd63fb009eacab5efd11399e40}\label{point__distribution_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{point\_distribution.m@{point\_distribution.m}!kk@{kk}}
+\index{kk@{kk}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=1:\mbox{\hyperlink{add__suppress_8m_a5c344952fc5d4209f5a4cd0922c051d0}{n\_ima}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} \mbox{\hyperlink{analyse__error_8m_a24b06316e04bc706a3496f036ae493a1}{exist}}([\textcolor{stringliteral}{'x\_'} num2str(\mbox{\hyperlink{point__distribution_8m_af29949bd63fb009eacab5efd11399e40}{kk}})])}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{point__distribution_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{point__distribution_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{point\_distribution.m@{point\_distribution.m}!return@{return}}
+\index{return@{return}!point\_distribution.m@{point\_distribution.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+

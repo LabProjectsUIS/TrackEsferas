@@ -1,0 +1,566 @@
+\hypertarget{visualize__distortions_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/visualize\+\_\+distortions.m File Reference}
+\label{visualize__distortions_8m}\index{D:/TrackEsferas/NavarQA/calib/visualize\_distortions.m@{D:/TrackEsferas/NavarQA/calib/visualize\_distortions.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} (2) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}} (1, \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}}))\mbox{]}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9b967729b78739b615c14dfd91406ae0}{rays}} (2,\+:)./rays(3
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{visualize__distortions_8m_a9c3001b997070b90bbb569c86faa3b93}{ishandle}} (\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{visualize__distortions_8m_a2a8f0788aae7b82438aa33ec213e8487}{close}} (\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a2c8fbd43faa2062ebf2d8f2dae0e7723}{figure}} (\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a4e0b1adec3bae900c4ce36442b332a06}{plot}} (\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)+1, \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2)+1, \textquotesingle{}o\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}} ((\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1)/2+1,(\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}-\/1)/2+1, \textquotesingle{}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a5e0a005290775f709423200eaa3765c5}{clabel}} (\mbox{\hyperlink{ginput4_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}{C}}, \mbox{\hyperlink{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}{h}}) =contour(mx,my,\mbox{\hyperlink{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}{dr}},\textquotesingle{}\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a683ca114dbf42558857bf8820d1a868d}{title}} (\mbox{\hyperlink{visualize__distortions_8m_a7c08555be053a9c1c5c898c62183c3db}{title2}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} (\mbox{[}1 \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}} 1 \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}\mbox{]}) axis equal
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a8f2b0e74084d6190cb803e1d7215e1fd}{position}} (1)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a55a5df3a7b663404df4842cd61f2be6e}{position}} (2)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}} (3\+:4)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a6bd3c707bbf5f3978cab10f707c19f6b}{set}} (gca, \textquotesingle{}\mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}}\textquotesingle{}, \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a73105d23a8abf3a6855704bcda0d3ea4}{set}} (gca, \textquotesingle{}fontsize\textquotesingle{}, 8, \textquotesingle{}fontname\textquotesingle{}, \textquotesingle{}clean\textquotesingle{}) gh = gca
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a1a71fdce7b38f046a4365eeeb5e4025b}{axes}} (\textquotesingle{}\mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}}\textquotesingle{},\mbox{[}0 0 1 1\mbox{]}, \textquotesingle{}visible\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{visualize__distortions_8m_a835accca41274fb237599d9b3c117fcf}{off}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a7efac2257bdf86a26a87b677f6b08a56}{set}} (\mbox{\hyperlink{rodrigues_8m_ae9382b39fa1c6777321aa83183037a20}{th}}, \textquotesingle{}Font\+Name\textquotesingle{}, \textquotesingle{}fixed\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a65d6a22eb2b054f6f03002eaa386ac24}{axes}} (gh)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_affb26ce1121cb2d5c22bc1cc80ad2f0b}{set}} (\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}}, \textquotesingle{}color\textquotesingle{},\mbox{[}1, 1, 1\mbox{]})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{visualize__distortions_8m_ab4ecccd8831521a00395af96e3dc57cd}{ishandle}} (\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{visualize__distortions_8m_ac0cb099b29a797e8986421e72a573954}{close}} (\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_ad7ec1451e9f0317c7f8b40cf5ab959e3}{figure}} (\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_ad2504a7c3c0a83b54911aafddede1957}{set}} (\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}}, \textquotesingle{}color\textquotesingle{},\mbox{[}1, 1, 1\mbox{]})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{visualize__distortions_8m_a7a564cb37d090d109fa80e7641ebf8c5}{ishandle}} (\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{visualize__distortions_8m_aafd14e8ae67774668ba8b3e7b77423fe}{close}} (\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_afc03d3e6e2a8d5e670731b97d0b0c2fe}{figure}} (\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} (\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}}, \textquotesingle{}color\textquotesingle{},\mbox{[}1, 1, 1\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+visualize\+\_\+distortions \mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}} script \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} run in conjunction with \mbox{\hyperlink{calib__gui_8m_ad3960a011141f44a9bb7891cf9c413fe}{calib\+\_\+gui}} in T\+O\+O\+L\+B\+O\+X\+\_\+calib \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}} the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} models This \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} slightly modified version of the script plot\+\_\+\+C\+C\+T\+\_\+distortion \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} written by Mr Oshel Thank you Mr Oshel for your \mbox{\hyperlink{visualize__distortions_8m_a8a4e0c1da6c7318c4d4f3a3ab874fd8a}{contribution}} \mbox{[}mx, my\mbox{]} = meshgrid(0\+:\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}/20\+:(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1),0\+:\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}/20\+:(\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}-\/1))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}} =\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(mx\textquotesingle{},nnx$\ast$nny,1)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}{py}} =\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(my\textquotesingle{},nnx$\ast$nny,1)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a0375211f493f83926a6983a6cca0872e}{kk\+\_\+new}} =\mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}$\ast$\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a35f5bb2f48f36626208db2076cc62589}{rays}} =inv(\mbox{\hyperlink{visualize__distortions_8m_a0375211f493f83926a6983a6cca0872e}{kk\+\_\+new}})$\ast$\mbox{[}\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}}\textquotesingle{};\mbox{\hyperlink{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}{py}}\textquotesingle{}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} =\mbox{[}\mbox{\hyperlink{visualize__distortions_8m_a9b967729b78739b615c14dfd91406ae0}{rays}}(1,\+:)./\mbox{\hyperlink{visualize__distortions_8m_a9b967729b78739b615c14dfd91406ae0}{rays}}(3,\+:)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a3e9a3c9fc364db6e709dc46ff16d7e81}{\+\_\+\+\_\+pad36\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a7c08555be053a9c1c5c898c62183c3db}{title2}} =strcat(\textquotesingle{}Complete Distortion Model\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}} = 2
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_aec70d633e7619583eb3a08a7afd638b4}{clf}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} =apply\+\_\+distortion(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a62b17cd17ed03b9b88e57b115a22e6c7}{px2}} =\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1)$\ast$(\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}(1,\+:)+\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}$\ast$\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}(2,\+:))+\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a90badef17a589fb77576d25d0fed2ef2}{py2}} =\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(2)$\ast$\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}(2,\+:)+\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2)
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}} =\mbox{\hyperlink{visualize__distortions_8m_a62b17cd17ed03b9b88e57b115a22e6c7}{px2}}\textquotesingle{}-\/\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}} =\mbox{\hyperlink{visualize__distortions_8m_a90badef17a589fb77576d25d0fed2ef2}{py2}}\textquotesingle{}-\/\mbox{\hyperlink{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}{py}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a7e56035a736d269ad670f312496a0846}{Q}} =quiver(\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}}+1,\mbox{\hyperlink{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}{py}}+1,\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}},\mbox{\hyperlink{willson__read_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}})
+\item 
+hold \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}{dr}} =\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(sqrt((dx.$\ast$\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}})+(dy.$\ast$\mbox{\hyperlink{willson__read_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}})),nny,nnx)\textquotesingle{}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a2b75ac7392a4eb392eab9daa93b140de}{Mean}} =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}{dr}}))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a3c9f309e2c2ceec700bb1f891d0b5d79}{Max}} =max(max(\mbox{\hyperlink{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}{dr}}))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} \mbox{\hyperlink{visualize__distortions_8m_ae24f77ff12cae6a0738f32d207c5bfdd}{ij}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} \mbox{\hyperlink{visualize__distortions_8m_a1a71f5e406b211ed616173276484b78b}{tight}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a7130b1618285588513fd1ff97884b9d9}{position}} =get(gca,\textquotesingle{}Position\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a5420960a394e0fddefe53197bf2ca095}{shr}} = 0.\+9
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a85341ba804c0144b2ef96f42d5c4e802}{line1}} =sprintf(\textquotesingle{}Principal Point = (\%0.\+6g, \%0.\+6g)\textquotesingle{},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1),\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_aa845dfb550c1c69d070c649a78fa1b89}{line2}} =sprintf(\textquotesingle{}Focal Length = (\%0.\+6g, \%0.\+6g)\textquotesingle{},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1),\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(2))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_aee7f773952e31ae89faaae1561beb8ab}{line3}} =sprintf(\textquotesingle{}Radial coefficients = (\%0.\+4g, \%0.\+4g, \%0.\+4g)\textquotesingle{},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(1),\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(2),\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(5))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a56c87c3d30055e16a49cbb3d6188c5d0}{line4}} =sprintf(\textquotesingle{}Tangential coefficients = (\%0.\+4g, \%0.\+4g)\textquotesingle{},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(3),\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(4))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_ad50e884e96142f242fbcadd88b929689}{line5}} =sprintf(\textquotesingle{}+/-\/ \mbox{[}\%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}}(1),\mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}}(2))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_aa9214b5574b8d0dca4a64ff0da9738ff}{line6}} =sprintf(\textquotesingle{}+/-\/ \mbox{[}\%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}}(1),\mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}}(2))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9e7cc2c2a12e5a19152dc6c434423de8}{line7}} =sprintf(\textquotesingle{}+/-\/ \mbox{[}\%0.\+4g, \%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(1),\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(2),\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(5))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a299feba3e3acf7f9b6730fbaffbc3dec}{line8}} =sprintf(\textquotesingle{}+/-\/ \mbox{[}\%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(3),\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(4))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a948c5cb1a60073dcb3d5ad3feb0f0963}{line9}} =sprintf(\textquotesingle{}Pixel \mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}} = \mbox{[}\%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{saving__calib__no__results_8m_a467e74ecf18ed79931e8240704becc5c}{err\+\_\+std}}(1),\mbox{\hyperlink{saving__calib__no__results_8m_a467e74ecf18ed79931e8240704becc5c}{err\+\_\+std}}(2))
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a7464db7614952632370a0c08ed8f5246}{line10}} =sprintf(\textquotesingle{}\mbox{\hyperlink{project__points__fisheye_8m_aba157a5b7437b6a17d32448a413c2d74}{Skew}} = \%0.\+4g\textquotesingle{},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a2dc3e0c708ae4df4d24a4f46768039b6}{line11}} =sprintf(\textquotesingle{}+/-\/ \%0.\+4g\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a4c7354b9bcf8e1c1ff1c0d28b0d4276a}{th}} =\mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}}(0.\+11,0,\{\mbox{\hyperlink{visualize__distortions_8m_a948c5cb1a60073dcb3d5ad3feb0f0963}{line9}},\mbox{\hyperlink{visualize__distortions_8m_aa845dfb550c1c69d070c649a78fa1b89}{line2}},\mbox{\hyperlink{visualize__distortions_8m_a85341ba804c0144b2ef96f42d5c4e802}{line1}},\mbox{\hyperlink{visualize__distortions_8m_a7464db7614952632370a0c08ed8f5246}{line10}},\mbox{\hyperlink{visualize__distortions_8m_aee7f773952e31ae89faaae1561beb8ab}{line3}},\mbox{\hyperlink{visualize__distortions_8m_a56c87c3d30055e16a49cbb3d6188c5d0}{line4}}\},\textquotesingle{}horizontalalignment\textquotesingle{},\textquotesingle{}left\textquotesingle{},\textquotesingle{}verticalalignment\textquotesingle{},\textquotesingle{}bottom\textquotesingle{},\textquotesingle{}fontsize\textquotesingle{},8,\textquotesingle{}fontname\textquotesingle{},\textquotesingle{}clean\textquotesingle{})
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a084a0b5d9ac63dba073658e62cfe99e9}{th2}} =\mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}}(0.\+9,0.,\{\mbox{\hyperlink{visualize__distortions_8m_aa9214b5574b8d0dca4a64ff0da9738ff}{line6}},\mbox{\hyperlink{visualize__distortions_8m_ad50e884e96142f242fbcadd88b929689}{line5}},\mbox{\hyperlink{visualize__distortions_8m_a2dc3e0c708ae4df4d24a4f46768039b6}{line11}},\mbox{\hyperlink{visualize__distortions_8m_a9e7cc2c2a12e5a19152dc6c434423de8}{line7}},\mbox{\hyperlink{visualize__distortions_8m_a299feba3e3acf7f9b6730fbaffbc3dec}{line8}}\},\textquotesingle{}horizontalalignment\textquotesingle{},\textquotesingle{}right\textquotesingle{},\textquotesingle{}verticalalignment\textquotesingle{},\textquotesingle{}bottom\textquotesingle{},\textquotesingle{}fontsize\textquotesingle{},8,\textquotesingle{}fontname\textquotesingle{},\textquotesingle{}clean\textquotesingle{})
+\item 
+hold \mbox{\hyperlink{visualize__distortions_8m_a835accca41274fb237599d9b3c117fcf}{off}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}} = 3
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{visualize__distortions_8m_a1a71fdce7b38f046a4365eeeb5e4025b}\label{visualize__distortions_8m_a1a71fdce7b38f046a4365eeeb5e4025b}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!axes@{axes}}
+\index{axes@{axes}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{axes()}{axes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily axes (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}}\textquotesingle{}}]{,  }\item[{\textquotesingle{}visible\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{visualize__distortions_8m_a835accca41274fb237599d9b3c117fcf}{off}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a65d6a22eb2b054f6f03002eaa386ac24}\label{visualize__distortions_8m_a65d6a22eb2b054f6f03002eaa386ac24}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!axes@{axes}}
+\index{axes@{axes}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{axes()}{axes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily axes (\begin{DoxyParamCaption}\item[{gh}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}\label{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!axis@{axis}}
+\index{axis@{axis}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{axis()}{axis()}}
+{\footnotesize\ttfamily axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a5e0a005290775f709423200eaa3765c5}\label{visualize__distortions_8m_a5e0a005290775f709423200eaa3765c5}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!clabel@{clabel}}
+\index{clabel@{clabel}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{clabel()}{clabel()}}
+{\footnotesize\ttfamily clabel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ginput4_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}{C}}}]{,  }\item[{\mbox{\hyperlink{scanning__script_8m_a5e36941b3d856737e81516acd45edc50}{h}}}]{ }\end{DoxyParamCaption}) =contour(mx,my,\mbox{\hyperlink{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}{dr}},\textquotesingle{}\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}\textquotesingle{})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a2a8f0788aae7b82438aa33ec213e8487}\label{visualize__distortions_8m_a2a8f0788aae7b82438aa33ec213e8487}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!close@{close}}
+\index{close@{close}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_ac0cb099b29a797e8986421e72a573954}\label{visualize__distortions_8m_ac0cb099b29a797e8986421e72a573954}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!close@{close}}
+\index{close@{close}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_aafd14e8ae67774668ba8b3e7b77423fe}\label{visualize__distortions_8m_aafd14e8ae67774668ba8b3e7b77423fe}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!close@{close}}
+\index{close@{close}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a97b90595eac8d87ee5eb4e52aa624f1d}\label{visualize__distortions_8m_a97b90595eac8d87ee5eb4e52aa624f1d}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!fc@{fc}}
+\index{fc@{fc}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{fc()}{fc()}}
+{\footnotesize\ttfamily fc (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a2c8fbd43faa2062ebf2d8f2dae0e7723}\label{visualize__distortions_8m_a2c8fbd43faa2062ebf2d8f2dae0e7723}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!figure@{figure}}
+\index{figure@{figure}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_ad7ec1451e9f0317c7f8b40cf5ab959e3}\label{visualize__distortions_8m_ad7ec1451e9f0317c7f8b40cf5ab959e3}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!figure@{figure}}
+\index{figure@{figure}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_afc03d3e6e2a8d5e670731b97d0b0c2fe}\label{visualize__distortions_8m_afc03d3e6e2a8d5e670731b97d0b0c2fe}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!figure@{figure}}
+\index{figure@{figure}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a9c3001b997070b90bbb569c86faa3b93}\label{visualize__distortions_8m_a9c3001b997070b90bbb569c86faa3b93}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!ishandle@{ishandle}}
+\index{ishandle@{ishandle}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{ishandle()}{ishandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} ishandle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_ab4ecccd8831521a00395af96e3dc57cd}\label{visualize__distortions_8m_ab4ecccd8831521a00395af96e3dc57cd}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!ishandle@{ishandle}}
+\index{ishandle@{ishandle}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{ishandle()}{ishandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} ishandle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a7a564cb37d090d109fa80e7641ebf8c5}\label{visualize__distortions_8m_a7a564cb37d090d109fa80e7641ebf8c5}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!ishandle@{ishandle}}
+\index{ishandle@{ishandle}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{ishandle()}{ishandle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} ishandle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}\label{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!ones@{ones}}
+\index{ones@{ones}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}\label{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!plot@{plot}}
+\index{plot@{plot}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1)/2+}]{1,  }\item[{(\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}-\/1)/2+}]{1,  }\item[{\textquotesingle{}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a4e0b1adec3bae900c4ce36442b332a06}\label{visualize__distortions_8m_a4e0b1adec3bae900c4ce36442b332a06}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!plot@{plot}}
+\index{plot@{plot}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)+}]{1,  }\item[{\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2)+}]{1,  }\item[{\textquotesingle{}o\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a8f2b0e74084d6190cb803e1d7215e1fd}\label{visualize__distortions_8m_a8f2b0e74084d6190cb803e1d7215e1fd}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!position@{position}}
+\index{position@{position}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily position (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a55a5df3a7b663404df4842cd61f2be6e}\label{visualize__distortions_8m_a55a5df3a7b663404df4842cd61f2be6e}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!position@{position}}
+\index{position@{position}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily position (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}\label{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!position@{position}}
+\index{position@{position}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily position (\begin{DoxyParamCaption}\item[{3\+:4}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a9b967729b78739b615c14dfd91406ae0}\label{visualize__distortions_8m_a9b967729b78739b615c14dfd91406ae0}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!rays@{rays}}
+\index{rays@{rays}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{rays()}{rays()}}
+{\footnotesize\ttfamily rays (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_affb26ce1121cb2d5c22bc1cc80ad2f0b}\label{visualize__distortions_8m_affb26ce1121cb2d5c22bc1cc80ad2f0b}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!set@{set}}
+\index{set@{set}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}{fh1}}}]{,  }\item[{\textquotesingle{}color\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_ad2504a7c3c0a83b54911aafddede1957}\label{visualize__distortions_8m_ad2504a7c3c0a83b54911aafddede1957}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!set@{set}}
+\index{set@{set}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}{fh2}}}]{,  }\item[{\textquotesingle{}color\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}\label{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!set@{set}}
+\index{set@{set}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}{fh3}}}]{,  }\item[{\textquotesingle{}color\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a73105d23a8abf3a6855704bcda0d3ea4}\label{visualize__distortions_8m_a73105d23a8abf3a6855704bcda0d3ea4}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!set@{set}}
+\index{set@{set}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{gca}]{,  }\item[{\textquotesingle{}fontsize\textquotesingle{}}]{,  }\item[{8}]{,  }\item[{\textquotesingle{}fontname\textquotesingle{}}]{,  }\item[{\textquotesingle{}clean\textquotesingle{}}]{ }\end{DoxyParamCaption}) = gca}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a6bd3c707bbf5f3978cab10f707c19f6b}\label{visualize__distortions_8m_a6bd3c707bbf5f3978cab10f707c19f6b}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!set@{set}}
+\index{set@{set}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{gca}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a7efac2257bdf86a26a87b677f6b08a56}\label{visualize__distortions_8m_a7efac2257bdf86a26a87b677f6b08a56}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!set@{set}}
+\index{set@{set}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{rodrigues_8m_ae9382b39fa1c6777321aa83183037a20}{th}}}]{,  }\item[{\textquotesingle{}Font\+Name\textquotesingle{}}]{,  }\item[{\textquotesingle{}fixed\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a683ca114dbf42558857bf8820d1a868d}\label{visualize__distortions_8m_a683ca114dbf42558857bf8820d1a868d}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!title@{title}}
+\index{title@{title}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visualize__distortions_8m_a7c08555be053a9c1c5c898c62183c3db}{title2}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{visualize__distortions_8m_a3e9a3c9fc364db6e709dc46ff16d7e81}\label{visualize__distortions_8m_a3e9a3c9fc364db6e709dc46ff16d7e81}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!\_\_pad36\_\_@{\_\_pad36\_\_}}
+\index{\_\_pad36\_\_@{\_\_pad36\_\_}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad36\_\_}{\_\_pad36\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad36\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{visualize__distortions_8m_aec70d633e7619583eb3a08a7afd638b4}\label{visualize__distortions_8m_aec70d633e7619583eb3a08a7afd638b4}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!clf@{clf}}
+\index{clf@{clf}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{clf}{clf}}
+{\footnotesize\ttfamily clf}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a8a4e0c1da6c7318c4d4f3a3ab874fd8a}\label{visualize__distortions_8m_a8a4e0c1da6c7318c4d4f3a3ab874fd8a}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!contribution@{contribution}}
+\index{contribution@{contribution}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{contribution}{contribution}}
+{\footnotesize\ttfamily visualize\+\_\+distortions \mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}} script \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} run in conjunction with \mbox{\hyperlink{calib__gui_8m_ad3960a011141f44a9bb7891cf9c413fe}{calib\+\_\+gui}} in T\+O\+O\+L\+B\+O\+X\+\_\+calib \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{visualize__distortions_8m_a529663cd9ab0a3068b2b1e00d96de094}{plot}} the \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} models This \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} slightly modified version of the script plot\+\_\+\+C\+C\+T\+\_\+distortion \mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}} written by Mr Oshel Thank you Mr Oshel for your contribution\mbox{[}mx, my\mbox{]} = meshgrid(0\+:\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}/20\+:(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1),0\+:\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}/20\+:(\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}-\/1))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}\label{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!dr@{dr}}
+\index{dr@{dr}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{dr}{dr}}
+{\footnotesize\ttfamily dr =\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(sqrt((dx.$\ast$\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}})+(dy.$\ast$\mbox{\hyperlink{willson__read_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}})),nny,nnx)\textquotesingle{}}
+
+\mbox{\Hypertarget{visualize__distortions_8m_aacddc911cdfe5cd5ec97b084754542d4}\label{visualize__distortions_8m_aacddc911cdfe5cd5ec97b084754542d4}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!dx@{dx}}
+\index{dx@{dx}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily dx =\mbox{\hyperlink{visualize__distortions_8m_a62b17cd17ed03b9b88e57b115a22e6c7}{px2}}\textquotesingle{}-\/\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}}}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a22b1a06ae09d552a5ca668a07885ebf1}\label{visualize__distortions_8m_a22b1a06ae09d552a5ca668a07885ebf1}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!dy@{dy}}
+\index{dy@{dy}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily dy =\mbox{\hyperlink{visualize__distortions_8m_a90badef17a589fb77576d25d0fed2ef2}{py2}}\textquotesingle{}-\/\mbox{\hyperlink{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}{py}}}
+
+\mbox{\Hypertarget{visualize__distortions_8m_afb358f48b1646c750fb9da6c6585be2b}\label{visualize__distortions_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!end@{end}}
+\index{end@{end}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}\label{visualize__distortions_8m_a91db77aeebdfa8eccac51caf7852e5d1}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!fh1@{fh1}}
+\index{fh1@{fh1}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{fh1}{fh1}}
+{\footnotesize\ttfamily fh1 = 2}
+
+\mbox{\Hypertarget{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}\label{visualize__distortions_8m_ace6ab97375851c457962a1383d93554b}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!fh2@{fh2}}
+\index{fh2@{fh2}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{fh2}{fh2}}
+{\footnotesize\ttfamily fh2 = 3}
+
+\mbox{\Hypertarget{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}\label{visualize__distortions_8m_ad786f5e065c48f7577b274aa213ebc9d}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!fh3@{fh3}}
+\index{fh3@{fh3}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{fh3}{fh3}}
+{\footnotesize\ttfamily fh3 = 4}
+
+\mbox{\Hypertarget{visualize__distortions_8m_ae24f77ff12cae6a0738f32d207c5bfdd}\label{visualize__distortions_8m_ae24f77ff12cae6a0738f32d207c5bfdd}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!ij@{ij}}
+\index{ij@{ij}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{ij}{ij}}
+{\footnotesize\ttfamily \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} ij}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a0375211f493f83926a6983a6cca0872e}\label{visualize__distortions_8m_a0375211f493f83926a6983a6cca0872e}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!kk\_new@{kk\_new}}
+\index{kk\_new@{kk\_new}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{kk\_new}{kk\_new}}
+{\footnotesize\ttfamily kk\+\_\+new =\mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}$\ast$\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a85341ba804c0144b2ef96f42d5c4e802}\label{visualize__distortions_8m_a85341ba804c0144b2ef96f42d5c4e802}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line1@{line1}}
+\index{line1@{line1}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line1}{line1}}
+{\footnotesize\ttfamily line1 =sprintf(\textquotesingle{}Principal Point = (\%0.\+6g, \%0.\+6g)\textquotesingle{},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1),\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a7464db7614952632370a0c08ed8f5246}\label{visualize__distortions_8m_a7464db7614952632370a0c08ed8f5246}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line10@{line10}}
+\index{line10@{line10}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line10}{line10}}
+{\footnotesize\ttfamily line10 =sprintf(\textquotesingle{}\mbox{\hyperlink{project__points__fisheye_8m_aba157a5b7437b6a17d32448a413c2d74}{Skew}} = \%0.\+4g\textquotesingle{},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a2dc3e0c708ae4df4d24a4f46768039b6}\label{visualize__distortions_8m_a2dc3e0c708ae4df4d24a4f46768039b6}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line11@{line11}}
+\index{line11@{line11}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line11}{line11}}
+{\footnotesize\ttfamily line11 =sprintf(\textquotesingle{}+/-\/ \%0.\+4g\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a0e2dae28e3d7505808bb2f47824bc2a2}{alpha\+\_\+c\+\_\+error}})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_aa845dfb550c1c69d070c649a78fa1b89}\label{visualize__distortions_8m_aa845dfb550c1c69d070c649a78fa1b89}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line2@{line2}}
+\index{line2@{line2}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line2}{line2}}
+{\footnotesize\ttfamily line2 =sprintf(\textquotesingle{}Focal Length = (\%0.\+6g, \%0.\+6g)\textquotesingle{},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1),\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(2))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_aee7f773952e31ae89faaae1561beb8ab}\label{visualize__distortions_8m_aee7f773952e31ae89faaae1561beb8ab}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line3@{line3}}
+\index{line3@{line3}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line3}{line3}}
+{\footnotesize\ttfamily line3 =sprintf(\textquotesingle{}Radial coefficients = (\%0.\+4g, \%0.\+4g, \%0.\+4g)\textquotesingle{},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(1),\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(2),\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(5))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a56c87c3d30055e16a49cbb3d6188c5d0}\label{visualize__distortions_8m_a56c87c3d30055e16a49cbb3d6188c5d0}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line4@{line4}}
+\index{line4@{line4}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line4}{line4}}
+{\footnotesize\ttfamily line4 =sprintf(\textquotesingle{}Tangential coefficients = (\%0.\+4g, \%0.\+4g)\textquotesingle{},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(3),\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}(4))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_ad50e884e96142f242fbcadd88b929689}\label{visualize__distortions_8m_ad50e884e96142f242fbcadd88b929689}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line5@{line5}}
+\index{line5@{line5}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line5}{line5}}
+{\footnotesize\ttfamily line5 =sprintf(\textquotesingle{}+/-\/ \mbox{[}\%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}}(1),\mbox{\hyperlink{scanner__calibration__script_8m_a7494a839f85e504913610f06e84c525a}{cc\+\_\+error}}(2))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_aa9214b5574b8d0dca4a64ff0da9738ff}\label{visualize__distortions_8m_aa9214b5574b8d0dca4a64ff0da9738ff}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line6@{line6}}
+\index{line6@{line6}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line6}{line6}}
+{\footnotesize\ttfamily line6 =sprintf(\textquotesingle{}+/-\/ \mbox{[}\%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}}(1),\mbox{\hyperlink{scanner__calibration__script_8m_a1893775f5da5b608049b8240d8433a85}{fc\+\_\+error}}(2))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a9e7cc2c2a12e5a19152dc6c434423de8}\label{visualize__distortions_8m_a9e7cc2c2a12e5a19152dc6c434423de8}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line7@{line7}}
+\index{line7@{line7}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line7}{line7}}
+{\footnotesize\ttfamily line7 =sprintf(\textquotesingle{}+/-\/ \mbox{[}\%0.\+4g, \%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(1),\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(2),\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(5))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a299feba3e3acf7f9b6730fbaffbc3dec}\label{visualize__distortions_8m_a299feba3e3acf7f9b6730fbaffbc3dec}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line8@{line8}}
+\index{line8@{line8}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line8}{line8}}
+{\footnotesize\ttfamily line8 =sprintf(\textquotesingle{}+/-\/ \mbox{[}\%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(3),\mbox{\hyperlink{scanner__calibration__script_8m_a7313be71a16c2a7058951ec29e43be7f}{kc\+\_\+error}}(4))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a948c5cb1a60073dcb3d5ad3feb0f0963}\label{visualize__distortions_8m_a948c5cb1a60073dcb3d5ad3feb0f0963}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!line9@{line9}}
+\index{line9@{line9}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{line9}{line9}}
+{\footnotesize\ttfamily line9 =sprintf(\textquotesingle{}Pixel \mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}} = \mbox{[}\%0.\+4g, \%0.\+4g\mbox{]}\textquotesingle{},\mbox{\hyperlink{saving__calib__no__results_8m_a467e74ecf18ed79931e8240704becc5c}{err\+\_\+std}}(1),\mbox{\hyperlink{saving__calib__no__results_8m_a467e74ecf18ed79931e8240704becc5c}{err\+\_\+std}}(2))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a3c9f309e2c2ceec700bb1f891d0b5d79}\label{visualize__distortions_8m_a3c9f309e2c2ceec700bb1f891d0b5d79}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!Max@{Max}}
+\index{Max@{Max}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{Max}{Max}}
+{\footnotesize\ttfamily Max =max(max(\mbox{\hyperlink{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}{dr}}))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a2b75ac7392a4eb392eab9daa93b140de}\label{visualize__distortions_8m_a2b75ac7392a4eb392eab9daa93b140de}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!Mean@{Mean}}
+\index{Mean@{Mean}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{Mean}{Mean}}
+{\footnotesize\ttfamily Mean =\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{rectify__stereo__pair_8m_ae17ade08eaca7585ddb5eaf6d08c5018}{mean}}(\mbox{\hyperlink{visualize__distortions_8m_acb2e4722cf192db3523c59eff43b6450}{dr}}))}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a835accca41274fb237599d9b3c117fcf}\label{visualize__distortions_8m_a835accca41274fb237599d9b3c117fcf}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!off@{off}}
+\index{off@{off}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{off}{off}}
+{\footnotesize\ttfamily hold off}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}\label{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!on@{on}}
+\index{on@{on}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily hold on}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a7130b1618285588513fd1ff97884b9d9}\label{visualize__distortions_8m_a7130b1618285588513fd1ff97884b9d9}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!position@{position}}
+\index{position@{position}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily position =get(gca,\textquotesingle{}Position\textquotesingle{})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}\label{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!px@{px}}
+\index{px@{px}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{px}{px}}
+{\footnotesize\ttfamily px =\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(mx\textquotesingle{},nnx$\ast$nny,1)}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a62b17cd17ed03b9b88e57b115a22e6c7}\label{visualize__distortions_8m_a62b17cd17ed03b9b88e57b115a22e6c7}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!px2@{px2}}
+\index{px2@{px2}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{px2}{px2}}
+{\footnotesize\ttfamily px2 =\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1)$\ast$(\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}(1,\+:)+\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}$\ast$\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}(2,\+:))+\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}\label{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!py@{py}}
+\index{py@{py}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{py}{py}}
+{\footnotesize\ttfamily py =\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(my\textquotesingle{},nnx$\ast$nny,1)}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a90badef17a589fb77576d25d0fed2ef2}\label{visualize__distortions_8m_a90badef17a589fb77576d25d0fed2ef2}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!py2@{py2}}
+\index{py2@{py2}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{py2}{py2}}
+{\footnotesize\ttfamily py2 =\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(2)$\ast$\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}(2,\+:)+\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2)}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a7e56035a736d269ad670f312496a0846}\label{visualize__distortions_8m_a7e56035a736d269ad670f312496a0846}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!Q@{Q}}
+\index{Q@{Q}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{Q}{Q}}
+{\footnotesize\ttfamily Q =quiver(\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}}+1,\mbox{\hyperlink{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}{py}}+1,\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}},\mbox{\hyperlink{willson__read_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a35f5bb2f48f36626208db2076cc62589}\label{visualize__distortions_8m_a35f5bb2f48f36626208db2076cc62589}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!rays@{rays}}
+\index{rays@{rays}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{rays}{rays}}
+{\footnotesize\ttfamily rays =inv(\mbox{\hyperlink{visualize__distortions_8m_a0375211f493f83926a6983a6cca0872e}{kk\+\_\+new}})$\ast$\mbox{[}\mbox{\hyperlink{visualize__distortions_8m_a7bbfda5adf16be7dc49154740eb37388}{px}}\textquotesingle{};\mbox{\hyperlink{visualize__distortions_8m_a2cdc66c1c33fd831cc3a2f3a7c06ea1a}{py}}\textquotesingle{}}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a5420960a394e0fddefe53197bf2ca095}\label{visualize__distortions_8m_a5420960a394e0fddefe53197bf2ca095}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!shr@{shr}}
+\index{shr@{shr}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{shr}{shr}}
+{\footnotesize\ttfamily shr = 0.\+9}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a4c7354b9bcf8e1c1ff1c0d28b0d4276a}\label{visualize__distortions_8m_a4c7354b9bcf8e1c1ff1c0d28b0d4276a}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!th@{th}}
+\index{th@{th}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{th}{th}}
+{\footnotesize\ttfamily th =\mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}}(0.\+11,0,\{\mbox{\hyperlink{visualize__distortions_8m_a948c5cb1a60073dcb3d5ad3feb0f0963}{line9}},\mbox{\hyperlink{visualize__distortions_8m_aa845dfb550c1c69d070c649a78fa1b89}{line2}},\mbox{\hyperlink{visualize__distortions_8m_a85341ba804c0144b2ef96f42d5c4e802}{line1}},\mbox{\hyperlink{visualize__distortions_8m_a7464db7614952632370a0c08ed8f5246}{line10}},\mbox{\hyperlink{visualize__distortions_8m_aee7f773952e31ae89faaae1561beb8ab}{line3}},\mbox{\hyperlink{visualize__distortions_8m_a56c87c3d30055e16a49cbb3d6188c5d0}{line4}}\},\textquotesingle{}horizontalalignment\textquotesingle{},\textquotesingle{}left\textquotesingle{},\textquotesingle{}verticalalignment\textquotesingle{},\textquotesingle{}bottom\textquotesingle{},\textquotesingle{}fontsize\textquotesingle{},8,\textquotesingle{}fontname\textquotesingle{},\textquotesingle{}clean\textquotesingle{})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a084a0b5d9ac63dba073658e62cfe99e9}\label{visualize__distortions_8m_a084a0b5d9ac63dba073658e62cfe99e9}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!th2@{th2}}
+\index{th2@{th2}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{th2}{th2}}
+{\footnotesize\ttfamily th2 =\mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}}(0.\+9,0.,\{\mbox{\hyperlink{visualize__distortions_8m_aa9214b5574b8d0dca4a64ff0da9738ff}{line6}},\mbox{\hyperlink{visualize__distortions_8m_ad50e884e96142f242fbcadd88b929689}{line5}},\mbox{\hyperlink{visualize__distortions_8m_a2dc3e0c708ae4df4d24a4f46768039b6}{line11}},\mbox{\hyperlink{visualize__distortions_8m_a9e7cc2c2a12e5a19152dc6c434423de8}{line7}},\mbox{\hyperlink{visualize__distortions_8m_a299feba3e3acf7f9b6730fbaffbc3dec}{line8}}\},\textquotesingle{}horizontalalignment\textquotesingle{},\textquotesingle{}right\textquotesingle{},\textquotesingle{}verticalalignment\textquotesingle{},\textquotesingle{}bottom\textquotesingle{},\textquotesingle{}fontsize\textquotesingle{},8,\textquotesingle{}fontname\textquotesingle{},\textquotesingle{}clean\textquotesingle{})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a1a71f5e406b211ed616173276484b78b}\label{visualize__distortions_8m_a1a71f5e406b211ed616173276484b78b}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!tight@{tight}}
+\index{tight@{tight}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{tight}{tight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} tight}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a7c08555be053a9c1c5c898c62183c3db}\label{visualize__distortions_8m_a7c08555be053a9c1c5c898c62183c3db}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!title2@{title2}}
+\index{title2@{title2}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{title2}{title2}}
+{\footnotesize\ttfamily title2 =strcat(\textquotesingle{}Complete Distortion Model\textquotesingle{})}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a9336ebf25087d91c818ee6e9ec29f8c1}\label{visualize__distortions_8m_a9336ebf25087d91c818ee6e9ec29f8c1}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!x@{x}}
+\index{x@{x}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} =\mbox{[}\mbox{\hyperlink{visualize__distortions_8m_a9b967729b78739b615c14dfd91406ae0}{rays}}(1,\+:)./\mbox{\hyperlink{visualize__distortions_8m_a9b967729b78739b615c14dfd91406ae0}{rays}}(3,\+:)}
+
+\mbox{\Hypertarget{visualize__distortions_8m_a0903a189cbe112bce4b75bbc7c50357c}\label{visualize__distortions_8m_a0903a189cbe112bce4b75bbc7c50357c}} 
+\index{visualize\_distortions.m@{visualize\_distortions.m}!xd@{xd}}
+\index{xd@{xd}!visualize\_distortions.m@{visualize\_distortions.m}}
+\doxysubsubsection{\texorpdfstring{xd}{xd}}
+{\footnotesize\ttfamily xd =apply\+\_\+distortion(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}})}
+

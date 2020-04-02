@@ -1,0 +1,278 @@
+\hypertarget{export__calib__data_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/export\+\_\+calib\+\_\+data.m File Reference}
+\label{export__calib__data_8m}\index{D:/TrackEsferas/NavarQA/calib/export\_calib\_data.m@{D:/TrackEsferas/NavarQA/calib/export\_calib\_data.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Export \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} (\mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}}+3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}) \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \%\% \mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}} files(in \mbox{\hyperlink{willson__convert_8m_adce983d382eeada5c63ec943823b9755}{Willson}}-\/Heikkila \textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} or Zhang \textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}}) \%\% Thanks \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} Michael Goesele(from the \mbox{\hyperlink{visualize__distortions_8m_a3c9f309e2c2ceec700bb1f891d0b5d79}{Max}}-\/Planck-\/Institut) for the original suggestion \%\% of adding this export \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} the toolbox. \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}}(\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{})
+\item 
+Export \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a42de07cd2e8c91a3de6566d98453ac38}{fprintf}} (1, \textquotesingle{}E\+R\+R\+O\+R\+:\+No \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{export\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a4353369e2e8d497bb3d9d29fd23b49f2}{fprintf}} (1, \textquotesingle{}Tool \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} exports \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{willson__convert_8m_adce983d382eeada5c63ec943823b9755}{Willson}}-\/Heikkila or Zhang \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{formats\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{export__calib__data_8m_ab2122e93ef8b4f18bee615b72b11f265}{while}} (\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}} $\sim$=0) \&(\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}} $\sim$
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{export__calib__data_8m_a3d97f8ffa31a29875360271cc8970f5c}{isempty}} (\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}}) \mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a0ed4a6d28f21a625b95bbe36d6aeaffc}{if}} (\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}} $\sim$=0) \&(\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}} $\sim$
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{export__calib__data_8m_ade21732f3ffd87bc5a0343e7578dcf9e}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Export of \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}} files(\mbox{\hyperlink{willson__convert_8m_adce983d382eeada5c63ec943823b9755}{Willson}} and Heikkila\textquotesingle{} \textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}})\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+for \mbox{\hyperlink{export__calib__data_8m_a7b1d430d6cba8daaf0e016cb7e2e5157}{eval}} (\mbox{[}\textquotesingle{}X\+\_\+kk=X\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a4ce6c5e378d5bac8c384167e8a7c4018}{disp}} (\mbox{[}\textquotesingle{}Exporting \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}}(3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{cam__proj__calib__optim_8m_a1abddb9576a47442fd34f9124ce421c8}{world}}+2\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}) of \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \textquotesingle{} \mbox{\hyperlink{export__calib__data_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}} \textquotesingle{}...\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{export__calib__data_8m_a115efa6db8043f24f9a37173c04263d5}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Export of \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}} files(Zhang\textquotesingle{} \textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}})\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{export__calib__data_8m_a4b6cb86df8f2c6dcd0e625b660b84344}{$\sim$exist}} (\mbox{[}\textquotesingle{}n\+\_\+sq\+\_\+x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})\mbox{]})
+\item 
+\mbox{\hyperlink{export__calib__data_8m_ad9a674225d581aea843ce2155a850a61}{fprintf}} (1, \textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{done\textbackslash{}n}}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{export__calib__data_8m_a4bbbc62dda3644d41f03fc4bfdbea35f}{n\+\_\+ima}} == 0
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a0f3da7d940db54dec149e82a9e34ea60}{check\+\_\+extracted\+\_\+images}}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}} = -\/1
+\item 
+\mbox{\hyperlink{export__calib__data_8m_aed208716b0d6f18a216c619eed008fab}{outputfile}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}File basename\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+for \mbox{\hyperlink{export__calib__data_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a85603035635543d466f508113302e826}{Xx}} = \mbox{[}X\+\_\+kk
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a5ea0ad593821902850aafb73aa158f49}{x\+\_\+kk}}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a58ed1f4fc05e40edea694d9f889da543}{file\+\_\+name}} = \mbox{[}\mbox{\hyperlink{export__calib__data_8m_aed208716b0d6f18a216c619eed008fab}{outputfile}} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})\mbox{]}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a17f36b688e09e5bd8f174b7d556a4aba}{modelfile}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}File basename for the 3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{cam__proj__calib__optim_8m_a1abddb9576a47442fd34f9124ce421c8}{world}} \mbox{\hyperlink{stereo__triangulation_8m_a2a4ca37e7748d77df43ab3c080321c65}{coordinates\+:}} \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a2630d5dcbbee94a73b3a7b3d865cf97b}{datafile}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}File basename for the 2\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{stereo__triangulation_8m_a2a4ca37e7748d77df43ab3c080321c65}{coordinates\+:}} \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}} = 1
+\item 
+\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(X\+\_\+kk,2)
+\item 
+\mbox{\hyperlink{export__calib__data_8m_ac51b57a703ba1c5869228690c93e1701}{X}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(X\+\_\+kk(1,\+:)\textquotesingle{},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1)\textquotesingle{}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a0867f43e27585e019c13f7f4b7c4ab6b}{Y}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(X\+\_\+kk(2,\+:)\textquotesingle{},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1)\textquotesingle{}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_aca89e792ebf5d88964f1cb66ce6ddf61}{XY}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}};\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}\mbox{]},\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1,2$\ast$(\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1))
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}(1,\+:)\textquotesingle{},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1)\textquotesingle{}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}(2,\+:)\textquotesingle{},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1)\textquotesingle{}
+\item 
+\mbox{\hyperlink{export__calib__data_8m_a3f6f55ba521257932bb08684e0181fa1}{xy}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}};\mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}}\mbox{]},\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1,2$\ast$(\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}\label{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!data@{data}}
+\index{data@{data}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily Export \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}}+3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}}]{coordinates }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_a4ce6c5e378d5bac8c384167e8a7c4018}\label{export__calib__data_8m_a4ce6c5e378d5bac8c384167e8a7c4018}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!disp@{disp}}
+\index{disp@{disp}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_a7b1d430d6cba8daaf0e016cb7e2e5157}\label{export__calib__data_8m_a7b1d430d6cba8daaf0e016cb7e2e5157}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!eval@{eval}}
+\index{eval@{eval}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily for eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_ad9a674225d581aea843ce2155a850a61}\label{export__calib__data_8m_ad9a674225d581aea843ce2155a850a61}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{done\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_a42de07cd2e8c91a3de6566d98453ac38}\label{export__calib__data_8m_a42de07cd2e8c91a3de6566d98453ac38}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}E\+R\+R\+O\+R\+:\+No \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{export\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_a4353369e2e8d497bb3d9d29fd23b49f2}\label{export__calib__data_8m_a4353369e2e8d497bb3d9d29fd23b49f2}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Tool \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} exports \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{willson__convert_8m_adce983d382eeada5c63ec943823b9755}{Willson}}-\/Heikkila or Zhang \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{formats\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_ade21732f3ffd87bc5a0343e7578dcf9e}\label{export__calib__data_8m_ade21732f3ffd87bc5a0343e7578dcf9e}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Export of \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}} files(\mbox{\hyperlink{willson__convert_8m_adce983d382eeada5c63ec943823b9755}{Willson}} and Heikkila\textquotesingle{} \textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}})\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_a115efa6db8043f24f9a37173c04263d5}\label{export__calib__data_8m_a115efa6db8043f24f9a37173c04263d5}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Export of \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{export__calib__data_8m_a7e4b47e9ae2b7dea2b3756ff539f9f55}{data}} \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{ext__calib__stereo_8m_ade699b8654d035e038f5d96c46184ba6}{text}} files(Zhang\textquotesingle{} \textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}} \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}})\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_a0ed4a6d28f21a625b95bbe36d6aeaffc}\label{export__calib__data_8m_a0ed4a6d28f21a625b95bbe36d6aeaffc}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!if@{if}}
+\index{if@{if}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}} $\sim$}]{ = {\ttfamily 0} }\end{DoxyParamCaption}) \&}
+
+\mbox{\Hypertarget{export__calib__data_8m_a3d97f8ffa31a29875360271cc8970f5c}\label{export__calib__data_8m_a3d97f8ffa31a29875360271cc8970f5c}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!isempty@{isempty}}
+\index{isempty@{isempty}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{export__calib__data_8m_ab2122e93ef8b4f18bee615b72b11f265}\label{export__calib__data_8m_ab2122e93ef8b4f18bee615b72b11f265}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!while@{while}}
+\index{while@{while}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{while()}{while()}}
+{\footnotesize\ttfamily while (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}{qformat}} $\sim$}]{ = {\ttfamily 0} }\end{DoxyParamCaption}) \&}
+
+\mbox{\Hypertarget{export__calib__data_8m_a4b6cb86df8f2c6dcd0e625b660b84344}\label{export__calib__data_8m_a4b6cb86df8f2c6dcd0e625b660b84344}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{export__calib__data_8m_a0d062f92217e4e073995683900fdadcb}\label{export__calib__data_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{export__calib__data_8m_a0f3da7d940db54dec149e82a9e34ea60}\label{export__calib__data_8m_a0f3da7d940db54dec149e82a9e34ea60}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!check\_extracted\_images@{check\_extracted\_images}}
+\index{check\_extracted\_images@{check\_extracted\_images}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{check\_extracted\_images}{check\_extracted\_images}}
+{\footnotesize\ttfamily check\+\_\+extracted\+\_\+images}
+
+\mbox{\Hypertarget{export__calib__data_8m_a2630d5dcbbee94a73b3a7b3d865cf97b}\label{export__calib__data_8m_a2630d5dcbbee94a73b3a7b3d865cf97b}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!datafile@{datafile}}
+\index{datafile@{datafile}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{datafile}{datafile}}
+{\footnotesize\ttfamily datafile = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}File basename for the 2\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{stereo__triangulation_8m_a2a4ca37e7748d77df43ab3c080321c65}{coordinates\+:}} \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{export__calib__data_8m_afb358f48b1646c750fb9da6c6585be2b}\label{export__calib__data_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!end@{end}}
+\index{end@{end}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{export__calib__data_8m_a58ed1f4fc05e40edea694d9f889da543}\label{export__calib__data_8m_a58ed1f4fc05e40edea694d9f889da543}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!file\_name@{file\_name}}
+\index{file\_name@{file\_name}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{file\_name}{file\_name}}
+{\footnotesize\ttfamily file\+\_\+name = \mbox{[}\mbox{\hyperlink{export__calib__data_8m_aed208716b0d6f18a216c619eed008fab}{outputfile}} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})\mbox{]}}
+
+\mbox{\Hypertarget{export__calib__data_8m_af29949bd63fb009eacab5efd11399e40}\label{export__calib__data_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!kk@{kk}}
+\index{kk@{kk}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+
+\mbox{\Hypertarget{export__calib__data_8m_a17f36b688e09e5bd8f174b7d556a4aba}\label{export__calib__data_8m_a17f36b688e09e5bd8f174b7d556a4aba}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!modelfile@{modelfile}}
+\index{modelfile@{modelfile}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{modelfile}{modelfile}}
+{\footnotesize\ttfamily modelfile = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}File basename for the 3\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}} \mbox{\hyperlink{cam__proj__calib__optim_8m_a1abddb9576a47442fd34f9124ce421c8}{world}} \mbox{\hyperlink{stereo__triangulation_8m_a2a4ca37e7748d77df43ab3c080321c65}{coordinates\+:}} \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{export__calib__data_8m_a4bbbc62dda3644d41f03fc4bfdbea35f}\label{export__calib__data_8m_a4bbbc62dda3644d41f03fc4bfdbea35f}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!n\_ima@{n\_ima}}
+\index{n\_ima@{n\_ima}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima}{n\_ima}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} n\+\_\+ima == 0}
+
+\mbox{\Hypertarget{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}\label{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!n\_sq\_x@{n\_sq\_x}}
+\index{n\_sq\_x@{n\_sq\_x}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{n\_sq\_x}{n\_sq\_x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} n\+\_\+sq\+\_\+x = 1}
+
+\mbox{\Hypertarget{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}\label{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!n\_sq\_y@{n\_sq\_y}}
+\index{n\_sq\_y@{n\_sq\_y}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{n\_sq\_y}{n\_sq\_y}}
+{\footnotesize\ttfamily n\+\_\+sq\+\_\+y = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(X\+\_\+kk,2)}
+
+\mbox{\Hypertarget{export__calib__data_8m_aed208716b0d6f18a216c619eed008fab}\label{export__calib__data_8m_aed208716b0d6f18a216c619eed008fab}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!outputfile@{outputfile}}
+\index{outputfile@{outputfile}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{outputfile}{outputfile}}
+{\footnotesize\ttfamily outputfile = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}File basename\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}\label{export__calib__data_8m_aa238df35125d856e3069c9dffac5277e}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!qformat@{qformat}}
+\index{qformat@{qformat}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{qformat}{qformat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} qformat = -\/1}
+
+\mbox{\Hypertarget{export__calib__data_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{export__calib__data_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!return@{return}}
+\index{return@{return}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{export__calib__data_8m_ac51b57a703ba1c5869228690c93e1701}\label{export__calib__data_8m_ac51b57a703ba1c5869228690c93e1701}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!X@{X}}
+\index{X@{X}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily X = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(X\+\_\+kk(1,\+:)\textquotesingle{},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1)\textquotesingle{}}
+
+\mbox{\Hypertarget{export__calib__data_8m_a9336ebf25087d91c818ee6e9ec29f8c1}\label{export__calib__data_8m_a9336ebf25087d91c818ee6e9ec29f8c1}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!x@{x}}
+\index{x@{x}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}(1,\+:)\textquotesingle{},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1)\textquotesingle{}}
+
+\mbox{\Hypertarget{export__calib__data_8m_a5ea0ad593821902850aafb73aa158f49}\label{export__calib__data_8m_a5ea0ad593821902850aafb73aa158f49}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!x\_kk@{x\_kk}}
+\index{x\_kk@{x\_kk}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{x\_kk}{x\_kk}}
+{\footnotesize\ttfamily x\+\_\+kk}
+
+\mbox{\Hypertarget{export__calib__data_8m_a85603035635543d466f508113302e826}\label{export__calib__data_8m_a85603035635543d466f508113302e826}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!Xx@{Xx}}
+\index{Xx@{Xx}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{Xx}{Xx}}
+{\footnotesize\ttfamily Xx = \mbox{[}X\+\_\+kk}
+
+\mbox{\Hypertarget{export__calib__data_8m_aca89e792ebf5d88964f1cb66ce6ddf61}\label{export__calib__data_8m_aca89e792ebf5d88964f1cb66ce6ddf61}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!XY@{XY}}
+\index{XY@{XY}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{XY}{XY}}
+{\footnotesize\ttfamily XY = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{[}\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6a58833a3110c570fb05130d40c365d1e4}{X}};\mbox{\hyperlink{_compute_stripes_8m_ae9c549661cb3fb27f429285e22f5afa1}{Y}}\mbox{]},\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1,2$\ast$(\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1))}
+
+\mbox{\Hypertarget{export__calib__data_8m_a3f6f55ba521257932bb08684e0181fa1}\label{export__calib__data_8m_a3f6f55ba521257932bb08684e0181fa1}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!xy@{xy}}
+\index{xy@{xy}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{xy}{xy}}
+{\footnotesize\ttfamily xy = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}};\mbox{\hyperlink{click__ima__calib3_d_8m_a594184f1c28dc288dfc030aef84ba3c8}{y}}\mbox{]},\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1,2$\ast$(\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1))}
+
+\mbox{\Hypertarget{export__calib__data_8m_a0867f43e27585e019c13f7f4b7c4ab6b}\label{export__calib__data_8m_a0867f43e27585e019c13f7f4b7c4ab6b}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!Y@{Y}}
+\index{Y@{Y}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily Y = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(X\+\_\+kk(2,\+:)\textquotesingle{},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1)\textquotesingle{}}
+
+\mbox{\Hypertarget{export__calib__data_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}\label{export__calib__data_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}} 
+\index{export\_calib\_data.m@{export\_calib\_data.m}!y@{y}}
+\index{y@{y}!export\_calib\_data.m@{export\_calib\_data.m}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily y = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}(2,\+:)\textquotesingle{},\mbox{\hyperlink{export__calib__data_8m_ac396ec2da8de28137363f2c71c7c5a00}{n\+\_\+sq\+\_\+x}}+1,\mbox{\hyperlink{export__calib__data_8m_acb87310b95e73d894d74faa7067bfba7}{n\+\_\+sq\+\_\+y}}+1)\textquotesingle{}}
+

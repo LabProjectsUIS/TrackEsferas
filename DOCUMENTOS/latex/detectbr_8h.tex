@@ -1,0 +1,227 @@
+\hypertarget{detectbr_8h}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/detectbr.h File Reference}
+\label{detectbr_8h}\index{D:/TrackEsferas/NavarQA/detectbr.h@{D:/TrackEsferas/NavarQA/detectbr.h}}
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$tchar.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$calibration.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv\textbackslash{}cv.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$dos.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_custom_camera_library_1_1_output}{Custom\+Camera\+Library\+::\+Output}}
+\begin{DoxyCompactList}\small\item\em Esta estructura permite almacenar las características de los cuerpos rígidos que vayan siendo detectados en mientras se esta ejecutando la la función \mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{Custom\+Camera\+Library\+::joskstra()}} \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_custom_camera_library_1_1_label}{Custom\+Camera\+Library\+::\+Label}}
+\begin{DoxyCompactList}\small\item\em Esta estructura permite ir haciendo un seguimiento de cada uno de los nodos encontrados en proceso de indentificación de los cuerpos rígidos y es utilizada en el momento de identificar los objetos rígidos en escena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_custom_camera_library}{Custom\+Camera\+Library}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{detectbr_8h_ab841a231efa165dde90f59a9859462a4}{N\+\_\+\+M\+A\+R\+K\+E\+RS}}~3
+\begin{DoxyCompactList}\small\item\em número de marcadores que la función \mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{joskstra()}} usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{detectbr_8h_a1ecc2987ecaef74743002c5ed20d2500}{N\+\_\+\+M\+A\+R\+K\+E\+R\+SB}}~2
+\item 
+\#define \mbox{\hyperlink{detectbr_8h_af0b0f73efdf41b005eded1db47dd46c5}{L\+\_\+\+P\+O\+I\+N\+T\+ER}}~219.\+70329913564
+\item 
+\#define \mbox{\hyperlink{detectbr_8h_ac4670706d39b6482ad9012b5cca4ef87}{T\+E\+T\+HA}}~-\/3.\+8985
+\item 
+\#define \mbox{\hyperlink{detectbr_8h_a2281db2f69ced7a9d2b1c694df646ee7}{C\+\_\+\+T\+E\+T\+HA}}~-\/0.\+95278
+\item 
+\#define \mbox{\hyperlink{detectbr_8h_a943ee8454bf0e3b1357d595fbc853b65}{T\+E\+T\+H\+A2}}~-\/2.\+5782
+\begin{DoxyCompactList}\small\item\em ángulo de la segunda rotación \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{detectbr_8h_a9fe5d066eab394089e8a85cd09bbc55c}{L\+\_\+\+P\+O\+I\+N\+T\+E\+R2}}~222.\+1898
+\begin{DoxyCompactList}\small\item\em longitud del pointer, de la punta hasta la primera esfera. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{detectbr_8h_a3217a6882e313d59373c6ecc0eb656cd}{F\+E\+M\+UR}}~\char`\"{}F\+E\+M\+UR\char`\"{}
+\begin{DoxyCompactList}\small\item\em nombre que representa el femur \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{detectbr_8h_a84def408d1c5413e2c1d7fe9eeb18f09}{P\+O\+I\+N\+T\+ER}}~\char`\"{}P\+O\+I\+N\+T\+ER\char`\"{}
+\begin{DoxyCompactList}\small\item\em nombre que representa el pointer \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{detectbr_8h_a78ddb91dcaf0cb7aa36296e95fa27a3a}{T\+I\+B\+IA}}~\char`\"{}T\+I\+B\+IA\char`\"{}
+\begin{DoxyCompactList}\small\item\em nombre que representa la tíbia \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{detectbr_8h_adf66d8324d956ce6e6b38bb15ba01b89}{G\+A\+F\+AS}}~\char`\"{}G\+A\+F\+AS\char`\"{}
+\begin{DoxyCompactList}\small\item\em nombre que representa las gafas \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{detectbr_8h_ad1bcfa90ba77f8e08c1bcfe75c1e4be6}{P\+H\+A\+N\+T\+ON}}~\char`\"{}P\+H\+A\+N\+T\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em nombre que representa el phanton \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{detectbr_8h_a1be87cae12b7f90b0c1d0c799e9903da}{B\+R\+O\+CA}}~\char`\"{}B\+R\+O\+CA\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Output \mbox{\hyperlink{namespace_custom_camera_library_a491fa416cf9b3258bfb14fbab925b06e}{Custom\+Camera\+Library\+::\+BodyR}}
+\item 
+typedef struct Label \mbox{\hyperlink{namespace_custom_camera_library_a31a6fd1b5d5514aeb736e1aa409b18d6}{Custom\+Camera\+Library\+::\+Sphere}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a0e5c6c4f04fdac899b7f0690846aabbc}{Custom\+Camera\+Library\+::rotate\+Vector}} (Mat\+\_\+$<$ double $>$ v, Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}, double angle)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_aff3b0f8be2afbec8d929908066638b7f}{Custom\+Camera\+Library\+::update\+Cordinates}} (cv\+::\+Mat\+\_\+$<$ double $>$ \&origin)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{namespace_custom_camera_library_ad2170ba501eebad9df0db56b6cb78677}{Custom\+Camera\+Library\+::cross\+\_\+product}} (cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{rodrigues_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{saveppm_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}})
+\item 
+cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_a6bf1144326e7d7f4bd4614813d91eb70}{Custom\+Camera\+Library\+::define\+\_\+local\+\_\+axis}} (cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{teste___8m_a9b33a9232288458b5b31f0b6c9ce80ee}{PR}})
+\item 
+Point3d \mbox{\hyperlink{namespace_custom_camera_library_a1a00a449628a95efff7606fc1812c946}{Custom\+Camera\+Library\+::pointer\+Point}} (cv\+::\+Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}, cv\+::\+Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}, cv\+::\+Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}, cv\+::\+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{rodrigues_8m_a2a89187d8e8e8fba509ef9ab5f815d88}{out}})
+\item 
+Point3d \mbox{\hyperlink{namespace_custom_camera_library_a236e9dbd2296a548c20eed05fa49f899}{Custom\+Camera\+Library\+::pointer\+Point2}} (Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}, Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}, Mat\+\_\+$<$ double $>$ \&\mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}, Mat\+\_\+$<$ double $>$ \&Out)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a80d0984bb0c661e35fcf1ea95d5ccedd}{Custom\+Camera\+Library\+::get\+Euler\+Angles}} (BodyR $\ast$\&b\+Rigid, int \mbox{\hyperlink{stereo__gui_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}})
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a0209a945cb4fe5e4c1e80a4366e65dcf}{Custom\+Camera\+Library\+::get\+Euler\+Angles\+Old}} (BodyR $\ast$\&b\+Rigid, int \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}})
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aedd88d76c6f4e55b5dceaa8022c86ebc}{Custom\+Camera\+Library\+::analizer}} (float \mbox{\hyperlink{_test_function_8m_a553bf2c8c8c814eeb9723dd81c9a57bf}{distance}}, \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ float $>$ \&vec)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a520cc1f31f0f545e009382ad65e236e7}{Custom\+Camera\+Library\+::set\+Delta}} (float \mbox{\hyperlink{calib__pointer2_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}})
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a82b54de13f18e3d7f20c5bfbfe92696f}{Custom\+Camera\+Library\+::num\+B\+Rigid}} (int \mbox{\hyperlink{visualize__distortions_8m_a6cb040835810ca02500a56f8f9646884}{position}}, cv\+::\+Mat\+\_\+$<$ float $>$ dsp\+Set)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{Custom\+Camera\+Library\+::joskstra}} (Mat\+\_\+$<$ float $>$ sp\+Set, Mat\+\_\+$<$ float $>$ dsp\+Set, BodyR $\ast$\&b\+Rigid)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a37d5fea964793f87cef18d44d8fb95cd}{Custom\+Camera\+Library\+::joskstraB}} (Mat\+\_\+$<$ float $>$ sp\+Set, Mat\+\_\+$<$ float $>$ dsp\+Set, BodyR $\ast$\&b\+Rigid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_aed67233f328389a3c30369b23451bf0b}{Custom\+Camera\+Library\+::pointer}} = 1
+\begin{DoxyCompactList}\small\item\em indicador que representa el pointer \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_ada4ad2b496070f2519ae6799d37f2435}{Custom\+Camera\+Library\+::femur}} = 2
+\begin{DoxyCompactList}\small\item\em indicador que representa el femur \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_a25472cc1d60a3d4d3ba66dcffd5bd549}{Custom\+Camera\+Library\+::tibia}} = 3
+\begin{DoxyCompactList}\small\item\em indicador que representa la tibia \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_ac68e2b3459410cf9d14f29501c5d0b87}{Custom\+Camera\+Library\+::gafas}} = 4
+\begin{DoxyCompactList}\small\item\em indicador que representa las gafas \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_a1a319bd0a91f16b41735fc34c11e9fd3}{Custom\+Camera\+Library\+::phanton}} = 6
+\begin{DoxyCompactList}\small\item\em indicador que representa el phanton \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespace_custom_camera_library_ad593e2847f48ac9daba23815d253fc02}{Custom\+Camera\+Library\+::broca}} = 5
+\begin{DoxyCompactList}\small\item\em indicador que representa la broca \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespace_custom_camera_library_ab6c89920e610f79de42854858b9590af}{Custom\+Camera\+Library\+::\+D\+E\+L\+TA}} = 1.\+09
+\begin{DoxyCompactList}\small\item\em Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_custom_camera_library_a87ce3dd4358f0757a08b71f4149dc7f7}{Custom\+Camera\+Library\+::detect\+\_\+pointer}} = true
+\begin{DoxyCompactList}\small\item\em indicador para manejar la decisión de detectar o no el pointer. \end{DoxyCompactList}\item 
+clock\+\_\+t \mbox{\hyperlink{namespace_custom_camera_library_a9d316af1494fd3aee3b6207b7c9ffeaf}{Custom\+Camera\+Library\+::time}} = clock()
+\item 
+ofstream \mbox{\hyperlink{namespace_custom_camera_library_a5b2d42af9eccd9c9e7bc074a5ce6f7e3}{Custom\+Camera\+Library\+::archivo\+DI}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{detectbr_8h_a1be87cae12b7f90b0c1d0c799e9903da}\label{detectbr_8h_a1be87cae12b7f90b0c1d0c799e9903da}} 
+\index{detectbr.h@{detectbr.h}!BROCA@{BROCA}}
+\index{BROCA@{BROCA}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{BROCA}{BROCA}}
+{\footnotesize\ttfamily \#define B\+R\+O\+CA~\char`\"{}B\+R\+O\+CA\char`\"{}}
+
+\mbox{\Hypertarget{detectbr_8h_a2281db2f69ced7a9d2b1c694df646ee7}\label{detectbr_8h_a2281db2f69ced7a9d2b1c694df646ee7}} 
+\index{detectbr.h@{detectbr.h}!C\_TETHA@{C\_TETHA}}
+\index{C\_TETHA@{C\_TETHA}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{C\_TETHA}{C\_TETHA}}
+{\footnotesize\ttfamily \#define C\+\_\+\+T\+E\+T\+HA~-\/0.\+95278}
+
+\mbox{\Hypertarget{detectbr_8h_a3217a6882e313d59373c6ecc0eb656cd}\label{detectbr_8h_a3217a6882e313d59373c6ecc0eb656cd}} 
+\index{detectbr.h@{detectbr.h}!FEMUR@{FEMUR}}
+\index{FEMUR@{FEMUR}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{FEMUR}{FEMUR}}
+{\footnotesize\ttfamily \#define F\+E\+M\+UR~\char`\"{}F\+E\+M\+UR\char`\"{}}
+
+
+
+nombre que representa el femur 
+
+\mbox{\Hypertarget{detectbr_8h_adf66d8324d956ce6e6b38bb15ba01b89}\label{detectbr_8h_adf66d8324d956ce6e6b38bb15ba01b89}} 
+\index{detectbr.h@{detectbr.h}!GAFAS@{GAFAS}}
+\index{GAFAS@{GAFAS}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{GAFAS}{GAFAS}}
+{\footnotesize\ttfamily \#define G\+A\+F\+AS~\char`\"{}G\+A\+F\+AS\char`\"{}}
+
+
+
+nombre que representa las gafas 
+
+\mbox{\Hypertarget{detectbr_8h_af0b0f73efdf41b005eded1db47dd46c5}\label{detectbr_8h_af0b0f73efdf41b005eded1db47dd46c5}} 
+\index{detectbr.h@{detectbr.h}!L\_POINTER@{L\_POINTER}}
+\index{L\_POINTER@{L\_POINTER}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{L\_POINTER}{L\_POINTER}}
+{\footnotesize\ttfamily \#define L\+\_\+\+P\+O\+I\+N\+T\+ER~219.\+70329913564}
+
+\mbox{\Hypertarget{detectbr_8h_a9fe5d066eab394089e8a85cd09bbc55c}\label{detectbr_8h_a9fe5d066eab394089e8a85cd09bbc55c}} 
+\index{detectbr.h@{detectbr.h}!L\_POINTER2@{L\_POINTER2}}
+\index{L\_POINTER2@{L\_POINTER2}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{L\_POINTER2}{L\_POINTER2}}
+{\footnotesize\ttfamily \#define L\+\_\+\+P\+O\+I\+N\+T\+E\+R2~222.\+1898}
+
+
+
+longitud del pointer, de la punta hasta la primera esfera. 
+
+\mbox{\Hypertarget{detectbr_8h_ab841a231efa165dde90f59a9859462a4}\label{detectbr_8h_ab841a231efa165dde90f59a9859462a4}} 
+\index{detectbr.h@{detectbr.h}!N\_MARKERS@{N\_MARKERS}}
+\index{N\_MARKERS@{N\_MARKERS}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{N\_MARKERS}{N\_MARKERS}}
+{\footnotesize\ttfamily \#define N\+\_\+\+M\+A\+R\+K\+E\+RS~3}
+
+
+
+número de marcadores que la función \mbox{\hyperlink{namespace_custom_camera_library_a07cefafc93128cb1ceb02e9519d0b672}{joskstra()}} usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido. 
+
+\mbox{\Hypertarget{detectbr_8h_a1ecc2987ecaef74743002c5ed20d2500}\label{detectbr_8h_a1ecc2987ecaef74743002c5ed20d2500}} 
+\index{detectbr.h@{detectbr.h}!N\_MARKERSB@{N\_MARKERSB}}
+\index{N\_MARKERSB@{N\_MARKERSB}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{N\_MARKERSB}{N\_MARKERSB}}
+{\footnotesize\ttfamily \#define N\+\_\+\+M\+A\+R\+K\+E\+R\+SB~2}
+
+\mbox{\Hypertarget{detectbr_8h_ad1bcfa90ba77f8e08c1bcfe75c1e4be6}\label{detectbr_8h_ad1bcfa90ba77f8e08c1bcfe75c1e4be6}} 
+\index{detectbr.h@{detectbr.h}!PHANTON@{PHANTON}}
+\index{PHANTON@{PHANTON}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{PHANTON}{PHANTON}}
+{\footnotesize\ttfamily \#define P\+H\+A\+N\+T\+ON~\char`\"{}P\+H\+A\+N\+T\+ON\char`\"{}}
+
+
+
+nombre que representa el phanton 
+
+\mbox{\Hypertarget{detectbr_8h_a84def408d1c5413e2c1d7fe9eeb18f09}\label{detectbr_8h_a84def408d1c5413e2c1d7fe9eeb18f09}} 
+\index{detectbr.h@{detectbr.h}!POINTER@{POINTER}}
+\index{POINTER@{POINTER}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{POINTER}{POINTER}}
+{\footnotesize\ttfamily \#define P\+O\+I\+N\+T\+ER~\char`\"{}P\+O\+I\+N\+T\+ER\char`\"{}}
+
+
+
+nombre que representa el pointer 
+
+\mbox{\Hypertarget{detectbr_8h_ac4670706d39b6482ad9012b5cca4ef87}\label{detectbr_8h_ac4670706d39b6482ad9012b5cca4ef87}} 
+\index{detectbr.h@{detectbr.h}!TETHA@{TETHA}}
+\index{TETHA@{TETHA}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{TETHA}{TETHA}}
+{\footnotesize\ttfamily \#define T\+E\+T\+HA~-\/3.\+8985}
+
+\mbox{\Hypertarget{detectbr_8h_a943ee8454bf0e3b1357d595fbc853b65}\label{detectbr_8h_a943ee8454bf0e3b1357d595fbc853b65}} 
+\index{detectbr.h@{detectbr.h}!TETHA2@{TETHA2}}
+\index{TETHA2@{TETHA2}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{TETHA2}{TETHA2}}
+{\footnotesize\ttfamily \#define T\+E\+T\+H\+A2~-\/2.\+5782}
+
+
+
+ángulo de la segunda rotación 
+
+\mbox{\Hypertarget{detectbr_8h_a78ddb91dcaf0cb7aa36296e95fa27a3a}\label{detectbr_8h_a78ddb91dcaf0cb7aa36296e95fa27a3a}} 
+\index{detectbr.h@{detectbr.h}!TIBIA@{TIBIA}}
+\index{TIBIA@{TIBIA}!detectbr.h@{detectbr.h}}
+\doxysubsubsection{\texorpdfstring{TIBIA}{TIBIA}}
+{\footnotesize\ttfamily \#define T\+I\+B\+IA~\char`\"{}T\+I\+B\+IA\char`\"{}}
+
+
+
+nombre que representa la tíbia 
+

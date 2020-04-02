@@ -1,0 +1,192 @@
+\hypertarget{server_8h}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/server.h File Reference}
+\label{server_8h}\index{D:/TrackEsferas/NavarQA/server.h@{D:/TrackEsferas/NavarQA/server.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$tchar.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Nat\+Net\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Nat\+Net\+Server.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mmsystem.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}N\+A\+T\+Utils.\+h\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_custom_camera_library}{Custom\+Camera\+Library}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{server_8h_a65d41efccf07401be05ff83c3405e0a8}{P\+O\+I\+N\+T\+E\+RR}}~1
+\item 
+\#define \mbox{\hyperlink{server_8h_ab2d04210672c893ac3825a0faa9705b2}{F\+E\+M\+U\+RR}}~3
+\item 
+\#define \mbox{\hyperlink{server_8h_a062f33e4151d51f2234b0d8b3da4bbc4}{T\+I\+B\+I\+AA}}~2
+\item 
+\#define \mbox{\hyperlink{server_8h_afda36533f888e7e0def7046c86993e5c}{G\+A\+F\+A\+SS}}~4
+\item 
+\#define \mbox{\hyperlink{server_8h_abb250f2821f51c47ea181fb4eaba5f69}{B\+R\+O\+C\+AA}}~6
+\item 
+\#define \mbox{\hyperlink{server_8h_aab57262ca9824391d6a1276123208965}{S\+T\+R\+E\+A\+M\+\_\+\+R\+BS}}~1
+\begin{DoxyCompactList}\small\item\em NO U\+T\+I\+L\+I\+Z\+A\+DO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{server_8h_a37d5873e2531ac863ed3f522edeaa00d}{S\+T\+R\+E\+A\+M\+\_\+\+M\+A\+R\+K\+E\+RS}}~1
+\begin{DoxyCompactList}\small\item\em NO U\+T\+I\+L\+I\+Z\+A\+DO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{server_8h_a9912ba19427a7bf1232b1d08cb2eb001}{S\+T\+R\+E\+A\+M\+\_\+\+S\+K\+E\+L\+E\+T\+O\+NS}}~0
+\begin{DoxyCompactList}\small\item\em NO U\+T\+I\+L\+I\+Z\+A\+DO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{server_8h_a51320792317dbaf9ee86fb22772f532b}{S\+T\+R\+E\+A\+M\+\_\+\+L\+A\+B\+E\+L\+E\+D\+\_\+\+M\+A\+R\+K\+E\+RS}}~0
+\begin{DoxyCompactList}\small\item\em NO U\+T\+I\+L\+I\+Z\+A\+DO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ad8a18d2ccbe60ec7183b9e6ed6e7793a}{Custom\+Camera\+Library\+::\+Build\+Description}} (s\+Data\+Descriptions $\ast$p\+Description)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a6d82efdba8384db92d1584db8a6d4cec}{Custom\+Camera\+Library\+::\+Send\+Description}} (s\+Data\+Descriptions $\ast$p\+Description)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ad425d4b89dc6454673b3d19672472baf}{Custom\+Camera\+Library\+::\+Free\+Description}} (s\+Data\+Descriptions $\ast$p\+Description)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a07ff154c6c3502e4dd7dc1e09fc55eb6}{Custom\+Camera\+Library\+::\+Build\+Frame}} (long Frame\+Number, s\+Data\+Descriptions $\ast$p\+Data\+Descriptions, s\+Frame\+Of\+Mocap\+Data $\ast$p\+Out\+Frame)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_af835b95386bb9c526113afde0cbda651}{Custom\+Camera\+Library\+::\+Send\+Frame}} (s\+Frame\+Of\+Mocap\+Data $\ast$p\+Frame)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ae0b9189c9b45e345fe906c55f1d184d9}{Custom\+Camera\+Library\+::\+Free\+Frame}} (s\+Frame\+Of\+Mocap\+Data $\ast$p\+Frame)
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a7f3c463898854696109478cfecf69271}{Custom\+Camera\+Library\+::reset\+Server}} ()
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a0ed3899efef24299489ead14b23b380d}{Custom\+Camera\+Library\+::\+Create\+Server}} (int i\+Connection\+Type)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_ac59c4a3c07a228c88fd2f5bb24b080ff}{Custom\+Camera\+Library\+::\+Hi\+Res\+Sleep}} (int msecs)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aaafbd494c48d1a4f9ef4c7a108992f8c}{Custom\+Camera\+Library\+::\+Start\+Server}} ()
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_a5736bb7f0bd20ca078273ce4099c3ce7}{Custom\+Camera\+Library\+::\+WriteW}} (string \mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}})
+\item 
+void \mbox{\hyperlink{namespace_custom_camera_library_ad7230f8dd56f8a7f25a93e29dbba5153}{Custom\+Camera\+Library\+::\+Stream\+Frame}} ()
+\item 
+BodyR \mbox{\hyperlink{namespace_custom_camera_library_a8db811bbcdd3581b3cccd42949ad5baf}{Custom\+Camera\+Library\+::get\+Bdrigid}} (char $\ast$\mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}}, int nrig)
+\item 
+void \+\_\+\+\_\+cdecl \mbox{\hyperlink{namespace_custom_camera_library_a92d59d4ec1910feb06563d4dbd98ca9b}{Custom\+Camera\+Library\+::\+Message\+Handler}} (int msg\+Type, char $\ast$msg)
+\item 
+int \+\_\+\+\_\+cdecl \mbox{\hyperlink{namespace_custom_camera_library_ae287913595dd611d75c8a70d4f780d91}{Custom\+Camera\+Library\+::\+Request\+Handler}} (s\+Packet $\ast$p\+Packet\+In, s\+Packet $\ast$p\+Packet\+Out, void $\ast$p\+User\+Data)
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a744f9cbdb37fa00e986169752b6a0933}{Custom\+Camera\+Library\+::\+Start\+Playing\+Thread}} ()
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aebe90ea0c0154b61c778aff27d76eb96}{Custom\+Camera\+Library\+::\+Stop\+Playing\+Thread}} ()
+\item 
+D\+W\+O\+RD W\+I\+N\+A\+PI \mbox{\hyperlink{namespace_custom_camera_library_adaeae6eab87b4dba4155c0e16c930422}{Custom\+Camera\+Library\+::\+Playing\+Thread\+\_\+\+Func}} (void $\ast$dummy)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Nat\+Net\+Server $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_af3fae95e0ec006bf05965558dfa723b7}{Custom\+Camera\+Library\+::the\+Server}}
+\begin{DoxyCompactList}\small\item\em Instancia del servidor. \end{DoxyCompactList}\item 
+s\+Data\+Descriptions \mbox{\hyperlink{namespace_custom_camera_library_a83db737e66aaa2911e4c43c772c6be54}{Custom\+Camera\+Library\+::descriptions}}
+\begin{DoxyCompactList}\small\item\em Descripci{\ucr}n de los datos que se van a enviar (Descripci{\ucr}n de los cuerpos r{\ucr}gidos y sus caracter{\ucr}sticas). \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{namespace_custom_camera_library_ac021c79b8f9e931cc5a39e5ac854e673}{Custom\+Camera\+Library\+::g\+\_\+l\+Current\+Frame}} = 0
+\begin{DoxyCompactList}\small\item\em Contador de Frames que va enviando el servidor al cliente. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_custom_camera_library_a2992c70ad26c9328155a6248ba16db7e}{Custom\+Camera\+Library\+::g\+\_\+b\+Playing}} = false
+\begin{DoxyCompactList}\small\item\em Indicador que muestra si el servidor esta enviando datos al cliente. \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{namespace_custom_camera_library_a102539dc8232b6ea67d1c151fc794f9b}{Custom\+Camera\+Library\+::\+Playing\+Thread\+\_\+\+ID}} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em Id del hilo que ejecuta el servidor. \end{DoxyCompactList}\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{namespace_custom_camera_library_ae752d34506c2248b3e0f3fbba416be84}{Custom\+Camera\+Library\+::\+Playing\+Thread\+\_\+\+Handle}} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em Manejador del hilo que ejecuta el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a2e5d1887c710afec78867d350c66d130}{Custom\+Camera\+Library\+::counter}} = 0
+\begin{DoxyCompactList}\small\item\em Sin uso importante. Puede ser borrado. ~\newline
+ \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespace_custom_camera_library_a47eaf041647a8f53d7b8a7c15ef1eda4}{Custom\+Camera\+Library\+::\+Data\+Port}} = 1511
+\begin{DoxyCompactList}\small\item\em Puerto utilizado para el env{\ucr}o de datos. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespace_custom_camera_library_a110c4a43276b32c71d600133797ab457}{Custom\+Camera\+Library\+::\+Command\+Port}} = 1510
+\begin{DoxyCompactList}\small\item\em Puerto utilizado para la recepci{\ucr}n de comandos desde el cliente. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{namespace_custom_camera_library_a7245a10ec33386757292966eb71ee6e4}{Custom\+Camera\+Library\+::l\+Addresses}} \mbox{[}10\mbox{]}
+\item 
+stringstream \mbox{\hyperlink{namespace_custom_camera_library_a571bde774acd8cd6b9529af1b2964f92}{Custom\+Camera\+Library\+::s}}
+\begin{DoxyCompactList}\small\item\em Utilizado para ir concatenando texto y mostrarlo cuando se inicia el servidor. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{namespace_custom_camera_library_a190c217558e81cb19b0ef664ae5ed7f5}{Custom\+Camera\+Library\+::pic}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{cv\+::\+Mat\+::zeros}}(800, 600, C\+V\+\_\+8\+U\+C3)
+\begin{DoxyCompactList}\small\item\em imagen que se muestra de color negro en la ventana que sale al iniciar el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a173720ab8fc85fd6b7713b84b60e4118}{Custom\+Camera\+Library\+::y0}} = 50
+\begin{DoxyCompactList}\small\item\em Posici{\ucr}n inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a033014ef2e1c38a596fe7958d30e8c44}{Custom\+Camera\+Library\+::dy}} = 20
+\begin{DoxyCompactList}\small\item\em incremento inicial del primer texto que aprece en la ventana que sale cuando se inicia el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_abbfe5d4dfda37a253682293774986fa1}{Custom\+Camera\+Library\+::i}} = 0
+\item 
+BodyR $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a749c51cb23f6d5d8d2f43b5e7ba9affd}{Custom\+Camera\+Library\+::rigid}}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{namespace_custom_camera_library_ab68fe88225503c8aed13e2d23723b000}{Custom\+Camera\+Library\+::s\+Semaphore}}
+\begin{DoxyCompactList}\small\item\em Sem{\ucr}foro que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se env{\ucr}an los datos al cliente. \end{DoxyCompactList}\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{namespace_custom_camera_library_a025e8a9f084836bade15e4afa9ed37f2}{Custom\+Camera\+Library\+::br\+Semaphore}}
+\begin{DoxyCompactList}\small\item\em Sem{\ucr}foro que se utiliza para sincronizar datos obtenidos desde el hilo principal con el hilo donde corre el servidor y se env{\ucr}an los datos al cliente. \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{namespace_custom_camera_library_a846fb8dfc2febfd259c72adb84f5c0c9}{Custom\+Camera\+Library\+::s\+Result}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aa10a28ccfd1b995cd9a0dac4c59b9900}{Custom\+Camera\+Library\+::nbr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{server_8h_abb250f2821f51c47ea181fb4eaba5f69}\label{server_8h_abb250f2821f51c47ea181fb4eaba5f69}} 
+\index{server.h@{server.h}!BROCAA@{BROCAA}}
+\index{BROCAA@{BROCAA}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{BROCAA}{BROCAA}}
+{\footnotesize\ttfamily \#define B\+R\+O\+C\+AA~6}
+
+\mbox{\Hypertarget{server_8h_ab2d04210672c893ac3825a0faa9705b2}\label{server_8h_ab2d04210672c893ac3825a0faa9705b2}} 
+\index{server.h@{server.h}!FEMURR@{FEMURR}}
+\index{FEMURR@{FEMURR}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{FEMURR}{FEMURR}}
+{\footnotesize\ttfamily \#define F\+E\+M\+U\+RR~3}
+
+\mbox{\Hypertarget{server_8h_afda36533f888e7e0def7046c86993e5c}\label{server_8h_afda36533f888e7e0def7046c86993e5c}} 
+\index{server.h@{server.h}!GAFASS@{GAFASS}}
+\index{GAFASS@{GAFASS}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{GAFASS}{GAFASS}}
+{\footnotesize\ttfamily \#define G\+A\+F\+A\+SS~4}
+
+\mbox{\Hypertarget{server_8h_a65d41efccf07401be05ff83c3405e0a8}\label{server_8h_a65d41efccf07401be05ff83c3405e0a8}} 
+\index{server.h@{server.h}!POINTERR@{POINTERR}}
+\index{POINTERR@{POINTERR}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{POINTERR}{POINTERR}}
+{\footnotesize\ttfamily \#define P\+O\+I\+N\+T\+E\+RR~1}
+
+\mbox{\Hypertarget{server_8h_a51320792317dbaf9ee86fb22772f532b}\label{server_8h_a51320792317dbaf9ee86fb22772f532b}} 
+\index{server.h@{server.h}!STREAM\_LABELED\_MARKERS@{STREAM\_LABELED\_MARKERS}}
+\index{STREAM\_LABELED\_MARKERS@{STREAM\_LABELED\_MARKERS}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{STREAM\_LABELED\_MARKERS}{STREAM\_LABELED\_MARKERS}}
+{\footnotesize\ttfamily \#define S\+T\+R\+E\+A\+M\+\_\+\+L\+A\+B\+E\+L\+E\+D\+\_\+\+M\+A\+R\+K\+E\+RS~0}
+
+
+
+NO U\+T\+I\+L\+I\+Z\+A\+DO. 
+
+\mbox{\Hypertarget{server_8h_a37d5873e2531ac863ed3f522edeaa00d}\label{server_8h_a37d5873e2531ac863ed3f522edeaa00d}} 
+\index{server.h@{server.h}!STREAM\_MARKERS@{STREAM\_MARKERS}}
+\index{STREAM\_MARKERS@{STREAM\_MARKERS}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{STREAM\_MARKERS}{STREAM\_MARKERS}}
+{\footnotesize\ttfamily \#define S\+T\+R\+E\+A\+M\+\_\+\+M\+A\+R\+K\+E\+RS~1}
+
+
+
+NO U\+T\+I\+L\+I\+Z\+A\+DO. 
+
+\mbox{\Hypertarget{server_8h_aab57262ca9824391d6a1276123208965}\label{server_8h_aab57262ca9824391d6a1276123208965}} 
+\index{server.h@{server.h}!STREAM\_RBS@{STREAM\_RBS}}
+\index{STREAM\_RBS@{STREAM\_RBS}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{STREAM\_RBS}{STREAM\_RBS}}
+{\footnotesize\ttfamily \#define S\+T\+R\+E\+A\+M\+\_\+\+R\+BS~1}
+
+
+
+NO U\+T\+I\+L\+I\+Z\+A\+DO. 
+
+\mbox{\Hypertarget{server_8h_a9912ba19427a7bf1232b1d08cb2eb001}\label{server_8h_a9912ba19427a7bf1232b1d08cb2eb001}} 
+\index{server.h@{server.h}!STREAM\_SKELETONS@{STREAM\_SKELETONS}}
+\index{STREAM\_SKELETONS@{STREAM\_SKELETONS}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{STREAM\_SKELETONS}{STREAM\_SKELETONS}}
+{\footnotesize\ttfamily \#define S\+T\+R\+E\+A\+M\+\_\+\+S\+K\+E\+L\+E\+T\+O\+NS~0}
+
+
+
+NO U\+T\+I\+L\+I\+Z\+A\+DO. 
+
+\mbox{\Hypertarget{server_8h_a062f33e4151d51f2234b0d8b3da4bbc4}\label{server_8h_a062f33e4151d51f2234b0d8b3da4bbc4}} 
+\index{server.h@{server.h}!TIBIAA@{TIBIAA}}
+\index{TIBIAA@{TIBIAA}!server.h@{server.h}}
+\doxysubsubsection{\texorpdfstring{TIBIAA}{TIBIAA}}
+{\footnotesize\ttfamily \#define T\+I\+B\+I\+AA~2}
+

@@ -1,0 +1,105 @@
+\hypertarget{pgmread_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/pgmread.m File Reference}
+\label{pgmread_8m}\index{D:/TrackEsferas/NavarQA/calib/pgmread.m@{D:/TrackEsferas/NavarQA/calib/pgmread.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pgmread_8m_acd3a72846a008a9e8b16f6081c4b00cc}{fscanf}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}, \textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{P5\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} \mbox{\hyperlink{pgmread_8m_a699d9c61b4e8f6ddecc2e3019e8a06cd}{findstr}} (\mbox{\hyperlink{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}{cmt}}, \textquotesingle{}\#\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{pgmread_8m_aa143ec8388449cea89d4b65bfe170e8a}{length}} (\mbox{\hyperlink{pgmread_8m_a699d9c61b4e8f6ddecc2e3019e8a06cd}{findstr}}(\mbox{\hyperlink{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}{cmt}}, \textquotesingle{}\#\textquotesingle{})) $\sim$
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{pgmread_8m_a011c2b2e652021daa3872e94b459d277}{fgets}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}})
+\item 
+\mbox{\hyperlink{pgmread_8m_a5e769bbbabcaddc548203741c7100228}{fclose}} (\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} \mbox{\hyperlink{pgmread_8m_a86d0d51ceb4bc3bd26707520f257a5a4}{img}}
+\item 
+\mbox{\hyperlink{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}{cmt}} = \textquotesingle{}\#\textquotesingle{}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{pgmread_8m_ad5c41a5155d8f86b2ddf8eb3bca5f359}{YX}} = sscanf(\mbox{\hyperlink{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}{cmt}}, \textquotesingle{}\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} \%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{pgmread_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}} = \mbox{\hyperlink{pgmread_8m_ad5c41a5155d8f86b2ddf8eb3bca5f359}{YX}}(1)
+\item 
+\mbox{\hyperlink{pgmread_8m_a9336ebf25087d91c818ee6e9ec29f8c1}{x}} = \mbox{\hyperlink{pgmread_8m_ad5c41a5155d8f86b2ddf8eb3bca5f359}{YX}}(2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pgmread_8m_a5e769bbbabcaddc548203741c7100228}\label{pgmread_8m_a5e769bbbabcaddc548203741c7100228}} 
+\index{pgmread.m@{pgmread.m}!fclose@{fclose}}
+\index{fclose@{fclose}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{fclose()}{fclose()}}
+{\footnotesize\ttfamily fclose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pgmread_8m_a011c2b2e652021daa3872e94b459d277}\label{pgmread_8m_a011c2b2e652021daa3872e94b459d277}} 
+\index{pgmread.m@{pgmread.m}!fgets@{fgets}}
+\index{fgets@{fgets}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{fgets()}{fgets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} fgets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pgmread_8m_a699d9c61b4e8f6ddecc2e3019e8a06cd}\label{pgmread_8m_a699d9c61b4e8f6ddecc2e3019e8a06cd}} 
+\index{pgmread.m@{pgmread.m}!findstr@{findstr}}
+\index{findstr@{findstr}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{findstr()}{findstr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} findstr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}{cmt}}}]{,  }\item[{\textquotesingle{}\#\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pgmread_8m_acd3a72846a008a9e8b16f6081c4b00cc}\label{pgmread_8m_acd3a72846a008a9e8b16f6081c4b00cc}} 
+\index{pgmread.m@{pgmread.m}!fscanf@{fscanf}}
+\index{fscanf@{fscanf}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{fscanf()}{fscanf()}}
+{\footnotesize\ttfamily fscanf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saveppm_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid}}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{P5\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pgmread_8m_aa143ec8388449cea89d4b65bfe170e8a}\label{pgmread_8m_aa143ec8388449cea89d4b65bfe170e8a}} 
+\index{pgmread.m@{pgmread.m}!length@{length}}
+\index{length@{length}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pgmread_8m_a699d9c61b4e8f6ddecc2e3019e8a06cd}{findstr}}(\mbox{\hyperlink{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}{cmt}}, \textquotesingle{}\#\textquotesingle{})}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}\label{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}} 
+\index{pgmread.m@{pgmread.m}!cmt@{cmt}}
+\index{cmt@{cmt}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{cmt}{cmt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} cmt = \textquotesingle{}\#\textquotesingle{}}
+
+\mbox{\Hypertarget{pgmread_8m_a86d0d51ceb4bc3bd26707520f257a5a4}\label{pgmread_8m_a86d0d51ceb4bc3bd26707520f257a5a4}} 
+\index{pgmread.m@{pgmread.m}!img@{img}}
+\index{img@{img}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{img}{img}}
+{\footnotesize\ttfamily img}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= pgmread(filename)}
+\DoxyCodeLine{\% \textcolor{keyword}{function} \mbox{\hyperlink{pgmread_8m_a86d0d51ceb4bc3bd26707520f257a5a4}{img}} = pgmread(filename)}
+\DoxyCodeLine{\%   \textcolor{keyword}{this} \mbox{\hyperlink{go__calib__optim__iter_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} my version of pgmread \textcolor{keywordflow}{for} the pgm \mbox{\hyperlink{matlab2opencv_8m_ac0a984a0dc9111131f4ad1fe8088698a}{file}} created by XV.}
+\DoxyCodeLine{\%   }
+\DoxyCodeLine{\%  \textcolor{keyword}{this} \mbox{\hyperlink{compute__extrinsic_8m_a856d163d9908f11a7c33bc1c24ed392a}{program}} also corrects \textcolor{keywordflow}{for} the shifts in the \mbox{\hyperlink{analyse__error_8m_aee9a066043e7b7065d7cdda5fbcfba53}{image}} from pm \mbox{\hyperlink{matlab2opencv_8m_ac0a984a0dc9111131f4ad1fe8088698a}{file}}.}
+\DoxyCodeLine{}
+\DoxyCodeLine{fid = fopen(filename,\textcolor{charliteral}{'r'})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{pgmread_8m_a9336ebf25087d91c818ee6e9ec29f8c1}\label{pgmread_8m_a9336ebf25087d91c818ee6e9ec29f8c1}} 
+\index{pgmread.m@{pgmread.m}!x@{x}}
+\index{x@{x}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} = \mbox{\hyperlink{pgmread_8m_ad5c41a5155d8f86b2ddf8eb3bca5f359}{YX}}(2)}
+
+\mbox{\Hypertarget{pgmread_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}\label{pgmread_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}} 
+\index{pgmread.m@{pgmread.m}!y@{y}}
+\index{y@{y}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily y = \mbox{\hyperlink{pgmread_8m_ad5c41a5155d8f86b2ddf8eb3bca5f359}{YX}}(1)}
+
+\mbox{\Hypertarget{pgmread_8m_ad5c41a5155d8f86b2ddf8eb3bca5f359}\label{pgmread_8m_ad5c41a5155d8f86b2ddf8eb3bca5f359}} 
+\index{pgmread.m@{pgmread.m}!YX@{YX}}
+\index{YX@{YX}!pgmread.m@{pgmread.m}}
+\doxysubsubsection{\texorpdfstring{YX}{YX}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} YX = sscanf(\mbox{\hyperlink{pgmread_8m_a7356b8db0968d9b9dab2722ffc2528c1}{cmt}}, \textquotesingle{}\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} \%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}\textquotesingle{})}
+

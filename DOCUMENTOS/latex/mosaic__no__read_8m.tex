@@ -1,0 +1,270 @@
+\hypertarget{mosaic__no__read_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/mosaic\+\_\+no\+\_\+read.m File Reference}
+\label{mosaic__no__read_8m}\index{D:/TrackEsferas/NavarQA/calib/mosaic\_no\_read.m@{D:/TrackEsferas/NavarQA/calib/mosaic\_no\_read.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{mosaic__no__read_8m_a8ccdcb44005ddf0a43e4dd1c6a0ccd9a}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{})
+\item 
+for \mbox{\hyperlink{mosaic__no__read_8m_a6eba615723323569957fb14bf0d12db9}{if}} (\mbox{\hyperlink{mosaic__no__read_8m_a57a38d48f82321f9a000c5948e1c1c0a}{kk\+\_\+c}}$<$=\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_ab002cd8d00d360463602439e733fab79}{if}} (\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}}(\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}})) \&(\mbox{\hyperlink{mosaic__no__read_8m_a57a38d48f82321f9a000c5948e1c1c0a}{kk\+\_\+c}}$<$
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{mosaic__no__read_8m_abfb344fdca8da3864db73b6c864bf7db}{format\+\_\+image}} (1)
+\item 
+1\+:n\+\_\+col\+:end, 1\+:n\+\_\+col\+:end \mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}} ()
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a1b48084a8bd73e29c843104839e48aca}{zeros}} (3, \mbox{\hyperlink{mosaic__no__read_8m_a979c87d1734fed9ea1baf125bff9faa7}{nn2}})\mbox{]}
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_ac84feabc0a5ffe70fd5e05e72a103d54}{figure}} (2)
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a4a25e3538ecffb0d472ecc252fcb1c95}{image}} (\mbox{\hyperlink{mosaic__no__read_8m_aa879b312f76eea4fa9e98274e53b49b1}{I\+I\+\_\+mosaic}})
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a0dd196b89abbfff3b247898a4a436149}{colormap}} (gray(256))
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_aab29489dfbbb46d899c6af5b7459068f}{title}} (\textquotesingle{}Calibration \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_ad234858f79ec8d905a45bd268334b0cf}{set}} (gca, \textquotesingle{}Xtick\textquotesingle{},\mbox{[}$\,$\mbox{]}) set(gca
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a3ef3320a7106d769e4e8519fd2e2bb1f}{axis}} (\textquotesingle{}\mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{mosaic__no__read_8m_afab748bff7c783e231f804bd8f4eda54}{data\+\_\+calib\+\_\+no\+\_\+read}}
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a8419296eda3568bfe746442900669529}{n\+\_\+col}} = floor(sqrt(\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}$\ast$\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}/\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}))
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_add71e3503539a88640cd563f84039863}{n\+\_\+row}} = ceil(\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} / \mbox{\hyperlink{mosaic__no__read_8m_a8419296eda3568bfe746442900669529}{n\+\_\+col}})
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_ab65760b818053cfd28cad638b863b5e9}{ker2}} = 1
+\item 
+for \mbox{\hyperlink{mosaic__no__read_8m_af16cff3d6d24a105ac7688cac755f0b3}{ii}} = 1\+:\mbox{\hyperlink{mosaic__no__read_8m_a8419296eda3568bfe746442900669529}{n\+\_\+col}}
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_ac935b90e5bbe3116645e5cd576eb1bec}{ny2}} = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(1\+:n\+\_\+col\+:ny)
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a1c38a623c5c71b9308ac602306df4d99}{nx2}} = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(1\+:n\+\_\+col\+:nx)
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a540e32485047e61b02c23569cb1ef799}{II}} = I\+\_\+1(1\+:n\+\_\+col\+:end,1\+:n\+\_\+col\+:end)
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a57a38d48f82321f9a000c5948e1c1c0a}{kk\+\_\+c}} = 1
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_aa879b312f76eea4fa9e98274e53b49b1}{I\+I\+\_\+mosaic}} = \mbox{[}$\,$\mbox{]}
+\item 
+for \mbox{\hyperlink{mosaic__no__read_8m_ac765f80e89f553eefded8b5ec85c35b9}{jj}} = 1\+:\mbox{\hyperlink{mosaic__no__read_8m_add71e3503539a88640cd563f84039863}{n\+\_\+row}}
+\item 
+for \mbox{\hyperlink{mosaic__no__read_8m_a6b63d5540fc1e9457053c8f2b7fae9ea}{I\+I\+\_\+row}} = \mbox{[}$\,$\mbox{]}
+\item 
+for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{mosaic__no__read_8m_a1ede31c03a426899f58253f907f83e79}{$\sim$type\+\_\+numbering}}
+\item 
+for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{mosaic__no__read_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} = num2str(\mbox{\hyperlink{ima__read__calib__no__read_8m_a2cc2b5a35593a627bf151c8623349c06}{image\+\_\+numbers}}(\mbox{\hyperlink{mosaic__no__read_8m_a57a38d48f82321f9a000c5948e1c1c0a}{kk\+\_\+c}}))
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}} = \mbox{[}calib\+\_\+name \mbox{\hyperlink{write__image_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} \textquotesingle{}.\textquotesingle{} \mbox{\hyperlink{write__image_8m_a3ef97c8b89c343e5191f9293fb98785d}{format\+\_\+image}}\mbox{]}
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{mosaic__no__read_8m_a2d19d83de1f039b03ce5fd4bf1b1abc6}{I}} = double(loadpgm(\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}}))
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a979c87d1734fed9ea1baf125bff9faa7}{nn2}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{mosaic__no__read_8m_a6b63d5540fc1e9457053c8f2b7fae9ea}{I\+I\+\_\+row}},2)
+\item 
+\mbox{\hyperlink{mosaic__no__read_8m_a83a2527c12b49372c961c072ab53081b}{Ytick}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mosaic__no__read_8m_a3ef3320a7106d769e4e8519fd2e2bb1f}\label{mosaic__no__read_8m_a3ef3320a7106d769e4e8519fd2e2bb1f}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!axis@{axis}}
+\index{axis@{axis}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{axis()}{axis()}}
+{\footnotesize\ttfamily axis (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a0dd196b89abbfff3b247898a4a436149}\label{mosaic__no__read_8m_a0dd196b89abbfff3b247898a4a436149}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!colormap@{colormap}}
+\index{colormap@{colormap}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{colormap()}{colormap()}}
+{\footnotesize\ttfamily colormap (\begin{DoxyParamCaption}\item[{gray(256)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_ac84feabc0a5ffe70fd5e05e72a103d54}\label{mosaic__no__read_8m_ac84feabc0a5ffe70fd5e05e72a103d54}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!figure@{figure}}
+\index{figure@{figure}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_abfb344fdca8da3864db73b6c864bf7db}\label{mosaic__no__read_8m_abfb344fdca8da3864db73b6c864bf7db}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!format\_image@{format\_image}}
+\index{format\_image@{format\_image}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{format\_image()}{format\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} format\+\_\+image (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}\label{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!I@{I}}
+\index{I@{I}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{I()}{I()}}
+{\footnotesize\ttfamily 1\+:n\+\_\+col\+:end,1\+:n\+\_\+col\+:end I (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_ab002cd8d00d360463602439e733fab79}\label{mosaic__no__read_8m_ab002cd8d00d360463602439e733fab79}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!if@{if}}
+\index{if@{if}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}}(\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}})}]{ }\end{DoxyParamCaption}) \&}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a6eba615723323569957fb14bf0d12db9}\label{mosaic__no__read_8m_a6eba615723323569957fb14bf0d12db9}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!if@{if}}
+\index{if@{if}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily for if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mosaic__no__read_8m_a57a38d48f82321f9a000c5948e1c1c0a}{kk\+\_\+c}}$<$=}]{n\+\_\+ima }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a4a25e3538ecffb0d472ecc252fcb1c95}\label{mosaic__no__read_8m_a4a25e3538ecffb0d472ecc252fcb1c95}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!image@{image}}
+\index{image@{image}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}}
+{\footnotesize\ttfamily image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mosaic__no__read_8m_aa879b312f76eea4fa9e98274e53b49b1}{I\+I\+\_\+mosaic}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_ad234858f79ec8d905a45bd268334b0cf}\label{mosaic__no__read_8m_ad234858f79ec8d905a45bd268334b0cf}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!set@{set}}
+\index{set@{set}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{gca}]{,  }\item[{\textquotesingle{}Xtick\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_aab29489dfbbb46d899c6af5b7459068f}\label{mosaic__no__read_8m_aab29489dfbbb46d899c6af5b7459068f}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!title@{title}}
+\index{title@{title}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}Calibration \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a1b48084a8bd73e29c843104839e48aca}\label{mosaic__no__read_8m_a1b48084a8bd73e29c843104839e48aca}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!zeros@{zeros}}
+\index{zeros@{zeros}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}}
+{\footnotesize\ttfamily zeros (\begin{DoxyParamCaption}\item[{3}]{,  }\item[{\mbox{\hyperlink{mosaic__no__read_8m_a979c87d1734fed9ea1baf125bff9faa7}{nn2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a8ccdcb44005ddf0a43e4dd1c6a0ccd9a}\label{mosaic__no__read_8m_a8ccdcb44005ddf0a43e4dd1c6a0ccd9a}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{mosaic__no__read_8m_a0d062f92217e4e073995683900fdadcb}\label{mosaic__no__read_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_afab748bff7c783e231f804bd8f4eda54}\label{mosaic__no__read_8m_afab748bff7c783e231f804bd8f4eda54}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!data\_calib\_no\_read@{data\_calib\_no\_read}}
+\index{data\_calib\_no\_read@{data\_calib\_no\_read}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{data\_calib\_no\_read}{data\_calib\_no\_read}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} data\+\_\+calib\+\_\+no\+\_\+read}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}\label{mosaic__no__read_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!end@{end}}
+\index{end@{end}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a2d19d83de1f039b03ce5fd4bf1b1abc6}\label{mosaic__no__read_8m_a2d19d83de1f039b03ce5fd4bf1b1abc6}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!I@{I}}
+\index{I@{I}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{I}{I}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} I = double(loadpgm(\mbox{\hyperlink{undistort__image__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}{ima\+\_\+name}}))}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_af16cff3d6d24a105ac7688cac755f0b3}\label{mosaic__no__read_8m_af16cff3d6d24a105ac7688cac755f0b3}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!ii@{ii}}
+\index{ii@{ii}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{ii}{ii}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} ii = 1\+:\mbox{\hyperlink{mosaic__no__read_8m_a8419296eda3568bfe746442900669529}{n\+\_\+col}}}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a540e32485047e61b02c23569cb1ef799}\label{mosaic__no__read_8m_a540e32485047e61b02c23569cb1ef799}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!II@{II}}
+\index{II@{II}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{II}{II}}
+{\footnotesize\ttfamily II = I\+\_\+1(1\+:n\+\_\+col\+:end,1\+:n\+\_\+col\+:end)}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_aa879b312f76eea4fa9e98274e53b49b1}\label{mosaic__no__read_8m_aa879b312f76eea4fa9e98274e53b49b1}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!II\_mosaic@{II\_mosaic}}
+\index{II\_mosaic@{II\_mosaic}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{II\_mosaic}{II\_mosaic}}
+{\footnotesize\ttfamily I\+I\+\_\+mosaic = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a6b63d5540fc1e9457053c8f2b7fae9ea}\label{mosaic__no__read_8m_a6b63d5540fc1e9457053c8f2b7fae9ea}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!II\_row@{II\_row}}
+\index{II\_row@{II\_row}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{II\_row}{II\_row}}
+{\footnotesize\ttfamily I\+I\+\_\+row = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}\label{mosaic__no__read_8m_a2ed56db4822279cbd5a96f7d7439c0a5}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!ima\_name@{ima\_name}}
+\index{ima\_name@{ima\_name}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{ima\_name}{ima\_name}}
+{\footnotesize\ttfamily ima\+\_\+name = \mbox{[}calib\+\_\+name \mbox{\hyperlink{write__image_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} \textquotesingle{}.\textquotesingle{} \mbox{\hyperlink{write__image_8m_a3ef97c8b89c343e5191f9293fb98785d}{format\+\_\+image}}\mbox{]}}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_ac765f80e89f553eefded8b5ec85c35b9}\label{mosaic__no__read_8m_ac765f80e89f553eefded8b5ec85c35b9}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!jj@{jj}}
+\index{jj@{jj}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{jj}{jj}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} jj = 1\+:\mbox{\hyperlink{mosaic__no__read_8m_add71e3503539a88640cd563f84039863}{n\+\_\+row}}}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_ab65760b818053cfd28cad638b863b5e9}\label{mosaic__no__read_8m_ab65760b818053cfd28cad638b863b5e9}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!ker2@{ker2}}
+\index{ker2@{ker2}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{ker2}{ker2}}
+{\footnotesize\ttfamily for ker2 = 1}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a57a38d48f82321f9a000c5948e1c1c0a}\label{mosaic__no__read_8m_a57a38d48f82321f9a000c5948e1c1c0a}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!kk\_c@{kk\_c}}
+\index{kk\_c@{kk\_c}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{kk\_c}{kk\_c}}
+{\footnotesize\ttfamily kk\+\_\+c = 1}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a8419296eda3568bfe746442900669529}\label{mosaic__no__read_8m_a8419296eda3568bfe746442900669529}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!n\_col@{n\_col}}
+\index{n\_col@{n\_col}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{n\_col}{n\_col}}
+{\footnotesize\ttfamily n\+\_\+col = floor(sqrt(\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}$\ast$\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}/\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}))}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_add71e3503539a88640cd563f84039863}\label{mosaic__no__read_8m_add71e3503539a88640cd563f84039863}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!n\_row@{n\_row}}
+\index{n\_row@{n\_row}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{n\_row}{n\_row}}
+{\footnotesize\ttfamily n\+\_\+row = ceil(\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} / \mbox{\hyperlink{mosaic__no__read_8m_a8419296eda3568bfe746442900669529}{n\+\_\+col}})}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a979c87d1734fed9ea1baf125bff9faa7}\label{mosaic__no__read_8m_a979c87d1734fed9ea1baf125bff9faa7}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!nn2@{nn2}}
+\index{nn2@{nn2}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{nn2}{nn2}}
+{\footnotesize\ttfamily nn2 = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{mosaic__no__read_8m_a6b63d5540fc1e9457053c8f2b7fae9ea}{I\+I\+\_\+row}},2)}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a2a121162663fdd8eb34a8fb062d77bac}\label{mosaic__no__read_8m_a2a121162663fdd8eb34a8fb062d77bac}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!number\_ext@{number\_ext}}
+\index{number\_ext@{number\_ext}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{number\_ext}{number\_ext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} number\+\_\+ext = num2str(\mbox{\hyperlink{ima__read__calib__no__read_8m_a2cc2b5a35593a627bf151c8623349c06}{image\+\_\+numbers}}(\mbox{\hyperlink{mosaic__no__read_8m_a57a38d48f82321f9a000c5948e1c1c0a}{kk\+\_\+c}}))}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a1c38a623c5c71b9308ac602306df4d99}\label{mosaic__no__read_8m_a1c38a623c5c71b9308ac602306df4d99}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!nx2@{nx2}}
+\index{nx2@{nx2}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{nx2}{nx2}}
+{\footnotesize\ttfamily nx2 = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(1\+:n\+\_\+col\+:nx)}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_ac935b90e5bbe3116645e5cd576eb1bec}\label{mosaic__no__read_8m_ac935b90e5bbe3116645e5cd576eb1bec}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!ny2@{ny2}}
+\index{ny2@{ny2}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{ny2}{ny2}}
+{\footnotesize\ttfamily ny2 = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(1\+:n\+\_\+col\+:ny)}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a83a2527c12b49372c961c072ab53081b}\label{mosaic__no__read_8m_a83a2527c12b49372c961c072ab53081b}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!Ytick@{Ytick}}
+\index{Ytick@{Ytick}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{Ytick}{Ytick}}
+{\footnotesize\ttfamily Ytick}
+
+\mbox{\Hypertarget{mosaic__no__read_8m_a1ede31c03a426899f58253f907f83e79}\label{mosaic__no__read_8m_a1ede31c03a426899f58253f907f83e79}} 
+\index{mosaic\_no\_read.m@{mosaic\_no\_read.m}!````~type\_numbering@{$\sim$type\_numbering}}
+\index{````~type\_numbering@{$\sim$type\_numbering}!mosaic\_no\_read.m@{mosaic\_no\_read.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$type\_numbering}{~type\_numbering}}
+{\footnotesize\ttfamily for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{check__directory_8m_a0a88702dd5dcea5894185c9c25866bf6}{type\+\_\+numbering}}}
+

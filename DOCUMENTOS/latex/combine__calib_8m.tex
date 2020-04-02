@@ -1,0 +1,126 @@
+\hypertarget{combine__calib_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/combine\+\_\+calib.m File Reference}
+\label{combine__calib_8m}\index{D:/TrackEsferas/NavarQA/calib/combine\_calib.m@{D:/TrackEsferas/NavarQA/calib/combine\_calib.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{combine__calib_8m_a44c4c50adb470474c1faaac3f3eb1a02}{load}} (\mbox{\hyperlink{combine__calib_8m_a24c472043ed4d28e3f8d2a4257896847}{name1}})
+\item 
+\mbox{\hyperlink{combine__calib_8m_a4973d2328c2ee73d346f3af715d6fbe2}{load}} (\mbox{\hyperlink{combine__calib_8m_aecd2b4abfd553d4d27e5885cf7fb2afa}{name2}})
+\item 
+for \mbox{\hyperlink{combine__calib_8m_ae47a9df7a58898af2a18974e778a597c}{eval}} (\mbox{[}\textquotesingle{}X\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}+\mbox{\hyperlink{combine__calib_8m_ad6cd8b942896aa3ed80a5791f39a8ee1}{n\+\_\+ima\+\_\+1}}) \textquotesingle{}=X\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Script \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} combines two \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} sets together \mbox{\hyperlink{combine__calib_8m_a7138f3d2c26d90e619a4f24f8cfe0c1f}{dir}}
+\item 
+\mbox{\hyperlink{combine__calib_8m_a24c472043ed4d28e3f8d2a4257896847}{name1}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Calibration \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} \#1\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{combine__calib_8m_aecd2b4abfd553d4d27e5885cf7fb2afa}{name2}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Calibration \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} \#2\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{combine__calib_8m_ad6cd8b942896aa3ed80a5791f39a8ee1}{n\+\_\+ima\+\_\+1}} = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+\mbox{\hyperlink{combine__calib_8m_a707fb384f069ee87fd60efc85e569723}{n\+\_\+ima\+\_\+2}} = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+\mbox{\hyperlink{combine__calib_8m_a8c49446f7e58f81c3a906238990856ee}{active\+\_\+images\+\_\+2}} = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}
+\item 
+for \mbox{\hyperlink{combine__calib_8m_af29949bd63fb009eacab5efd11399e40}{kk}} =n\+\_\+ima\+:-\/1\+:1
+\item 
+\mbox{\hyperlink{combine__calib_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{combine__calib_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}} = n\+\_\+ima + \mbox{\hyperlink{combine__calib_8m_a707fb384f069ee87fd60efc85e569723}{n\+\_\+ima\+\_\+2}}
+\item 
+\mbox{\hyperlink{combine__calib_8m_a92b03440a331baeaaf23d56a1e468edc}{active\+\_\+images}} = \mbox{[} active\+\_\+images \mbox{\hyperlink{combine__calib_8m_a8c49446f7e58f81c3a906238990856ee}{active\+\_\+images\+\_\+2}}\mbox{]}
+\item 
+\mbox{\hyperlink{combine__calib_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}{no\+\_\+image}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{combine__calib_8m_ae47a9df7a58898af2a18974e778a597c}\label{combine__calib_8m_ae47a9df7a58898af2a18974e778a597c}} 
+\index{combine\_calib.m@{combine\_calib.m}!eval@{eval}}
+\index{eval@{eval}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily for eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{combine__calib_8m_a44c4c50adb470474c1faaac3f3eb1a02}\label{combine__calib_8m_a44c4c50adb470474c1faaac3f3eb1a02}} 
+\index{combine\_calib.m@{combine\_calib.m}!load@{load}}
+\index{load@{load}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{combine__calib_8m_a24c472043ed4d28e3f8d2a4257896847}{name1}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{combine__calib_8m_a4973d2328c2ee73d346f3af715d6fbe2}\label{combine__calib_8m_a4973d2328c2ee73d346f3af715d6fbe2}} 
+\index{combine\_calib.m@{combine\_calib.m}!load@{load}}
+\index{load@{load}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{combine__calib_8m_aecd2b4abfd553d4d27e5885cf7fb2afa}{name2}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{combine__calib_8m_a92b03440a331baeaaf23d56a1e468edc}\label{combine__calib_8m_a92b03440a331baeaaf23d56a1e468edc}} 
+\index{combine\_calib.m@{combine\_calib.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{active\_images}{active\_images}}
+{\footnotesize\ttfamily active\+\_\+images = \mbox{[} active\+\_\+images \mbox{\hyperlink{combine__calib_8m_a8c49446f7e58f81c3a906238990856ee}{active\+\_\+images\+\_\+2}}\mbox{]}}
+
+\mbox{\Hypertarget{combine__calib_8m_a8c49446f7e58f81c3a906238990856ee}\label{combine__calib_8m_a8c49446f7e58f81c3a906238990856ee}} 
+\index{combine\_calib.m@{combine\_calib.m}!active\_images\_2@{active\_images\_2}}
+\index{active\_images\_2@{active\_images\_2}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{active\_images\_2}{active\_images\_2}}
+{\footnotesize\ttfamily active\+\_\+images\+\_\+2 = \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}}
+
+\mbox{\Hypertarget{combine__calib_8m_a7138f3d2c26d90e619a4f24f8cfe0c1f}\label{combine__calib_8m_a7138f3d2c26d90e619a4f24f8cfe0c1f}} 
+\index{combine\_calib.m@{combine\_calib.m}!dir@{dir}}
+\index{dir@{dir}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily Script \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} combines two \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} sets together dir}
+
+\mbox{\Hypertarget{combine__calib_8m_afb358f48b1646c750fb9da6c6585be2b}\label{combine__calib_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{combine\_calib.m@{combine\_calib.m}!end@{end}}
+\index{end@{end}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{combine__calib_8m_af29949bd63fb009eacab5efd11399e40}\label{combine__calib_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{combine\_calib.m@{combine\_calib.m}!kk@{kk}}
+\index{kk@{kk}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk =n\+\_\+ima\+:-\/1\+:1}
+
+\mbox{\Hypertarget{combine__calib_8m_a4bd2a7187893657a867b1e3b03a6ca7f}\label{combine__calib_8m_a4bd2a7187893657a867b1e3b03a6ca7f}} 
+\index{combine\_calib.m@{combine\_calib.m}!n\_ima@{n\_ima}}
+\index{n\_ima@{n\_ima}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima}{n\_ima}}
+{\footnotesize\ttfamily n\+\_\+ima = n\+\_\+ima + \mbox{\hyperlink{combine__calib_8m_a707fb384f069ee87fd60efc85e569723}{n\+\_\+ima\+\_\+2}}}
+
+\mbox{\Hypertarget{combine__calib_8m_ad6cd8b942896aa3ed80a5791f39a8ee1}\label{combine__calib_8m_ad6cd8b942896aa3ed80a5791f39a8ee1}} 
+\index{combine\_calib.m@{combine\_calib.m}!n\_ima\_1@{n\_ima\_1}}
+\index{n\_ima\_1@{n\_ima\_1}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima\_1}{n\_ima\_1}}
+{\footnotesize\ttfamily n\+\_\+ima\+\_\+1 = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{combine__calib_8m_a707fb384f069ee87fd60efc85e569723}\label{combine__calib_8m_a707fb384f069ee87fd60efc85e569723}} 
+\index{combine\_calib.m@{combine\_calib.m}!n\_ima\_2@{n\_ima\_2}}
+\index{n\_ima\_2@{n\_ima\_2}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima\_2}{n\_ima\_2}}
+{\footnotesize\ttfamily n\+\_\+ima\+\_\+2 = \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{combine__calib_8m_a24c472043ed4d28e3f8d2a4257896847}\label{combine__calib_8m_a24c472043ed4d28e3f8d2a4257896847}} 
+\index{combine\_calib.m@{combine\_calib.m}!name1@{name1}}
+\index{name1@{name1}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{name1}{name1}}
+{\footnotesize\ttfamily name1 = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Calibration \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} \#1\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{combine__calib_8m_aecd2b4abfd553d4d27e5885cf7fb2afa}\label{combine__calib_8m_aecd2b4abfd553d4d27e5885cf7fb2afa}} 
+\index{combine\_calib.m@{combine\_calib.m}!name2@{name2}}
+\index{name2@{name2}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{name2}{name2}}
+{\footnotesize\ttfamily name2 = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Calibration \mbox{\hyperlink{willson__read_8m_aa47425cb8bedf81d652dd3b12254cf44}{file}} \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} \#2\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{combine__calib_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}\label{combine__calib_8m_ae2ef17d5a155c4c2f5ba0650526b1c7a}} 
+\index{combine\_calib.m@{combine\_calib.m}!no\_image@{no\_image}}
+\index{no\_image@{no\_image}!combine\_calib.m@{combine\_calib.m}}
+\doxysubsubsection{\texorpdfstring{no\_image}{no\_image}}
+{\footnotesize\ttfamily no\+\_\+image = 1}
+

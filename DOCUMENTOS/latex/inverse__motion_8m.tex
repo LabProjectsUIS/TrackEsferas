@@ -1,0 +1,166 @@
+\hypertarget{inverse__motion_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/inverse\+\_\+motion.m File Reference}
+\label{inverse__motion_8m}\index{D:/TrackEsferas/NavarQA/calib/inverse\_motion.m@{D:/TrackEsferas/NavarQA/calib/inverse\_motion.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+This \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} computes the inverse motion corresponding \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} (\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}}, \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}) \mbox{\hyperlink{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}{om2}}
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a1b8f92349ef949dcd012db25108e3fa7}{d\+RinvdR}} (\mbox{[}1 4 7\mbox{]},\mbox{[}1 2 3\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a6f1e841a8ed0ecfb922ead77de2f2dc6}{function}} \mbox{[}\mbox{\hyperlink{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}{om2}}, \mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}}, \mbox{\hyperlink{inverse__motion_8m_ae8958d0eff667b6af42201ffb2409eec}{dom2dom}}, \mbox{\hyperlink{inverse__motion_8m_aab890c2069000205fd594fc9d1c417b6}{dom2dT}}, \mbox{\hyperlink{inverse__motion_8m_a616f46e05ec3a216a90d41db5f2bb1e7}{d\+T2dom}}, \mbox{\hyperlink{inverse__motion_8m_abefdc4e7ef3d545647a7309464ea5005}{d\+T2dT}}\mbox{]} = inverse\+\_\+motion(\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}})
+\item 
+\mbox{\hyperlink{inverse__motion_8m_ae8958d0eff667b6af42201ffb2409eec}{dom2dom}} = -\/eye(3)
+\item 
+\mbox{\hyperlink{inverse__motion_8m_aab890c2069000205fd594fc9d1c417b6}{dom2dT}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,3)
+\item 
+\mbox{\hyperlink{inverse__motion_8m_aea875a4e2f8c475e0b1db192356883f2}{Rinv}} = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}\textquotesingle{}
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a1f7e3f68855c797b4dc542390cbce262}{d\+RinvdR}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(9,9)
+\item 
+\mbox{\hyperlink{inverse__motion_8m_aecd38a2d10bba28695d0ba88a8f1aeb9}{d\+Rinvdom}} = \mbox{\hyperlink{inverse__motion_8m_a1b8f92349ef949dcd012db25108e3fa7}{d\+RinvdR}} $\ast$ d\+Rdom
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a07f00b8562506c70b88951d86ea272d8}{Tt}} = \mbox{\hyperlink{inverse__motion_8m_aea875a4e2f8c475e0b1db192356883f2}{Rinv}} $\ast$ \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a5a30d530a77bc992810b0c24a3e8f550}{T2}} = -\/\mbox{\hyperlink{inverse__motion_8m_a07f00b8562506c70b88951d86ea272d8}{Tt}}
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a616f46e05ec3a216a90d41db5f2bb1e7}{d\+T2dom}} = -\/ d\+Ttd\+Rinv $\ast$ \mbox{\hyperlink{inverse__motion_8m_aecd38a2d10bba28695d0ba88a8f1aeb9}{d\+Rinvdom}}
+\item 
+\mbox{\hyperlink{inverse__motion_8m_abefdc4e7ef3d545647a7309464ea5005}{d\+T2dT}} = -\/ d\+TtdT
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+Test of the \mbox{\hyperlink{inverse__motion_8m_abae42d8e51a0eb43fe8aebb87b4719a0}{Jacobians}}
+\item 
+Test of the \mbox{\hyperlink{inverse__motion_8m_ad4a6eaba6683f9febdfa2ae4383378eb}{T}} = 10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 100000
+\item 
+\mbox{\hyperlink{inverse__motion_8m_af3c2f70b3a5027fce7c3161665b6b6af}{dT}} = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 100000
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a270da0d4833e47e71e71c1a2ff5d60e2}{om3p}} = \mbox{\hyperlink{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}{om2}} + \mbox{\hyperlink{inverse__motion_8m_ae8958d0eff667b6af42201ffb2409eec}{dom2dom}}$\ast$\mbox{\hyperlink{rodrigues_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}} + \mbox{\hyperlink{inverse__motion_8m_aab890c2069000205fd594fc9d1c417b6}{dom2dT}}$\ast$\mbox{\hyperlink{skew3_8m_a438b04263e75696048312b1b156d1450}{dT}}
+\item 
+\mbox{\hyperlink{inverse__motion_8m_a030865f0ab0b29f6f84fe9dcdd5a2610}{T3p}} = \mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}} + \mbox{\hyperlink{inverse__motion_8m_a616f46e05ec3a216a90d41db5f2bb1e7}{d\+T2dom}}$\ast$\mbox{\hyperlink{rodrigues_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}} + \mbox{\hyperlink{inverse__motion_8m_abefdc4e7ef3d545647a7309464ea5005}{d\+T2dT}}$\ast$\mbox{\hyperlink{skew3_8m_a438b04263e75696048312b1b156d1450}{dT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inverse__motion_8m_a1b8f92349ef949dcd012db25108e3fa7}\label{inverse__motion_8m_a1b8f92349ef949dcd012db25108e3fa7}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dRinvdR@{dRinvdR}}
+\index{dRinvdR@{dRinvdR}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dRinvdR()}{dRinvdR()}}
+{\footnotesize\ttfamily d\+RinvdR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}\label{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!to@{to}}
+\index{to@{to}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{to()}{to()}}
+{\footnotesize\ttfamily This \mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} computes the inverse motion corresponding to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}}}]{,  }\item[{\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{inverse__motion_8m_a380f9e44ae6cc226340b28e1cf1480c6}\label{inverse__motion_8m_a380f9e44ae6cc226340b28e1cf1480c6}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dom@{dom}}
+\index{dom@{dom}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom}{dom}}
+{\footnotesize\ttfamily dom = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 100000}
+
+\mbox{\Hypertarget{inverse__motion_8m_ae8958d0eff667b6af42201ffb2409eec}\label{inverse__motion_8m_ae8958d0eff667b6af42201ffb2409eec}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dom2dom@{dom2dom}}
+\index{dom2dom@{dom2dom}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom2dom}{dom2dom}}
+{\footnotesize\ttfamily dom2dom = -\/eye(3)}
+
+\mbox{\Hypertarget{inverse__motion_8m_aab890c2069000205fd594fc9d1c417b6}\label{inverse__motion_8m_aab890c2069000205fd594fc9d1c417b6}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dom2dT@{dom2dT}}
+\index{dom2dT@{dom2dT}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dom2dT}{dom2dT}}
+{\footnotesize\ttfamily dom2dT = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(3,3)}
+
+\mbox{\Hypertarget{inverse__motion_8m_aecd38a2d10bba28695d0ba88a8f1aeb9}\label{inverse__motion_8m_aecd38a2d10bba28695d0ba88a8f1aeb9}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dRinvdom@{dRinvdom}}
+\index{dRinvdom@{dRinvdom}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dRinvdom}{dRinvdom}}
+{\footnotesize\ttfamily d\+Rinvdom = \mbox{\hyperlink{inverse__motion_8m_a1b8f92349ef949dcd012db25108e3fa7}{d\+RinvdR}} $\ast$ d\+Rdom}
+
+\mbox{\Hypertarget{inverse__motion_8m_a1f7e3f68855c797b4dc542390cbce262}\label{inverse__motion_8m_a1f7e3f68855c797b4dc542390cbce262}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dRinvdR@{dRinvdR}}
+\index{dRinvdR@{dRinvdR}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dRinvdR}{dRinvdR}}
+{\footnotesize\ttfamily d\+RinvdR = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(9,9)}
+
+\mbox{\Hypertarget{inverse__motion_8m_af3c2f70b3a5027fce7c3161665b6b6af}\label{inverse__motion_8m_af3c2f70b3a5027fce7c3161665b6b6af}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dT@{dT}}
+\index{dT@{dT}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT}{dT}}
+{\footnotesize\ttfamily dT = \mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1) / 100000}
+
+\mbox{\Hypertarget{inverse__motion_8m_a616f46e05ec3a216a90d41db5f2bb1e7}\label{inverse__motion_8m_a616f46e05ec3a216a90d41db5f2bb1e7}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dT2dom@{dT2dom}}
+\index{dT2dom@{dT2dom}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT2dom}{dT2dom}}
+{\footnotesize\ttfamily d\+T2dom = -\/ d\+Ttd\+Rinv $\ast$ \mbox{\hyperlink{inverse__motion_8m_aecd38a2d10bba28695d0ba88a8f1aeb9}{d\+Rinvdom}}}
+
+\mbox{\Hypertarget{inverse__motion_8m_abefdc4e7ef3d545647a7309464ea5005}\label{inverse__motion_8m_abefdc4e7ef3d545647a7309464ea5005}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!dT2dT@{dT2dT}}
+\index{dT2dT@{dT2dT}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{dT2dT}{dT2dT}}
+{\footnotesize\ttfamily d\+T2dT = -\/ d\+TtdT}
+
+\mbox{\Hypertarget{inverse__motion_8m_a6f1e841a8ed0ecfb922ead77de2f2dc6}\label{inverse__motion_8m_a6f1e841a8ed0ecfb922ead77de2f2dc6}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!function@{function}}
+\index{function@{function}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}{om2}}, \mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}}, \mbox{\hyperlink{inverse__motion_8m_ae8958d0eff667b6af42201ffb2409eec}{dom2dom}}, \mbox{\hyperlink{inverse__motion_8m_aab890c2069000205fd594fc9d1c417b6}{dom2dT}}, \mbox{\hyperlink{inverse__motion_8m_a616f46e05ec3a216a90d41db5f2bb1e7}{d\+T2dom}}, \mbox{\hyperlink{inverse__motion_8m_abefdc4e7ef3d545647a7309464ea5005}{d\+T2dT}}\mbox{]} = inverse\+\_\+motion(\mbox{\hyperlink{align__structures_8m_a68877ee1e94ba9fdb81310f7120fd505}{om}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}})}
+
+\mbox{\Hypertarget{inverse__motion_8m_abae42d8e51a0eb43fe8aebb87b4719a0}\label{inverse__motion_8m_abae42d8e51a0eb43fe8aebb87b4719a0}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!Jacobians@{Jacobians}}
+\index{Jacobians@{Jacobians}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{Jacobians}{Jacobians}}
+{\footnotesize\ttfamily Test of the Jacobians}
+
+\mbox{\Hypertarget{inverse__motion_8m_a270da0d4833e47e71e71c1a2ff5d60e2}\label{inverse__motion_8m_a270da0d4833e47e71e71c1a2ff5d60e2}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!om3p@{om3p}}
+\index{om3p@{om3p}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{om3p}{om3p}}
+{\footnotesize\ttfamily om3p = \mbox{\hyperlink{_test_function_8m_a125b264855d3e5cb30c9f9ab41b5fba8}{om2}} + \mbox{\hyperlink{inverse__motion_8m_ae8958d0eff667b6af42201ffb2409eec}{dom2dom}}$\ast$\mbox{\hyperlink{rodrigues_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}} + \mbox{\hyperlink{inverse__motion_8m_aab890c2069000205fd594fc9d1c417b6}{dom2dT}}$\ast$\mbox{\hyperlink{skew3_8m_a438b04263e75696048312b1b156d1450}{dT}}}
+
+\mbox{\Hypertarget{inverse__motion_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{inverse__motion_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!return@{return}}
+\index{return@{return}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{inverse__motion_8m_aea875a4e2f8c475e0b1db192356883f2}\label{inverse__motion_8m_aea875a4e2f8c475e0b1db192356883f2}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!Rinv@{Rinv}}
+\index{Rinv@{Rinv}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{Rinv}{Rinv}}
+{\footnotesize\ttfamily Rinv = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}\textquotesingle{}}
+
+\mbox{\Hypertarget{inverse__motion_8m_ad4a6eaba6683f9febdfa2ae4383378eb}\label{inverse__motion_8m_ad4a6eaba6683f9febdfa2ae4383378eb}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!T@{T}}
+\index{T@{T}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily Test of the T = 10$\ast$\mbox{\hyperlink{error__analysis_8m_a08aed3fddce569e0f5d61985add95a86}{randn}}(3,1)}
+
+\mbox{\Hypertarget{inverse__motion_8m_a5a30d530a77bc992810b0c24a3e8f550}\label{inverse__motion_8m_a5a30d530a77bc992810b0c24a3e8f550}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!T2@{T2}}
+\index{T2@{T2}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{T2}{T2}}
+{\footnotesize\ttfamily T2 = -\/\mbox{\hyperlink{inverse__motion_8m_a07f00b8562506c70b88951d86ea272d8}{Tt}}}
+
+\mbox{\Hypertarget{inverse__motion_8m_a030865f0ab0b29f6f84fe9dcdd5a2610}\label{inverse__motion_8m_a030865f0ab0b29f6f84fe9dcdd5a2610}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!T3p@{T3p}}
+\index{T3p@{T3p}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{T3p}{T3p}}
+{\footnotesize\ttfamily T3p = \mbox{\hyperlink{_test_function_8m_a027ce984e41652d39bd2008b0319c6a4}{T2}} + \mbox{\hyperlink{inverse__motion_8m_a616f46e05ec3a216a90d41db5f2bb1e7}{d\+T2dom}}$\ast$\mbox{\hyperlink{rodrigues_8m_a380f9e44ae6cc226340b28e1cf1480c6}{dom}} + \mbox{\hyperlink{inverse__motion_8m_abefdc4e7ef3d545647a7309464ea5005}{d\+T2dT}}$\ast$\mbox{\hyperlink{skew3_8m_a438b04263e75696048312b1b156d1450}{dT}}}
+
+\mbox{\Hypertarget{inverse__motion_8m_a07f00b8562506c70b88951d86ea272d8}\label{inverse__motion_8m_a07f00b8562506c70b88951d86ea272d8}} 
+\index{inverse\_motion.m@{inverse\_motion.m}!Tt@{Tt}}
+\index{Tt@{Tt}!inverse\_motion.m@{inverse\_motion.m}}
+\doxysubsubsection{\texorpdfstring{Tt}{Tt}}
+{\footnotesize\ttfamily Tt = \mbox{\hyperlink{inverse__motion_8m_aea875a4e2f8c475e0b1db192356883f2}{Rinv}} $\ast$ \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}}
+

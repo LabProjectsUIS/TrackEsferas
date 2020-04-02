@@ -1,0 +1,94 @@
+\hypertarget{projected_grid_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/projected\+Grid.m File Reference}
+\label{projected_grid_8m}\index{D:/TrackEsferas/NavarQA/calib/projectedGrid.m@{D:/TrackEsferas/NavarQA/calib/projectedGrid.m}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{projected_grid_8m_af8ee7b8a65bb8b2c7cff2bbc6456894f}{a00}} = \mbox{[}\mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}
+\item 
+using \mbox{\hyperlink{projected_grid_8m_a8d21ee4f326ad04b8473af2e387cea56}{x\+\_\+l}} = ((0\+:(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1))\textquotesingle{} $\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1, \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}))/(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{projected_grid_8m_acfa77b0414006c4e91cac59483268fd0}{function}} \mbox{[}\mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}}, \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}\mbox{]} = projected\+Grid ( \mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}, \mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}, \mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}, P4 , \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}, \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}})
+\item 
+\mbox{\hyperlink{projected_grid_8m_a88209f02b4e27889e12d5317a1b9a64e}{a10}} = \mbox{[}\mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}
+\item 
+\mbox{\hyperlink{projected_grid_8m_a5a63c04ff6c9d5bbbac43631fe08d656}{a11}} = \mbox{[}\mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}
+\item 
+\mbox{\hyperlink{projected_grid_8m_a36f994875efe21b4fc1c6c745c523ecf}{a01}} = \mbox{[}P4
+\item 
+Compute the planart \mbox{\hyperlink{projected_grid_8m_a49b99ee0e0758c939f35fd74ee069c19}{collineation}}
+\item 
+\mbox{\hyperlink{projected_grid_8m_a65c030f30d51cefa610998c5c765cd3b}{y\+\_\+l}} = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}},1)$\ast$(0\+:(\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}-\/1)))/(\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}-\/1)
+\item 
+\mbox{\hyperlink{projected_grid_8m_a86e67370eee99277122aa8614f0d6a66}{pts}} = \mbox{[}\mbox{\hyperlink{click__ima__calib3_d_8m_a8e0f4ed97a8d8095f941936ae405d515}{x\+\_\+l}}(\+:) \mbox{\hyperlink{projected_grid_8m_a65c030f30d51cefa610998c5c765cd3b}{y\+\_\+l}}(\+:) \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}$\ast$\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}},1)\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{projected_grid_8m_aad347226dcc1d205f58e693925c28783}{XX}} = \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}$\ast$\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a67c68575f99f9373332046c63c3ea84b}{pts}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{projected_grid_8m_af8ee7b8a65bb8b2c7cff2bbc6456894f}\label{projected_grid_8m_af8ee7b8a65bb8b2c7cff2bbc6456894f}} 
+\index{projectedGrid.m@{projectedGrid.m}!a00@{a00}}
+\index{a00@{a00}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{a00}{a00}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{compute__collineation_8m_a06181dbc07d3a409d53092c4135fddaa}{a00}} =  \mbox{[}\mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}}
+
+\mbox{\Hypertarget{projected_grid_8m_a8d21ee4f326ad04b8473af2e387cea56}\label{projected_grid_8m_a8d21ee4f326ad04b8473af2e387cea56}} 
+\index{projectedGrid.m@{projectedGrid.m}!x\_l@{x\_l}}
+\index{x\_l@{x\_l}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{x\_l}{x\_l}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{click__ima__calib3_d_8m_a8e0f4ed97a8d8095f941936ae405d515}{x\+\_\+l}} =  ((0\+:(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1))\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}))/(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}-\/1)}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{projected_grid_8m_a36f994875efe21b4fc1c6c745c523ecf}\label{projected_grid_8m_a36f994875efe21b4fc1c6c745c523ecf}} 
+\index{projectedGrid.m@{projectedGrid.m}!a01@{a01}}
+\index{a01@{a01}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{a01}{a01}}
+{\footnotesize\ttfamily Compute the planart a01 = \mbox{[}P4}
+
+\mbox{\Hypertarget{projected_grid_8m_a88209f02b4e27889e12d5317a1b9a64e}\label{projected_grid_8m_a88209f02b4e27889e12d5317a1b9a64e}} 
+\index{projectedGrid.m@{projectedGrid.m}!a10@{a10}}
+\index{a10@{a10}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{a10}{a10}}
+{\footnotesize\ttfamily Compute the planart a10 = \mbox{[}\mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}}
+
+\mbox{\Hypertarget{projected_grid_8m_a5a63c04ff6c9d5bbbac43631fe08d656}\label{projected_grid_8m_a5a63c04ff6c9d5bbbac43631fe08d656}} 
+\index{projectedGrid.m@{projectedGrid.m}!a11@{a11}}
+\index{a11@{a11}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{a11}{a11}}
+{\footnotesize\ttfamily Compute the planart a11 = \mbox{[}\mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}}
+
+\mbox{\Hypertarget{projected_grid_8m_a49b99ee0e0758c939f35fd74ee069c19}\label{projected_grid_8m_a49b99ee0e0758c939f35fd74ee069c19}} 
+\index{projectedGrid.m@{projectedGrid.m}!collineation@{collineation}}
+\index{collineation@{collineation}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{collineation}{collineation}}
+{\footnotesize\ttfamily Compute the planart collineation}
+
+\mbox{\Hypertarget{projected_grid_8m_acfa77b0414006c4e91cac59483268fd0}\label{projected_grid_8m_acfa77b0414006c4e91cac59483268fd0}} 
+\index{projectedGrid.m@{projectedGrid.m}!function@{function}}
+\index{function@{function}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}}, \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}\mbox{]} = projected\+Grid ( \mbox{\hyperlink{teste___8m_af93dd7f73e57b8b17d34efa33f0f948e}{P1}}, \mbox{\hyperlink{teste___8m_a27f5efe14c52fa358088a3f5d31d5922}{P2}}, \mbox{\hyperlink{teste___8m_a2f6bc990294a141918211e86cf52f564}{P3}}, P4 , \mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}, \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}})}
+
+\mbox{\Hypertarget{projected_grid_8m_a86e67370eee99277122aa8614f0d6a66}\label{projected_grid_8m_a86e67370eee99277122aa8614f0d6a66}} 
+\index{projectedGrid.m@{projectedGrid.m}!pts@{pts}}
+\index{pts@{pts}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{pts}{pts}}
+{\footnotesize\ttfamily pts = \mbox{[}\mbox{\hyperlink{click__ima__calib3_d_8m_a8e0f4ed97a8d8095f941936ae405d515}{x\+\_\+l}}(\+:) \mbox{\hyperlink{projected_grid_8m_a65c030f30d51cefa610998c5c765cd3b}{y\+\_\+l}}(\+:) \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}}$\ast$\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}},1)\mbox{]}\textquotesingle{}}
+
+\mbox{\Hypertarget{projected_grid_8m_aad347226dcc1d205f58e693925c28783}\label{projected_grid_8m_aad347226dcc1d205f58e693925c28783}} 
+\index{projectedGrid.m@{projectedGrid.m}!XX@{XX}}
+\index{XX@{XX}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{XX}{XX}}
+{\footnotesize\ttfamily XX = \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}$\ast$\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a67c68575f99f9373332046c63c3ea84b}{pts}}}
+
+\mbox{\Hypertarget{projected_grid_8m_a65c030f30d51cefa610998c5c765cd3b}\label{projected_grid_8m_a65c030f30d51cefa610998c5c765cd3b}} 
+\index{projectedGrid.m@{projectedGrid.m}!y\_l@{y\_l}}
+\index{y\_l@{y\_l}!projectedGrid.m@{projectedGrid.m}}
+\doxysubsubsection{\texorpdfstring{y\_l}{y\_l}}
+{\footnotesize\ttfamily y\+\_\+l = (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}},1)$\ast$(0\+:(\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}-\/1)))/(\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}}-\/1)}
+

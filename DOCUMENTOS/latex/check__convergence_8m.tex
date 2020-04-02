@@ -1,0 +1,190 @@
+\hypertarget{check__convergence_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/check\+\_\+convergence.m File Reference}
+\label{check__convergence_8m}\index{D:/TrackEsferas/NavarQA/calib/check\_convergence.m@{D:/TrackEsferas/NavarQA/calib/check\_convergence.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Replay the \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__convergence_8m_a39def900b962fc479e998fb6383663f3}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{check__convergence_8m_a1f6ab13d6a0c098611cb4283ce66b0f1}{fprintf}} (1, \textquotesingle{}Error\+:\+Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} calibrate \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{first\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__convergence_8m_af5d5ea8cd66704346ef087a246a65246}{fprintf}} (1, \textquotesingle{}Warning\+:\+There \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} unique state in the list of \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{parameters.\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}} (\+:, \mbox{\hyperlink{downsample_8m_a7f69fd3ef85a986db718cba28ca01682}{nn}})
+\item 
+\mbox{\hyperlink{check__convergence_8m_a3755b4eeaf4bc975f11f07aea1dfb04e}{figure}} (\mbox{\hyperlink{ginput4_8m_afa0c4861700b78b7ffd242351fd32ae3}{fig}}+1)
+\item 
+\mbox{\hyperlink{check__convergence_8m_a43976e9c09161ad83ab533d0cf4dbbfd}{movie}} (\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}, 20)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Replay the \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}} \mbox{\hyperlink{check__convergence_8m_a00f9aab906f3ebbbb335d16350bd3244}{vectors}}
+\item 
+\mbox{\hyperlink{check__convergence_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{check__convergence_8m_a5a4bb6089f1a6b0031e7223a7a0f08de}{param\+\_\+list}} = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}
+\item 
+\mbox{\hyperlink{check__convergence_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{check__convergence_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{saving__calib__fisheye_8m_a5e56fdbe829c0a673e6c5c3efee804f9}{param\+\_\+list}},2)
+\item 
+\mbox{\hyperlink{check__convergence_8m_aad05f78187c942f9dd521605fa81f1ba}{M}} = moviein(\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}})
+\item 
+for \mbox{\hyperlink{check__convergence_8m_af454fc0bd95e943c40ff0c1fcfce677c}{nn}} = 1\+:\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}}
+\item 
+for \mbox{\hyperlink{check__convergence_8m_a26dc0036665a7be66f45ffe41465ffe5}{solution}} = \mbox{\hyperlink{saving__calib__fisheye_8m_a5e56fdbe829c0a673e6c5c3efee804f9}{param\+\_\+list}}(\+:,\mbox{\hyperlink{downsample_8m_a7f69fd3ef85a986db718cba28ca01682}{nn}})
+\item 
+\mbox{\hyperlink{check__convergence_8m_ad82cf3c09bb758a3534b5f7b8260ef48}{extract\+\_\+parameters}}
+\item 
+\mbox{\hyperlink{check__convergence_8m_a9b27800af3e6d47fb0ed949b53dbe9ae}{comp\+\_\+error\+\_\+calib}}
+\item 
+\mbox{\hyperlink{check__convergence_8m_a66657f901543607c50a0c310a202deeb}{ext\+\_\+calib}}
+\item 
+\mbox{\hyperlink{check__convergence_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}{drawnow}}
+\item 
+\mbox{\hyperlink{check__convergence_8m_aa1c4dfbfff3fdc6b889eb7e43f88cb80}{Mnn}} = getframe(gcf)
+\item 
+\mbox{\hyperlink{check__convergence_8m_a64aa603bc3c6c1587e7c6542452481ac}{fig}} = gcf
+\item 
+\mbox{\hyperlink{check__convergence_8m_a12e1f53c847d07ce9e58df470087c0fa}{close}}
+\item 
+\mbox{\hyperlink{check__convergence_8m_aec70d633e7619583eb3a08a7afd638b4}{clf}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{check__convergence_8m_a3755b4eeaf4bc975f11f07aea1dfb04e}\label{check__convergence_8m_a3755b4eeaf4bc975f11f07aea1dfb04e}} 
+\index{check\_convergence.m@{check\_convergence.m}!figure@{figure}}
+\index{figure@{figure}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ginput4_8m_afa0c4861700b78b7ffd242351fd32ae3}{fig}}+}]{1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__convergence_8m_a1f6ab13d6a0c098611cb4283ce66b0f1}\label{check__convergence_8m_a1f6ab13d6a0c098611cb4283ce66b0f1}} 
+\index{check\_convergence.m@{check\_convergence.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Error\+:\+Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} calibrate \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{first\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__convergence_8m_af5d5ea8cd66704346ef087a246a65246}\label{check__convergence_8m_af5d5ea8cd66704346ef087a246a65246}} 
+\index{check\_convergence.m@{check\_convergence.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Warning\+:\+There \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} unique state in the list of \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{parameters.\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}\label{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}} 
+\index{check\_convergence.m@{check\_convergence.m}!M@{M}}
+\index{M@{M}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{M()}{M()}}
+{\footnotesize\ttfamily M (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{\mbox{\hyperlink{downsample_8m_a7f69fd3ef85a986db718cba28ca01682}{nn}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__convergence_8m_a43976e9c09161ad83ab533d0cf4dbbfd}\label{check__convergence_8m_a43976e9c09161ad83ab533d0cf4dbbfd}} 
+\index{check\_convergence.m@{check\_convergence.m}!movie@{movie}}
+\index{movie@{movie}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{movie()}{movie()}}
+{\footnotesize\ttfamily movie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}}]{,  }\item[{20}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__convergence_8m_a39def900b962fc479e998fb6383663f3}\label{check__convergence_8m_a39def900b962fc479e998fb6383663f3}} 
+\index{check\_convergence.m@{check\_convergence.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily Replay the \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{check__convergence_8m_aec70d633e7619583eb3a08a7afd638b4}\label{check__convergence_8m_aec70d633e7619583eb3a08a7afd638b4}} 
+\index{check\_convergence.m@{check\_convergence.m}!clf@{clf}}
+\index{clf@{clf}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{clf}{clf}}
+{\footnotesize\ttfamily clf}
+
+\mbox{\Hypertarget{check__convergence_8m_a12e1f53c847d07ce9e58df470087c0fa}\label{check__convergence_8m_a12e1f53c847d07ce9e58df470087c0fa}} 
+\index{check\_convergence.m@{check\_convergence.m}!close@{close}}
+\index{close@{close}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{close}{close}}
+{\footnotesize\ttfamily close}
+
+\mbox{\Hypertarget{check__convergence_8m_a9b27800af3e6d47fb0ed949b53dbe9ae}\label{check__convergence_8m_a9b27800af3e6d47fb0ed949b53dbe9ae}} 
+\index{check\_convergence.m@{check\_convergence.m}!comp\_error\_calib@{comp\_error\_calib}}
+\index{comp\_error\_calib@{comp\_error\_calib}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{comp\_error\_calib}{comp\_error\_calib}}
+{\footnotesize\ttfamily comp\+\_\+error\+\_\+calib}
+
+\mbox{\Hypertarget{check__convergence_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}\label{check__convergence_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}} 
+\index{check\_convergence.m@{check\_convergence.m}!drawnow@{drawnow}}
+\index{drawnow@{drawnow}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{drawnow}{drawnow}}
+{\footnotesize\ttfamily drawnow}
+
+\mbox{\Hypertarget{check__convergence_8m_afb358f48b1646c750fb9da6c6585be2b}\label{check__convergence_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{check\_convergence.m@{check\_convergence.m}!end@{end}}
+\index{end@{end}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{check__convergence_8m_a66657f901543607c50a0c310a202deeb}\label{check__convergence_8m_a66657f901543607c50a0c310a202deeb}} 
+\index{check\_convergence.m@{check\_convergence.m}!ext\_calib@{ext\_calib}}
+\index{ext\_calib@{ext\_calib}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{ext\_calib}{ext\_calib}}
+{\footnotesize\ttfamily ext\+\_\+calib}
+
+\mbox{\Hypertarget{check__convergence_8m_ad82cf3c09bb758a3534b5f7b8260ef48}\label{check__convergence_8m_ad82cf3c09bb758a3534b5f7b8260ef48}} 
+\index{check\_convergence.m@{check\_convergence.m}!extract\_parameters@{extract\_parameters}}
+\index{extract\_parameters@{extract\_parameters}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{extract\_parameters}{extract\_parameters}}
+{\footnotesize\ttfamily extract\+\_\+parameters}
+
+\mbox{\Hypertarget{check__convergence_8m_a64aa603bc3c6c1587e7c6542452481ac}\label{check__convergence_8m_a64aa603bc3c6c1587e7c6542452481ac}} 
+\index{check\_convergence.m@{check\_convergence.m}!fig@{fig}}
+\index{fig@{fig}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{fig}{fig}}
+{\footnotesize\ttfamily fig = gcf}
+
+\mbox{\Hypertarget{check__convergence_8m_aad05f78187c942f9dd521605fa81f1ba}\label{check__convergence_8m_aad05f78187c942f9dd521605fa81f1ba}} 
+\index{check\_convergence.m@{check\_convergence.m}!M@{M}}
+\index{M@{M}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily M = moviein(\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}})}
+
+\mbox{\Hypertarget{check__convergence_8m_aa1c4dfbfff3fdc6b889eb7e43f88cb80}\label{check__convergence_8m_aa1c4dfbfff3fdc6b889eb7e43f88cb80}} 
+\index{check\_convergence.m@{check\_convergence.m}!Mnn@{Mnn}}
+\index{Mnn@{Mnn}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{Mnn}{Mnn}}
+{\footnotesize\ttfamily Mnn = getframe(gcf)}
+
+\mbox{\Hypertarget{check__convergence_8m_a0765fe92a1c030c14c5725f070b8929e}\label{check__convergence_8m_a0765fe92a1c030c14c5725f070b8929e}} 
+\index{check\_convergence.m@{check\_convergence.m}!N\_iter@{N\_iter}}
+\index{N\_iter@{N\_iter}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{N\_iter}{N\_iter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} N\+\_\+iter = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{saving__calib__fisheye_8m_a5e56fdbe829c0a673e6c5c3efee804f9}{param\+\_\+list}},2)}
+
+\mbox{\Hypertarget{check__convergence_8m_af454fc0bd95e943c40ff0c1fcfce677c}\label{check__convergence_8m_af454fc0bd95e943c40ff0c1fcfce677c}} 
+\index{check\_convergence.m@{check\_convergence.m}!nn@{nn}}
+\index{nn@{nn}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{nn}{nn}}
+{\footnotesize\ttfamily for nn = 1\+:\mbox{\hyperlink{_distor2_calib_8m_a0765fe92a1c030c14c5725f070b8929e}{N\+\_\+iter}}}
+
+\mbox{\Hypertarget{check__convergence_8m_a5a4bb6089f1a6b0031e7223a7a0f08de}\label{check__convergence_8m_a5a4bb6089f1a6b0031e7223a7a0f08de}} 
+\index{check\_convergence.m@{check\_convergence.m}!param\_list@{param\_list}}
+\index{param\_list@{param\_list}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{param\_list}{param\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} param\+\_\+list = \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}}}
+
+\mbox{\Hypertarget{check__convergence_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{check__convergence_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{check\_convergence.m@{check\_convergence.m}!return@{return}}
+\index{return@{return}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{check__convergence_8m_a26dc0036665a7be66f45ffe41465ffe5}\label{check__convergence_8m_a26dc0036665a7be66f45ffe41465ffe5}} 
+\index{check\_convergence.m@{check\_convergence.m}!solution@{solution}}
+\index{solution@{solution}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{solution}{solution}}
+{\footnotesize\ttfamily Saving the \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} solution = \mbox{\hyperlink{saving__calib__fisheye_8m_a5e56fdbe829c0a673e6c5c3efee804f9}{param\+\_\+list}}(\+:,\mbox{\hyperlink{downsample_8m_a7f69fd3ef85a986db718cba28ca01682}{nn}})}
+
+\mbox{\Hypertarget{check__convergence_8m_a00f9aab906f3ebbbb335d16350bd3244}\label{check__convergence_8m_a00f9aab906f3ebbbb335d16350bd3244}} 
+\index{check\_convergence.m@{check\_convergence.m}!vectors@{vectors}}
+\index{vectors@{vectors}!check\_convergence.m@{check\_convergence.m}}
+\doxysubsubsection{\texorpdfstring{vectors}{vectors}}
+{\footnotesize\ttfamily Replay the \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} of \mbox{\hyperlink{scanner__calibration__script_8m_a343ef102df3c79ce3b78111bb59f2e0a}{solution}} vectors}
+

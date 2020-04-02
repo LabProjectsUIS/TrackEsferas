@@ -1,0 +1,181 @@
+\hypertarget{undistort__image__color_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/undistort\+\_\+image\+\_\+color.m File Reference}
+\label{undistort__image__color_8m}\index{D:/TrackEsferas/NavarQA/calib/undistort\_image\_color.m@{D:/TrackEsferas/NavarQA/calib/undistort\_image\_color.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{undistort__image__color_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} (2) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2)
+\item 
+\mbox{\hyperlink{undistort__image__color_8m_af8c9a00a25e78ed9712437ee147d2150}{disp}} (\textquotesingle{}Program \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} corrects distorted \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{undistort__image__color_8m_a693243f20041774e59d7382f441f40bc}{disp}} (\textquotesingle{}The intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be known(previously computed)\textquotesingle{})
+\item 
+\mbox{\hyperlink{undistort__image__color_8m_a3ec1eca8920adca2396da7715376ee8c}{fprintf}} (1,\textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}) \mbox{\hyperlink{undistort__image__no__read_8m_a1c8be1cdbe6c595870f56159349cd43a}{quest}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{undistort__image__color_8m_a6416375b6325570657969ef0cf1ebeaf}{isempty}} (\mbox{\hyperlink{undistort__image__no__read_8m_a1c8be1cdbe6c595870f56159349cd43a}{quest}}) \mbox{\hyperlink{undistort__image__no__read_8m_a1c8be1cdbe6c595870f56159349cd43a}{quest}}=0
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{undistort__image__no__read_8m_a1c8be1cdbe6c595870f56159349cd43a}{quest}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{undistort__image__color_8m_a83b1c7cfb51676201f58123eed46378f}{$\sim$exist}} (\mbox{[}\textquotesingle{}I\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}(1))\mbox{]}) \mbox{\hyperlink{undistort__image__no__read_8m_ac8e4e64d6cf066694364ea8a5702a282}{ima\+\_\+read\+\_\+calib}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{undistort__image__color_8m_a0befcb1e32b36ced58b876d3ce5c7d02}{format\+\_\+image2}} (1)
+\item 
+\mbox{\hyperlink{undistort__image__color_8m_a28e2d2a23b9eb428abb33b4faddc6c4c}{fprintf}} (1,\mbox{[}\textquotesingle{}Saving undistorted \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} under \textquotesingle{} \mbox{\hyperlink{write__image_8m_af223d920b78b1a0b6244f762cf0dd405}{ima\+\_\+name2}} \textquotesingle{}...\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}\mbox{]}) \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{undistort__image__no__read_8m_ab58da1bab42d01949db4168d02af8e2f}{format\+\_\+image2}}(1)
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{undistort__image__color_8m_a89c81ad77f897718e221afc43fa215ea}{savepgm}} (\mbox{\hyperlink{write__image_8m_af223d920b78b1a0b6244f762cf0dd405}{ima\+\_\+name2}}, uint8(round(\mbox{\hyperlink{rectify__stereo__pair_8m_a9ff904207063847ed6e3e700caf9734b}{I2}})))
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{undistort__image__color_8m_a0e410eb35948452645659fab8a99f209}{imwrite}} (uint8(round(\mbox{\hyperlink{rectify__stereo__pair_8m_a9ff904207063847ed6e3e700caf9734b}{I2}})), gray(256), \mbox{\hyperlink{write__image_8m_af223d920b78b1a0b6244f762cf0dd405}{ima\+\_\+name2}}, \mbox{\hyperlink{undistort__image__no__read_8m_ab58da1bab42d01949db4168d02af8e2f}{format\+\_\+image2}})
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{undistort__image__color_8m_a7b0b31e3f5cf460d66bf312039dd3bee}{fprintf}} (1, \textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{done\textbackslash{}n}}\textquotesingle{}) \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{load__stereo__calib__files_8m_a13165ff083bdad541bf26c0dad442daf}{dir}} fprintf(1
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE \mbox{\hyperlink{undistort__image__color_8m_ab54351c0ebd7e63eee204284cab68ff2}{N\+A\+ME}}
+\item 
+\mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE No intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} \mbox{\hyperlink{scanner__calibration__script_8m_a71a47a62812c2587f08c33fec039ef4d}{available}} \mbox{\hyperlink{undistort__image__color_8m_ad8b74516f7c0936e9109f51182053679}{n}}
+\item 
+\mbox{\hyperlink{clearwin_8m_adbb98be196b1d1c2886ddbe3eb852dea}{return}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{undistort__image__color_8m_ab5646884884ffd7f4470600e5489def0}{KK}} = \mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}$\ast$\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{undistort__image__color_8m_aa4fccdb1044691a0b99c711c92950476}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{undistort__image__color_8m_a8f4904cff0e6b75b5b43c0a4f83185e0}{format\+\_\+image2}} = \mbox{\hyperlink{write__image_8m_a3ef97c8b89c343e5191f9293fb98785d}{format\+\_\+image}}
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} for \mbox{\hyperlink{undistort__image__color_8m_ade29e5391eb8522ab9a9bc420e7c5ddf}{kk}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{check__directory_8m_a0a88702dd5dcea5894185c9c25866bf6}{type\+\_\+numbering}} \mbox{\hyperlink{undistort__image__color_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} = num2str(\mbox{\hyperlink{ima__read__calib__no__read_8m_a2cc2b5a35593a627bf151c8623349c06}{image\+\_\+numbers}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}))
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{undistort__image__color_8m_a665133c495b74930cb14b302ee3c25d5}{ima\+\_\+name2}} = \mbox{[}calib\+\_\+name \textquotesingle{}\+\_\+rect\textquotesingle{} \mbox{\hyperlink{write__image_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} \textquotesingle{}.\textquotesingle{} \mbox{\hyperlink{undistort__image__no__read_8m_ab58da1bab42d01949db4168d02af8e2f}{format\+\_\+image2}}\mbox{]}
+\item 
+\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}} \mbox{\hyperlink{undistort__image__color_8m_ad988c3a1d8efefb74f5dde264edf760e}{image\+\_\+name}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Image \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} (full \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} without extension)\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{undistort__image__color_8m_af8c9a00a25e78ed9712437ee147d2150}\label{undistort__image__color_8m_af8c9a00a25e78ed9712437ee147d2150}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!disp@{disp}}
+\index{disp@{disp}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Program \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} corrects distorted \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a693243f20041774e59d7382f441f40bc}\label{undistort__image__color_8m_a693243f20041774e59d7382f441f40bc}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!disp@{disp}}
+\index{disp@{disp}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be known(previously computed)\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a97b90595eac8d87ee5eb4e52aa624f1d}\label{undistort__image__color_8m_a97b90595eac8d87ee5eb4e52aa624f1d}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!fc@{fc}}
+\index{fc@{fc}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{fc()}{fc()}}
+{\footnotesize\ttfamily fc (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a0befcb1e32b36ced58b876d3ce5c7d02}\label{undistort__image__color_8m_a0befcb1e32b36ced58b876d3ce5c7d02}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!format\_image2@{format\_image2}}
+\index{format\_image2@{format\_image2}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{format\_image2()}{format\_image2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} format\+\_\+image2 (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a7b0b31e3f5cf460d66bf312039dd3bee}\label{undistort__image__color_8m_a7b0b31e3f5cf460d66bf312039dd3bee}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{done\textbackslash{}n}}\textquotesingle{}                                                                                                                                                                                                                                                                      }]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a3ec1eca8920adca2396da7715376ee8c}\label{undistort__image__color_8m_a3ec1eca8920adca2396da7715376ee8c}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a28e2d2a23b9eb428abb33b4faddc6c4c}\label{undistort__image__color_8m_a28e2d2a23b9eb428abb33b4faddc6c4c}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a0e410eb35948452645659fab8a99f209}\label{undistort__image__color_8m_a0e410eb35948452645659fab8a99f209}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!imwrite@{imwrite}}
+\index{imwrite@{imwrite}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{imwrite()}{imwrite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} imwrite (\begin{DoxyParamCaption}\item[{uint8(round(\mbox{\hyperlink{rectify__stereo__pair_8m_a9ff904207063847ed6e3e700caf9734b}{I2}}))}]{,  }\item[{gray(256)}]{,  }\item[{\mbox{\hyperlink{write__image_8m_af223d920b78b1a0b6244f762cf0dd405}{ima\+\_\+name2}}}]{,  }\item[{\mbox{\hyperlink{undistort__image__no__read_8m_ab58da1bab42d01949db4168d02af8e2f}{format\+\_\+image2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a6416375b6325570657969ef0cf1ebeaf}\label{undistort__image__color_8m_a6416375b6325570657969ef0cf1ebeaf}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!isempty@{isempty}}
+\index{isempty@{isempty}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{undistort__image__no__read_8m_a1c8be1cdbe6c595870f56159349cd43a}{quest}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a89c81ad77f897718e221afc43fa215ea}\label{undistort__image__color_8m_a89c81ad77f897718e221afc43fa215ea}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!savepgm@{savepgm}}
+\index{savepgm@{savepgm}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{savepgm()}{savepgm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} savepgm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{write__image_8m_af223d920b78b1a0b6244f762cf0dd405}{ima\+\_\+name2}}}]{,  }\item[{uint8(round(\mbox{\hyperlink{rectify__stereo__pair_8m_a9ff904207063847ed6e3e700caf9734b}{I2}}))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a83b1c7cfb51676201f58123eed46378f}\label{undistort__image__color_8m_a83b1c7cfb51676201f58123eed46378f}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{undistort__image__no__read_8m_a1c8be1cdbe6c595870f56159349cd43a}{quest}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{undistort__image__color_8m_aa4fccdb1044691a0b99c711c92950476}\label{undistort__image__color_8m_aa4fccdb1044691a0b99c711c92950476}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a8f4904cff0e6b75b5b43c0a4f83185e0}\label{undistort__image__color_8m_a8f4904cff0e6b75b5b43c0a4f83185e0}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!format\_image2@{format\_image2}}
+\index{format\_image2@{format\_image2}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{format\_image2}{format\_image2}}
+{\footnotesize\ttfamily format\+\_\+image2 = \mbox{\hyperlink{write__image_8m_a3ef97c8b89c343e5191f9293fb98785d}{format\+\_\+image}}}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a665133c495b74930cb14b302ee3c25d5}\label{undistort__image__color_8m_a665133c495b74930cb14b302ee3c25d5}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!ima\_name2@{ima\_name2}}
+\index{ima\_name2@{ima\_name2}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{ima\_name2}{ima\_name2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} ima\+\_\+name2 = \mbox{[}calib\+\_\+name \textquotesingle{}\+\_\+rect\textquotesingle{} \mbox{\hyperlink{write__image_8m_a2a121162663fdd8eb34a8fb062d77bac}{number\+\_\+ext}} \textquotesingle{}.\textquotesingle{} \mbox{\hyperlink{undistort__image__no__read_8m_ab58da1bab42d01949db4168d02af8e2f}{format\+\_\+image2}}\mbox{]}}
+
+\mbox{\Hypertarget{undistort__image__color_8m_ad988c3a1d8efefb74f5dde264edf760e}\label{undistort__image__color_8m_ad988c3a1d8efefb74f5dde264edf760e}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!image\_name@{image\_name}}
+\index{image\_name@{image\_name}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{image\_name}{image\_name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}} image\+\_\+name = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Image \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} (full \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} without extension)\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+
+\mbox{\Hypertarget{undistort__image__color_8m_ab5646884884ffd7f4470600e5489def0}\label{undistort__image__color_8m_ab5646884884ffd7f4470600e5489def0}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!KK@{KK}}
+\index{KK@{KK}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{KK}{KK}}
+{\footnotesize\ttfamily \mbox{\hyperlink{clearwin_8m_adbb98be196b1d1c2886ddbe3eb852dea}{return}} \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} KK = \mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}$\ast$\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)}
+
+\mbox{\Hypertarget{undistort__image__color_8m_ade29e5391eb8522ab9a9bc420e7c5ddf}\label{undistort__image__color_8m_ade29e5391eb8522ab9a9bc420e7c5ddf}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!kk@{kk}}
+\index{kk@{kk}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} for kk}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= 1:\mbox{\hyperlink{add__suppress_8m_a5c344952fc5d4209f5a4cd0922c051d0}{n\_ima}}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} \mbox{\hyperlink{analyse__error_8m_a24b06316e04bc706a3496f036ae493a1}{exist}}([\textcolor{stringliteral}{'I\_'} num2str(\mbox{\hyperlink{undistort__image__color_8m_ade29e5391eb8522ab9a9bc420e7c5ddf}{kk}})])}
+\DoxyCodeLine{            \mbox{\hyperlink{analyse__error_8m_ad9137e61be7c7cc188a14faaaa9f11d5}{eval}}([\textcolor{stringliteral}{'I = I\_'} num2str(\mbox{\hyperlink{undistort__image__color_8m_ade29e5391eb8522ab9a9bc420e7c5ddf}{kk}}) \textcolor{charliteral}{';'}])}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{undistort__image__color_8m_ad8b74516f7c0936e9109f51182053679}\label{undistort__image__color_8m_ad8b74516f7c0936e9109f51182053679}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!n@{n}}
+\index{n@{n}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE No intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} \mbox{\hyperlink{scanner__calibration__script_8m_a71a47a62812c2587f08c33fec039ef4d}{available}} n}
+
+\mbox{\Hypertarget{undistort__image__color_8m_ab54351c0ebd7e63eee204284cab68ff2}\label{undistort__image__color_8m_ab54351c0ebd7e63eee204284cab68ff2}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!NAME@{NAME}}
+\index{NAME@{NAME}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{NAME}{NAME}}
+{\footnotesize\ttfamily \mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE N\+A\+ME}
+
+\mbox{\Hypertarget{undistort__image__color_8m_a2a121162663fdd8eb34a8fb062d77bac}\label{undistort__image__color_8m_a2a121162663fdd8eb34a8fb062d77bac}} 
+\index{undistort\_image\_color.m@{undistort\_image\_color.m}!number\_ext@{number\_ext}}
+\index{number\_ext@{number\_ext}!undistort\_image\_color.m@{undistort\_image\_color.m}}
+\doxysubsubsection{\texorpdfstring{number\_ext}{number\_ext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} number\+\_\+ext = num2str(\mbox{\hyperlink{ima__read__calib__no__read_8m_a2cc2b5a35593a627bf151c8623349c06}{image\+\_\+numbers}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}))}
+

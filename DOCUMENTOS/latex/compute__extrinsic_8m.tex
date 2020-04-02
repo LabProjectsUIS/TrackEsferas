@@ -1,0 +1,78 @@
+\hypertarget{compute__extrinsic_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/compute\+\_\+extrinsic.m File Reference}
+\label{compute__extrinsic_8m}\index{D:/TrackEsferas/NavarQA/calib/compute\_extrinsic.m@{D:/TrackEsferas/NavarQA/calib/compute\_extrinsic.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+id \mbox{\hyperlink{compute__extrinsic_8m_ae512419fe34e6e703c5e4684bae8683a}{I\+N\+P\+U\+T\+:x\+\_\+kk\+:\+X\+\_\+kk\+:fc\+:cc\+:kc\+:alpha\+\_\+c\+:\+O\+U\+T\+P\+U\+T\+:omckk\+:\+Tckk\+:\+Rckk\+:\+H\+:x\+:ex\+:error\+:}} (id,\mbox{[}\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}\mbox{]} id \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}},\mbox{[}X\+\_\+kk\mbox{]} id \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}},\mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}\mbox{]} id \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}},\mbox{[}\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}\mbox{]} id \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}},\mbox{[}\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}\mbox{]} id coefficients,\mbox{[}\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}\mbox{]} id \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aece2bd00e2471c464f4b3ce1ff431b59}{coefficient}},\mbox{[}O\+U\+T\+P\+UT\mbox{]} id,\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}\mbox{]} id \mbox{\hyperlink{loadppm_8m_aae9e36bded84b28f880abb9a711c7d1e}{space}},\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}\mbox{]} id \mbox{\hyperlink{loadppm_8m_aae9e36bded84b28f880abb9a711c7d1e}{space}},\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}\mbox{]} id \mbox{\hyperlink{check__convergence_8m_a00f9aab906f3ebbbb335d16350bd3244}{vectors}},\mbox{[}\mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}\mbox{]} in pixel planar,\mbox{[}\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}\mbox{]} id plane,\mbox{[}ex\mbox{]} id Reprojection,\mbox{[}\mbox{\hyperlink{stereo__gui_8m_abd267a42a98950fcce66d63808372db3}{error}}\mbox{]} id \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{compute__extrinsic_8m_aaa1b93d45d65854dce876f314fbd90b1}{function}} \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}, \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}, ex, JJ\mbox{]} = \mbox{\hyperlink{small__test__script_8m_ad8ca8849a3b8ca1f78a8474504b15b8b}{compute\+\_\+extrinsic}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}},X\+\_\+kk,\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{go__calib__stereo_8m_a15441a1c53e758379cbf1bb004cbd66a}{Max\+Iter}},\mbox{\hyperlink{go__calib__optim__iter__weak_8m_ab7a90accce7e42bbeb92e63ac6babe53}{thresh\+\_\+cond}})
+\item 
+\mbox{\hyperlink{compute__extrinsic_8m_a425dd58c06e96950137478d01fcaafd2}{compute\+\_\+extrinsic}} \mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}, \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}, ex\mbox{]}
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}{Method}} \mbox{\hyperlink{compute__extrinsic_8m_a07fabcc5de1ec8944050e2c21c8eeb0a}{\+\_\+\+\_\+pad10\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}{Method}} \mbox{\hyperlink{_distor2_calib_8m_ae04b2d6e3b6416f0290a3e7f8b3c1266}{then}} computes the pose Important functions called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} \mbox{\hyperlink{compute__extrinsic_8m_a856d163d9908f11a7c33bc1c24ed392a}{program}}
+\item 
+\mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}{Method}} \mbox{\hyperlink{_distor2_calib_8m_ae04b2d6e3b6416f0290a3e7f8b3c1266}{then}} computes the pose Important functions called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} \mbox{\hyperlink{compute__extrinsic_8m_a58f2f7f60e46ffbbf0832fd7a5a719b2}{thresh\+\_\+cond}} = inf
+\item 
+\mbox{\hyperlink{compute__extrinsic_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{compute__extrinsic_8m_ae512419fe34e6e703c5e4684bae8683a}\label{compute__extrinsic_8m_ae512419fe34e6e703c5e4684bae8683a}} 
+\index{compute\_extrinsic.m@{compute\_extrinsic.m}!INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:H:x:ex:error:@{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:H:x:ex:error:}}
+\index{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:H:x:ex:error:@{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:H:x:ex:error:}!compute\_extrinsic.m@{compute\_extrinsic.m}}
+\doxysubsubsection{\texorpdfstring{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:H:x:ex:error:()}{INPUT:x\_kk:X\_kk:fc:cc:kc:alpha\_c:OUTPUT:omckk:Tckk:Rckk:H:x:ex:error:()}}
+{\footnotesize\ttfamily id I\+N\+P\+U\+T\+:x\+\_\+kk\+:\+X\+\_\+kk\+:fc\+:cc\+:kc\+:alpha\+\_\+c\+:\+O\+U\+T\+P\+U\+T\+:omckk\+:\+Tckk\+:\+Rckk\+:\+H\+:x\+:ex\+:error\+: (\begin{DoxyParamCaption}\item[{id}]{,  }\item[{\mbox{[}x\+\_\+kk\mbox{]} id}]{images,  }\item[{\mbox{[}\+X\+\_\+kk\mbox{]} id}]{coordinates,  }\item[{\mbox{[}fc\mbox{]} id}]{length,  }\item[{\mbox{[}cc\mbox{]} id}]{coordinates,  }\item[{\mbox{[}kc\mbox{]} id}]{coefficients,  }\item[{\mbox{[}alpha\+\_\+c\mbox{]} id}]{coefficient,  }\item[{\mbox{[}\+O\+U\+T\+P\+U\+T\mbox{]} id}]{,  }\item[{\mbox{[}omckk\mbox{]} id}]{space,  }\item[{\mbox{[}\+Tckk\mbox{]} id}]{space,  }\item[{\mbox{[}\+Rckk\mbox{]} id}]{vectors,  }\item[{\mbox{[}\+H\mbox{]} in pixel}]{planar,  }\item[{\mbox{[}x\mbox{]} id}]{plane,  }\item[{\mbox{[}ex\mbox{]} id}]{Reprojection,  }\item[{\mbox{[}error\mbox{]} id}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{compute__extrinsic_8m_a07fabcc5de1ec8944050e2c21c8eeb0a}\label{compute__extrinsic_8m_a07fabcc5de1ec8944050e2c21c8eeb0a}} 
+\index{compute\_extrinsic.m@{compute\_extrinsic.m}!\_\_pad10\_\_@{\_\_pad10\_\_}}
+\index{\_\_pad10\_\_@{\_\_pad10\_\_}!compute\_extrinsic.m@{compute\_extrinsic.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad10\_\_}{\_\_pad10\_\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}{Method}} \+\_\+\+\_\+pad10\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{compute__extrinsic_8m_a425dd58c06e96950137478d01fcaafd2}\label{compute__extrinsic_8m_a425dd58c06e96950137478d01fcaafd2}} 
+\index{compute\_extrinsic.m@{compute\_extrinsic.m}!compute\_extrinsic@{compute\_extrinsic}}
+\index{compute\_extrinsic@{compute\_extrinsic}!compute\_extrinsic.m@{compute\_extrinsic.m}}
+\doxysubsubsection{\texorpdfstring{compute\_extrinsic}{compute\_extrinsic}}
+{\footnotesize\ttfamily compute\+\_\+extrinsic\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}, \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}, ex\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{compute__extrinsic_8m_a425dd58c06e96950137478d01fcaafd2}{compute\_extrinsic}}(\mbox{\hyperlink{export__calib__data_8m_a5ea0ad593821902850aafb73aa158f49}{x\_kk}},X\_kk,\mbox{\hyperlink{_compute3_d_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}},\mbox{\hyperlink{apply__distortion_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}},\mbox{\hyperlink{calib__gui__normal_8m_abad12e09f1c957bb512efc7dd862cd16}{kc}},\mbox{\hyperlink{cam__proj__calib_8m_a3154fb25e7e4f9c0e48d2bfd282c38ea}{alpha\_c}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%Computes the extrinsic \mbox{\hyperlink{cam__proj__calib_8m_aafd6b8a4b32e9e967ee9372af2b8b5e2}{parameters}} attached \mbox{\hyperlink{click__ima__calib3_d_8m_a7f570a4b57ed34463ad8cc2c68d36f23}{to}} \mbox{\hyperlink{ext__calib_8m_a4124bc0a9335c27f086f24ba207a4912}{a}} 3\mbox{\hyperlink{_compute3_d_8m_a350bfcb1e3cfb28ddff48ce525d4f139}{D}} \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} X\_kk given its projection}
+\DoxyCodeLine{\%\mbox{\hyperlink{click__ima__calib_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{analyse__error_8m_aee9a066043e7b7065d7cdda5fbcfba53}{image}} plane \mbox{\hyperlink{export__calib__data_8m_a5ea0ad593821902850aafb73aa158f49}{x\_kk}} and the intrinsic \mbox{\hyperlink{ext__calib__stereo_8m_a0fd8c3b5a373cf066995d09d25f40589}{camera}} \mbox{\hyperlink{cam__proj__calib_8m_aafd6b8a4b32e9e967ee9372af2b8b5e2}{parameters}} \mbox{\hyperlink{_compute3_d_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{compute__extrinsic_8m_afb358f48b1646c750fb9da6c6585be2b}\label{compute__extrinsic_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{compute\_extrinsic.m@{compute\_extrinsic.m}!end@{end}}
+\index{end@{end}!compute\_extrinsic.m@{compute\_extrinsic.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{compute__extrinsic_8m_aaa1b93d45d65854dce876f314fbd90b1}\label{compute__extrinsic_8m_aaa1b93d45d65854dce876f314fbd90b1}} 
+\index{compute\_extrinsic.m@{compute\_extrinsic.m}!function@{function}}
+\index{function@{function}!compute\_extrinsic.m@{compute\_extrinsic.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}}, \mbox{\hyperlink{scanner__calibration__script_8m_a5c3d7d7c3c32312381aafa360fd6e1b8}{Rckk}}, \mbox{\hyperlink{_un_warp_plane_8m_a5febebc43247a6b1ff24766e0822511d}{H}}, \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}, ex, JJ\mbox{]} = \mbox{\hyperlink{small__test__script_8m_ad8ca8849a3b8ca1f78a8474504b15b8b}{compute\+\_\+extrinsic}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}},X\+\_\+kk,\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{go__calib__stereo_8m_a15441a1c53e758379cbf1bb004cbd66a}{Max\+Iter}},\mbox{\hyperlink{go__calib__optim__iter__weak_8m_ab7a90accce7e42bbeb92e63ac6babe53}{thresh\+\_\+cond}})}
+
+\mbox{\Hypertarget{compute__extrinsic_8m_a856d163d9908f11a7c33bc1c24ed392a}\label{compute__extrinsic_8m_a856d163d9908f11a7c33bc1c24ed392a}} 
+\index{compute\_extrinsic.m@{compute\_extrinsic.m}!program@{program}}
+\index{program@{program}!compute\_extrinsic.m@{compute\_extrinsic.m}}
+\doxysubsubsection{\texorpdfstring{program}{program}}
+{\footnotesize\ttfamily \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}{Method}} \mbox{\hyperlink{_distor2_calib_8m_ae04b2d6e3b6416f0290a3e7f8b3c1266}{then}} computes the pose Important functions called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} program}
+
+\mbox{\Hypertarget{compute__extrinsic_8m_a58f2f7f60e46ffbbf0832fd7a5a719b2}\label{compute__extrinsic_8m_a58f2f7f60e46ffbbf0832fd7a5a719b2}} 
+\index{compute\_extrinsic.m@{compute\_extrinsic.m}!thresh\_cond@{thresh\_cond}}
+\index{thresh\_cond@{thresh\_cond}!compute\_extrinsic.m@{compute\_extrinsic.m}}
+\doxysubsubsection{\texorpdfstring{thresh\_cond}{thresh\_cond}}
+{\footnotesize\ttfamily \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a46f231584f95439732214ba3d9c849ec}{Method}} \mbox{\hyperlink{_distor2_calib_8m_ae04b2d6e3b6416f0290a3e7f8b3c1266}{then}} computes the pose Important functions called within \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} thresh\+\_\+cond = inf}
+

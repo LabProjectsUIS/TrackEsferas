@@ -1,0 +1,72 @@
+\hypertarget{_rectangle2_square_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/\+Rectangle2\+Square.m File Reference}
+\label{_rectangle2_square_8m}\index{D:/TrackEsferas/NavarQA/calib/Rectangle2Square.m@{D:/TrackEsferas/NavarQA/calib/Rectangle2Square.m}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_rectangle2_square_8m_aae59a2ad782e9105cb96ec19dfdf6798}{function}} \mbox{[}\mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}\mbox{]} = Rectangle2\+Square(rectangle,\mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}},\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}})
+\item 
+Generate the \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}} from \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} rectangle of known segment lengths from pt1 \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{_rectangle2_square_8m_adc330324dc582a60d788bb1ceb8c9a60}{pt2}}
+\item 
+Generate the \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}} from \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} rectangle of known segment lengths from pt1 \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{_rectangle2_square_8m_a53db6582b3f30a7d5bc21418b2f55187}{u\+\_\+vert}} = Un\+Warp\+Plane(rectangle)
+\item 
+\mbox{\hyperlink{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}{coeff\+\_\+x}} = sqrt(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}}/\mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}})
+\item 
+\mbox{\hyperlink{_rectangle2_square_8m_af1beb53cbf16321861f9a8c7dd5206e6}{coeff\+\_\+y}} = 1/\mbox{\hyperlink{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}{coeff\+\_\+x}}
+\item 
+\mbox{\hyperlink{_rectangle2_square_8m_ac9567e94c04c0a6b45f86ad912eb211c}{x\+\_\+coord}} = \mbox{[} 0 \mbox{\hyperlink{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}{coeff\+\_\+x}} \mbox{\hyperlink{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}{coeff\+\_\+x}} 0\mbox{]}
+\item 
+\mbox{\hyperlink{_rectangle2_square_8m_adec4b270699e4ef43679cf77763c719a}{y\+\_\+coord}} = \mbox{[} 0 0 \mbox{\hyperlink{_rectangle2_square_8m_af1beb53cbf16321861f9a8c7dd5206e6}{coeff\+\_\+y}} \mbox{\hyperlink{_rectangle2_square_8m_af1beb53cbf16321861f9a8c7dd5206e6}{coeff\+\_\+y}}\mbox{]}
+\item 
+\mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}} = rectangle(\+:,1) $\ast$ \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,4) + \mbox{\hyperlink{_un_warp_plane_8m_aef510dc247276e2e3c40d648bab6aac2}{u\+\_\+hori}}$\ast$\mbox{\hyperlink{_rectangle2_square_8m_ac9567e94c04c0a6b45f86ad912eb211c}{x\+\_\+coord}} + \mbox{\hyperlink{_un_warp_plane_8m_af784efc513f721ddb66344cdb7df1f81}{u\+\_\+vert}}$\ast$\mbox{\hyperlink{_rectangle2_square_8m_adec4b270699e4ef43679cf77763c719a}{y\+\_\+coord}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}\label{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}} 
+\index{Rectangle2Square.m@{Rectangle2Square.m}!coeff\_x@{coeff\_x}}
+\index{coeff\_x@{coeff\_x}!Rectangle2Square.m@{Rectangle2Square.m}}
+\doxysubsubsection{\texorpdfstring{coeff\_x}{coeff\_x}}
+{\footnotesize\ttfamily coeff\+\_\+x = sqrt(\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}}/\mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}})}
+
+\mbox{\Hypertarget{_rectangle2_square_8m_af1beb53cbf16321861f9a8c7dd5206e6}\label{_rectangle2_square_8m_af1beb53cbf16321861f9a8c7dd5206e6}} 
+\index{Rectangle2Square.m@{Rectangle2Square.m}!coeff\_y@{coeff\_y}}
+\index{coeff\_y@{coeff\_y}!Rectangle2Square.m@{Rectangle2Square.m}}
+\doxysubsubsection{\texorpdfstring{coeff\_y}{coeff\_y}}
+{\footnotesize\ttfamily coeff\+\_\+y = 1/\mbox{\hyperlink{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}{coeff\+\_\+x}}}
+
+\mbox{\Hypertarget{_rectangle2_square_8m_aae59a2ad782e9105cb96ec19dfdf6798}\label{_rectangle2_square_8m_aae59a2ad782e9105cb96ec19dfdf6798}} 
+\index{Rectangle2Square.m@{Rectangle2Square.m}!function@{function}}
+\index{function@{function}!Rectangle2Square.m@{Rectangle2Square.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}}\mbox{]} = Rectangle2\+Square(rectangle,\mbox{\hyperlink{compute__homography_8m_a4128c52b7c867b6a8fe740f97455b6a8}{L}},\mbox{\hyperlink{_n_a_t_utils_8h_a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7}{W}})}
+
+\mbox{\Hypertarget{_rectangle2_square_8m_adc330324dc582a60d788bb1ceb8c9a60}\label{_rectangle2_square_8m_adc330324dc582a60d788bb1ceb8c9a60}} 
+\index{Rectangle2Square.m@{Rectangle2Square.m}!pt2@{pt2}}
+\index{pt2@{pt2}!Rectangle2Square.m@{Rectangle2Square.m}}
+\doxysubsubsection{\texorpdfstring{pt2}{pt2}}
+{\footnotesize\ttfamily Generate the \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}} from \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} rectangle of known segment lengths from pt1 \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} pt2}
+
+\mbox{\Hypertarget{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}\label{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}} 
+\index{Rectangle2Square.m@{Rectangle2Square.m}!square@{square}}
+\index{square@{square}!Rectangle2Square.m@{Rectangle2Square.m}}
+\doxysubsubsection{\texorpdfstring{square}{square}}
+{\footnotesize\ttfamily square = rectangle(\+:,1) $\ast$ \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,4) + \mbox{\hyperlink{_un_warp_plane_8m_aef510dc247276e2e3c40d648bab6aac2}{u\+\_\+hori}}$\ast$\mbox{\hyperlink{_rectangle2_square_8m_ac9567e94c04c0a6b45f86ad912eb211c}{x\+\_\+coord}} + \mbox{\hyperlink{_un_warp_plane_8m_af784efc513f721ddb66344cdb7df1f81}{u\+\_\+vert}}$\ast$\mbox{\hyperlink{_rectangle2_square_8m_adec4b270699e4ef43679cf77763c719a}{y\+\_\+coord}}}
+
+\mbox{\Hypertarget{_rectangle2_square_8m_a53db6582b3f30a7d5bc21418b2f55187}\label{_rectangle2_square_8m_a53db6582b3f30a7d5bc21418b2f55187}} 
+\index{Rectangle2Square.m@{Rectangle2Square.m}!u\_vert@{u\_vert}}
+\index{u\_vert@{u\_vert}!Rectangle2Square.m@{Rectangle2Square.m}}
+\doxysubsubsection{\texorpdfstring{u\_vert}{u\_vert}}
+{\footnotesize\ttfamily Generate the \mbox{\hyperlink{_rectangle2_square_8m_ab8da842131de2f8e0161089de2774858}{square}} from \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} rectangle of known segment lengths from pt1 \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} u\+\_\+vert = Un\+Warp\+Plane(rectangle)}
+
+\mbox{\Hypertarget{_rectangle2_square_8m_ac9567e94c04c0a6b45f86ad912eb211c}\label{_rectangle2_square_8m_ac9567e94c04c0a6b45f86ad912eb211c}} 
+\index{Rectangle2Square.m@{Rectangle2Square.m}!x\_coord@{x\_coord}}
+\index{x\_coord@{x\_coord}!Rectangle2Square.m@{Rectangle2Square.m}}
+\doxysubsubsection{\texorpdfstring{x\_coord}{x\_coord}}
+{\footnotesize\ttfamily x\+\_\+coord = \mbox{[} 0 \mbox{\hyperlink{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}{coeff\+\_\+x}} \mbox{\hyperlink{_rectangle2_square_8m_aaf0e091838429ea259938a976446f417}{coeff\+\_\+x}} 0\mbox{]}}
+
+\mbox{\Hypertarget{_rectangle2_square_8m_adec4b270699e4ef43679cf77763c719a}\label{_rectangle2_square_8m_adec4b270699e4ef43679cf77763c719a}} 
+\index{Rectangle2Square.m@{Rectangle2Square.m}!y\_coord@{y\_coord}}
+\index{y\_coord@{y\_coord}!Rectangle2Square.m@{Rectangle2Square.m}}
+\doxysubsubsection{\texorpdfstring{y\_coord}{y\_coord}}
+{\footnotesize\ttfamily y\+\_\+coord = \mbox{[} 0 0 \mbox{\hyperlink{_rectangle2_square_8m_af1beb53cbf16321861f9a8c7dd5206e6}{coeff\+\_\+y}} \mbox{\hyperlink{_rectangle2_square_8m_af1beb53cbf16321861f9a8c7dd5206e6}{coeff\+\_\+y}}\mbox{]}}
+

@@ -1,0 +1,302 @@
+\hypertarget{check__directory_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/check\+\_\+directory.m File Reference}
+\label{check__directory_8m}\index{D:/TrackEsferas/NavarQA/calib/check\_directory.m@{D:/TrackEsferas/NavarQA/calib/check\_directory.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+This small script looks in the direcory and checks \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are there This works only \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} Matlab \mbox{\hyperlink{check__directory_8m_ab06eef292c4f84141df4496744d6e36d}{x}} (otherwise, the \mbox{\hyperlink{load__stereo__calib__files_8m_a13165ff083bdad541bf26c0dad442daf}{dir}} \mbox{\hyperlink{runme_8m_aeba62587220d4faef7cab305bb98b394}{commands}} works differently) \%(\mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}}) Jean-\/Yves Bouguet -\/ Dec. 27\mbox{\hyperlink{rodrigues_8m_ae9382b39fa1c6777321aa83183037a20}{th}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__directory_8m_a3be87864a72e765a5812f7892a1dd839}{isempty}} (calib\+\_\+name)
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__directory_8m_a0afe3ddee320801639048f526e2151c5}{isempty}} (str2num(\mbox{\hyperlink{check__directory_8m_a07415648156fcfd796c3862bf7f94c7e}{string\+\_\+num}}))
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__directory_8m_af7fed47723e93a9d334c4d21d86f8d7b}{$\sim$isempty}} (\mbox{\hyperlink{click__ima__calib__no__read_8m_aef23bc14ef784fd5ba23f1d01c9556c7}{iii}})
+\item 
+if \mbox{\hyperlink{check__directory_8m_a93c8b4ac07ac550473c660cc9796ffb2}{if}} (\mbox{\hyperlink{click__ima__calib__no__read_8m_aef23bc14ef784fd5ba23f1d01c9556c7}{iii}}(1) $\sim$=1)
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__directory_8m_adb0325e1c4bd1132b2c8337ecb95b0f7}{$\sim$isempty}} (\mbox{\hyperlink{click__ima__calib__no__read_8m_aef23bc14ef784fd5ba23f1d01c9556c7}{iii}}) \&$\sim$\mbox{\hyperlink{willson__read_8m_a9ca3ce0cd02a2339cfd495cb85090c97}{isempty}}(\mbox{\hyperlink{check__directory_8m_aa5b9e4099dbc894358a1adfdb89282af}{loc\+\_\+ext}})
+\item 
+\mbox{\hyperlink{check__directory_8m_a219738dd32c23ec2e4b1ef520b20c15b}{if}} (\mbox{\hyperlink{check__directory_8m_a5714fef642d11733054a2bd7264fe371}{Nima\+\_\+valid}}==0)
+\item 
+\mbox{\hyperlink{check__directory_8m_af055355b7bde97363a291d416676af31}{fprintf}} (1, \textquotesingle{}No \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} found. File \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} may be \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{wrong.\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{check__directory_8m_ae3bb9ff9c3de902bf6c141b76b60bda2}{string\+\_\+length}} (\mbox{\hyperlink{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}{ppp}})
+\item 
+\mbox{\hyperlink{check__directory_8m_a8a4ae8f5420af2cea2de18398f8afb19}{indices}} (\mbox{\hyperlink{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}{ppp}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}} (\mbox{\hyperlink{check__directory_8m_ae3bb9ff9c3de902bf6c141b76b60bda2}{string\+\_\+length}})
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{check__directory_8m_acdbe2072841a071c8fa0c8c2c237247c}{fprintf}} (1, \textquotesingle{}No \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} found. Basename may be \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{wrong.\textbackslash{}n}}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+This small script looks in the direcory and checks \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are there This works only \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} Matlab \mbox{\hyperlink{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}{l}} = \mbox{\hyperlink{load__stereo__calib__files_8m_a13165ff083bdad541bf26c0dad442daf}{dir}}(\mbox{[}calib\+\_\+name \textquotesingle{}$\ast$\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{check__directory_8m_a6ffd181f615607282dbb22ae7808d721}{Nl}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}{l}},1)
+\item 
+\mbox{\hyperlink{check__directory_8m_a5714fef642d11733054a2bd7264fe371}{Nima\+\_\+valid}} = 0
+\item 
+\mbox{\hyperlink{check__directory_8m_add9cc5a5253404c84eb818e1bc7d75b0}{ind\+\_\+valid}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{check__directory_8m_a86f28d92a1509cb658c55fccfd5c0388}{loc\+\_\+extension}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{check__directory_8m_a3276a081b0c649107e237409c8de7a2c}{length\+\_\+name}} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(calib\+\_\+name,2)
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} for \mbox{\hyperlink{check__directory_8m_adc25294bd9f3841fadc5a6abc5b8f95d}{pp}} = 1\+:\mbox{\hyperlink{check__directory_8m_a6ffd181f615607282dbb22ae7808d721}{Nl}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} for \mbox{\hyperlink{check__directory_8m_a5d3e0bb4a72926c3086ad7a9549dd364}{filenamepp}} = \mbox{\hyperlink{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}{l}}(\mbox{\hyperlink{check__directory_8m_adc25294bd9f3841fadc5a6abc5b8f95d}{pp}}).\mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__directory_8m_a2aff1855f60a3e152c0f94554c337d33}{iii}} = 1
+\item 
+\mbox{\hyperlink{check__directory_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{check__directory_8m_aa5b9e4099dbc894358a1adfdb89282af}{loc\+\_\+ext}} = \mbox{\hyperlink{pgmread_8m_a699d9c61b4e8f6ddecc2e3019e8a06cd}{findstr}}(\mbox{\hyperlink{check__directory_8m_a5d3e0bb4a72926c3086ad7a9549dd364}{filenamepp}},\mbox{\hyperlink{write__image_8m_a3ef97c8b89c343e5191f9293fb98785d}{format\+\_\+image}})
+\item 
+\mbox{\hyperlink{check__directory_8m_a07415648156fcfd796c3862bf7f94c7e}{string\+\_\+num}} = \mbox{\hyperlink{check__directory_8m_a5d3e0bb4a72926c3086ad7a9549dd364}{filenamepp}}(\mbox{\hyperlink{check__directory_8m_a3276a081b0c649107e237409c8de7a2c}{length\+\_\+name}}+1\+:\mbox{\hyperlink{check__directory_8m_aa5b9e4099dbc894358a1adfdb89282af}{loc\+\_\+ext}} -\/ 2)
+\item 
+try the upper case \mbox{\hyperlink{check__directory_8m_a68712d1f70845df2d3fee19d8e07102a}{format}}
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} Get \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the string \mbox{\hyperlink{check__directory_8m_a1b087f2a74ef40f0400e55bd3d6177b8}{numbers}}
+\item 
+\mbox{\hyperlink{check__directory_8m_a7b261d2d5f193015afc3427b0c0951ed}{indices}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,\mbox{\hyperlink{check__directory_8m_a5714fef642d11733054a2bd7264fe371}{Nima\+\_\+valid}})
+\item 
+for \mbox{\hyperlink{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}{ppp}} = 1\+:\mbox{\hyperlink{check__directory_8m_a5714fef642d11733054a2bd7264fe371}{Nima\+\_\+valid}}
+\item 
+for \mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}} = \mbox{\hyperlink{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}{l}}(\mbox{\hyperlink{check__directory_8m_add9cc5a5253404c84eb818e1bc7d75b0}{ind\+\_\+valid}}(\mbox{\hyperlink{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}{ppp}})).name
+\item 
+Number of \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} \mbox{\hyperlink{check__directory_8m_a6414763b10347ceb5f4d09ff8f4971dc}{first\+\_\+num}} = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(\mbox{\hyperlink{check__directory_8m_a8a4ae8f5420af2cea2de18398f8afb19}{indices}})
+\item 
+\mbox{\hyperlink{check__directory_8m_aa5d167337554629b39a0572477a7e5fe}{n\+\_\+ima}} = max(\mbox{\hyperlink{check__directory_8m_a8a4ae8f5420af2cea2de18398f8afb19}{indices}}) -\/ \mbox{\hyperlink{ima__read__calib__no__read_8m_a6414763b10347ceb5f4d09ff8f4971dc}{first\+\_\+num}} + 1
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{check__directory_8m_a84f53f4ebf5ee1f87ef95deaddee5e4f}{N\+\_\+slots}} = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(\mbox{\hyperlink{check__directory_8m_ae3bb9ff9c3de902bf6c141b76b60bda2}{string\+\_\+length}})
+\item 
+\mbox{\hyperlink{check__directory_8m_a0a88702dd5dcea5894185c9c25866bf6}{type\+\_\+numbering}} = 1
+\item 
+\mbox{\hyperlink{check__directory_8m_a2cc2b5a35593a627bf151c8623349c06}{image\+\_\+numbers}} = first\+\_\+num\+:n\+\_\+ima-\/1+\mbox{\hyperlink{ima__read__calib__no__read_8m_a6414763b10347ceb5f4d09ff8f4971dc}{first\+\_\+num}}
+\item 
+By \mbox{\hyperlink{check__directory_8m_a429237fd3d890f48380541a9fb4a766d}{default}}
+\item 
+By \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are active for \mbox{\hyperlink{check__directory_8m_aa612cc04f7f5fa0454d8b31c5caa35ca}{calibration}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{check__directory_8m_acdbe2072841a071c8fa0c8c2c237247c}\label{check__directory_8m_acdbe2072841a071c8fa0c8c2c237247c}} 
+\index{check\_directory.m@{check\_directory.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}No \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} found. Basename may be \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{wrong.\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_af055355b7bde97363a291d416676af31}\label{check__directory_8m_af055355b7bde97363a291d416676af31}} 
+\index{check\_directory.m@{check\_directory.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}No \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} found. File \mbox{\hyperlink{willson__read_8m_ae8ec5529b09a5d9be50e61f96cc5e1f4}{format}} may be \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{wrong.\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_a93c8b4ac07ac550473c660cc9796ffb2}\label{check__directory_8m_a93c8b4ac07ac550473c660cc9796ffb2}} 
+\index{check\_directory.m@{check\_directory.m}!if@{if}}
+\index{if@{if}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily if if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{click__ima__calib__no__read_8m_aef23bc14ef784fd5ba23f1d01c9556c7}{iii}}(1) $\sim$}]{ = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_a219738dd32c23ec2e4b1ef520b20c15b}\label{check__directory_8m_a219738dd32c23ec2e4b1ef520b20c15b}} 
+\index{check\_directory.m@{check\_directory.m}!if@{if}}
+\index{if@{if}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{check__directory_8m_a5714fef642d11733054a2bd7264fe371}{Nima\+\_\+valid}}}]{ = {\ttfamily =0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_a8a4ae8f5420af2cea2de18398f8afb19}\label{check__directory_8m_a8a4ae8f5420af2cea2de18398f8afb19}} 
+\index{check\_directory.m@{check\_directory.m}!indices@{indices}}
+\index{indices@{indices}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{indices()}{indices()}}
+{\footnotesize\ttfamily indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}{ppp}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_a3be87864a72e765a5812f7892a1dd839}\label{check__directory_8m_a3be87864a72e765a5812f7892a1dd839}} 
+\index{check\_directory.m@{check\_directory.m}!isempty@{isempty}}
+\index{isempty@{isempty}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{calib\+\_\+name}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_a0afe3ddee320801639048f526e2151c5}\label{check__directory_8m_a0afe3ddee320801639048f526e2151c5}} 
+\index{check\_directory.m@{check\_directory.m}!isempty@{isempty}}
+\index{isempty@{isempty}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isempty (\begin{DoxyParamCaption}\item[{str2num(\mbox{\hyperlink{check__directory_8m_a07415648156fcfd796c3862bf7f94c7e}{string\+\_\+num}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}\label{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}} 
+\index{check\_directory.m@{check\_directory.m}!min@{min}}
+\index{min@{min}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{check__directory_8m_ae3bb9ff9c3de902bf6c141b76b60bda2}{string\+\_\+length}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_ae3bb9ff9c3de902bf6c141b76b60bda2}\label{check__directory_8m_ae3bb9ff9c3de902bf6c141b76b60bda2}} 
+\index{check\_directory.m@{check\_directory.m}!string\_length@{string\_length}}
+\index{string\_length@{string\_length}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{string\_length()}{string\_length()}}
+{\footnotesize\ttfamily string\+\_\+length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}{ppp}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_ab06eef292c4f84141df4496744d6e36d}\label{check__directory_8m_ab06eef292c4f84141df4496744d6e36d}} 
+\index{check\_directory.m@{check\_directory.m}!x@{x}}
+\index{x@{x}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}}
+{\footnotesize\ttfamily This small script looks in the direcory and checks \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are there This works only \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} Matlab \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} (\begin{DoxyParamCaption}\item[{otherwise}]{,  }\item[{the \mbox{\hyperlink{load__stereo__calib__files_8m_a13165ff083bdad541bf26c0dad442daf}{dir}} \mbox{\hyperlink{runme_8m_aeba62587220d4faef7cab305bb98b394}{commands}} works}]{differently }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_af7fed47723e93a9d334c4d21d86f8d7b}\label{check__directory_8m_af7fed47723e93a9d334c4d21d86f8d7b}} 
+\index{check\_directory.m@{check\_directory.m}!````~isempty@{$\sim$isempty}}
+\index{````~isempty@{$\sim$isempty}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isempty()}{~isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a9ca3ce0cd02a2339cfd495cb85090c97}{isempty}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{click__ima__calib__no__read_8m_aef23bc14ef784fd5ba23f1d01c9556c7}{iii}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{check__directory_8m_adb0325e1c4bd1132b2c8337ecb95b0f7}\label{check__directory_8m_adb0325e1c4bd1132b2c8337ecb95b0f7}} 
+\index{check\_directory.m@{check\_directory.m}!````~isempty@{$\sim$isempty}}
+\index{````~isempty@{$\sim$isempty}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isempty()}{~isempty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a9ca3ce0cd02a2339cfd495cb85090c97}{isempty}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{click__ima__calib__no__read_8m_aef23bc14ef784fd5ba23f1d01c9556c7}{iii}}}]{ }\end{DoxyParamCaption}) \&}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{check__directory_8m_aa612cc04f7f5fa0454d8b31c5caa35ca}\label{check__directory_8m_aa612cc04f7f5fa0454d8b31c5caa35ca}} 
+\index{check\_directory.m@{check\_directory.m}!calibration@{calibration}}
+\index{calibration@{calibration}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{calibration}{calibration}}
+{\footnotesize\ttfamily By \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are active for calibration}
+
+\mbox{\Hypertarget{check__directory_8m_a429237fd3d890f48380541a9fb4a766d}\label{check__directory_8m_a429237fd3d890f48380541a9fb4a766d}} 
+\index{check\_directory.m@{check\_directory.m}!default@{default}}
+\index{default@{default}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily By default}
+
+\mbox{\Hypertarget{check__directory_8m_afb358f48b1646c750fb9da6c6585be2b}\label{check__directory_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{check\_directory.m@{check\_directory.m}!end@{end}}
+\index{end@{end}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{check__directory_8m_a5d3e0bb4a72926c3086ad7a9549dd364}\label{check__directory_8m_a5d3e0bb4a72926c3086ad7a9549dd364}} 
+\index{check\_directory.m@{check\_directory.m}!filenamepp@{filenamepp}}
+\index{filenamepp@{filenamepp}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{filenamepp}{filenamepp}}
+{\footnotesize\ttfamily for filenamepp = \mbox{\hyperlink{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}{l}}(\mbox{\hyperlink{check__directory_8m_adc25294bd9f3841fadc5a6abc5b8f95d}{pp}}).\mbox{\hyperlink{check__directory_8m_abd6929795691c402603cd051d7729150}{name}}}
+
+\mbox{\Hypertarget{check__directory_8m_a6414763b10347ceb5f4d09ff8f4971dc}\label{check__directory_8m_a6414763b10347ceb5f4d09ff8f4971dc}} 
+\index{check\_directory.m@{check\_directory.m}!first\_num@{first\_num}}
+\index{first\_num@{first\_num}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{first\_num}{first\_num}}
+{\footnotesize\ttfamily Just \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{_distor2_calib_8m_ac285722dd13662586f5478312fe11f56}{fix}} \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} minor first\+\_\+num = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(\mbox{\hyperlink{check__directory_8m_a8a4ae8f5420af2cea2de18398f8afb19}{indices}})}
+
+\mbox{\Hypertarget{check__directory_8m_a68712d1f70845df2d3fee19d8e07102a}\label{check__directory_8m_a68712d1f70845df2d3fee19d8e07102a}} 
+\index{check\_directory.m@{check\_directory.m}!format@{format}}
+\index{format@{format}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily try the upper case format}
+
+\mbox{\Hypertarget{check__directory_8m_a2aff1855f60a3e152c0f94554c337d33}\label{check__directory_8m_a2aff1855f60a3e152c0f94554c337d33}} 
+\index{check\_directory.m@{check\_directory.m}!iii@{iii}}
+\index{iii@{iii}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{iii}{iii}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} iii = 1}
+
+\mbox{\Hypertarget{check__directory_8m_a2cc2b5a35593a627bf151c8623349c06}\label{check__directory_8m_a2cc2b5a35593a627bf151c8623349c06}} 
+\index{check\_directory.m@{check\_directory.m}!image\_numbers@{image\_numbers}}
+\index{image\_numbers@{image\_numbers}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{image\_numbers}{image\_numbers}}
+{\footnotesize\ttfamily image\+\_\+numbers = first\+\_\+num\+:n\+\_\+ima-\/1+\mbox{\hyperlink{ima__read__calib__no__read_8m_a6414763b10347ceb5f4d09ff8f4971dc}{first\+\_\+num}}}
+
+\mbox{\Hypertarget{check__directory_8m_add9cc5a5253404c84eb818e1bc7d75b0}\label{check__directory_8m_add9cc5a5253404c84eb818e1bc7d75b0}} 
+\index{check\_directory.m@{check\_directory.m}!ind\_valid@{ind\_valid}}
+\index{ind\_valid@{ind\_valid}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{ind\_valid}{ind\_valid}}
+{\footnotesize\ttfamily ind\+\_\+valid = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{check__directory_8m_a7b261d2d5f193015afc3427b0c0951ed}\label{check__directory_8m_a7b261d2d5f193015afc3427b0c0951ed}} 
+\index{check\_directory.m@{check\_directory.m}!indices@{indices}}
+\index{indices@{indices}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{indices}{indices}}
+{\footnotesize\ttfamily indices = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,\mbox{\hyperlink{check__directory_8m_a5714fef642d11733054a2bd7264fe371}{Nima\+\_\+valid}})}
+
+\mbox{\Hypertarget{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}\label{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}} 
+\index{check\_directory.m@{check\_directory.m}!l@{l}}
+\index{l@{l}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily This small script looks in the direcory and checks \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are there This works only \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} Matlab l = \mbox{\hyperlink{load__stereo__calib__files_8m_a13165ff083bdad541bf26c0dad442daf}{dir}}(\mbox{[}calib\+\_\+name \textquotesingle{}$\ast$\textquotesingle{}\mbox{]})}
+
+\mbox{\Hypertarget{check__directory_8m_a3276a081b0c649107e237409c8de7a2c}\label{check__directory_8m_a3276a081b0c649107e237409c8de7a2c}} 
+\index{check\_directory.m@{check\_directory.m}!length\_name@{length\_name}}
+\index{length\_name@{length\_name}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{length\_name}{length\_name}}
+{\footnotesize\ttfamily length\+\_\+name = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(calib\+\_\+name,2)}
+
+\mbox{\Hypertarget{check__directory_8m_aa5b9e4099dbc894358a1adfdb89282af}\label{check__directory_8m_aa5b9e4099dbc894358a1adfdb89282af}} 
+\index{check\_directory.m@{check\_directory.m}!loc\_ext@{loc\_ext}}
+\index{loc\_ext@{loc\_ext}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{loc\_ext}{loc\_ext}}
+{\footnotesize\ttfamily loc\+\_\+ext = \mbox{\hyperlink{pgmread_8m_a699d9c61b4e8f6ddecc2e3019e8a06cd}{findstr}}(\mbox{\hyperlink{check__directory_8m_a5d3e0bb4a72926c3086ad7a9549dd364}{filenamepp}},\mbox{\hyperlink{write__image_8m_a3ef97c8b89c343e5191f9293fb98785d}{format\+\_\+image}})}
+
+\mbox{\Hypertarget{check__directory_8m_a86f28d92a1509cb658c55fccfd5c0388}\label{check__directory_8m_a86f28d92a1509cb658c55fccfd5c0388}} 
+\index{check\_directory.m@{check\_directory.m}!loc\_extension@{loc\_extension}}
+\index{loc\_extension@{loc\_extension}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{loc\_extension}{loc\_extension}}
+{\footnotesize\ttfamily loc\+\_\+extension = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{check__directory_8m_aa5d167337554629b39a0572477a7e5fe}\label{check__directory_8m_aa5d167337554629b39a0572477a7e5fe}} 
+\index{check\_directory.m@{check\_directory.m}!n\_ima@{n\_ima}}
+\index{n\_ima@{n\_ima}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{n\_ima}{n\_ima}}
+{\footnotesize\ttfamily By \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} are active for n\+\_\+ima = max(\mbox{\hyperlink{check__directory_8m_a8a4ae8f5420af2cea2de18398f8afb19}{indices}}) -\/ \mbox{\hyperlink{ima__read__calib__no__read_8m_a6414763b10347ceb5f4d09ff8f4971dc}{first\+\_\+num}} + 1}
+
+\mbox{\Hypertarget{check__directory_8m_a84f53f4ebf5ee1f87ef95deaddee5e4f}\label{check__directory_8m_a84f53f4ebf5ee1f87ef95deaddee5e4f}} 
+\index{check\_directory.m@{check\_directory.m}!N\_slots@{N\_slots}}
+\index{N\_slots@{N\_slots}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{N\_slots}{N\_slots}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} N\+\_\+slots = \mbox{\hyperlink{check__directory_8m_a47aa0cb204be6d49163a6376ca51f91a}{min}}(\mbox{\hyperlink{check__directory_8m_ae3bb9ff9c3de902bf6c141b76b60bda2}{string\+\_\+length}})}
+
+\mbox{\Hypertarget{check__directory_8m_abd6929795691c402603cd051d7729150}\label{check__directory_8m_abd6929795691c402603cd051d7729150}} 
+\index{check\_directory.m@{check\_directory.m}!name@{name}}
+\index{name@{name}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily for name = \mbox{\hyperlink{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}{l}}(\mbox{\hyperlink{check__directory_8m_add9cc5a5253404c84eb818e1bc7d75b0}{ind\+\_\+valid}}(\mbox{\hyperlink{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}{ppp}})).name}
+
+\mbox{\Hypertarget{check__directory_8m_a5714fef642d11733054a2bd7264fe371}\label{check__directory_8m_a5714fef642d11733054a2bd7264fe371}} 
+\index{check\_directory.m@{check\_directory.m}!Nima\_valid@{Nima\_valid}}
+\index{Nima\_valid@{Nima\_valid}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{Nima\_valid}{Nima\_valid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} Get \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the string Nima\+\_\+valid = 0}
+
+\mbox{\Hypertarget{check__directory_8m_a6ffd181f615607282dbb22ae7808d721}\label{check__directory_8m_a6ffd181f615607282dbb22ae7808d721}} 
+\index{check\_directory.m@{check\_directory.m}!Nl@{Nl}}
+\index{Nl@{Nl}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{Nl}{Nl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Nl = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{check__directory_8m_a7ebf8f2e978018b39e43694f521f225c}{l}},1)}
+
+\mbox{\Hypertarget{check__directory_8m_a1b087f2a74ef40f0400e55bd3d6177b8}\label{check__directory_8m_a1b087f2a74ef40f0400e55bd3d6177b8}} 
+\index{check\_directory.m@{check\_directory.m}!numbers@{numbers}}
+\index{numbers@{numbers}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{numbers}{numbers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} Get \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the string numbers}
+
+\mbox{\Hypertarget{check__directory_8m_adc25294bd9f3841fadc5a6abc5b8f95d}\label{check__directory_8m_adc25294bd9f3841fadc5a6abc5b8f95d}} 
+\index{check\_directory.m@{check\_directory.m}!pp@{pp}}
+\index{pp@{pp}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{pp}{pp}}
+{\footnotesize\ttfamily for pp = 1\+:\mbox{\hyperlink{check__directory_8m_a6ffd181f615607282dbb22ae7808d721}{Nl}}}
+
+\mbox{\Hypertarget{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}\label{check__directory_8m_a6fce8d4f8e4bde27d1223415e6db1780}} 
+\index{check\_directory.m@{check\_directory.m}!ppp@{ppp}}
+\index{ppp@{ppp}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{ppp}{ppp}}
+{\footnotesize\ttfamily for ppp = 1\+:\mbox{\hyperlink{check__directory_8m_a5714fef642d11733054a2bd7264fe371}{Nima\+\_\+valid}}}
+
+\mbox{\Hypertarget{check__directory_8m_a07415648156fcfd796c3862bf7f94c7e}\label{check__directory_8m_a07415648156fcfd796c3862bf7f94c7e}} 
+\index{check\_directory.m@{check\_directory.m}!string\_num@{string\_num}}
+\index{string\_num@{string\_num}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{string\_num}{string\_num}}
+{\footnotesize\ttfamily string\+\_\+num = \mbox{\hyperlink{check__directory_8m_a5d3e0bb4a72926c3086ad7a9549dd364}{filenamepp}}(\mbox{\hyperlink{check__directory_8m_a3276a081b0c649107e237409c8de7a2c}{length\+\_\+name}}+1\+:\mbox{\hyperlink{check__directory_8m_aa5b9e4099dbc894358a1adfdb89282af}{loc\+\_\+ext}} -\/ 2)}
+
+\mbox{\Hypertarget{check__directory_8m_a0a88702dd5dcea5894185c9c25866bf6}\label{check__directory_8m_a0a88702dd5dcea5894185c9c25866bf6}} 
+\index{check\_directory.m@{check\_directory.m}!type\_numbering@{type\_numbering}}
+\index{type\_numbering@{type\_numbering}!check\_directory.m@{check\_directory.m}}
+\doxysubsubsection{\texorpdfstring{type\_numbering}{type\_numbering}}
+{\footnotesize\ttfamily type\+\_\+numbering = 1}
+

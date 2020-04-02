@@ -1,0 +1,310 @@
+\hypertarget{_compute3_d_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/\+Compute3D.m File Reference}
+\label{_compute3_d_8m}\index{D:/TrackEsferas/NavarQA/calib/Compute3D.m@{D:/TrackEsferas/NavarQA/calib/Compute3D.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}} \mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}} ()
+\item 
+The new technique for \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} (using stripes only) \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+Triangulation \mbox{\hyperlink{_compute3_d_8m_a8e465d203da421d73ca9600587c926f2}{xc}} (1,\+:).$\ast$\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}}(1
+\item 
+2,\+: \mbox{\hyperlink{_compute3_d_8m_a29d868ad3c1973419824ed867efd218b}{xc}} ()
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a3db23904a2c76f174e05e60c4539ba7a}{xc}} (2,\+:).$\ast$\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}}(1
+\item 
+1, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}} \mbox{\hyperlink{_compute3_d_8m_a7e0cc27ba34e62ccdb3d163a2b90e33f}{ones}} ()
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} (1,\+:)\mbox{]}
+\item 
+\mbox{\hyperlink{_compute3_d_8m_ae865728603594350ea6b219db66bbe42}{ones}} (1, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})\mbox{]}
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}{Xp}} (2,\+:)./Xp(3
+\item 
+\mbox{\hyperlink{_compute3_d_8m_abdb84abcb1fe66cf9ba36cdcb8afab29}{xp\+\_\+v}} (1,\+:)
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a8b735f2535ae9595347c7beb99cce7ff}{norm}} (\mbox{\hyperlink{willson__convert_8m_a67b9a6942c1b615cd070d4ec5fb04f56}{xp\+\_\+dist}}(1,\+:) -\/ xp\+\_\+save) \mbox{\hyperlink{willson__convert_8m_a67b9a6942c1b615cd070d4ec5fb04f56}{xp\+\_\+dist}}(1
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_compute3_d_8m_aeaafc51810e3fc587b1c4d9669e2ef77}{function}} \mbox{[}\mbox{\hyperlink{project__points__weak_8m_a50022e2d102ea7933c1d0eae181cfd2f}{Xc}}, \mbox{\hyperlink{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}{Xp}}\mbox{]} = Compute3D(\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}},\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_a924ca55c67822edd1ba50030a4544eee}{Xc}} = Compute3D(\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}},\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_acb1573dc3f011b08fd451bfd2339277a}{xp}} = \mbox{\hyperlink{_compute3_d_8m_abdb84abcb1fe66cf9ba36cdcb8afab29}{xp\+\_\+v}}(1,\+:)
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_a1e8af1b834749c5cbe9484070c2a9977}{T}}
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_ac021deca5ed9851af58ef6998d995aeb}{fp}}
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_acb9612325ed3ce63e90ab6caf86f95e7}{cp}}
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_a4ba90747ddec46e4cb3d3fbf02004c55}{kp}}
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_ace3e48365441f8a208bbb1ec9dafe1f8}{alpha\+\_\+p}}
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_a72d54db2b27ce046aab6e6a414c407e9}{fc}}
+\item 
+Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object \mbox{\hyperlink{_compute3_d_8m_a306f1b119ab7b0b65f750b769bb02520}{cc}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_compute3_d_8m_ac4ca7475a51c0468294f379de3da7462}{nargin$<$ 11, alpha\+\_\+c=0;end;end;\+Np=size(xc, 2);xc=normalize\+\_\+pixel(xc, fc, cc, kc, alpha\+\_\+c);xp=(xp -\/ cp(1))/fp(1);xp\+\_\+save=xp;\% save the real distorted x -\/ coordinates+alpha \textquotesingle{}edif(norm(kp)==0)\&(alpha\+\_\+p==0), N\+\_\+rep=1;else N\+\_\+rep=5;end;\% xp is the first entry of the undistorted projector coordinates(iteratively refined)\% xc is the complete undistorted camera coordinatesfor kk=1\+:\+N\+\_\+rep, R2=\+R(\mbox{[}1 3\mbox{]},\+:);if length(\+T) $>$}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_compute3_d_8m_a04fe54bba52f1d7ff7c3fbc148600901}{Tp}} = \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}(\mbox{[}1 3\mbox{]})
+\item 
+Triangulation \mbox{\hyperlink{_compute3_d_8m_a99002782cf3f0f0a2fd0ab4bc1dea4f7}{\+\_\+\+\_\+pad5\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{_compute3_d_8m_ad918d72d2eac09be60a9fc8847fe31a2}{\+\_\+\+\_\+pad6\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a9168ccf220bb7db6294fd5983d8f6146}{D2}} = \mbox{\hyperlink{rodrigues_8m_ab477549012f7889a894f39499202efdf}{R2}}(\+:)$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a350bfcb1e3cfb28ddff48ce525d4f139}{D}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(D1.$\ast$\mbox{\hyperlink{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}{D2}})
+\item 
+\mbox{\hyperlink{_compute3_d_8m_ae56002a9cd7d4671886f92b34846e7e2}{N1}} = \mbox{[}-\/\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a70b658077796bd2269bd895341d70837}{N2}} = -\/\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(N1.$\ast$(\mbox{\hyperlink{scanner__calibration__script_8m_ad652ee3260af21f50359895da1674c9d}{Tp}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})))
+\item 
+\mbox{\hyperlink{_compute3_d_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}{Z}} = N2./\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}
+\item 
+reproject \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the projetor \mbox{\hyperlink{_compute3_d_8m_a4d51f1843b39f361b174059d149ff721}{view}}
+\item 
+reproject \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the projetor and apply \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} \mbox{\hyperlink{_compute3_d_8m_a756be50da133921f60c03663a488a372}{Xp}} = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}$\ast$\mbox{\hyperlink{project__points__weak_8m_a50022e2d102ea7933c1d0eae181cfd2f}{Xc}} + \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})
+\item 
+\mbox{\hyperlink{_compute3_d_8m_afb1786f72f73ac6e78472933bcc0da15}{xp\+\_\+v}} = \mbox{[}\mbox{\hyperlink{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}{Xp}}(1,\+:)./\mbox{\hyperlink{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}{Xp}}(3,\+:)
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a33068e38fda059166af20232a02d2b55}{\+\_\+\+\_\+pad7\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a67b9a6942c1b615cd070d4ec5fb04f56}{xp\+\_\+dist}} = apply\+\_\+distortion(\mbox{\hyperlink{_compute3_d_8m_abdb84abcb1fe66cf9ba36cdcb8afab29}{xp\+\_\+v}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}})
+\item 
+\mbox{\hyperlink{_compute3_d_8m_a5cfbf631ddc94882ec4e9aefed44a536}{\+\_\+\+\_\+pad8\+\_\+\+\_\+}}
+\item 
+\mbox{\hyperlink{_compute3_d_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}\label{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}} 
+\index{Compute3D.m@{Compute3D.m}!alpha\_p@{alpha\_p}}
+\index{alpha\_p@{alpha\_p}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_p()}{alpha\_p()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{runme_8m_aa49cfdd4fa4d74d71f78a001a1b635d0}{c}} alpha\+\_\+p (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}\label{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}} 
+\index{Compute3D.m@{Compute3D.m}!calibration@{calibration}}
+\index{calibration@{calibration}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{calibration()}{calibration()}}
+{\footnotesize\ttfamily The new technique for calibration (\begin{DoxyParamCaption}\item[{using stripes}]{only }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a8b735f2535ae9595347c7beb99cce7ff}\label{_compute3_d_8m_a8b735f2535ae9595347c7beb99cce7ff}} 
+\index{Compute3D.m@{Compute3D.m}!norm@{norm}}
+\index{norm@{norm}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_a67b9a6942c1b615cd070d4ec5fb04f56}{xp\+\_\+dist}}(1,\+:) -\/}]{xp\+\_\+save }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a7e0cc27ba34e62ccdb3d163a2b90e33f}\label{_compute3_d_8m_a7e0cc27ba34e62ccdb3d163a2b90e33f}} 
+\index{Compute3D.m@{Compute3D.m}!ones@{ones}}
+\index{ones@{ones}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily 1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}} ones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{_compute3_d_8m_ae865728603594350ea6b219db66bbe42}\label{_compute3_d_8m_ae865728603594350ea6b219db66bbe42}} 
+\index{Compute3D.m@{Compute3D.m}!ones@{ones}}
+\index{ones@{ones}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ones (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a29d868ad3c1973419824ed867efd218b}\label{_compute3_d_8m_a29d868ad3c1973419824ed867efd218b}} 
+\index{Compute3D.m@{Compute3D.m}!xc@{xc}}
+\index{xc@{xc}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{xc()}{xc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily 2,\+: xc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{_compute3_d_8m_a8e465d203da421d73ca9600587c926f2}\label{_compute3_d_8m_a8e465d203da421d73ca9600587c926f2}} 
+\index{Compute3D.m@{Compute3D.m}!xc@{xc}}
+\index{xc@{xc}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{xc()}{xc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Triangulation xc (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a3db23904a2c76f174e05e60c4539ba7a}\label{_compute3_d_8m_a3db23904a2c76f174e05e60c4539ba7a}} 
+\index{Compute3D.m@{Compute3D.m}!xc@{xc}}
+\index{xc@{xc}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{xc()}{xc()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily xc (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}\label{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}} 
+\index{Compute3D.m@{Compute3D.m}!xp@{xp}}
+\index{xp@{xp}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{xp()}{xp()}}
+{\footnotesize\ttfamily xp (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}\label{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}} 
+\index{Compute3D.m@{Compute3D.m}!Xp@{Xp}}
+\index{Xp@{Xp}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{Xp()}{Xp()}}
+{\footnotesize\ttfamily Xp (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_compute3_d_8m_abdb84abcb1fe66cf9ba36cdcb8afab29}\label{_compute3_d_8m_abdb84abcb1fe66cf9ba36cdcb8afab29}} 
+\index{Compute3D.m@{Compute3D.m}!xp\_v@{xp\_v}}
+\index{xp\_v@{xp\_v}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{xp\_v()}{xp\_v()}}
+{\footnotesize\ttfamily xp\+\_\+v (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_compute3_d_8m_a99002782cf3f0f0a2fd0ab4bc1dea4f7}\label{_compute3_d_8m_a99002782cf3f0f0a2fd0ab4bc1dea4f7}} 
+\index{Compute3D.m@{Compute3D.m}!\_\_pad5\_\_@{\_\_pad5\_\_}}
+\index{\_\_pad5\_\_@{\_\_pad5\_\_}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad5\_\_}{\_\_pad5\_\_}}
+{\footnotesize\ttfamily Triangulation \+\_\+\+\_\+pad5\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{_compute3_d_8m_ad918d72d2eac09be60a9fc8847fe31a2}\label{_compute3_d_8m_ad918d72d2eac09be60a9fc8847fe31a2}} 
+\index{Compute3D.m@{Compute3D.m}!\_\_pad6\_\_@{\_\_pad6\_\_}}
+\index{\_\_pad6\_\_@{\_\_pad6\_\_}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad6\_\_}{\_\_pad6\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad6\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{_compute3_d_8m_a33068e38fda059166af20232a02d2b55}\label{_compute3_d_8m_a33068e38fda059166af20232a02d2b55}} 
+\index{Compute3D.m@{Compute3D.m}!\_\_pad7\_\_@{\_\_pad7\_\_}}
+\index{\_\_pad7\_\_@{\_\_pad7\_\_}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad7\_\_}{\_\_pad7\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad7\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{_compute3_d_8m_a5cfbf631ddc94882ec4e9aefed44a536}\label{_compute3_d_8m_a5cfbf631ddc94882ec4e9aefed44a536}} 
+\index{Compute3D.m@{Compute3D.m}!\_\_pad8\_\_@{\_\_pad8\_\_}}
+\index{\_\_pad8\_\_@{\_\_pad8\_\_}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad8\_\_}{\_\_pad8\_\_}}
+{\footnotesize\ttfamily \+\_\+\+\_\+pad8\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{_compute3_d_8m_ace3e48365441f8a208bbb1ec9dafe1f8}\label{_compute3_d_8m_ace3e48365441f8a208bbb1ec9dafe1f8}} 
+\index{Compute3D.m@{Compute3D.m}!alpha\_p@{alpha\_p}}
+\index{alpha\_p@{alpha\_p}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{alpha\_p}{alpha\_p}}
+{\footnotesize\ttfamily Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object alpha\+\_\+p}
+
+\mbox{\Hypertarget{_compute3_d_8m_a306f1b119ab7b0b65f750b769bb02520}\label{_compute3_d_8m_a306f1b119ab7b0b65f750b769bb02520}} 
+\index{Compute3D.m@{Compute3D.m}!cc@{cc}}
+\index{cc@{cc}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object cc}
+
+\mbox{\Hypertarget{_compute3_d_8m_acb9612325ed3ce63e90ab6caf86f95e7}\label{_compute3_d_8m_acb9612325ed3ce63e90ab6caf86f95e7}} 
+\index{Compute3D.m@{Compute3D.m}!cp@{cp}}
+\index{cp@{cp}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{cp}{cp}}
+{\footnotesize\ttfamily Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object cp}
+
+\mbox{\Hypertarget{_compute3_d_8m_a350bfcb1e3cfb28ddff48ce525d4f139}\label{_compute3_d_8m_a350bfcb1e3cfb28ddff48ce525d4f139}} 
+\index{Compute3D.m@{Compute3D.m}!D@{D}}
+\index{D@{D}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily D = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(D1.$\ast$\mbox{\hyperlink{_meshing_8m_a9168ccf220bb7db6294fd5983d8f6146}{D2}})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a9168ccf220bb7db6294fd5983d8f6146}\label{_compute3_d_8m_a9168ccf220bb7db6294fd5983d8f6146}} 
+\index{Compute3D.m@{Compute3D.m}!D2@{D2}}
+\index{D2@{D2}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{D2}{D2}}
+{\footnotesize\ttfamily D2 = \mbox{\hyperlink{rodrigues_8m_ab477549012f7889a894f39499202efdf}{R2}}(\+:)$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})}
+
+\mbox{\Hypertarget{_compute3_d_8m_afb358f48b1646c750fb9da6c6585be2b}\label{_compute3_d_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{Compute3D.m@{Compute3D.m}!end@{end}}
+\index{end@{end}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{_compute3_d_8m_a72d54db2b27ce046aab6e6a414c407e9}\label{_compute3_d_8m_a72d54db2b27ce046aab6e6a414c407e9}} 
+\index{Compute3D.m@{Compute3D.m}!fc@{fc}}
+\index{fc@{fc}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{fc}{fc}}
+{\footnotesize\ttfamily fc}
+
+\mbox{\Hypertarget{_compute3_d_8m_ac021deca5ed9851af58ef6998d995aeb}\label{_compute3_d_8m_ac021deca5ed9851af58ef6998d995aeb}} 
+\index{Compute3D.m@{Compute3D.m}!fp@{fp}}
+\index{fp@{fp}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{fp}{fp}}
+{\footnotesize\ttfamily Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object fp}
+
+\mbox{\Hypertarget{_compute3_d_8m_aeaafc51810e3fc587b1c4d9669e2ef77}\label{_compute3_d_8m_aeaafc51810e3fc587b1c4d9669e2ef77}} 
+\index{Compute3D.m@{Compute3D.m}!function@{function}}
+\index{function@{function}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{project__points__weak_8m_a50022e2d102ea7933c1d0eae181cfd2f}{Xc}}, \mbox{\hyperlink{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}{Xp}}\mbox{]} = Compute3D(\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}},\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a4ba90747ddec46e4cb3d3fbf02004c55}\label{_compute3_d_8m_a4ba90747ddec46e4cb3d3fbf02004c55}} 
+\index{Compute3D.m@{Compute3D.m}!kp@{kp}}
+\index{kp@{kp}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{kp}{kp}}
+{\footnotesize\ttfamily Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object kp}
+
+\mbox{\Hypertarget{_compute3_d_8m_ae56002a9cd7d4671886f92b34846e7e2}\label{_compute3_d_8m_ae56002a9cd7d4671886f92b34846e7e2}} 
+\index{Compute3D.m@{Compute3D.m}!N1@{N1}}
+\index{N1@{N1}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{N1}{N1}}
+{\footnotesize\ttfamily N1 = \mbox{[}-\/\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a70b658077796bd2269bd895341d70837}\label{_compute3_d_8m_a70b658077796bd2269bd895341d70837}} 
+\index{Compute3D.m@{Compute3D.m}!N2@{N2}}
+\index{N2@{N2}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{N2}{N2}}
+{\footnotesize\ttfamily N2 = -\/\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(N1.$\ast$(\mbox{\hyperlink{scanner__calibration__script_8m_ad652ee3260af21f50359895da1674c9d}{Tp}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})))}
+
+\mbox{\Hypertarget{_compute3_d_8m_ac4ca7475a51c0468294f379de3da7462}\label{_compute3_d_8m_ac4ca7475a51c0468294f379de3da7462}} 
+\index{Compute3D.m@{Compute3D.m}!nargin$<$ 11, alpha\_c=0;end;end;Np=size(xc, 2);xc=normalize\_pixel(xc, fc, cc, kc, alpha\_c);xp=(xp -\/ cp(1))/fp(1);xp\_save=xp;\% save the real distorted x -\/ coordinates+alpha \textquotesingle{}edif(norm(kp)==0)\&(alpha\_p==0), N\_rep=1;else N\_rep=5;end;\% xp is the first entry of the undistorted projector coordinates(iteratively refined)\% xc is the complete undistorted camera coordinatesfor kk=1:N\_rep, R2=R(\mbox{[}1 3\mbox{]},:);if length(T) $>$@{nargin$<$ 11, alpha\_c=0;end;end;Np=size(xc, 2);xc=normalize\_pixel(xc, fc, cc, kc, alpha\_c);xp=(xp -\/ cp(1))/fp(1);xp\_save=xp;\% save the real distorted x -\/ coordinates+alpha \textquotesingle{}edif(norm(kp)==0)\&(alpha\_p==0), N\_rep=1;else N\_rep=5;end;\% xp is the first entry of the undistorted projector coordinates(iteratively refined)\% xc is the complete undistorted camera coordinatesfor kk=1:N\_rep, R2=R([1 3],:);if length(T) $>$}}
+\index{nargin$<$ 11, alpha\_c=0;end;end;Np=size(xc, 2);xc=normalize\_pixel(xc, fc, cc, kc, alpha\_c);xp=(xp -\/ cp(1))/fp(1);xp\_save=xp;\% save the real distorted x -\/ coordinates+alpha \textquotesingle{}edif(norm(kp)==0)\&(alpha\_p==0), N\_rep=1;else N\_rep=5;end;\% xp is the first entry of the undistorted projector coordinates(iteratively refined)\% xc is the complete undistorted camera coordinatesfor kk=1:N\_rep, R2=R(\mbox{[}1 3\mbox{]},:);if length(T) $>$@{nargin$<$ 11, alpha\_c=0;end;end;Np=size(xc, 2);xc=normalize\_pixel(xc, fc, cc, kc, alpha\_c);xp=(xp -\/ cp(1))/fp(1);xp\_save=xp;\% save the real distorted x -\/ coordinates+alpha \textquotesingle{}edif(norm(kp)==0)\&(alpha\_p==0), N\_rep=1;else N\_rep=5;end;\% xp is the first entry of the undistorted projector coordinates(iteratively refined)\% xc is the complete undistorted camera coordinatesfor kk=1:N\_rep, R2=R([1 3],:);if length(T) $>$}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{nargin$<$ 11, alpha\_c=0;end;end;Np=size(xc, 2);xc=normalize\_pixel(xc, fc, cc, kc, alpha\_c);xp=(xp -\/ cp(1))/fp(1);xp\_save=xp;\% save the real distorted x -\/ coordinates+alpha \textquotesingle{}edif(norm(kp)==0)\&(alpha\_p==0), N\_rep=1;else N\_rep=5;end;\% xp is the first entry of the undistorted projector coordinates(iteratively refined)\% xc is the complete undistorted camera coordinatesfor kk=1:N\_rep, R2=R([1 3],:);if length(T) $>$}{nargin< 11, alpha\_c=0;end;end;Np=size(xc, 2);xc=normalize\_pixel(xc, fc, cc, kc, alpha\_c);xp=(xp - cp(1))/fp(1);xp\_save=xp;\% save the real distorted x - coordinates+alpha 'edif(norm(kp)==0)\&(alpha\_p==0), N\_rep=1;else N\_rep=5;end;\% xp is the first entry of the undistorted projector coordinates(iteratively refined)\% xc is the complete undistorted camera coordinatesfor kk=1:N\_rep, R2=R([1 3],:);if length(T) >}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{ginput4_8m_aafbb9d50e573e4009d0650c645566ddd}{nargin}}$<$ 11, \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}=0; \mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}};\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}};\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}=\mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}}, 2);\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}}=\mbox{\hyperlink{stereo__triangulation_8m_a197b3ef9be3bd169722361957fe74aaa}{normalize\+\_\+pixel}}(\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}}, \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}, \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}, \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}, \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}});\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}}=(\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} -\/ \mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}}(1))/\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}(1);xp\+\_\+save=\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}};\% save the real distorted \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} -\/ \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}+\mbox{\hyperlink{rodrigues_8m_a62197192f0fbf4e0675eb37be1c4c175}{alpha}} \textquotesingle{}edif(\mbox{\hyperlink{willson__convert_8m_a9c27fc2ed3dd0bbc5add976bd170b402}{norm}}(\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}})==0)\&(\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}}==0), N\+\_\+rep=1;\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} N\+\_\+rep=5;\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}};\% \mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the first entry of the undistorted \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{small__test__script_8m_a1c869c993fe77a32c1153362c9d2c956}{coordinates}}(iteratively refined)\% \mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} the \mbox{\hyperlink{loadinr_8m_a5f867e6d2f1b81be0cb765b13a6ec4af}{complete}} undistorted \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} coordinatesfor \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}=1\+:N\+\_\+rep, \mbox{\hyperlink{rodrigues_8m_ab477549012f7889a894f39499202efdf}{R2}}=\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}(\mbox{[}1 3\mbox{]},\+:);\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}) $>$}
+
+\mbox{\Hypertarget{_compute3_d_8m_a1e8af1b834749c5cbe9484070c2a9977}\label{_compute3_d_8m_a1e8af1b834749c5cbe9484070c2a9977}} 
+\index{Compute3D.m@{Compute3D.m}!T@{T}}
+\index{T@{T}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily Reconstruction of the \mbox{\hyperlink{is3_d_8m_adb607fe849a6c9fbaed4a1ef8d68c158}{structure}} of the striped object T}
+
+\mbox{\Hypertarget{_compute3_d_8m_a04fe54bba52f1d7ff7c3fbc148600901}\label{_compute3_d_8m_a04fe54bba52f1d7ff7c3fbc148600901}} 
+\index{Compute3D.m@{Compute3D.m}!Tp@{Tp}}
+\index{Tp@{Tp}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{Tp}{Tp}}
+{\footnotesize\ttfamily The old technique for \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} Tp = \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}(\mbox{[}1 3\mbox{]})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a4d51f1843b39f361b174059d149ff721}\label{_compute3_d_8m_a4d51f1843b39f361b174059d149ff721}} 
+\index{Compute3D.m@{Compute3D.m}!view@{view}}
+\index{view@{view}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily reproject \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the projetor view}
+
+\mbox{\Hypertarget{_compute3_d_8m_a924ca55c67822edd1ba50030a4544eee}\label{_compute3_d_8m_a924ca55c67822edd1ba50030a4544eee}} 
+\index{Compute3D.m@{Compute3D.m}!Xc@{Xc}}
+\index{Xc@{Xc}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{Xc}{Xc}}
+{\footnotesize\ttfamily Xc = Compute3D(\mbox{\hyperlink{edgefinder_8m_a4b9e3580e8976217fce1afe54cb77649}{xc}},\mbox{\hyperlink{_compute3_d_8m_a5056e8291f32dc9c5d25e649ac105bad}{xp}},\mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}},\mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}},\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{scanner__calibration__script_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{scanner__calibration__script_8m_ad0e5f55e3c0a06964a25a922047c023c}{cp}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},\mbox{\hyperlink{_compute3_d_8m_a64a21930284a0dfc16e3872e140b7af3}{alpha\+\_\+p}})}
+
+\mbox{\Hypertarget{_compute3_d_8m_acb1573dc3f011b08fd451bfd2339277a}\label{_compute3_d_8m_acb1573dc3f011b08fd451bfd2339277a}} 
+\index{Compute3D.m@{Compute3D.m}!xp@{xp}}
+\index{xp@{xp}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{xp}{xp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} xp = \mbox{\hyperlink{_compute3_d_8m_abdb84abcb1fe66cf9ba36cdcb8afab29}{xp\+\_\+v}}(1,\+:)}
+
+\mbox{\Hypertarget{_compute3_d_8m_a756be50da133921f60c03663a488a372}\label{_compute3_d_8m_a756be50da133921f60c03663a488a372}} 
+\index{Compute3D.m@{Compute3D.m}!Xp@{Xp}}
+\index{Xp@{Xp}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{Xp}{Xp}}
+{\footnotesize\ttfamily reproject \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the projetor and apply \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} Xp = \mbox{\hyperlink{stereo__triangulation_8m_af3f113e231947097d453c4b2f177d8fa}{R}}$\ast$\mbox{\hyperlink{project__points__weak_8m_a50022e2d102ea7933c1d0eae181cfd2f}{Xc}} + \mbox{\hyperlink{_test_function_8m_adf1f3edb9115acb0a1e04209b7a9937b}{T}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})}
+
+\mbox{\Hypertarget{_compute3_d_8m_a67b9a6942c1b615cd070d4ec5fb04f56}\label{_compute3_d_8m_a67b9a6942c1b615cd070d4ec5fb04f56}} 
+\index{Compute3D.m@{Compute3D.m}!xp\_dist@{xp\_dist}}
+\index{xp\_dist@{xp\_dist}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{xp\_dist}{xp\_dist}}
+{\footnotesize\ttfamily xp\+\_\+dist = apply\+\_\+distortion(\mbox{\hyperlink{_compute3_d_8m_abdb84abcb1fe66cf9ba36cdcb8afab29}{xp\+\_\+v}},\mbox{\hyperlink{scanner__calibration__script_8m_a72044a36b6c9a9a7c8381c2df90d1ae7}{kp}})}
+
+\mbox{\Hypertarget{_compute3_d_8m_afb1786f72f73ac6e78472933bcc0da15}\label{_compute3_d_8m_afb1786f72f73ac6e78472933bcc0da15}} 
+\index{Compute3D.m@{Compute3D.m}!xp\_v@{xp\_v}}
+\index{xp\_v@{xp\_v}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{xp\_v}{xp\_v}}
+{\footnotesize\ttfamily xp\+\_\+v = \mbox{[}\mbox{\hyperlink{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}{Xp}}(1,\+:)./\mbox{\hyperlink{_compute3_d_8m_a2d260f09d2748c266b39e053e4e5c7bc}{Xp}}(3,\+:)}
+
+\mbox{\Hypertarget{_compute3_d_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}\label{_compute3_d_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}} 
+\index{Compute3D.m@{Compute3D.m}!Z@{Z}}
+\index{Z@{Z}!Compute3D.m@{Compute3D.m}}
+\doxysubsubsection{\texorpdfstring{Z}{Z}}
+{\footnotesize\ttfamily Z = N2./\mbox{\hyperlink{compute__epipole_8m_a729f3f67bd0c9f9d66e0d947abaf898a}{D}}}
+

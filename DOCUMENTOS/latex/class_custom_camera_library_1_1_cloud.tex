@@ -1,0 +1,215 @@
+\hypertarget{class_custom_camera_library_1_1_cloud}{}\doxysection{Custom\+Camera\+Library\+::Cloud Class Reference}
+\label{class_custom_camera_library_1_1_cloud}\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+
+
+{\ttfamily \#include $<$pointcloud.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a7ad1af30f701dd0a82f20ecee98c3e25}{$\sim$\+Cloud}} (void)
+\item 
+\mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a920a635f7d3dbf35d11d04a275027081}{Cloud}} (string type, int mode)
+\item 
+bool \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a42e1fd715a105ec1c3c2be46e4e91bb7}{get\+Status}} ()
+\item 
+bool \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a6ad13d5ec67f897029bcdbb167b5cd84}{erase\+Point}} (Point3d \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}})
+\item 
+bool \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_ac32829296aa556111215b69151b8b58b}{save\+Point}} (Point3d \mbox{\hyperlink{willson__convert_8m_aeb407484ccae58e27ee8ade327e0651b}{point}}, int \mbox{\hyperlink{send_cmd_8m_ab0d96f9d852c2058c2546a1338e87544}{key}})
+\item 
+bool \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a64d0c4af8b0e38f5ce679de0a21565f3}{save\+Points}} (\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ Point3d $>$ src)
+\item 
+bool \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a09b004f655945186f8c83716453c9234}{erase\+Last}} ()
+\item 
+bool \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_afc9cde13086bae7a85b37a32b20881a5}{find\+Point}} (Point3d \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}})
+\item 
+\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ Point3d $>$ \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_afd1c9df50984cc2cc84a45049443d7c9}{get\+Cloud}} ()
+\item 
+string \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_ad2df0710c82fabf6e6821411a82334ba}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a252e76c6498af691571771f4ee7a09a3}{set\+Status}} (bool value)
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a227b53ed0c999d2268c44479490f3acc}{set\+Frecuency}} (double value)
+\item 
+void \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a2238f0056b3d8bd519e600b29bde7bf5}{set\+Mode}} (int \mbox{\hyperlink{namespace_custom_camera_library_a43deee0e4586de39b7f6423426ff3f2c}{m}})
+\item 
+int \mbox{\hyperlink{class_custom_camera_library_1_1_cloud_abbb4e3cea8f700c1064bd2325ca706a3}{get\+Mode}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa una nube de puntos sacada con el pointer. Cuenta con propiedades que la definen y permite ir representando cada nube que se vaya a sacar con la ayuda del pointer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a7ad1af30f701dd0a82f20ecee98c3e25}\label{class_custom_camera_library_1_1_cloud_a7ad1af30f701dd0a82f20ecee98c3e25}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!````~Cloud@{$\sim$Cloud}}
+\index{````~Cloud@{$\sim$Cloud}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{$\sim$Cloud()}{~Cloud()}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Cloud\+::$\sim$\+Cloud (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor por omisión. \mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a920a635f7d3dbf35d11d04a275027081}\label{class_custom_camera_library_1_1_cloud_a920a635f7d3dbf35d11d04a275027081}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!Cloud@{Cloud}}
+\index{Cloud@{Cloud}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{Cloud()}{Cloud()}}
+{\footnotesize\ttfamily Custom\+Camera\+Library\+::\+Cloud\+::\+Cloud (\begin{DoxyParamCaption}\item[{string}]{type,  }\item[{int}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. Inicializa la nube de puntos, estableciendo sus características. 
+\begin{DoxyParams}{Parameters}
+{\em type} & una etiqueta que se le desee poner a la nube. Ej\+: \char`\"{}femur\char`\"{}, \char`\"{}tibia\char`\"{}. \\
+\hline
+{\em mode} & en que se van a tomar los datos, manual o automático (0 o 1 respectivamente). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a09b004f655945186f8c83716453c9234}\label{class_custom_camera_library_1_1_cloud_a09b004f655945186f8c83716453c9234}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!eraseLast@{eraseLast}}
+\index{eraseLast@{eraseLast}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{eraseLast()}{eraseLast()}}
+{\footnotesize\ttfamily bool Cloud\+::erase\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Elimina el último punto guardado dentro de la nube de puntos. \begin{DoxyReturn}{Returns}
+verdadero si el punto fue eliminado o falso si sucede lo contrario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a6ad13d5ec67f897029bcdbb167b5cd84}\label{class_custom_camera_library_1_1_cloud_a6ad13d5ec67f897029bcdbb167b5cd84}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!erasePoint@{erasePoint}}
+\index{erasePoint@{erasePoint}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{erasePoint()}{erasePoint()}}
+{\footnotesize\ttfamily bool Cloud\+::erase\+Point (\begin{DoxyParamCaption}\item[{Point3d}]{point }\end{DoxyParamCaption})}
+
+Borra un punto de la nube de puntos e indica si ha sido o no exitosa la operación. 
+\begin{DoxyParams}{Parameters}
+{\em point} & recive el punto que se intentará borrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero si el punto fue borrado o falso si sucede lo contrario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_afc9cde13086bae7a85b37a32b20881a5}\label{class_custom_camera_library_1_1_cloud_afc9cde13086bae7a85b37a32b20881a5}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!findPoint@{findPoint}}
+\index{findPoint@{findPoint}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{findPoint()}{findPoint()}}
+{\footnotesize\ttfamily bool Cloud\+::find\+Point (\begin{DoxyParamCaption}\item[{Point3d}]{points }\end{DoxyParamCaption})}
+
+Intenta localizar un punto dentro de la nube de puntos. 
+\begin{DoxyParams}{Parameters}
+{\em points} & recive el punto que se intentará localizar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero si el punto fue encontrado o falso si sucede lo contrario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_afd1c9df50984cc2cc84a45049443d7c9}\label{class_custom_camera_library_1_1_cloud_afd1c9df50984cc2cc84a45049443d7c9}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!getCloud@{getCloud}}
+\index{getCloud@{getCloud}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{getCloud()}{getCloud()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$Point3d$>$ Custom\+Camera\+Library\+::\+Cloud\+::get\+Cloud (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtiene la nube de puntos que se haya guardado en el momento. \begin{DoxyReturn}{Returns}
+un vector con los puntos que hacen parte de la nube de puntos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_abbb4e3cea8f700c1064bd2325ca706a3}\label{class_custom_camera_library_1_1_cloud_abbb4e3cea8f700c1064bd2325ca706a3}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!getMode@{getMode}}
+\index{getMode@{getMode}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily int Custom\+Camera\+Library\+::\+Cloud\+::get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Devuelve el modo en que se están tomando los puntos (manual a automático). Devolverá 0 cuando el modo es manual y 1 cuando es automático. \begin{DoxyReturn}{Returns}
+The test results 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a42e1fd715a105ec1c3c2be46e4e91bb7}\label{class_custom_camera_library_1_1_cloud_a42e1fd715a105ec1c3c2be46e4e91bb7}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily bool Custom\+Camera\+Library\+::\+Cloud\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Devuelve el estado de la toma de puntos habilitado/deshabilitado . \begin{DoxyReturn}{Returns}
+verdadero o falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_ad2df0710c82fabf6e6821411a82334ba}\label{class_custom_camera_library_1_1_cloud_ad2df0710c82fabf6e6821411a82334ba}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!getType@{getType}}
+\index{getType@{getType}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Custom\+Camera\+Library\+::\+Cloud\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Devuelve el tipo de nube de puntos. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_custom_camera_library_1_1_cloud_a920a635f7d3dbf35d11d04a275027081}{Cloud()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+el tipo de nube de puntos definido al momento de instanciar el objeto \mbox{\hyperlink{class_custom_camera_library_1_1_cloud}{Cloud}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_ac32829296aa556111215b69151b8b58b}\label{class_custom_camera_library_1_1_cloud_ac32829296aa556111215b69151b8b58b}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!savePoint@{savePoint}}
+\index{savePoint@{savePoint}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{savePoint()}{savePoint()}}
+{\footnotesize\ttfamily bool Cloud\+::save\+Point (\begin{DoxyParamCaption}\item[{Point3d}]{point,  }\item[{int}]{key }\end{DoxyParamCaption})}
+
+Guarda un punto dentro de la nube de puntos. 
+\begin{DoxyParams}{Parameters}
+{\em point} & el punto que se intentará guardar. \\
+\hline
+{\em key} & el valor ascii de la tecla que se presione, -\/1 si no se oprime nada. Este valor es utilizado para controlar el comportamiento de la toma de puntos (pausar, reanudar y guardar). Los teclas utilizadas son\+:
+\begin{DoxyItemize}
+\item x\+: Captura un punto en modo manual (se escucha un sonido por cada punto tomado con éxito).
+\item z\+: Pausa/reanuda la toma de puntos.
+\item a\+: Guarda los punto que han sido tomados hasta el momento. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero si el punto fue guardado o falso si sucede lo contrario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a64d0c4af8b0e38f5ce679de0a21565f3}\label{class_custom_camera_library_1_1_cloud_a64d0c4af8b0e38f5ce679de0a21565f3}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!savePoints@{savePoints}}
+\index{savePoints@{savePoints}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{savePoints()}{savePoints()}}
+{\footnotesize\ttfamily bool Cloud\+::save\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}}$<$ Point3d $>$}]{src }\end{DoxyParamCaption})}
+
+Guarda un conjunto de puntos dentro de la nube de puntos. 
+\begin{DoxyParams}{Parameters}
+{\em src} & el conjunto de puntos que se intentará guardar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero si los puntos fueron guardado o falso si sucede lo contrario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a227b53ed0c999d2268c44479490f3acc}\label{class_custom_camera_library_1_1_cloud_a227b53ed0c999d2268c44479490f3acc}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!setFrecuency@{setFrecuency}}
+\index{setFrecuency@{setFrecuency}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{setFrecuency()}{setFrecuency()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Cloud\+::set\+Frecuency (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cambia la frecuencia de en la toma de datos de manera automática. Por omisión el valor es 1seg. 
+\begin{DoxyParams}{Parameters}
+{\em value} & valor en segundos para la nueva frecuencia de toma de puntos. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a2238f0056b3d8bd519e600b29bde7bf5}\label{class_custom_camera_library_1_1_cloud_a2238f0056b3d8bd519e600b29bde7bf5}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!setMode@{setMode}}
+\index{setMode@{setMode}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Cloud\+::set\+Mode (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cambia el modo de tomar los puntos si el modo es automático lo cambia a manual y si es manual a automático. 
+\begin{DoxyParams}{Parameters}
+{\em m} & un entero que representa el modo, debe ser 0 o 1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_custom_camera_library_1_1_cloud_a252e76c6498af691571771f4ee7a09a3}\label{class_custom_camera_library_1_1_cloud_a252e76c6498af691571771f4ee7a09a3}} 
+\index{CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!CustomCameraLibrary::Cloud@{CustomCameraLibrary::Cloud}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void Custom\+Camera\+Library\+::\+Cloud\+::set\+Status (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Habilita/deshabilita la toma de puntos. 
+\begin{DoxyParams}{Parameters}
+{\em value} & verdadero para habilitar y falso para deshabilitar. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{pointcloud_8h}{pointcloud.\+h}}\item 
+D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\mbox{\hyperlink{pointcloud_8cpp}{pointcloud.\+cpp}}\end{DoxyCompactItemize}

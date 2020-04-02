@@ -1,0 +1,108 @@
+\hypertarget{comp__distortion2_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/comp\+\_\+distortion2.m File Reference}
+\label{comp__distortion2_8m}\index{D:/TrackEsferas/NavarQA/calib/comp\_distortion2.m@{D:/TrackEsferas/NavarQA/calib/comp\_distortion2.m}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}} = 0,\mbox{[}two, \mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}}\mbox{]}=\mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_a24ff02fcac824b484d82edab0bfcaf1e}{if}} (two $\sim$=2)
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_a217a6e8ba793cf7aab575491612ee5ef}{error}} (\textquotesingle{}E\+R\+R\+OR \+:The dimension of the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} should be 2xN\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_a22edbe0ff37aa57e00ee7ee2c4bd8db2}{function}} \mbox{[}\mbox{\hyperlink{comp__distortion_8m_ac726d9a26d520cb09ffeb9a75efd6583}{x\+\_\+comp}}\mbox{]} = comp\+\_\+distortion(\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}},\mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}})
+\item 
+compensates the radial \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} of the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} plane \mbox{\hyperlink{comp__distortion2_8m_a9247ce0e63089d6e90c0305950189273}{x\+\_\+dist}} = comp\+\_\+distortion(x\+\_\+dist,\mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}})
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_a93fc09baaacbe4a2ea2f2441e4f7e549}{ph}} = atan2(\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}}(2,\+:),\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}}(1,\+:))
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_a7e56035a736d269ad670f312496a0846}{Q}} = -\/1/(3$\ast$\mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}})
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_acb95449a94688af33f6e9bb090cf2936}{R}} = -\/\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}}(1,\+:)./(2$\ast$\mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}}$\ast$cos(\mbox{\hyperlink{comp__distortion2_8m_a93fc09baaacbe4a2ea2f2441e4f7e549}{ph}}))
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_ab477549012f7889a894f39499202efdf}{R2}} = R.$^\wedge$2
+\item 
+\mbox{\hyperlink{comp__distortion2_8m_ad86f39d31a538e89a0f525f352879e25}{Q3}} = \mbox{\hyperlink{visualize__distortions_8m_a7e56035a736d269ad670f312496a0846}{Q}}$^\wedge$3
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}\label{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!k2@{k2}}
+\index{k2@{k2}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{k2}{k2}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}} =  0, \mbox{[}two,\mbox{\hyperlink{normalize2_8m_a8cc2e7240164328fdc3f0e5e21032c56}{N}}\mbox{]} = \mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}})}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{comp__distortion2_8m_a217a6e8ba793cf7aab575491612ee5ef}\label{comp__distortion2_8m_a217a6e8ba793cf7aab575491612ee5ef}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!error@{error}}
+\index{error@{error}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily error (\begin{DoxyParamCaption}\item[{\textquotesingle{}E\+R\+R\+OR \+:The dimension of the \mbox{\hyperlink{_distor2_calib_8m_ad356fab1d96159f7b2452bde706a9719}{points}} should be 2xN\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__distortion2_8m_a24ff02fcac824b484d82edab0bfcaf1e}\label{comp__distortion2_8m_a24ff02fcac824b484d82edab0bfcaf1e}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!if@{if}}
+\index{if@{if}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{two $\sim$}]{ = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{comp__distortion2_8m_afb358f48b1646c750fb9da6c6585be2b}\label{comp__distortion2_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!end@{end}}
+\index{end@{end}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{comp__distortion2_8m_a22edbe0ff37aa57e00ee7ee2c4bd8db2}\label{comp__distortion2_8m_a22edbe0ff37aa57e00ee7ee2c4bd8db2}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!function@{function}}
+\index{function@{function}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{comp__distortion_8m_ac726d9a26d520cb09ffeb9a75efd6583}{x\+\_\+comp}}\mbox{]} = comp\+\_\+distortion(\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}},\mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}})}
+
+\mbox{\Hypertarget{comp__distortion2_8m_a93fc09baaacbe4a2ea2f2441e4f7e549}\label{comp__distortion2_8m_a93fc09baaacbe4a2ea2f2441e4f7e549}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!ph@{ph}}
+\index{ph@{ph}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{ph}{ph}}
+{\footnotesize\ttfamily ph = atan2(\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}}(2,\+:),\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}}(1,\+:))}
+
+\mbox{\Hypertarget{comp__distortion2_8m_a7e56035a736d269ad670f312496a0846}\label{comp__distortion2_8m_a7e56035a736d269ad670f312496a0846}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!Q@{Q}}
+\index{Q@{Q}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{Q}{Q}}
+{\footnotesize\ttfamily Q = -\/1/(3$\ast$\mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}})}
+
+\mbox{\Hypertarget{comp__distortion2_8m_ad86f39d31a538e89a0f525f352879e25}\label{comp__distortion2_8m_ad86f39d31a538e89a0f525f352879e25}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!Q3@{Q3}}
+\index{Q3@{Q3}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{Q3}{Q3}}
+{\footnotesize\ttfamily Q3 = \mbox{\hyperlink{visualize__distortions_8m_a7e56035a736d269ad670f312496a0846}{Q}}$^\wedge$3}
+
+\mbox{\Hypertarget{comp__distortion2_8m_acb95449a94688af33f6e9bb090cf2936}\label{comp__distortion2_8m_acb95449a94688af33f6e9bb090cf2936}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!R@{R}}
+\index{R@{R}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily R = -\/\mbox{\hyperlink{willson__convert_8m_a629c3d1130a256a6e69b72e4bfdfe87d}{x\+\_\+dist}}(1,\+:)./(2$\ast$\mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}}$\ast$cos(\mbox{\hyperlink{comp__distortion2_8m_a93fc09baaacbe4a2ea2f2441e4f7e549}{ph}}))}
+
+\mbox{\Hypertarget{comp__distortion2_8m_ab477549012f7889a894f39499202efdf}\label{comp__distortion2_8m_ab477549012f7889a894f39499202efdf}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!R2@{R2}}
+\index{R2@{R2}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{R2}{R2}}
+{\footnotesize\ttfamily R2 = R.$^\wedge$2}
+
+\mbox{\Hypertarget{comp__distortion2_8m_a9247ce0e63089d6e90c0305950189273}\label{comp__distortion2_8m_a9247ce0e63089d6e90c0305950189273}} 
+\index{comp\_distortion2.m@{comp\_distortion2.m}!x\_dist@{x\_dist}}
+\index{x\_dist@{x\_dist}!comp\_distortion2.m@{comp\_distortion2.m}}
+\doxysubsubsection{\texorpdfstring{x\_dist}{x\_dist}}
+{\footnotesize\ttfamily compensates the radial \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} of the \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} plane x\+\_\+dist = comp\+\_\+distortion(x\+\_\+dist,\mbox{\hyperlink{comp__distortion2_8m_a37b008517d941961d26e245afe06d235}{k2}})}
+

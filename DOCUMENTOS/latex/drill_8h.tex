@@ -1,0 +1,138 @@
+\hypertarget{drill_8h}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/drill.h File Reference}
+\label{drill_8h}\index{D:/TrackEsferas/NavarQA/drill.h@{D:/TrackEsferas/NavarQA/drill.h}}
+{\ttfamily \#include \char`\"{}python.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}numpy/arrayobject.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv/cv.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}triangulation.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$tchar.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_custom_camera_library_1_1tip}{Custom\+Camera\+Library\+::tip}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_custom_camera_library}{Custom\+Camera\+Library}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{drill_8h_ab6e6ee86736f9ebb56e74ae21bf3ff8a}{N\+P\+Y\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+A\+PI}}~N\+P\+Y\+\_\+1\+\_\+7\+\_\+\+A\+P\+I\+\_\+\+V\+E\+R\+S\+I\+ON
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a8513336b5052e9fb84cbef8658c65b3c}{Custom\+Camera\+Library\+::init\+Python}} (int \mbox{\hyperlink{readras_8m_a509290c21d570ff479c1b9d9b1fe8810}{height}}, int \mbox{\hyperlink{readras_8m_a5558ace5433f9aabbf0a0ec059900d94}{width}})
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_abe12cd8639bbfbffbad70ef47a83509c}{Custom\+Camera\+Library\+::compute\+Tip}} (Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{script__fit__distortion_8m_a1f31770439b0d9f741f3789eaec51d8a}{XX}})
+\item 
+Py\+Array\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_aa9b882afe629942ab77642103b08b9dc}{Custom\+Camera\+Library\+::do\+Drill}} ()
+\item 
+tip \mbox{\hyperlink{namespace_custom_camera_library_aeed79410627ea8e32fcccf2cb3b9ef92}{Custom\+Camera\+Library\+::find\+Tip}} (Mat\+\_\+$<$ double $>$ P\+P\+P1, Mat\+\_\+$<$ double $>$ P\+P\+P2)
+\item 
+Mat\+\_\+$<$ double $>$ \mbox{\hyperlink{namespace_custom_camera_library_aa4f098b0536d515de9fb44e491c8af47}{Custom\+Camera\+Library\+::init\+Drill}} (Mat mat\+Frame, Mat mat\+Frame2, Mat\+\_\+$<$ double $>$ P2D, Mat\+\_\+$<$ double $>$ P2\+D2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{drill_8h_adfd05b4efeb0a2adfc34f4aba3a53583}{g\+\_\+l\+Current\+Drill\+Frame}} = 0
+\item 
+bool \mbox{\hyperlink{drill_8h_ae6d1487f09cbe3400c5d47c2cf9faa71}{g\+\_\+b\+Playing\+Drill}} = false
+\item 
+D\+W\+O\+RD \mbox{\hyperlink{drill_8h_a87f10d1ff07790c15118c15d770595d5}{Playing\+Thread\+\_\+\+Drill\+\_\+\+ID}} = N\+U\+LL
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{drill_8h_a9944c6877db6381e28bf0d78b4f086f5}{Playing\+Thread\+\_\+\+Handle\+Drill}} = N\+U\+LL
+\item 
+const double \mbox{\hyperlink{drill_8h_af37ecce1c528961ebeb2de4df5a908db}{D\+I\+S\+T\+A\+N\+C\+E\+\_\+2\+\_\+\+E\+ND}} = 269
+\item 
+npy\+\_\+intp \mbox{\hyperlink{namespace_custom_camera_library_a54875c6bf6339f002ecaae15320126ad}{Custom\+Camera\+Library\+::data\+\_\+dims}} \mbox{[}2\mbox{]}
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a43deee0e4586de39b7f6423426ff3f2c}{Custom\+Camera\+Library\+::m}}
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ac5942b4921f6918e92cb0eb43b0fce0b}{Custom\+Camera\+Library\+::m2}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a5c0a04b8c59c7ef3676496c87983f52f}{Custom\+Camera\+Library\+::dims}}
+\item 
+npy\+\_\+intp \mbox{\hyperlink{namespace_custom_camera_library_a3f2f0ffd3451d1d928b1fe5546844793}{Custom\+Camera\+Library\+::size}}
+\item 
+double $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ad81045b7ac3a5e3cb23aa1ebe3171c03}{Custom\+Camera\+Library\+::optr}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_aecbcf65102cd4a0c34742245dc1da038}{Custom\+Camera\+Library\+::control}} = 0
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a9f45524a362ec07a12f7f0d94f14b68b}{Custom\+Camera\+Library\+::camera\+Height}}
+\item 
+int \mbox{\hyperlink{namespace_custom_camera_library_a28a0047cabfd3cfcb388233c7f3d3551}{Custom\+Camera\+Library\+::camera\+Width}}
+\item 
+Py\+Array\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ac8002f921b6351e8e5fc7e3bae8653fc}{Custom\+Camera\+Library\+::data}}
+\item 
+Py\+Array\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a91a27fb0cffa767172f8ae329a824da6}{Custom\+Camera\+Library\+::data2}}
+\item 
+Py\+Array\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_abc57c04573f11129bd2734522d3376ce}{Custom\+Camera\+Library\+::drill}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a41a702a89007012c9f7038d47fc26409}{Custom\+Camera\+Library\+::ref\+Zone}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ace2694a53e1a869cf8d71bcdbd9a16d9}{Custom\+Camera\+Library\+::param\+\_\+stereo}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a292252c43516c5048c54237ab1f58be8}{Custom\+Camera\+Library\+::ref\+Zone2}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a7398e0e91b84f627e9811401a6c49c6b}{Custom\+Camera\+Library\+::param\+\_\+broca}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a71ac5b70f2da22a3e35020cba25080ff}{Custom\+Camera\+Library\+::args}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ac5b36d407e35f82b5d8343641df0e704}{Custom\+Camera\+Library\+::my\+Module\+String}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a284a6fb7f92a429a46d724a7755be204}{Custom\+Camera\+Library\+::mdict}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_ad72ed7104fc4bfffcb6328199bfe0043}{Custom\+Camera\+Library\+::python\+Func}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{namespace_custom_camera_library_a8d6822d0e3953b33dd329ac6faeba5d1}{Custom\+Camera\+Library\+::my\+Module}}
+\item 
+D\+W\+O\+RD \mbox{\hyperlink{namespace_custom_camera_library_ada9d3285ca13fb83ba3bfc16196feb78}{Custom\+Camera\+Library\+::d\+Result}}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{namespace_custom_camera_library_ad7b885f8ca93585b97e411c7073fb762}{Custom\+Camera\+Library\+::drill\+Semaphore}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{drill_8h_ab6e6ee86736f9ebb56e74ae21bf3ff8a}\label{drill_8h_ab6e6ee86736f9ebb56e74ae21bf3ff8a}} 
+\index{drill.h@{drill.h}!NPY\_NO\_DEPRECATED\_API@{NPY\_NO\_DEPRECATED\_API}}
+\index{NPY\_NO\_DEPRECATED\_API@{NPY\_NO\_DEPRECATED\_API}!drill.h@{drill.h}}
+\doxysubsubsection{\texorpdfstring{NPY\_NO\_DEPRECATED\_API}{NPY\_NO\_DEPRECATED\_API}}
+{\footnotesize\ttfamily \#define N\+P\+Y\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+A\+PI~N\+P\+Y\+\_\+1\+\_\+7\+\_\+\+A\+P\+I\+\_\+\+V\+E\+R\+S\+I\+ON}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{drill_8h_af37ecce1c528961ebeb2de4df5a908db}\label{drill_8h_af37ecce1c528961ebeb2de4df5a908db}} 
+\index{drill.h@{drill.h}!DISTANCE\_2\_END@{DISTANCE\_2\_END}}
+\index{DISTANCE\_2\_END@{DISTANCE\_2\_END}!drill.h@{drill.h}}
+\doxysubsubsection{\texorpdfstring{DISTANCE\_2\_END}{DISTANCE\_2\_END}}
+{\footnotesize\ttfamily const double D\+I\+S\+T\+A\+N\+C\+E\+\_\+2\+\_\+\+E\+ND = 269}
+
+\mbox{\Hypertarget{drill_8h_ae6d1487f09cbe3400c5d47c2cf9faa71}\label{drill_8h_ae6d1487f09cbe3400c5d47c2cf9faa71}} 
+\index{drill.h@{drill.h}!g\_bPlayingDrill@{g\_bPlayingDrill}}
+\index{g\_bPlayingDrill@{g\_bPlayingDrill}!drill.h@{drill.h}}
+\doxysubsubsection{\texorpdfstring{g\_bPlayingDrill}{g\_bPlayingDrill}}
+{\footnotesize\ttfamily bool g\+\_\+b\+Playing\+Drill = false}
+
+\mbox{\Hypertarget{drill_8h_adfd05b4efeb0a2adfc34f4aba3a53583}\label{drill_8h_adfd05b4efeb0a2adfc34f4aba3a53583}} 
+\index{drill.h@{drill.h}!g\_lCurrentDrillFrame@{g\_lCurrentDrillFrame}}
+\index{g\_lCurrentDrillFrame@{g\_lCurrentDrillFrame}!drill.h@{drill.h}}
+\doxysubsubsection{\texorpdfstring{g\_lCurrentDrillFrame}{g\_lCurrentDrillFrame}}
+{\footnotesize\ttfamily long g\+\_\+l\+Current\+Drill\+Frame = 0}
+
+\mbox{\Hypertarget{drill_8h_a87f10d1ff07790c15118c15d770595d5}\label{drill_8h_a87f10d1ff07790c15118c15d770595d5}} 
+\index{drill.h@{drill.h}!PlayingThread\_Drill\_ID@{PlayingThread\_Drill\_ID}}
+\index{PlayingThread\_Drill\_ID@{PlayingThread\_Drill\_ID}!drill.h@{drill.h}}
+\doxysubsubsection{\texorpdfstring{PlayingThread\_Drill\_ID}{PlayingThread\_Drill\_ID}}
+{\footnotesize\ttfamily D\+W\+O\+RD Playing\+Thread\+\_\+\+Drill\+\_\+\+ID = N\+U\+LL}
+
+\mbox{\Hypertarget{drill_8h_a9944c6877db6381e28bf0d78b4f086f5}\label{drill_8h_a9944c6877db6381e28bf0d78b4f086f5}} 
+\index{drill.h@{drill.h}!PlayingThread\_HandleDrill@{PlayingThread\_HandleDrill}}
+\index{PlayingThread\_HandleDrill@{PlayingThread\_HandleDrill}!drill.h@{drill.h}}
+\doxysubsubsection{\texorpdfstring{PlayingThread\_HandleDrill}{PlayingThread\_HandleDrill}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE Playing\+Thread\+\_\+\+Handle\+Drill = N\+U\+LL}
+

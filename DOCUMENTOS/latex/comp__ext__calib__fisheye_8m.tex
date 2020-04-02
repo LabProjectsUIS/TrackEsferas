@@ -1,0 +1,166 @@
+\hypertarget{comp__ext__calib__fisheye_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/comp\+\_\+ext\+\_\+calib\+\_\+fisheye.m File Reference}
+\label{comp__ext__calib__fisheye_8m}\index{D:/TrackEsferas/NavarQA/calib/comp\_ext\_calib\_fisheye.m@{D:/TrackEsferas/NavarQA/calib/comp\_ext\_calib\_fisheye.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_acb592f9dbf9e0c1c3baf44abdd1658ee}{exist}} (\mbox{[}\textquotesingle{}x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})\mbox{]})
+\item 
+for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_ac102825c4a56ce06d0df59ece7ead8db}{eval}} (\mbox{[}\textquotesingle{}\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}=x\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \textquotesingle{};\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{comp__ext__calib__fisheye_8m_a47aaedc05d1a5c6b3d579ab03191b443}{if}} (\mbox{\hyperlink{recomp__corner__calib__no__read_8m_ae2d0d938b49d71b3f03786c5ba342c96}{isnan}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}(1, 1)))
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_aa18517c7b1adc2d1c4bf6296c9c80863}{active\+\_\+images}} (\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_a938fec2fd6424edc2a4f5bfa6392e11e}{fprintf}} (1, \textquotesingle{}Warning\+:\+Cannot calibrate with \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%d. Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{first.\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) fprintf(1
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Set \mbox{\hyperlink{comp__ext__calib__fisheye_8m_a5f1ec5965590664430d3b39f0fe1c652}{active\+\_\+images}} (\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_a3e07a37936367c1529e866610d6fdc39}{N\+\_\+points\+\_\+views}} (\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})
+\item 
+if \mbox{\hyperlink{comp__ext__calib__fisheye_8m_a7773e779b217211819f4299b6613a65b}{if}} (cond(J\+J\+\_\+kk)$>$ \mbox{\hyperlink{go__calib__optim__iter__weak_8m_ab7a90accce7e42bbeb92e63ac6babe53}{thresh\+\_\+cond}})
+\item 
+\mbox{\hyperlink{comp__ext__calib__fisheye_8m_aeb64bd983df4110310bcd0733487a22d}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Warning\+:\+View \#\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} ill-\/conditioned. This \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{inactive.\textbackslash{}n}}\textquotesingle{}, \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}) \mbox{\hyperlink{go__calib__optim__no__read_8m_af5313f00cb95e69c1a3698d43b22a132}{desactivated\+\_\+images}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_ab2e2b7c58c27cac44995f7d791518ace}{isnan}} (\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}(1, 1))
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_a0a2c9e8e41692e90988641d1b257fcac}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Warning\+:\+Desactivating \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%d. Re-\/activate it later by typing\+:\textbackslash{}nactive\+\_\+images(\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}})=1;\textbackslash{}nand re-\/run \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{optimization\textbackslash{}n}}\textquotesingle{},\mbox{[}\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}} \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}\mbox{]}) \mbox{\hyperlink{saving__stereo__calib_8m_a3253feaa5122d1616aeca05e0a6e39d7}{active\+\_\+images}}(\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}})=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Computes the extrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} for \mbox{\hyperlink{teste___8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the active \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_a0d062f92217e4e073995683900fdadcb}{check\+\_\+active\+\_\+images}}
+\item 
+\mbox{\hyperlink{comp__ext__calib__fisheye_8m_a8fa10812f5d76346b84586af7533a326}{N\+\_\+points\+\_\+views}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})
+\item 
+for \mbox{\hyperlink{comp__ext__calib__fisheye_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = 1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}
+\item 
+and run Extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_a6ae8de2944c8ebcc485ffe8b4f0ff568}{n}}
+\item 
+and run Extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{comp__ext__calib__fisheye_8m_ae7e5373abef0edd1dfd49de541b6f42d}{check\+\_\+cond}} = compute\+\_\+extrinsic\+\_\+refine\+\_\+fisheye(\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}},\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}},\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}},X\+\_\+kk,\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},20,\mbox{\hyperlink{go__calib__optim__iter__weak_8m_ab7a90accce7e42bbeb92e63ac6babe53}{thresh\+\_\+cond}})
+\item 
+\mbox{\hyperlink{comp__ext__calib__fisheye_8m_a0428f240719e50213a56a96b5c94d0cf}{omckk}} = \mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)
+\item 
+\mbox{\hyperlink{comp__ext__calib__fisheye_8m_a4508a179901753e284c1a88754994d88}{Tckk}} = \mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a5f1ec5965590664430d3b39f0fe1c652}\label{comp__ext__calib__fisheye_8m_a5f1ec5965590664430d3b39f0fe1c652}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} Set active\+\_\+images (\begin{DoxyParamCaption}\item[{\%}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_aa18517c7b1adc2d1c4bf6296c9c80863}\label{comp__ext__calib__fisheye_8m_aa18517c7b1adc2d1c4bf6296c9c80863}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!active\_images@{active\_images}}
+\index{active\_images@{active\_images}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{active\_images()}{active\_images()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} active\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_ac102825c4a56ce06d0df59ece7ead8db}\label{comp__ext__calib__fisheye_8m_ac102825c4a56ce06d0df59ece7ead8db}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!eval@{eval}}
+\index{eval@{eval}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_acb592f9dbf9e0c1c3baf44abdd1658ee}\label{comp__ext__calib__fisheye_8m_acb592f9dbf9e0c1c3baf44abdd1658ee}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!exist@{exist}}
+\index{exist@{exist}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}}
+{\footnotesize\ttfamily for \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} exist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a938fec2fd6424edc2a4f5bfa6392e11e}\label{comp__ext__calib__fisheye_8m_a938fec2fd6424edc2a4f5bfa6392e11e}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}Warning\+:\+Cannot calibrate with \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%d. Need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{first.\textbackslash{}n}}\textquotesingle{}                                                                                                                                            }]{,  }\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a0a2c9e8e41692e90988641d1b257fcac}\label{comp__ext__calib__fisheye_8m_a0a2c9e8e41692e90988641d1b257fcac}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Warning\+:\+Desactivating \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \%d. Re-\/activate it later by typing\+:\textbackslash{}}]{nactive\+\_\+images\%d = {\ttfamily 1;\textbackslash{}nand~re-\/run~\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{optimization\textbackslash{}n}}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_aeb64bd983df4110310bcd0733487a22d}\label{comp__ext__calib__fisheye_8m_aeb64bd983df4110310bcd0733487a22d}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Warning\+:\+View \#\%\mbox{\hyperlink{triangulacion__prueba_8m_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} ill-\/conditioned. This \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{rectify__stereo__pair_8m_a05739f4b7ae42ee41b81d332e7d6ff51}{now}} \mbox{\hyperlink{visualize__distortions_8m_a97bdadeafefe463985fa122fc2db7bf4}{set}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{inactive.\textbackslash{}n}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a7773e779b217211819f4299b6613a65b}\label{comp__ext__calib__fisheye_8m_a7773e779b217211819f4299b6613a65b}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!if@{if}}
+\index{if@{if}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily if if (\begin{DoxyParamCaption}\item[{cond(J\+J\+\_\+kk)}]{,  }\item[{\mbox{\hyperlink{go__calib__optim__iter__weak_8m_ab7a90accce7e42bbeb92e63ac6babe53}{thresh\+\_\+cond}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a47aaedc05d1a5c6b3d579ab03191b443}\label{comp__ext__calib__fisheye_8m_a47aaedc05d1a5c6b3d579ab03191b443}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!if@{if}}
+\index{if@{if}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{recomp__corner__calib__no__read_8m_ae2d0d938b49d71b3f03786c5ba342c96}{isnan}}(\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}}(1, 1))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_ab2e2b7c58c27cac44995f7d791518ace}\label{comp__ext__calib__fisheye_8m_ab2e2b7c58c27cac44995f7d791518ace}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!isnan@{isnan}}
+\index{isnan@{isnan}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{isnan()}{isnan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} isnan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}}(1, 1)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a3e07a37936367c1529e866610d6fdc39}\label{comp__ext__calib__fisheye_8m_a3e07a37936367c1529e866610d6fdc39}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!N\_points\_views@{N\_points\_views}}
+\index{N\_points\_views@{N\_points\_views}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{N\_points\_views()}{N\_points\_views()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} N\+\_\+points\+\_\+views (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__convert_8m_af29949bd63fb009eacab5efd11399e40}{kk}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a0d062f92217e4e073995683900fdadcb}\label{comp__ext__calib__fisheye_8m_a0d062f92217e4e073995683900fdadcb}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!check\_active\_images@{check\_active\_images}}
+\index{check\_active\_images@{check\_active\_images}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{check\_active\_images}{check\_active\_images}}
+{\footnotesize\ttfamily check\+\_\+active\+\_\+images}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_ae7e5373abef0edd1dfd49de541b6f42d}\label{comp__ext__calib__fisheye_8m_ae7e5373abef0edd1dfd49de541b6f42d}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!check\_cond@{check\_cond}}
+\index{check\_cond@{check\_cond}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{check\_cond}{check\_cond}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} check\+\_\+cond = compute\+\_\+extrinsic\+\_\+refine\+\_\+fisheye(\mbox{\hyperlink{scanner__calibration__script_8m_a2de5fcb88516c541766dcbebbda30ea5}{omckk}},\mbox{\hyperlink{scanner__calibration__script_8m_a4508a179901753e284c1a88754994d88}{Tckk}},\mbox{\hyperlink{normalize2_8m_a34f1fefff9df868e55f88899af08daf9}{x\+\_\+kk}},X\+\_\+kk,\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}},\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}},\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}},\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}},20,\mbox{\hyperlink{go__calib__optim__iter__weak_8m_ab7a90accce7e42bbeb92e63ac6babe53}{thresh\+\_\+cond}})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}\label{comp__ext__calib__fisheye_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!end@{end}}
+\index{end@{end}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_af29949bd63fb009eacab5efd11399e40}\label{comp__ext__calib__fisheye_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!kk@{kk}}
+\index{kk@{kk}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = 1\+:\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a6ae8de2944c8ebcc485ffe8b4f0ff568}\label{comp__ext__calib__fisheye_8m_a6ae8de2944c8ebcc485ffe8b4f0ff568}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!n@{n}}
+\index{n@{n}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily and run Extract grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} n}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a8fa10812f5d76346b84586af7533a326}\label{comp__ext__calib__fisheye_8m_a8fa10812f5d76346b84586af7533a326}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!N\_points\_views@{N\_points\_views}}
+\index{N\_points\_views@{N\_points\_views}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{N\_points\_views}{N\_points\_views}}
+{\footnotesize\ttfamily N\+\_\+points\+\_\+views = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(1,\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a0428f240719e50213a56a96b5c94d0cf}\label{comp__ext__calib__fisheye_8m_a0428f240719e50213a56a96b5c94d0cf}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!omckk@{omckk}}
+\index{omckk@{omckk}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{omckk}{omckk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} omckk = \mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)}
+
+\mbox{\Hypertarget{comp__ext__calib__fisheye_8m_a4508a179901753e284c1a88754994d88}\label{comp__ext__calib__fisheye_8m_a4508a179901753e284c1a88754994d88}} 
+\index{comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}!Tckk@{Tckk}}
+\index{Tckk@{Tckk}!comp\_ext\_calib\_fisheye.m@{comp\_ext\_calib\_fisheye.m}}
+\doxysubsubsection{\texorpdfstring{Tckk}{Tckk}}
+{\footnotesize\ttfamily Tckk = \mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(3,1)}
+

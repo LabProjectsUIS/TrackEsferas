@@ -1,0 +1,126 @@
+\hypertarget{undistort__sequence_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/undistort\+\_\+sequence.m File Reference}
+\label{undistort__sequence_8m}\index{D:/TrackEsferas/NavarQA/calib/undistort\_sequence.m@{D:/TrackEsferas/NavarQA/calib/undistort\_sequence.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{undistort__sequence_8m_aeb33011b971ba0129fbd3fa617b07da7}{$\sim$exist}} (\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}\textquotesingle{})$\vert$$\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}}(\textquotesingle{}\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}\textquotesingle{})$\vert$$\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}}(\textquotesingle{}\mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}}\textquotesingle{})$\vert$$\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}}(\textquotesingle{}\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{undistort__sequence_8m_ab721d37490f4e332c2598e52f366bd42}{fprintf}} (1, \textquotesingle{}No intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} available. Maybe, need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{Calib\+\_\+\+Results.\+mat\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}} (2) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(2)
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_a59770ebaa708ad88a37d790b0d601ae4}{disp}} (\textquotesingle{}Program \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} undistorts \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} whole sequence of \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}(works with bmp only so far... needs some debugging)\textquotesingle{})
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_a693243f20041774e59d7382f441f40bc}{disp}} (\textquotesingle{}The intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be known(previously computed)\textquotesingle{})
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_af6329a82edd6835d81a64bdf5c3415a1}{disp}} (\textquotesingle{}After undistortion, the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} \mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}, \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}, \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} remain unchanged. The \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aece2bd00e2471c464f4b3ce1ff431b59}{coefficient}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a0959be2ec86a98bb7fc5bf9b4d07186e}{zero}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_a5b73fe9c8c69a608735845c241cc4938}{fprintf}} (1,\textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE \mbox{\hyperlink{undistort__sequence_8m_ab54351c0ebd7e63eee204284cab68ff2}{N\+A\+ME}}
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_a30ec4b5ab03426226e08bd6309a70bb8}{KK}} = \mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}$\ast$\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}}
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_a52962b03a8f0317b09ddcb5ea4f3ddc3}{seq\+\_\+name}} = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Basename of sequence \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} (without number nor \mbox{\hyperlink{writeras_8m_af57fdbdb7d09e0557b2c4533b3353975}{suffix}})\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{undistort__sequence_8m_ac6eadd668b40d7eef1d6b7a2b8563be5}{format\+\_\+image\+\_\+seq}} = \textquotesingle{}0\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{undistort__sequence_8m_af6329a82edd6835d81a64bdf5c3415a1}\label{undistort__sequence_8m_af6329a82edd6835d81a64bdf5c3415a1}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!disp@{disp}}
+\index{disp@{disp}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}After}]{undistortion,  }\item[{the intrinsic \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}}}]{fc,  }\item[{\mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}}]{,  }\item[{\mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}} remain unchanged. The \mbox{\hyperlink{project__points__weak_8m_a0cb9bee4ae828e4cdb5283743b645a51}{distortion}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aece2bd00e2471c464f4b3ce1ff431b59}{coefficient}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} \mbox{\hyperlink{willson__read_8m_ab915a0fd381ef259a7b1a1fc1db4bf44}{kc}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} \mbox{\hyperlink{init__intrinsic__param__fisheye_8m_a0959be2ec86a98bb7fc5bf9b4d07186e}{zero}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__sequence_8m_a59770ebaa708ad88a37d790b0d601ae4}\label{undistort__sequence_8m_a59770ebaa708ad88a37d790b0d601ae4}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!disp@{disp}}
+\index{disp@{disp}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Program \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} undistorts \mbox{\hyperlink{project__points__weak_8m_aed4504f87c8bc9931dde0c986b52a334}{a}} whole sequence of \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}(works with bmp only so far... needs some debugging)\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__sequence_8m_a693243f20041774e59d7382f441f40bc}\label{undistort__sequence_8m_a693243f20041774e59d7382f441f40bc}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!disp@{disp}}
+\index{disp@{disp}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} are assumed \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be known(previously computed)\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__sequence_8m_a97b90595eac8d87ee5eb4e52aa624f1d}\label{undistort__sequence_8m_a97b90595eac8d87ee5eb4e52aa624f1d}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!fc@{fc}}
+\index{fc@{fc}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{fc()}{fc()}}
+{\footnotesize\ttfamily fc (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__sequence_8m_ab721d37490f4e332c2598e52f366bd42}\label{undistort__sequence_8m_ab721d37490f4e332c2598e52f366bd42}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}No intrinsic \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{go__calib__optim__iter__weak_8m_aa5e85c366e9bb5363777ee17108f4d12}{parameters}} available.}]{Maybe,  }\item[{need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{Calib\+\_\+\+Results.\+mat\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__sequence_8m_a5b73fe9c8c69a608735845c241cc4938}\label{undistort__sequence_8m_a5b73fe9c8c69a608735845c241cc4938}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{undistort__sequence_8m_aeb33011b971ba0129fbd3fa617b07da7}\label{undistort__sequence_8m_aeb33011b971ba0129fbd3fa617b07da7}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{undistort__sequence_8m_a4ca269cf93df1b512b52174c1a256fe5}\label{undistort__sequence_8m_a4ca269cf93df1b512b52174c1a256fe5}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!dir@{dir}}
+\index{dir@{dir}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily dir}
+
+\mbox{\Hypertarget{undistort__sequence_8m_afb358f48b1646c750fb9da6c6585be2b}\label{undistort__sequence_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!end@{end}}
+\index{end@{end}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{undistort__sequence_8m_ac6eadd668b40d7eef1d6b7a2b8563be5}\label{undistort__sequence_8m_ac6eadd668b40d7eef1d6b7a2b8563be5}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!format\_image\_seq@{format\_image\_seq}}
+\index{format\_image\_seq@{format\_image\_seq}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{format\_image\_seq}{format\_image\_seq}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ima__read__calib__no__read_8m_afbc447f3197e9cdcaceaceab8ed359e2}{while}} format\+\_\+image\+\_\+seq = \textquotesingle{}0\textquotesingle{}}
+
+\mbox{\Hypertarget{undistort__sequence_8m_a30ec4b5ab03426226e08bd6309a70bb8}\label{undistort__sequence_8m_a30ec4b5ab03426226e08bd6309a70bb8}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!KK@{KK}}
+\index{KK@{KK}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{KK}{KK}}
+{\footnotesize\ttfamily KK = \mbox{[}\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_af614d7b6eaa707b1d4bdf9cd0fa0f068}{alpha\+\_\+c}}$\ast$\mbox{\hyperlink{willson__read_8m_a97b90595eac8d87ee5eb4e52aa624f1d}{fc}}(1) \mbox{\hyperlink{willson__read_8m_aebe11165fd135ae2432aa96cf7529ec8}{cc}}(1)}
+
+\mbox{\Hypertarget{undistort__sequence_8m_ab54351c0ebd7e63eee204284cab68ff2}\label{undistort__sequence_8m_ab54351c0ebd7e63eee204284cab68ff2}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!NAME@{NAME}}
+\index{NAME@{NAME}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{NAME}{NAME}}
+{\footnotesize\ttfamily \mbox{\hyperlink{normalize__pixel__fisheye_8m_a5e22d2c84e5fb6f507aeb98a2a0343c8}{I\+N\+P\+UT}} T\+HE I\+M\+A\+GE F\+I\+LE N\+A\+ME}
+
+\mbox{\Hypertarget{undistort__sequence_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{undistort__sequence_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!return@{return}}
+\index{return@{return}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{undistort__sequence_8m_a52962b03a8f0317b09ddcb5ea4f3ddc3}\label{undistort__sequence_8m_a52962b03a8f0317b09ddcb5ea4f3ddc3}} 
+\index{undistort\_sequence.m@{undistort\_sequence.m}!seq\_name@{seq\_name}}
+\index{seq\_name@{seq\_name}!undistort\_sequence.m@{undistort\_sequence.m}}
+\doxysubsubsection{\texorpdfstring{seq\_name}{seq\_name}}
+{\footnotesize\ttfamily seq\+\_\+name = \mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}}(\textquotesingle{}Basename of sequence \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}} (without number nor \mbox{\hyperlink{writeras_8m_af57fdbdb7d09e0557b2c4533b3353975}{suffix}})\+: \textquotesingle{},\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})}
+

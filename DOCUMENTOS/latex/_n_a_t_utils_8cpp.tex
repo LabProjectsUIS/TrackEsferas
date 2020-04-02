@@ -1,0 +1,96 @@
+\hypertarget{_n_a_t_utils_8cpp}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/\+N\+A\+T\+Utils.cpp File Reference}
+\label{_n_a_t_utils_8cpp}\index{D:/TrackEsferas/NavarQA/NATUtils.cpp@{D:/TrackEsferas/NavarQA/NATUtils.cpp}}
+{\ttfamily \#include $<$winsock2.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$Ws2tcpip.\+h$>$}\newline
+{\ttfamily \#include $<$tchar.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}N\+A\+T\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$iphlpapi.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8cpp_a8b0d099b80f0aa5bd8194f892227ad75}{M\+A\+L\+L\+OC}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}})~Heap\+Alloc(Get\+Process\+Heap(), 0, (\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}))
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8cpp_a25875003b43b81a4302256caa4a13599}{F\+R\+EE}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}})~Heap\+Free(Get\+Process\+Heap(), 0, (\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}))
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8cpp_a23fb6f1b31b554063d0425a8227383c6}{W\+O\+R\+K\+I\+N\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}~15000
+\item 
+\#define \mbox{\hyperlink{_n_a_t_utils_8cpp_afd63d23830ad86d01b6fff2e6c615f7e}{M\+A\+X\+\_\+\+T\+R\+I\+ES}}~3
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} \mbox{\hyperlink{_n_a_t_utils_8cpp_a88a3948a50da248e784b69c6721c0be2}{Eul\+\_\+}} (float ai, float aj, float ah, int order)
+\item 
+\mbox{\hyperlink{struct_quat}{Quat}} \mbox{\hyperlink{_n_a_t_utils_8cpp_aa3447403e13f8ff499cf18b18748855d}{Eul\+\_\+\+To\+Quat}} (\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} ea)
+\item 
+void \mbox{\hyperlink{_n_a_t_utils_8cpp_a5a538b02ec5133fec8f916d711a60b68}{Eul\+\_\+\+To\+H\+Matrix}} (\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} ea, \mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}} \mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}})
+\item 
+\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} \mbox{\hyperlink{_n_a_t_utils_8cpp_a377a11a20ff480206077422a98664dfb}{Eul\+\_\+\+From\+H\+Matrix}} (\mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}} \mbox{\hyperlink{check__convergence_8m_aa0a6938a8a6003ae15cc212a938c947c}{M}}, int order)
+\item 
+\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} \mbox{\hyperlink{_n_a_t_utils_8cpp_a2043274ebc2f950cba37c6f6ec219ca7}{Eul\+\_\+\+From\+Quat}} (\mbox{\hyperlink{struct_quat}{Quat}} \mbox{\hyperlink{recomp__corner__calib__saddle__points_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}, int order)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_a25875003b43b81a4302256caa4a13599}\label{_n_a_t_utils_8cpp_a25875003b43b81a4302256caa4a13599}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!FREE@{FREE}}
+\index{FREE@{FREE}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{FREE}{FREE}}
+{\footnotesize\ttfamily \#define F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} }\end{DoxyParamCaption})~Heap\+Free(Get\+Process\+Heap(), 0, (\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}))}
+
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_a8b0d099b80f0aa5bd8194f892227ad75}\label{_n_a_t_utils_8cpp_a8b0d099b80f0aa5bd8194f892227ad75}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!MALLOC@{MALLOC}}
+\index{MALLOC@{MALLOC}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{MALLOC}{MALLOC}}
+{\footnotesize\ttfamily \#define M\+A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} }\end{DoxyParamCaption})~Heap\+Alloc(Get\+Process\+Heap(), 0, (\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}))}
+
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_afd63d23830ad86d01b6fff2e6c615f7e}\label{_n_a_t_utils_8cpp_afd63d23830ad86d01b6fff2e6c615f7e}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!MAX\_TRIES@{MAX\_TRIES}}
+\index{MAX\_TRIES@{MAX\_TRIES}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_TRIES}{MAX\_TRIES}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+R\+I\+ES~3}
+
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_a23fb6f1b31b554063d0425a8227383c6}\label{_n_a_t_utils_8cpp_a23fb6f1b31b554063d0425a8227383c6}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!WORKING\_BUFFER\_SIZE@{WORKING\_BUFFER\_SIZE}}
+\index{WORKING\_BUFFER\_SIZE@{WORKING\_BUFFER\_SIZE}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{WORKING\_BUFFER\_SIZE}{WORKING\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define W\+O\+R\+K\+I\+N\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~15000}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_a88a3948a50da248e784b69c6721c0be2}\label{_n_a_t_utils_8cpp_a88a3948a50da248e784b69c6721c0be2}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!Eul\_@{Eul\_}}
+\index{Eul\_@{Eul\_}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{Eul\_()}{Eul\_()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} Eul\+\_\+ (\begin{DoxyParamCaption}\item[{float}]{ai,  }\item[{float}]{aj,  }\item[{float}]{ah,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_a377a11a20ff480206077422a98664dfb}\label{_n_a_t_utils_8cpp_a377a11a20ff480206077422a98664dfb}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!Eul\_FromHMatrix@{Eul\_FromHMatrix}}
+\index{Eul\_FromHMatrix@{Eul\_FromHMatrix}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{Eul\_FromHMatrix()}{Eul\_FromHMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} Eul\+\_\+\+From\+H\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}}}]{M,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_a2043274ebc2f950cba37c6f6ec219ca7}\label{_n_a_t_utils_8cpp_a2043274ebc2f950cba37c6f6ec219ca7}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!Eul\_FromQuat@{Eul\_FromQuat}}
+\index{Eul\_FromQuat@{Eul\_FromQuat}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{Eul\_FromQuat()}{Eul\_FromQuat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}} Eul\+\_\+\+From\+Quat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_quat}{Quat}}}]{q,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_a5a538b02ec5133fec8f916d711a60b68}\label{_n_a_t_utils_8cpp_a5a538b02ec5133fec8f916d711a60b68}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!Eul\_ToHMatrix@{Eul\_ToHMatrix}}
+\index{Eul\_ToHMatrix@{Eul\_ToHMatrix}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{Eul\_ToHMatrix()}{Eul\_ToHMatrix()}}
+{\footnotesize\ttfamily void Eul\+\_\+\+To\+H\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}}}]{ea,  }\item[{\mbox{\hyperlink{_n_a_t_utils_8h_a41b36dd8e8660c9616d9e19e9b828b38}{H\+Matrix}}}]{M }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_n_a_t_utils_8cpp_aa3447403e13f8ff499cf18b18748855d}\label{_n_a_t_utils_8cpp_aa3447403e13f8ff499cf18b18748855d}} 
+\index{NATUtils.cpp@{NATUtils.cpp}!Eul\_ToQuat@{Eul\_ToQuat}}
+\index{Eul\_ToQuat@{Eul\_ToQuat}!NATUtils.cpp@{NATUtils.cpp}}
+\doxysubsubsection{\texorpdfstring{Eul\_ToQuat()}{Eul\_ToQuat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_quat}{Quat}} Eul\+\_\+\+To\+Quat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_n_a_t_utils_8h_ab0bffd2b16506f27797d8c9fe8963a37}{Euler\+Angles}}}]{ea }\end{DoxyParamCaption})}
+

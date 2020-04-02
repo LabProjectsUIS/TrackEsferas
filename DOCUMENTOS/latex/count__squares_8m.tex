@@ -1,0 +1,278 @@
+\hypertarget{count__squares_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/count\+\_\+squares.m File Reference}
+\label{count__squares_8m}\index{D:/TrackEsferas/NavarQA/calib/count\_squares.m@{D:/TrackEsferas/NavarQA/calib/count\_squares.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{count__squares_8m_a8711906604ebe71b338f1b6b6a362ef5}{if}} ((\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}$<$=0)$\vert$$\vert$(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} $>$=\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}})$\vert$$\vert$(\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}$<$=0)$\vert$$\vert$(\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}}+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} $>$=\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}})$\vert$$\vert$...(\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}$<$=0)$\vert$$\vert$(\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}}+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} $>$=\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}})$\vert$$\vert$(\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}$<$=0)$\vert$$\vert$(\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}}+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} $>$=\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}})) \mbox{\hyperlink{count__squares__fisheye__distorted_8m_a109c29054b7bfcaf38fad4876d2f2e77}{ns}}
+\item 
+\mbox{\hyperlink{count__squares_8m_acfc1138ae11524c4d66b8bf081dd7075}{if}} ((\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}} -\/ \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}})$^\wedge$2+(\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}}-\/\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}})$^\wedge$2)$<$ \mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}
+\item 
+id \mbox{\hyperlink{count__squares_8m_ad6116ef72633887fc18621118242501a}{x1}} ()
+\item 
+id \mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}} ()
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}{abs}} (\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}}) $>$ abs(\mbox{\hyperlink{willson__read_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}})
+\item 
+\mbox{\hyperlink{count__squares_8m_af88c1ec78e2a3c427213e5cf159fb94b}{ima\+\_\+patch}} (\+:)
+\item 
+\mbox{\hyperlink{count__squares_8m_a41e19d5a971866c55637ab61e656d48d}{zeros}} (1, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})
+\item 
+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}, \mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}} \mbox{\hyperlink{count__squares_8m_a9cd411f505ec9e9a432db6a0623ecbac}{ones}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{write__image_8m_a2420833d971716e9bab41cc9fb3abba1}{function}} \mbox{\hyperlink{count__squares_8m_ac8983c1c6b57c55e6d4d5ade335eb879}{ns}} = count\+\_\+squares(\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}},\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}},\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}},\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}},\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}},\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}})
+\item 
+\mbox{\hyperlink{count__squares_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{count__squares_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{count__squares_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}} = \mbox{[}\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}} -\/ \mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}}
+\item 
+\mbox{\hyperlink{count__squares_8m_a5e6449cb2b41f8979e300d8b9be95809}{l1}} = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}} + \mbox{[}0
+\item 
+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}
+\item 
+\mbox{\hyperlink{count__squares_8m_acdb4eb6c176ec707dba81563fa194a8c}{l2}} = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}} -\/ \mbox{[}0
+\item 
+\mbox{\hyperlink{count__squares_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}} = \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}}-\/\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}
+\item 
+\mbox{\hyperlink{count__squares_8m_a22b1a06ae09d552a5ca668a07885ebf1}{dy}} = \mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}} -\/ \mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}} \mbox{\hyperlink{count__squares_8m_a1c941241b4eb1f75f1243c2e6d5d66d8}{x1}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}} \mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}} = x1\+:x2
+\item 
+\mbox{\hyperlink{count__squares_8m_a285dad54ef357091de4e1179dcc6e870}{ys}} = -\/(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(3) + \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(1)$\ast$\mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}})/\mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(2)
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}} \mbox{\hyperlink{count__squares_8m_ac4fce463760294d37c6d08123d7a77a9}{y1}}
+\item 
+\mbox{\hyperlink{count__squares_8m_abe50207e56666a60c81e2a58f522eea3}{Np}} = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}})
+\item 
+\mbox{\hyperlink{count__squares_8m_a3ae78da5e250d210516fa0bff456f399}{xs\+\_\+mat}} = \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2$\ast$\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} + 1,1)$\ast$\mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}}
+\item 
+\mbox{\hyperlink{count__squares_8m_a50e15748fc3329447c62b0fba67bf55b}{ys\+\_\+mat}} = \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2$\ast$\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} + 1,1)$\ast$\mbox{\hyperlink{count__squares_8m_a285dad54ef357091de4e1179dcc6e870}{ys}}
+\item 
+\mbox{\hyperlink{count__squares_8m_acafa38a42a458ac1bb23bd967e9af8e1}{win\+\_\+mat}} = (-\/win\+:win)\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})
+\item 
+\mbox{\hyperlink{count__squares_8m_a2bac66af2183cedd75934b3e46eeebf3}{xs\+\_\+mat2}} = round(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a3ae78da5e250d210516fa0bff456f399}{xs\+\_\+mat}} -\/ \mbox{\hyperlink{count__squares__fisheye__distorted_8m_acafa38a42a458ac1bb23bd967e9af8e1}{win\+\_\+mat}} $\ast$ \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(1))
+\item 
+\mbox{\hyperlink{count__squares_8m_ab4a48e6408abcaa5c442b7d5030c65bc}{ys\+\_\+mat2}} = round(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a50e15748fc3329447c62b0fba67bf55b}{ys\+\_\+mat}} -\/ \mbox{\hyperlink{count__squares__fisheye__distorted_8m_acafa38a42a458ac1bb23bd967e9af8e1}{win\+\_\+mat}} $\ast$ \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(2))
+\item 
+\mbox{\hyperlink{count__squares_8m_a7f8b842a13eea58d6528217574fbef64}{ind\+\_\+mat}} = (\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a2bac66af2183cedd75934b3e46eeebf3}{xs\+\_\+mat2}} -\/ 1) $\ast$ \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}} + \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ab4a48e6408abcaa5c442b7d5030c65bc}{ys\+\_\+mat2}}
+\item 
+\mbox{\hyperlink{count__squares_8m_a5ed1f242f55fbf6e9ad36691353f8426}{ima\+\_\+patch}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} + 1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})
+\item 
+\mbox{\hyperlink{count__squares_8m_ae79359510fce2a583cbad71888055421}{ima2}} = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_af88c1ec78e2a3c427213e5cf159fb94b}{ima\+\_\+patch}}(\+:,\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}+1\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}})
+\item 
+\mbox{\hyperlink{count__squares_8m_aea77015fbe9fc59e0feb43fa344790c9}{filtk}} = \mbox{[}\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}},\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})
+\item 
+\mbox{\hyperlink{count__squares_8m_a571e1d1a1977ed6ec15a40f44ea05c3b}{out\+\_\+f}} = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(filtk.$\ast$\mbox{\hyperlink{count__squares__fisheye__distorted_8m_af88c1ec78e2a3c427213e5cf159fb94b}{ima\+\_\+patch}})
+\item 
+\mbox{\hyperlink{count__squares_8m_accb2e405ba1adccd18868adc0ff5f12e}{out\+\_\+f\+\_\+f}} = conv2(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a571e1d1a1977ed6ec15a40f44ea05c3b}{out\+\_\+f}},\mbox{[}1/4 1/2 1/4\mbox{]},\textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_a74de3909f790e0187e6baa753abebdf4}{same}}\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}\label{count__squares_8m_ae1706a9f90c377dc4cd30360d9a1af0e}} 
+\index{count\_squares.m@{count\_squares.m}!abs@{abs}}
+\index{abs@{abs}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{abs()}{abs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} abs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{willson__read_8m_aacddc911cdfe5cd5ec97b084754542d4}{dx}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{count__squares_8m_acfc1138ae11524c4d66b8bf081dd7075}\label{count__squares_8m_acfc1138ae11524c4d66b8bf081dd7075}} 
+\index{count\_squares.m@{count\_squares.m}!if@{if}}
+\index{if@{if}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}} -\/ \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}})$^\wedge$2+(\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}}-\/\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}})$^\wedge$}]{2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{count__squares_8m_a8711906604ebe71b338f1b6b6a362ef5}\label{count__squares_8m_a8711906604ebe71b338f1b6b6a362ef5}} 
+\index{count\_squares.m@{count\_squares.m}!if@{if}}
+\index{if@{if}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}$<$=0)$\vert$$\vert$(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} $>$=\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}})$\vert$$\vert$(\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}$<$=0)$\vert$$\vert$(\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}}+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} $>$=\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}})$\vert$$\vert$...(\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}$<$=0)$\vert$$\vert$(\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}}+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} $>$=\mbox{\hyperlink{willson__read_8m_a2f6e152702d97ea3f1b96a6e2e2b9687}{nx}})$\vert$$\vert$(\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}$<$=0)$\vert$$\vert$(\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}}+\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} $>$=\mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{count__squares_8m_af88c1ec78e2a3c427213e5cf159fb94b}\label{count__squares_8m_af88c1ec78e2a3c427213e5cf159fb94b}} 
+\index{count\_squares.m@{count\_squares.m}!ima\_patch@{ima\_patch}}
+\index{ima\_patch@{ima\_patch}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ima\_patch()}{ima\_patch()}}
+{\footnotesize\ttfamily ima\+\_\+patch (\begin{DoxyParamCaption}\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{count__squares_8m_a9cd411f505ec9e9a432db6a0623ecbac}\label{count__squares_8m_a9cd411f505ec9e9a432db6a0623ecbac}} 
+\index{count\_squares.m@{count\_squares.m}!ones@{ones}}
+\index{ones@{ones}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}},\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}} ones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{count__squares_8m_ad6116ef72633887fc18621118242501a}\label{count__squares_8m_ad6116ef72633887fc18621118242501a}} 
+\index{count\_squares.m@{count\_squares.m}!x1@{x1}}
+\index{x1@{x1}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{x1()}{x1()}}
+{\footnotesize\ttfamily id x1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{count__squares_8m_a04384cfff221de93caca6772fa2fd096}\label{count__squares_8m_a04384cfff221de93caca6772fa2fd096}} 
+\index{count\_squares.m@{count\_squares.m}!y1@{y1}}
+\index{y1@{y1}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{y1()}{y1()}}
+{\footnotesize\ttfamily id y1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{count__squares_8m_a41e19d5a971866c55637ab61e656d48d}\label{count__squares_8m_a41e19d5a971866c55637ab61e656d48d}} 
+\index{count\_squares.m@{count\_squares.m}!zeros@{zeros}}
+\index{zeros@{zeros}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}}
+{\footnotesize\ttfamily zeros (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{count__squares_8m_aacddc911cdfe5cd5ec97b084754542d4}\label{count__squares_8m_aacddc911cdfe5cd5ec97b084754542d4}} 
+\index{count\_squares.m@{count\_squares.m}!dx@{dx}}
+\index{dx@{dx}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily dx = \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}}-\/\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}}}
+
+\mbox{\Hypertarget{count__squares_8m_a22b1a06ae09d552a5ca668a07885ebf1}\label{count__squares_8m_a22b1a06ae09d552a5ca668a07885ebf1}} 
+\index{count\_squares.m@{count\_squares.m}!dy@{dy}}
+\index{dy@{dy}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily dy = \mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}} -\/ \mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}}}
+
+\mbox{\Hypertarget{count__squares_8m_afb358f48b1646c750fb9da6c6585be2b}\label{count__squares_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{count\_squares.m@{count\_squares.m}!end@{end}}
+\index{end@{end}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{count__squares_8m_aea77015fbe9fc59e0feb43fa344790c9}\label{count__squares_8m_aea77015fbe9fc59e0feb43fa344790c9}} 
+\index{count\_squares.m@{count\_squares.m}!filtk@{filtk}}
+\index{filtk@{filtk}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{filtk}{filtk}}
+{\footnotesize\ttfamily filtk = \mbox{[}\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}},\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})}
+
+\mbox{\Hypertarget{count__squares_8m_ae79359510fce2a583cbad71888055421}\label{count__squares_8m_ae79359510fce2a583cbad71888055421}} 
+\index{count\_squares.m@{count\_squares.m}!ima2@{ima2}}
+\index{ima2@{ima2}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ima2}{ima2}}
+{\footnotesize\ttfamily ima2 = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_af88c1ec78e2a3c427213e5cf159fb94b}{ima\+\_\+patch}}(\+:,\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}}+1\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}-\/\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}})}
+
+\mbox{\Hypertarget{count__squares_8m_a5ed1f242f55fbf6e9ad36691353f8426}\label{count__squares_8m_a5ed1f242f55fbf6e9ad36691353f8426}} 
+\index{count\_squares.m@{count\_squares.m}!ima\_patch@{ima\_patch}}
+\index{ima\_patch@{ima\_patch}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ima\_patch}{ima\_patch}}
+{\footnotesize\ttfamily ima\+\_\+patch = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} + 1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})}
+
+\mbox{\Hypertarget{count__squares_8m_a7f8b842a13eea58d6528217574fbef64}\label{count__squares_8m_a7f8b842a13eea58d6528217574fbef64}} 
+\index{count\_squares.m@{count\_squares.m}!ind\_mat@{ind\_mat}}
+\index{ind\_mat@{ind\_mat}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ind\_mat}{ind\_mat}}
+{\footnotesize\ttfamily ind\+\_\+mat = (\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a2bac66af2183cedd75934b3e46eeebf3}{xs\+\_\+mat2}} -\/ 1) $\ast$ \mbox{\hyperlink{willson__read_8m_a2f43d084523823503800b3a4a5d309ca}{ny}} + \mbox{\hyperlink{count__squares__fisheye__distorted_8m_ab4a48e6408abcaa5c442b7d5030c65bc}{ys\+\_\+mat2}}}
+
+\mbox{\Hypertarget{count__squares_8m_a5e6449cb2b41f8979e300d8b9be95809}\label{count__squares_8m_a5e6449cb2b41f8979e300d8b9be95809}} 
+\index{count\_squares.m@{count\_squares.m}!l1@{l1}}
+\index{l1@{l1}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{l1}{l1}}
+{\footnotesize\ttfamily l1 = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}} + \mbox{[}0}
+
+\mbox{\Hypertarget{count__squares_8m_acdb4eb6c176ec707dba81563fa194a8c}\label{count__squares_8m_acdb4eb6c176ec707dba81563fa194a8c}} 
+\index{count\_squares.m@{count\_squares.m}!l2@{l2}}
+\index{l2@{l2}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{l2}{l2}}
+{\footnotesize\ttfamily l2 = \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}} -\/ \mbox{[}0}
+
+\mbox{\Hypertarget{count__squares_8m_aca36b09d6e71a60cfa3837d7e24c07ca}\label{count__squares_8m_aca36b09d6e71a60cfa3837d7e24c07ca}} 
+\index{count\_squares.m@{count\_squares.m}!lambda@{lambda}}
+\index{lambda@{lambda}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{lambda}{lambda}}
+{\footnotesize\ttfamily lambda = \mbox{[}\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}} -\/ \mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}}}
+
+\mbox{\Hypertarget{count__squares_8m_abe50207e56666a60c81e2a58f522eea3}\label{count__squares_8m_abe50207e56666a60c81e2a58f522eea3}} 
+\index{count\_squares.m@{count\_squares.m}!Np@{Np}}
+\index{Np@{Np}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{Np}{Np}}
+{\footnotesize\ttfamily Np = \mbox{\hyperlink{show__calib__results__fisheye_8m_aee7ec6c433a7d399d936b77c8e91922d}{length}}(\mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}})}
+
+\mbox{\Hypertarget{count__squares_8m_ac8983c1c6b57c55e6d4d5ade335eb879}\label{count__squares_8m_ac8983c1c6b57c55e6d4d5ade335eb879}} 
+\index{count\_squares.m@{count\_squares.m}!ns@{ns}}
+\index{ns@{ns}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ns}{ns}}
+{\footnotesize\ttfamily Check \mbox{\hyperlink{readras_8m_a7d252fd4b4ae9c8b8af5e91ef645fc1f}{that}} the curve \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a00d9614e711bf169f15ae8e3e35d30df}{is}} within the \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} ns = count\+\_\+squares(\mbox{\hyperlink{mosaic__no__read_8m_a2519f364506853a3dad3e65e1df67c13}{I}},\mbox{\hyperlink{count__squares__fisheye__distorted_8m_ad6116ef72633887fc18621118242501a}{x1}},\mbox{\hyperlink{count__squares_8m_a04384cfff221de93caca6772fa2fd096}{y1}},\mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}},\mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}},\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}})}
+
+\mbox{\Hypertarget{count__squares_8m_a571e1d1a1977ed6ec15a40f44ea05c3b}\label{count__squares_8m_a571e1d1a1977ed6ec15a40f44ea05c3b}} 
+\index{count\_squares.m@{count\_squares.m}!out\_f@{out\_f}}
+\index{out\_f@{out\_f}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{out\_f}{out\_f}}
+{\footnotesize\ttfamily out\+\_\+f = \mbox{\hyperlink{go__calib__optim__iter__weak_8m_a84fc371dc8106a6d6ade7b5e736f09b7}{sum}}(filtk.$\ast$\mbox{\hyperlink{count__squares__fisheye__distorted_8m_af88c1ec78e2a3c427213e5cf159fb94b}{ima\+\_\+patch}})}
+
+\mbox{\Hypertarget{count__squares_8m_accb2e405ba1adccd18868adc0ff5f12e}\label{count__squares_8m_accb2e405ba1adccd18868adc0ff5f12e}} 
+\index{count\_squares.m@{count\_squares.m}!out\_f\_f@{out\_f\_f}}
+\index{out\_f\_f@{out\_f\_f}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{out\_f\_f}{out\_f\_f}}
+{\footnotesize\ttfamily out\+\_\+f\+\_\+f = conv2(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a571e1d1a1977ed6ec15a40f44ea05c3b}{out\+\_\+f}},\mbox{[}1/4 1/2 1/4\mbox{]},\textquotesingle{}\mbox{\hyperlink{rectify__stereo__pair_8m_a74de3909f790e0187e6baa753abebdf4}{same}}\textquotesingle{})}
+
+\mbox{\Hypertarget{count__squares_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{count__squares_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{count\_squares.m@{count\_squares.m}!return@{return}}
+\index{return@{return}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}\label{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}} 
+\index{count\_squares.m@{count\_squares.m}!win@{win}}
+\index{win@{win}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{win}{win}}
+{\footnotesize\ttfamily win}
+
+\mbox{\Hypertarget{count__squares_8m_acafa38a42a458ac1bb23bd967e9af8e1}\label{count__squares_8m_acafa38a42a458ac1bb23bd967e9af8e1}} 
+\index{count\_squares.m@{count\_squares.m}!win\_mat@{win\_mat}}
+\index{win\_mat@{win\_mat}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{win\_mat}{win\_mat}}
+{\footnotesize\ttfamily win\+\_\+mat = (-\/win\+:win)\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{manual__corner__extraction__no__read_8m_abe50207e56666a60c81e2a58f522eea3}{Np}})}
+
+\mbox{\Hypertarget{count__squares_8m_a1c941241b4eb1f75f1243c2e6d5d66d8}\label{count__squares_8m_a1c941241b4eb1f75f1243c2e6d5d66d8}} 
+\index{count\_squares.m@{count\_squares.m}!x1@{x1}}
+\index{x1@{x1}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_un_warp_plane_8m_a41ceb989059f7f0fd28f90cc8e5f4082}{x2}} x1}
+
+\mbox{\Hypertarget{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}\label{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}} 
+\index{count\_squares.m@{count\_squares.m}!xs@{xs}}
+\index{xs@{xs}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{xs}{xs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} xs = x1\+:x2}
+
+\mbox{\Hypertarget{count__squares_8m_a3ae78da5e250d210516fa0bff456f399}\label{count__squares_8m_a3ae78da5e250d210516fa0bff456f399}} 
+\index{count\_squares.m@{count\_squares.m}!xs\_mat@{xs\_mat}}
+\index{xs\_mat@{xs\_mat}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{xs\_mat}{xs\_mat}}
+{\footnotesize\ttfamily xs\+\_\+mat = \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2$\ast$\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} + 1,1)$\ast$\mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}}}
+
+\mbox{\Hypertarget{count__squares_8m_a2bac66af2183cedd75934b3e46eeebf3}\label{count__squares_8m_a2bac66af2183cedd75934b3e46eeebf3}} 
+\index{count\_squares.m@{count\_squares.m}!xs\_mat2@{xs\_mat2}}
+\index{xs\_mat2@{xs\_mat2}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{xs\_mat2}{xs\_mat2}}
+{\footnotesize\ttfamily xs\+\_\+mat2 = round(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a3ae78da5e250d210516fa0bff456f399}{xs\+\_\+mat}} -\/ \mbox{\hyperlink{count__squares__fisheye__distorted_8m_acafa38a42a458ac1bb23bd967e9af8e1}{win\+\_\+mat}} $\ast$ \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(1))}
+
+\mbox{\Hypertarget{count__squares_8m_ac4fce463760294d37c6d08123d7a77a9}\label{count__squares_8m_ac4fce463760294d37c6d08123d7a77a9}} 
+\index{count\_squares.m@{count\_squares.m}!y1@{y1}}
+\index{y1@{y1}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{y1}{y1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{_distor2_calib_8m_a41b94b12b7cb45b3ddee299d4e7b79e8}{y2}} y1}
+
+\mbox{\Hypertarget{count__squares_8m_a285dad54ef357091de4e1179dcc6e870}\label{count__squares_8m_a285dad54ef357091de4e1179dcc6e870}} 
+\index{count\_squares.m@{count\_squares.m}!ys@{ys}}
+\index{ys@{ys}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ys}{ys}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} ys = -\/(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(3) + \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(1)$\ast$\mbox{\hyperlink{count__squares_8m_a8ab9a005cc169b082affb2f94fdce5fd}{xs}})/\mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(2)}
+
+\mbox{\Hypertarget{count__squares_8m_a50e15748fc3329447c62b0fba67bf55b}\label{count__squares_8m_a50e15748fc3329447c62b0fba67bf55b}} 
+\index{count\_squares.m@{count\_squares.m}!ys\_mat@{ys\_mat}}
+\index{ys\_mat@{ys\_mat}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ys\_mat}{ys\_mat}}
+{\footnotesize\ttfamily ys\+\_\+mat = \mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2$\ast$\mbox{\hyperlink{count__squares_8m_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}} + 1,1)$\ast$\mbox{\hyperlink{count__squares_8m_a285dad54ef357091de4e1179dcc6e870}{ys}}}
+
+\mbox{\Hypertarget{count__squares_8m_ab4a48e6408abcaa5c442b7d5030c65bc}\label{count__squares_8m_ab4a48e6408abcaa5c442b7d5030c65bc}} 
+\index{count\_squares.m@{count\_squares.m}!ys\_mat2@{ys\_mat2}}
+\index{ys\_mat2@{ys\_mat2}!count\_squares.m@{count\_squares.m}}
+\doxysubsubsection{\texorpdfstring{ys\_mat2}{ys\_mat2}}
+{\footnotesize\ttfamily ys\+\_\+mat2 = round(\mbox{\hyperlink{count__squares__fisheye__distorted_8m_a50e15748fc3329447c62b0fba67bf55b}{ys\+\_\+mat}} -\/ \mbox{\hyperlink{count__squares__fisheye__distorted_8m_acafa38a42a458ac1bb23bd967e9af8e1}{win\+\_\+mat}} $\ast$ \mbox{\hyperlink{count__squares__fisheye__distorted_8m_aca36b09d6e71a60cfa3837d7e24c07ca}{lambda}}(2))}
+

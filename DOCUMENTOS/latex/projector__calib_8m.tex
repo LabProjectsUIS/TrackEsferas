@@ -1,0 +1,326 @@
+\hypertarget{projector__calib_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/projector\+\_\+calib.m File Reference}
+\label{projector__calib_8m}\index{D:/TrackEsferas/NavarQA/calib/projector\_calib.m@{D:/TrackEsferas/NavarQA/calib/projector\_calib.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} \mbox{\hyperlink{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}{results}} (for setting active \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}, \mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}},...) \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{cam__proj__calib__optim_8m_a644faffbabf04b8e75137026799fa7e9}{camera\+\_\+results}}
+\item 
+\mbox{\hyperlink{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}{input}} (\textquotesingle{}Basename \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}(without number nor \mbox{\hyperlink{writeras_8m_af57fdbdb7d09e0557b2c4533b3353975}{suffix}})\+:\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{projector__calib_8m_aa45685171a22ccbe6c0df96318c0a68d}{fprintf}} (1,\textquotesingle{}\textbackslash{}n\+Extraction of the grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{image\textbackslash{}n}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}{recompute\+\_\+corner}} \& \mbox{\hyperlink{projector__calib_8m_a2f7d480cdb7b6038775a9109825aabfc}{$\sim$exist}} (\mbox{[}\textquotesingle{}xproj\+\_\+\textquotesingle{} num2str(\mbox{\hyperlink{projector__calib_8m_ad4210b2a83210b6fc016d3e3be81869a}{ind\+\_\+proc}}(1))\mbox{]})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}{recompute\+\_\+corner}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a03de33a84f87964eee3a8495da22b209}{exist}} (\textquotesingle{}\mbox{\hyperlink{projector__calib_8m_afbbf4214d0d4ebbc08135a203661dbd0}{projector\+\_\+data}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{projector__calib_8m_ad3a1012ed98e70e44e1add3d4cb60360}{disp}} (\textquotesingle{}W\+A\+R\+N\+I\+N\+G\+:\+Cannot recompute corners. \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}} need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be extracted \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} least once\textquotesingle{})
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a76f25b98609c3b12c5c3062c79c98a2c}{disp}} (\textquotesingle{}Manual \mbox{\hyperlink{error__depth__list_8m_ad5c4a59ae665afd234a9b99e05b922f2}{extraction}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}{mode}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} \mbox{\hyperlink{projector__calib_8m_ae7af984979ea6842e87238342420c58c}{disp}} (\textquotesingle{}Automatic recomputation of the \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{projector__calib_8m_a66ef00acf686fb8596728e382977b8e5}{eval}} (\mbox{\hyperlink{saving__stereo__calib_8m_a268d2ebd8212f29d540791b1143be926}{string\+\_\+save}})
+\item 
+\mbox{\hyperlink{projector__calib_8m_a34967e95d94bf6c934da70bdfc26f216}{figure}} (4) \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}}(I\+\_\+29)
+\item 
+\mbox{\hyperlink{projector__calib_8m_a0dd196b89abbfff3b247898a4a436149}{colormap}} (gray(256))
+\item 
+\mbox{\hyperlink{projector__calib_8m_a403c4825e84483e64b9e0a9d44fd660b}{plot}} (x\+\_\+29(1,\+:)+1, x\+\_\+29(2,\+:)+1, \textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}, \textquotesingle{}markersize\textquotesingle{}, 13, \textquotesingle{}linewidth\textquotesingle{}, 3) hold \mbox{\hyperlink{visualize__distortions_8m_a835accca41274fb237599d9b3c117fcf}{off}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_un_warp_plane_8m_a3df44c8cb66806f4c9b6508728467aa6}{Projection}} \mbox{\hyperlink{projector__calib_8m_a1de8ad16dc1f09285945745c369affd5}{settings}}
+\item 
+\mbox{\hyperlink{projector__calib_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}{winty}} = 12
+\item 
+\mbox{\hyperlink{projector__calib_8m_a84e4236f07668a770c27567f1f9615ff}{nx}} = 1024
+\item 
+\mbox{\hyperlink{projector__calib_8m_a289ca425eb368f1d582b6be2be0d3dfc}{ny}} = 768
+\item 
+\mbox{\hyperlink{projector__calib_8m_a921b80a0245a4f241fc0dda5e364b471}{dX}} = 32
+\item 
+\mbox{\hyperlink{projector__calib_8m_a90011e7d69aec5376e286b72ae9e0730}{dY}} = 32
+\item 
+\mbox{\hyperlink{projector__calib_8m_a412ad178595b29c1bc0bdd1d9da1321c}{d\+Xoff}} =511.\+5
+\item 
+\mbox{\hyperlink{projector__calib_8m_ac4f81ea43b51c15c798cd90c4fa0a0ac}{d\+Yoff}} =383.\+5
+\item 
+\mbox{\hyperlink{projector__calib_8m_a0412069e82c53f223d6c18647d3e3682}{proj\+\_\+name}} = \textquotesingle{}proj\textquotesingle{}
+\item 
+\mbox{\hyperlink{projector__calib_8m_a65967629aad8355454ef51f9f76fbf44}{camera\+\_\+name}} = \textquotesingle{}cam\textquotesingle{}
+\item 
+\mbox{\hyperlink{projector__calib_8m_ad47bc13cb798bfb1d9b0884860f1f446}{xr\+\_\+list}} = \mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})
+\item 
+\mbox{\hyperlink{projector__calib_8m_af5c8a342a6f2169bef3405d6d8931339}{yr\+\_\+list}} = \mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})
+\item 
+\mbox{\hyperlink{projector__calib_8m_ad4210b2a83210b6fc016d3e3be81869a}{ind\+\_\+proc}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+\mbox{\hyperlink{projector__calib_8m_a73585d7121de037cf2e2ca12b27eb83e}{D\+E\+B\+UG}} = 1
+\item 
+\mbox{\hyperlink{projector__calib_8m_a833e888fbbbe7dc2bbbeef762e8c0c44}{ind\+\_\+ima\+\_\+proj}} = \mbox{[}18\mbox{]}
+\item 
+for \mbox{\hyperlink{projector__calib_8m_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = \mbox{\hyperlink{projector__calib_8m_ad4210b2a83210b6fc016d3e3be81869a}{ind\+\_\+proc}}
+\item 
+for \mbox{\hyperlink{projector__calib_8m_a877b9ded79605737d87cedc3caef2e81}{projector\+\_\+marker}}
+\item 
+\mbox{\hyperlink{projector__calib_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}{recompute\+\_\+corner}} = 0
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}{recompute\+\_\+corner}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{projector__calib_8m_afbbf4214d0d4ebbc08135a203661dbd0}{projector\+\_\+data}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a90590a1bf93c76314b17dd4b73f40dbb}{$\sim$recompute\+\_\+corner}}
+\item 
+extract the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{projector__calib_8m_a1b5ea256d0189c126d933866add71095}{corners}}
+\item 
+\mbox{\hyperlink{projector__calib_8m_abf372f6ef1f9dbe9726e22c5c55125f3}{string\+\_\+save}} = \textquotesingle{}save \mbox{\hyperlink{projector__calib_8m_afbbf4214d0d4ebbc08135a203661dbd0}{projector\+\_\+data}} \textquotesingle{}
+\item 
+for \mbox{\hyperlink{projector__calib_8m_af29949bd63fb009eacab5efd11399e40}{kk}} = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}
+\item 
+\mbox{\hyperlink{projector__calib_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+hold \mbox{\hyperlink{projector__calib_8m_a58ab1fd68e97078232808206b850161b}{on}}
+\item 
+\mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} \mbox{\hyperlink{projector__calib_8m_a05a609b7bf2b070572b97ac606897e53}{off}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{projector__calib_8m_a0dd196b89abbfff3b247898a4a436149}\label{projector__calib_8m_a0dd196b89abbfff3b247898a4a436149}} 
+\index{projector\_calib.m@{projector\_calib.m}!colormap@{colormap}}
+\index{colormap@{colormap}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{colormap()}{colormap()}}
+{\footnotesize\ttfamily colormap (\begin{DoxyParamCaption}\item[{gray(256)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_ae7af984979ea6842e87238342420c58c}\label{projector__calib_8m_ae7af984979ea6842e87238342420c58c}} 
+\index{projector\_calib.m@{projector\_calib.m}!disp@{disp}}
+\index{disp@{disp}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Automatic recomputation of the \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_a76f25b98609c3b12c5c3062c79c98a2c}\label{projector__calib_8m_a76f25b98609c3b12c5c3062c79c98a2c}} 
+\index{projector\_calib.m@{projector\_calib.m}!disp@{disp}}
+\index{disp@{disp}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}Manual \mbox{\hyperlink{error__depth__list_8m_ad5c4a59ae665afd234a9b99e05b922f2}{extraction}} \mbox{\hyperlink{manual__corner__extraction__no__read_8m_aafff892589a15dcfec2a5196ffee3344}{mode}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_ad3a1012ed98e70e44e1add3d4cb60360}\label{projector__calib_8m_ad3a1012ed98e70e44e1add3d4cb60360}} 
+\index{projector\_calib.m@{projector\_calib.m}!disp@{disp}}
+\index{disp@{disp}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}W\+A\+R\+N\+I\+N\+G\+:\+Cannot recompute corners. \mbox{\hyperlink{_evaluar_ajedrez_8m_af5baa506e65b4caa6be6d1c6661dfe63}{Data}} need \mbox{\hyperlink{inverse__motion_8m_adaa3d343ac20bed84559c0771f592ed4}{to}} be extracted \mbox{\hyperlink{error__depth__list_8m_a55c22a6a304cef3bba5ac7dc105146d0}{at}} least once\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_a66ef00acf686fb8596728e382977b8e5}\label{projector__calib_8m_a66ef00acf686fb8596728e382977b8e5}} 
+\index{projector\_calib.m@{projector\_calib.m}!eval@{eval}}
+\index{eval@{eval}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily eval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{saving__stereo__calib_8m_a268d2ebd8212f29d540791b1143be926}{string\+\_\+save}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_a03de33a84f87964eee3a8495da22b209}\label{projector__calib_8m_a03de33a84f87964eee3a8495da22b209}} 
+\index{projector\_calib.m@{projector\_calib.m}!exist@{exist}}
+\index{exist@{exist}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}{recompute\+\_\+corner}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} exist (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{projector__calib_8m_afbbf4214d0d4ebbc08135a203661dbd0}{projector\+\_\+data}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_a34967e95d94bf6c934da70bdfc26f216}\label{projector__calib_8m_a34967e95d94bf6c934da70bdfc26f216}} 
+\index{projector\_calib.m@{projector\_calib.m}!figure@{figure}}
+\index{figure@{figure}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
+{\footnotesize\ttfamily figure (\begin{DoxyParamCaption}\item[{4}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_aa45685171a22ccbe6c0df96318c0a68d}\label{projector__calib_8m_aa45685171a22ccbe6c0df96318c0a68d}} 
+\index{projector\_calib.m@{projector\_calib.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}}
+{\footnotesize\ttfamily fprintf (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\textquotesingle{}\textbackslash{}n\+Extraction of the grid \mbox{\hyperlink{cam__proj__calib__optim_8m_a112543e603178db74fa2fe5617083709}{corners}} \mbox{\hyperlink{visualize__distortions_8m_a58ab1fd68e97078232808206b850161b}{on}} the \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{image\textbackslash{}n}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}\label{projector__calib_8m_af7b674504b39897f15642ec82ff6a7e5}} 
+\index{projector\_calib.m@{projector\_calib.m}!input@{input}}
+\index{input@{input}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily input (\begin{DoxyParamCaption}\item[{\textquotesingle{}Basename \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} \mbox{\hyperlink{_compute3_d_8m_a5586216fdd4d32645efb11797b093a95}{calibration}} \mbox{\hyperlink{scanner__calibration__script_8m_a2e1bfb2a467a60776b845acf9ddd055f}{images}}(without number nor \mbox{\hyperlink{writeras_8m_af57fdbdb7d09e0557b2c4533b3353975}{suffix}})\+:\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{loadinr_8m_abaa56b4ff1463b5bacfd25ceaaba70e1}{s}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_a403c4825e84483e64b9e0a9d44fd660b}\label{projector__calib_8m_a403c4825e84483e64b9e0a9d44fd660b}} 
+\index{projector\_calib.m@{projector\_calib.m}!plot@{plot}}
+\index{plot@{plot}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{plot()}{plot()}}
+{\footnotesize\ttfamily plot (\begin{DoxyParamCaption}\item[{x\+\_\+29(1,\+:)+}]{1,  }\item[{x\+\_\+29(2,\+:)+}]{1,  }\item[{\textquotesingle{}\mbox{\hyperlink{is3_d_8m_a514f1b439f404f86f77090fa9edc96ce}{r}}+\textquotesingle{}}]{,  }\item[{\textquotesingle{}markersize\textquotesingle{}}]{,  }\item[{13}]{,  }\item[{\textquotesingle{}linewidth\textquotesingle{}}]{,  }\item[{3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}\label{projector__calib_8m_a5a90d0f6eb01c8f2c593370d96f2f87a}} 
+\index{projector\_calib.m@{projector\_calib.m}!results@{results}}
+\index{results@{results}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{results()}{results()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} \mbox{\hyperlink{fov_8m_a2a0b598a5d1ce9bce325e3cdf45f3a7d}{camera}} results (\begin{DoxyParamCaption}\item[{for setting active}]{images,  }\item[{\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}}}]{,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{projector__calib_8m_a2f7d480cdb7b6038775a9109825aabfc}\label{projector__calib_8m_a2f7d480cdb7b6038775a9109825aabfc}} 
+\index{projector\_calib.m@{projector\_calib.m}!````~exist@{$\sim$exist}}
+\index{````~exist@{$\sim$exist}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$exist()}{~exist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}{recompute\+\_\+corner}}\& $\sim$\mbox{\hyperlink{willson__read_8m_a8755a93b86de80d2107d7d9184d348e9}{exist}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{projector__calib_8m_a65967629aad8355454ef51f9f76fbf44}\label{projector__calib_8m_a65967629aad8355454ef51f9f76fbf44}} 
+\index{projector\_calib.m@{projector\_calib.m}!camera\_name@{camera\_name}}
+\index{camera\_name@{camera\_name}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{camera\_name}{camera\_name}}
+{\footnotesize\ttfamily camera\+\_\+name = \textquotesingle{}cam\textquotesingle{}}
+
+\mbox{\Hypertarget{projector__calib_8m_a1b5ea256d0189c126d933866add71095}\label{projector__calib_8m_a1b5ea256d0189c126d933866add71095}} 
+\index{projector\_calib.m@{projector\_calib.m}!corners@{corners}}
+\index{corners@{corners}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{corners}{corners}}
+{\footnotesize\ttfamily extract the \mbox{\hyperlink{scanner__calibration__script_8m_ae19cfd83f86a401190ddd64110f804db}{projector}} corners}
+
+\mbox{\Hypertarget{projector__calib_8m_a73585d7121de037cf2e2ca12b27eb83e}\label{projector__calib_8m_a73585d7121de037cf2e2ca12b27eb83e}} 
+\index{projector\_calib.m@{projector\_calib.m}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily D\+E\+B\+UG = 1}
+
+\mbox{\Hypertarget{projector__calib_8m_a921b80a0245a4f241fc0dda5e364b471}\label{projector__calib_8m_a921b80a0245a4f241fc0dda5e364b471}} 
+\index{projector\_calib.m@{projector\_calib.m}!dX@{dX}}
+\index{dX@{dX}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{dX}{dX}}
+{\footnotesize\ttfamily dX = 32}
+
+\mbox{\Hypertarget{projector__calib_8m_a412ad178595b29c1bc0bdd1d9da1321c}\label{projector__calib_8m_a412ad178595b29c1bc0bdd1d9da1321c}} 
+\index{projector\_calib.m@{projector\_calib.m}!dXoff@{dXoff}}
+\index{dXoff@{dXoff}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{dXoff}{dXoff}}
+{\footnotesize\ttfamily d\+Xoff =511.\+5}
+
+\mbox{\Hypertarget{projector__calib_8m_a90011e7d69aec5376e286b72ae9e0730}\label{projector__calib_8m_a90011e7d69aec5376e286b72ae9e0730}} 
+\index{projector\_calib.m@{projector\_calib.m}!dY@{dY}}
+\index{dY@{dY}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{dY}{dY}}
+{\footnotesize\ttfamily dY = 32}
+
+\mbox{\Hypertarget{projector__calib_8m_ac4f81ea43b51c15c798cd90c4fa0a0ac}\label{projector__calib_8m_ac4f81ea43b51c15c798cd90c4fa0a0ac}} 
+\index{projector\_calib.m@{projector\_calib.m}!dYoff@{dYoff}}
+\index{dYoff@{dYoff}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{dYoff}{dYoff}}
+{\footnotesize\ttfamily d\+Yoff =383.\+5}
+
+\mbox{\Hypertarget{projector__calib_8m_afb358f48b1646c750fb9da6c6585be2b}\label{projector__calib_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{projector\_calib.m@{projector\_calib.m}!end@{end}}
+\index{end@{end}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{projector__calib_8m_a7e98b8a17c0aad30ba64d47b74e2a6c1}\label{projector__calib_8m_a7e98b8a17c0aad30ba64d47b74e2a6c1}} 
+\index{projector\_calib.m@{projector\_calib.m}!i@{i}}
+\index{i@{i}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily i = \mbox{\hyperlink{projector__calib_8m_ad4210b2a83210b6fc016d3e3be81869a}{ind\+\_\+proc}}}
+
+\mbox{\Hypertarget{projector__calib_8m_a833e888fbbbe7dc2bbbeef762e8c0c44}\label{projector__calib_8m_a833e888fbbbe7dc2bbbeef762e8c0c44}} 
+\index{projector\_calib.m@{projector\_calib.m}!ind\_ima\_proj@{ind\_ima\_proj}}
+\index{ind\_ima\_proj@{ind\_ima\_proj}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{ind\_ima\_proj}{ind\_ima\_proj}}
+{\footnotesize\ttfamily ind\+\_\+ima\+\_\+proj = \mbox{[}18\mbox{]}}
+
+\mbox{\Hypertarget{projector__calib_8m_ad4210b2a83210b6fc016d3e3be81869a}\label{projector__calib_8m_ad4210b2a83210b6fc016d3e3be81869a}} 
+\index{projector\_calib.m@{projector\_calib.m}!ind\_proc@{ind\_proc}}
+\index{ind\_proc@{ind\_proc}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{ind\_proc}{ind\_proc}}
+{\footnotesize\ttfamily ind\+\_\+proc = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+
+\mbox{\Hypertarget{projector__calib_8m_af29949bd63fb009eacab5efd11399e40}\label{projector__calib_8m_af29949bd63fb009eacab5efd11399e40}} 
+\index{projector\_calib.m@{projector\_calib.m}!kk@{kk}}
+\index{kk@{kk}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{kk}{kk}}
+{\footnotesize\ttfamily for kk = \mbox{\hyperlink{ext__calib__stereo_8m_aa0d59e9a11aa79e15026fec05d972fc7}{ind\+\_\+active}}}
+
+\mbox{\Hypertarget{projector__calib_8m_a84e4236f07668a770c27567f1f9615ff}\label{projector__calib_8m_a84e4236f07668a770c27567f1f9615ff}} 
+\index{projector\_calib.m@{projector\_calib.m}!nx@{nx}}
+\index{nx@{nx}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{nx}{nx}}
+{\footnotesize\ttfamily nx = 1024}
+
+\mbox{\Hypertarget{projector__calib_8m_a289ca425eb368f1d582b6be2be0d3dfc}\label{projector__calib_8m_a289ca425eb368f1d582b6be2be0d3dfc}} 
+\index{projector\_calib.m@{projector\_calib.m}!ny@{ny}}
+\index{ny@{ny}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{ny}{ny}}
+{\footnotesize\ttfamily ny = 768}
+
+\mbox{\Hypertarget{projector__calib_8m_a05a609b7bf2b070572b97ac606897e53}\label{projector__calib_8m_a05a609b7bf2b070572b97ac606897e53}} 
+\index{projector\_calib.m@{projector\_calib.m}!off@{off}}
+\index{off@{off}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{off}{off}}
+{\footnotesize\ttfamily \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} \mbox{\hyperlink{script__fit__distortion_8m_ac8a8411243371a1be29a938cf1c083fb}{image}} \mbox{\hyperlink{visualize__distortions_8m_a9b3385b871daad352da9d05a18ebfcce}{axis}} off}
+
+\mbox{\Hypertarget{projector__calib_8m_a58ab1fd68e97078232808206b850161b}\label{projector__calib_8m_a58ab1fd68e97078232808206b850161b}} 
+\index{projector\_calib.m@{projector\_calib.m}!on@{on}}
+\index{on@{on}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily hold on}
+
+\mbox{\Hypertarget{projector__calib_8m_a0412069e82c53f223d6c18647d3e3682}\label{projector__calib_8m_a0412069e82c53f223d6c18647d3e3682}} 
+\index{projector\_calib.m@{projector\_calib.m}!proj\_name@{proj\_name}}
+\index{proj\_name@{proj\_name}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{proj\_name}{proj\_name}}
+{\footnotesize\ttfamily proj\+\_\+name = \textquotesingle{}proj\textquotesingle{}}
+
+\mbox{\Hypertarget{projector__calib_8m_afbbf4214d0d4ebbc08135a203661dbd0}\label{projector__calib_8m_afbbf4214d0d4ebbc08135a203661dbd0}} 
+\index{projector\_calib.m@{projector\_calib.m}!projector\_data@{projector\_data}}
+\index{projector\_data@{projector\_data}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{projector\_data}{projector\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}{recompute\+\_\+corner}} \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{willson__read_8m_a80ad2f89cb9a9f459b31b81cc163c169}{load}} projector\+\_\+data}
+
+\mbox{\Hypertarget{projector__calib_8m_a877b9ded79605737d87cedc3caef2e81}\label{projector__calib_8m_a877b9ded79605737d87cedc3caef2e81}} 
+\index{projector\_calib.m@{projector\_calib.m}!projector\_marker@{projector\_marker}}
+\index{projector\_marker@{projector\_marker}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{projector\_marker}{projector\_marker}}
+{\footnotesize\ttfamily for projector\+\_\+marker}
+
+\mbox{\Hypertarget{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}\label{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}} 
+\index{projector\_calib.m@{projector\_calib.m}!recompute\_corner@{recompute\_corner}}
+\index{recompute\_corner@{recompute\_corner}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{recompute\_corner}{recompute\_corner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} recompute\+\_\+corner = 0}
+
+\mbox{\Hypertarget{projector__calib_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{projector__calib_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{projector\_calib.m@{projector\_calib.m}!return@{return}}
+\index{return@{return}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+\mbox{\Hypertarget{projector__calib_8m_a1de8ad16dc1f09285945745c369affd5}\label{projector__calib_8m_a1de8ad16dc1f09285945745c369affd5}} 
+\index{projector\_calib.m@{projector\_calib.m}!settings@{settings}}
+\index{settings@{settings}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_un_warp_plane_8m_a3df44c8cb66806f4c9b6508728467aa6}{Projection}} settings}
+
+\mbox{\Hypertarget{projector__calib_8m_abf372f6ef1f9dbe9726e22c5c55125f3}\label{projector__calib_8m_abf372f6ef1f9dbe9726e22c5c55125f3}} 
+\index{projector\_calib.m@{projector\_calib.m}!string\_save@{string\_save}}
+\index{string\_save@{string\_save}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{string\_save}{string\_save}}
+{\footnotesize\ttfamily for string\+\_\+save = \textquotesingle{}save \mbox{\hyperlink{projector__calib_8m_afbbf4214d0d4ebbc08135a203661dbd0}{projector\+\_\+data}} \textquotesingle{}}
+
+\mbox{\Hypertarget{projector__calib_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}\label{projector__calib_8m_a4b7bcd3a9dc801cf789379ec4d33ebc1}} 
+\index{projector\_calib.m@{projector\_calib.m}!winty@{winty}}
+\index{winty@{winty}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{winty}{winty}}
+{\footnotesize\ttfamily winty = 12}
+
+\mbox{\Hypertarget{projector__calib_8m_ad47bc13cb798bfb1d9b0884860f1f446}\label{projector__calib_8m_ad47bc13cb798bfb1d9b0884860f1f446}} 
+\index{projector\_calib.m@{projector\_calib.m}!xr\_list@{xr\_list}}
+\index{xr\_list@{xr\_list}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{xr\_list}{xr\_list}}
+{\footnotesize\ttfamily xr\+\_\+list = \mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})}
+
+\mbox{\Hypertarget{projector__calib_8m_af5c8a342a6f2169bef3405d6d8931339}\label{projector__calib_8m_af5c8a342a6f2169bef3405d6d8931339}} 
+\index{projector\_calib.m@{projector\_calib.m}!yr\_list@{yr\_list}}
+\index{yr\_list@{yr\_list}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{yr\_list}{yr\_list}}
+{\footnotesize\ttfamily yr\+\_\+list = \mbox{\hyperlink{willson__read_8m_a77607c656f2325b76569b254455bc039}{NaN}}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,\mbox{\hyperlink{willson__read_8m_a4bd2a7187893657a867b1e3b03a6ca7f}{n\+\_\+ima}})}
+
+\mbox{\Hypertarget{projector__calib_8m_a90590a1bf93c76314b17dd4b73f40dbb}\label{projector__calib_8m_a90590a1bf93c76314b17dd4b73f40dbb}} 
+\index{projector\_calib.m@{projector\_calib.m}!````~recompute\_corner@{$\sim$recompute\_corner}}
+\index{````~recompute\_corner@{$\sim$recompute\_corner}!projector\_calib.m@{projector\_calib.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$recompute\_corner}{~recompute\_corner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} $\sim$\mbox{\hyperlink{projector__calib_8m_a0eb55d7424b5a661f2f29f98327eb54a}{recompute\+\_\+corner}}}
+

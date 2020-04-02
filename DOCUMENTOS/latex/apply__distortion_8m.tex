@@ -1,0 +1,223 @@
+\hypertarget{apply__distortion_8m}{}\doxysection{D\+:/\+Track\+Esferas/\+Navar\+Q\+A/calib/apply\+\_\+distortion.m File Reference}
+\label{apply__distortion_8m}\index{D:/TrackEsferas/NavarQA/calib/apply\_distortion.m@{D:/TrackEsferas/NavarQA/calib/apply\_distortion.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a18de5899324c3fdcc0f34aba27d5024f}{dxd1dk}} (1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)
+\item 
+\mbox{\hyperlink{apply__distortion_8m_ab83eb08aea1b3e14c754473def453e52}{dxd1dk}} (2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}},\+:)
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}} (3) $\ast$\mbox{\hyperlink{project__points2_8m_a509a674bd7926c5406b815a055d17834}{a3}}+k(4) $\ast$\mbox{\hyperlink{init__intrinsic__param_8m_a8dbb40f7f7bb5a67b98c95563ac0f086}{a1}}\mbox{]}
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a3fd7948ad5a5b55b2f6013e16be0d54d}{ddelta\+\_\+xdk}} (1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}, 3)
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a1bded9597dfcf07f5c62a53311b66d9a}{ddelta\+\_\+xdk}} (1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}, 4)
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a8882aa719863d4975b4eb117d9c31cc2}{ddelta\+\_\+xdk}} (2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}, 3)
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a75d4a1be0615cef04b5289ca27310c74}{ddelta\+\_\+xdk}} (2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}, 4)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a72b6d371bb0e1b4ab02584044e87cf28}{function}} \mbox{[}\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}, \mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}\mbox{]}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{apply__distortion_8m_a426dc7045c41e32f7848f89ed72be8b4}{length\+\_\+k$<$ 5, k=\mbox{[}k ;zeros(5-\/length\+\_\+k, 1)\mbox{]};end;\mbox{[}m, n\mbox{]}=size(x);\% Add distortion\+:r2=x(1,\+:).$^\wedge$2+x(2,\+:).$^\wedge$2;r4=r2.$^\wedge$2;r6=r2.$^\wedge$3;\% Radial distortion\+:cdist=1+k(1) $\ast$r2+k(2) $\ast$r4+k(5) $\ast$r6;if nargout $>$}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{apply__distortion_8m_a0daf11681dae78cb9c44c93169115c12}{dcdistdk}} = \mbox{[} \mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}}\textquotesingle{} \mbox{\hyperlink{apply__distortion2_8m_af7abae0a18c54f8b3ca80e0759e893f5}{r4}}\textquotesingle{} \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},2) \mbox{\hyperlink{apply__distortion2_8m_a6253185320d63763a06f49a9330d50e0}{r6}}\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{apply__distortion_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{apply__distortion_8m_acb7eb27b3b51bad0c1ad73154292be54}{xd1}} = \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} .$\ast$ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)$\ast$\mbox{\hyperlink{project__points__fisheye_8m_a45322ce0b64916fa4b3537463cd563cc}{cdist}})
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a7eb610a82f30382183a093498dbc682f}{coeff}} = (\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{[}\mbox{\hyperlink{project__points__fisheye_8m_a45322ce0b64916fa4b3537463cd563cc}{cdist}};\mbox{\hyperlink{project__points__fisheye_8m_a45322ce0b64916fa4b3537463cd563cc}{cdist}}\mbox{]},2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},1)$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3))
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{apply__distortion_8m_acda6303f8e0e875891d99e821a16e598}{nargout}} == 2 $\vert$ nargout == 0
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{apply__distortion_8m_aa679b1b769d25405c4adb4612360ae49}{dxd1dk}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},5)
+\item 
+tangential \mbox{\hyperlink{apply__distortion_8m_a489630d61c55f2188f687d347393e5d0}{distortion}}
+\item 
+tangential \mbox{\hyperlink{apply__distortion_8m_a2f61d5e0e97d1e5917839088cb83bb97}{a2}} = \mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}} + 2$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$^\wedge$2
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a509a674bd7926c5406b815a055d17834}{a3}} = \mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}} + 2$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:).$^\wedge$2
+\item 
+\mbox{\hyperlink{apply__distortion_8m_af9bf3838192b963bbc36e77f87442af1}{delta\+\_\+x}} = \mbox{[}\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{init__intrinsic__param_8m_a8dbb40f7f7bb5a67b98c95563ac0f086}{a1}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{project__points2_8m_a2f61d5e0e97d1e5917839088cb83bb97}{a2}}
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a74b87337454200d4d33f80c4663dc5e5}{aa}} = (2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)+6$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:))\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a65ba841e01d6db7733e90a5b7f9e6f80}{bb}} = (2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)+2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:))\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a41fcba09f2bdcdf315ba4119dc7978dd}{cc}} = (6$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)+2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:))\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{apply__distortion_8m_a5f6d31910da0aff40bbe5bd83542a7d2}{ddelta\+\_\+xdk}} = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},5)
+\item 
+\mbox{\hyperlink{apply__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} = \mbox{\hyperlink{project__points__fisheye_8m_acb7eb27b3b51bad0c1ad73154292be54}{xd1}} + \mbox{\hyperlink{project__points2_8m_a16df747e4f6ab54d4c189551f5ee570d}{delta\+\_\+x}}
+\item 
+\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{apply__distortion_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}} = \mbox{\hyperlink{project__points__fisheye_8m_ab83eb08aea1b3e14c754473def453e52}{dxd1dk}} + \mbox{\hyperlink{project__points2_8m_a75d4a1be0615cef04b5289ca27310c74}{ddelta\+\_\+xdk}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{apply__distortion_8m_a3fd7948ad5a5b55b2f6013e16be0d54d}\label{apply__distortion_8m_a3fd7948ad5a5b55b2f6013e16be0d54d}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!ddelta\_xdk@{ddelta\_xdk}}
+\index{ddelta\_xdk@{ddelta\_xdk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{ddelta\_xdk()}{ddelta\_xdk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily ddelta\+\_\+xdk (\begin{DoxyParamCaption}\item[{1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__distortion_8m_a1bded9597dfcf07f5c62a53311b66d9a}\label{apply__distortion_8m_a1bded9597dfcf07f5c62a53311b66d9a}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!ddelta\_xdk@{ddelta\_xdk}}
+\index{ddelta\_xdk@{ddelta\_xdk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{ddelta\_xdk()}{ddelta\_xdk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily ddelta\+\_\+xdk (\begin{DoxyParamCaption}\item[{1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{4}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__distortion_8m_a8882aa719863d4975b4eb117d9c31cc2}\label{apply__distortion_8m_a8882aa719863d4975b4eb117d9c31cc2}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!ddelta\_xdk@{ddelta\_xdk}}
+\index{ddelta\_xdk@{ddelta\_xdk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{ddelta\_xdk()}{ddelta\_xdk()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily ddelta\+\_\+xdk (\begin{DoxyParamCaption}\item[{2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__distortion_8m_a75d4a1be0615cef04b5289ca27310c74}\label{apply__distortion_8m_a75d4a1be0615cef04b5289ca27310c74}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!ddelta\_xdk@{ddelta\_xdk}}
+\index{ddelta\_xdk@{ddelta\_xdk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{ddelta\_xdk()}{ddelta\_xdk()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily ddelta\+\_\+xdk (\begin{DoxyParamCaption}\item[{2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{4}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__distortion_8m_a18de5899324c3fdcc0f34aba27d5024f}\label{apply__distortion_8m_a18de5899324c3fdcc0f34aba27d5024f}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!dxd1dk@{dxd1dk}}
+\index{dxd1dk@{dxd1dk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dxd1dk()}{dxd1dk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dxd1dk (\begin{DoxyParamCaption}\item[{1\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__distortion_8m_ab83eb08aea1b3e14c754473def453e52}\label{apply__distortion_8m_ab83eb08aea1b3e14c754473def453e52}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!dxd1dk@{dxd1dk}}
+\index{dxd1dk@{dxd1dk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dxd1dk()}{dxd1dk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dxd1dk (\begin{DoxyParamCaption}\item[{2\+:2\+:\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apply__distortion_8m_a5c659f4dca46df7f520c7220c4ebde8b}\label{apply__distortion_8m_a5c659f4dca46df7f520c7220c4ebde8b}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!k@{k}}
+\index{k@{k}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{k()}{k()}}
+{\footnotesize\ttfamily k (\begin{DoxyParamCaption}\item[{3}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{apply__distortion_8m_a2f61d5e0e97d1e5917839088cb83bb97}\label{apply__distortion_8m_a2f61d5e0e97d1e5917839088cb83bb97}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!a2@{a2}}
+\index{a2@{a2}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{a2}{a2}}
+{\footnotesize\ttfamily tangential a2 = \mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}} + 2$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$^\wedge$2}
+
+\mbox{\Hypertarget{apply__distortion_8m_a509a674bd7926c5406b815a055d17834}\label{apply__distortion_8m_a509a674bd7926c5406b815a055d17834}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!a3@{a3}}
+\index{a3@{a3}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{a3}{a3}}
+{\footnotesize\ttfamily a3 = \mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}} + 2$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:).$^\wedge$2}
+
+\mbox{\Hypertarget{apply__distortion_8m_a74b87337454200d4d33f80c4663dc5e5}\label{apply__distortion_8m_a74b87337454200d4d33f80c4663dc5e5}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!aa@{aa}}
+\index{aa@{aa}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{aa}{aa}}
+{\footnotesize\ttfamily aa = (2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)+6$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:))\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)}
+
+\mbox{\Hypertarget{apply__distortion_8m_a65ba841e01d6db7733e90a5b7f9e6f80}\label{apply__distortion_8m_a65ba841e01d6db7733e90a5b7f9e6f80}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!bb@{bb}}
+\index{bb@{bb}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{bb}{bb}}
+{\footnotesize\ttfamily bb = (2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:)+2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:))\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)}
+
+\mbox{\Hypertarget{apply__distortion_8m_a41fcba09f2bdcdf315ba4119dc7978dd}\label{apply__distortion_8m_a41fcba09f2bdcdf315ba4119dc7978dd}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!cc@{cc}}
+\index{cc@{cc}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily cc = (6$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:)+2$\ast$\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:))\textquotesingle{}$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3)}
+
+\mbox{\Hypertarget{apply__distortion_8m_a7eb610a82f30382183a093498dbc682f}\label{apply__distortion_8m_a7eb610a82f30382183a093498dbc682f}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!coeff@{coeff}}
+\index{coeff@{coeff}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{coeff}{coeff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} coeff = (\mbox{\hyperlink{go__calib__optim__iter__weak_8m_a0f4d6a153ee1a256a0223b60bd45a272}{reshape}}(\mbox{[}\mbox{\hyperlink{project__points__fisheye_8m_a45322ce0b64916fa4b3537463cd563cc}{cdist}};\mbox{\hyperlink{project__points__fisheye_8m_a45322ce0b64916fa4b3537463cd563cc}{cdist}}\mbox{]},2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},1)$\ast$\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(1,3))}
+
+\mbox{\Hypertarget{apply__distortion_8m_a0daf11681dae78cb9c44c93169115c12}\label{apply__distortion_8m_a0daf11681dae78cb9c44c93169115c12}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!dcdistdk@{dcdistdk}}
+\index{dcdistdk@{dcdistdk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dcdistdk}{dcdistdk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} dcdistdk = \mbox{[} \mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}}\textquotesingle{} \mbox{\hyperlink{apply__distortion2_8m_af7abae0a18c54f8b3ca80e0759e893f5}{r4}}\textquotesingle{} \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},2) \mbox{\hyperlink{apply__distortion2_8m_a6253185320d63763a06f49a9330d50e0}{r6}}\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{apply__distortion_8m_a5f6d31910da0aff40bbe5bd83542a7d2}\label{apply__distortion_8m_a5f6d31910da0aff40bbe5bd83542a7d2}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!ddelta\_xdk@{ddelta\_xdk}}
+\index{ddelta\_xdk@{ddelta\_xdk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{ddelta\_xdk}{ddelta\_xdk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} ddelta\+\_\+xdk = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},5)}
+
+\mbox{\Hypertarget{apply__distortion_8m_af9bf3838192b963bbc36e77f87442af1}\label{apply__distortion_8m_af9bf3838192b963bbc36e77f87442af1}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!delta\_x@{delta\_x}}
+\index{delta\_x@{delta\_x}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{delta\_x}{delta\_x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{go__calib__stereo_8m_a78a072094b6e0d352ef9b3c4bdf3799b}{else}} delta\+\_\+x = \mbox{[}\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(3)$\ast$\mbox{\hyperlink{init__intrinsic__param_8m_a8dbb40f7f7bb5a67b98c95563ac0f086}{a1}} + \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(4)$\ast$\mbox{\hyperlink{project__points2_8m_a2f61d5e0e97d1e5917839088cb83bb97}{a2}}}
+
+\mbox{\Hypertarget{apply__distortion_8m_a489630d61c55f2188f687d347393e5d0}\label{apply__distortion_8m_a489630d61c55f2188f687d347393e5d0}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!distortion@{distortion}}
+\index{distortion@{distortion}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{distortion}{distortion}}
+{\footnotesize\ttfamily Add the distortion}
+
+\mbox{\Hypertarget{apply__distortion_8m_aa679b1b769d25405c4adb4612360ae49}\label{apply__distortion_8m_aa679b1b769d25405c4adb4612360ae49}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!dxd1dk@{dxd1dk}}
+\index{dxd1dk@{dxd1dk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dxd1dk}{dxd1dk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} dxd1dk = \mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(2$\ast$\mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}},5)}
+
+\mbox{\Hypertarget{apply__distortion_8m_a2bd5c17f8726d3d966e10e907bddf53e}\label{apply__distortion_8m_a2bd5c17f8726d3d966e10e907bddf53e}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!dxddk@{dxddk}}
+\index{dxddk@{dxddk}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{dxddk}{dxddk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} dxddk = \mbox{\hyperlink{project__points__fisheye_8m_ab83eb08aea1b3e14c754473def453e52}{dxd1dk}} + \mbox{\hyperlink{project__points2_8m_a75d4a1be0615cef04b5289ca27310c74}{ddelta\+\_\+xdk}}}
+
+\mbox{\Hypertarget{apply__distortion_8m_afb358f48b1646c750fb9da6c6585be2b}\label{apply__distortion_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!end@{end}}
+\index{end@{end}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+\mbox{\Hypertarget{apply__distortion_8m_a72b6d371bb0e1b4ab02584044e87cf28}\label{apply__distortion_8m_a72b6d371bb0e1b4ab02584044e87cf28}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!function@{function}}
+\index{function@{function}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{willson__read_8m_afb61a8772f82ae71819a307d2f98796a}{xd}}, \mbox{\hyperlink{apply__distortion2_8m_a2bd5c17f8726d3d966e10e907bddf53e}{dxddk}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= apply\_distortion(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}},\mbox{\hyperlink{apply__distortion_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\% Complete the \mbox{\hyperlink{apply__distortion_8m_a489630d61c55f2188f687d347393e5d0}{distortion}} \mbox{\hyperlink{go__calib__optim__iter_8m_a944b0ff7b0378fbacbea580c66148200}{vector}} \textcolor{keywordflow}{if} you are \textcolor{keyword}{using} the simple \mbox{\hyperlink{apply__distortion_8m_a489630d61c55f2188f687d347393e5d0}{distortion}} \mbox{\hyperlink{cam__proj__calib__optim_8m_a911e4f1620fa3907031829d8d91b48df}{model}}:}
+\DoxyCodeLine{length\_k = \mbox{\hyperlink{click__ima__calib3_d_8m_a7a134e91d2540aeba432404d6104a7ee}{length}}(\mbox{\hyperlink{apply__distortion_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{apply__distortion_8m_a426dc7045c41e32f7848f89ed72be8b4}\label{apply__distortion_8m_a426dc7045c41e32f7848f89ed72be8b4}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!length\_k$<$ 5, k=\mbox{[}k ;zeros(5-\/length\_k, 1)\mbox{]};end;\mbox{[}m, n\mbox{]}=size(x);\% Add distortion:r2=x(1,:).$^\wedge$2+x(2,:).$^\wedge$2;r4=r2.$^\wedge$2;r6=r2.$^\wedge$3;\% Radial distortion:cdist=1+k(1) $\ast$r2+k(2) $\ast$r4+k(5) $\ast$r6;if nargout $>$@{length\_k$<$ 5, k=[k ;zeros(5-\/length\_k, 1)];end;[m, n]=size(x);\% Add distortion:r2=x(1,:).$^\wedge$2+x(2,:).$^\wedge$2;r4=r2.$^\wedge$2;r6=r2.$^\wedge$3;\% Radial distortion:cdist=1+k(1) $\ast$r2+k(2) $\ast$r4+k(5) $\ast$r6;if nargout $>$}}
+\index{length\_k$<$ 5, k=\mbox{[}k ;zeros(5-\/length\_k, 1)\mbox{]};end;\mbox{[}m, n\mbox{]}=size(x);\% Add distortion:r2=x(1,:).$^\wedge$2+x(2,:).$^\wedge$2;r4=r2.$^\wedge$2;r6=r2.$^\wedge$3;\% Radial distortion:cdist=1+k(1) $\ast$r2+k(2) $\ast$r4+k(5) $\ast$r6;if nargout $>$@{length\_k$<$ 5, k=[k ;zeros(5-\/length\_k, 1)];end;[m, n]=size(x);\% Add distortion:r2=x(1,:).$^\wedge$2+x(2,:).$^\wedge$2;r4=r2.$^\wedge$2;r6=r2.$^\wedge$3;\% Radial distortion:cdist=1+k(1) $\ast$r2+k(2) $\ast$r4+k(5) $\ast$r6;if nargout $>$}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{length\_k$<$ 5, k=[k ;zeros(5-\/length\_k, 1)];end;[m, n]=size(x);\% Add distortion:r2=x(1,:).$^\wedge$2+x(2,:).$^\wedge$2;r4=r2.$^\wedge$2;r6=r2.$^\wedge$3;\% Radial distortion:cdist=1+k(1) $\ast$r2+k(2) $\ast$r4+k(5) $\ast$r6;if nargout $>$}{length\_k< 5, k=[k ;zeros(5-length\_k, 1)];end;[m, n]=size(x);\% Add distortion:r2=x(1,:).^2+x(2,:).^2;r4=r2.^2;r6=r2.^3;\% Radial distortion:cdist=1+k(1) *r2+k(2) *r4+k(5) *r6;if nargout >}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} length\+\_\+k$<$ 5, \mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}=\mbox{[}\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}} ;\mbox{\hyperlink{scanner__calibration__script_8m_a495838e20f780998846263933acb0819}{zeros}}(5-\/length\+\_\+k, 1)\mbox{]};\mbox{\hyperlink{write__image_8m_afb358f48b1646c750fb9da6c6585be2b}{end}};\mbox{[}\mbox{\hyperlink{rigid__motion_8m_a73886111e13471186a6a00fb9e77d202}{m}}, \mbox{\hyperlink{rectify__stereo__pair_8m_af7c9637257cbd4c2556bf5519b1fd815}{n}}\mbox{]}=\mbox{\hyperlink{undistort__image__no__read_8m_acef99621e828a8da6e90436ef5178cea}{size}}(\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}});\% Add distortion\+:r2=\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(1,\+:).$^\wedge$2+\mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}}(2,\+:).$^\wedge$2;\mbox{\hyperlink{apply__distortion2_8m_af7abae0a18c54f8b3ca80e0759e893f5}{r4}}=r2.$^\wedge$2;\mbox{\hyperlink{apply__distortion2_8m_a6253185320d63763a06f49a9330d50e0}{r6}}=r2.$^\wedge$3;\% Radial distortion\+:cdist=1+\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(1) $\ast$\mbox{\hyperlink{downsample_8m_ae84984b103dbbea104e6b4a314a3d65e}{r2}}+\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(2) $\ast$\mbox{\hyperlink{apply__distortion2_8m_af7abae0a18c54f8b3ca80e0759e893f5}{r4}}+\mbox{\hyperlink{project__points2_8m_a5c659f4dca46df7f520c7220c4ebde8b}{k}}(5) $\ast$\mbox{\hyperlink{apply__distortion2_8m_a6253185320d63763a06f49a9330d50e0}{r6}};\mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} \mbox{\hyperlink{rodrigues_8m_acda6303f8e0e875891d99e821a16e598}{nargout}} $>$}
+
+\mbox{\Hypertarget{apply__distortion_8m_acda6303f8e0e875891d99e821a16e598}\label{apply__distortion_8m_acda6303f8e0e875891d99e821a16e598}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!nargout@{nargout}}
+\index{nargout@{nargout}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{nargout}{nargout}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stereo_2otros_2matlab2opencv_8m_a395c74f44b735213449a80587b6388e9}{if}} nargout == 2 $\vert$ nargout == 0}
+
+\mbox{\Hypertarget{apply__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}\label{apply__distortion_8m_a0903a189cbe112bce4b75bbc7c50357c}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!xd@{xd}}
+\index{xd@{xd}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{xd}{xd}}
+{\footnotesize\ttfamily xd = \mbox{\hyperlink{project__points__fisheye_8m_acb7eb27b3b51bad0c1ad73154292be54}{xd1}} + \mbox{\hyperlink{project__points2_8m_a16df747e4f6ab54d4c189551f5ee570d}{delta\+\_\+x}}}
+
+\mbox{\Hypertarget{apply__distortion_8m_acb7eb27b3b51bad0c1ad73154292be54}\label{apply__distortion_8m_acb7eb27b3b51bad0c1ad73154292be54}} 
+\index{apply\_distortion.m@{apply\_distortion.m}!xd1@{xd1}}
+\index{xd1@{xd1}!apply\_distortion.m@{apply\_distortion.m}}
+\doxysubsubsection{\texorpdfstring{xd1}{xd1}}
+{\footnotesize\ttfamily xd1 = \mbox{\hyperlink{small__test__script_8m_ab7fd51748de2e6629029180d5d37ec10}{x}} .$\ast$ (\mbox{\hyperlink{visualize__distortions_8m_a45582fcee3c7b631afa5f55a959b0c13}{ones}}(2,1)$\ast$\mbox{\hyperlink{project__points__fisheye_8m_a45322ce0b64916fa4b3537463cd563cc}{cdist}})}
+
