@@ -32,17 +32,18 @@ namespace cdata {
 	* Matriz de distancias entre las esferas de los cuerpos rígidos.
 	* La primera fila corresponde a las distancias conocidas del pointer en milímetros, la segunda a las del femur, las terceras a las de la tíbia
 	* y la cuarta a la de las gafas.
-	* > Siempre se debe conservar este orden.
+	* > Siempre se debe conservar este orden.}
+	25.49, 42.38, 34.64, 42.63, 48.39, 17.63,		//FEMUR
 	*/
 
 	Mat_<float> distances = (Mat_<float>(5, 6) <<
-		20.05, 29.26, 49.67, 39.82, 49.55, 51.53,		// pointer
-		25.49, 43.38, 34.64, 42.63, 44.39, 17.63,		//FEMUR
+		47.50, 50.51, 39.46, 22.47, 45.08, 29.55,		//POINTER
+		25.43, 44.45, 57.01, 53.82, 44.39, 17.63,		//FEMUR
 		//35.22, 59.15, 25.07, 44.73, 51.63, 54.93,		
 		89.74, 107.01, 80.03, 71.26, 103.56, 59.74,		//TIBIA
 		//64.75, 118.23, 183.64, 55.66, 126.57, 73.28,	//GAFAS
 		188.62, 126.20, 78.17, 55.66, 126.57, 79.28,	//GAFAS
-		23.70, 45.46, 69.15, 0, 0, 0);      // broca
+		23.70, 45.46, 68.15, 0, 0, 0);      // broca
 
 	/*Mat_<float> distances = (Mat_<float>(5, 6) <<
 		47.50, 50.51, 39.46, 22.47, 45.08, 29.55,		//POINTER

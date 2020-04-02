@@ -41,7 +41,7 @@ namespace CustomCameraLibrary {
 	const int phanton = 6;	///< indicador que representa el phanton
 	const int broca = 5;///< indicador que representa la broca
 
-	float DELTA = 0.86;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
+	float DELTA = 1.09;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
@@ -234,7 +234,7 @@ namespace CustomCameraLibrary {
 	
 		ofstream archivoP;
 		if (!archivoP.is_open()) {
-			archivoP.open("Punto2.txt", std::ios::app);
+			archivoP.open("EvaluandoTABLERO.txt", std::ios::app);
 
 		}
 		P1 = P1.t();
@@ -276,7 +276,7 @@ namespace CustomCameraLibrary {
 			archivoP << PE[0][1] << "\t";
 			archivoP << PE[0][2] << "\t";
 			archivoP << "\n";*/
-			//archivoP << PE << "\n";
+			archivoP << PE << "\n";
 		}
 		
 		//cout << "Punto final: " << PE;
@@ -339,7 +339,7 @@ namespace CustomCameraLibrary {
 		double alpha, beta, gamma, qx, qy, qz, qw;
 
 		
-		if (OR.cols > 3) {
+		if (OR.cols >= 3) {
 			float sy;                        //https://blender.stackexchange.com/questions/30808/how-do-i-construct-a-transformation-matrix-from-3-vertices
 			Mat_<double> v, v1, v2, x, X, Y, Z, a, b, c, b2, a2, p1, p2, p3, Pc, Out;
 			p1 = OR.col(0);
@@ -427,7 +427,7 @@ namespace CustomCameraLibrary {
 				bRigid[i].point = Point3d(punto);
 
 			}
-			if ((bRigid[i].name == FEMUR) && (norm(p1 - p3) > 51)) {
+			if ((bRigid[i].name == FEMUR)) {
 				Point3d punto = pointerPoint(p1, p2, p3, Out);
 				bRigid[i].point = Point3d(punto);
 			}
@@ -672,7 +672,7 @@ namespace CustomCameraLibrary {
 		Sphere *Spheres;
 		if (!archivoDI.is_open())
 		{
-			archivoDI.open("EvaluacionBroca90cm.txt", std::ios::app);
+			archivoDI.open("EvaluacionBroca80cm.txt", std::ios::app);
 		}
 		int i, i0, j, countBR,w,h,cont;
 		int flag1 = -1;
@@ -816,7 +816,7 @@ namespace CustomCameraLibrary {
 				{
 					m = 0;
 				}
-				archivoDI << (clock() - time)*1000/CLOCKS_PER_SEC<< "\t "<< m << "\n";
+				//archivoDI << (clock() - time)*1000/CLOCKS_PER_SEC<< "\t "<< m << "\n";
 				m = -1;
 				bRigid[countBR].bdrigid = temp.t();								// añadir las coordenadas de las esferas del objeto rígido.
 				bRigid[countBR].nmarkers = temp.rows;	// número de marcadores en el O.R.

@@ -417,7 +417,7 @@ void GUIUpdater::GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame
 			archivoL << "\n";
 		}*/
 
-		archivoL << PP << "\t";
+		//archivoL << PP << "\t";
 		/*for (int i = 0; i < PP.rows; i++)
 		{
 			for (int j = 0; j < PP.cols; j++)
