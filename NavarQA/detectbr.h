@@ -294,6 +294,69 @@ namespace CustomCameraLibrary {
 		archivoP.close();
 	}
 
+	Point3d Punta(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
+
+		ofstream archivoP;
+		if (!archivoP.is_open()) {
+			archivoP.open("EvaluandoTABLERO.txt", std::ios::app);
+
+		}
+		P1 = P1.t();
+		P2 = P2.t();
+		P3 = P3.t();
+		cv::Mat_<double> PM, Ux, Uz, Uy, temp, temp2, sum_ones, PE;
+		cv::Mat_<double> val(P3.rows, P3.cols);
+		double PointerX, PointerY, PointerZ;
+		if (!detect_pointer)
+		{
+			PointerX = cdata::PARAM(0, 0);									//Si está detectando pointer evalue esto, sino evalue el otro arreglo.
+			PointerY = cdata::PARAM(0, 1);
+			PointerZ = cdata::PARAM(0, 2);
+		}
+		else
+		{
+			PointerX = cdata::PARAMPunta(0, 0);
+			PointerY = cdata::PARAMPunta(0, 1);
+			PointerZ = cdata::PARAMPunta(0, 2);
+		}
+
+		PM = (P1 + P2 + P3) / 3;
+
+		sum_ones = cv::Mat::ones(3, 1, CV_8UC1);
+		cv::sqrt((P3 - PM).mul(P3 - PM) * sum_ones, temp);
+		Ux = (P3 - PM) / cv::repeat(temp, 1, 3);
+		val = cross_product(P2 - PM, P3 - PM);
+		cv::sqrt((val).mul(val) * sum_ones, temp2);
+		Uz = val / cv::repeat(temp2, 1, 3);
+		Uy = cross_product(Uz, Ux);
+
+		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
+		PE = PM + val - cdata::f_cor.t();
+
+		if (!PE.empty())
+		{
+
+			/*archivoP << PE[0][0] << "\t";
+			archivoP << PE[0][1] << "\t";
+			archivoP << PE[0][2] << "\t";
+			archivoP << "\n";*/
+			archivoP << PE << "\n";
+		}
+
+		//cout << "Punto final: " << PE;
+		/*for (int i = 0; i < PE.rows; i++)
+		{
+		for (int j = 0; i < PE.cols; j++) {
+		archivoP<< PE[i][j] << "\t";
+		}
+		archivoP << "\n";
+		}
+		*/
+
+
+		return Point3d(PE);
+		archivoP.close();
+	}
 	/**
 	*	Obtiene el punto que toca la punta del pointer.
 	*	Se genera un eje de cordenadas sobre las esferas que forman el pointer y luego se rota el vector que indica la dirección del pointer sobre un eje de rotación que
@@ -428,7 +491,7 @@ namespace CustomCameraLibrary {
 
 			}
 			if ((bRigid[i].name == FEMUR)) {
-				Point3d punto = pointerPoint(p1, p2, p3, Out);
+				Point3d punto = Punta(p1, p2, p3, Out);
 				bRigid[i].point = Point3d(punto);
 			}
 		}
