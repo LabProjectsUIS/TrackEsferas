@@ -169,6 +169,8 @@ void GUIUpdater::setCentroid(cv::Mat_<double> centroid, std::string& bone) {
 	}
 }
 
+
+
 /**
 * Calcula los ángulos de un vector en 3D respecto a cada plano
 * @param vector vector al cual se le calcularán los ángulos.
@@ -282,6 +284,52 @@ void GUIUpdater::ShowCameras() {
 
 }
 
+cv::Mat_<double> GUIUpdater::GetObjects2(CameraLibrary::Frame *frame, cv::Mat matFrame, cv::Mat_<double> &P, cv::Mat_<double> &A)
+{
+	int objects = frame->ObjectCount();
+	cv::Mat_<double> PP(2, objects);
+
+	if (objects > 0)
+	{
+		for (int i = 0; i <  objects; i++)
+		{
+			CameraLibrary::cObject *obj = frame->Object(i);
+			if (obj->Area() > 20) {
+				double x = obj->X();
+				double y = obj->Y();
+
+				ostringstream ostr;
+				cv::Point textOrg(10, 500 + i * 20);
+				ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y;
+				cv::String text = ostr.str();
+				putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
+
+				//PP(0, i) = x;
+				//PP(1, i) = y;
+
+				for (int j = 0; j < PP.rows; j++) {
+					switch (j)
+					{
+					case 0:
+						PP(j, i) = x;
+						break;
+					case 1:
+						PP(j, i) = y;
+						break;
+					default:
+						break;
+					}
+				}
+				A.push_back(obj->Area());
+			}
+		}
+		PP.copyTo(P);
+	}
+	return PP;
+}
+
+
+//REALIZAR UN GETOBJECTS 2 -> QUE NO USE OPEN CV PARA RASTREO.
 
 /**
 *	Identifica marcadores detectados en la escena, toma cada una de sus propiedades tales como área y posición en pixeles
@@ -720,7 +768,7 @@ void GUIUpdater::getRigidsData() {
 			CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadores
 			cframe_2.trackFilteredMarker(marker, threshold_2, cframe_2, matFrame_2);
 			GetObjects(cframe_2, matFrame_2, PP2, A2, PP_Broca2);
-			
+
 			//P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
 			//CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
 			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2, PP_Broca2);
@@ -767,148 +815,145 @@ void GUIUpdater::getRigidsData() {
 
 			}
 		}
-			if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
-			{
-				Beep(350, 50);
+		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
+		{
+			Beep(350, 50);
 
-				if (samples < sample_limit)
-				{
-					if (P1.cols == P1_x_acum.cols) {
-						P1_x_acum.push_back(P1.row(0));
-						P1_y_acum.push_back(P1.row(1));
-						P2_x_acum.push_back(P2.row(0));
-						P2_y_acum.push_back(P2.row(1));
-						samples++;
-					}
-					else {
-						samples = 1;
-						P1_x_acum = P1.row(0);
-						P1_y_acum = P1.row(1);
-						P2_x_acum = P2.row(0);
-						P2_y_acum = P2.row(1);
-					}
+			if (samples < sample_limit)
+			{
+				if (P1.cols == P1_x_acum.cols) {
+					P1_x_acum.push_back(P1.row(0));
+					P1_y_acum.push_back(P1.row(1));
+					P2_x_acum.push_back(P2.row(0));
+					P2_y_acum.push_back(P2.row(1));
+					samples++;
 				}
 				else {
-					samples = 0;
-					if (P1.cols == P1_x_acum.cols) {
-						filter(P1_x_acum, P1_y_acum, P1);
-						filter(P2_x_acum, P2_y_acum, P2);
-						P1_x_acum.release(); P2_x_acum.release(); P1_y_acum.release(); P2_y_acum.release();
-
-						CustomCameraLibrary::stereo_triangulation(P2, P1, cdata::om, cdata::T, cdata::fc_left,
-							cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
-							cdata::kc_right, 0, XL, XR);
-
-						if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
-							CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
-							CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
-
-							//OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
-							CustomCameraLibrary::StartServer();
-							doStartServer = false;
-							CustomCameraLibrary::StreamFrame();
-							emit startServer();
-						}
-
-						wResult = WaitForSingleObject(CustomCameraLibrary::sSemaphore, INFINITE);	// espera por la indicación del semáforo para seguir el hilo de ejecución//
-						if (wResult == WAIT_OBJECT_0) {
-							CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
-							CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
-
-							//TRIANGULANDO BROCA
-
-							//if (PP_Broca1(1, 0) != 9999 && PP_Broca2(1, 0) != 9999) {
-
-							//JOSKSTRA PARA BROCA
-							int N = 1;
-							if (CustomCameraLibrary::nbr > 0)
-							{
-								for (int f = 0; f < CustomCameraLibrary::nbr; f++) {
-									if (CustomCameraLibrary::rigid[f].name == POINTER)
-									{
-										emit pointerDetected();
-									}
-									if (f == CustomCameraLibrary::nbr)
-										emit pointerNotDetected();
-								}
-							}
-							else
-								emit pointerNotDetected();
-							//XBroca = XLBroca.t();
-							//XBroca = CustomCameraLibrary::initDrill(matFrame_1, matFrame_2, PP_Broca1, PP_Broca2);
-
-							/*XBrocaNew(0, 0) = 0;
-							XBrocaNew(0, 1) = 0;
-							XBrocaNew(0, 2) = 0;
-							XBrocaNew(1, 0) = 1;
-							XBrocaNew(1, 1) = 3;
-							XBrocaNew(1, 2) = 2;*/
-
-							/*XBrocaNew(0, 0) = XLBroca(0, 0);
-							XBrocaNew(0, 1) = XLBroca(1, 0);
-							XBrocaNew(0, 2) = XLBroca(2, 0);
-							XBrocaNew(1, 0) = XLBroca(0, 1);
-							XBrocaNew(1, 1) = XLBroca(1, 1);
-							XBrocaNew(1, 2) = XLBroca(2, 1);
-							XBrocaNew(0, 3) = 0;
-							XBrocaNew(1, 3) = 0;
-
-							setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBrocaNew);*/
-							//setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBroca);
-
-							CustomCameraLibrary::nbr++;
-
-							// ADICIONADO 
-							/*if(Cont>=0){
-
-
-							fprintf(fp, "DER Pix: %f\t%f\t%f\t%f\n", PP_Broca1(0,0), PP_Broca1(1, 0), PP_Broca1(0, 1), PP_Broca1(1, 1));
-							fprintf(fp, "IZQ PIX: %f\t%f\t%f\t%f\n", PP_Broca2(0, 0), PP_Broca2(1, 0), PP_Broca2(0, 1), PP_Broca2(1, 1));
-							fprintf(fp, "XLBroca:\n");
-							fprintf(fp, "%f\t%f\t%f\n", XLBroca(0, 0), XLBroca(1, 0), XLBroca(2, 0));
-							fprintf(fp, "%f\t%f\t%f\n", XLBroca(0, 1), XLBroca(1, 1), XLBroca(2, 1));*/
-							/*fprintf(fp, "XBroca:\n");
-							fprintf(fp, "XBroca: %f\t%f\t%f\n", XBroca(0, 0), XBroca(0, 1), XBroca(0, 2));
-							fprintf(fp, "%f\t%f\t%f\n", XBroca(1, 0), XBroca(1, 1), XBroca(1, 2));*/
-
-							//if (Cont >= 0){
-							//fprintf(fp, "XBROCA: Cont=%d\n", Cont);
-							//for (int ii = 0; ii < XBroca.rows; ii++) {
-							//	for (int jj = 0; jj < XBroca.cols; jj++) {
-							//	fprintf(fp, "%f\t",XBroca(ii, jj));
-							//}
-							//	fprintf(fp, "\n");
-							//}
-							//fprintf(fp, "\n\n");
-							//}
-
-							//	std::ostringstream ostr, ostr2;
-							//	std::string text = "";// ostr.str();
-							//	ostr << "C:\\Users\\eduar_000\\Documents\\Borrar\\Derecha" << Cont << ".tif";
-							//	text = ostr.str();
-							//	imwrite(text, matFrame_1);
-							//	ostr2 << "C:\\Users\\eduar_000\\Documents\\Borrar\\Izquierda" << Cont << ".tif";
-							//	text = ostr2.str();
-							//	imwrite(text, matFrame_2);
-							//	Cont = Cont + 1;
-							//		if (Cont == 5) {
-							//			fclose(fp);
-							//			Beep(800, 1200);
-							//			Cont = -1;
-							//		}
-							//}
-
-						}
-						if (CustomCameraLibrary::nbr > 0) {
-							if (!ReleaseSemaphore(CustomCameraLibrary::brSemaphore, 1, NULL))
-								printf("ReleaseSemaphore error: %d\n", GetLastError());
-						}
-						else if (!ReleaseSemaphore(CustomCameraLibrary::sSemaphore, 1, NULL))
-							printf("ReleaseSemaphore error: %d\n", GetLastError());
-					}
+					samples = 1;
+					P1_x_acum = P1.row(0);
+					P1_y_acum = P1.row(1);
+					P2_x_acum = P2.row(0);
+					P2_y_acum = P2.row(1);
 				}
 			}
-		
+			else {
+				samples = 0;
+				if (P1.cols == P1_x_acum.cols) {
+					filter(P1_x_acum, P1_y_acum, P1);
+					filter(P2_x_acum, P2_y_acum, P2);
+					P1_x_acum.release(); P2_x_acum.release(); P1_y_acum.release(); P2_y_acum.release();
+
+					CustomCameraLibrary::stereo_triangulation(P2, P1, cdata::om, cdata::T, cdata::fc_left,
+						cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
+						cdata::kc_right, 0, XL, XR);
+
+					if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
+						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
+						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
+
+						//OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
+						CustomCameraLibrary::StartServer();
+						doStartServer = false;
+						CustomCameraLibrary::StreamFrame();
+						emit startServer();
+					}
+
+					wResult = WaitForSingleObject(CustomCameraLibrary::sSemaphore, INFINITE);	// espera por la indicación del semáforo para seguir el hilo de ejecución//
+					if (wResult == WAIT_OBJECT_0) {
+						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
+						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
+
+						//TRIANGULANDO BROCA
+
+						//if (PP_Broca1(1, 0) != 9999 && PP_Broca2(1, 0) != 9999) {
+
+						//JOSKSTRA PARA BROCA
+						int N = 1;
+						if (CustomCameraLibrary::nbr > 0)
+						{
+							for (int f = 0; f < CustomCameraLibrary::nbr; f++) {
+								if (CustomCameraLibrary::rigid[f].name == POINTER)
+								{
+									emit pointerDetected();
+								}
+								if (f == CustomCameraLibrary::nbr)
+									emit pointerNotDetected();
+							}
+						}
+						else
+							emit pointerNotDetected();
+						//XBroca = XLBroca.t();
+						//XBroca = CustomCameraLibrary::initDrill(matFrame_1, matFrame_2, PP_Broca1, PP_Broca2);
+
+						/*XBrocaNew(0, 0) = 0;
+						XBrocaNew(0, 1) = 0;
+						XBrocaNew(0, 2) = 0;
+						XBrocaNew(1, 0) = 1;
+						XBrocaNew(1, 1) = 3;
+						XBrocaNew(1, 2) = 2;*/
+
+						/*XBrocaNew(0, 0) = XLBroca(0, 0);
+						XBrocaNew(0, 1) = XLBroca(1, 0);
+						XBrocaNew(0, 2) = XLBroca(2, 0);
+						XBrocaNew(1, 0) = XLBroca(0, 1);
+						XBrocaNew(1, 1) = XLBroca(1, 1);
+						XBrocaNew(1, 2) = XLBroca(2, 1);
+						XBrocaNew(0, 3) = 0;
+						XBrocaNew(1, 3) = 0;
+						setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBrocaNew);*/
+						//setBroca(CustomCameraLibrary::rigid[CustomCameraLibrary::nbr], XBroca);
+
+						CustomCameraLibrary::nbr++;
+
+						// ADICIONADO 
+						/*if(Cont>=0){
+						fprintf(fp, "DER Pix: %f\t%f\t%f\t%f\n", PP_Broca1(0,0), PP_Broca1(1, 0), PP_Broca1(0, 1), PP_Broca1(1, 1));
+						fprintf(fp, "IZQ PIX: %f\t%f\t%f\t%f\n", PP_Broca2(0, 0), PP_Broca2(1, 0), PP_Broca2(0, 1), PP_Broca2(1, 1));
+						fprintf(fp, "XLBroca:\n");
+						fprintf(fp, "%f\t%f\t%f\n", XLBroca(0, 0), XLBroca(1, 0), XLBroca(2, 0));
+						fprintf(fp, "%f\t%f\t%f\n", XLBroca(0, 1), XLBroca(1, 1), XLBroca(2, 1));*/
+						/*fprintf(fp, "XBroca:\n");
+						fprintf(fp, "XBroca: %f\t%f\t%f\n", XBroca(0, 0), XBroca(0, 1), XBroca(0, 2));
+						fprintf(fp, "%f\t%f\t%f\n", XBroca(1, 0), XBroca(1, 1), XBroca(1, 2));*/
+
+						//if (Cont >= 0){
+						//fprintf(fp, "XBROCA: Cont=%d\n", Cont);
+						//for (int ii = 0; ii < XBroca.rows; ii++) {
+						//	for (int jj = 0; jj < XBroca.cols; jj++) {
+						//	fprintf(fp, "%f\t",XBroca(ii, jj));
+						//}
+						//	fprintf(fp, "\n");
+						//}
+						//fprintf(fp, "\n\n");
+						//}
+
+						//	std::ostringstream ostr, ostr2;
+						//	std::string text = "";// ostr.str();
+						//	ostr << "C:\\Users\\eduar_000\\Documents\\Borrar\\Derecha" << Cont << ".tif";
+						//	text = ostr.str();
+						//	imwrite(text, matFrame_1);
+						//	ostr2 << "C:\\Users\\eduar_000\\Documents\\Borrar\\Izquierda" << Cont << ".tif";
+						//	text = ostr2.str();
+						//	imwrite(text, matFrame_2);
+						//	Cont = Cont + 1;
+						//		if (Cont == 5) {
+						//			fclose(fp);
+						//			Beep(800, 1200);
+						//			Cont = -1;
+						//		}
+						//}
+
+					}
+					if (CustomCameraLibrary::nbr > 0) {
+						if (!ReleaseSemaphore(CustomCameraLibrary::brSemaphore, 1, NULL))
+							printf("ReleaseSemaphore error: %d\n", GetLastError());
+					}
+					else if (!ReleaseSemaphore(CustomCameraLibrary::sSemaphore, 1, NULL))
+						printf("ReleaseSemaphore error: %d\n", GetLastError());
+				}
+			}
+		}
+
 		QCoreApplication::processEvents();
 	}
 	CustomCameraLibrary::StreamFrame();

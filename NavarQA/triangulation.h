@@ -92,11 +92,9 @@ namespace CustomCameraLibrary {
 
 		divide(NN1.t(), DD.t(), Zt);
 		divide(NN2.t(), DD.t(), Ztt);
-		//cout << Zt << endl << endl;
 		extendM(Zt, xt.cols);
 		extendM(Ztt, xtt.cols);
 
-		//cout << xt << endl << Zt << endl;
 		X1 = xt.mul(Zt);
 		X2 = R.t()*(xtt.mul(Ztt) - T_vect);
 
