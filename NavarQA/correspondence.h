@@ -477,7 +477,7 @@ namespace CustomCameraLibrary {
 	*	@param	F_Broca es el conjunto de esferas de la broca
 	*	@return un conjunto de esferas ordenadas según la correspondencia.
 	**/
-	cv::Mat_<double> CorrespondenceDetection(cv::Mat_<double> P, cv::Mat_<double> A, cv::Mat_<double> F_Broca) {
+	cv::Mat_<double> CorrespondenceDetection(cv::Mat_<double> P, cv::Mat_<double> A/*, cv::Mat_<double> F_Broca*/) {
 		cv::Mat_<double> F0;
 		cv::Mat_<int> areas_men;		//	posición de las áreas menores
 		//buscar la segunda area menor tal vez asi

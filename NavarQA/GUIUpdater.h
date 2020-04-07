@@ -61,6 +61,7 @@ private:
 	cv::Mat_<double> tibiaCentroid;
 	cv::Mat_<double> femurCentroid;
 	void getAngles(cv::Mat_<double>& vector, cv::Mat_<double>& angles);
+	cv::Mat_<double> GetObjects2(CameraLibrary::Frame *frame, cv::Mat matFrame, cv::Mat_<double> &P, cv::Mat_<double> &A);
 	void GetObjects(CustomCameraLibrary::cFrame cframe, cv::Mat matFrame, cv::Mat_<double> &P, cv::Mat_<double> &A, cv::Mat_<double> &PP_Broca);
 	void filter(cv::Mat_<double> datax, cv::Mat_<double> datay, cv::Mat_<double> out);
 	void setBroca(CustomCameraLibrary::BodyR &rigid, cv::Mat_<double> &data);
