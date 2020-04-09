@@ -13,6 +13,7 @@
 #include "opencv\cv.hpp"
 #include <time.h>
 #include <dos.h>
+#include <globals.h>
 
 namespace CustomCameraLibrary {
 	using namespace cv;
@@ -41,7 +42,7 @@ namespace CustomCameraLibrary {
 	const int phanton = 6;	///< indicador que representa el phanton
 	const int broca = 5;///< indicador que representa la broca
 
-	float DELTA = 1.09;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
+	float DELTA = 1.3;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
@@ -234,7 +235,7 @@ namespace CustomCameraLibrary {
 	
 		ofstream archivoP;
 		if (!archivoP.is_open()) {
-			archivoP.open("EvaluandoTABLERO.txt", std::ios::app);
+			archivoP.open("EvaluandoPunta.txt", std::ios::app);
 
 		}
 		P1 = P1.t();
@@ -251,9 +252,9 @@ namespace CustomCameraLibrary {
 		}
 		else
 		{
-			PointerX = cdata::PARAMPunta(0, 0);									
-			PointerY = cdata::PARAMPunta(0, 1);
-			PointerZ = cdata::PARAMPunta(0, 2);
+			//PointerX = cdata::PARAMPunta(0, 0);									
+			//PointerY = cdata::PARAMPunta(0, 1);
+			//PointerZ = cdata::PARAMPunta(0, 2);
 		}
 	
 		PM = (P1 + P2 + P3) / 3;
@@ -268,14 +269,23 @@ namespace CustomCameraLibrary {
 
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
-
+		int s = CustomCameraLibrary::COUNT;
 		if (!PE.empty())
 		{
-			
-			/*archivoP << PE[0][0] << "\t";
-			archivoP << PE[0][1] << "\t";
-			archivoP << PE[0][2] << "\t";
-			archivoP << "\n";*/
+		
+			if (s<=1000 && s>0)
+			{
+				archivoP << CustomCameraLibrary::COUNT << "\t";
+				archivoP << PE[0][0] << "\t";
+				archivoP << PE[0][1] << "\t";
+				archivoP << PE[0][2] << "\t";
+				archivoP << "\n";
+
+			}
+			else
+			{
+				OutputDebugString(L"YA MIL");
+			}
 			//archivoP << PE << "\n";
 		}
 		
@@ -329,11 +339,15 @@ namespace CustomCameraLibrary {
 
 		if (!PE.empty())
 		{
+			if (1000<=CustomCameraLibrary::COUNT>0)
+			{
+				archivoP << CustomCameraLibrary::COUNT << "\t";
+				archivoP << PE[0][0] << "\t";
+				archivoP << PE[0][1] << "\t";
+				archivoP << PE[0][2] << "\t";
+				archivoP << "\n";
 
-			/*archivoP << PE[0][0] << "\t";
-			archivoP << PE[0][1] << "\t";
-			archivoP << PE[0][2] << "\t";
-			archivoP << "\n";*/
+			}
 			//archivoP << PE << "\n";
 		}
 
@@ -714,6 +728,7 @@ namespace CustomCameraLibrary {
 	ofstream archivoDI;
 	
 	int joskstra(Mat_<float> spSet, Mat_<float> dspSet, BodyR *&bRigid) {
+		CustomCameraLibrary::detectPointer = false;
 		time = 0;
 		Sphere *Spheres;
 		if (!archivoDI.is_open())
@@ -831,6 +846,7 @@ namespace CustomCameraLibrary {
 				case pointer:
 					bRigid[countBR].name = POINTER;
 					OutputDebugString(L"POINTER");
+					CustomCameraLibrary::detectPointer = true;
 					break;
 				case femur:
 					bRigid[countBR].name = FEMUR;

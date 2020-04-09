@@ -16,25 +16,25 @@ namespace CustomCameraLibrary {
 	#define CNAME_1 "RIGHT CAMERA"				///< nombre para la cámara 
 	#define CNAME_2 "LEFT CAMERA"				///< nombre para la cámara 
 
+	int COUNT = 0;
+	bool detectPointer = false;
 	//#define SCAMERA_R 18773						///< serial de la cámara prime 13
 	//#define SCAMERA_L 18776						///< serial de la cámara prime 13
-	#define SCAMERA_R 410870						///< serial de la cámara flex
-	#define SCAMERA_L 410869						///< serial de la cámara flex
+	#define SCAMERA_R 410869						///< serial de la cámara flex
+	#define SCAMERA_L 410870						///< serial de la cámara flex
 	// Constantes para el modo rastreo por OpenCV
 	int threshold_value = 254;					///< valor por omisión en el momento de aplicarle el threshold a la imágen (usado en tratamiento de binarización)
 	int max_BINARY_value = 255;					///< máximo nivel de binarizado (usado en tratamiento de binarización)
 	int threshold_type = 3;						///< tipo de de threshold (usado en tratamiento de binarización)
 
 	// Constantes para la cámara
-	int exposure_cvalue = 1195;					///< valor por omisión para la exposición de la cámara.
+	/*int exposure_cvalue = 1195;					///< valor por omisión para la exposición de la cámara.
 	int threshold_cvalue = 187;					///< valor por omisión para el threshold la cámara.
-	int intensity_cvalue = 2;		///< valor por omisión para la intensidad de la cámara.
+	int intensity_cvalue = 2;	*/	///< valor por omisión para la intensidad de la cámara.
 	
-		/*
 	int exposure_cvalue = 1195;					///< valor por omisión para la exposición de la cámara.
 	int threshold_cvalue = 187;					///< valor por omisión para el threshold la cámara.
 	int intensity_cvalue = 1;
-	*/
 	int fps = 60;
 	// Parámetros generales
 	int square_size = 400;

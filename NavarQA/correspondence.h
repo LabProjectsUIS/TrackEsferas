@@ -401,6 +401,51 @@ namespace CustomCameraLibrary {
 	*	@param areas_men matriz que será llenada con las ubicaciones de las áreas más pequeñas encontradas
 	*	@return entero que indica el estado de la búsqueda de éstas esferas de referencia.
 	*/
+/*int areas(Mat_<double> &A, Mat_<int> &areas_men) {
+		cout << A;
+		bool state =  false;
+		//if (!detect_broca && A.rows % 5 == 0 && A.rows <= MAX_ESFERA) {
+		if (!detect_broca && A.rows <= MAX_ESFERA) { //si no es broca y si las filas de A son menores o iguales a el limite(20)
+			int x=0;
+			for (int i = 0; i < A.rows; i++) //recorriendo A hasta el numero de filas
+			{ 
+				int s = A.rows;
+				double uno = A(i, 0);
+				if (A(i, 0) < 50) {	//evaluando si las areas son menores a 55
+					if (x < (A.rows / 5) + 1) {
+						areas_men.push_back(i);		// guardar posición de las áreas más pequeñas.
+						state = true;
+						
+						}
+					else {
+						cout << "ERROR: Encontradas más esferas pequeñas >> correspondence.h" << endl;
+						state = false;
+					}
+					x++;
+				}
+			}
+		}
+		else if (detect_broca) {
+			int x = 0;
+			for (int i = 0; i < A.rows; i++) {
+				if (A(i, 0) < AREA) {
+					if (x < A.rows / 5 + 1) {		// más una esfera, la del taladro
+						areas_men.push_back(i);		// guardar posición de las áreas más pequeñas.
+						state = true;
+						cout << A.row(i) << endl;
+					}
+					else {
+						cout << "ERROR: No se logra detectar el indicador de la broca >> correspondence.h" << endl;
+						state = false;
+					}
+					x++;
+				}
+			}
+		}
+
+		return state;
+	}*/
+
 	int areas(Mat_<double> &A, Mat_<int> &areas_men) 
 	{
 		Mat_<double> Arreglo;
@@ -416,7 +461,6 @@ namespace CustomCameraLibrary {
 			{
 				if (mayor<Arreglo(i, 0)){
 					mayor = Arreglo(i, 0);
-					//x = i;   //posicion del numero minimo
 				}
 			}
 			menor = mayor;
@@ -424,10 +468,9 @@ namespace CustomCameraLibrary {
 			{
 				if (menor>Arreglo(i, 0)) {
 					menor = Arreglo(i, 0);
-					//x = i;   //posicion del numero minimo
 				}
 			}
-			resultado = menor; //el area mas pequeña esssssss..
+			resultado = menor;
 
 
 			for (int i = 0; i < A.rows; i++) //recorriendo A hasta el numero de filas

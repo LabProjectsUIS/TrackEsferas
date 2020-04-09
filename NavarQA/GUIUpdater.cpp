@@ -204,7 +204,7 @@ void GUIUpdater::setBroca(CustomCameraLibrary::BodyR &rigid, cv::Mat_<double> &d
 * Envía los frames de cada una de las cámaras a la GUI mediante señales y controla la lógica de captura de imágenes.
 */
 void GUIUpdater::ShowCameras() {
-	pics2Take = 20;
+	pics2Take = 25;
 	int cameraWidth_1 = camera_1->Width(); // Obtener la propiedad ancho de la resolucián de la cámara derecha.
 	int cameraHeight_1 = camera_1->Height(); // Obtener la propiedad alto de la resolucián de la cámara derecha.
 
@@ -803,15 +803,15 @@ void GUIUpdater::getRigidsData() {
 				}
 				Beep(480, 50);
 
-				CustomCameraLibrary::stereo_triangulation(PP_Broca2, PP_Broca1, cdata::om, cdata::T, cdata::fc_left,
-					cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
-					cdata::kc_right, 0, XLBroca, XRBroca);
+				//CustomCameraLibrary::stereo_triangulation(PP_Broca2, PP_Broca1, cdata::om, cdata::T, cdata::fc_left,
+					//cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
+					//cdata::kc_right, 0, XLBroca, XRBroca);
 
 
 				//COMPARAR DISTANCIAS
 				int s = 0;
-				CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::BrocaDis.rows + 1];
-				CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XLBroca.t(), cdata::distances, CustomCameraLibrary::rigid);
+				//CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::BrocaDis.rows + 1];
+				//CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XLBroca.t(), cdata::distances, CustomCameraLibrary::rigid);
 
 			}
 		}
@@ -956,7 +956,7 @@ void GUIUpdater::getRigidsData() {
 
 		QCoreApplication::processEvents();
 	}
-	CustomCameraLibrary::StreamFrame();
+	//CustomCameraLibrary::StreamFrame();
 	//Beep(500, 500);
 }
 
