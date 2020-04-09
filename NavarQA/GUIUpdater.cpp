@@ -329,8 +329,6 @@ cv::Mat_<double> GUIUpdater::GetObjects2(CameraLibrary::Frame *frame, cv::Mat ma
 }
 
 
-//REALIZAR UN GETOBJECTS 2 -> QUE NO USE OPEN CV PARA RASTREO.
-
 /**
 *	Identifica marcadores detectados en la escena, toma cada una de sus propiedades tales como área y posición en pixeles
 *	almacena la información recolectada en matrices pasadas por referencia.
@@ -706,11 +704,11 @@ void GUIUpdater::getRigidsData() {
 
 	//CustomCameraLibrary::initPython(1024, 1280);
 
-	cv::Mat erosion_1, erosion_2;
-	cv::Mat gray, threshold_1, threshold_2;
-	cv::Mat element = cv::getStructuringElement(erosion_type,
-		cv::Size(2 * erosion_size + 1, 2 * erosion_size + 1),
-		cv::Point(erosion_size, erosion_size));
+	//cv::Mat erosion_1, erosion_2;
+	//cv::Mat gray, threshold_1, threshold_2;
+	//cv::Mat element = cv::getStructuringElement(erosion_type,
+	//	cv::Size(2 * erosion_size + 1, 2 * erosion_size + 1),
+	//	cv::Point(erosion_size, erosion_size));
 
 	cv::Mat_<double> P1_x_acum, P2_x_acum, P1_y_acum, P2_y_acum;
 	cv::Mat_<double> P1Br_x_acum, P2Br_x_acum, P1Br_y_acum, P2Br_y_acum;
@@ -739,8 +737,8 @@ void GUIUpdater::getRigidsData() {
 			//				matFrame_1.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
 
-			cv::threshold(matFrame_1, threshold_1, CustomCameraLibrary::threshold_value,
-				CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
+			//cv::threshold(matFrame_1, threshold_1, CustomCameraLibrary::threshold_value,
+				//CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
 
 																							 //erode(threshold_1, erosion_1, element); // Aplicar la operación de erosion
 
@@ -761,7 +759,7 @@ void GUIUpdater::getRigidsData() {
 			//				matFrame_2.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
 
-			cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
+			//cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
 
 																																									  //erode(threshold_2, erosion_2, element); // Aplicar la operación de erosion
 
