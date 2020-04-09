@@ -68,7 +68,7 @@ namespace CustomCameraLibrary {
 		ofstream archivoXL;
 		if (!archivoXL.is_open())
 		{
-			archivoXL.open("XL1ABRIL.txt", std::ios::app);
+			archivoXL.open("XLSegmento.txt", std::ios::app);
 		}
 		//-- - Rotation matrix corresponding to the rigid motion between left and right cameras :
 		Rodrigues(om, R);
@@ -108,30 +108,37 @@ namespace CustomCameraLibrary {
 
 		int m = -1;
 		int s = -1;
-		/*
-		if (transXL.rows == 3 && transXL.cols == 3) //Imprimir datos de esferas es un archivo xml
+		
+		if (transXL.rows == 4 && transXL.cols == 3/* && detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
 		{
-			for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
-			{
-				for (int s = 0; s < transXL.cols; s++) //son 3 columnas entocnes de 0 a 2
+			//CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
+			//if (CustomCameraLibrary::COUNT <= 1000)
+			//{
+				//archivoXL << CustomCameraLibrary::COUNT << "\t";
+				for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
 				{
-					if (transXL[m][s] == NULL || transXL.empty())
+					for (int s = 0; s < transXL.cols; s++) //son 3 columnas entocnes de 0 a 2
 					{
-						break;
-					}
-					else
+						if (transXL[m][s] == NULL || transXL.empty())
+						{
+							break;
+						}
+						else
 
-					{
-						//archivoXL << transXL[m][s] << "\t";
+						{
+
+
+							archivoXL << transXL[m][s] << "\t";
+						}
 					}
+					archivoXL << "\t";
 				}
-				//archivoXL << "\t";
-			}
 
-			//archivoXL << "\n";
+				archivoXL << "\n";
+			//}
+
 		}
-		*/
-	archivoXL.close();
+		archivoXL.close();
 	}
 
 	/**

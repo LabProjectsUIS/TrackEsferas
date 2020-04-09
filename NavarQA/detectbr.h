@@ -234,7 +234,7 @@ namespace CustomCameraLibrary {
 	
 		ofstream archivoP;
 		if (!archivoP.is_open()) {
-			archivoP.open("EvaluandoTABLERO.txt", std::ios::app);
+			archivoP.open("Segmento.txt", std::ios::app);
 
 		}
 		P1 = P1.t();
@@ -268,15 +268,24 @@ namespace CustomCameraLibrary {
 
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
-
+		//int s = CustomCameraLibrary::COUNT;
 		if (!PE.empty())
 		{
-			
-			/*archivoP << PE[0][0] << "\t";
-			archivoP << PE[0][1] << "\t";
-			archivoP << PE[0][2] << "\t";
-			archivoP << "\n";*/
-			archivoP << PE << "\n";
+
+			//if (s <= 1000 && s>0)
+			//{
+				//archivoP << CustomCameraLibrary::COUNT << "\t";
+				archivoP << PE[0][0] << "\t";
+				archivoP << PE[0][1] << "\t";
+				archivoP << PE[0][2] << "\t";
+				archivoP << "\n";
+
+			//}
+			//else
+			//{
+			//	OutputDebugString(L"YA MIL");
+			//}
+			//archivoP << PE << "\n";
 		}
 		
 		//cout << "Punto final: " << PE;
@@ -848,6 +857,7 @@ namespace CustomCameraLibrary {
 				case pointer:
 					bRigid[countBR].name = POINTER;
 					OutputDebugString(L"POINTER");
+					//CustomCameraLibrary::detectPointer = true;
 					break;
 				case femur:
 					bRigid[countBR].name = FEMUR;

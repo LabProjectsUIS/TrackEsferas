@@ -19,7 +19,10 @@ namespace CustomCameraLibrary {
 	//#define SCAMERA_R 18773						///< serial de la cámara prime 13
 	//#define SCAMERA_L 18776						///< serial de la cámara prime 13
 	#define SCAMERA_R 410870						///< serial de la cámara flex
-	#define SCAMERA_L 410869						///< serial de la cámara flex
+	#define SCAMERA_L 410869///< serial de la cámara flex
+
+	int COUNT = 0;
+	bool detectPointer = false;
 	// Constantes para el modo rastreo por OpenCV
 	int threshold_value = 254;					///< valor por omisión en el momento de aplicarle el threshold a la imágen (usado en tratamiento de binarización)
 	int max_BINARY_value = 255;					///< máximo nivel de binarizado (usado en tratamiento de binarización)
