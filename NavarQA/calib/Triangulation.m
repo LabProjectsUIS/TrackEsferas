@@ -1,0 +1,15 @@
+xL=zeros();
+xR=zeros();
+P2=load('P2.txt');
+P1=load('P1.txt');
+fc_left=load('fc_left.txt');
+cc_left=load('cc_left.txt');
+kc_left=load('kc_left.txt');
+fc_right=load('fc_right.txt');
+cc_right=load('cc_right.txt');
+kc_right=load('kc_right.txt');
+T=load('T.txt');
+om=load('om.txt');
+alpha_c_left=0;
+alpha_c_right=0;
+stereo_triangulation(P1,P2,om,T,fc_left,cc_left,kc_left,alpha_c_left,fc_right,cc_right,kc_right,alpha_c_right),

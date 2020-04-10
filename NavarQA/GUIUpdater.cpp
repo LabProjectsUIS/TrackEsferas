@@ -287,7 +287,10 @@ void GUIUpdater::ShowCameras() {
 cv::Mat_<double> GUIUpdater::GetObjects2(CameraLibrary::Frame *frame, cv::Mat matFrame, cv::Mat_<double> &P, cv::Mat_<double> &A)
 {
 	int objects = frame->ObjectCount();
+	int c = 0;
+
 	cv::Mat_<double> PP(2, objects);
+	cv::Mat_<double> AA(objects, 1);
 
 	if (objects > 0)
 	{
@@ -297,17 +300,21 @@ cv::Mat_<double> GUIUpdater::GetObjects2(CameraLibrary::Frame *frame, cv::Mat ma
 			if (obj->Area() > 20) {
 				double x = obj->X();
 				double y = obj->Y();
-
+				double Area = obj->Area();
 				ostringstream ostr;
 				cv::Point textOrg(10, 500 + i * 20);
-				ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y;
+				ostr << "Objeto #" << i + 1 << ": X:" << x << "  Y:" << y<<	" Ar:"<< Area;
 				cv::String text = ostr.str();
 				putText(matFrame, text, textOrg, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar::all(255), 0, false);
 
 				//PP(0, i) = x;
 				//PP(1, i) = y;
-
-				for (int j = 0; j < PP.rows; j++) {
+				
+				PP(0, c) = x;
+				PP(1, c) = y;
+				AA(c, 0) = obj->Area();
+				c++;
+			/*	for (int j = 0; j < PP.rows; j++) {
 					switch (j)
 					{
 					case 0:
@@ -318,12 +325,14 @@ cv::Mat_<double> GUIUpdater::GetObjects2(CameraLibrary::Frame *frame, cv::Mat ma
 						break;
 					default:
 						break;
-					}
-				}
-				A.push_back(obj->Area());
+					}*/
+				
+			
+				//A.push_back(obj->Area());
 			}
 		}
 		PP.copyTo(P);
+		AA.copyTo(A);
 	}
 	return PP;
 }
@@ -704,11 +713,11 @@ void GUIUpdater::getRigidsData() {
 
 	//CustomCameraLibrary::initPython(1024, 1280);
 
-	//cv::Mat erosion_1, erosion_2;
-	//cv::Mat gray, threshold_1, threshold_2;
-	//cv::Mat element = cv::getStructuringElement(erosion_type,
-	//	cv::Size(2 * erosion_size + 1, 2 * erosion_size + 1),
-	//	cv::Point(erosion_size, erosion_size));
+	cv::Mat erosion_1, erosion_2;
+	cv::Mat gray, threshold_1, threshold_2;
+	cv::Mat element = cv::getStructuringElement(erosion_type,
+	cv::Size(2 * erosion_size + 1, 2 * erosion_size + 1),
+	cv::Point(erosion_size, erosion_size));
 
 	cv::Mat_<double> P1_x_acum, P2_x_acum, P1_y_acum, P2_y_acum;
 	cv::Mat_<double> P1Br_x_acum, P2Br_x_acum, P1Br_y_acum, P2Br_y_acum;
@@ -720,6 +729,11 @@ void GUIUpdater::getRigidsData() {
 	int Cont = 0;
 
 	cv::Mat_<double> temporal, angles;
+	ofstream archivoW;
+	if (!archivoW.is_open()) {
+		archivoW.open("P1yP2.txt", std::ios::app);
+
+	}
 
 	while (detectRigids) {
 		CameraLibrary::Frame *frame_1 = camera_1->GetLatestFrame();
@@ -737,29 +751,30 @@ void GUIUpdater::getRigidsData() {
 			//				matFrame_1.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
 
-			//cv::threshold(matFrame_1, threshold_1, CustomCameraLibrary::threshold_value,
-				//CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
+			cv::threshold(matFrame_1, threshold_1, CustomCameraLibrary::threshold_value,CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
 
-																							 //erode(threshold_1, erosion_1, element); // Aplicar la operación de erosion
-
-																							 //CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadores
-																							 //cframe_1.trackFilteredMarker(marker, threshold_1, cframe_1, matFrame_1);
-
+			erode(threshold_1, erosion_1, element); // Aplicar la operación de erosion
+			CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadores
+			//frame_1.trackFilteredMarker(marker, threshold_1, frame_1, matFrame_1);
+			//frame_1->SetObjectCount;
 			GetObjects2(frame_1, matFrame_1, PP1, A1);
 			//GetObjects2(frame_1, matFrame_1, PP1, A1,);
 			int m = 1;
 			//CustomCameraLibrary::CorrespondenceDetection(PP1, A1, P1, PP_Broca1);
-			//P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1, P1, PP_Broca1);
-			P1 = PP1;
+			
+			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1);
+			
+			//P1 = PP1;
 			imshow("Camara Derecha", matFrame_1);
 			frame_1->Release();
 		}
+
 		if (frame_2) {
 			frame_2->Rasterize(cameraWidth_2, cameraHeight_2, matFrame_2.step, BACKBUFFER_BITSPERPIXEL, matFrame_2.data);
 			//				matFrame_2.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
 
-			//cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
+			cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
 
 																																									  //erode(threshold_2, erosion_2, element); // Aplicar la operación de erosion
 
@@ -767,12 +782,14 @@ void GUIUpdater::getRigidsData() {
 																																									  //cframe_2.trackFilteredMarker(marker, threshold_2, cframe_2, matFrame_2);
 																																									  //GetObjects(cframe_2, matFrame_2, PP2, A2, PP_Broca2);
 			GetObjects2(frame_2, matFrame_2, PP2, A2);
-			//P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
+			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2);
 			//CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
-			P2 = PP2;
+			//P2 = PP2
+			
 			imshow("Camara Izquierda", matFrame_2);
 			frame_2->Release();
 		}
+		
 		/*
 		if ((!PP_Broca1.empty() && !PP_Broca2.empty()) && (PP_Broca1.cols == PP_Broca2.cols)) {
 		bool flag = true;
@@ -841,21 +858,24 @@ void GUIUpdater::getRigidsData() {
 					filter(P1_x_acum, P1_y_acum, P1);
 					filter(P2_x_acum, P2_y_acum, P2);
 					P1_x_acum.release(); P2_x_acum.release(); P1_y_acum.release(); P2_y_acum.release();
-
+					
+					archivoW << "p1 " << P1 << "\n";
+					archivoW << "p2 " << P2 << "\n";
+					
 					CustomCameraLibrary::stereo_triangulation(P2, P1, cdata::om, cdata::T, cdata::fc_left,
 						cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
 						cdata::kc_right, 0, XL, XR);
 
-					if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
+					//if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
 						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
 						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
 
 						//OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
 						//CustomCameraLibrary::StartServer();
-						doStartServer = false;
+						//doStartServer = false;
 						//CustomCameraLibrary::StreamFrame();
-						emit startServer();
-					}
+						//emit startServer();
+					//}
 
 					wResult = WaitForSingleObject(CustomCameraLibrary::sSemaphore, INFINITE);	// espera por la indicación del semáforo para seguir el hilo de ejecución//
 					if (wResult == WAIT_OBJECT_0) {
@@ -959,7 +979,9 @@ void GUIUpdater::getRigidsData() {
 		}
 
 		QCoreApplication::processEvents();
+		
 	}
+	archivoW.close();
 	//CustomCameraLibrary::StreamFrame();
 	//Beep(500, 500);
 }
@@ -1020,16 +1042,16 @@ bool GUIUpdater::getPointerData(const std::string &fileName) {
 			//				matFrame_1.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
 
-			cv::threshold(matFrame_1, threshold_1, CustomCameraLibrary::threshold_value,
-				CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
+			//cv::threshold(matFrame_1, threshold_1, CustomCameraLibrary::threshold_value,
+				//CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
 
-			erode(threshold_1, erosion_1, element); // Aplicar la operación de erosion
+			//erode(threshold_1, erosion_1, element); // Aplicar la operación de erosion
 
 			CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadores
 			cframe_1.trackFilteredMarker(marker, threshold_1, cframe_1, matFrame_1);
 			GetObjects(cframe_1, matFrame_1, PP1, A1, PP_Broca1);
 
-			CustomCameraLibrary::CorrespondenceDetection(PP1, A1 /*,PP_Broca1*/);
+			P1=CustomCameraLibrary::CorrespondenceDetection(PP1, A1 /*,PP_Broca1*/);
 			frame_1->Release();
 		}
 		if (frame_2) {
@@ -1037,15 +1059,15 @@ bool GUIUpdater::getPointerData(const std::string &fileName) {
 			//				matFrame_2.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
 
-			cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
+			//cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
 
-			erode(threshold_2, erosion_2, element); // Aplicar la operación de erosion
+			//erode(threshold_2, erosion_2, element); // Aplicar la operación de erosion
 
 			CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadores
 			cframe_2.trackFilteredMarker(marker, threshold_2, cframe_2, matFrame_2);
 			GetObjects(cframe_2, matFrame_2, PP2, A2, PP_Broca2);
 
-			CustomCameraLibrary::CorrespondenceDetection(PP2, A2/*,PP_Broca2*/);
+			P2=CustomCameraLibrary::CorrespondenceDetection(PP2, A2/*,PP_Broca2*/);
 			frame_2->Release();
 		}
 		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols)) {

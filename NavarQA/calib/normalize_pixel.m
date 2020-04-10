@@ -32,9 +32,14 @@ if nargin < 5,
    end;
 end;
 
-
+w=x_kk(1,:);
+x=cc(1);
+y=fc(1);
+z=x_kk(2,:);
+s=cc(2);
+p=fc(2);
 % First: Subtract principal point, and divide by the focal length:
-x_distort = [(x_kk(1,:) - cc(1))/fc(1);(x_kk(2,:) - cc(2))/fc(2)];
+x_distort = [w - x/y;(z - s)/p];
 
 % Second: undo skew
 x_distort(1,:) = x_distort(1,:) - alpha_c * x_distort(2,:);

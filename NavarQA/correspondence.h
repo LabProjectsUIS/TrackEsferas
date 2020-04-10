@@ -404,14 +404,21 @@ namespace CustomCameraLibrary {
 	int areas(Mat_<double> &A, Mat_<int> &areas_men) 
 	{
 		Mat_<double> Arreglo;
-		float mayor,menor,resultado;
+		double mayor = 0;
+		double menor = 0;
+		double resultado = 0;
 		cout << A;
 		bool state =  false;
-		//if (!detect_broca && A.rows % 5 == 0 && A.rows <= MAX_ESFERA) {
+
 		if (!detect_broca && A.rows <= MAX_ESFERA) 
 		{ //si no es broca y si las filas de A son menores o iguales a el limite(20)
 			int x=0;
 			Arreglo = A;
+			Arreglo(0, 0);
+			Arreglo(1, 0);
+			Arreglo(2, 0);
+			Arreglo(3, 0);
+			Arreglo(4, 0);
 			for (int i = 0; i < A.rows; i++)
 			{
 				if (mayor<Arreglo(i, 0)){
@@ -427,7 +434,7 @@ namespace CustomCameraLibrary {
 					//x = i;   //posicion del numero minimo
 				}
 			}
-			resultado = menor; //el area mas pequeña esssssss..
+			resultado = menor;
 
 
 			for (int i = 0; i < A.rows; i++) //recorriendo A hasta el numero de filas

@@ -18,8 +18,8 @@ namespace CustomCameraLibrary {
 
 	//#define SCAMERA_R 18773						///< serial de la cámara prime 13
 	//#define SCAMERA_L 18776						///< serial de la cámara prime 13
-	#define SCAMERA_R 410870						///< serial de la cámara flex
-	#define SCAMERA_L 410869///< serial de la cámara flex
+	#define SCAMERA_R 410869						///< serial de la cámara flex
+	#define SCAMERA_L 410870///< serial de la cámara flex
 
 	int COUNT = 0;
 	bool detectPointer = false;

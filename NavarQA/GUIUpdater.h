@@ -48,6 +48,9 @@ signals:
 private:
 	CameraLibrary::Camera *camera_1;
 	CameraLibrary::Camera *camera_2;
+	Core::DistortionModel m_lensDistortion;
+	CameraLibrary::cModuleVector *m_vec;
+	CameraLibrary::cModuleVectorProcessing *m_vecprocessor;
 	bool showZone;
 	void saveImage(std::string &fileName, cv::Mat img);
 	bool takeSnapshot;
