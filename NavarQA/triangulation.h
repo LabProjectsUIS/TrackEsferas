@@ -2,7 +2,7 @@
 #define _TRIANGULATE_POINTS_
 
 #include "opencv\cv.hpp"
-
+#include "globals.h"
 namespace CustomCameraLibrary {
 	using namespace cv;
 	using namespace std;
@@ -64,11 +64,12 @@ namespace CustomCameraLibrary {
 		xt.push_back(cv::Mat::ones(1, xt.cols, CV_64F));
 		xtt.push_back(cv::Mat::ones(1, xtt.cols, CV_64F));
 		int N = xt.cols;
-		
+		CustomCameraLibrary::detectPointer = true;
+
 		ofstream archivoXL;
 		if (!archivoXL.is_open())
 		{
-			archivoXL.open("XLSegmento.txt", std::ios::app);
+			archivoXL.open("XLObjecto.txt", std::ios::app);
 		}
 		//-- - Rotation matrix corresponding to the rigid motion between left and right cameras :
 		Rodrigues(om, R);
@@ -111,10 +112,10 @@ namespace CustomCameraLibrary {
 		
 		if (transXL.rows == 4 && transXL.cols == 3/* && detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
 		{
-			//CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
-			//if (CustomCameraLibrary::COUNT <= 1000)
-			//{
-				//archivoXL << CustomCameraLibrary::COUNT << "\t";
+			CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
+			if (CustomCameraLibrary::COUNT <= 1000)
+			{
+				archivoXL << CustomCameraLibrary::COUNT << "\t";
 				for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
 				{
 					for (int s = 0; s < transXL.cols; s++) //son 3 columnas entocnes de 0 a 2
@@ -135,7 +136,7 @@ namespace CustomCameraLibrary {
 				}
 
 				archivoXL << "\n";
-			//}
+			}
 
 		}
 		archivoXL.close();

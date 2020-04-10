@@ -13,6 +13,7 @@
 #include "opencv\cv.hpp"
 #include <time.h>
 #include <dos.h>
+#include "globals.h"
 
 namespace CustomCameraLibrary {
 	using namespace cv;
@@ -234,7 +235,7 @@ namespace CustomCameraLibrary {
 	
 		ofstream archivoP;
 		if (!archivoP.is_open()) {
-			archivoP.open("Segmento.txt", std::ios::app);
+			archivoP.open("ObjectoPunta.txt", std::ios::app);
 
 		}
 		P1 = P1.t();
@@ -249,12 +250,12 @@ namespace CustomCameraLibrary {
 			PointerY = cdata::PARAM(0, 1);
 			PointerZ = cdata::PARAM(0, 2);
 		}
-		else
+		/*else
 		{
 			PointerX = cdata::PARAMPunta(0, 0);									
 			PointerY = cdata::PARAMPunta(0, 1);
 			PointerZ = cdata::PARAMPunta(0, 2);
-		}
+		}*/
 	
 		PM = (P1 + P2 + P3) / 3;
 
@@ -268,37 +269,24 @@ namespace CustomCameraLibrary {
 
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
-		//int s = CustomCameraLibrary::COUNT;
+		int s = CustomCameraLibrary::COUNT;
 		if (!PE.empty())
 		{
 
-			//if (s <= 1000 && s>0)
-			//{
-				//archivoP << CustomCameraLibrary::COUNT << "\t";
+			if (s <= 1000 && s > 0)
+			{
+				archivoP << CustomCameraLibrary::COUNT << "\t";
 				archivoP << PE[0][0] << "\t";
 				archivoP << PE[0][1] << "\t";
 				archivoP << PE[0][2] << "\t";
 				archivoP << "\n";
-
-			//}
-			//else
-			//{
-			//	OutputDebugString(L"YA MIL");
-			//}
-			//archivoP << PE << "\n";
-		}
-		
-		//cout << "Punto final: " << PE;
-		/*for (int i = 0; i < PE.rows; i++)
-		{
-			for (int j = 0; i < PE.cols; j++) {
-				archivoP<< PE[i][j] << "\t";
 			}
-			archivoP << "\n";
+			else
+			{
+				OutputDebugString(L"YA MIL");
+			}
+
 		}
-	*/
-		
-		
 		return Point3d(PE);
 		archivoP.close();
 	}
@@ -349,19 +337,8 @@ namespace CustomCameraLibrary {
 			archivoP << PE[0][1] << "\t";
 			archivoP << PE[0][2] << "\t";
 			archivoP << "\n";*/
-			archivoP << PE << "\n";
+			//archivoP << PE << "\n";
 		}
-
-		//cout << "Punto final: " << PE;
-		/*for (int i = 0; i < PE.rows; i++)
-		{
-		for (int j = 0; i < PE.cols; j++) {
-		archivoP<< PE[i][j] << "\t";
-		}
-		archivoP << "\n";
-		}
-		*/
-
 
 		return Point3d(PE);
 		archivoP.close();
