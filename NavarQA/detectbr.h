@@ -285,6 +285,7 @@ namespace CustomCameraLibrary {
 			else
 			{
 				OutputDebugString(L"YA MIL");
+				Beep(480, 50);
 			}
 			//archivoP << PE << "\n";
 		}
