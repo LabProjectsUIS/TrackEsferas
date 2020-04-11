@@ -235,7 +235,7 @@ namespace CustomCameraLibrary {
 	
 		ofstream archivoP;
 		if (!archivoP.is_open()) {
-			archivoP.open("ObjetoPunta.txt", std::ios::app);
+			archivoP.open("SegmentoPunta.txt", std::ios::app);
 
 		}
 		P1 = P1.t();
