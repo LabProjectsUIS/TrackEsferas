@@ -244,12 +244,11 @@ namespace CustomCameraLibrary {
 		cv::Mat_<double> PM, Ux, Uz, Uy, temp, temp2, sum_ones, PE;
 		cv::Mat_<double> val(P3.rows, P3.cols);
 		double PointerX, PointerY, PointerZ;
-		if (!detect_pointer)
-		{
+		
 			PointerX = cdata::PARAM(0, 0);									//Si está detectando pointer evalue esto, sino evalue el otro arreglo.
 			PointerY = cdata::PARAM(0, 1);
 			PointerZ = cdata::PARAM(0, 2);
-		}
+		
 		/*else
 		{
 			PointerX = cdata::PARAMPunta(0, 0);									
