@@ -68,7 +68,7 @@ namespace CustomCameraLibrary {
 		ofstream archivoXL;
 		if (!archivoXL.is_open())
 		{
-			archivoXL.open("XLGrises.txt", std::ios::app);
+			archivoXL.open("XLGris.txt", std::ios::app);
 		}
 		//-- - Rotation matrix corresponding to the rigid motion between left and right cameras :
 		Rodrigues(om, R);
@@ -107,7 +107,7 @@ namespace CustomCameraLibrary {
 		int m = -1;
 		int s = -1;
 		
-		if (transXL.rows == 4 && transXL.cols == 3 && detectPointer == true) //Imprimir datos de esferas es un archivo xml
+		if (transXL.rows == 4 && transXL.cols == 3 /*&& detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
 		{
 			CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
 			if (CustomCameraLibrary::COUNT <= 1000)

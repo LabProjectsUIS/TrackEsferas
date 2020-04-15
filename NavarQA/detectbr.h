@@ -235,7 +235,7 @@ namespace CustomCameraLibrary {
 	
 		ofstream archivoP;
 		if (!archivoP.is_open()) {
-			archivoP.open("GrisesPunta.txt", std::ios::app);
+			archivoP.open("PARAM.txt", std::ios::app);
 
 		}
 		P1 = P1.t();
@@ -252,8 +252,15 @@ namespace CustomCameraLibrary {
 			//PointerX = cdata::PARAMPunta(0, 0);									
 			//PointerY = cdata::PARAMPunta(0, 1);
 			//PointerZ = cdata::PARAMPunta(0, 2);
+			int s = CustomCameraLibrary::COUNT;
+			if (s <= 1000 && s > 0)
+			{
+				archivoP<< cdata::PARAM(0, 0)<<"\t";
+				archivoP << cdata::PARAM(0, 1)<<"\t";
+				archivoP << cdata::PARAM(0, 2) << "\t";
+				archivoP << "\n";
+			}
 		
-	
 		PM = (P1 + P2 + P3) / 3;
 
 		sum_ones = cv::Mat::ones(3, 1, CV_8UC1);
@@ -266,8 +273,8 @@ namespace CustomCameraLibrary {
 
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
-		int s = CustomCameraLibrary::COUNT;
-		if (!PE.empty())
+
+		/*if (!PE.empty())
 		{
 		
 			if (s<=1000 && s>0)
@@ -285,19 +292,7 @@ namespace CustomCameraLibrary {
 				Beep(480, 50);
 			}
 			//archivoP << PE << "\n";
-		}
-		
-		//cout << "Punto final: " << PE;
-		/*for (int i = 0; i < PE.rows; i++)
-		{
-			for (int j = 0; i < PE.cols; j++) {
-				archivoP<< PE[i][j] << "\t";
-			}
-			archivoP << "\n";
-		}
-	*/
-		
-		
+		}*/	
 		return Point3d(PE);
 		archivoP.close();
 	}
@@ -335,7 +330,7 @@ namespace CustomCameraLibrary {
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
 
-		if (!PE.empty())
+		/*if (!PE.empty())
 		{
 			if (1000<=CustomCameraLibrary::COUNT>0)
 			{
@@ -347,7 +342,7 @@ namespace CustomCameraLibrary {
 
 			}
 			//archivoP << PE << "\n";
-		}
+		}*/
 
 		return Point3d(PE);
 		archivoP.close();
