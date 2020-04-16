@@ -234,10 +234,10 @@ namespace CustomCameraLibrary {
 	Point3d pointerPoint(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
 	
 		ofstream archivoP;
-		if (!archivoP.is_open()) {
-			archivoP.open("ObjetoPunta.txt", std::ios::app);
+		/*if (!archivoP.is_open()) {
+			archivoP.open("SegmentPARAM.txt", std::ios::app);
 
-		}
+		}*/
 		P1 = P1.t();
 		P2 = P2.t();
 		P3 = P3.t();
@@ -248,14 +248,8 @@ namespace CustomCameraLibrary {
 			PointerX = cdata::PARAM(0, 0);									//Si está detectando pointer evalue esto, sino evalue el otro arreglo.
 			PointerY = cdata::PARAM(0, 1);
 			PointerZ = cdata::PARAM(0, 2);
+		int s = CustomCameraLibrary::COUNT;
 		
-		/*else
-		{
-			PointerX = cdata::PARAMPunta(0, 0);									
-			PointerY = cdata::PARAMPunta(0, 1);
-			PointerZ = cdata::PARAMPunta(0, 2);
-		}*/
-	
 		PM = (P1 + P2 + P3) / 3;
 
 		sum_ones = cv::Mat::ones(3, 1, CV_8UC1);
@@ -268,8 +262,8 @@ namespace CustomCameraLibrary {
 
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
-		int s = CustomCameraLibrary::COUNT;
-		if (!PE.empty())
+		
+		/*if (!PE.empty())
 		{
 
 			if (s <= 1000 && s > 0)
@@ -285,9 +279,9 @@ namespace CustomCameraLibrary {
 				OutputDebugString(L"YA MIL");
 			}
 
-		}
+		}*/
 		return Point3d(PE);
-		archivoP.close();
+		//archivoP.close();
 	}
 
 	Point3d Punta(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {

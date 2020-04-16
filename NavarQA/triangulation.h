@@ -127,8 +127,6 @@ namespace CustomCameraLibrary {
 						else
 
 						{
-
-
 							archivoXL << transXL[m][s] << "\t";
 						}
 					}
@@ -136,6 +134,11 @@ namespace CustomCameraLibrary {
 				}
 
 				archivoXL << "\n";
+			}
+			else
+			{
+				CustomCameraLibrary::COUNT = 0;
+				system("PAUSE");
 			}
 
 		}
