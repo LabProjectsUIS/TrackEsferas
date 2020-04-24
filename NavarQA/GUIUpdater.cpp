@@ -58,17 +58,19 @@ bool GUIUpdater::activateCameras() {
 *	y demás parámetros iniciales (exposición, intensidad y umbral).
 */
 void GUIUpdater::startCameras() {
-	camera_1->SetVideoType(Core::GrayscaleMode);
+	camera_1->SetVideoType(Core::ObjectMode);
 	camera_1->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_1->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_1->SetIntensity(CustomCameraLibrary::intensity_cvalue);
+	camera_1->SetFrameRate(120);
 	camera_1->SetName(CNAME_1);
 	camera_1->Start();
 
-	camera_2->SetVideoType(Core::GrayscaleMode);
+	camera_2->SetVideoType(Core::ObjectMode);
 	camera_2->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_2->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_2->SetIntensity(CustomCameraLibrary::intensity_cvalue);
+	camera_2->SetFrameRate(120);
 	camera_2->SetName(CNAME_2);
 	camera_2->Start();
 }
@@ -204,7 +206,7 @@ void GUIUpdater::setBroca(CustomCameraLibrary::BodyR &rigid, cv::Mat_<double> &d
 * Envía los frames de cada una de las cámaras a la GUI mediante señales y controla la lógica de captura de imágenes.
 */
 void GUIUpdater::ShowCameras() {
-	pics2Take = 20;
+	pics2Take = 30;
 	int cameraWidth_1 = camera_1->Width(); // Obtener la propiedad ancho de la resolucián de la cámara derecha.
 	int cameraHeight_1 = camera_1->Height(); // Obtener la propiedad alto de la resolucián de la cámara derecha.
 
@@ -225,7 +227,6 @@ void GUIUpdater::ShowCameras() {
 
 	startCameras();
 	int key = 0;
-
 	cv::Mat gray, threshold_1, threshold_2;
 
 	while (c <= pics2Take) {
@@ -241,9 +242,9 @@ void GUIUpdater::ShowCameras() {
 		if (frame_1) {
 			frame_1->Rasterize(cameraWidth_1, cameraHeight_1, matFrame_1.step, BACKBUFFER_BITSPERPIXEL, matFrame_1.data);
 
-			if (showZone) {
+			/*if (showZone) {
 				cv::rectangle(matFrame_1, center, center + cv::Point(CustomCameraLibrary::square_size, CustomCameraLibrary::square_size), cv::Scalar(0, 0, 255), 3);
-			}
+			}*/
 			if (takeSnapshot) {
 				t0 = time(0);
 				if (c) {
@@ -272,6 +273,7 @@ void GUIUpdater::ShowCameras() {
 				setTakeSnapshot(false);
 				c++;
 			}
+			
 			emit updateRightCamera(imdisplay);
 			frame_2->Release();
 		}
@@ -637,6 +639,7 @@ void GUIUpdater::writeMatrices() {
 			}
 			else {
 				samples = 0;
+				int num;
 				if (P1.cols == P1_x_acum.cols) {
 					filter(P1_x_acum, P1_y_acum, P1);
 					filter(P2_x_acum, P2_y_acum, P2);
@@ -693,15 +696,15 @@ void GUIUpdater::getRigidsData() {
 
 	int cameraWidth_2 = camera_2->Width();
 	int cameraHeight_2 = camera_2->Height();
-
+	int num = 0;
 	int samples = 0;
 	int samplesbr = 0;
-	int sample_limit = 1;
+	int sample_limit = 16;
 	int sample_limitBr = 1;
 	int erosion_type = cv::MORPH_CROSS;
 	int erosion_size = 2;
-
-	int key = 0;
+	ostringstream ostr, ostr2;
+	int x = 2;
 
 	startCameras();
 
@@ -722,74 +725,75 @@ void GUIUpdater::getRigidsData() {
 	cv::Mat_<double> P1_x_acum, P2_x_acum, P1_y_acum, P2_y_acum;
 	cv::Mat_<double> P1Br_x_acum, P2Br_x_acum, P1Br_y_acum, P2Br_y_acum;
 	//CustomCameraLibrary::Cloud Pointer(fileName, AUTO);
-
+	
 	//ADICIONADO PARA VERIFICAR DATOS ENVIADOS
 	const char* fileNameVer = "C:\\Users\\eduar_000\\Documents\\Borrar\\Datos_Broca.txt";
 	FILE *fp = fopen(fileNameVer, "w");
 	int Cont = 0;
 
 	cv::Mat_<double> temporal, angles;
-	ofstream archivoW;
-	if (!archivoW.is_open()) {
-		archivoW.open("P1yP2.txt", std::ios::app);
-
-	}
-
+	
 	while (detectRigids) {
 		CameraLibrary::Frame *frame_1 = camera_1->GetLatestFrame();
 		CameraLibrary::Frame *frame_2 = camera_2->GetLatestFrame();//CameraLibrary::Frame *frame_1 = camera_1->GetLatestFrame();
 																   //CameraLibrary::Frame *frame_2 = camera_2->GetLatestFrame();
-		cv::Mat_<double> PP1, PP2, A1, A2, P1, P2, D1, D2, PP_Broca1, PP_Broca2;	// Matriz de Proyeccián de puntos x,y en la imagen, A1, A2, son las areas de las esferas
+		cv::Mat_<double> PP1, PP2, A1, A2, P1, P2, D1, D2, PP_Broca1, PP_Broca2, P1temp, P2temp;	// Matriz de Proyeccián de puntos x,y en la imagen, A1, A2, son las areas de las esferas
 		cv::Mat_<double> XL, XR, XBroca, XLBroca, XRBroca;					// Matriz de puntos 3D vistos desde la cámara izquierda/derecha 
-																			//			BodyR *rigid;
-																			//CustomCameraLibrary::cFrame cframe_1, cframe_2;
-																			//CameraLibrary::Frame cframe_1, cframe_2;
-																			//PP_Broca1(1, 0) = 9999;
-																			//PP_Broca2(1, 0) = 9999;
+		//			BodyR *rigid;
+		//CustomCameraLibrary::cFrame cframe_1, cframe_2;
+		//CameraLibrary::Frame cframe_1, cframe_2;
+		//PP_Broca1(1, 0) = 9999;
+		//PP_Broca2(1, 0) = 9999;
 		if (frame_1) {
+
+			
+
 			frame_1->Rasterize(cameraWidth_1, cameraHeight_1, matFrame_1.step, BACKBUFFER_BITSPERPIXEL, matFrame_1.data);
 			//				matFrame_1.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
+			//ostr << "../right0" << ++x << ".bmp";
+			//saveImage(ostr.str(), matFrame_1);
 
-			cv::threshold(matFrame_1, threshold_1, CustomCameraLibrary::threshold_value,CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
-
-			erode(threshold_1, erosion_1, element); // Aplicar la operación de erosion
-			CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadores
+			//cv::threshold(matFrame_1, threshold_1, CustomCameraLibrary::threshold_value,CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
+			//erode(threshold_1, erosion_1, element); // Aplicar la operación de erosion
+			//CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadores
 			//frame_1.trackFilteredMarker(marker, threshold_1, frame_1, matFrame_1);
 			//frame_1->SetObjectCount;
 			GetObjects2(frame_1, matFrame_1, PP1, A1);
 			//GetObjects2(frame_1, matFrame_1, PP1, A1,);
-			int m = 1;
-			//CustomCameraLibrary::CorrespondenceDetection(PP1, A1, P1, PP_Broca1);
-			
 			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1);
-			
-			//P1 = PP1;
 			imshow("Camara Derecha", matFrame_1);
 			frame_1->Release();
+			
 		}
 
 		if (frame_2) {
 			frame_2->Rasterize(cameraWidth_2, cameraHeight_2, matFrame_2.step, BACKBUFFER_BITSPERPIXEL, matFrame_2.data);
+			//ostr2 << "../left0" << ++x << ".bmp";
+			//saveImage(ostr2.str(), matFrame_2);
 			//				matFrame_2.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
 
-			cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
-
-																																									  //erode(threshold_2, erosion_2, element); // Aplicar la operación de erosion
-
-																																									  //CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadores
-																																									  //cframe_2.trackFilteredMarker(marker, threshold_2, cframe_2, matFrame_2);
-																																									  //GetObjects(cframe_2, matFrame_2, PP2, A2, PP_Broca2);
+			//cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
+			//erode(threshold_2, erosion_2, element); // Aplicar la operación de erosion
+			//CustomCameraLibrary::Marker marker; // Crear un objeto temporal para encontrar los marcadoresGetObjects2(frame_2, matFrame_2, PP2, A2);
 			GetObjects2(frame_2, matFrame_2, PP2, A2);
 			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2);
-			//CustomCameraLibrary::CorrespondenceDetection(PP2, A2, P2, PP_Broca2);
-			//P2 = PP2
-			
 			imshow("Camara Izquierda", matFrame_2);
 			frame_2->Release();
 		}
+		//P1temp=P1.t();
+		//P2temp=P2.t();
+
 		
+		/*for (int i = 0; i < P1temp.cols; i++)
+		{
+			for (int j = 0; j < P1temp.rows; j++)
+			{
+				archivoP1 << P1temp[i][j] << "\t";
+			}
+		}archivoP1 << "\n";*/
+
 		/*
 		if ((!PP_Broca1.empty() && !PP_Broca2.empty()) && (PP_Broca1.cols == PP_Broca2.cols)) {
 		bool flag = true;
@@ -858,21 +862,21 @@ void GUIUpdater::getRigidsData() {
 					filter(P1_x_acum, P1_y_acum, P1);
 					filter(P2_x_acum, P2_y_acum, P2);
 					P1_x_acum.release(); P2_x_acum.release(); P1_y_acum.release(); P2_y_acum.release();
-					
+
 					CustomCameraLibrary::stereo_triangulation(P2, P1, cdata::om, cdata::T, cdata::fc_left,
 						cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
 						cdata::kc_right, 0, XL, XR);
 
-					//if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
-						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
-						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
+					if (doStartServer) { // iniciar servidor y capturar los cuerpor rigidos en escena para crear la descripcion de ellos
+					CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
+					CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
 
-						//OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
-						//CustomCameraLibrary::StartServer();
-						//doStartServer = false;
-						//CustomCameraLibrary::StreamFrame();
-						//emit startServer();
-					//}
+					OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
+					CustomCameraLibrary::StartServer();
+					doStartServer = false;
+					CustomCameraLibrary::StreamFrame();
+					emit startServer();
+					}
 
 					wResult = WaitForSingleObject(CustomCameraLibrary::sSemaphore, INFINITE);	// espera por la indicación del semáforo para seguir el hilo de ejecución//
 					if (wResult == WAIT_OBJECT_0) {
@@ -976,12 +980,12 @@ void GUIUpdater::getRigidsData() {
 		}
 
 		QCoreApplication::processEvents();
-		
+	
 	}
-	archivoW.close();
 	//CustomCameraLibrary::StreamFrame();
 	//Beep(500, 500);
 }
+
 
 /**
 * Si detecta el pointer, almacena los puntos barridos en un archivo. También emite señales para indicar si se está
@@ -1087,6 +1091,7 @@ bool GUIUpdater::getPointerData(const std::string &fileName) {
 			}
 			else {
 				samples = 0;
+				int num;
 				if (P1.cols == P1_x_acum.cols) {
 					filter(P1_x_acum, P1_y_acum, P1);
 					filter(P2_x_acum, P2_y_acum, P2);

@@ -66,10 +66,18 @@ namespace CustomCameraLibrary {
 		int N = xt.cols;
 		CustomCameraLibrary::detectPointer = true;
 
-		ofstream archivoXL;
+		ofstream archivoXL,archivoP1, archivoP2;
 		if (!archivoXL.is_open())
 		{
 			archivoXL.open("XLObjeto.txt", std::ios::app);
+		}
+		if (!archivoP1.is_open()) {
+			archivoP1.open("P1.txt", std::ios::app);
+
+		}
+		if (!archivoP2.is_open()) {
+			archivoP2.open("P2.txt", std::ios::app);
+
 		}
 		//-- - Rotation matrix corresponding to the rigid motion between left and right cameras :
 		Rodrigues(om, R);
@@ -110,11 +118,35 @@ namespace CustomCameraLibrary {
 		int m = -1;
 		int s = -1;
 		
-		if (transXL.rows == 4 && transXL.cols == 3/* && detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
+
+		if (transXL.rows == 4 && transXL.cols == 3 /*&& detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
 		{
 			CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
-			if (CustomCameraLibrary::COUNT <= 1000)
+			if (CustomCameraLibrary::COUNT <=1000)
 			{
+			
+				archivoP2 << CustomCameraLibrary::COUNT << "\t";
+				archivoP2 << xL[0][0] << "\t";
+				archivoP2 << xL[1][0] << "\t";
+				archivoP2 << xL[0][1] << "\t";
+				archivoP2 << xL[1][1] << "\t";
+				archivoP2 << xL[0][2] << "\t";
+				archivoP2 << xL[1][2] << "\t";
+				archivoP2 << xL[0][3] << "\t";
+				archivoP2 << xL[1][3] << "\t";
+				archivoP2 << "\n";
+
+				archivoP1 << CustomCameraLibrary::COUNT << "\t";
+				archivoP1 << xR[0][0] << "\t";
+				archivoP1 << xR[1][0] << "\t";
+				archivoP1 << xR[0][1] << "\t";
+				archivoP1 << xR[1][1] << "\t";
+				archivoP1 << xR[0][2] << "\t";
+				archivoP1 << xR[1][2] << "\t";
+				archivoP1 << xR[0][3] << "\t";
+				archivoP1 << xR[1][3] << "\t";
+				archivoP1 << "\n";
+
 				archivoXL << CustomCameraLibrary::COUNT << "\t";
 				for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
 				{
@@ -140,9 +172,10 @@ namespace CustomCameraLibrary {
 				CustomCameraLibrary::COUNT = 0;
 				system("PAUSE");
 			}
-
 		}
 		archivoXL.close();
+		archivoP1.close();
+		archivoP2.close();
 	}
 
 	/**

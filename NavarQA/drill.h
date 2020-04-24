@@ -133,6 +133,7 @@ namespace CustomCameraLibrary {
 	tip findTip(Mat_<double> PPP1, Mat_<double> PPP2) {
 		Mat_<double> XRB, XLB;
 		tip Tip;
+		int num;
 		stereo_triangulation(PPP2, PPP1, cdata::om, cdata::T,
 			cdata::fc_left, cdata::cc_left, cdata::kc_left, 0,
 			cdata::fc_right, cdata::cc_right, cdata::kc_right, 0, XLB, XRB);
