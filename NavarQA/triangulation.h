@@ -146,8 +146,8 @@ namespace CustomCameraLibrary {
 				archivoP1 << xR[0][3] << "\t";
 				archivoP1 << xR[1][3] << "\t";
 				archivoP1 << "\n";
-
-				archivoXL << CustomCameraLibrary::COUNT << "\t";
+				
+			archivoXL << CustomCameraLibrary::COUNT << "\t";
 				for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
 				{
 					for (int s = 0; s < transXL.cols; s++) //son 3 columnas entocnes de 0 a 2
@@ -164,7 +164,7 @@ namespace CustomCameraLibrary {
 					}
 					archivoXL << "\t";
 				}
-
+				
 				archivoXL << "\n";
 			}
 			else

@@ -1,11 +1,10 @@
 pause(10)
-root = 'C:\Users\eduar_000\Documents\Visual Studio 2015\Projects\NavarQA\NavarQA\calib';
+root = 'D:\TrackEsferas\NavarQA\calib';
 
 addpath(genpath(root));
 cd(root)
 copyfile left\Left*.tif stereo
 copyfile right\Right*.tif stereo
-clear
 clc
 
 robot = java.awt.Robot;
@@ -31,13 +30,17 @@ commands = {'cd left';
             '';
             '';
             '';
+            '';
+            '';
+            '';
+            '';
             'saving_calib';
             'cd ..';
             'movefile left\Calib_Results.mat stereo\Calib_Results_left.mat';
             };
         
 for c = 1:length(commands)
-    sendCmd(robot, commands{c});
+sendCmd(robot, commands{c});
 end
 
 commands = {'clear';

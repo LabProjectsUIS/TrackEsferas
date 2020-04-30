@@ -215,7 +215,7 @@ void GUIUpdater::ShowCameras() {
 
 	cv::Point center((cameraWidth_1 - CustomCameraLibrary::square_size) / 2,
 		(cameraHeight_1 - CustomCameraLibrary::square_size) / 2);
-
+	int exmin, exmax, tresmin, tresmax, intensimin, intensimax;
 	int samples = 0;
 	int c = 0;
 	int launchCalib = pics2Take + 1;
@@ -226,6 +226,12 @@ void GUIUpdater::ShowCameras() {
 	const int BACKBUFFER_BITSPERPIXEL = 8;
 
 	startCameras();
+	camera_1->SetFrameRate(120);
+	camera_2->SetFrameRate(120);
+	int cameraframerate = camera_1->FrameRate();
+
+	
+
 	int key = 0;
 	cv::Mat gray, threshold_1, threshold_2;
 
@@ -698,8 +704,8 @@ void GUIUpdater::getRigidsData() {
 	int cameraHeight_2 = camera_2->Height();
 	int num = 0;
 	int samples = 0;
-	int samplesbr = 0;
-	int sample_limit = 16;
+	int samplesbr = 1;
+	int sample_limit = 0;
 	int sample_limitBr = 1;
 	int erosion_type = cv::MORPH_CROSS;
 	int erosion_size = 2;
@@ -744,6 +750,7 @@ void GUIUpdater::getRigidsData() {
 		//CameraLibrary::Frame cframe_1, cframe_2;
 		//PP_Broca1(1, 0) = 9999;
 		//PP_Broca2(1, 0) = 9999;
+		
 		if (frame_1) {
 
 			
@@ -773,6 +780,7 @@ void GUIUpdater::getRigidsData() {
 			//saveImage(ostr2.str(), matFrame_2);
 			//				matFrame_2.copyTo(matFrame);
 			//				ReleaseSemaphore(drillSemaphore, 1, NULL);
+			
 
 			//cv::threshold(matFrame_2, threshold_2, CustomCameraLibrary::threshold_value, CustomCameraLibrary::max_BINARY_value, CustomCameraLibrary::threshold_type); // thresholding a la imágen para aislar los marcadores de la escena
 			//erode(threshold_2, erosion_2, element); // Aplicar la operación de erosion
@@ -839,7 +847,7 @@ void GUIUpdater::getRigidsData() {
 		{
 			Beep(350, 50);
 
-			if (samples < sample_limit)
+			/*if (samples < sample_limit)
 			{
 				if (P1.cols == P1_x_acum.cols) {
 					P1_x_acum.push_back(P1.row(0));
@@ -855,13 +863,13 @@ void GUIUpdater::getRigidsData() {
 					P2_x_acum = P2.row(0);
 					P2_y_acum = P2.row(1);
 				}
-			}
-			else {
-				samples = 0;
-				if (P1.cols == P1_x_acum.cols) {
+			}*/
+			/*else {
+				samples = 0;*/
+				/*if (P1.cols == P1_x_acum.cols) {
 					filter(P1_x_acum, P1_y_acum, P1);
 					filter(P2_x_acum, P2_y_acum, P2);
-					P1_x_acum.release(); P2_x_acum.release(); P1_y_acum.release(); P2_y_acum.release();
+					P1_x_acum.release(); P2_x_acum.release(); P1_y_acum.release(); P2_y_acum.release();*/
 
 					CustomCameraLibrary::stereo_triangulation(P2, P1, cdata::om, cdata::T, cdata::fc_left,
 						cdata::cc_left, cdata::kc_left, 0, cdata::fc_right, cdata::cc_right,
@@ -926,8 +934,6 @@ void GUIUpdater::getRigidsData() {
 
 						CustomCameraLibrary::nbr++;
 
-						int l = CustomCameraLibrary::nbr++;
-						int flag = 11;
 						// ADICIONADO 
 						/*if(Cont>=0){
 
@@ -975,15 +981,15 @@ void GUIUpdater::getRigidsData() {
 					}
 					else if (!ReleaseSemaphore(CustomCameraLibrary::sSemaphore, 1, NULL))
 						printf("ReleaseSemaphore error: %d\n", GetLastError());
-				}
-			}
+				//}
+			//}
 		}
 
 		QCoreApplication::processEvents();
 	
 	}
-	//CustomCameraLibrary::StreamFrame();
-	//Beep(500, 500);
+	CustomCameraLibrary::StreamFrame();
+	Beep(500, 500);
 }
 
 

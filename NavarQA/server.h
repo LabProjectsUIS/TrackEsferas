@@ -177,10 +177,10 @@ int CreateServer(int iConnectionType) {
 			printf("Multicast Group : %s:%d\n", szMulticastGroup, iMulticastPort);
 		}
 		else {
-			//printf("Connection Type : Unicast\n");
-			//s.str("");
-			//s << "Connection Type : Unicast";
-			//WriteW(s.str());
+			printf("Connection Type : Unicast\n");
+			s.str("");
+			s << "Connection Type : Unicast";
+			WriteW(s.str());
 		}
 		return ErrorCode_OK;
 	}
