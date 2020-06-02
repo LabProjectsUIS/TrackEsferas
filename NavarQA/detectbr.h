@@ -14,11 +14,15 @@
 #include <time.h>
 #include <dos.h>
 #include "globals.h"
+#include <math.h>
+#include<iostream> 
+
 
 namespace CustomCameraLibrary {
 	using namespace cv;
 	using namespace std;
 
+#define PI 3.14159265
 #define N_MARKERS 3				///< número de marcadores que la función joskstra() usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.
 #define N_MARKERSB 2
 	//		cout << A << endl;
@@ -42,7 +46,7 @@ namespace CustomCameraLibrary {
 	const int phanton = 6;	///< indicador que representa el phanton
 	const int broca = 5;///< indicador que representa la broca
 
-	float DELTA = 1.09;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
+	float DELTA = 1.5;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
@@ -170,6 +174,74 @@ namespace CustomCameraLibrary {
 		}
 
 		return C;
+	}
+	/**
+	*	Obtiene el tangente inverso entre dos Mat_
+	*	@param y Primer Mat_
+	*	@param x Segundo Mat_
+	*	@return Tangente inverso entre x e y
+	*/
+	cv::Mat invTan2(cv::Mat_<double> y, cv::Mat_<double> x) {
+		cv::Mat_<double> Ainv;
+		double result;
+
+		for (int i = 0; i < y.rows; i++)
+		{
+			for (int j = 0; j < x.cols; j++)
+			{
+				result = atan2(y[i][j], x[i][j]) * 180 / PI;
+				if (result<0)
+				{
+					result = result + 360;
+				}
+				Ainv.push_back(result);
+			}
+		}
+		return Ainv;
+	}
+	/**
+	*	Ordena una matriz mediante indices determinados_
+	*	@param InputMatrix Matriz a ordenar
+	*	@param InputIndex Matriz de indices
+		@param num filas
+	*	@return temp
+	*/
+	cv::Mat OrderByIdx(cv::Mat_<double> InputMatrix,cv::Mat InputIndex, int num) {
+		cv::Mat_<double> temp(num,2);
+
+		// arr[i] should be present at index[i] index 
+		//for (int i = 0; i < InputMatrix.rows; i++) {
+			//for (int j = 0; j < InputMatrix.cols; j++)
+			//{
+				//temp.at<double>(InputIndex.at<int>(i, 0),j) = InputMatrix.at<double>(i, j);
+			//}
+		//}
+		
+		temp.at<double>(0, 0) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 0);
+		temp.at<double>(0, 1) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 1); //3 de idx
+
+		temp.at<double>(1, 0) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 0);//1 de idx
+		temp.at<double>(1, 1) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 1);//1 de idx
+
+		temp.at<double>(2, 0) = InputMatrix.at<double>(InputIndex.at<int>(2, 0), 0); //2 de idx
+		temp.at<double>(2, 1) = InputMatrix.at<double>(InputIndex.at<int>(2, 0), 1); //2 de idx
+
+		temp.at<double>(3, 0) = InputMatrix.at<double>(InputIndex.at<int>(3, 0), 0); //0 de idx
+		temp.at<double>(3, 1) = InputMatrix.at<double>(InputIndex.at<int>(3, 0), 1); //0 de idx
+
+			//temp[a][0];
+			//double a = InputMatrix[i][0];
+			//double b = InputMatrix[i][0];
+		// Copy temp[] to arr[] 
+		return temp;
+	}
+
+
+
+
+	bool EvaluateExtent(cv::Mat_<double> Areas_Menores, cv::Mat_<double> Areas_Mayores) {
+
+		return false;
 	}
 
 	/**
@@ -722,7 +794,7 @@ namespace CustomCameraLibrary {
 		vector<float> vec;													// vector que llevará el conjunto de distancias teóricas de los cuerpos rígidos.
 		int nBRigid = dspSet.rows;											// número de cuerpos rígidos que se deberían detectar.
 		int  N = spSet.rows;
-		//archivoDI << spSet << "\t";   //Revisando elementos 
+		archivoDI << spSet << "\t";   //Revisando elementos 
 		/*if (!spSet.empty() && spSet.rows==3 && spSet.cols==3) {
 			for (w = 0; w < spSet.rows; w++)
 			{

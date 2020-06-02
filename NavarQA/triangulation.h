@@ -119,35 +119,27 @@ namespace CustomCameraLibrary {
 		int s = -1;
 		
 
-		if (transXL.rows == 4 && transXL.cols == 3 /*&& detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
-		{
-			CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
-			if (CustomCameraLibrary::COUNT <=1000)
-			{
+		//if (transXL.rows == 4 && transXL.cols == 3 /*&& detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
+		//{
+			//CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
+			//if (CustomCameraLibrary::COUNT <=1000)
+			//{
 			
-				archivoP2 << CustomCameraLibrary::COUNT << "\t";
-				archivoP2 << xL[0][0] << "\t";
-				archivoP2 << xL[1][0] << "\t";
-				archivoP2 << xL[0][1] << "\t";
-				archivoP2 << xL[1][1] << "\t";
-				archivoP2 << xL[0][2] << "\t";
-				archivoP2 << xL[1][2] << "\t";
-				archivoP2 << xL[0][3] << "\t";
-				archivoP2 << xL[1][3] << "\t";
-				archivoP2 << "\n";
-
-				archivoP1 << CustomCameraLibrary::COUNT << "\t";
-				archivoP1 << xR[0][0] << "\t";
-				archivoP1 << xR[1][0] << "\t";
-				archivoP1 << xR[0][1] << "\t";
-				archivoP1 << xR[1][1] << "\t";
-				archivoP1 << xR[0][2] << "\t";
-				archivoP1 << xR[1][2] << "\t";
-				archivoP1 << xR[0][3] << "\t";
-				archivoP1 << xR[1][3] << "\t";
-				archivoP1 << "\n";
+				//archivoP2 << CustomCameraLibrary::COUNT << "\t";
+		/*
+				for (int i = 0; i < xL.rows; i++)
+				{
+					for (int j = 0; j < xL.cols; j++)
+					{
+						archivoP1 << xR[i][j] << "\t";
+						archivoP2<<xL[i][j] << "\t";
+					}
+					archivoP1 << "\n";
+					archivoP2 << "\n";
+				}
+		
 				
-			archivoXL << CustomCameraLibrary::COUNT << "\t";
+			//archivoXL << CustomCameraLibrary::COUNT << "\t";
 				for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
 				{
 					for (int s = 0; s < transXL.cols; s++) //son 3 columnas entocnes de 0 a 2
@@ -166,16 +158,17 @@ namespace CustomCameraLibrary {
 				}
 				
 				archivoXL << "\n";
-			}
+			/*}
 			else
 			{
 				CustomCameraLibrary::COUNT = 0;
 				system("PAUSE");
-			}
-		}
+			}*/
+		//}
+		/*
 		archivoXL.close();
 		archivoP1.close();
-		archivoP2.close();
+		archivoP2.close();*/
 	}
 
 	/**

@@ -257,11 +257,7 @@ int CreateServer(int iConnectionType) {
 	void BuildDescription(sDataDescriptions* pDescription) { 
 		pDescription->nDataDescriptions = 0;
 		int index = 0;
-		ofstream archivoD;
-		if (!archivoD.is_open()) {
-			archivoD.open("test.txt", std::ios::app);
-
-		}
+		
 		sResult = WaitForSingleObject(brSemaphore, INFINITE);
 		if (sResult == WAIT_OBJECT_0) 
 		{
@@ -308,7 +304,6 @@ int CreateServer(int iConnectionType) {
 			pDescription->arrDataDescriptions[index].Data.MarkerSetDescription = pMarkerSetDescription;
 			pDescription->nDataDescriptions++;
 			index++;
-			archivoD.close();
 		}
 		// Release the semaphore when task is finished
 		if (!ReleaseSemaphore(sSemaphore, 1, NULL))

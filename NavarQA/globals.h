@@ -29,9 +29,15 @@ namespace CustomCameraLibrary {
 	int threshold_type = 3;						///< tipo de de threshold (usado en tratamiento de binarización)
 
 	// Constantes para la cámara
-	int exposure_cvalue = 1195;					///< valor por omisión para la exposición de la cámara.
-	int threshold_cvalue = 187;					///< valor por omisión para el threshold la cámara.
-	int intensity_cvalue = 1;				///< valor por omisión para la intensidad de la cámara.
+	int exposure_cvalue = 100;					///< valor por omisión para la exposición de la cámara.
+	int threshold_cvalue = 200;					///< valor por omisión para el threshold la cámara.
+	int intensity_cvalue = 4;				///< valor por omisión para la intensidad de la cámara.
+
+	/* //Parametros para calibración de cámaras
+	int exposure_cvalue = 250;					///< valor por omisión para la exposición de la cámara.
+	int threshold_cvalue = 200;					///< valor por omisión para el threshold la cámara.
+	int intensity_cvalue = 15;				///< valor por omisión para la intensidad de la cámara.
+	*/
 	
 	int fps = 211;
 	// Parámetros generales

@@ -1,0 +1,48 @@
+%YAML:1.0
+    T: !!opencv-matrix
+        rows: 3
+        cols: 1
+        dt: d
+        data: [ -230.601307554, 0.603048656, 27.909592042]
+    om: !!opencv-matrix
+        rows: 3
+        cols: 1
+        dt: d
+        data: [ 0.009768400, 0.316089314, -0.000229253]
+    fc_right: !!opencv-matrix
+        rows: 2
+        cols: 1
+        dt: d
+        data: [ 1212.990964715, 1216.214619654]
+    cc_right: !!opencv-matrix
+        rows: 2
+        cols: 1
+        dt: d
+        data: [ 648.217549629, 507.767665184]
+    kc_right: !!opencv-matrix
+        rows: 5
+        cols: 1
+        dt: d
+        data: [ -0.092895315, 0.009078399, -0.003218850, 
+            0.002190163, 0.000000000]
+    fc_left: !!opencv-matrix
+        rows: 2
+        cols: 1
+        dt: d
+        data: [ 1206.220941296, 1208.770749571]
+    cc_left: !!opencv-matrix
+        rows: 2
+        cols: 1
+        dt: d
+        data: [ 653.210433997, 496.283800168]
+    kc_left: !!opencv-matrix
+        rows: 5
+        cols: 1
+        dt: d
+        data: [ -0.104574549, 0.134658202, -0.002615928, 
+            0.005739591, 0.000000000]
+    emax: !!opencv-matrix
+        rows: 1
+        cols: 1
+        dt: d
+        data: [ 1.241513282]
