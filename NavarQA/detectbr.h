@@ -7,18 +7,22 @@
 #include <windows.h>
 #include<stdlib.h>
 #include<fstream>
-#include <calibration.h>
+//#include <calibration.h>
 #include <iostream> 
 #include "data.h"
 #include "opencv\cv.hpp"
 #include <time.h>
 #include <dos.h>
-#include <globals.h>
+#include "globals.h"
+#include <math.h>
+#include<iostream> 
+
 
 namespace CustomCameraLibrary {
 	using namespace cv;
 	using namespace std;
 
+#define PI 3.14159265
 #define N_MARKERS 3				///< número de marcadores que la función joskstra() usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.
 #define N_MARKERSB 2
 	//		cout << A << endl;
@@ -42,7 +46,7 @@ namespace CustomCameraLibrary {
 	const int phanton = 6;	///< indicador que representa el phanton
 	const int broca = 5;///< indicador que representa la broca
 
-	float DELTA = 1.3;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
+	float DELTA = 1.5;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
@@ -171,6 +175,74 @@ namespace CustomCameraLibrary {
 
 		return C;
 	}
+	/**
+	*	Obtiene el tangente inverso entre dos Mat_
+	*	@param y Primer Mat_
+	*	@param x Segundo Mat_
+	*	@return Tangente inverso entre x e y
+	*/
+	cv::Mat invTan2(cv::Mat_<double> y, cv::Mat_<double> x) {
+		cv::Mat_<double> Ainv;
+		double result;
+
+		for (int i = 0; i < y.rows; i++)
+		{
+			for (int j = 0; j < x.cols; j++)
+			{
+				result = atan2(y[i][j], x[i][j]) * 180 / PI;
+				if (result<0)
+				{
+					result = result + 360;
+				}
+				Ainv.push_back(result);
+			}
+		}
+		return Ainv;
+	}
+	/**
+	*	Ordena una matriz mediante indices determinados_
+	*	@param InputMatrix Matriz a ordenar
+	*	@param InputIndex Matriz de indices
+		@param num filas
+	*	@return temp
+	*/
+	cv::Mat OrderByIdx(cv::Mat_<double> InputMatrix,cv::Mat InputIndex, int num) {
+		cv::Mat_<double> temp(num,2);
+
+		// arr[i] should be present at index[i] index 
+		//for (int i = 0; i < InputMatrix.rows; i++) {
+			//for (int j = 0; j < InputMatrix.cols; j++)
+			//{
+				//temp.at<double>(InputIndex.at<int>(i, 0),j) = InputMatrix.at<double>(i, j);
+			//}
+		//}
+		
+		temp.at<double>(0, 0) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 0);
+		temp.at<double>(0, 1) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 1); //3 de idx
+
+		temp.at<double>(1, 0) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 0);//1 de idx
+		temp.at<double>(1, 1) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 1);//1 de idx
+
+		temp.at<double>(2, 0) = InputMatrix.at<double>(InputIndex.at<int>(2, 0), 0); //2 de idx
+		temp.at<double>(2, 1) = InputMatrix.at<double>(InputIndex.at<int>(2, 0), 1); //2 de idx
+
+		temp.at<double>(3, 0) = InputMatrix.at<double>(InputIndex.at<int>(3, 0), 0); //0 de idx
+		temp.at<double>(3, 1) = InputMatrix.at<double>(InputIndex.at<int>(3, 0), 1); //0 de idx
+
+			//temp[a][0];
+			//double a = InputMatrix[i][0];
+			//double b = InputMatrix[i][0];
+		// Copy temp[] to arr[] 
+		return temp;
+	}
+
+
+
+
+	bool EvaluateExtent(cv::Mat_<double> Areas_Menores, cv::Mat_<double> Areas_Mayores) {
+
+		return false;
+	}
 
 	/**
 	*	Define un sistema de ejes local a partir de 3 puntos dados y un punto de referencia
@@ -234,10 +306,10 @@ namespace CustomCameraLibrary {
 	Point3d pointerPoint(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
 	
 		ofstream archivoP;
-		if (!archivoP.is_open()) {
-			archivoP.open("PARAM.txt", std::ios::app);
+		/*if (!archivoP.is_open()) {
+			archivoP.open("SegmentPARAM.txt", std::ios::app);
 
-		}
+		}*/
 		P1 = P1.t();
 		P2 = P2.t();
 		P3 = P3.t();
@@ -248,18 +320,7 @@ namespace CustomCameraLibrary {
 			PointerX = cdata::PARAM(0, 0);									//Si está detectando pointer evalue esto, sino evalue el otro arreglo.
 			PointerY = cdata::PARAM(0, 1);
 			PointerZ = cdata::PARAM(0, 2);
-		
-			//PointerX = cdata::PARAMPunta(0, 0);									
-			//PointerY = cdata::PARAMPunta(0, 1);
-			//PointerZ = cdata::PARAMPunta(0, 2);
-			int s = CustomCameraLibrary::COUNT;
-			if (s <= 1000 && s > 0)
-			{
-				archivoP<< cdata::PARAM(0, 0)<<"\t";
-				archivoP << cdata::PARAM(0, 1)<<"\t";
-				archivoP << cdata::PARAM(0, 2) << "\t";
-				archivoP << "\n";
-			}
+		int s = CustomCameraLibrary::COUNT;
 		
 		PM = (P1 + P2 + P3) / 3;
 
@@ -273,28 +334,26 @@ namespace CustomCameraLibrary {
 
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
-
+		
 		/*if (!PE.empty())
 		{
-		
-			if (s<=1000 && s>0)
+
+			if (s <= 1000 && s > 0)
 			{
 				archivoP << CustomCameraLibrary::COUNT << "\t";
 				archivoP << PE[0][0] << "\t";
 				archivoP << PE[0][1] << "\t";
 				archivoP << PE[0][2] << "\t";
 				archivoP << "\n";
-
 			}
 			else
 			{
 				OutputDebugString(L"YA MIL");
-				Beep(480, 50);
 			}
-			//archivoP << PE << "\n";
-		}*/	
+
+		}*/
 		return Point3d(PE);
-		archivoP.close();
+		//archivoP.close();
 	}
 
 	Point3d Punta(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
@@ -316,6 +375,12 @@ namespace CustomCameraLibrary {
 			PointerY = cdata::PARAM(0, 1);
 			PointerZ = cdata::PARAM(0, 2);
 		}
+		else
+		{
+			PointerX = cdata::PARAMPunta(0, 0);
+			PointerY = cdata::PARAMPunta(0, 1);
+			PointerZ = cdata::PARAMPunta(0, 2);
+		}
 
 		PM = (P1 + P2 + P3) / 3;
 
@@ -330,19 +395,15 @@ namespace CustomCameraLibrary {
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
 
-		/*if (!PE.empty())
+		if (!PE.empty())
 		{
-			if (1000<=CustomCameraLibrary::COUNT>0)
-			{
-				archivoP << CustomCameraLibrary::COUNT << "\t";
-				archivoP << PE[0][0] << "\t";
-				archivoP << PE[0][1] << "\t";
-				archivoP << PE[0][2] << "\t";
-				archivoP << "\n";
 
-			}
+			/*archivoP << PE[0][0] << "\t";
+			archivoP << PE[0][1] << "\t";
+			archivoP << PE[0][2] << "\t";
+			archivoP << "\n";*/
 			//archivoP << PE << "\n";
-		}*/
+		}
 
 		return Point3d(PE);
 		archivoP.close();
@@ -721,7 +782,6 @@ namespace CustomCameraLibrary {
 	ofstream archivoDI;
 	
 	int joskstra(Mat_<float> spSet, Mat_<float> dspSet, BodyR *&bRigid) {
-		CustomCameraLibrary::detectPointer = false;
 		time = 0;
 		Sphere *Spheres;
 		if (!archivoDI.is_open())
@@ -734,7 +794,7 @@ namespace CustomCameraLibrary {
 		vector<float> vec;													// vector que llevará el conjunto de distancias teóricas de los cuerpos rígidos.
 		int nBRigid = dspSet.rows;											// número de cuerpos rígidos que se deberían detectar.
 		int  N = spSet.rows;
-		//archivoDI << spSet << "\t";   //Revisando elementos 
+		archivoDI << spSet << "\t";   //Revisando elementos 
 		/*if (!spSet.empty() && spSet.rows==3 && spSet.cols==3) {
 			for (w = 0; w < spSet.rows; w++)
 			{
@@ -839,7 +899,7 @@ namespace CustomCameraLibrary {
 				case pointer:
 					bRigid[countBR].name = POINTER;
 					OutputDebugString(L"POINTER");
-					CustomCameraLibrary::detectPointer = true;
+					//CustomCameraLibrary::detectPointer = true;
 					break;
 				case femur:
 					bRigid[countBR].name = FEMUR;
@@ -861,7 +921,7 @@ namespace CustomCameraLibrary {
 					OutputDebugString(L"no exist");
 					break;
 				}
-				//time_t end = time;
+				time_t end = time;
 				int m;
 				if (bRigid[countBR].name==BROCA)
 				{
@@ -901,7 +961,126 @@ namespace CustomCameraLibrary {
 		return countBR;
 	}
 
-	
+	int joskstraB(Mat_<float> spSet, Mat_<float> dspSet, BodyR *&bRigid) {
+		Sphere *Spheres;
+
+		int i, i0, j, countBR;
+		float peso;
+		vector<float> vec;													// vector que llevará el conjunto de distancias teóricas de los cuerpos rígidos.
+		int nBRigid = dspSet.rows;											// número de cuerpos rígidos que se deberían detectar.
+		int  N = spSet.rows;
+		int  N2 = dspSet.rows;
+		Mat d = dspSet.reshape(1, 1);										// convertir a una matriz 1xn.
+		double min, max;
+		minMaxLoc(d, &min, &max);											// calcular la distancia mínima y máxima entre marcadores
+
+		d.row(0).copyTo(vec);												// copiar el contenido de la matrix 1xn a un vector.
+
+		if ((Spheres = new Sphere[N]) == NULL) return 1;					// Crea dinámicamente el arreglo de etiquetas de esferas. 
+																			// inicializar las etiquetas de nodo 
+		for (i = 0; i < N; i++) {
+			Spheres[i].nro = i;
+			if (i != 0) {
+				Spheres[i].prev = -1;										// aún no se ha definido predecesor. 
+				Spheres[i].peso = -1;										// infinito .
+				Spheres[i].marca = 0;
+				Spheres[i].objR = -1;
+			}
+			else {
+				Spheres[i].prev = -1;										// aún no se ha definido predecesor. 
+				Spheres[i].peso = 0;										// distancia del nodo inicial o de referencia a sí mismo es cero.
+				Spheres[i].marca = 0;
+				Spheres[i].objR = -1;										// -1, no se ha identificado el objeto rígido al que pertenece.
+			}
+		}
+
+		countBR = 0;
+		while (1) {
+			peso = -1;
+			i0 = -1;
+			Mat temp;
+
+			for (i = 0; i < N; i++) {										// busca entre todos los nodos no marcados el más próximo, descartando los de peso infinito (-1).
+				if (Spheres[i].marca == 0 && Spheres[i].peso == 0)			// si el nodo no esta marcado y su peso es mayor o igual a cero.
+					if (peso == -1) {
+						peso = Spheres[i].peso;								// se hace peso igual al peso del nodo para saltar el if.
+						i0 = i;												// referenciamos el nodo a analizar.
+					}
+			}
+
+			if (i0 == -1) { break; }										// termina si no encuentra.
+
+			int pos;
+			for (i = 0; i < N; i++) {
+				if (Spheres[i].marca == 0 && i0 != i) {						// si el nodo no esta marcado y el nodo no es él mismo.
+					pos = -1;
+					float n = norm(spSet.row(i0) - spSet.row(i));			// calcular la distancia entre los dos nodos.
+
+					if (n <= max + DELTA && n >= min - DELTA) {
+						pos = analizer(n, vec);
+					}
+
+					if (pos >= 0) {
+						Spheres[i].marca = 1;
+						Spheres[i].prev = i0;
+						Spheres[i].peso = n;
+						Spheres[i].objR = numBRigid(pos, dspSet);
+						temp.push_back(spSet.row(i));						// se va creando la matriz temporal con los datos del cuerpo rígido que va detectando.
+																			//						cout << "***" << pos << endl;
+						j = i;
+					}
+					else Spheres[i].peso = 0;
+
+				}
+			}
+
+			//***************************DUVAN PUSO ESTO, ESTA MAL!!!!!, DEBE SER +1
+			//***********************
+			if (temp.rows + 1 > N_MARKERSB) {
+				//if (temp.rows + 2 > N_MARKERS) {										// identificar O.R. con un número de marcadores definidos
+				Spheres[i0].marca = 1;
+				Spheres[i0].prev = i0;
+				Spheres[i0].objR = Spheres[j].objR;
+				temp.push_back(spSet.row(i0));								// termina de completar la matriz temporal.
+																			//vec_br.push_back(temp);									// almacenar la matriz temporal dentro del arreglo.
+				bRigid[countBR].bdr = Spheres[j].objR;						// marcar el objeto rígido.
+				int ref = 99;
+				if ((Spheres[0].objR == Spheres[1].objR) || (Spheres[0].objR == Spheres[2].objR)) {
+					ref = Spheres[0].objR;
+				}
+				else if (Spheres[1].objR == Spheres[2].objR) {
+					ref = Spheres[1].objR;
+				}
+				switch (ref) {
+					//				switch (Spheres[j].objR) {
+				case pointer:
+					bRigid[countBR].name = POINTER;
+					OutputDebugString(L"POINTER");
+					break;
+				case broca:
+					bRigid[countBR].name = BROCA;
+					OutputDebugString(L"BROCA");
+				default:
+					break;
+				}
+				bRigid[countBR].bdrigid = temp.t();								// añadir las coordenadas de las esferas del objeto rígido.
+				bRigid[countBR].nmarkers = temp.rows;							// número de marcadores en el O.R.
+																				//Mat temp2;
+																				//reduce(temp, temp2, 0, CV_REDUCE_SUM);						// sumar las filas de las coordenadas de las esferas de los objeto rígido
+																				//bRigid[countBR].centroid = temp2 / temp.rows;					// calcular el centroide del objeto rígido.
+																				//			    cout << "*********" << endl << bRigid[countBR].bdrigid << endl << endl;
+				getEulerAngles(bRigid, countBR);								// Detectar los ángulos de Euler.
+				countBR++;
+			}
+			else {																// objeto rígido no identificado.
+				OutputDebugString(L"NO SE QUE ES");
+				Spheres[i0].marca = 1;
+				Spheres[i0].prev = i0;
+				Spheres[i0].objR = -1;
+			}
+		}
+		return countBR;
+	}
 	/*	Mat_<int> findPointerDirection(Mat_<double> OR) {
 	for (int i = 0; i < OR.cols; i++) {
 	for (int j = 1; j < OR.cols; j++) {

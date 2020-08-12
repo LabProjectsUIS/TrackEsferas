@@ -21,6 +21,8 @@
 NavarQT::NavarQT(QWidget *parent)
 	: QWidget(parent),
 	ui(new Ui::NavarQTClass)
+	, tcpServer(Q_NULLPTR)
+	, networkSession(0)
 {
 	ui->setupUi(this);
 	this->setAttribute(Qt::WA_DeleteOnClose);
@@ -39,7 +41,7 @@ NavarQT::NavarQT(QWidget *parent)
 	//ui->label_instructions_bottom->setVisible(false);
 	doCalib = true;
 	calibRetries = 3;
-	calibMessage = "<html><head/><body><p>Realice la captura de 13 pares de fotograf\303\255as para continuar con el proceso de calibraci\303\263n.</p>"
+	calibMessage = "<html><head/><body><p>Realice la captura de 20 pares de fotograf\303\255as para continuar con el proceso de calibraci\303\263n.</p>"
 			"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 15px; margin-right: 0px; -qt-list-indent: 0;\">"
 			"<li style=\" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
 			"Tengo a la mano el patr\303\263n de calibraci\303\263n</li>"
@@ -64,6 +66,133 @@ NavarQT::NavarQT(QWidget *parent)
 	{
 		qDebug("Failed to activate cameras");
 	}
+
+	QNetworkConfigurationManager manager;
+	if (manager.capabilities() & QNetworkConfigurationManager::NetworkSessionRequired) {
+		// Get saved network configuration
+		QSettings settings(QSettings::UserScope, QLatin1String("QtProject"));
+		settings.beginGroup(QLatin1String("QtNetwork"));
+		const QString id = settings.value(QLatin1String("DefaultNetworkConfiguration")).toString();
+		settings.endGroup();
+
+		// If the saved network configuration is not currently discovered use the system default
+		QNetworkConfiguration config = manager.configurationFromIdentifier(id);
+		if ((config.state() & QNetworkConfiguration::Discovered) !=
+			QNetworkConfiguration::Discovered) {
+			config = manager.defaultConfiguration();
+		}
+
+		networkSession = new QNetworkSession(config, this);
+		connect(networkSession, &QNetworkSession::opened, this, &NavarQT::sessionOpened);
+
+		qDebug("Opening network session.");
+		//statusLabel->setText(tr("Opening network session."));
+		networkSession->open();
+	}
+	else {
+		sessionOpened();
+	}
+	connect(tcpServer, &QTcpServer::newConnection, this, &NavarQT::onNewConnection);
+}
+
+void NavarQT::onNewConnection() {//Connection détectée
+	qDebug() << "Try to connect...";
+	Socket = tcpServer->nextPendingConnection();
+	connect(Socket, &QTcpSocket::readyRead, this, &NavarQT::onReadyRead);
+	connect(Socket, &QTcpSocket::stateChanged, this, &NavarQT::onSocketStateChanged);
+	//connect(Socket, Socket->stateChanged(Socket->state()), this, NavarQT::onSocketStateChanged(Socket->state()));
+	Socket->write("Hello friend, your are now connected !!");
+}
+
+void NavarQT::onReadyRead() {//Lecture
+	QString message(Socket->readAll());
+	QStringList funParts = message.split(QLatin1Char(':'));
+	for each (QString part in funParts)
+	{
+		qDebug() << "el mensaje recibido es: " + part.trimmed().toLower();
+	}
+	if (funParts.at(0).trimmed().toLower() == "startcalibration")
+	{
+		startCalibration();
+	}
+	if (funParts.at(0).trimmed().toLower() == "foo")
+	{
+		QStringList args = funParts.at(1).split(QLatin1Char(','));
+		bool ok;
+		int arguno = args.takeFirst().trimmed().toInt(&ok);
+		int argdos = args.takeFirst().trimmed().toInt(&ok);
+		int argtres = args.takeFirst().trimmed().toInt(&ok);
+		foo(arguno, argdos, argtres);
+	}
+}
+
+void NavarQT::foo(int uno, int dos, int tres)
+{
+	qDebug() << uno;
+	qDebug() << dos;
+	qDebug() << tres;
+}
+
+void NavarQT::onSocketStateChanged(QAbstractSocket::SocketState socketState) {
+	qDebug("recibio mensaje en la otra función");
+}
+
+void NavarQT::sessionOpened()
+{
+	// Save the used configuration
+	if (networkSession) {
+		QNetworkConfiguration config = networkSession->configuration();
+		QString id;
+		if (config.type() == QNetworkConfiguration::UserChoice)
+			id = networkSession->sessionProperty(QLatin1String("UserChoiceConfiguration")).toString();
+		else
+			id = config.identifier();
+
+		QSettings settings(QSettings::UserScope, QLatin1String("QtProject"));
+		settings.beginGroup(QLatin1String("QtNetwork"));
+		settings.setValue(QLatin1String("DefaultNetworkConfiguration"), id);
+		settings.endGroup();
+	}
+
+	const QHostAddress &localhost = QHostAddress(QHostAddress::LocalHost);
+	QHostAddress ipReal;
+	for (const QHostAddress &address : QNetworkInterface::allAddresses()) {
+		if (address.toString() == "192.168.1.6")
+		{
+			ipReal = address;
+			qDebug() << "ip real: " << ipReal.toString();
+		}	
+	}
+
+	//! [0] //! [1]
+	tcpServer = new QTcpServer(this);
+	tcpServer->listen(ipReal, 4444);
+	/*if (!tcpServer->listen()) {
+	QMessageBox::critical(this, tr("Fortune Server"),
+	tr("Unable to start the server: %1.")
+	.arg(tcpServer->errorString()));
+	close();
+	return;
+	}
+	//! [0]
+	QString ipAddress;
+	QList<QHostAddress> ipAddressesList = QNetworkInterface::allAddresses();
+	// use the first non-localhost IPv4 address
+	for (int i = 0; i < ipAddressesList.size(); ++i) {
+	if (ipAddressesList.at(i) != QHostAddress::LocalHost &&
+	ipAddressesList.at(i).toIPv4Address()) {
+	ipAddress = ipAddressesList.at(i).toString();
+	break;
+	}
+	}
+	// if we did not find one, use IPv4 localhost
+	if (ipAddress.isEmpty())
+	ipAddress = QHostAddress(QHostAddress::LocalHost).toString();*/
+	qDebug() << "ip: " << ipReal.toString();
+	qDebug() << "port: " << tcpServer->serverPort();
+	/*qDebug(tr("The server is running on\n\nIP: %1\nport: %2\n\n"
+	"Run the Fortune Client example now.").arg(ipAddress).arg(tcpServer->serverPort()).to);*/
+	//statusLabel->setText();
 }
 
 /**
@@ -94,6 +223,14 @@ void NavarQT::createLabelRight(const QImage &imgSource) {
 	ui->label_camera_right->repaint();
 }
 
+
+void NavarQT::UpdateSlides() {
+	//while(1){
+		//ui->EXP_Slider->valueChanged(44);
+	//}
+	//updater->ShowCameras->camera_1;
+}
+
 /**
 * Slot asociado al botón 1 ("ingresar", en la pantalla de inicio de sesión).
 */
@@ -122,6 +259,7 @@ void NavarQT::on_pushButton_3_clicked() {
 		updater->setTakeSnapshot(true);
 		updater->setDelta(ui->comboBox->currentText().toFloat());
 		ui->pushButton_3->setEnabled(false);
+		doCalib = true;
 		pauseNB(500);
 		break;
 	case 3:
@@ -371,6 +509,7 @@ void NavarQT::on_pushButton_step_2_clicked() {
 	ui->pushButton_10->setVisible(true);
 	ui->instructions->setVisible(false);
 	ui->controls->setVisible(true);
+	updater->UpdateSliders(ui->EXP_Slider->value());
 	step = 2;
 	updater->setShowZone(false);
 	ui->label_camera_right->setVisible(true);
@@ -567,11 +706,11 @@ void NavarQT::startCalibration() {
 	
 	switch (calibRetries) {
 	case 3:
-		fileName = "calib/stereo/otros/Calib11A.yml";
-		doCalib = false;
+		fileName = "calib/stereo/otros/Calib.yml";
+		//doCalib = false;
 		break;
 	default:
-		fileName = "calib/stereo/otros/Calib11A.yml";
+		fileName = "calib/stereo/otros/Calib.yml";
 		break;
 	}	
 	if (doCalib) { //Conexion con matlab toolkit
@@ -650,7 +789,7 @@ bool NavarQT::readParams(std::string fileName) {
 		cv::Mat_<double> err(1, 1);
 		//double err;
 		fs["emax"] >> err;
-		if (err.empty() || *err[0] > 0.9) {
+		if (err.empty() || *err[0] > 1.3) {
 			calibRetries++; //vuelve a calibrar si el eror es mayor de 0.5, se pone 0,7 porq no se ha podido mejorar la calibración
 			
 			return false;

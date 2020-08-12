@@ -12,7 +12,6 @@
 #include <Windows.h>
 #include <shellapi.h>
 #include <vtk-7.1\QVTKWidget.h>
-
 #include <vtk-7.1\vtkRenderWindow.h>
 
 class NavarQT : public QWidget
@@ -25,6 +24,9 @@ public:
 	QPointer<GUIUpdater> updater;
 	QPointer<QProcess> process_rigids;
 	QPointer<QProcess> process_client;
+	QTcpServer *tcpServer;
+	QNetworkSession *networkSession;
+	QTcpSocket *Socket;
 
 	~NavarQT() {
 		if (process_rigids) {
@@ -40,10 +42,15 @@ public:
 	};
 
 public slots:
+	void sessionOpened();
+	void onNewConnection();
+	void onReadyRead();
+	void onSocketStateChanged(QAbstractSocket::SocketState socketState);
 	void createLabelLeft(const QImage &imgSource);
 	void createLabelRight(const QImage &imgSource);
 	void startCalibration();
 	void startServer();
+	void UpdateSlides();
 	void colorLabelGreen();
 	void colorLabelRed();
 	void doFlash();
@@ -67,6 +74,7 @@ public slots:
 
 private:
 	Ui::NavarQTClass *ui;
+	void foo(int uno, int dos, int tres);
 	void loadGif(const QString &gif);
 	bool checkLogin(const QString &user, const QString &password);
 	bool embedForeign(LPWSTR name, QGridLayout *layout);

@@ -61,29 +61,20 @@
     <ClCompile Include="pointerCalib.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_NavarQT.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="moc_GUIUpdater.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_GUIUpdater.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="moc_NavarQT.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_NavarQT.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="NavarQT.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="GUIUpdater.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="NavarQT.ui">
+    <QtUic Include="NavarQT.ui">
       <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="NavarQT.qrc">
+    </QtUic>
+    <QtRcc Include="NavarQT.qrc">
       <Filter>Resource Files</Filter>
-    </CustomBuild>
+    </QtRcc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="globals.h">
@@ -116,9 +107,6 @@
     <ClInclude Include="correspondence.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_NavarQT.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
     <ClInclude Include="detectbr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -146,5 +134,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram2.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="NavarQT.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GUIUpdater.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

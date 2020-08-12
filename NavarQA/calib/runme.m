@@ -1,5 +1,5 @@
 pause(10)
-root = 'C:\Users\eduar_000\Documents\Visual Studio 2015\Projects\NavarQA\NavarQA\calib';
+root = 'D:\TrackEsferas\NavarQA\calib';
 
 addpath(genpath(root));
 cd(root)
@@ -19,6 +19,14 @@ commands = {'cd left';
             '';
             '45';
             '45';
+            '';
+            '';
+            '';
+            '';
+            '';
+            '';
+            '';
+            '';
             '';
             '';
             '';
@@ -52,6 +60,14 @@ commands = {'clear';
             '';
             '45';
             '45';
+            '';
+            '';
+            '';
+            '';
+            '';
+            '';
+            '';
+            '';
             '';
             '';
             '';

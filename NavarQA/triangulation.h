@@ -3,7 +3,6 @@
 
 #include "opencv\cv.hpp"
 #include "globals.h"
-
 namespace CustomCameraLibrary {
 	using namespace cv;
 	using namespace std;
@@ -65,10 +64,20 @@ namespace CustomCameraLibrary {
 		xt.push_back(cv::Mat::ones(1, xt.cols, CV_64F));
 		xtt.push_back(cv::Mat::ones(1, xtt.cols, CV_64F));
 		int N = xt.cols;
-		ofstream archivoXL;
+		CustomCameraLibrary::detectPointer = true;
+
+		ofstream archivoXL,archivoP1, archivoP2;
 		if (!archivoXL.is_open())
 		{
-			archivoXL.open("XLGris.txt", std::ios::app);
+			archivoXL.open("XLObjeto.txt", std::ios::app);
+		}
+		if (!archivoP1.is_open()) {
+			archivoP1.open("P1.txt", std::ios::app);
+
+		}
+		if (!archivoP2.is_open()) {
+			archivoP2.open("P2.txt", std::ios::app);
+
 		}
 		//-- - Rotation matrix corresponding to the rigid motion between left and right cameras :
 		Rodrigues(om, R);
@@ -92,9 +101,11 @@ namespace CustomCameraLibrary {
 
 		divide(NN1.t(), DD.t(), Zt);
 		divide(NN2.t(), DD.t(), Ztt);
+		//cout << Zt << endl << endl;
 		extendM(Zt, xt.cols);
 		extendM(Ztt, xtt.cols);
 
+		//cout << xt << endl << Zt << endl;
 		X1 = xt.mul(Zt);
 		X2 = R.t()*(xtt.mul(Ztt) - T_vect);
 
@@ -107,12 +118,28 @@ namespace CustomCameraLibrary {
 		int m = -1;
 		int s = -1;
 		
-		if (transXL.rows == 4 && transXL.cols == 3 /*&& detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
-		{
-			CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
-			if (CustomCameraLibrary::COUNT <= 1000)
-			{
-				archivoXL << CustomCameraLibrary::COUNT << "\t";
+
+		//if (transXL.rows == 4 && transXL.cols == 3 /*&& detectPointer == true*/) //Imprimir datos de esferas es un archivo xml
+		//{
+			//CustomCameraLibrary::COUNT = CustomCameraLibrary::COUNT + 1;
+			//if (CustomCameraLibrary::COUNT <=1000)
+			//{
+			
+				//archivoP2 << CustomCameraLibrary::COUNT << "\t";
+		/*
+				for (int i = 0; i < xL.rows; i++)
+				{
+					for (int j = 0; j < xL.cols; j++)
+					{
+						archivoP1 << xR[i][j] << "\t";
+						archivoP2<<xL[i][j] << "\t";
+					}
+					archivoP1 << "\n";
+					archivoP2 << "\n";
+				}
+		
+				
+			//archivoXL << CustomCameraLibrary::COUNT << "\t";
 				for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
 				{
 					for (int s = 0; s < transXL.cols; s++) //son 3 columnas entocnes de 0 a 2
@@ -124,19 +151,24 @@ namespace CustomCameraLibrary {
 						else
 
 						{
-
-
 							archivoXL << transXL[m][s] << "\t";
 						}
 					}
 					archivoXL << "\t";
 				}
-
+				
 				archivoXL << "\n";
-			}
-			
-		}
-	archivoXL.close();
+			/*}
+			else
+			{
+				CustomCameraLibrary::COUNT = 0;
+				system("PAUSE");
+			}*/
+		//}
+		/*
+		archivoXL.close();
+		archivoP1.close();
+		archivoP2.close();*/
 	}
 
 	/**

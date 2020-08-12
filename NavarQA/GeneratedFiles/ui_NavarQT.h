@@ -22,7 +22,9 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -34,8 +36,6 @@ class Ui_NavarQTClass
 {
 public:
     QGridLayout *gridLayout;
-    QSpacerItem *verticalSpacer_4;
-    QSpacerItem *verticalSpacer_5;
     QWidget *steps;
     QVBoxLayout *verticalLayout;
     QWidget *steps_top;
@@ -67,13 +67,30 @@ public:
     QSpacerItem *horizontalSpacer_13;
     QLabel *label_icon;
     QSpacerItem *horizontalSpacer_14;
+    QSpacerItem *verticalSpacer_4;
     QStackedWidget *body;
     QWidget *setup_page;
     QGridLayout *gridLayout_2;
     QWidget *controls;
     QVBoxLayout *verticalLayout_2;
-    QComboBox *comboBox;
+    QWidget *Spines_2;
+    QGridLayout *Spines;
+    QLabel *LED_Label;
+    QLabel *label_16;
+    QSlider *EXP_Slider;
+    QLabel *EXP_Label;
+    QSlider *THR_Slider;
+    QSpinBox *FPS_Spin;
+    QSpinBox *LED_Spin;
+    QLabel *THR_Label;
+    QSpinBox *EXP_Spin;
+    QSlider *LED_Slider;
+    QLabel *FPS_Label;
+    QSpinBox *THR_Spin;
+    QSlider *FPS_Slider;
+    QSpacerItem *verticalSpacer_7;
     QLabel *label_6;
+    QComboBox *comboBox;
     QPushButton *pushButton_3;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_9;
@@ -81,26 +98,26 @@ public:
     QSpacerItem *horizontalSpacer_8;
     QWidget *instructions;
     QGridLayout *gridLayout_12;
-    QSpacerItem *verticalSpacer_6;
+    QPushButton *pushButton_5;
+    QLabel *label_11;
+    QLabel *label_12;
     QPushButton *pushButton_4;
     QPushButton *pushButton_6;
     QPushButton *pushButton_7;
     QPushButton *pushButton_8;
-    QPushButton *pushButton_5;
-    QLabel *label_11;
-    QLabel *label_12;
-    QLabel *label_13;
     QLabel *label_14;
     QLabel *label_15;
-    QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *horizontalSpacer_6;
-    QSpacerItem *horizontalSpacer_5;
-    QSpacerItem *horizontalSpacer_7;
+    QLabel *label_13;
+    QSpacerItem *verticalSpacer_6;
     QWidget *cameras;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_camera_left;
     QSpacerItem *horizontalSpacer_10;
     QLabel *label_camera_right;
+    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *horizontalSpacer_5;
+    QSpacerItem *horizontalSpacer_7;
     QWidget *login_page;
     QGridLayout *gridLayout_5;
     QGroupBox *groupBox;
@@ -142,6 +159,7 @@ public:
     QPushButton *pushButton_tibia;
     QPushButton *pushButton_femur;
     QPushButton *pushButton_9;
+    QSpacerItem *verticalSpacer_5;
     QButtonGroup *buttonGroup_instructions;
     QButtonGroup *buttonGroup;
 
@@ -188,14 +206,6 @@ public:
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        verticalSpacer_4 = new QSpacerItem(20, 21, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer_4, 1, 0, 1, 1);
-
-        verticalSpacer_5 = new QSpacerItem(20, 98, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer_5, 3, 0, 1, 1);
-
         steps = new QWidget(NavarQTClass);
         steps->setObjectName(QStringLiteral("steps"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -447,6 +457,10 @@ public:
 
         gridLayout->addWidget(header, 0, 0, 1, 1);
 
+        verticalSpacer_4 = new QSpacerItem(20, 21, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout->addItem(verticalSpacer_4, 1, 0, 1, 1);
+
         body = new QStackedWidget(NavarQTClass);
         body->setObjectName(QStringLiteral("body"));
         body->setEnabled(true);
@@ -475,10 +489,103 @@ public:
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        comboBox = new QComboBox(controls);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
+        Spines_2 = new QWidget(controls);
+        Spines_2->setObjectName(QStringLiteral("Spines_2"));
+        Spines = new QGridLayout(Spines_2);
+        Spines->setSpacing(6);
+        Spines->setContentsMargins(11, 11, 11, 11);
+        Spines->setObjectName(QStringLiteral("Spines"));
+        LED_Label = new QLabel(Spines_2);
+        LED_Label->setObjectName(QStringLiteral("LED_Label"));
 
-        verticalLayout_2->addWidget(comboBox);
+        Spines->addWidget(LED_Label, 1, 3, 1, 1);
+
+        label_16 = new QLabel(Spines_2);
+        label_16->setObjectName(QStringLiteral("label_16"));
+
+        Spines->addWidget(label_16, 0, 0, 1, 4, Qt::AlignHCenter);
+
+        EXP_Slider = new QSlider(Spines_2);
+        EXP_Slider->setObjectName(QStringLiteral("EXP_Slider"));
+        EXP_Slider->setMaximum(7500);
+        EXP_Slider->setValue(100);
+        EXP_Slider->setOrientation(Qt::Vertical);
+
+        Spines->addWidget(EXP_Slider, 3, 1, 1, 1, Qt::AlignHCenter);
+
+        EXP_Label = new QLabel(Spines_2);
+        EXP_Label->setObjectName(QStringLiteral("EXP_Label"));
+
+        Spines->addWidget(EXP_Label, 1, 1, 1, 1);
+
+        THR_Slider = new QSlider(Spines_2);
+        THR_Slider->setObjectName(QStringLiteral("THR_Slider"));
+        THR_Slider->setMaximum(255);
+        THR_Slider->setValue(200);
+        THR_Slider->setOrientation(Qt::Vertical);
+
+        Spines->addWidget(THR_Slider, 3, 2, 1, 1, Qt::AlignHCenter);
+
+        FPS_Spin = new QSpinBox(Spines_2);
+        FPS_Spin->setObjectName(QStringLiteral("FPS_Spin"));
+        FPS_Spin->setMaximum(120);
+        FPS_Spin->setValue(120);
+
+        Spines->addWidget(FPS_Spin, 2, 0, 1, 1);
+
+        LED_Spin = new QSpinBox(Spines_2);
+        LED_Spin->setObjectName(QStringLiteral("LED_Spin"));
+        LED_Spin->setMaximum(15);
+        LED_Spin->setValue(4);
+
+        Spines->addWidget(LED_Spin, 2, 3, 1, 1);
+
+        THR_Label = new QLabel(Spines_2);
+        THR_Label->setObjectName(QStringLiteral("THR_Label"));
+
+        Spines->addWidget(THR_Label, 1, 2, 1, 1);
+
+        EXP_Spin = new QSpinBox(Spines_2);
+        EXP_Spin->setObjectName(QStringLiteral("EXP_Spin"));
+        EXP_Spin->setMaximum(7500);
+        EXP_Spin->setValue(100);
+
+        Spines->addWidget(EXP_Spin, 2, 1, 1, 1);
+
+        LED_Slider = new QSlider(Spines_2);
+        LED_Slider->setObjectName(QStringLiteral("LED_Slider"));
+        LED_Slider->setMaximum(15);
+        LED_Slider->setValue(4);
+        LED_Slider->setOrientation(Qt::Vertical);
+
+        Spines->addWidget(LED_Slider, 3, 3, 1, 1, Qt::AlignHCenter);
+
+        FPS_Label = new QLabel(Spines_2);
+        FPS_Label->setObjectName(QStringLiteral("FPS_Label"));
+
+        Spines->addWidget(FPS_Label, 1, 0, 1, 1);
+
+        THR_Spin = new QSpinBox(Spines_2);
+        THR_Spin->setObjectName(QStringLiteral("THR_Spin"));
+        THR_Spin->setMaximum(255);
+        THR_Spin->setValue(200);
+
+        Spines->addWidget(THR_Spin, 2, 2, 1, 1);
+
+        FPS_Slider = new QSlider(Spines_2);
+        FPS_Slider->setObjectName(QStringLiteral("FPS_Slider"));
+        FPS_Slider->setMaximum(120);
+        FPS_Slider->setValue(120);
+        FPS_Slider->setOrientation(Qt::Vertical);
+
+        Spines->addWidget(FPS_Slider, 3, 0, 1, 1);
+
+
+        verticalLayout_2->addWidget(Spines_2);
+
+        verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_7);
 
         label_6 = new QLabel(controls);
         label_6->setObjectName(QStringLiteral("label_6"));
@@ -492,6 +599,11 @@ public:
         label_6->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
 
         verticalLayout_2->addWidget(label_6);
+
+        comboBox = new QComboBox(controls);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+
+        verticalLayout_2->addWidget(comboBox);
 
         pushButton_3 = new QPushButton(controls);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
@@ -540,7 +652,7 @@ public:
         verticalLayout_2->addLayout(horizontalLayout);
 
 
-        gridLayout_2->addWidget(controls, 0, 5, 1, 1);
+        gridLayout_2->addWidget(controls, 0, 6, 1, 1);
 
         instructions = new QWidget(setup_page);
         instructions->setObjectName(QStringLiteral("instructions"));
@@ -556,64 +668,20 @@ public:
         gridLayout_12->setContentsMargins(11, 11, 11, 11);
         gridLayout_12->setObjectName(QStringLiteral("gridLayout_12"));
         gridLayout_12->setContentsMargins(0, 0, 0, 0);
-        verticalSpacer_6 = new QSpacerItem(20, 102, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout_12->addItem(verticalSpacer_6, 0, 1, 1, 1);
-
-        pushButton_4 = new QPushButton(instructions);
+        pushButton_5 = new QPushButton(instructions);
         buttonGroup_instructions = new QButtonGroup(NavarQTClass);
         buttonGroup_instructions->setObjectName(QStringLiteral("buttonGroup_instructions"));
-        buttonGroup_instructions->addButton(pushButton_4);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        buttonGroup_instructions->addButton(pushButton_5);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
         QSizePolicy sizePolicy7(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
         sizePolicy7.setHorizontalStretch(0);
         sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
-        pushButton_4->setSizePolicy(sizePolicy7);
-        pushButton_4->setStyleSheet(QStringLiteral(""));
-        pushButton_4->setFlat(true);
-
-        gridLayout_12->addWidget(pushButton_4, 1, 1, 1, 1);
-
-        pushButton_6 = new QPushButton(instructions);
-        buttonGroup_instructions->addButton(pushButton_6);
-        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        sizePolicy7.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
-        pushButton_6->setSizePolicy(sizePolicy7);
-        pushButton_6->setStyleSheet(QStringLiteral(""));
-        pushButton_6->setFlat(true);
-
-        gridLayout_12->addWidget(pushButton_6, 3, 1, 1, 1);
-
-        pushButton_7 = new QPushButton(instructions);
-        buttonGroup_instructions->addButton(pushButton_7);
-        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        sizePolicy7.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
-        pushButton_7->setSizePolicy(sizePolicy7);
-        pushButton_7->setStyleSheet(QStringLiteral(""));
-        pushButton_7->setFlat(true);
-
-        gridLayout_12->addWidget(pushButton_7, 4, 1, 1, 1);
-
-        pushButton_8 = new QPushButton(instructions);
-        buttonGroup_instructions->addButton(pushButton_8);
-        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
-        sizePolicy7.setHeightForWidth(pushButton_8->sizePolicy().hasHeightForWidth());
-        pushButton_8->setSizePolicy(sizePolicy7);
-        pushButton_8->setStyleSheet(QStringLiteral(""));
-        pushButton_8->setFlat(true);
-
-        gridLayout_12->addWidget(pushButton_8, 5, 1, 1, 1);
-
-        pushButton_5 = new QPushButton(instructions);
-        buttonGroup_instructions->addButton(pushButton_5);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
         sizePolicy7.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
         pushButton_5->setSizePolicy(sizePolicy7);
         pushButton_5->setStyleSheet(QStringLiteral(""));
         pushButton_5->setFlat(true);
 
-        gridLayout_12->addWidget(pushButton_5, 2, 1, 1, 1);
+        gridLayout_12->addWidget(pushButton_5, 5, 1, 1, 1);
 
         label_11 = new QLabel(instructions);
         label_11->setObjectName(QStringLiteral("label_11"));
@@ -623,7 +691,7 @@ public:
         label_11->setMaximumSize(QSize(25, 27));
         label_11->setPixmap(QPixmap(QString::fromUtf8(":/icons/bullet")));
 
-        gridLayout_12->addWidget(label_11, 1, 0, 1, 1);
+        gridLayout_12->addWidget(label_11, 4, 0, 1, 1);
 
         label_12 = new QLabel(instructions);
         label_12->setObjectName(QStringLiteral("label_12"));
@@ -633,17 +701,47 @@ public:
         label_12->setMaximumSize(QSize(25, 27));
         label_12->setPixmap(QPixmap(QString::fromUtf8(":/icons/bullet")));
 
-        gridLayout_12->addWidget(label_12, 2, 0, 1, 1);
+        gridLayout_12->addWidget(label_12, 5, 0, 1, 1);
 
-        label_13 = new QLabel(instructions);
-        label_13->setObjectName(QStringLiteral("label_13"));
-        sizePolicy1.setHeightForWidth(label_13->sizePolicy().hasHeightForWidth());
-        label_13->setSizePolicy(sizePolicy1);
-        label_13->setMinimumSize(QSize(25, 27));
-        label_13->setMaximumSize(QSize(25, 27));
-        label_13->setPixmap(QPixmap(QString::fromUtf8(":/icons/bullet")));
+        pushButton_4 = new QPushButton(instructions);
+        buttonGroup_instructions->addButton(pushButton_4);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        sizePolicy7.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
+        pushButton_4->setSizePolicy(sizePolicy7);
+        pushButton_4->setStyleSheet(QStringLiteral(""));
+        pushButton_4->setFlat(true);
 
-        gridLayout_12->addWidget(label_13, 3, 0, 1, 1);
+        gridLayout_12->addWidget(pushButton_4, 4, 1, 1, 1);
+
+        pushButton_6 = new QPushButton(instructions);
+        buttonGroup_instructions->addButton(pushButton_6);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        sizePolicy7.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
+        pushButton_6->setSizePolicy(sizePolicy7);
+        pushButton_6->setStyleSheet(QStringLiteral(""));
+        pushButton_6->setFlat(true);
+
+        gridLayout_12->addWidget(pushButton_6, 6, 1, 1, 1);
+
+        pushButton_7 = new QPushButton(instructions);
+        buttonGroup_instructions->addButton(pushButton_7);
+        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+        sizePolicy7.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
+        pushButton_7->setSizePolicy(sizePolicy7);
+        pushButton_7->setStyleSheet(QStringLiteral(""));
+        pushButton_7->setFlat(true);
+
+        gridLayout_12->addWidget(pushButton_7, 7, 1, 1, 1);
+
+        pushButton_8 = new QPushButton(instructions);
+        buttonGroup_instructions->addButton(pushButton_8);
+        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
+        sizePolicy7.setHeightForWidth(pushButton_8->sizePolicy().hasHeightForWidth());
+        pushButton_8->setSizePolicy(sizePolicy7);
+        pushButton_8->setStyleSheet(QStringLiteral(""));
+        pushButton_8->setFlat(true);
+
+        gridLayout_12->addWidget(pushButton_8, 8, 1, 1, 1);
 
         label_14 = new QLabel(instructions);
         label_14->setObjectName(QStringLiteral("label_14"));
@@ -653,7 +751,7 @@ public:
         label_14->setMaximumSize(QSize(25, 27));
         label_14->setPixmap(QPixmap(QString::fromUtf8(":/icons/bullet")));
 
-        gridLayout_12->addWidget(label_14, 4, 0, 1, 1);
+        gridLayout_12->addWidget(label_14, 7, 0, 1, 1);
 
         label_15 = new QLabel(instructions);
         label_15->setObjectName(QStringLiteral("label_15"));
@@ -663,26 +761,24 @@ public:
         label_15->setMaximumSize(QSize(25, 27));
         label_15->setPixmap(QPixmap(QString::fromUtf8(":/icons/bullet")));
 
-        gridLayout_12->addWidget(label_15, 5, 0, 1, 1);
+        gridLayout_12->addWidget(label_15, 8, 0, 1, 1);
+
+        label_13 = new QLabel(instructions);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        sizePolicy1.setHeightForWidth(label_13->sizePolicy().hasHeightForWidth());
+        label_13->setSizePolicy(sizePolicy1);
+        label_13->setMinimumSize(QSize(25, 27));
+        label_13->setMaximumSize(QSize(25, 27));
+        label_13->setPixmap(QPixmap(QString::fromUtf8(":/icons/bullet")));
+
+        gridLayout_12->addWidget(label_13, 6, 0, 1, 1);
+
+        verticalSpacer_6 = new QSpacerItem(20, 50, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_12->addItem(verticalSpacer_6, 1, 1, 1, 1);
 
 
         gridLayout_2->addWidget(instructions, 0, 1, 1, 1);
-
-        horizontalSpacer_4 = new QSpacerItem(65, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_4, 0, 0, 1, 1);
-
-        horizontalSpacer_6 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_6, 0, 4, 1, 1);
-
-        horizontalSpacer_5 = new QSpacerItem(141, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_5, 0, 2, 1, 1);
-
-        horizontalSpacer_7 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_7, 0, 6, 1, 1);
 
         cameras = new QWidget(setup_page);
         cameras->setObjectName(QStringLiteral("cameras"));
@@ -726,7 +822,23 @@ public:
         horizontalLayout_2->addWidget(label_camera_right);
 
 
-        gridLayout_2->addWidget(cameras, 0, 3, 1, 1);
+        gridLayout_2->addWidget(cameras, 0, 4, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(65, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_4, 0, 0, 1, 1);
+
+        horizontalSpacer_6 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_6, 0, 5, 1, 1);
+
+        horizontalSpacer_5 = new QSpacerItem(141, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_5, 0, 3, 1, 1);
+
+        horizontalSpacer_7 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_7, 0, 7, 1, 1);
 
         body->addWidget(setup_page);
         cameras->raise();
@@ -960,11 +1072,18 @@ public:
 
         body->addWidget(choice_page);
 
-        gridLayout->addWidget(body, 5, 0, 1, 1);
+        gridLayout->addWidget(body, 6, 0, 1, 1);
 
-        QWidget::setTabOrder(lineEdit_user, lineEdit_password);
-        QWidget::setTabOrder(lineEdit_password, pushButton_1);
-        QWidget::setTabOrder(pushButton_1, pushButton_7);
+        verticalSpacer_5 = new QSpacerItem(20, 98, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout->addItem(verticalSpacer_5, 4, 0, 1, 1);
+
+#ifndef QT_NO_SHORTCUT
+        label_icon->setBuddy(label_icon);
+#endif // QT_NO_SHORTCUT
+        QWidget::setTabOrder(FPS_Slider, EXP_Slider);
+        QWidget::setTabOrder(EXP_Slider, THR_Slider);
+        QWidget::setTabOrder(THR_Slider, pushButton_7);
         QWidget::setTabOrder(pushButton_7, pushButton_8);
         QWidget::setTabOrder(pushButton_8, pushButton_6);
         QWidget::setTabOrder(pushButton_6, pushButton_5);
@@ -973,8 +1092,32 @@ public:
         QWidget::setTabOrder(scrollArea_cases, pushButton_case_11);
         QWidget::setTabOrder(pushButton_case_11, pushButton_case_12);
         QWidget::setTabOrder(pushButton_case_12, pushButton_case_13);
+        QWidget::setTabOrder(pushButton_case_13, pushButton_close);
+        QWidget::setTabOrder(pushButton_close, pushButton_step_1);
+        QWidget::setTabOrder(pushButton_step_1, pushButton_step_2);
+        QWidget::setTabOrder(pushButton_step_2, pushButton_step_3);
+        QWidget::setTabOrder(pushButton_step_3, pushButton_step_4);
+        QWidget::setTabOrder(pushButton_step_4, pushButton_3);
+        QWidget::setTabOrder(pushButton_3, pushButton_10);
+        QWidget::setTabOrder(pushButton_10, tabWidget_cases_view);
+        QWidget::setTabOrder(tabWidget_cases_view, pushButton_2);
+        QWidget::setTabOrder(pushButton_2, pushButton_tibia);
+        QWidget::setTabOrder(pushButton_tibia, pushButton_femur);
+        QWidget::setTabOrder(pushButton_femur, pushButton_9);
+        QWidget::setTabOrder(pushButton_9, pushButton_1);
+        QWidget::setTabOrder(pushButton_1, LED_Slider);
+        QWidget::setTabOrder(LED_Slider, lineEdit_password);
+        QWidget::setTabOrder(lineEdit_password, lineEdit_user);
 
         retranslateUi(NavarQTClass);
+        QObject::connect(FPS_Slider, SIGNAL(valueChanged(int)), FPS_Spin, SLOT(setValue(int)));
+        QObject::connect(FPS_Spin, SIGNAL(valueChanged(int)), FPS_Slider, SLOT(setValue(int)));
+        QObject::connect(EXP_Slider, SIGNAL(valueChanged(int)), EXP_Spin, SLOT(setValue(int)));
+        QObject::connect(EXP_Spin, SIGNAL(valueChanged(int)), EXP_Slider, SLOT(setValue(int)));
+        QObject::connect(THR_Slider, SIGNAL(valueChanged(int)), THR_Spin, SLOT(setValue(int)));
+        QObject::connect(THR_Spin, SIGNAL(valueChanged(int)), THR_Slider, SLOT(setValue(int)));
+        QObject::connect(LED_Slider, SIGNAL(valueChanged(int)), LED_Spin, SLOT(setValue(int)));
+        QObject::connect(LED_Spin, SIGNAL(valueChanged(int)), LED_Slider, SLOT(setValue(int)));
 
         body->setCurrentIndex(0);
         tabWidget_cases_view->setCurrentIndex(2);
@@ -999,25 +1142,30 @@ public:
         label_10->setText(QApplication::translate("NavarQTClass", "Cirug\303\255a", Q_NULLPTR));
         pushButton_close->setText(QString());
         label_icon->setText(QString());
+        LED_Label->setText(QApplication::translate("NavarQTClass", "LED", Q_NULLPTR));
+        label_16->setText(QApplication::translate("NavarQTClass", "Configuraci\303\263n c\303\241mara", Q_NULLPTR));
+        EXP_Label->setText(QApplication::translate("NavarQTClass", "EXP", Q_NULLPTR));
+        THR_Label->setText(QApplication::translate("NavarQTClass", "THR", Q_NULLPTR));
+        FPS_Label->setText(QApplication::translate("NavarQTClass", "FPS", Q_NULLPTR));
+        label_6->setText(QApplication::translate("NavarQTClass", "<html><head/><body><p><br><span style=\" font-size:9pt;\">Frecuencia de captura (segundos)</span></p></body></html>", Q_NULLPTR));
         comboBox->clear();
         comboBox->insertItems(0, QStringList()
          << QApplication::translate("NavarQTClass", "1", Q_NULLPTR)
          << QApplication::translate("NavarQTClass", "2", Q_NULLPTR)
          << QApplication::translate("NavarQTClass", "3", Q_NULLPTR)
         );
-        label_6->setText(QApplication::translate("NavarQTClass", "<html><head/><body><p><br><span style=\" font-size:9pt;\">Frecuencia de captura (segundos)</span></p></body></html>", Q_NULLPTR));
         pushButton_3->setText(QString());
         pushButton_10->setText(QString());
+        pushButton_5->setText(QApplication::translate("NavarQTClass", "Encienda las c\303\241maras.", Q_NULLPTR));
+        label_11->setText(QString());
+        label_12->setText(QString());
         pushButton_4->setText(QApplication::translate("NavarQTClass", "Ubique el soporte de las c\303\241maras al extremo contrario de la rodilla a operar.", Q_NULLPTR));
         pushButton_6->setText(QApplication::translate("NavarQTClass", "Verifique la altura del soporte de las c\303\241maras con respecto a la altura del cirujano.", Q_NULLPTR));
         pushButton_7->setText(QApplication::translate("NavarQTClass", "Despliegue el brazo del soporte con un \303\241ngulo de m\303\241s o menos 45\302\260.", Q_NULLPTR));
         pushButton_8->setText(QApplication::translate("NavarQTClass", "Ubique las c\303\241maras de tal forma que en la visualizaci\303\263n se aprecie claramente en el recuadro la zona de trabajo (la zona que se va a operar).", Q_NULLPTR));
-        pushButton_5->setText(QApplication::translate("NavarQTClass", "Encienda las c\303\241maras.", Q_NULLPTR));
-        label_11->setText(QString());
-        label_12->setText(QString());
-        label_13->setText(QString());
         label_14->setText(QString());
         label_15->setText(QString());
+        label_13->setText(QString());
         label_camera_left->setText(QApplication::translate("NavarQTClass", "Camera 1", Q_NULLPTR));
         label_camera_right->setText(QApplication::translate("NavarQTClass", "camera 2", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("NavarQTClass", "Autenticaci\303\263n de usuarios", Q_NULLPTR));

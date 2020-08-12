@@ -27,6 +27,7 @@ public:
 	bool getPointerData(const std::string &fileName);
 	void getRigidsData();
 	bool calibPointer();
+	void UpdateSliders(int exp);
 	void setShowZone(bool status);
 	void setTakeSnapshot(bool status);
 	void setPics2Take(int numPics);
@@ -35,7 +36,7 @@ public:
 	void setDelta(float delta);
 	void writeMatrices();
 	void setCentroid(cv::Mat_<double> centroid, std::string& bone);
-	
+
 signals:
 	void updateLeftCamera(const QImage &);
 	void updateRightCamera(const QImage &);
@@ -48,6 +49,9 @@ signals:
 private:
 	CameraLibrary::Camera *camera_1;
 	CameraLibrary::Camera *camera_2;
+	Core::DistortionModel m_lensDistortion;
+	CameraLibrary::cModuleVector *m_vec;
+	CameraLibrary::cModuleVectorProcessing *m_vecprocessor;
 	bool showZone;
 	void saveImage(std::string &fileName, cv::Mat img);
 	bool takeSnapshot;
