@@ -9,6 +9,7 @@
 #include <vector>
 #include <functional>
 #include <math.h>
+#include <qdebug.h>
 #define PI 3.14159265
 #define AREA 100								///< área mínima de las esferas de referencia de la broca
 #define AREA_ESFERA_PEQ 50						///< área mínima de las esferas peque;a de referencia de los CR
@@ -206,8 +207,9 @@ namespace CustomCameraLibrary {
 				}
 			}
 			else {
-				cout << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
-				system("PAUSE");
+				qDebug() << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
+				//cout << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
+				//system("PAUSE");
 				state = false;
 			}
 		}

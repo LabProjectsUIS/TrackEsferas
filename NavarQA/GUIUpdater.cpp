@@ -16,6 +16,7 @@
 #include <math.h>
 #include <sstream>
 #include "opencv\cv.hpp"
+#include<qdebug.h>
 
 using namespace std;
 using namespace cv;
@@ -63,21 +64,27 @@ bool GUIUpdater::activateCameras() {
 *	y demás parámetros iniciales (exposición, intensidad y umbral).
 */
 void GUIUpdater::startCameras() {
-	camera_1->SetVideoType(Core::MJPEGMode);
+	
+	camera_1->SetVideoType(Core::GrayscaleMode);
 	camera_1->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_1->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_1->SetIntensity(CustomCameraLibrary::intensity_cvalue);
+	camera_1->SetImagerGain(CameraLibrary::Gain_Level3);
 	camera_1->SetFrameRate(120);
 	camera_1->SetName(CNAME_1);
 	camera_1->Start();
 
-	camera_2->SetVideoType(Core::MJPEGMode);
+	camera_2->SetVideoType(Core::GrayscaleMode);
 	camera_2->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_2->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_2->SetIntensity(CustomCameraLibrary::intensity_cvalue);
+	camera_2->SetImagerGain(CameraLibrary::Gain_Level3);
 	camera_2->SetFrameRate(120);
 	camera_2->SetName(CNAME_2);
 	camera_2->Start();
+
+	qDebug() << "continus: " << camera_1->ContinuousIR();
+	qDebug() << "continus: " << camera_2->ContinuousIR();
 }
 
 /**
@@ -235,6 +242,13 @@ void GUIUpdater::ShowCameras() {
 	camera_1->SetFrameRate(120);
 	camera_2->SetFrameRate(120);
 	int cameraframerate = camera_1->FrameRate();
+	int cameragain = camera_1->ImagerGain();
+	int cameragain2 = camera_2->ImagerGain();
+
+	qDebug() << "cameraGain1: " << cameragain;
+	qDebug() << "cameraGain2: " << cameragain2;
+	//OutputDebugString(L"camera gain is: " + cameragain);
+	//OutputDebugString(L"camera framerate is: " + cameraframerate);
 
 	
 
