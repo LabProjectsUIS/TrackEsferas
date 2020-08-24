@@ -1,0 +1,14 @@
+pointer corto pos
+	80 al 82
+	83 al 85	
+	86 al 88
+	89 al 91
+	92 al 94
+canula grande pos markers
+96 al 108
+
+clavo pos markers
+109 al 121
+
+broca
+122 al 129

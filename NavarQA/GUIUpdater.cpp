@@ -65,7 +65,7 @@ bool GUIUpdater::activateCameras() {
 */
 void GUIUpdater::startCameras() {
 	
-	camera_1->SetVideoType(Core::GrayscaleMode);
+	camera_1->SetVideoType(Core::ObjectMode);
 	camera_1->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_1->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_1->SetIntensity(CustomCameraLibrary::intensity_cvalue);
@@ -74,7 +74,7 @@ void GUIUpdater::startCameras() {
 	camera_1->SetName(CNAME_1);
 	camera_1->Start();
 
-	camera_2->SetVideoType(Core::GrayscaleMode);
+	camera_2->SetVideoType(Core::ObjectMode);
 	camera_2->SetExposure(CustomCameraLibrary::exposure_cvalue);
 	camera_2->SetThreshold(CustomCameraLibrary::threshold_cvalue);
 	camera_2->SetIntensity(CustomCameraLibrary::intensity_cvalue);
