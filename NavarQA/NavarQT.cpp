@@ -707,7 +707,7 @@ void NavarQT::startCalibration() {
 	switch (calibRetries) {
 	case 3:
 		fileName = "calib/stereo/otros/Calib.yml";
-		//doCalib = false;
+		doCalib = true;
 		break;
 	default:
 		fileName = "calib/stereo/otros/Calib.yml";

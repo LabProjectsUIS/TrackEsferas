@@ -1,17 +1,26 @@
 clear; clc;
-dat = importdata('C:\Users\preci\OneDrive\Documentos\CalibMotive\Takes\DatosInstrumentos.csv');
+dat = importdata('D:\TrackEsferas\DOCUMENTOS\CanulaGrande.txt');
+broca = importdata('D:\TrackEsferas\DOCUMENTOS\BrocaGrande.txt');
+%Separando esferas
 
-% Separando esferas
 %{
-Esfera1= mean(Data(:,1:3));
-Esfera2= mean(Data(:,4:6));
-Esfera3= mean(Data(:,7:9));
-Esfera4= mean(Data(:,10:12));
+CanulaGrande1= nanmean(dat(:,1:3));
+CanulaGrande2= nanmean(dat(:,4:6));
+CanulaGrande3= nanmean(dat(:,7:9));
+CanulaGrande4= nanmean(dat(:,10:12));
 
-d1= norm(Esfera1 - Esfera2);
-d2= norm(Esfera1 - Esfera3);
-d3= norm(Esfera1 - Esfera4);
-d4= norm(Esfera2 - Esfera3);
-d5= norm(Esfera2 - Esfera4);
-d6= norm(Esfera3 - Esfera4);
+d1= norm(CanulaGrande1 - CanulaGrande2);
+d2= norm(CanulaGrande1 - CanulaGrande3);
+d3= norm(CanulaGrande1 - CanulaGrande4);
+d4= norm(CanulaGrande2 - CanulaGrande3);
+d5= norm(CanulaGrande2 - CanulaGrande4);
+d6= norm(CanulaGrande3 - CanulaGrande4);
 %}
+
+Broca1= nanmean(broca(:,1:3));
+Broca2= nanmean(broca(:,4:6));
+Broca3= nanmean(broca(:,7:9));
+
+d1=norm(Broca1-Broca2);
+d2=norm(Broca1-Broca3);
+d3=norm(Broca2-Broca3);

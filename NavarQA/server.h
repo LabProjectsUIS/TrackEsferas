@@ -139,8 +139,7 @@ int CreateServer(int iConnectionType) {
 		//**************************************
 		// IP DONDE CORRER� EL SERVIDOR
 		//**************************************
-		sprintf(szIPAddress, "%d.%d.%d.%d", 192,168,0,101); //localaddress
-		//sprintf(szIPAddress, "%d.%d.%d.%d", 192, 168, 0, 101);
+		sprintf(szIPAddress, "%d.%d.%d.%d", 192,168,0,170); //localaddress
 
 		// Initialize NatNet server with first detected ip address - use NatNet default port assignments
 		int retCode = theServer->Initialize(szIPAddress);
