@@ -47,7 +47,7 @@ namespace CustomCameraLibrary {
 	const int broca = 5;///< indicador que representa la broca
 
 	float DELTA = 1.5;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
-
+	bool detect_broca=false;
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
 

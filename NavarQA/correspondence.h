@@ -206,6 +206,13 @@ namespace CustomCameraLibrary {
 					}
 				}
 			}
+			if ((A.rows - 3) % 5 == 0) {
+				qDebug() << "Hay una broca" << endl;
+				detect_broca = true;
+
+				cv::sort(Arreglo, Evaluate, 1); //Ordenamiento de areas de menor a mayor
+			}
+			
 			else {
 				qDebug() << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
 				//cout << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
