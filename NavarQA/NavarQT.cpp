@@ -713,7 +713,7 @@ void NavarQT::startCalibration() {
 		fileName = "calib/stereo/otros/Calib.yml";
 		break;
 	}	
-	if (!doCalib) { //Conexion con matlab toolkit
+	if (doCalib) { //Conexion con matlab toolkit
 		SHELLEXECUTEINFO ShExecInfo = { 0 };
 		ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
 		ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS;

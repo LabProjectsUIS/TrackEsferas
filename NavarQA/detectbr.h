@@ -874,6 +874,7 @@ namespace CustomCameraLibrary {
 
 			//***************************DUVAN PUSO ESTO, ESTA MAL!!!!!, DEBE SER +1
 			//***********************
+
 			if (temp.rows + 1 > N_MARKERS) 
 			{
 				//if (temp.rows + 2 > N_MARKERS) {	
@@ -922,17 +923,7 @@ namespace CustomCameraLibrary {
 					break;
 				}
 				time_t end = time;
-				int m;
-				if (bRigid[countBR].name==BROCA)
-				{
-					m = 1;
-				}
-				else
-				{
-					m = 0;
-				}
-				//archivoDI << (clock() - time)*1000/CLOCKS_PER_SEC<< "\t "<< m << "\n";
-				m = -1;
+				
 				bRigid[countBR].bdrigid = temp.t();								// añadir las coordenadas de las esferas del objeto rígido.
 				bRigid[countBR].nmarkers = temp.rows;	// número de marcadores en el O.R.
 				
@@ -941,7 +932,7 @@ namespace CustomCameraLibrary {
 																				//bRigid[countBR].centroid = temp2 / temp.rows;					// calcular el centroide del objeto rígido.
 																				//			    cout << "*********" << endl << bRigid[countBR].bdrigid << endl << endl;
 				getEulerAngles(bRigid, countBR);								// Detectar los ángulos de Euler.
-				countBR++;
+				countBR++;														//contador de objetos rígidos
 				flag1 = 1;
 				
 			}

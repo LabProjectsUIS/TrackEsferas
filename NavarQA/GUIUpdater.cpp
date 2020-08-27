@@ -774,6 +774,20 @@ void GUIUpdater::getRigidsData()
 			imshow("Camara Izquierda", matFrame_2);
 			frame_2->Release();
 		}
+		/*
+		for (int i = 0; i < P1.rows; i++)
+		{
+			for (int j = 0; j < P1.cols; j++) {
+				qDebug()<<"P1" << P1[i][j];
+			}
+		}
+
+		for (int i = 0; i < P2.rows; i++)
+		{
+			for (int j = 0; j < P2.cols; j++) {
+				qDebug()<<"P2:" << P2[i][j];
+			}
+		}*/
 
 		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
 		{
@@ -821,6 +835,9 @@ void GUIUpdater::getRigidsData()
 					wResult = WaitForSingleObject(CustomCameraLibrary::sSemaphore, INFINITE);	// espera por la indicación del semáforo para seguir el hilo de ejecución//
 					if (wResult == WAIT_OBJECT_0) {
 						
+						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
+						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
+						/*
 						int limitStart = 0;
 						int limitEnd = 4;
 
@@ -832,6 +849,7 @@ void GUIUpdater::getRigidsData()
 									XL(Range(limitStart, limitEnd), Range(0, XL.cols)).copyTo(XLClone); // Sacar los menores
 									CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
 									CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XLClone, cdata::distances, CustomCameraLibrary::rigid);
+									qDebug() << "nbr es " << CustomCameraLibrary::nbr;
 									limitStart = limitStart + 4;
 									limitEnd = limitEnd + 4;
 							}
@@ -841,7 +859,7 @@ void GUIUpdater::getRigidsData()
 							CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
 							CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
 						}
-						
+						*/
 						if (CustomCameraLibrary::nbr > 0)
 						{
 							for (int f = 0; f < CustomCameraLibrary::nbr; f++) {

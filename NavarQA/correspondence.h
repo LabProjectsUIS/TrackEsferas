@@ -94,7 +94,7 @@ namespace CustomCameraLibrary {
 		}
 		//				cout << L << endl;
 		minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
-		if (minVal<50)
+		if (minVal<55)
 		{
 			L = P.col(minLoc.y);			// primera esfera del C.R.
 			D(minLoc.y, 0) = x;
@@ -206,14 +206,53 @@ namespace CustomCameraLibrary {
 					}
 				}
 			}
-			if ((A.rows - 3) % 5 == 0) {
-				qDebug() << "Hay una broca" << endl;
+			if ((A.rows - 3) % 5 == 0 ) {
+				//qDebug() << "Hay una broca" << endl;
 				detect_broca = true;
 
 				cv::sort(Arreglo, Evaluate, 1); //Ordenamiento de areas de menor a mayor
+				
+				if (A.rows == 3) //posiblemente solo esté la broca en la escena.
+				{
+					Evaluate(Range(0, 1), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
+					Evaluate(Range(1, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
+
+					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
+						for (int y = 0; y < 1; y++) {
+							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
+
+								if (flag <= 1 && areas_men.rows < 1) {
+									areas_men.push_back(j); //Envio de posicion de esfera pequeña
+									state = true; //Envio de estado
+									flag++;
+								}
+							}
+						}
+					}
+				}
+				else if(A.rows==8) //Posiblemente haya una broca y una estrella
+				{
+					Evaluate(Range(0, 2), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
+					Evaluate(Range(2, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
+
+					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
+						for (int y = 0; y < 1; y++) {
+							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
+
+								if (flag <= 2 && areas_men.rows < 2) {
+									areas_men.push_back(j); //Envio de posicion de esfera pequeña
+									state = true; //Envio de estado
+									flag++;
+								}
+							}
+						}
+					}
+				}
 			}
+
 			
-			else {
+			
+			if(flag==0) {
 				qDebug() << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
 				//cout << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
 				//system("PAUSE");

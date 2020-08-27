@@ -14,11 +14,11 @@
 #include <mmsystem.h> // quiz�s no sirva para nada aqu�
 #include "NATUtils.h"
 
-#define POINTERR 1
-#define FEMURR 3
-#define TIBIAA 2
-#define GAFASS 4
-#define BROCAA 6
+#define POINTERR 4
+#define FEMURR 1
+#define TIBIAA 3
+#define GAFASS 5
+#define BROCAA 2
 
 #pragma warning( disable : 4996 )
 
@@ -267,6 +267,8 @@ int CreateServer(int iConnectionType) {
 		for (int i = 0; i < nbr; i++) {
 			sRigidBodyDescription* pRigidBodyDescription = new sRigidBodyDescription();
 			sprintf(pRigidBodyDescription->szName, rigid[i].name.c_str());
+			qDebug() << "elemento encontrado:" << pRigidBodyDescription->szName, rigid[i].name.c_str();
+
 			pRigidBodyDescription->ID = i;
 			pRigidBodyDescription->parentID = -1;
 			pRigidBodyDescription->offsetx = 0.0f;
@@ -282,15 +284,14 @@ int CreateServer(int iConnectionType) {
 				pRigidBodyDescription->ID = GAFASS;
 			else if (strcmp(pRigidBodyDescription->szName, "BROCA") == 0)
 				pRigidBodyDescription->ID = BROCAA;
-			//archivoD << pRigidBodyDescription->ID<<"\n"; //testeando que elemento encontro
+			
 
 			pDescription->arrDataDescriptions[index].type = Descriptor_RigidBody;
 		
 			pDescription->arrDataDescriptions[index].Data.RigidBodyDescription = pRigidBodyDescription;
 			pDescription->nDataDescriptions++;
-			//archivoD << "dataset" << pDescription->arrDataDescriptions[index].type << "\n";
-			//archivoD << "dataset" << pDescription->arrDataDescriptions[index].Data.RigidBodyDescription << "\n";
 			index++;
+
 			// Marker Set Description
 			sMarkerSetDescription* pMarkerSetDescription = new sMarkerSetDescription();
 			sprintf(pMarkerSetDescription->szName, rigid[i].name.c_str());
