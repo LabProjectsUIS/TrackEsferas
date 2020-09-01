@@ -15,7 +15,6 @@
 #include <dos.h>
 #include "globals.h"
 #include <math.h>
-#include<iostream> 
 
 
 namespace CustomCameraLibrary {
@@ -23,7 +22,7 @@ namespace CustomCameraLibrary {
 	using namespace std;
 
 #define PI 3.14159265
-#define N_MARKERS 3				///< número de marcadores que la función joskstra() usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.
+#define N_MARKERS 2				///< número de marcadores que la función joskstra() usa para determinar si se ha detectado un cuerpo rígido; es decir, si detecta más marcadores que este valor entonces ha detectado un cuerpo rígido.
 #define N_MARKERSB 2
 	//		cout << A << endl;
 #define L_POINTER   219.70329913564//219.3295732//221.88//218.91
@@ -209,30 +208,31 @@ namespace CustomCameraLibrary {
 	cv::Mat OrderByIdx(cv::Mat_<double> InputMatrix,cv::Mat InputIndex, int num) {
 		cv::Mat_<double> temp(num,2);
 
-		// arr[i] should be present at index[i] index 
-		//for (int i = 0; i < InputMatrix.rows; i++) {
-			//for (int j = 0; j < InputMatrix.cols; j++)
-			//{
-				//temp.at<double>(InputIndex.at<int>(i, 0),j) = InputMatrix.at<double>(i, j);
-			//}
-		//}
+		if (num == 2)
+		{
+			temp.at<double>(0, 0) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 0);
+			temp.at<double>(0, 1) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 1); //3 de idx
+
+			temp.at<double>(1, 0) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 0);//1 de idx
+			temp.at<double>(1, 1) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 1);//1 de idx
+
+		}
+		else
+		{
+			temp.at<double>(0, 0) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 0);
+			temp.at<double>(0, 1) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 1); //3 de idx
+
+			temp.at<double>(1, 0) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 0);//1 de idx
+			temp.at<double>(1, 1) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 1);//1 de idx
+
+			temp.at<double>(2, 0) = InputMatrix.at<double>(InputIndex.at<int>(2, 0), 0); //2 de idx
+			temp.at<double>(2, 1) = InputMatrix.at<double>(InputIndex.at<int>(2, 0), 1); //2 de idx
+
+			temp.at<double>(3, 0) = InputMatrix.at<double>(InputIndex.at<int>(3, 0), 0); //0 de idx
+			temp.at<double>(3, 1) = InputMatrix.at<double>(InputIndex.at<int>(3, 0), 1); //0 de idx
+		}
 		
-		temp.at<double>(0, 0) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 0);
-		temp.at<double>(0, 1) = InputMatrix.at<double>(InputIndex.at<int>(0, 0), 1); //3 de idx
 
-		temp.at<double>(1, 0) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 0);//1 de idx
-		temp.at<double>(1, 1) = InputMatrix.at<double>(InputIndex.at<int>(1, 0), 1);//1 de idx
-
-		temp.at<double>(2, 0) = InputMatrix.at<double>(InputIndex.at<int>(2, 0), 0); //2 de idx
-		temp.at<double>(2, 1) = InputMatrix.at<double>(InputIndex.at<int>(2, 0), 1); //2 de idx
-
-		temp.at<double>(3, 0) = InputMatrix.at<double>(InputIndex.at<int>(3, 0), 0); //0 de idx
-		temp.at<double>(3, 1) = InputMatrix.at<double>(InputIndex.at<int>(3, 0), 1); //0 de idx
-
-			//temp[a][0];
-			//double a = InputMatrix[i][0];
-			//double b = InputMatrix[i][0];
-		// Copy temp[] to arr[] 
 		return temp;
 	}
 
@@ -904,11 +904,11 @@ namespace CustomCameraLibrary {
 					break;
 				case femur:
 					bRigid[countBR].name = FEMUR;
-					OutputDebugString(L"FEMUR");
+					OutputDebugString(L"ES FEMUR");
 					break;
 				case tibia:
 					bRigid[countBR].name = TIBIA;
-					OutputDebugString(L"TIBIA");
+					OutputDebugString(L"ES TIBIA");
 					break;
 				case gafas:
 					bRigid[countBR].name = GAFAS;
@@ -916,7 +916,7 @@ namespace CustomCameraLibrary {
 					break;
 				case broca:
 					bRigid[countBR].name = BROCA;
-					OutputDebugString(L"broca");
+					OutputDebugString(L"ES broca");
 					break;
 				default:
 					OutputDebugString(L"no exist");

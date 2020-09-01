@@ -17,6 +17,7 @@
 #include <sstream>
 #include "opencv\cv.hpp"
 #include<qdebug.h>
+#include<QtDebug>
 
 using namespace std;
 using namespace cv;
@@ -699,11 +700,24 @@ void GUIUpdater::writeMatrices() {
 */
 void GUIUpdater::getRigidsData() 
 {
-	ofstream archivoA;
-	if (!archivoA.is_open())
+	ofstream archivoP1, archivoP2, archivoA1, archivoA2;
+	if (!archivoP1.is_open())
 	{
-		archivoA.open("Areas.txt", std::ios::app);
+		archivoP1.open("Posiciones1.txt", std::ios::app);
 	}
+	if (!archivoP2.is_open())
+	{
+		archivoP2.open("Posiciones2.txt", std::ios::app);
+	}
+	if (!archivoA1.is_open())
+	{
+		archivoA1.open("Areas1.txt", std::ios::app);
+	}
+	if (!archivoA2.is_open())
+	{
+		archivoA2.open("Areas2.txt", std::ios::app);
+	}
+	
 	cv::Mat_<double> XBrocaNew(2, 4);
 	detectRigids = true;
 	doStartServer = true;
@@ -753,16 +767,18 @@ void GUIUpdater::getRigidsData()
 																   //CameraLibrary::Frame *frame_2 = camera_2->GetLatestFrame();
 		cv::Mat_<double> PP1, PP2, A1, A2, P1, P2, D1, D2, PP_Broca1, PP_Broca2, P1temp, P2temp;	// Matriz de Proyeccián de puntos x,y en la imagen, A1, A2, son las areas de las esferas
 		cv::Mat_<double> XL, XR, XLClone;				// Matriz de puntos 3D vistos desde la cámara izquierda/derecha 
-		
+
+
 		if (frame_1) {
 			frame_1->Rasterize(cameraWidth_1, cameraHeight_1, matFrame_1.step, BACKBUFFER_BITSPERPIXEL, matFrame_1.data);
 			//ostr << "../right0" << ++x << ".bmp";
 			//saveImage(ostr.str(), matFrame_1);
 			GetObjects2(frame_1, matFrame_1, PP1, A1);
+
 			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1);
 			imshow("Camara Derecha", matFrame_1);
 			frame_1->Release();
-			
+
 		}
 
 		if (frame_2) {
@@ -774,20 +790,10 @@ void GUIUpdater::getRigidsData()
 			imshow("Camara Izquierda", matFrame_2);
 			frame_2->Release();
 		}
-		/*
-		for (int i = 0; i < P1.rows; i++)
-		{
-			for (int j = 0; j < P1.cols; j++) {
-				qDebug()<<"P1" << P1[i][j];
-			}
-		}
-
-		for (int i = 0; i < P2.rows; i++)
-		{
-			for (int j = 0; j < P2.cols; j++) {
-				qDebug()<<"P2:" << P2[i][j];
-			}
-		}*/
+		archivoP1 << PP1;
+		archivoP2 << PP2;
+		archivoA1 << A1;
+		archivoA2 << A2;
 
 		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
 		{
@@ -825,7 +831,7 @@ void GUIUpdater::getRigidsData()
 					CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
 					CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
 
-					OutputDebugString(L"nbr es.. "+ CustomCameraLibrary::nbr);
+					
 					CustomCameraLibrary::StartServer();
 					doStartServer = false;
 					CustomCameraLibrary::StreamFrame();
@@ -837,6 +843,9 @@ void GUIUpdater::getRigidsData()
 						
 						CustomCameraLibrary::rigid = new CustomCameraLibrary::BodyR[cdata::distances.rows + 1];
 						CustomCameraLibrary::nbr = CustomCameraLibrary::joskstra(XL.t(), cdata::distances, CustomCameraLibrary::rigid);
+						
+						int nbrss = CustomCameraLibrary::nbr;
+
 						/*
 						int limitStart = 0;
 						int limitEnd = 4;
@@ -863,12 +872,26 @@ void GUIUpdater::getRigidsData()
 						if (CustomCameraLibrary::nbr > 0)
 						{
 							for (int f = 0; f < CustomCameraLibrary::nbr; f++) {
-								if (CustomCameraLibrary::rigid[f].name == POINTER)
+								/*if (CustomCameraLibrary::rigid[f].name == POINTER)
 								{
 									emit pointerDetected();
 								}
 								if (f == CustomCameraLibrary::nbr)
-									emit pointerNotDetected();
+									emit pointerNotDetected();*/
+								
+								
+
+								string name = CustomCameraLibrary::rigid[f].name;
+								QString str = QString::fromUtf8(name.c_str());
+
+								double yaw = CustomCameraLibrary::rigid[f].yaw;
+								double pitch = CustomCameraLibrary::rigid[f].pitch;
+								double roll = CustomCameraLibrary::rigid[f].roll;
+
+								qDebug() << "hay " << nbrss << " objetos";
+								/*qDebug() << "name is" << str;
+								qDebug() << "CR: " << CustomCameraLibrary::rigid[f].bdr << endl ;
+								qDebug() << "Yaw: " <<yaw  << "Pitch: " << pitch<< endl << "Roll: " << roll;*/
 							}
 						}
 						else
@@ -891,7 +914,7 @@ void GUIUpdater::getRigidsData()
 	
 	}
 
-	archivoA.close();
+	archivoA1.close(); archivoA2.close(); archivoP1.close(); archivoP2.close();
 	CustomCameraLibrary::StreamFrame();
 	Beep(500, 500);
 }

@@ -35,7 +35,7 @@ namespace CustomCameraLibrary {
 		N = S.t();
 
 		/*Desplazamiento al centroide.*/
-		subtract(N, repeat(cm, 4, 1), DX1);
+		subtract(N, repeat(cm, N.rows, 1), DX1);
 
 		/*Vectores unitarios a cada esfera.*/
 		reduce(DX1.mul(DX1, 1), sum, 1, CV_REDUCE_SUM);
@@ -45,14 +45,14 @@ namespace CustomCameraLibrary {
 
 		/*Definición de un sistema coordenado x,y de tal manera que el vector unitario de la primera esfera es el eje x;
 		el eje z es el perpendicular a las esferas (que solo tienen x,y en pixeles) y el eje y es el producto cruz.*/
-		U(Range(0, U.rows - 3), Range(0, U.cols)).copyTo(ux);
+		U(Range(0, U.rows - (N.rows-1)), Range(0, U.cols)).copyTo(ux);
 		cv::hconcat(ux, 0, us);
 		uy = cross_product(unit, us);
 		uy(Range(0, uy.rows), Range(0, uy.cols - 1)).copyTo(uy);
 
 		/*Calculo de proyecciones a los vectores unitarios x,y,z*/
-		reduce(U.mul(cv::repeat(ux, 4, 1)), Compx, 1, CV_REDUCE_SUM);
-		reduce(U.mul(cv::repeat(uy, 4, 1)), Compy, 1, CV_REDUCE_SUM);
+		reduce(U.mul(cv::repeat(ux, N.rows, 1)), Compx, 1, CV_REDUCE_SUM);
+		reduce(U.mul(cv::repeat(uy, N.rows, 1)), Compy, 1, CV_REDUCE_SUM);
 
 		/*Calculo de los angulos con el eje x en el rango de pi a -pi y correcion de angulos negativos*/
 		Theta = invTan2(Compy, Compx);
@@ -61,7 +61,7 @@ namespace CustomCameraLibrary {
 		sortIdx(Theta, testIdx, CV_SORT_ASCENDING | CV_SORT_EVERY_COLUMN);
 
 		/*Reasignación de centroides.*/
-		ORDENADO = OrderByIdx(N, testIdx, 4);   //Generar redoren by indexes
+		ORDENADO = OrderByIdx(N, testIdx, N.rows);   //Generar redoren by indexes
 		ORDENADO = ORDENADO.t();
 		ORDENADO.copyTo(S);
 	}
@@ -88,30 +88,69 @@ namespace CustomCameraLibrary {
 		reduce(temp, cm, 0, CV_REDUCE_AVG);
 		// crear matriz de distancias con respecto a la posición de referencia
 		for (int i = 0; i < P.cols; i++) {
-			if (i != posRef)
+			if (i != posRef){
 				D.push_back(norm(P.col(posRef) - P.col(i)));
+				//qDebug() << "distancia: " << norm(P.col(posRef) - P.col(i));
+			}
 			else D.push_back(1000.00);
 		}
 		//				cout << L << endl;
 		minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
-		if (minVal<55)
+		if (detect_broca == true)
 		{
-			L = P.col(minLoc.y);			// primera esfera del C.R.
-			D(minLoc.y, 0) = x;
+			if (minVal>40 && minVal<65) //broca
+			{
+				L = P.col(minLoc.y);			// primera esfera del C.R.
+				D(minLoc.y, 0) = x;
 
-			for (int i = 0; i < 3; i++) {	// restantes 4 esferas del C.R
-				x += 500;
-				minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
-				hconcat(L, P.col(minLoc.y), L);
-				D(minLoc.y, 0) = (double)x;
+				for (int i = 0; i < 1; i++) {	// restantes 2 esferas del C.R
+					x += 500;
+					minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
+					hconcat(L, P.col(minLoc.y), L);
+					D(minLoc.y, 0) = (double)x;
+				}
+				//Guardar L antes de reordenar.
+				reorden(L, cm);
 			}
-			//Guardar L antes de reordenar.
-			reorden(L, cm);
-		}
-		else {
-			L(0, 0) = -100;
-		}
+			if (minVal < 35) //estrella normal
+			{
+				L = P.col(minLoc.y);			// primera esfera del C.R.
+				D(minLoc.y, 0) = x;
 
+				for (int i = 0; i < 3; i++) {	// restantes 4 esferas del C.R
+					x += 500;
+					minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
+					hconcat(L, P.col(minLoc.y), L);
+					D(minLoc.y, 0) = (double)x;
+				}
+				//Guardar L antes de reordenar.
+				reorden(L, cm);
+			}
+			else if (minVal > 100) {
+				L(0, 0) = -100;
+			}
+		}
+		else
+		{
+			if (minVal < 50) //estrella normal
+			{
+				L = P.col(minLoc.y);			// primera esfera del C.R.
+				D(minLoc.y, 0) = x;
+
+				for (int i = 0; i < 3; i++) {	// restantes 4 esferas del C.R
+					x += 500;
+					minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
+					hconcat(L, P.col(minLoc.y), L);
+					D(minLoc.y, 0) = (double)x;
+				}
+				//Guardar L antes de reordenar.
+				reorden(L, cm);
+			}
+			else {
+				L(0, 0) = -100;
+			}
+		}
+	
 		return L;
 		ArchivoL.close();
 	}
@@ -218,7 +257,7 @@ namespace CustomCameraLibrary {
 					Evaluate(Range(1, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
 
 					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
-						for (int y = 0; y < 1; y++) {
+						for (int y = 0; y < 1; y++) { //Recorre filas de evaluate
 							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
 
 								if (flag <= 1 && areas_men.rows < 1) {
@@ -230,13 +269,13 @@ namespace CustomCameraLibrary {
 						}
 					}
 				}
-				else if(A.rows==8) //Posiblemente haya una broca y una estrella
+				if(A.rows==8) //Posiblemente haya una broca y una estrella
 				{
 					Evaluate(Range(0, 2), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
 					Evaluate(Range(2, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
 
 					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
-						for (int y = 0; y < 1; y++) {
+						for (int y = 0; y < Evaluate.rows; y++) { //recorre filas de evaluate
 							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
 
 								if (flag <= 2 && areas_men.rows < 2) {
@@ -279,8 +318,7 @@ namespace CustomCameraLibrary {
 			Areas.open("Areas.txt", std::ios::app);
 
 		}
-		int ar = areas(A, areas_men);
-		if (!A.empty() && ar>0) { // si el arreglo de areas no es vacio, y si hay areas pequeñas (esfera mas pequeña) 
+		if (!A.empty() && areas(A, areas_men)) { // si el arreglo de areas no es vacio, y si hay areas pequeñas (esfera mas pequeña) 
 
 			F0 = findSpheres(P, areas_men(0, 0));
 			if (areas_men.rows>1)

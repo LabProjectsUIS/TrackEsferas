@@ -267,7 +267,6 @@ int CreateServer(int iConnectionType) {
 		for (int i = 0; i < nbr; i++) {
 			sRigidBodyDescription* pRigidBodyDescription = new sRigidBodyDescription();
 			sprintf(pRigidBodyDescription->szName, rigid[i].name.c_str());
-			qDebug() << "elemento encontrado:" << pRigidBodyDescription->szName, rigid[i].name.c_str();
 
 			pRigidBodyDescription->ID = i;
 			pRigidBodyDescription->parentID = -1;
