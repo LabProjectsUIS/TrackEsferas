@@ -98,7 +98,7 @@ namespace CustomCameraLibrary {
 		minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
 		if (detect_broca == true)
 		{
-			if (minVal>40 && minVal<65) //broca
+			if (minVal>40 && minVal<65) //intervalo para broca
 			{
 				L = P.col(minLoc.y);			// primera esfera del C.R.
 				D(minLoc.y, 0) = x;
