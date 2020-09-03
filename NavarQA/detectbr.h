@@ -784,28 +784,13 @@ namespace CustomCameraLibrary {
 	int joskstra(Mat_<float> spSet, Mat_<float> dspSet, BodyR *&bRigid) {
 		time = 0;
 		Sphere *Spheres;
-		if (!archivoDI.is_open())
-		{
-			archivoDI.open("EvaluacionBroca80cm.txt", std::ios::app);
-		}
+		
 		int i, i0, j, countBR,w,h,cont;
 		int flag1 = -1;
 		float peso;
 		vector<float> vec;													// vector que llevará el conjunto de distancias teóricas de los cuerpos rígidos.
 		int nBRigid = dspSet.rows;											// número de cuerpos rígidos que se deberían detectar.
 		int  N = spSet.rows;
-		archivoDI << spSet << "\t";   //Revisando elementos 
-		/*if (!spSet.empty() && spSet.rows==3 && spSet.cols==3) {
-			for (w = 0; w < spSet.rows; w++)
-			{
-				for (int h = 0; h < spSet.cols; h++)
-				{
-					archivoDI << spSet[w][h] << "\t";
-				}
-				archivoDI << "\t";
-			}
-			//archivoDI << "\n";
-		}*/
 		int  N2 = dspSet.rows;
 		Mat d = dspSet.reshape(1, 1);										// convertir a una matriz 1xn.
 		double min, max;
@@ -872,9 +857,7 @@ namespace CustomCameraLibrary {
 				}
 			}
 
-			//***************************DUVAN PUSO ESTO, ESTA MAL!!!!!, DEBE SER +1
-			//***********************
-
+			
 			if (temp.rows + 1 > N_MARKERS) 
 			{
 				//if (temp.rows + 2 > N_MARKERS) {	
@@ -948,7 +931,6 @@ namespace CustomCameraLibrary {
 
 
 		}
-		archivoDI.close();
 		return countBR;
 	}
 

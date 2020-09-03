@@ -221,7 +221,7 @@ namespace CustomCameraLibrary {
 		if (A.rows <= MAX_ESFERA) {
 			int s = A.rows; //Extrae numero de objetos
 			Arreglo = A;
-			if (s % 5 == 0)    //Verifica que sí es multiplo de 5 que corresponde a una estrella
+			if (s % 5 == 0)    //Verifica que sí es multiplo de 5 que corresponde a una estrella y no hay brocas
 			{
 				cv::sort(Arreglo, Evaluate, 1); //Ordenamiento de areas de menor a mayor
 
@@ -278,7 +278,43 @@ namespace CustomCameraLibrary {
 						for (int y = 0; y < Evaluate.rows; y++) { //recorre filas de evaluate
 							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
 
-								if (flag <= 2 && areas_men.rows < 2) {
+								if (flag <= 2 && areas_men.rows < 2) { //debe enviar 2 esferas pequeñas
+									areas_men.push_back(j); //Envio de posicion de esfera pequeña
+									state = true; //Envio de estado
+									flag++;
+								}
+							}
+						}
+					}
+				}
+				if (A.rows == 13) //Posiblemente haya una broca y dos estrellas
+				{
+					Evaluate(Range(0, 3), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
+					Evaluate(Range(3, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
+
+					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
+						for (int y = 0; y < Evaluate.rows; y++) { //recorre filas de evaluate
+							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
+
+								if (flag <= 3 && areas_men.rows < 3) {//debe enviar 3 esferas pequeñas
+									areas_men.push_back(j); //Envio de posicion de esfera pequeña
+									state = true; //Envio de estado
+									flag++;
+								}
+							}
+						}
+					}
+				}
+				if (A.rows == 18) //Posiblemente haya una broca y dos estrellas
+				{
+					Evaluate(Range(0, 4), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
+					Evaluate(Range(4, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
+
+					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
+						for (int y = 0; y < Evaluate.rows; y++) { //recorre filas de evaluate
+							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
+
+								if (flag <= 4 && areas_men.rows < 4) { //debe enviar 4 esferas pequeñas
 									areas_men.push_back(j); //Envio de posicion de esfera pequeña
 									state = true; //Envio de estado
 									flag++;
