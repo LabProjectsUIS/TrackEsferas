@@ -66,6 +66,16 @@ namespace CustomCameraLibrary {
 		ORDENADO.copyTo(S);
 	}
 
+
+
+	Mat_<double> RemovesphereIdx(Mat_<double>PCopy, Mat_<double> areas_men) {
+		Mat_<double> L(1, 1);
+		for (int i = 0; i < areas_men.rows; i++) {
+			PCopy.col(areas_men(i, 0)) = 0;
+		}
+		return PCopy;
+
+	}
 	/**
 	*	Encuentra las 4 esferas más cercanas a la esfera de referencia (la que tiene menor área).
 	*	@param P es el conjunto de esferas.
@@ -86,33 +96,17 @@ namespace CustomCameraLibrary {
 		int x = 1500;
 		temp = P.t();
 		reduce(temp, cm, 0, CV_REDUCE_AVG);
-		// crear matriz de distancias con respecto a la posición de referencia
+		// crear matriz de distancias D con respecto a la posición de referencia
 		for (int i = 0; i < P.cols; i++) {
 			if (i != posRef){
 				D.push_back(norm(P.col(posRef) - P.col(i)));
-				//qDebug() << "distancia: " << norm(P.col(posRef) - P.col(i));
 			}
 			else D.push_back(1000.00);
 		}
 		//				cout << L << endl;
 		minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
-		if (detect_broca == true)
-		{
-			if (minVal>40 && minVal<65) //intervalo para broca
-			{
-				L = P.col(minLoc.y);			// primera esfera del C.R.
-				D(minLoc.y, 0) = x;
 
-				for (int i = 0; i < 1; i++) {	// restantes 2 esferas del C.R
-					x += 500;
-					minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
-					hconcat(L, P.col(minLoc.y), L);
-					D(minLoc.y, 0) = (double)x;
-				}
-				//Guardar L antes de reordenar.
-				reorden(L, cm);
-			}
-			if (minVal < 35) //estrella normal
+			if (minVal < 65) //estrella normal
 			{
 				L = P.col(minLoc.y);			// primera esfera del C.R.
 				D(minLoc.y, 0) = x;
@@ -123,33 +117,11 @@ namespace CustomCameraLibrary {
 					hconcat(L, P.col(minLoc.y), L);
 					D(minLoc.y, 0) = (double)x;
 				}
-				//Guardar L antes de reordenar.
-				reorden(L, cm);
-			}
-			else if (minVal > 100) {
-				L(0, 0) = -100;
-			}
-		}
-		else
-		{
-			if (minVal < 50) //estrella normal
-			{
-				L = P.col(minLoc.y);			// primera esfera del C.R.
-				D(minLoc.y, 0) = x;
-
-				for (int i = 0; i < 3; i++) {	// restantes 4 esferas del C.R
-					x += 500;
-					minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
-					hconcat(L, P.col(minLoc.y), L);
-					D(minLoc.y, 0) = (double)x;
-				}
-				//Guardar L antes de reordenar.
 				reorden(L, cm);
 			}
 			else {
 				L(0, 0) = -100;
 			}
-		}
 	
 		return L;
 		ArchivoL.close();
@@ -218,6 +190,14 @@ namespace CustomCameraLibrary {
 		bool state = false;
 		ofstream Areas;
 
+		for (int i = 0; i < A.rows; i++)
+		{
+			for (int j = 0; j < A.cols; j++) {
+				//cout << A[i][j];
+			}
+		}
+
+
 		if (A.rows <= MAX_ESFERA) {
 			int s = A.rows; //Extrae numero de objetos
 			Arreglo = A;
@@ -245,93 +225,47 @@ namespace CustomCameraLibrary {
 					}
 				}
 			}
-			if ((A.rows - 3) % 5 == 0 ) {
+			if ((A.rows - 3) % 5 == 0) {
 				//qDebug() << "Hay una broca" << endl;
 				detect_broca = true;
 
 				cv::sort(Arreglo, Evaluate, 1); //Ordenamiento de areas de menor a mayor
-				
-				if (A.rows == 3) //posiblemente solo esté la broca en la escena.
+
+				if (A.rows > 3) //posiblemente haya una broca y estrellas
 				{
-					Evaluate(Range(0, 1), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
-					Evaluate(Range(1, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
+					for (int i = 0; i < s; i++) {   //Evaluar hasta el número de objetos
+						if ((s - 3) / 5 == i) {  // Evaluar la cantidad de esferas pequeñas que deberian haber EN ESTRELLAS, ignorando broca
+							Evaluate(Range(0, i), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar areas menores
+							Evaluate(Range(i, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
 
-					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
-						for (int y = 0; y < 1; y++) { //Recorre filas de evaluate
-							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
+							for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
+								for (int y = 0; y < i; y++) {
+									if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
 
-								if (flag <= 1 && areas_men.rows < 1) {
-									areas_men.push_back(j); //Envio de posicion de esfera pequeña
-									state = true; //Envio de estado
-									flag++;
+										if (flag <= i && areas_men.rows < i) {
+											areas_men.push_back(j); //Envio de posicion de esfera pequeña
+											state = true; //Envio de estado
+											flag++;
+										}
+									}
 								}
 							}
 						}
 					}
 				}
-				if(A.rows==8) //Posiblemente haya una broca y una estrella
+				if (A.rows == 3)
 				{
-					Evaluate(Range(0, 2), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
-					Evaluate(Range(2, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
-
-					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
-						for (int y = 0; y < Evaluate.rows; y++) { //recorre filas de evaluate
-							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
-
-								if (flag <= 2 && areas_men.rows < 2) { //debe enviar 2 esferas pequeñas
-									areas_men.push_back(j); //Envio de posicion de esfera pequeña
-									state = true; //Envio de estado
-									flag++;
-								}
-							}
-						}
-					}
+					areas_men.push_back(1000);
+					detect_broca = true;
+					state = true;
+					flag++;
 				}
-				if (A.rows == 13) //Posiblemente haya una broca y dos estrellas
-				{
-					Evaluate(Range(0, 3), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
-					Evaluate(Range(3, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
-
-					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
-						for (int y = 0; y < Evaluate.rows; y++) { //recorre filas de evaluate
-							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
-
-								if (flag <= 3 && areas_men.rows < 3) {//debe enviar 3 esferas pequeñas
-									areas_men.push_back(j); //Envio de posicion de esfera pequeña
-									state = true; //Envio de estado
-									flag++;
-								}
-							}
-						}
-					}
+				if (flag == 0) {
+					cout << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
+					//cout << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
+					//system("PAUSE");
+					state = false;
 				}
-				if (A.rows == 18) //Posiblemente haya una broca y dos estrellas
-				{
-					Evaluate(Range(0, 4), Range(0, Evaluate.cols)).copyTo(Menores); // Sacar el area menor
-					Evaluate(Range(4, Evaluate.rows), Range(0, Evaluate.cols)).copyTo(Mayores); // Sacar areas Mayores
-
-					for (int j = 0; j < Arreglo.rows; j++) {//Busqueda en el arreglo original las i esferas.
-						for (int y = 0; y < Evaluate.rows; y++) { //recorre filas de evaluate
-							if (Arreglo(j, 0) == Evaluate(y, 0)) { //Busqueda de esferas pequeñas
-
-								if (flag <= 4 && areas_men.rows < 4) { //debe enviar 4 esferas pequeñas
-									areas_men.push_back(j); //Envio de posicion de esfera pequeña
-									state = true; //Envio de estado
-									flag++;
-								}
-							}
-						}
-					}
-				}
-			}
-
-			
-			
-			if(flag==0) {
-				qDebug() << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
-				//cout << "ERROR: Encontradas m�s esferas peque�as >> correspondence.h" << endl;
-				//system("PAUSE");
-				state = false;
 			}
 		}
 		return state;
@@ -345,30 +279,79 @@ namespace CustomCameraLibrary {
 	*	@return un conjunto de esferas ordenadas según la correspondencia.
 	**/
 	cv::Mat_<double> CorrespondenceDetection(cv::Mat_<double> P, cv::Mat_<double> A/*, cv::Mat_<double> F_Broca*/) {
-		cv::Mat_<double> F0;
+		cv::Mat_<double> F0, temp(2, 1), temp2, PClone;
 		cv::Mat_<int> areas_men;		//	posición de las áreas menores
-										//buscar la segunda area menor tal vez asi
-
 		ofstream Areas;
 		if (!Areas.is_open()) {
-			Areas.open("Areas.txt", std::ios::app);
+			Areas.open("temp.txt", std::ios::app);
 
 		}
-		if (!A.empty() && areas(A, areas_men)) { // si el arreglo de areas no es vacio, y si hay areas pequeñas (esfera mas pequeña) 
 
-			F0 = findSpheres(P, areas_men(0, 0));
-			if (areas_men.rows>1)
+		//Si detecta o no detecta la broca
+		//si no la detecta continue normal
+		//si la detecta llene una matriz residuo de las posiciones que faltan despues de findSpheres.
+		if (!A.empty() && areas(A, areas_men))
+		{
+			if (detect_broca == true) // si existe la broca
 			{
-				for (int i = 1; i < areas_men.rows; i++) {
-					hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
+				if (A.rows == 3) {
+					F0 = P;
+				}
+				else
+				{
+					F0 = findSpheres(P, areas_men(0, 0)); //llene las estrellas primero (si hay solo una estrella)
+					if (areas_men.rows>1)
+					{
+						for (int i = 1; i < areas_men.rows; i++) {
+							hconcat(F0, findSpheres(P, areas_men(i, 0)), F0); //matriz concatenada de las estrellas
+						}
+					}
+
+					//F0 es la matriz de posiciones sin las esferas pequeñas, concatene con las esferas de la broca
+					//compare F0 con P sin areas_men
+					int flag = 0;
+					PClone = P.clone();
+					PClone = RemovesphereIdx(PClone, areas_men); //Poner ceros los indices de las esferas pequeñas
+
+					for (int i = 0; i < PClone.cols; i++) {//Busqueda en el arreglo original las coincidencias
+						for (int j = 0; j < F0.cols; j++) {
+							if ((PClone(0, i) == F0(0, j)) || PClone(0, i) == 0) { //comparando si el elemento de P es igual a algun elemento de F e ignorar valores en cero
+								flag++;
+							}
+						}
+						if (flag == 0)
+						{//termina comparacion en f y sigue a otro elemento de p, veno existe elemento de P en F
+							if (temp2.empty()) { temp2 = PClone.col(i); }
+							else {
+								PClone.col(i).copyTo(temp.col(0)); //copiar las no coincidencias
+								hconcat(temp, temp2, temp2);
+							}
+						}flag = 0;
+					}
+					hconcat(F0, temp2, F0); //Concatena esferas con las de la broca
+
+					int cero = 0;
+				}
+
+			}
+			else //si solo hay estrellas sin broca
+			{
+				F0 = findSpheres(P, areas_men(0, 0));
+				if (areas_men.rows>1)
+				{
+					for (int i = 1; i < areas_men.rows; i++) {
+						hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
+					}
 				}
 			}
 		}
+
 		else if (P.cols == 1) {
 			return P;
 		}
-		return F0;
+		Areas << F0;
 		Areas.close();
+		return F0;
 	}
 }
 

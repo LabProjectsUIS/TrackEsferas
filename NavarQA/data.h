@@ -41,7 +41,7 @@ namespace cdata {
 		54.63, 45.66, 45.56, 42.63, 44.39, 17.63,		//FEMUR o clavo
 		59.81, 89.64, 79.49, 69.49, 102.91, 106.73,		//TIBIA o canula grande ver
 		188.62, 126.20, 78.17, 55.66, 126.57, 79.28,	//GAFAS
-		49.85, 111.45, 158.92, 0, 0, 0);      // broca grande ver 
+		49.85, 110.45, 159.97, 0, 0, 0);      // broca grande ver 
 
 
 	Mat_<float> BrocaDis = (Mat_<float>(1,2)<<

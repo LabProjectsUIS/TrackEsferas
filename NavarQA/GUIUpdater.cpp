@@ -242,12 +242,8 @@ void GUIUpdater::ShowCameras() {
 	startCameras();
 	camera_1->SetFrameRate(120);
 	camera_2->SetFrameRate(120);
-	int cameraframerate = camera_1->FrameRate();
-	int cameragain = camera_1->ImagerGain();
-	int cameragain2 = camera_2->ImagerGain();
 
-	qDebug() << "cameraGain1: " << cameragain;
-	qDebug() << "cameraGain2: " << cameragain2;
+	
 	//OutputDebugString(L"camera gain is: " + cameragain);
 	//OutputDebugString(L"camera framerate is: " + cameraframerate);
 
@@ -758,7 +754,13 @@ void GUIUpdater::getRigidsData()
 	const char* fileNameVer = "C:\\Users\\eduar_000\\Documents\\Borrar\\Datos_Broca.txt";
 	FILE *fp = fopen(fileNameVer, "w");
 	int Cont = 0;
+	namedWindow("Cámara Derecha", CV_WINDOW_NORMAL);
+	moveWindow("Cámara Derecha", 780, 0);
+	resizeWindow("Cámara Derecha", 750, 900);
 
+	namedWindow("Cámara Izquierda", CV_WINDOW_NORMAL);
+	moveWindow("Cámara Izquierda", 0, 0);
+	resizeWindow("Cámara Izquierda", 750, 800);
 	cv::Mat_<double> temporal, angles;
 	
 	while (detectRigids) {
@@ -776,7 +778,7 @@ void GUIUpdater::getRigidsData()
 			GetObjects2(frame_1, matFrame_1, PP1, A1);
 
 			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1);
-			imshow("Camara Derecha", matFrame_1);
+			imshow("Cámara Derecha", matFrame_1);
 			frame_1->Release();
 
 		}
@@ -787,7 +789,7 @@ void GUIUpdater::getRigidsData()
 			//saveImage(ostr2.str(), matFrame_2);
 			GetObjects2(frame_2, matFrame_2, PP2, A2);
 			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2);
-			imshow("Camara Izquierda", matFrame_2);
+			imshow("Cámara Izquierda", matFrame_2);
 			frame_2->Release();
 		}
 		archivoP1 << PP1;
@@ -795,7 +797,7 @@ void GUIUpdater::getRigidsData()
 		archivoA1 << A1;
 		archivoA2 << A2;
 
-		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
+		if ((!P1.empty() && !P2.empty()) && (!P1.cols == !P2.cols))
 		{
 			Beep(350, 50);
 
