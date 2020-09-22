@@ -82,6 +82,7 @@ namespace CustomCameraLibrary {
 	*	@param posRef es la posición de la esfera de referencia.
 	*	@return un conjunto de esferas que hacen parte de un objeto rígido.
 	*/
+
 	Mat_<double> findSpheres(Mat_<double> P, int posRef) {
 		Mat_<double> L(1, 1);		// L: conjunto de coord x,y de las esferas de un C.R
 		Mat_<double> cm, temp;
@@ -127,7 +128,36 @@ namespace CustomCameraLibrary {
 		ArchivoL.close();
 	}
 
+	Mat_<double> findSpheres(Mat_<double> P, int posRef) {
+		Mat_<double> L;		// L: conjunto de coord x,y de las esferas de un C.R
+		double minVal;
+		double maxVal;
+		Point minLoc;
+		Point maxLoc;
 
+		Mat_<double> D;
+		int x = 1500;
+		// crear matriz de distancias con respecto a la posición de referencia
+		for (int i = 0; i < P.cols; i++) {
+			if (i != posRef)
+				D.push_back(norm(P.col(posRef) - P.col(i)));
+			else D.push_back(1000.00);
+		}
+		//				cout << L << endl;
+		minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
+		L = P.col(minLoc.y);			// primera esfera del C.R.
+		D(minLoc.y, 0) = x;
+
+		for (int i = 0; i < 3; i++) {	// restantes 4 esferas del C.R
+			x += 500;
+			minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
+			hconcat(L, P.col(minLoc.y), L);
+			D(minLoc.y, 0) = (double)x;
+		}
+
+		reorden(L);
+		return L;
+	}
 
 	/**
 	*	Ejecutado en el momento de rastrear la broca. Localiza el indicador de la broca.
@@ -337,6 +367,8 @@ namespace CustomCameraLibrary {
 			else //si solo hay estrellas sin broca
 			{
 				F0 = findSpheres(P, areas_men(0, 0));
+
+				Areas << F0;
 				if (areas_men.rows>1)
 				{
 					for (int i = 1; i < areas_men.rows; i++) {
@@ -349,6 +381,7 @@ namespace CustomCameraLibrary {
 		else if (P.cols == 1) {
 			return P;
 		}
+
 		Areas << F0;
 		Areas.close();
 		return F0;

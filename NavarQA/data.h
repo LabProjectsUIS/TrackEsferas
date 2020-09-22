@@ -37,11 +37,11 @@ namespace cdata {
 	*/
 
 	Mat_<float> distances = (Mat_<float>(5, 6) <<
-		47.50, 50.51, 39.46, 22.47, 49.08, 29.55,		// pointer corto
+		47.50, 66.51, 39.46, 22.47, 59.08, 29.55,		// pointer corto
 		54.63, 45.66, 45.56, 42.63, 44.39, 17.63,		//FEMUR o clavo
 		59.81, 89.64, 79.49, 69.49, 102.91, 106.73,		//TIBIA o canula grande ver
-		188.62, 126.20, 78.17, 55.66, 126.57, 79.28,	//GAFAS
-		49.85, 110.45, 159.97, 0, 0, 0);      // broca grande ver 
+		188.62, 126.20, 78.17, 55.66, 126.57, 79.28, 	//GAFAS
+		49.85, 110.45, 159.97, 0, 0, 0);    // broca grande ver 
 
 
 	Mat_<float> BrocaDis = (Mat_<float>(1,2)<<
