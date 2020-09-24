@@ -34,7 +34,7 @@ namespace CustomCameraLibrary {
 	
 	int exposure_cvalue = 100;					///< valor por omisión para la exposición de la cámara.
 	int threshold_cvalue = 200;					///< valor por omisión para el threshold la cámara.
-	int intensity_cvalue = 15;
+	int intensity_cvalue = 100;
 	int fps = 120;
 	// Parámetros generales
 	int square_size = 400;

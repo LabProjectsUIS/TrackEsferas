@@ -128,7 +128,7 @@ namespace CustomCameraLibrary {
 		ArchivoL.close();
 	}
 
-	Mat_<double> findSpheres(Mat_<double> P, int posRef) {
+	/*Mat_<double> findSpheres(Mat_<double> P, int posRef) {
 		Mat_<double> L;		// L: conjunto de coord x,y de las esferas de un C.R
 		double minVal;
 		double maxVal;
@@ -158,7 +158,7 @@ namespace CustomCameraLibrary {
 		reorden(L);
 		return L;
 	}
-
+	*/
 	/**
 	*	Ejecutado en el momento de rastrear la broca. Localiza el indicador de la broca.
 	*	@param P es el conjunto de esferas.

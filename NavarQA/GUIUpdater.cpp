@@ -220,7 +220,7 @@ void GUIUpdater::setBroca(CustomCameraLibrary::BodyR &rigid, cv::Mat_<double> &d
 * Envía los frames de cada una de las cámaras a la GUI mediante señales y controla la lógica de captura de imágenes.
 */
 void GUIUpdater::ShowCameras() {
-	pics2Take = 20;
+	pics2Take = 30;
 	int cameraWidth_1 = camera_1->Width(); // Obtener la propiedad ancho de la resolucián de la cámara derecha.
 	int cameraHeight_1 = camera_1->Height(); // Obtener la propiedad alto de la resolucián de la cámara derecha.
 
@@ -324,7 +324,7 @@ cv::Mat_<double> GUIUpdater::GetObjects2(CameraLibrary::Frame *frame, cv::Mat ma
 		for (int i = 0; i < objects; i++)
 		{
 			CameraLibrary::cObject *obj = frame->Object(i);
-			if (obj->Area() > 13) {
+			if (obj->Area() > 25 && obj->Area()<300) { //Condicional para una intensidad de 10
 				
 				double x = obj->X();
 				double y = obj->Y();
@@ -776,8 +776,6 @@ void GUIUpdater::getRigidsData()
 			//ostr << "../right0" << ++x << ".bmp";
 			//saveImage(ostr.str(), matFrame_1);
 			GetObjects2(frame_1, matFrame_1, PP1, A1);
-
-			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1);
 			imshow("Cámara Derecha", matFrame_1);
 			frame_1->Release();
 
@@ -788,16 +786,20 @@ void GUIUpdater::getRigidsData()
 			//ostr2 << "../left0" << ++x << ".bmp";
 			//saveImage(ostr2.str(), matFrame_2);
 			GetObjects2(frame_2, matFrame_2, PP2, A2);
-			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2);
 			imshow("Cámara Izquierda", matFrame_2);
 			frame_2->Release();
+		}
+		if ((PP1.cols == PP2.cols) && (A1.rows = A2.rows))
+		{
+			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1);
+			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2);
 		}
 		//archivoP1 << PP1;
 		//archivoP2 << PP2;
 		archivoA1 << A1;
 		archivoA2 << A2;
 
-		if ((!P1.empty() && !P2.empty()) && (!P1.cols == !P2.cols))
+		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
 		{
 			Beep(350, 50);
 			archivoP1 << P1;
