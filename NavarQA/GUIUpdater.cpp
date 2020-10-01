@@ -324,7 +324,7 @@ cv::Mat_<double> GUIUpdater::GetObjects2(CameraLibrary::Frame *frame, cv::Mat ma
 		for (int i = 0; i < objects; i++)
 		{
 			CameraLibrary::cObject *obj = frame->Object(i);
-			if (obj->Area() > 25 && obj->Area()<300) { //Condicional para una intensidad de 10
+			if (obj->Area() > 20 && obj->Area()<300) { //Condicional para una intensidad de 10
 				
 				double x = obj->X();
 				double y = obj->Y();
