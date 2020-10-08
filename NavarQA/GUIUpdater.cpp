@@ -788,23 +788,25 @@ void GUIUpdater::getRigidsData()
 			GetObjects2(frame_2, matFrame_2, PP2, A2);
 			imshow("Cámara Izquierda", matFrame_2);
 			frame_2->Release();
+			archivoA1 << A1;
+			archivoA2 << A2;
+			archivoA1.close(); archivoA2.close();
 		}
 		if ((PP1.cols == PP2.cols) && (A1.rows = A2.rows))
 		{
 			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1);
 			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2);
 		}
-		//archivoP1 << PP1;
-		//archivoP2 << PP2;
-		archivoA1 << A1;
-		archivoA2 << A2;
+		archivoP1 << PP1;
+		archivoP2 << PP2;
+		
 
 		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
 		{
 			Beep(350, 50);
-			archivoP1 << P1;
-			archivoP2 << P2;
-			archivoP1.close(); archivoP2.close();	archivoA1.close(); archivoA2.close();
+			archivoP1 <<"P1"<< P1;
+			archivoP2 << "P2" << P2;
+			archivoP1.close(); archivoP2.close();
 			/*if (samples < sample_limit)
 			{
 				if (P1.cols == P1_x_acum.cols) {

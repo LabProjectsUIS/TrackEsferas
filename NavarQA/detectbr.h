@@ -770,10 +770,10 @@ namespace CustomCameraLibrary {
 	*
 	*	el nodo inicial tiene un peso de 0 y no tiene antecesor, se empieza analizando el primer nodo con todos los demás hasta encontrar los nodos del primer
 	*	cuerpo rígido, los nodos ya selecionados como parte del primer cuerpo rígido se descartan para las siguiente búsqueda y así sucesivamente.
-	*	@param spSet conjunto de coordenadas en 3D, resultantes producto de la triangulación.
+	*	@param spSet conjunto de coordenadas en 3D, resultantes producto de la triangulación. (8,3)
 	*	Equivalente a la posición en 3D de cada esfera que hace parte de los marcadores que esta en escena.
 	*	@see CustomCameraLibrary::stereo_triangulation()
-	*	@param dspSet distancias teóricas que hay entre cada esfera de un objeto rígido. Son utilizadas para comparar y detectar cuando se encuentra una distancia conocida.
+	*	@param dspSet distancias teóricas que hay entre cada esfera de un objeto rígido. Son utilizadas para comparar y detectar cuando se encuentra una distancia conocida. (5,6)
 	*	@see CustomCameraLibrary::distances
 	*	@param bRigid referencia a un array de estructuras que representa un cuerpo rígido.
 	*	@see CustomCameraLibrary::Output
@@ -788,6 +788,7 @@ namespace CustomCameraLibrary {
 			archivoDI.open("tempRows.txt", std::ios::app);
 
 		}
+		
 		int i, i0, j, countBR,w,h,cont;
 		int flag1 = -1;
 		float peso;
@@ -800,7 +801,7 @@ namespace CustomCameraLibrary {
 		double min, max;
 		minMaxLoc(d, &min, &max);											// calcular la distancia mínima y máxima entre marcadores
 		d.row(0).copyTo(vec);												// copiar el contenido de la matrix 1xn a un vector.
-		
+
 		if ((Spheres = new Sphere[N]) == NULL) return 1;					// Crea dinámicamente el arreglo de etiquetas de esferas. 
 																			// inicializar las etiquetas de nodo 
 		for (i = 0; i < N; i++) {
@@ -895,7 +896,7 @@ namespace CustomCameraLibrary {
 				}*/
 
 	
-				switch (ref) {
+ 				switch (ref) {
 					//				switch (Spheres[j].objR) {
 				case pointer:
 					bRigid[countBR].name = POINTER;

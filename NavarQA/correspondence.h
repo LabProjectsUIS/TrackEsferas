@@ -92,7 +92,10 @@ namespace CustomCameraLibrary {
 		Point minLoc;
 		Point maxLoc;
 		ofstream ArchivoL;
+		if (!ArchivoL.is_open()) {
+			ArchivoL.open("L.txt", std::ios::app);
 
+		}
 		Mat_<double> D;
 		int x = 1500;
 		temp = P.t();
@@ -106,26 +109,27 @@ namespace CustomCameraLibrary {
 		}
 		//				cout << L << endl;
 		minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
+		ArchivoL << "P" << P;
+		ArchivoL << "D"<<D;
+		ArchivoL << "posRef" << posRef;
 
-			if (minVal < 65) //estrella normal
-			{
-				L = P.col(minLoc.y);			// primera esfera del C.R.
-				D(minLoc.y, 0) = x;
+		
+		L = P.col(minLoc.y);			// primera esfera del C.R.
+		D(minLoc.y, 0) = x;
+		ArchivoL << "Ddespues" << D;
+		ArchivoL << "L primera" << L;
+		for (int i = 0; i < 3; i++) {	// restantes 4 esferas del C.R
+			x += 500;
+			minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
+			hconcat(L, P.col(minLoc.y), L);
+			D(minLoc.y, 0) = (double)x;
+			ArchivoL << "L for" << L;
+			ArchivoL << "Ddespues" << D;
+		}
 
-				for (int i = 0; i < 3; i++) {	// restantes 4 esferas del C.R
-					x += 500;
-					minMaxLoc(D, &minVal, &maxVal, &minLoc, &maxLoc);
-					hconcat(L, P.col(minLoc.y), L);
-					D(minLoc.y, 0) = (double)x;
-				}
-				reorden(L, cm);
-			}
-			else {
-				L(0, 0) = -100;
-			}
-	
-		return L;
 		ArchivoL.close();
+		reorden(L, cm);
+		return L;
 	}
 
 	/*Mat_<double> findSpheres(Mat_<double> P, int posRef) {
@@ -367,11 +371,13 @@ namespace CustomCameraLibrary {
 			else //si solo hay estrellas sin broca
 			{
 				F0 = findSpheres(P, areas_men(0, 0));
-
-				Areas << F0;
+				Areas <<"areas men"<< areas_men;
+				Areas <<"F0"<< F0;
+				qDebug() << "area" << areas_men(0, 0);
 				if (areas_men.rows>1)
 				{
 					for (int i = 1; i < areas_men.rows; i++) {
+						qDebug() << "area" << areas_men(i, 0);
 						hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
 					}
 				}
