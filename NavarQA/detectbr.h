@@ -45,7 +45,7 @@ namespace CustomCameraLibrary {
 	const int phanton = 6;	///< indicador que representa el phanton
 	const int broca = 5;///< indicador que representa la broca
 
-	float DELTA = 1.5;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
+	float DELTA = 1.0;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 	bool detect_broca=false;
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
@@ -306,10 +306,10 @@ namespace CustomCameraLibrary {
 	Point3d pointerPoint(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
 	
 		ofstream archivoP;
-		/*if (!archivoP.is_open()) {
-			archivoP.open("SegmentPARAM.txt", std::ios::app);
+		if (!archivoP.is_open()) {
+			archivoP.open("puntaP.txt", std::ios::app);
 
-		}*/
+		}
 		P1 = P1.t();
 		P2 = P2.t();
 		P3 = P3.t();
@@ -335,25 +335,18 @@ namespace CustomCameraLibrary {
 		val = PointerX*Ux + PointerY*Uy + PointerZ*Uz;
 		PE = PM + val - cdata::f_cor.t();
 		
-		/*if (!PE.empty())
+		if (!PE.empty())
 		{
+			archivoP << PE[0][0] << "\t";
+			archivoP << PE[0][1] << "\t";
+			archivoP << PE[0][2] << "\t";
+			archivoP << "\n";
 
-			if (s <= 1000 && s > 0)
-			{
-				archivoP << CustomCameraLibrary::COUNT << "\t";
-				archivoP << PE[0][0] << "\t";
-				archivoP << PE[0][1] << "\t";
-				archivoP << PE[0][2] << "\t";
-				archivoP << "\n";
-			}
-			else
-			{
-				OutputDebugString(L"YA MIL");
-			}
+			
+		}
 
-		}*/
+		archivoP.close();
 		return Point3d(PE);
-		//archivoP.close();
 	}
 
 	Point3d Punta(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> out) {
@@ -770,7 +763,7 @@ namespace CustomCameraLibrary {
 	*
 	*	el nodo inicial tiene un peso de 0 y no tiene antecesor, se empieza analizando el primer nodo con todos los demás hasta encontrar los nodos del primer
 	*	cuerpo rígido, los nodos ya selecionados como parte del primer cuerpo rígido se descartan para las siguiente búsqueda y así sucesivamente.
-	*	@param spSet conjunto de coordenadas en 3D, resultantes producto de la triangulación. (8,3)
+	*	@param spSet conjunto de coordenadas en 3D, resultantes producto de la triangulación. (8,3) para dos estrellas, (7,3) para estrella y broca, (3,3) solo broca.
 	*	Equivalente a la posición en 3D de cada esfera que hace parte de los marcadores que esta en escena.
 	*	@see CustomCameraLibrary::stereo_triangulation()
 	*	@param dspSet distancias teóricas que hay entre cada esfera de un objeto rígido. Son utilizadas para comparar y detectar cuando se encuentra una distancia conocida. (5,6)
@@ -789,7 +782,8 @@ namespace CustomCameraLibrary {
 
 		}
 		
-		int i, i0, j, countBR,w,h,cont;
+		int i, i0, j, countBR, w, h, cont;
+		int counter_esf = 0;
 		int flag1 = -1;
 		float peso;
 		vector<float> vec;													// vector que llevará el conjunto de distancias teóricas de los cuerpos rígidos.
@@ -873,19 +867,21 @@ namespace CustomCameraLibrary {
 				Spheres[i0].prev = i0;
 				Spheres[i0].objR = Spheres[j].objR;
 				temp.push_back(spSet.row(i0));								// termina de completar la matriz temporal.
-				archivoDI <<"temp: "<< temp;
+				
 
 																			//vec_br.push_back(temp);									
 																			// almacenar la matriz temporal dentro del arreglo.
 				//print temp
 				bRigid[countBR].bdr = Spheres[j].objR;						// marcar el objeto rígido.
 				int ref = 99;
+				//archivoDI << "temp: " << Spheres[0].objR << Spheres[1].objR << Spheres[2].objR << Spheres[3].objR << Spheres[4].objR << Spheres[5].objR;
 				if ((Spheres[0].objR == Spheres[1].objR) || (Spheres[0].objR == Spheres[2].objR)) {
-					ref = Spheres[0].objR;
+					ref = Spheres[j].objR;
 				}
-				else if (Spheres[1].objR == Spheres[2].objR) {
-					ref = Spheres[1].objR;
+				else if (Spheres[1 + counter_esf].objR == Spheres[2 + counter_esf].objR) {
+					ref = Spheres[1 + counter_esf].objR;
 				}
+				counter_esf += 3;
 				/*if (j==3)
 				{
 					ref = 2;
@@ -895,7 +891,6 @@ namespace CustomCameraLibrary {
 					ref = Spheres[j].objR;
 				}*/
 
-	
  				switch (ref) {
 					//				switch (Spheres[j].objR) {
 				case pointer:
