@@ -3,46 +3,46 @@
         rows: 3
         cols: 1
         dt: d
-        data: [ -227.848911, -1.288748, 53.219556]
+        data: [ -227.523172, -1.394265, 54.617848]
     om: !!opencv-matrix
         rows: 3
         cols: 1
         dt: d
-        data: [ -0.002722, 0.219506, 0.007380]
+        data: [ -0.000852, 0.221330, 0.008061]
     fc_left: !!opencv-matrix
         rows: 2
         cols: 1
         dt: d
-        data: [ 1213.500936, 1211.315817]
+        data: [ 1210.819463, 1209.078712]
     cc_left: !!opencv-matrix
         rows: 2
         cols: 1
         dt: d
-        data: [ 636.027560, 505.323679]
+        data: [ 638.401826, 504.036900]
     kc_left: !!opencv-matrix
         rows: 5
         cols: 1
         dt: d
-        data: [ -0.128889, 0.268508, -0.000139, 
-            0.002291, 0.000000]
+        data: [ -0.124831, 0.213149, -0.000287, 
+            0.002052, 0.000000]
     fc_right: !!opencv-matrix
         rows: 2
         cols: 1
         dt: d
-        data: [ 1220.106094, 1217.864685]
+        data: [ 1219.343398, 1217.065775]
     cc_right: !!opencv-matrix
         rows: 2
         cols: 1
         dt: d
-        data: [ 635.589608, 518.494357]
+        data: [ 636.254929, 519.390645]
     kc_right: !!opencv-matrix
         rows: 5
         cols: 1
         dt: d
-        data: [ -0.131728, 0.264286, -0.000153, 
-            0.001076, 0.000000]
+        data: [ -0.123021, 0.204873, 0.000002, 
+            0.000116, 0.000000]
     emax: !!opencv-matrix
         rows: 1
         cols: 1
         dt: d
-        data: [ 1.086325]
+        data: [ 1.034045]

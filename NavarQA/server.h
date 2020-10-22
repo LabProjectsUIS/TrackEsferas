@@ -171,7 +171,7 @@ int CreateServer(int iConnectionType) {
 		s.str("");
 		s << "Data Socket : " << szDataIP << " " << iDataPort;
 		WriteW(s.str());
-		if (iConnectionType == ConnectionType_Multicast) {
+		if (iConnectionType == ConnectionType_Multicast) { 
 			printf("Connection Type : Multicast\n");
 			printf("Multicast Group : %s:%d\n", szMulticastGroup, iMulticastPort);
 		}
@@ -481,9 +481,24 @@ int CreateServer(int iConnectionType) {
 						//						if (empty(bdr.centroid))
 						//							system("pause");
 
-						pRB->x = bdr.centroid(0, 0) / 1000;
-						pRB->y = bdr.centroid(1, 0) / 1000;
-						pRB->z = bdr.centroid(2, 0) / 1000;
+						if (bdr.name == POINTER) //si el OR es pointer, enviará la localizacion de la punta como centroide.
+						{
+							pRB->x = bdr.point.x / 1000;
+							pRB->y = bdr.point.y / 1000;
+							pRB->z = bdr.point.z / 1000;
+						}
+						else if (bdr.name == BROCA) //centroide menos desplazamiento hacia la punta con pointer
+						{
+							pRB->x = (bdr.centroid(0, 0) / 1000);
+							pRB->y = (bdr.centroid(1, 0) / 1000);
+							pRB->z = (bdr.centroid(2, 0) / 1000);
+						}
+						else
+						{
+							pRB->x = bdr.centroid(0, 0) / 1000;
+							pRB->y = bdr.centroid(1, 0) / 1000;
+							pRB->z = bdr.centroid(2, 0) / 1000;
+						}
 
 						EulerAngles ea;
 						ea.x = bdr.pitch;

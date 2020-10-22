@@ -113,10 +113,7 @@ namespace CustomCameraLibrary {
 		XL = 0.5 * (X1 + X2);
 		//-- - Right coordinates :
 		XR = R*XL + T_vect;
-		transXL = XL.t();
-
-		int m = -1;
-		int s = -1;
+		//transXL = XL.t();
 		
 
 		//if (transXL.rows == 4 && transXL.cols == 3 /*&& detectPointer == true*/) //Imprimir datos de esferas es un archivo xml

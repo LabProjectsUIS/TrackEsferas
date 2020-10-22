@@ -45,7 +45,7 @@ namespace CustomCameraLibrary {
 	const int phanton = 6;	///< indicador que representa el phanton
 	const int broca = 5;///< indicador que representa la broca
 
-	float DELTA = 1.0;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
+	float DELTA = 1.5;	///< Error máximo entre la comparación de dos distancias al momento de decidir si se ha encontrado un marcador de un cuerpo rígido (en milímetro).
 	bool detect_broca=false;
 	bool detect_pointer = true;		///< indicador para manejar la decisión de detectar o no el pointer.
 									//	Mat_<double> ejeR3 = (Mat_<double>(3, 1) << -0.086793, 0.93612, -0.34081);				// eje de rotación del pointer
@@ -444,21 +444,27 @@ namespace CustomCameraLibrary {
 
 		Mat_<double> OR = bRigid[i].bdrigid;
 		double alpha, beta, gamma, qx, qy, qz, qw;
+		ofstream eulerangles;
 
-		
+		if (!eulerangles.is_open())
+		{
+			eulerangles.open("eulerangles.txt", std::ios::app);
+		}
 		if (OR.cols >= 3) {
 			float sy;                        //https://blender.stackexchange.com/questions/30808/how-do-i-construct-a-transformation-matrix-from-3-vertices
 			Mat_<double> v, v1, v2, x, X, Y, Z, a, b, c, b2, a2, p1, p2, p3, Pc, Out;
 			p1 = OR.col(0);
 			p2 = OR.col(1);
 			p3 = OR.col(2);
-
+			eulerangles << "objeto:" << bRigid[i].name << "\n" << OR;
 			alpha = pow(norm(p2 - p3), 2)*(p1 - p2).dot(p1 - p3) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			beta = pow(norm(p1 - p3), 2)*(p2 - p1).dot(p2 - p3) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			gamma = pow(norm(p1 - p2), 2)*(p3 - p1).dot(p3 - p2) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			Pc = alpha*p1 + beta*p2 + gamma*p3;												// Punto del centro del circulo
 			bRigid[i].centroid = Pc;															// Guardar el centroide del O.R.
+			eulerangles << "centroid:" << bRigid[i].centroid << "\n" << Pc;
 
+			eulerangles.close();
 
 																								// ################################## ESTO LO PUSO DUVAN
 
@@ -525,16 +531,19 @@ namespace CustomCameraLibrary {
 			bRigid[i].roll = 0;
 			Mat_<float> Q = (Mat_<float>(1, 4) << qx, qy, qz, qw);
 			Q.copyTo(bRigid[i].Quat);
+			
+			double ss = norm(p1 - p3);
+			//QString s = QString::number(ss);
+			//qDebug() << s;
 
-			if ((bRigid[i].name == POINTER) && (norm(p1 - p3) > 45) && detect_pointer) {					// para siempre mantener la dirección del vector que apunta al pointer
+			if ((bRigid[i].name == POINTER) && /*(norm(p1 - p3) > 45) &&*/ detect_pointer) {					// para siempre mantener la dirección del vector que apunta al pointer
 				//cout << "OR=" << OR << ";" << endl;
 				Out = (p1 - p3) / norm(p1 - p3);
 				Point3d punto = pointerPoint(p1, p2, p3, Out); //hay dos funciones pointerpoint
-				//OutputDebugString(L"Es un pointer....");
 				bRigid[i].point = Point3d(punto);
 
 			}
-			if ((bRigid[i].name == FEMUR)) {
+			if ((bRigid[i].name == BROCA)) {
 				Point3d punto = Punta(p1, p2, p3, Out);
 				bRigid[i].point = Point3d(punto);
 			}
