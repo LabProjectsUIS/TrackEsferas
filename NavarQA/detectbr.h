@@ -456,15 +456,15 @@ namespace CustomCameraLibrary {
 			p1 = OR.col(0);
 			p2 = OR.col(1);
 			p3 = OR.col(2);
-			eulerangles << "objeto:" << bRigid[i].name << "\n" << OR;
+
+			if(bRigid[i].name != BROCA){
 			alpha = pow(norm(p2 - p3), 2)*(p1 - p2).dot(p1 - p3) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			beta = pow(norm(p1 - p3), 2)*(p2 - p1).dot(p2 - p3) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			gamma = pow(norm(p1 - p2), 2)*(p3 - p1).dot(p3 - p2) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			Pc = alpha*p1 + beta*p2 + gamma*p3;												// Punto del centro del circulo
 			bRigid[i].centroid = Pc;															// Guardar el centroide del O.R.
-			eulerangles << "centroid:" << bRigid[i].centroid << "\n" << Pc;
+			//eulerangles << "centroid:" << bRigid[i].centroid << "\n" << Pc;
 
-			eulerangles.close();
 
 																								// ################################## ESTO LO PUSO DUVAN
 
@@ -475,10 +475,16 @@ namespace CustomCameraLibrary {
 			alpha = p1(0, 0);
 			beta = p1(1, 0);
 			gamma = p1(2, 0);
-
+			}
 			// ################################## ESTO LO PUSO DUVAN
+			else
+			{
+				bRigid[i].centroid = p2;
+				eulerangles << bRigid[i].name << "\n" << OR;
+				eulerangles << "centroid broca" << bRigid[i].centroid << "\n" << p2;
+			}
 
-
+			eulerangles.close();
 			a = p2 - p1;
 			b = p3 - p1;
 			Z = a.cross(b);
@@ -787,7 +793,7 @@ namespace CustomCameraLibrary {
 		time = 0;
 		Sphere *Spheres;
 		if (!archivoDI.is_open()) {
-			archivoDI.open("tempRows.txt", std::ios::app);
+			archivoDI.open("esferas3D.txt", std::ios::app);
 
 		}
 		
@@ -799,7 +805,7 @@ namespace CustomCameraLibrary {
 		int nBRigid = dspSet.rows;											// número de cuerpos rígidos que se deberían detectar.
 		int  N = spSet.rows;
 		int  N2 = dspSet.rows;
-		archivoDI << "3D " << spSet;
+		archivoDI << spSet;
 		Mat d = dspSet.reshape(1, 1);										// convertir a una matriz 1xn.
 		double min, max;
 		minMaxLoc(d, &min, &max);											// calcular la distancia mínima y máxima entre marcadores
@@ -825,7 +831,6 @@ namespace CustomCameraLibrary {
 
 		countBR = 0;
 		while (1) {
-			OutputDebugString(L"Estoy iterando");
 			peso = -1;
 			i0 = -1;
 			Mat temp;
@@ -904,24 +909,24 @@ namespace CustomCameraLibrary {
 					//				switch (Spheres[j].objR) {
 				case pointer:
 					bRigid[countBR].name = POINTER;
-					OutputDebugString(L"POINTER");
+					//OutputDebugString(L"POINTER");
 					//CustomCameraLibrary::detectPointer = true;
 					break;
 				case femur:
 					bRigid[countBR].name = FEMUR;
-					OutputDebugString(L"ES FEMUR");
+					//OutputDebugString(L"ES FEMUR");
 					break;
 				case tibia:
 					bRigid[countBR].name = TIBIA;
-					OutputDebugString(L"ES TIBIA");
+					//OutputDebugString(L"ES TIBIA");
 					break;
 				case gafas:
 					bRigid[countBR].name = GAFAS;
-					OutputDebugString(L"GAFAS");
+					//OutputDebugString(L"GAFAS");
 					break;
 				case broca:
 					bRigid[countBR].name = BROCA;
-					OutputDebugString(L"ES broca");
+					//OutputDebugString(L"ES broca");
 					break;
 				default:
 					OutputDebugString(L"no exist");

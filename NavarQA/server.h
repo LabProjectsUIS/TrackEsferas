@@ -139,7 +139,7 @@ int CreateServer(int iConnectionType) {
 		//**************************************
 		// IP DONDE CORRER� EL SERVIDOR
 		//**************************************
-		sprintf(szIPAddress, "%d.%d.%d.%d", 192,168,0,100); //localaddress
+		sprintf(szIPAddress, "%d.%d.%d.%d", 127,0,0,1); //localaddress
 
 		// Initialize NatNet server with first detected ip address - use NatNet default port assignments
 		int retCode = theServer->Initialize(szIPAddress);
@@ -489,9 +489,9 @@ int CreateServer(int iConnectionType) {
 						}
 						else if (bdr.name == BROCA) //centroide menos desplazamiento hacia la punta con pointer
 						{
-							pRB->x = (bdr.centroid(0, 0) / 1000);
-							pRB->y = (bdr.centroid(1, 0) / 1000);
-							pRB->z = (bdr.centroid(2, 0) / 1000);
+							pRB->x = (bdr.centroid(0, 0) / 1000) + 0.194751973969727;
+							pRB->y = (bdr.centroid(1, 0) / 1000) + (-0.243187274658203);
+							pRB->z = (bdr.centroid(2, 0) / 1000) + (-0.00614626953125003);
 						}
 						else
 						{

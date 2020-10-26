@@ -707,11 +707,11 @@ void GUIUpdater::getRigidsData()
 	}
 	if (!archivoA1.is_open())
 	{
-		archivoA1.open("Areas1.txt", std::ios::app);
+		//archivoA1.open("Areas1.txt", std::ios::app);
 	}
 	if (!archivoA2.is_open())
 	{
-		archivoA2.open("Areas2.txt", std::ios::app);
+		//archivoA2.open("Areas2.txt", std::ios::app);
 	}
 	
 	cv::Mat_<double> XBrocaNew(2, 4);
@@ -797,8 +797,8 @@ void GUIUpdater::getRigidsData()
 			P1 = CustomCameraLibrary::CorrespondenceDetection(PP1, A1);
 			P2 = CustomCameraLibrary::CorrespondenceDetection(PP2, A2);
 		}
-		archivoP1 << PP1;
-		archivoP2 << PP2;
+		archivoP1 << P1;
+		archivoP2 << P2;
 		archivoP1.close(); archivoP2.close();
 
 		if ((!P1.empty() && !P2.empty()) && (P1.cols == P2.cols))
@@ -895,11 +895,13 @@ void GUIUpdater::getRigidsData()
 								double yaw = CustomCameraLibrary::rigid[f].yaw;
 								double pitch = CustomCameraLibrary::rigid[f].pitch;
 								double roll = CustomCameraLibrary::rigid[f].roll;
-
-								qDebug() << "hay " << nbrss << " objetos";
-								/*qDebug() << "name is" << str;
-								qDebug() << "CR: " << CustomCameraLibrary::rigid[f].bdr << endl ;
-								qDebug() << "Yaw: " <<yaw  << "Pitch: " << pitch<< endl << "Roll: " << roll;*/
+								double x = CustomCameraLibrary::rigid[f].centroid(0,0);
+								double y = CustomCameraLibrary::rigid[f].centroid(1, 0);
+								double z = CustomCameraLibrary::rigid[f].centroid(2, 0);
+								//qDebug() <<"OR NUMERO "<<f<<" ES UN "<< str;
+								qDebug() << "name is" << str;
+								qDebug() << "CR: " << CustomCameraLibrary::rigid[f].bdr << endl;
+								qDebug() << "x: " <<x  << "y: " << y<< endl << "z: " << z;
 							}
 						}
 						else

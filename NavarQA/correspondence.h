@@ -317,7 +317,7 @@ namespace CustomCameraLibrary {
 		cv::Mat_<int> areas_men;		//	posición de las áreas menores
 		ofstream Areas;
 		if (!Areas.is_open()) {
-			Areas.open("temp.txt", std::ios::app);
+			//Areas.open("temp.txt", std::ios::app);
 
 		}
 
@@ -371,13 +371,9 @@ namespace CustomCameraLibrary {
 			else //si solo hay estrellas sin broca
 			{
 				F0 = findSpheres(P, areas_men(0, 0));
-				Areas <<"areas men"<< areas_men;
-				Areas <<"F0"<< F0;
-				qDebug() << "area" << areas_men(0, 0);
 				if (areas_men.rows>1)
 				{
 					for (int i = 1; i < areas_men.rows; i++) {
-						qDebug() << "area" << areas_men(i, 0);
 						hconcat(F0, findSpheres(P, areas_men(i, 0)), F0);
 					}
 				}
@@ -388,7 +384,6 @@ namespace CustomCameraLibrary {
 			return P;
 		}
 
-		Areas << F0;
 		Areas.close();
 		return F0;
 	}
