@@ -439,7 +439,80 @@ namespace CustomCameraLibrary {
 		return Point3d(punto2);
 		
 	}
+	Point3d pointerPointNEW(cv::Mat_<double> &P1, cv::Mat_<double> &P2, cv::Mat_<double> &P3, cv::Mat_<double> &P4, cv::Mat_<double> &PC, cv::Mat_<double> out) {
 
+		ofstream archivoP;
+		if (!archivoP.is_open()) {
+		archivoP.open("VAL.txt", std::ios::app);
+
+		}
+
+		PC = PC.t();
+
+		P1 = P1.t() - PC;
+		P2 = P2.t() - PC;
+		P3 = P3.t() - PC;
+		P4 = P4.t() - PC;
+		cv::Mat_<double> uzn, Ux, Uz, Uy, temp, temp2, sum_ones, PE;
+		//cv::Mat_<double> val(P3.rows, P3.cols);
+		cv::Mat_<double> val, val2, val3(1, 3), ez, ex, ey, E(3, 3);
+
+		double PointerX, PointerY, PointerZ, X2, Y2, XY, XZ, YZ, n, a, b, d, ezNorm, p3Norm;
+
+		//int s = CustomCameraLibrary::COUNT;
+
+		val = cross_product(P2, P3);
+		uzn = val / norm(val);
+
+		val.push_back(P1);
+		val.push_back(P2);
+		val.push_back(P3);
+		val.push_back(P4);
+
+
+		val2 = val.mul(val);
+		cv::reduce(val2, val2, 0, CV_REDUCE_SUM);
+
+		X2 = val2(0, 0);
+		Y2 = val2(0, 1);
+		cv::reduce(val, val, 0, CV_REDUCE_SUM);
+
+		XY = val(0, 0) * val(0, 1);
+		XZ = val(0, 0) * val(0, 2);
+		YZ = val(0, 1) * val(0, 2);
+
+		a = (XZ*Y2 - YZ*XY) / (XY*XY - X2*Y2);
+		b = (YZ*X2 - XZ*XY) / (XY*XY - X2*Y2);
+		d = 0;
+		val3(0, 0) = a;
+		val3(0, 1) = b;
+		val3(0, 2) = 1;
+		ezNorm = sqrt(a*a + b*b + 1);
+		cv::divide(ezNorm, val3, ez);
+
+		if (ez.dot(uzn) < 0) {
+			ez = -ez;
+		}
+
+		p3Norm = sqrt(P3(0, 0)*P3(0, 0) + P3(0, 1)*P3(0, 1) + P3(0, 2)*P3(0, 2));
+		cv::divide(p3Norm, P3, ex);
+		ey = cross_product(ez, ex);
+
+		E.col(0) = ex.t();
+		E.col(1) = ey.t();
+		E.col(2) = ez.t();
+
+		PointerX = cdata::PARAM(0, 0);									
+		PointerY = cdata::PARAM(0, 1);
+		PointerZ = cdata::PARAM(0, 2);
+		val = E.col(0)*PointerX + E.col(1)*PointerY + E.col(2)*PointerZ;
+
+		PE = PC + val.t();
+
+		archivoP << val;
+		archivoP.close();
+		return Point3d(PE);
+	}
 	void getEulerAngles(BodyR *&bRigid, int i) {
 
 		Mat_<double> OR = bRigid[i].bdrigid;
@@ -452,12 +525,13 @@ namespace CustomCameraLibrary {
 		}
 		if (OR.cols >= 3) {
 			float sy;                        //https://blender.stackexchange.com/questions/30808/how-do-i-construct-a-transformation-matrix-from-3-vertices
-			Mat_<double> v, v1, v2, x, X, Y, Z, a, b, c, b2, a2, p1, p2, p3, Pc, Out;
+			Mat_<double> v, v1, v2, x, X, Y, Z, a, b, c, b2, a2, p1, p2, p3,p4, Pc, Out;
 			p1 = OR.col(0);
 			p2 = OR.col(1);
 			p3 = OR.col(2);
 
 			if(bRigid[i].name != BROCA){
+			p4 = OR.col(3);
 			alpha = pow(norm(p2 - p3), 2)*(p1 - p2).dot(p1 - p3) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			beta = pow(norm(p1 - p3), 2)*(p2 - p1).dot(p2 - p3) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			gamma = pow(norm(p1 - p2), 2)*(p3 - p1).dot(p3 - p2) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
@@ -545,6 +619,7 @@ namespace CustomCameraLibrary {
 			if ((bRigid[i].name == POINTER) && /*(norm(p1 - p3) > 45) &&*/ detect_pointer) {					// para siempre mantener la dirección del vector que apunta al pointer
 				//cout << "OR=" << OR << ";" << endl;
 				Out = (p1 - p3) / norm(p1 - p3);
+				//Point3d punto = pointerPointNEW(p1, p2, p3, p4, Pc, Out); //hay dos funciones pointerpoint
 				Point3d punto = pointerPoint(p1, p2, p3, Out); //hay dos funciones pointerpoint
 				bRigid[i].point = Point3d(punto);
 
@@ -554,7 +629,6 @@ namespace CustomCameraLibrary {
 				bRigid[i].point = Point3d(punto);
 			}
 		}
-
 	}
 
 	/**

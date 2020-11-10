@@ -480,18 +480,30 @@ int CreateServer(int iConnectionType) {
 						//					cout << bdr.centroid << endl;
 						//						if (empty(bdr.centroid))
 						//							system("pause");
+						ofstream archivoPP, archivoPB;
+						if (!archivoPP.is_open()) {
+							archivoPP.open("PuntaPointer.txt", std::ios::app);
 
-						if (bdr.name == POINTER) //si el OR es pointer, enviará la localizacion de la punta como centroide.
+						}
+						if (!archivoPB.is_open()) {
+							archivoPB.open("PuntaBroca.txt", std::ios::app);
+
+						}
+						if (bdr.name == POINTER) //si el OR es pointer, enviará el centroide desplazado a la punta(vector VAL)
 						{
-							pRB->x = bdr.point.x / 1000;
-							pRB->y = bdr.point.y / 1000;
-							pRB->z = bdr.point.z / 1000;
+							pRB->x = (bdr.point.x / 1000)/* - 4.4751566763758354739*/;
+							pRB->y = (bdr.point.y / 1000)/* + 0.98763582486097123425*/;
+							pRB->z = (bdr.point.z / 1000)/* + 2.5268435240382509654*/;
+							archivoPP << pRB->x*1000 << "\t" << pRB->y * 1000 << "\t" << pRB->z * 1000 <<"\n";
+							archivoPP.close();
 						}
 						else if (bdr.name == BROCA) //centroide menos desplazamiento hacia la punta con pointer
 						{
-							pRB->x = (bdr.centroid(0, 0) / 1000) + 0.194751973969727;
-							pRB->y = (bdr.centroid(1, 0) / 1000) + (-0.243187274658203);
-							pRB->z = (bdr.centroid(2, 0) / 1000) + (-0.00614626953125003);
+							pRB->x = (bdr.centroid(0, 0) / 1000) - 0.252465028027344;
+							pRB->y = (bdr.centroid(1, 0) / 1000)+0.082108222534180;
+							pRB->z = (bdr.centroid(2, 0) / 1000)+0.318798774414063;
+							archivoPB << pRB->x*1000 << "\t" << pRB->y*1000 << "\t" << pRB->z*1000 << "\n";
+							archivoPB.close();
 						}
 						else
 						{
@@ -510,6 +522,7 @@ int CreateServer(int iConnectionType) {
 						pRB->qy = bdr.Quat(0, 1);
 						pRB->qz = bdr.Quat(0, 2);
 						pRB->qw = bdr.Quat(0, 3);
+
 						/*pRB->qx = bdr.pitch;
 						pRB->qy = bdr.yaw;
 						pRB->qz = bdr.roll;*/
