@@ -537,8 +537,8 @@ namespace CustomCameraLibrary {
 			gamma = pow(norm(p1 - p2), 2)*(p3 - p1).dot(p3 - p2) / (2 * pow(norm((p1 - p2).cross(p2 - p3)), 2));
 			Pc = alpha*p1 + beta*p2 + gamma*p3;												// Punto del centro del circulo
 			bRigid[i].centroid = Pc;															// Guardar el centroide del O.R.
-			//eulerangles << "centroid:" << bRigid[i].centroid << "\n" << Pc;
-
+			eulerangles << bRigid[i].centroid;
+			eulerangles.close();
 
 																								// ################################## ESTO LO PUSO DUVAN
 

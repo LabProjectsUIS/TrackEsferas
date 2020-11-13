@@ -491,17 +491,17 @@ int CreateServer(int iConnectionType) {
 						}
 						if (bdr.name == POINTER) //si el OR es pointer, enviará el centroide desplazado a la punta(vector VAL)
 						{
-							pRB->x = (bdr.point.x / 1000)/* - 4.4751566763758354739*/;
-							pRB->y = (bdr.point.y / 1000)/* + 0.98763582486097123425*/;
-							pRB->z = (bdr.point.z / 1000)/* + 2.5268435240382509654*/;
+							pRB->x = (bdr.centroid(0, 0) / 1000) - 0.005024053864727;
+							pRB->y = (bdr.centroid(1, 0) / 1000) - 0.059965477405907;
+							pRB->z = (bdr.centroid(2, 0) / 1000) + 0.006509428154048;
 							archivoPP << pRB->x*1000 << "\t" << pRB->y * 1000 << "\t" << pRB->z * 1000 <<"\n";
 							archivoPP.close();
 						}
 						else if (bdr.name == BROCA) //centroide menos desplazamiento hacia la punta con pointer
 						{
-							pRB->x = (bdr.centroid(0, 0) / 1000) - 0.252465028027344;
-							pRB->y = (bdr.centroid(1, 0) / 1000)+0.082108222534180;
-							pRB->z = (bdr.centroid(2, 0) / 1000)+0.318798774414063;
+							pRB->x = (bdr.centroid(0, 0) / 1000) - 0.188425698461914;
+							pRB->y = (bdr.centroid(1, 0) / 1000) + 0.184173299218750;
+							pRB->z = (bdr.centroid(2, 0) / 1000) - 0.098780537109375;
 							archivoPB << pRB->x*1000 << "\t" << pRB->y*1000 << "\t" << pRB->z*1000 << "\n";
 							archivoPB.close();
 						}

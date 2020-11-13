@@ -48,6 +48,10 @@ namespace cdata {
 		25.11, 73.01); //Distancias broca
 
 	Mat_<float> PARAM = (Mat_<double>(3, 3) <<
+	-5.02405, -59.965, 6.5094,
+	0.1918, 0.2738, 0.5813,
+	2.4929, 1.7679, 7.0501);///< PARAM	PR pointercorto
+	/*Mat_<float> PARAM = (Mat_<double>(3, 3) <<
 		-62.4821, 4.6070, -20.0377,
 		0.1918, 0.2738, 0.5813,
 		2.4929, 1.7679, 7.0501);///< PARAM	PR new

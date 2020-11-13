@@ -135,26 +135,20 @@ namespace CustomCameraLibrary {
 					archivoP2 << "\n";
 				}
 		
-				
+				*/
 			//archivoXL << CustomCameraLibrary::COUNT << "\t";
-				for (m = 0; m < transXL.rows; m++) // son 4 filas entonces de 0 a 3
+			archivoXL << XL;
+				for (int m = 0; m < XL.rows; m++) // son 4 filas entonces de 0 a 3
 				{
-					for (int s = 0; s < transXL.cols; s++) //son 3 columnas entocnes de 0 a 2
+					for (int s = 0; s < XL.cols; s++) //son 3 columnas entocnes de 0 a 2
 					{
-						if (transXL[m][s] == NULL || transXL.empty())
-						{
-							break;
-						}
-						else
-
-						{
-							archivoXL << transXL[m][s] << "\t";
-						}
+							archivoXL << XL[m][s] << "\t";
 					}
 					archivoXL << "\t";
 				}
 				
 				archivoXL << "\n";
+				archivoXL.close();
 			/*}
 			else
 			{
